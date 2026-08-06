@@ -1,0 +1,27 @@
+# Secret keys and SSH credentials
+*.key
+*.pem
+*.pub
+ssh-key*
+
+# Deployment & Internal Guides
+DEPLOY_GITHUB_VPS_GUIDE.md
+
+# Environment & Config secrets
+.env
+.env.*
+*.env
+
+# Temp, scratch and local logs
+scratch/
+*.log
+.debug/
+
+# Build outputs & dependencies
+frontend/build/
+frontend/.dart_tool/
+frontend/node_modules/
+node_modules/
+dist/
+.idea/
+.vscode/
