@@ -58,7 +58,6 @@ class SyncService {
 
       String code = s['code'] ?? 'GENERAL';
       String name = s['name'] ?? 'Môn Học';
-      String description = s['description'] ?? '';
 
       // Check if subject exists by code or name
       Subject? subject;
