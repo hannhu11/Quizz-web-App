@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Layers, Play, CheckCircle2, Star, Volume2, BookOpen } from 'lucide-react';
-import { toggleStarQuestion, getStarredQuestions } from '../data/quizDataLoader';
+import { ArrowLeft, Layers, Play, CheckCircle2, Star, Volume2, BookOpen, Trash2 } from 'lucide-react';
+import { toggleStarQuestion, getStarredQuestions, unstarQuizSet } from '../data/quizDataLoader';
 
 export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSetup }) {
   const [filterMode, setFilterMode] = useState('ALL'); // 'ALL' | 'STARRED'
@@ -9,11 +9,23 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
     return new Set(getStarredQuestions().map(s => s.questionId));
   });
 
+  // Listen to global star update event
+  useEffect(() => {
+    const checkStar = () => {
+      setStarredIds(new Set(getStarredQuestions().map(s => s.questionId)));
+    };
+    window.addEventListener('quizzlet_star_updated', checkStar);
+    return () => window.removeEventListener('quizzlet_star_updated', checkStar);
+  }, []);
+
   const questions = quiz.questions || [];
 
   const handleToggleStar = (q, idx) => {
-    const updated = toggleStarQuestion(q.id, quiz.id, q, idx);
-    setStarredIds(new Set(updated.map(s => s.questionId)));
+    toggleStarQuestion(q.id, quiz.id, q, idx);
+  };
+
+  const handleDeselectAllSet = () => {
+    unstarQuizSet(quiz.id);
   };
 
   const handleSpeak = (text) => {
@@ -88,33 +100,47 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
         </div>
       </div>
 
-      {/* Terms In This Set Section Header & Star Filter */}
+      {/* Terms In This Set Section Header & Star Filter + Batch Unstar Button */}
       <div className="space-y-4">
-        <div className="flex items-center justify-between border-b border-warm-border/60 dark:border-slate-800 pb-3">
+        <div className="flex items-center justify-between border-b border-warm-border/60 dark:border-slate-800 pb-3 flex-wrap gap-3">
           <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
             <BookOpen className="w-5 h-5 text-warm-slate dark:text-slate-400" />
             Terms in this set ({questions.length})
           </h3>
 
-          {/* Starred filter toggle tab */}
-          <div className="flex items-center gap-1 text-xs font-semibold bg-warm-bg dark:bg-slate-800 p-1 rounded-xl border border-warm-border dark:border-slate-700">
-            <button
-              onClick={() => setFilterMode('ALL')}
-              className={`px-3 py-1 rounded-lg transition-all ${
-                filterMode === 'ALL' ? 'bg-white dark:bg-slate-900 text-warm-text dark:text-slate-100 font-bold shadow-xs' : 'text-warm-muted dark:text-slate-400 hover:text-warm-text'
-              }`}
-            >
-              All
-            </button>
-            <button
-              onClick={() => setFilterMode('STARRED')}
-              className={`px-3 py-1 rounded-lg transition-all flex items-center gap-1 ${
-                filterMode === 'STARRED' ? 'bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-300 font-bold shadow-xs' : 'text-warm-muted dark:text-slate-400 hover:text-warm-text'
-              }`}
-            >
-              <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-500" />
-              <span>★ {starredCountInSet}</span>
-            </button>
+          <div className="flex items-center gap-3 flex-wrap">
+            {/* Filter Tabs */}
+            <div className="flex items-center gap-1 text-xs font-semibold bg-warm-bg dark:bg-slate-800 p-1 rounded-xl border border-warm-border dark:border-slate-700">
+              <button
+                onClick={() => setFilterMode('ALL')}
+                className={`px-3 py-1 rounded-lg transition-all ${
+                  filterMode === 'ALL' ? 'bg-white dark:bg-slate-900 text-warm-text dark:text-slate-100 font-bold shadow-xs' : 'text-warm-muted dark:text-slate-400 hover:text-warm-text'
+                }`}
+              >
+                All
+              </button>
+              <button
+                onClick={() => setFilterMode('STARRED')}
+                className={`px-3 py-1 rounded-lg transition-all flex items-center gap-1 ${
+                  filterMode === 'STARRED' ? 'bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-300 font-bold shadow-xs' : 'text-warm-muted dark:text-slate-400 hover:text-warm-text'
+                }`}
+              >
+                <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-500" />
+                <span>★ {starredCountInSet}</span>
+              </button>
+            </div>
+
+            {/* Batch Unstar Button (Deselect All N / Unstar these N) */}
+            {starredCountInSet > 0 && (
+              <button
+                onClick={handleDeselectAllSet}
+                className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-amber-50 dark:bg-amber-950 hover:bg-amber-100 dark:hover:bg-amber-900 text-amber-900 dark:text-amber-300 border border-amber-300 dark:border-amber-700 text-xs font-bold shadow-xs transition-all active:scale-95"
+                title="Bỏ gắn sao toàn bộ câu hỏi trong bộ đề này"
+              >
+                <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-500" />
+                <span>Deselect all {starredCountInSet}</span>
+              </button>
+            )}
           </div>
         </div>
 

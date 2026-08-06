@@ -8,8 +8,8 @@ import ExamMode from './components/ExamMode';
 import TestSetupModal from './components/TestSetupModal';
 import LofiAudioPlayer from './components/LofiAudioPlayer';
 import CustomModal from './components/CustomModal';
-import { QUIZ_MANIFEST, fetchQuizById, getUserProgress, getStarredQuestions, toggleStarQuestion } from './data/quizDataLoader';
-import { Sparkles, BookOpen, Layers, Star, Trash2, ArrowRight } from 'lucide-react';
+import { QUIZ_MANIFEST, fetchQuizById, getUserProgress, getStarredQuestions, toggleStarQuestion, unstarQuizSet, clearAllStarredQuestions } from './data/quizDataLoader';
+import { Sparkles, BookOpen, Layers, Star, Trash2, ArrowRight, BookMarked } from 'lucide-react';
 
 export default function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -100,8 +100,15 @@ export default function App() {
   }, [studyMode]);
 
   const handleRemoveStar = useCallback((questionId) => {
-    const updated = toggleStarQuestion(questionId, '', null);
-    setStarredQuestions(updated);
+    toggleStarQuestion(questionId, '', null);
+  }, []);
+
+  const handleClearSetStars = useCallback((quizId) => {
+    unstarQuizSet(quizId);
+  }, []);
+
+  const handleClearAllStars = useCallback(() => {
+    clearAllStarredQuestions();
   }, []);
 
   // Click-to-Jump Deep Linking from Starred Modal
@@ -118,6 +125,23 @@ export default function App() {
       console.error('Failed to deep link to starred item', e);
     }
   }, []);
+
+  // Group Starred Questions by Quiz Set
+  const groupedStarred = starredQuestions.reduce((acc, q) => {
+    const qId = q.quizId || 'OTHER';
+    if (!acc[qId]) {
+      acc[qId] = {
+        quizId: qId,
+        quizTitle: q.quizTitle || 'Bộ Đề Ôn Tập',
+        subjectCode: q.subjectCode || 'THI',
+        items: []
+      };
+    }
+    acc[qId].items.push(q);
+    return acc;
+  }, {});
+
+  const groupedStarredList = Object.values(groupedStarred).filter(group => group.items.length > 0);
 
   return (
     <div className={`min-h-screen flex flex-col transition-colors duration-300 ${isDarkMode ? 'dark bg-slate-950 text-slate-100' : 'bg-warm-bg text-warm-text'}`}>
@@ -235,7 +259,7 @@ export default function App() {
         onStartTest={handleStartConfiguredTest}
       />
 
-      {/* Relational Starred Questions Modal (Click-to-Jump Deep Linking) */}
+      {/* Categorized Starred Questions Modal (Grouped by Quiz Set) */}
       <CustomModal
         isOpen={isStarredModalOpen}
         onClose={() => setIsStarredModalOpen(false)}
@@ -248,38 +272,77 @@ export default function App() {
             <p className="text-xs">Bấm vào biểu tượng ngôi sao ★ để lưu câu hỏi khó.</p>
           </div>
         ) : (
-          <div className="space-y-3 max-h-[60vh] overflow-y-auto pr-1">
-            {starredQuestions.map((item, idx) => (
-              <div
-                key={idx}
-                onClick={() => handleJumpToStarredQuestion(item)}
-                className="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-warm-border dark:border-slate-700 hover:border-amber-400 dark:hover:border-amber-500 shadow-xs hover:shadow-soft transition-all duration-200 cursor-pointer flex items-start justify-between gap-3 text-xs group"
+          <div className="space-y-6 max-h-[65vh] overflow-y-auto pr-1">
+            {/* Top Bar with Clear All Everything Button */}
+            <div className="flex items-center justify-between pb-2 border-b border-warm-border/60 dark:border-slate-800">
+              <span className="text-xs font-bold text-warm-muted dark:text-slate-400">
+                Phân loại theo {groupedStarredList.length} bộ đề
+              </span>
+              <button
+                onClick={handleClearAllStars}
+                className="text-xs font-bold text-rose-600 dark:text-rose-400 hover:text-rose-700 flex items-center gap-1 hover:underline"
               >
-                <div className="space-y-1.5 flex-1">
-                  <div className="flex items-center gap-2 flex-wrap">
-                    <span className="font-bold text-slate-800 dark:text-slate-200 bg-amber-100 dark:bg-amber-950 px-2 py-0.5 rounded border border-amber-300 dark:border-amber-800">
-                      [{item.subjectCode || 'MÔN'}] {item.quizTitle || 'Bộ Đề'}
+                <Trash2 className="w-3.5 h-3.5" /> Xóa tất cả ({starredQuestions.length})
+              </button>
+            </div>
+
+            {/* Grouped Lists by Quiz Set */}
+            {groupedStarredList.map((group) => (
+              <div key={group.quizId} className="space-y-3 p-4 rounded-2xl bg-warm-bg/60 dark:bg-slate-800/50 border border-warm-border/80 dark:border-slate-700/80">
+                {/* Quiz Set Header & Clear Set Button */}
+                <div className="flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-2">
+                    <BookMarked className="w-4 h-4 text-warm-slate dark:text-slate-300" />
+                    <span className="text-xs font-bold text-slate-900 dark:text-slate-100">
+                      [{group.subjectCode}] {group.quizTitle}
                     </span>
-                    <span className="font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-900/60 px-2 py-0.5 rounded border border-amber-200 dark:border-amber-800">
-                      Câu #{(item.questionIndex ?? 0) + 1}
+                    <span className="text-[11px] font-semibold px-2 py-0.2 rounded-full bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+                      {group.items.length} câu
                     </span>
                   </div>
-                  <p className="font-semibold text-slate-900 dark:text-slate-100 leading-relaxed group-hover:text-amber-800 dark:group-hover:text-amber-300 transition-colors">
-                    {item.question?.content || 'Nội dung câu hỏi'}
-                  </p>
+
+                  <button
+                    onClick={() => handleClearSetStars(group.quizId)}
+                    className="text-xs font-semibold text-rose-600 dark:text-rose-400 hover:text-rose-700 flex items-center gap-1 hover:bg-rose-50 dark:hover:bg-rose-950/60 px-2.5 py-1 rounded-lg transition-colors"
+                    title="Xóa tất cả câu lưu trong bộ đề này"
+                  >
+                    <Trash2 className="w-3.5 h-3.5" /> Xóa bộ này
+                  </button>
                 </div>
 
-                <div className="flex items-center gap-2 shrink-0">
-                  <span className="p-1.5 rounded-full bg-warm-hover dark:bg-slate-700 text-warm-slate dark:text-slate-300 group-hover:bg-amber-100 dark:group-hover:bg-amber-900 transition-colors">
-                    <ArrowRight className="w-4 h-4" />
-                  </span>
-                  <button
-                    onClick={(e) => { e.stopPropagation(); handleRemoveStar(item.questionId); }}
-                    className="p-1.5 rounded-full hover:bg-rose-100 dark:hover:bg-rose-950 text-rose-500 transition-colors"
-                    title="Bỏ lưu"
-                  >
-                    <Trash2 className="w-4 h-4" />
-                  </button>
+                {/* Items in this Quiz Set */}
+                <div className="space-y-2.5">
+                  {group.items.map((item, idx) => (
+                    <div
+                      key={item.questionId || idx}
+                      onClick={() => handleJumpToStarredQuestion(item)}
+                      className="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 hover:border-amber-400 dark:hover:border-amber-500 shadow-xs hover:shadow-soft transition-all duration-200 cursor-pointer flex items-start justify-between gap-3 text-xs group"
+                    >
+                      <div className="space-y-1 flex-1">
+                        <div className="flex items-center gap-2">
+                          <span className="font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/80 px-2 py-0.5 rounded border border-amber-200 dark:border-amber-800 text-[11px]">
+                            Câu #{(item.questionIndex ?? 0) + 1}
+                          </span>
+                        </div>
+                        <p className="font-semibold text-slate-900 dark:text-slate-100 leading-relaxed group-hover:text-amber-800 dark:group-hover:text-amber-300 transition-colors">
+                          {item.question?.content || 'Nội dung câu hỏi'}
+                        </p>
+                      </div>
+
+                      <div className="flex items-center gap-1.5 shrink-0">
+                        <span className="p-1.5 rounded-full bg-warm-hover dark:bg-slate-800 text-warm-slate dark:text-slate-300 group-hover:bg-amber-100 dark:group-hover:bg-amber-900 transition-colors">
+                          <ArrowRight className="w-3.5 h-3.5" />
+                        </span>
+                        <button
+                          onClick={(e) => { e.stopPropagation(); handleRemoveStar(item.questionId); }}
+                          className="p-1.5 rounded-full hover:bg-rose-100 dark:hover:bg-rose-950 text-rose-500 transition-colors"
+                          title="Bỏ lưu câu này"
+                        >
+                          <Trash2 className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}

@@ -139,13 +139,43 @@ export function toggleStarQuestion(questionId, quizId, questionData, questionInd
     }
     localStorage.setItem(STORAGE_KEY_STARS, JSON.stringify(updated));
 
-    // Dispatch global event for instant reactivity across all open views
     if (typeof window !== 'undefined') {
       window.dispatchEvent(new CustomEvent('quizzlet_star_updated', { detail: updated }));
     }
     return updated;
   } catch (e) {
     console.error('Error toggling star question', e);
+    return [];
+  }
+}
+
+// BATCH UNSTAR ENTIRE QUIZ SET (1-CLICK DESELECT ALL N)
+export function unstarQuizSet(quizId) {
+  try {
+    const stars = getStarredQuestions();
+    const updated = stars.filter(s => s.quizId !== quizId);
+    localStorage.setItem(STORAGE_KEY_STARS, JSON.stringify(updated));
+
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('quizzlet_star_updated', { detail: updated }));
+    }
+    return updated;
+  } catch (e) {
+    console.error('Error unstarring quiz set', e);
+    return [];
+  }
+}
+
+// CLEAR ALL STARRED QUESTIONS (1-CLICK RESET)
+export function clearAllStarredQuestions() {
+  try {
+    localStorage.setItem(STORAGE_KEY_STARS, JSON.stringify([]));
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('quizzlet_star_updated', { detail: [] }));
+    }
+    return [];
+  } catch (e) {
+    console.error('Error clearing all starred questions', e);
     return [];
   }
 }
