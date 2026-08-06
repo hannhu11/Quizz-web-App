@@ -5,22 +5,24 @@ export default function Navbar({
   searchTerm,
   setSearchTerm,
   activeCategory,
-  setActiveCategory,
+  onSelectCategory,
   categories,
   starredCount,
   onOpenStarred,
   isDarkMode,
-  setIsDarkMode
+  setIsDarkMode,
+  onResetDashboard
 }) {
   return (
-    <header className="sticky top-0 z-30 w-full glass-panel border-b border-warm-border/60 transition-all duration-300">
+    <header className="sticky top-0 z-30 w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-warm-border/60 dark:border-slate-800 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3 sm:gap-4">
         {/* Brand / User 3D Glass Avatar & Facebook Link */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 cursor-pointer" onClick={onResetDashboard}>
           <a
             href="https://www.facebook.com/nhu.han.3979"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
             className="relative group block"
             title="Ghé thăm Facebook Hàn Như"
           >
@@ -40,23 +42,23 @@ export default function Navbar({
           </a>
 
           <div>
-            <h1 className="text-base sm:text-lg font-bold tracking-tight text-warm-text flex items-center gap-2">
-              Hàn Như Space <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-amber-100/90 text-amber-900 border border-amber-200">Góc Học Tập</span>
+            <h1 className="text-base sm:text-lg font-bold tracking-tight text-warm-text dark:text-slate-100 flex items-center gap-2">
+              Hàn Như Space <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-amber-100/90 dark:bg-amber-950/80 text-amber-900 dark:text-amber-300 border border-amber-200 dark:border-amber-800">Góc Học Tập</span>
             </h1>
-            <p className="text-[11px] text-warm-muted hidden sm:block">Không gian học tập & ôn luyện tối giản</p>
+            <p className="text-[11px] text-warm-muted dark:text-slate-400 hidden sm:block">Không gian học tập & ôn luyện tối giản</p>
           </div>
         </div>
 
         {/* Search Bar */}
         <div className="flex-1 max-w-md mx-2 sm:mx-4">
           <div className="relative">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-warm-muted" />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-warm-muted dark:text-slate-400" />
             <input
               type="text"
               placeholder="Tìm môn học, bài thi..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 text-sm rounded-full bg-white/90 border border-warm-border/80 text-warm-text placeholder:text-warm-muted focus:outline-none focus:ring-2 focus:ring-warm-slate/30 focus:border-warm-slate transition-all shadow-xs"
+              className="w-full pl-10 pr-4 py-2 text-sm rounded-full bg-white/90 dark:bg-slate-800 border border-warm-border/80 dark:border-slate-700 text-warm-text dark:text-slate-100 placeholder:text-warm-muted dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-warm-slate/30 dark:focus:ring-slate-600 transition-all shadow-xs"
             />
           </div>
         </div>
@@ -66,7 +68,7 @@ export default function Navbar({
           {/* Starred Questions Button */}
           <button
             onClick={onOpenStarred}
-            className="relative flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200/80 text-xs font-semibold transition-all shadow-xs active:scale-95"
+            className="relative flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-amber-50 dark:bg-amber-950/60 hover:bg-amber-100 dark:hover:bg-amber-900/60 text-amber-900 dark:text-amber-300 border border-amber-200/80 dark:border-amber-800/80 text-xs font-semibold transition-all shadow-xs active:scale-95"
             title="Danh sách câu hỏi đã lưu"
           >
             <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-500" />
@@ -81,7 +83,7 @@ export default function Navbar({
           {/* Dark Mode Toggle */}
           <button
             onClick={() => setIsDarkMode(!isDarkMode)}
-            className="p-2 rounded-full hover:bg-warm-hover text-warm-muted hover:text-warm-text transition-all active:scale-95"
+            className="p-2 rounded-full hover:bg-warm-hover dark:hover:bg-slate-800 text-warm-muted dark:text-slate-300 hover:text-warm-text transition-all active:scale-95"
             title="Đổi giao diện Sáng / Tối"
           >
             {isDarkMode ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4" />}
@@ -92,26 +94,27 @@ export default function Navbar({
       {/* Category Tabs Filter */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-3 overflow-x-auto scrollbar-none flex items-center gap-2">
         <button
-          onClick={() => setActiveCategory('ALL')}
+          onClick={() => onSelectCategory('ALL')}
           className={`px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
             activeCategory === 'ALL'
-              ? 'bg-warm-text text-white shadow-xs'
-              : 'bg-white/70 hover:bg-white text-warm-muted hover:text-warm-text border border-warm-border/60'
+              ? 'bg-warm-text dark:bg-slate-100 text-white dark:text-slate-900 font-bold shadow-xs'
+              : 'bg-white/70 dark:bg-slate-800/70 hover:bg-white dark:hover:bg-slate-800 text-warm-muted dark:text-slate-300 hover:text-warm-text border border-warm-border/60 dark:border-slate-700'
           }`}
         >
           Tất cả môn học
         </button>
-        {categories.map((cat) => (
+
+        {categories.map((category) => (
           <button
-            key={cat}
-            onClick={() => setActiveCategory(cat)}
+            key={category}
+            onClick={() => onSelectCategory(category)}
             className={`px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-              activeCategory === cat
-                ? 'bg-warm-slate text-white shadow-xs'
-                : 'bg-white/70 hover:bg-white text-warm-muted hover:text-warm-text border border-warm-border/60'
+              activeCategory === category
+                ? 'bg-warm-text dark:bg-slate-100 text-white dark:text-slate-900 font-bold shadow-xs'
+                : 'bg-white/70 dark:bg-slate-800/70 hover:bg-white dark:hover:bg-slate-800 text-warm-muted dark:text-slate-300 hover:text-warm-text border border-warm-border/60 dark:border-slate-700'
             }`}
           >
-            {cat}
+            {category}
           </button>
         ))}
       </div>

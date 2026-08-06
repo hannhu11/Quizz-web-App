@@ -40,6 +40,7 @@ QUIZ_MANIFEST.forEach(manifestItem => {
       originalName: rawData.name,
       questions: (rawData.questionsList || []).map((q, idx) => ({
         id: q.id || idx + 1,
+        questionIndex: idx,
         content: q.content || 'Câu hỏi không có nội dung',
         explanation: q.explanation || '',
         answers: (q.answersList || []).map((a, aIdx) => ({
@@ -114,7 +115,7 @@ export function getStarredQuestions() {
   }
 }
 
-export function toggleStarQuestion(questionId, quizId, questionData) {
+export function toggleStarQuestion(questionId, quizId, questionData, questionIndex = 0) {
   try {
     const stars = getStarredQuestions();
     const index = stars.findIndex(s => s.questionId === questionId);
@@ -122,7 +123,19 @@ export function toggleStarQuestion(questionId, quizId, questionData) {
     if (index >= 0) {
       updated = stars.filter(s => s.questionId !== questionId);
     } else {
-      updated = [...stars, { questionId, quizId, question: questionData, timestamp: Date.now() }];
+      const quizInfo = normalizedQuizCache.get(quizId) || QUIZ_MANIFEST.find(q => q.id === quizId) || {};
+      updated = [
+        ...stars,
+        {
+          questionId,
+          quizId,
+          subjectCode: quizInfo.category || 'THI',
+          quizTitle: quizInfo.title || 'Bộ Đề Ôn Tập',
+          questionIndex: questionData?.questionIndex ?? questionIndex,
+          question: questionData,
+          timestamp: Date.now()
+        }
+      ];
     }
     localStorage.setItem(STORAGE_KEY_STARS, JSON.stringify(updated));
     return updated;
