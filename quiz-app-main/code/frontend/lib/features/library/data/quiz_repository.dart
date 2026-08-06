@@ -109,7 +109,7 @@ class QuizRepository {
       final internalQuestionBox = store.box<Question>();
 
       final currentQuiz = internalQuizBox.get(qId);
-      if (currentQuiz == null) return;
+      if (currentQuiz == null) return false;
 
       for (var q in newQuestions) {
         q.quiz.target = currentQuiz;
@@ -124,6 +124,7 @@ class QuizRepository {
       currentQuiz.questions.clear();
       currentQuiz.questions.addAll(newQuestions);
       internalQuizBox.put(currentQuiz);
+      return true;
     }, [quizId, questions]);
   }
 

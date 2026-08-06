@@ -110,6 +110,7 @@ class SubjectRepository {
       if (!success) {
         throw Exception('Môn học không tồn tại hoặc đã bị xóa.');
       }
+      return success;
     }, [id]);
   }
 }

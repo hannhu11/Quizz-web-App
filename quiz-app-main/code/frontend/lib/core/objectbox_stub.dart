@@ -1,3 +1,5 @@
+import 'dart:collection';
+
 class Entity {
   final int? realClassId;
   const Entity({this.realClassId});
@@ -65,29 +67,29 @@ class ToOne<T> {
   ToOne();
 }
 
-class ToMany<T> extends Iterable<T> {
+class ToMany<T> extends ListBase<T> {
   final List<T> _items = [];
 
   @override
-  List<T> toList({bool growable = true}) => List.from(_items, growable: growable);
-  @override
   int get length => _items.length;
-  @override
-  bool get isEmpty => _items.isEmpty;
-  @override
-  bool get isNotEmpty => _items.isNotEmpty;
 
-  void add(T item) => _items.add(item);
-  void addAll(Iterable<T> items) => _items.addAll(items);
-  void clear() => _items.clear();
-  bool remove(Object? element) => _items.remove(element);
-  void removeWhere(bool Function(T element) test) => _items.removeWhere(test);
+  @override
+  set length(int newLength) => _items.length = newLength;
 
+  @override
   T operator [](int index) => _items[index];
+
+  @override
   void operator []=(int index, T value) => _items[index] = value;
 
   @override
-  Iterator<T> get iterator => _items.iterator;
+  void add(T element) => _items.add(element);
+
+  @override
+  void addAll(Iterable<T> iterable) => _items.addAll(iterable);
+
+  @override
+  void clear() => _items.clear();
 }
 
 class Box<T> {
@@ -119,6 +121,8 @@ class Box<T> {
     }
     return false;
   }
+
+  Future<bool> removeAsync(int id) async => remove(id);
 
   int removeAll() {
     final count = _items.length;
