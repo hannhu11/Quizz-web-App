@@ -73,8 +73,8 @@ export default function FlashcardViewer({ quiz, onBack }) {
   };
 
   return (
-    <div className="w-full max-w-3xl mx-auto px-4 py-4 flex flex-col justify-between min-h-[580px]">
-      {/* Navigation Header */}
+    <div className="w-full max-w-4xl mx-auto px-4 py-4 flex flex-col justify-between">
+      {/* Top Controls Header */}
       <div className="flex items-center justify-between gap-3 mb-6 shrink-0">
         <button
           onClick={onBack}
@@ -86,13 +86,13 @@ export default function FlashcardViewer({ quiz, onBack }) {
         <div className="flex items-center gap-2.5">
           <button
             onClick={handleShuffle}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-warm-border hover:bg-warm-hover text-warm-text text-xs font-medium transition-all shadow-xs active:scale-95"
+            className="flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-white border border-warm-border hover:bg-warm-hover text-warm-text text-xs font-semibold transition-all shadow-xs active:scale-95"
             title="Xáo trộn câu hỏi"
           >
             <Shuffle className="w-3.5 h-3.5 text-warm-slate" /> Xáo trộn
           </button>
 
-          <span className="text-xs font-bold text-warm-muted px-3 py-1 bg-warm-hover rounded-full border border-warm-border/60">
+          <span className="text-xs font-bold text-warm-muted px-3.5 py-1.5 bg-warm-hover rounded-full border border-warm-border/60">
             {currentIndex + 1} / {questions.length}
           </span>
         </div>
@@ -106,20 +106,21 @@ export default function FlashcardViewer({ quiz, onBack }) {
         />
       </div>
 
-      {/* 3D Flip Flashcard Container */}
+      {/* 3D LARGE FLASHCARD CONTAINER (min-h-[440px], NO SCROLLBAR, PERFECT FLEXBOX CENTERING) */}
       <div
-        className="perspective-1000 w-full min-h-[360px] sm:min-h-[420px] max-h-[480px] my-auto cursor-pointer relative"
+        className="w-full max-w-[800px] h-[440px] min-h-[440px] mx-auto my-2 relative perspective-1000 select-none cursor-pointer"
         onClick={() => setIsFlipped(!isFlipped)}
       >
         <motion.div
-          className="w-full h-full relative transform-style-3d transition-transform duration-500 rounded-3xl"
+          className="w-full h-full relative transform-style-3d transition-transform duration-500 rounded-[24px]"
           animate={{ rotateY: isFlipped ? 180 : 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
-          {/* Card Front (Question) */}
-          <div className="absolute inset-0 backface-hidden w-full h-full rounded-3xl bg-white p-6 sm:p-8 border border-warm-border shadow-soft-lg flex flex-col justify-between overflow-y-auto">
-            <div className="flex items-center justify-between text-xs font-bold text-warm-muted shrink-0">
-              <span className="inline-flex items-center gap-1 text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+          {/* Card Front (Question Side) */}
+          <div className="absolute inset-0 backface-hidden w-full h-full rounded-[24px] bg-white p-8 sm:p-10 border border-warm-border shadow-[0_10px_30px_-5px_rgba(0,0,0,0.05)] flex flex-col justify-between items-center text-center overflow-hidden">
+            {/* Top Bar inside Card */}
+            <div className="w-full flex items-center justify-between text-xs font-bold text-warm-muted shrink-0">
+              <span className="inline-flex items-center gap-1.5 text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200/80">
                 <HelpCircle className="w-3.5 h-3.5 text-amber-500" /> Câu hỏi #{currentIndex + 1}
               </span>
 
@@ -132,75 +133,80 @@ export default function FlashcardViewer({ quiz, onBack }) {
               </button>
             </div>
 
-            <div className="my-auto py-6 px-2 text-center">
-              <p className="text-base sm:text-xl font-bold text-warm-text leading-relaxed break-words">
+            {/* Question Text Centered Perfectly (No scrollbar) */}
+            <div className="my-auto py-4 px-2 max-w-2xl text-center flex items-center justify-center">
+              <p className="text-lg sm:text-xl md:text-2xl font-medium text-slate-800 leading-relaxed break-words">
                 {currentQ.content}
               </p>
             </div>
 
-            <div className="flex items-center justify-center gap-2 text-xs text-warm-muted font-medium pt-4 border-t border-warm-border/40 shrink-0">
+            {/* Flip Hint Footer */}
+            <div className="w-full flex items-center justify-center gap-2 text-xs text-warm-muted font-medium pt-3 border-t border-warm-border/40 shrink-0">
               <RotateCw className="w-3.5 h-3.5 text-amber-600 animate-spin-slow" />
-              <span>Bấm vào thẻ hoặc phím <kbd className="px-2 py-0.5 bg-warm-hover border border-warm-border rounded font-mono text-[11px]">Space</kbd> để xem đáp án</span>
+              <span>Bấm vào thẻ hoặc phím <kbd className="px-2 py-0.5 bg-warm-hover border border-warm-border rounded font-mono text-[11px]">Space</kbd> để lật xem đáp án</span>
             </div>
           </div>
 
-          {/* Card Back (Answer & Explanation) */}
-          <div className="absolute inset-0 backface-hidden rotate-y-180 w-full h-full rounded-3xl bg-gradient-to-br from-amber-50/90 via-white to-indigo-50/70 p-6 sm:p-8 border border-amber-200/80 shadow-soft-lg flex flex-col justify-between overflow-y-auto">
-            <div className="flex items-center justify-between text-xs font-bold text-emerald-800 shrink-0">
-              <span className="inline-flex items-center gap-1 bg-emerald-100 px-3 py-1 rounded-full border border-emerald-200">
+          {/* Card Back (Answer Side) */}
+          <div className="absolute inset-0 backface-hidden rotate-y-180 w-full h-full rounded-[24px] bg-gradient-to-br from-amber-50/90 via-white to-indigo-50/70 p-8 sm:p-10 border border-amber-200/80 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.05)] flex flex-col justify-between items-center text-center overflow-hidden">
+            {/* Top Bar inside Answer Card */}
+            <div className="w-full flex items-center justify-between text-xs font-bold text-emerald-800 shrink-0">
+              <span className="inline-flex items-center gap-1.5 bg-emerald-100 px-3 py-1 rounded-full border border-emerald-200">
                 <CheckCircle className="w-3.5 h-3.5 text-emerald-600" /> Đáp án chính xác
               </span>
-              <span className="text-warm-muted">Bấm để quay lại</span>
+              <span className="text-warm-muted">Bấm để lật lại câu hỏi</span>
             </div>
 
-            <div className="my-auto py-4 space-y-4 px-2">
-              <div className="p-4 rounded-2xl bg-white/90 border border-emerald-200 text-center shadow-xs">
-                <p className="text-base sm:text-lg font-extrabold text-emerald-900 leading-snug break-words">
+            {/* Answer & Explanation Centered */}
+            <div className="my-auto py-4 px-2 max-w-2xl text-center flex flex-col items-center justify-center space-y-4">
+              <div className="p-5 rounded-2xl bg-white/90 border border-emerald-200 text-center shadow-xs w-full">
+                <p className="text-lg sm:text-xl font-extrabold text-emerald-950 leading-snug break-words">
                   {correctAnswer ? correctAnswer.content : 'Chưa có đáp án'}
                 </p>
               </div>
 
               {currentQ.explanation && (
-                <div className="p-3 rounded-xl bg-warm-hover/60 border border-warm-border text-xs text-warm-text leading-relaxed">
-                  <span className="font-bold text-warm-slate block mb-1">💡 Giải thích thêm:</span>
+                <div className="p-3 rounded-xl bg-warm-hover/70 border border-warm-border text-xs text-warm-text leading-relaxed text-left w-full">
+                  <span className="font-bold text-warm-slate block mb-1">💡 Giải thích chi tiết:</span>
                   {currentQ.explanation}
                 </div>
               )}
             </div>
 
-            <div className="flex items-center justify-between pt-4 border-t border-warm-border/40 text-xs text-warm-muted shrink-0">
+            {/* Bottom Status Footer */}
+            <div className="w-full flex items-center justify-between pt-3 border-t border-warm-border/40 text-xs text-warm-muted shrink-0">
               <span>{quiz.subject}</span>
               <button
                 onClick={(e) => { e.stopPropagation(); toggleMastered(); }}
-                className={`px-3 py-1 rounded-full font-semibold transition-all ${
+                className={`px-3.5 py-1.5 rounded-full font-semibold transition-all ${
                   masteredIds.has(currentQ.id)
                     ? 'bg-emerald-600 text-white shadow-xs'
                     : 'bg-white border border-warm-border text-warm-muted hover:text-warm-text'
                 }`}
               >
-                {masteredIds.has(currentQ.id) ? '✓ Đã thuộc' : '+ Đánh dấu thuộc'}
+                {masteredIds.has(currentQ.id) ? '✓ Đã thuộc' : '+ Đánh dấu đã thuộc'}
               </button>
             </div>
           </div>
         </motion.div>
       </div>
 
-      {/* Navigation Controls */}
+      {/* Bottom Navigation Buttons */}
       <div className="flex items-center justify-between gap-4 mt-6 shrink-0">
         <button
           onClick={handlePrev}
-          className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-warm-border hover:bg-warm-hover text-warm-text font-semibold text-xs sm:text-sm shadow-xs transition-all active:scale-95"
+          className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-white border border-warm-border hover:bg-warm-hover text-warm-text font-semibold text-xs sm:text-sm shadow-xs transition-all active:scale-95"
         >
           <ArrowLeft className="w-4 h-4 text-warm-slate" /> Câu trước
         </button>
 
         <div className="hidden sm:flex items-center gap-2 text-xs text-warm-muted font-medium bg-white/60 px-4 py-1.5 rounded-full border border-warm-border/60">
-          <span>Phím <kbd className="px-1.5 py-0.5 bg-warm-hover border rounded">←</kbd> <kbd className="px-1.5 py-0.5 bg-warm-hover border rounded">→</kbd> chuyển câu</span>
+          <span>Dùng phím <kbd className="px-1.5 py-0.5 bg-warm-hover border rounded">←</kbd> <kbd className="px-1.5 py-0.5 bg-warm-hover border rounded">→</kbd> để chuyển câu</span>
         </div>
 
         <button
           onClick={handleNext}
-          className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-warm-slate hover:bg-slate-700 text-white font-semibold text-xs sm:text-sm shadow-xs transition-all active:scale-95"
+          className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-warm-slate hover:bg-slate-700 text-white font-semibold text-xs sm:text-sm shadow-xs transition-all active:scale-95"
         >
           Câu tiếp <ArrowRight className="w-4 h-4" />
         </button>
