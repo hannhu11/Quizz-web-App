@@ -1,5 +1,3 @@
-import 'package:flutter/foundation.dart';
-
 class Box<T> {
   final List<T> _items = [];
 

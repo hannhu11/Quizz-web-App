@@ -1,6 +1,5 @@
 import 'package:flutter/foundation.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_riverpod/legacy.dart';
 
 /// Lofi ambient sound tracks - stream from free CDN URLs

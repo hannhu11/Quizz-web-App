@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:frontend/core/objectbox_stub.dart';
 
 class Condition<T> {
