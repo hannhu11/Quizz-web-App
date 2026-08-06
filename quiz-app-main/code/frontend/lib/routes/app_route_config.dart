@@ -10,6 +10,8 @@ import 'package:frontend/features/library/routes/library_routes.dart';
 import 'package:frontend/features/setting/routes/setting_routes.dart';
 import 'package:frontend/routes/types.dart';
 
+import 'package:flutter/foundation.dart';
+
 // Hàm xử lý hiện Dialog thoát
 void _showExitDialog(BuildContext context) {
   showDialog(
@@ -21,7 +23,10 @@ void _showExitDialog(BuildContext context) {
         AppButton(
           label: "Thoát",
           onPressed: () {
-            if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
+            if (!kIsWeb &&
+                (Platform.isWindows ||
+                    Platform.isLinux ||
+                    Platform.isMacOS)) {
               exit(0);
             } else {
               SystemNavigator.pop();

@@ -2,7 +2,7 @@ import 'package:dart_mappable/dart_mappable.dart';
 import 'package:frontend/core/constants/app_strings.dart';
 import 'package:frontend/features/setting/enums/physical_key.dart';
 import 'package:frontend/features/setting/enums/shortcut_action.dart';
-import 'package:objectbox/objectbox.dart';
+import 'package:frontend/core/objectbox_imports.dart';
 
 part 'app_config.mapper.dart';
 

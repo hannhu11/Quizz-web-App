@@ -2,7 +2,7 @@ import 'package:dart_mappable/dart_mappable.dart';
 import 'package:frontend/features/learning/models/session/learning_session.dart';
 import 'package:frontend/features/library/models/answer.dart';
 import 'package:frontend/features/library/models/question.dart';
-import 'package:objectbox/objectbox.dart';
+import 'package:frontend/core/objectbox_imports.dart';
 
 part 'learning_session_detail.mapper.dart';
 

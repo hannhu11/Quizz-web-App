@@ -24,21 +24,23 @@ void main() async {
   // 1. Đảm bảo Flutter đã sẵn sàng
   WidgetsFlutterBinding.ensureInitialized();
 
-  // 2. Khởi tạo các service
-  await AppPathService().init();
-  await ObjectBoxService.create();
-  await DatabaseCleanupService.runFullCleanup();
-  await DeviceInfoService().init();
-  await OcrUtils().initOcr();
+  // 2. Khởi tạo các service (chỉ trên Desktop/Mobile native)
+  if (!kIsWeb) {
+    await AppPathService().init();
+    await ObjectBoxService.create();
+    await DatabaseCleanupService.runFullCleanup();
+    await DeviceInfoService().init();
+    await OcrUtils().initOcr();
 
-  // 3. Tự động đồng bộ dữ liệu từ server (hannhu.io.vn) xuống Windows App
-  SyncService.syncDataWithServer();
+    // Tự động đồng bộ dữ liệu từ server (hannhu.io.vn) xuống Windows App
+    SyncService.syncDataWithServer();
 
-  // 3. Khởi chạy Auto Updater cho Windows
-  if (!kDebugMode && Platform.isWindows) {
-    await autoUpdater.setFeedURL(appcastURL);
-    await autoUpdater.setScheduledCheckInterval(7200); // Check mỗi 2 tiếng
-    await autoUpdater.checkForUpdates(inBackground: true);
+    // Khởi chạy Auto Updater cho Windows
+    if (!kDebugMode && Platform.isWindows) {
+      await autoUpdater.setFeedURL(appcastURL);
+      await autoUpdater.setScheduledCheckInterval(7200); // Check mỗi 2 tiếng
+      await autoUpdater.checkForUpdates(inBackground: true);
+    }
   }
 
   runApp(const ProviderScope(child: MyApp()));
@@ -84,7 +86,7 @@ class MyApp extends HookWidget {
           ),
         ),
         cardTheme: CardThemeData(
-          color: Colors.white.withOpacity(0.85),
+          color: Colors.white.withValues(alpha: 0.85),
           elevation: 0,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
@@ -95,7 +97,7 @@ class MyApp extends HookWidget {
       ),
       // Sửa ở đây: Bọc UpgradeAlert bên trong Navigator Context
       builder: (context, child) {
-        if (!kDebugMode && Platform.isLinux) {
+        if (!kIsWeb && !kDebugMode && Platform.isLinux) {
           return UpgradeAlert(
             upgrader: Upgrader(
               storeController: UpgraderStoreController(
@@ -103,7 +105,6 @@ class MyApp extends HookWidget {
               ),
               languageCode: 'vi',
             ),
-            // Bọc bằng Builder để lấy BuildContext bên dưới Navigator
             child: Builder(
               builder: (innerContext) => child ?? const SizedBox.shrink(),
             ),
@@ -114,3 +115,4 @@ class MyApp extends HookWidget {
     );
   }
 }
+

@@ -3,7 +3,7 @@ import 'package:frontend/core/services/object_box_service.dart';
 import 'package:frontend/features/library/models/quiz.dart';
 import 'package:frontend/features/library/models/search_params/subject_search_params.dart';
 import 'package:frontend/features/library/models/subject.dart';
-import 'package:frontend/objectbox.g.dart';
+import 'package:frontend/objectbox_g_imports.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'subject_repository.g.dart';

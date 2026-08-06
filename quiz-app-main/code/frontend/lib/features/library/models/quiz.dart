@@ -1,7 +1,7 @@
 import 'package:dart_mappable/dart_mappable.dart';
 import 'package:frontend/features/library/models/question.dart';
 import 'package:frontend/features/library/models/subject.dart';
-import 'package:objectbox/objectbox.dart';
+import 'package:frontend/core/objectbox_imports.dart';
 
 part 'quiz.mapper.dart';
 

@@ -1,5 +1,5 @@
 import 'dart:io';
-
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:frontend/core/services/path_service.dart';
 import 'package:path/path.dart' as p;
@@ -120,6 +120,7 @@ class OcrUtils {
 
   // --- Các hàm tìm path giữ nguyên ---
   Future<String> _findTesseractPath() async {
+    if (kIsWeb) return '';
     final String appDir = p.dirname(Platform.resolvedExecutable);
     final String prodPath = p.join(appDir, 'tesseract_bin', 'tesseract.exe');
     if (await File(prodPath).exists()) return prodPath;
