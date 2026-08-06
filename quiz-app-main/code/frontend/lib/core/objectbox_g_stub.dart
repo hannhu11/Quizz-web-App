@@ -44,6 +44,10 @@ class QueryBuilder<T> {
       Stream.value(Query<T>());
 }
 
+extension BoxQueryExtension<T> on Box<T> {
+  QueryBuilder<T> query([dynamic condition]) => QueryBuilder<T>();
+}
+
 class Subject_ {
   static final id = QueryProperty<dynamic, int>();
   static final code = QueryProperty<dynamic, String>();
