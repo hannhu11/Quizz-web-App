@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --color-warm-bg: #FBFBF9;
+  --color-warm-card: #FFFFFF;
+  --color-warm-sidebar: #F4F2EC;
+  --color-warm-border: #E8E5DD;
+  --color-warm-hover: #EFECE6;
+  --color-warm-text: #2D3748;
+  --color-warm-muted: #718096;
+  --color-warm-slate: #4A6FA5;
+  --color-warm-sage: #6B8E85;
+  --color-warm-terracotta: #D97706;
+  --color-warm-peach: #FDE68A;
+  --font-sans: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+}
+
+body {
+  background-color: #FBFBF9;
+  color: #2D3748;
+  overflow-x: hidden;
+}
+
+/* Custom 3D Card Flip styles for Flashcard Mode */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(232, 229, 221, 0.8);
+}
+
+.glass-panel-dark {
+  background: rgba(45, 55, 72, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom aesthetic scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E8E5DD;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #CBD5E0;
+}

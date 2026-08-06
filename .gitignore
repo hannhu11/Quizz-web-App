@@ -21,6 +21,8 @@ scratch/
 frontend/build/
 frontend/.dart_tool/
 frontend/node_modules/
+quiz-web-react/node_modules/
+quiz-web-react/dist/
 node_modules/
 dist/
 .idea/
