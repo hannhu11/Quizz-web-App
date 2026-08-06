@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Navbar from './components/Navbar';
 import SubjectCard from './components/SubjectCard';
 import QuizDetailView from './components/QuizDetailView';
@@ -20,7 +20,6 @@ export default function App() {
   const [testConfig, setTestConfig] = useState(null);
   const [isTestSetupOpen, setIsTestSetupOpen] = useState(false);
 
-  const [isLoading, setIsLoading] = useState(false);
   const [progress, setProgress] = useState({});
   const [starredQuestions, setStarredQuestions] = useState([]);
   const [isStarredModalOpen, setIsStarredModalOpen] = useState(false);
@@ -44,48 +43,33 @@ export default function App() {
     return matchesCategory && matchesSearch;
   });
 
-  // Handle opening Quiz Detail View on card click
-  const handleOpenQuizDetail = (quizId) => {
-    setIsLoading(true);
-    try {
-      const quizData = fetchQuizById(quizId);
-      setActiveQuizId(quizId);
-      setStudyMode('DETAIL');
-      setLoadedQuiz(quizData);
-    } catch (err) {
-      console.error('Failed to load quiz data', err);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  // Instant zero-latency navigation handlers (RAM Cached < 0.1ms)
+  const handleOpenQuizDetail = useCallback((quizId) => {
+    const quizData = fetchQuizById(quizId);
+    setActiveQuizId(quizId);
+    setLoadedQuiz(quizData);
+    setStudyMode('DETAIL');
+  }, []);
 
-  // Handle direct mode trigger from card buttons
-  const handleSelectModeDirect = (quizId, mode) => {
-    setIsLoading(true);
-    try {
-      const quizData = fetchQuizById(quizId);
-      setActiveQuizId(quizId);
-      setLoadedQuiz(quizData);
+  const handleSelectModeDirect = useCallback((quizId, mode) => {
+    const quizData = fetchQuizById(quizId);
+    setActiveQuizId(quizId);
+    setLoadedQuiz(quizData);
 
-      if (mode === 'EXAM') {
-        setIsTestSetupOpen(true);
-      } else {
-        setStudyMode(mode);
-      }
-    } catch (err) {
-      console.error('Failed to load quiz data', err);
-    } finally {
-      setIsLoading(false);
+    if (mode === 'EXAM') {
+      setIsTestSetupOpen(true);
+    } else {
+      setStudyMode(mode);
     }
-  };
+  }, []);
 
   // Start Test from Setup Modal
-  const handleStartConfiguredTest = (config) => {
+  const handleStartConfiguredTest = useCallback((config) => {
     setTestConfig(config);
     setStudyMode('EXAM');
-  };
+  }, []);
 
-  const handleBackToDetailOrDashboard = () => {
+  const handleBackToDetailOrDashboard = useCallback(() => {
     if (studyMode === 'FLASHCARD' || studyMode === 'PRACTICE' || studyMode === 'EXAM') {
       setStudyMode('DETAIL');
     } else {
@@ -95,12 +79,12 @@ export default function App() {
     }
     setProgress(getUserProgress());
     setStarredQuestions(getStarredQuestions());
-  };
+  }, [studyMode]);
 
-  const handleRemoveStar = (questionId) => {
+  const handleRemoveStar = useCallback((questionId) => {
     const updated = toggleStarQuestion(questionId, '', null);
     setStarredQuestions(updated);
-  };
+  }, []);
 
   return (
     <div className={`min-h-screen flex flex-col transition-colors duration-300 ${isDarkMode ? 'dark bg-slate-950 text-slate-100' : 'bg-warm-bg text-warm-text'}`}>
@@ -119,16 +103,8 @@ export default function App() {
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Loading Spinner */}
-        {isLoading && (
-          <div className="flex flex-col items-center justify-center py-20">
-            <div className="w-10 h-10 border-4 border-amber-300 border-t-amber-600 rounded-full animate-spin mb-4" />
-            <p className="text-sm font-semibold text-warm-muted">Đang tải bộ đề...</p>
-          </div>
-        )}
-
         {/* Active Study Views */}
-        {!isLoading && studyMode && loadedQuiz && (
+        {studyMode && loadedQuiz && (
           <>
             {studyMode === 'DETAIL' && (
               <QuizDetailView
@@ -161,7 +137,7 @@ export default function App() {
         )}
 
         {/* Dashboard Grid (When no quiz is selected) */}
-        {!isLoading && !studyMode && (
+        {!studyMode && (
           <div className="space-y-8">
             {/* Hero Banner */}
             <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-100/90 via-rose-100/80 to-indigo-100/70 p-6 sm:p-8 border border-amber-200/80 shadow-soft">

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, RotateCw, Star, Shuffle, CheckCircle, HelpCircle } from 'lucide-react';
 import { toggleStarQuestion, getStarredQuestions } from '../data/quizDataLoader';
 
@@ -75,7 +74,7 @@ export default function FlashcardViewer({ quiz, onBack }) {
   return (
     <div className="w-full max-w-4xl mx-auto px-4 py-4 flex flex-col justify-between">
       {/* Top Controls Header */}
-      <div className="flex items-center justify-between gap-3 mb-6 shrink-0">
+      <div className="flex items-center justify-between gap-3 mb-4 shrink-0">
         <button
           onClick={onBack}
           className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-warm-slate hover:text-warm-text bg-white border border-warm-border px-4 py-2 rounded-full shadow-xs hover:shadow transition-all active:scale-95"
@@ -99,25 +98,27 @@ export default function FlashcardViewer({ quiz, onBack }) {
       </div>
 
       {/* Progress Bar */}
-      <div className="w-full h-1.5 bg-warm-border/40 rounded-full mb-6 overflow-hidden shrink-0">
+      <div className="w-full h-1.5 bg-warm-border/40 rounded-full mb-4 overflow-hidden shrink-0">
         <div
           className="h-full bg-gradient-to-r from-amber-400 to-warm-slate transition-all duration-300 rounded-full"
           style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
         />
       </div>
 
-      {/* 3D LARGE FLASHCARD CONTAINER (min-h-[440px], NO SCROLLBAR, PERFECT FLEXBOX CENTERING) */}
+      {/* HARDWARE-ACCELERATED GPU 3D FLASHCARD CONTAINER (min-h-[460px], NO LAG) */}
       <div
-        className="w-full max-w-[800px] h-[440px] min-h-[440px] mx-auto my-2 relative perspective-1000 select-none cursor-pointer"
+        className="w-full max-w-[800px] h-[460px] min-h-[460px] mx-auto my-2 relative perspective-1000 select-none cursor-pointer"
         onClick={() => setIsFlipped(!isFlipped)}
       >
-        <motion.div
-          className="w-full h-full relative transform-style-3d transition-transform duration-500 rounded-[24px]"
-          animate={{ rotateY: isFlipped ? 180 : 0 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
+        <div
+          className="w-full h-full relative transform-style-3d transition-transform duration-300 ease-out rounded-[24px]"
+          style={{
+            transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+            willChange: 'transform'
+          }}
         >
-          {/* Card Front (Question Side) */}
-          <div className="absolute inset-0 backface-hidden w-full h-full rounded-[24px] bg-white p-8 sm:p-10 border border-warm-border shadow-[0_10px_30px_-5px_rgba(0,0,0,0.05)] flex flex-col justify-between items-center text-center overflow-hidden">
+          {/* Card Front (Question / Term + Options List) */}
+          <div className="absolute inset-0 backface-hidden w-full h-full rounded-[24px] bg-white p-6 sm:p-8 border border-warm-border shadow-[0_10px_30px_-5px_rgba(0,0,0,0.05)] flex flex-col justify-between items-center text-center overflow-hidden">
             {/* Top Bar inside Card */}
             <div className="w-full flex items-center justify-between text-xs font-bold text-warm-muted shrink-0">
               <span className="inline-flex items-center gap-1.5 text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200/80">
@@ -133,11 +134,28 @@ export default function FlashcardViewer({ quiz, onBack }) {
               </button>
             </div>
 
-            {/* Question Text Centered Perfectly (No scrollbar) */}
-            <div className="my-auto py-4 px-2 max-w-2xl text-center flex items-center justify-center">
-              <p className="text-lg sm:text-xl md:text-2xl font-medium text-slate-800 leading-relaxed break-words">
+            {/* Question / Term & Options List */}
+            <div className="my-auto py-2 px-2 max-w-2xl w-full text-center flex flex-col items-center justify-center space-y-3">
+              <p className="text-base sm:text-lg md:text-xl font-bold text-slate-900 leading-snug break-words">
                 {currentQ.content}
               </p>
+
+              {/* Display Options List (Term & Options) */}
+              {(currentQ.answers || []).length > 0 && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full pt-2">
+                  {currentQ.answers.map((a, aIdx) => (
+                    <div
+                      key={aIdx}
+                      className="text-xs p-2.5 rounded-xl border border-warm-border/80 bg-warm-bg/70 text-warm-text font-medium text-left flex items-start gap-2"
+                    >
+                      <span className="font-bold text-warm-slate shrink-0">
+                        {String.fromCharCode(65 + aIdx)}.
+                      </span>
+                      <span className="truncate">{a.content}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Flip Hint Footer */}
@@ -147,8 +165,8 @@ export default function FlashcardViewer({ quiz, onBack }) {
             </div>
           </div>
 
-          {/* Card Back (Answer Side) */}
-          <div className="absolute inset-0 backface-hidden rotate-y-180 w-full h-full rounded-[24px] bg-gradient-to-br from-amber-50/90 via-white to-indigo-50/70 p-8 sm:p-10 border border-amber-200/80 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.05)] flex flex-col justify-between items-center text-center overflow-hidden">
+          {/* Card Back (Definition / Answer & Explanation) */}
+          <div className="absolute inset-0 backface-hidden rotate-y-180 w-full h-full rounded-[24px] bg-gradient-to-br from-amber-50/90 via-white to-indigo-50/70 p-6 sm:p-8 border border-amber-200/80 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.05)] flex flex-col justify-between items-center text-center overflow-hidden">
             {/* Top Bar inside Answer Card */}
             <div className="w-full flex items-center justify-between text-xs font-bold text-emerald-800 shrink-0">
               <span className="inline-flex items-center gap-1.5 bg-emerald-100 px-3 py-1 rounded-full border border-emerald-200">
@@ -158,9 +176,9 @@ export default function FlashcardViewer({ quiz, onBack }) {
             </div>
 
             {/* Answer & Explanation Centered */}
-            <div className="my-auto py-4 px-2 max-w-2xl text-center flex flex-col items-center justify-center space-y-4">
-              <div className="p-5 rounded-2xl bg-white/90 border border-emerald-200 text-center shadow-xs w-full">
-                <p className="text-lg sm:text-xl font-extrabold text-emerald-950 leading-snug break-words">
+            <div className="my-auto py-2 px-2 max-w-2xl w-full text-center flex flex-col items-center justify-center space-y-3">
+              <div className="p-4 rounded-2xl bg-white/90 border border-emerald-200 text-center shadow-xs w-full">
+                <p className="text-base sm:text-lg font-extrabold text-emerald-950 leading-snug break-words">
                   {correctAnswer ? correctAnswer.content : 'Chưa có đáp án'}
                 </p>
               </div>
@@ -188,11 +206,11 @@ export default function FlashcardViewer({ quiz, onBack }) {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Bottom Navigation Buttons */}
-      <div className="flex items-center justify-between gap-4 mt-6 shrink-0">
+      <div className="flex items-center justify-between gap-4 mt-4 shrink-0">
         <button
           onClick={handlePrev}
           className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-white border border-warm-border hover:bg-warm-hover text-warm-text font-semibold text-xs sm:text-sm shadow-xs transition-all active:scale-95"
@@ -201,7 +219,7 @@ export default function FlashcardViewer({ quiz, onBack }) {
         </button>
 
         <div className="hidden sm:flex items-center gap-2 text-xs text-warm-muted font-medium bg-white/60 px-4 py-1.5 rounded-full border border-warm-border/60">
-          <span>Dùng phím <kbd className="px-1.5 py-0.5 bg-warm-hover border rounded">←</kbd> <kbd className="px-1.5 py-0.5 bg-warm-hover border rounded">→</kbd> để chuyển câu</span>
+          <span>Phím <kbd className="px-1.5 py-0.5 bg-warm-hover border rounded">←</kbd> <kbd className="px-1.5 py-0.5 bg-warm-hover border rounded">→</kbd> chuyển câu</span>
         </div>
 
         <button

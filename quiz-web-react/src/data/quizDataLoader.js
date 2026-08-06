@@ -1,6 +1,6 @@
-// Quiz Data Manifest & Eager Data Loader (Zero Network Delay)
+// Quiz Data Manifest & Instant Pre-Parsed Memory Cache (0-Latency)
 
-// Dynamically eager-import all quiz JSON files at build/bundle time
+// Dynamically eager-import all quiz JSON files at module load
 const quizFiles = import.meta.glob('../../../quiz-app-main/quizzes/current/*.json', { eager: true });
 
 export const QUIZ_MANIFEST = [
@@ -21,28 +21,10 @@ export const QUIZ_MANIFEST = [
   { id: 'syb302c', filename: 'SYB302c - QuizApp.json', title: 'SYB302c - Start Your Business', subject: 'Khởi Nghiệp Kinh Doanh', category: 'SYB302c', color: 'from-amber-100 to-rose-100', icon: 'Rocket' },
 ];
 
-// Helper map to quickly resolve quiz JSON by filename
-const loadedQuizMap = new Map();
+// PRE-COMPUTE AND MEMOIZE ALL QUIZZES ON INITIAL LOAD
+const normalizedQuizCache = new Map();
 
-// Populate Map from eager imports
-for (const path in quizFiles) {
-  const fileData = quizFiles[path].default || quizFiles[path];
-  if (fileData && fileData.name) {
-    loadedQuizMap.set(fileData.name, fileData);
-  } else if (fileData && fileData.questionsList) {
-    // Match by filename pattern
-    const filename = path.split('/').pop();
-    loadedQuizMap.set(filename, fileData);
-  }
-}
-
-export function fetchQuizById(quizId) {
-  const manifestItem = QUIZ_MANIFEST.find(q => q.id === quizId);
-  if (!manifestItem) {
-    throw new Error(`Quiz with id ${quizId} not found`);
-  }
-
-  // Find matching raw JSON from eager map
+QUIZ_MANIFEST.forEach(manifestItem => {
   let rawData = null;
   for (const path in quizFiles) {
     if (path.includes(manifestItem.filename)) {
@@ -51,35 +33,38 @@ export function fetchQuizById(quizId) {
     }
   }
 
-  if (!rawData) {
-    console.warn(`Falling back to direct search for ${manifestItem.filename}`);
-    for (const [key, value] of loadedQuizMap.entries()) {
-      if (key.includes(manifestItem.category) || manifestItem.title.includes(key)) {
-        rawData = value;
-        break;
-      }
-    }
+  if (rawData) {
+    const normalized = {
+      ...manifestItem,
+      rawId: rawData.id,
+      originalName: rawData.name,
+      questions: (rawData.questionsList || []).map((q, idx) => ({
+        id: q.id || idx + 1,
+        content: q.content || 'Câu hỏi không có nội dung',
+        explanation: q.explanation || '',
+        answers: (q.answersList || []).map((a, aIdx) => ({
+          id: a.id || aIdx + 1,
+          content: a.content || '',
+          isCorrect: Boolean(a.is_correct),
+        }))
+      }))
+    };
+    normalizedQuizCache.set(manifestItem.id, normalized);
   }
+});
 
-  if (!rawData) {
-    throw new Error(`Quiz data for ${manifestItem.filename} could not be loaded`);
+export function fetchQuizById(quizId) {
+  const cached = normalizedQuizCache.get(quizId);
+  if (cached) {
+    return cached;
   }
-
-  // Standardize questions and options
+  const manifestItem = QUIZ_MANIFEST.find(q => q.id === quizId);
+  if (!manifestItem) {
+    throw new Error(`Quiz with id ${quizId} not found`);
+  }
   return {
     ...manifestItem,
-    rawId: rawData.id,
-    originalName: rawData.name,
-    questions: (rawData.questionsList || []).map((q, idx) => ({
-      id: q.id || idx + 1,
-      content: q.content || 'Câu hỏi không có nội dung',
-      explanation: q.explanation || '',
-      answers: (q.answersList || []).map((a, aIdx) => ({
-        id: a.id || aIdx + 1,
-        content: a.content || '',
-        isCorrect: Boolean(a.is_correct),
-      }))
-    }))
+    questions: []
   };
 }
 

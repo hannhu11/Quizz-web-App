@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Settings, Clock, HelpCircle, Check, Sparkles, AlertCircle, FileText } from 'lucide-react';
+import { X, Clock, Sparkles, FileText } from 'lucide-react';
 
 export default function TestSetupModal({ isOpen, onClose, quiz, onStartTest }) {
   if (!isOpen || !quiz) return null;
@@ -33,6 +33,15 @@ export default function TestSetupModal({ isOpen, onClose, quiz, onStartTest }) {
   const [timerMode, setTimerMode] = useState('countdown'); // 'countdown' | 'countup'
   const [timerMinutes, setTimerMinutes] = useState(20);
 
+  // Handle bidirectional sync for Question Count input & slider
+  const handleQuestionCountInput = (val) => {
+    let num = parseInt(val, 10);
+    if (isNaN(num)) num = 1;
+    if (num < 1) num = 1;
+    if (num > totalQuestionsAvailable) num = totalQuestionsAvailable;
+    setQuestionCount(num);
+  };
+
   const handleStart = () => {
     onStartTest({
       questionCount: Math.min(questionCount, totalQuestionsAvailable),
@@ -64,7 +73,7 @@ export default function TestSetupModal({ isOpen, onClose, quiz, onStartTest }) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 bg-slate-900/50 backdrop-blur-sm"
+          className="fixed inset-0 bg-slate-900/50 backdrop-blur-xs"
         />
 
         {/* Modal Box */}
@@ -96,20 +105,30 @@ export default function TestSetupModal({ isOpen, onClose, quiz, onStartTest }) {
           {/* Body Options Scroll Area */}
           <div className="py-5 overflow-y-auto flex-1 space-y-6 pr-1">
 
-            {/* Questions count slider & input */}
-            <div className="space-y-2">
+            {/* Questions count slider & bidirectional input sync */}
+            <div className="space-y-3 p-4 rounded-2xl bg-warm-bg border border-warm-border">
               <div className="flex items-center justify-between text-xs font-bold text-warm-text">
                 <span>Questions (max {totalQuestionsAvailable})</span>
-                <span className="px-2.5 py-1 rounded-lg bg-warm-hover text-warm-slate font-mono text-sm">
-                  {questionCount}
-                </span>
+                {/* Synchronized Editable Input Box */}
+                <div className="flex items-center gap-1">
+                  <input
+                    type="number"
+                    min="1"
+                    max={totalQuestionsAvailable}
+                    value={questionCount}
+                    onChange={(e) => handleQuestionCountInput(e.target.value)}
+                    className="w-16 px-2 py-1 text-center font-mono font-bold rounded-lg border border-warm-border bg-white text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-warm-slate/30"
+                  />
+                  <span className="text-xs text-warm-muted">câu</span>
+                </div>
               </div>
+              {/* Range Slider */}
               <input
                 type="range"
                 min="1"
                 max={totalQuestionsAvailable}
                 value={questionCount}
-                onChange={(e) => setQuestionCount(parseInt(e.target.value) || 1)}
+                onChange={(e) => handleQuestionCountInput(e.target.value)}
                 className="w-full h-2 bg-warm-border rounded-lg appearance-none cursor-pointer accent-warm-slate"
               />
             </div>
@@ -322,7 +341,7 @@ export default function TestSetupModal({ isOpen, onClose, quiz, onStartTest }) {
             </button>
             <button
               onClick={handleStart}
-              className="px-6 py-2.5 rounded-full bg-warm-slate hover:bg-slate-700 text-white text-xs font-bold shadow-sm active:scale-95 transition-all flex items-center gap-2"
+              className="px-6 py-2.5 rounded-full bg-warm-slate hover:bg-slate-700 text-white text-xs font-bold shadow-xs active:scale-95 transition-all flex items-center gap-2"
             >
               <Sparkles className="w-4 h-4" /> Start test
             </button>
