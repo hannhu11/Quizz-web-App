@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import SubjectCard from './components/SubjectCard';
+import QuizDetailView from './components/QuizDetailView';
 import FlashcardViewer from './components/FlashcardViewer';
 import PracticeMode from './components/PracticeMode';
 import ExamMode from './components/ExamMode';
+import TestSetupModal from './components/TestSetupModal';
 import LofiAudioPlayer from './components/LofiAudioPlayer';
 import CustomModal from './components/CustomModal';
 import { QUIZ_MANIFEST, fetchQuizById, getUserProgress, getStarredQuestions, toggleStarQuestion } from './data/quizDataLoader';
@@ -13,8 +15,11 @@ export default function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('ALL');
   const [activeQuizId, setActiveQuizId] = useState(null);
-  const [studyMode, setStudyMode] = useState(null); // 'FLASHCARD' | 'PRACTICE' | 'EXAM'
+  const [studyMode, setStudyMode] = useState(null); // 'DETAIL' | 'FLASHCARD' | 'PRACTICE' | 'EXAM'
   const [loadedQuiz, setLoadedQuiz] = useState(null);
+  const [testConfig, setTestConfig] = useState(null);
+  const [isTestSetupOpen, setIsTestSetupOpen] = useState(false);
+
   const [isLoading, setIsLoading] = useState(false);
   const [progress, setProgress] = useState({});
   const [starredQuestions, setStarredQuestions] = useState([]);
@@ -39,13 +44,13 @@ export default function App() {
     return matchesCategory && matchesSearch;
   });
 
-  // Handle Mode Selection synchronously & reliably
-  const handleSelectMode = (quizId, mode) => {
+  // Handle opening Quiz Detail View on card click
+  const handleOpenQuizDetail = (quizId) => {
     setIsLoading(true);
     try {
       const quizData = fetchQuizById(quizId);
       setActiveQuizId(quizId);
-      setStudyMode(mode);
+      setStudyMode('DETAIL');
       setLoadedQuiz(quizData);
     } catch (err) {
       console.error('Failed to load quiz data', err);
@@ -54,11 +59,42 @@ export default function App() {
     }
   };
 
-  const handleBackToDashboard = () => {
-    setActiveQuizId(null);
-    setStudyMode(null);
-    setLoadedQuiz(null);
+  // Handle direct mode trigger from card buttons
+  const handleSelectModeDirect = (quizId, mode) => {
+    setIsLoading(true);
+    try {
+      const quizData = fetchQuizById(quizId);
+      setActiveQuizId(quizId);
+      setLoadedQuiz(quizData);
+
+      if (mode === 'EXAM') {
+        setIsTestSetupOpen(true);
+      } else {
+        setStudyMode(mode);
+      }
+    } catch (err) {
+      console.error('Failed to load quiz data', err);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Start Test from Setup Modal
+  const handleStartConfiguredTest = (config) => {
+    setTestConfig(config);
+    setStudyMode('EXAM');
+  };
+
+  const handleBackToDetailOrDashboard = () => {
+    if (studyMode === 'FLASHCARD' || studyMode === 'PRACTICE' || studyMode === 'EXAM') {
+      setStudyMode('DETAIL');
+    } else {
+      setActiveQuizId(null);
+      setStudyMode(null);
+      setLoadedQuiz(null);
+    }
     setProgress(getUserProgress());
+    setStarredQuestions(getStarredQuestions());
   };
 
   const handleRemoveStar = (questionId) => {
@@ -87,16 +123,40 @@ export default function App() {
         {isLoading && (
           <div className="flex flex-col items-center justify-center py-20">
             <div className="w-10 h-10 border-4 border-amber-300 border-t-amber-600 rounded-full animate-spin mb-4" />
-            <p className="text-sm font-semibold text-warm-muted">Đang mở bài học...</p>
+            <p className="text-sm font-semibold text-warm-muted">Đang tải bộ đề...</p>
           </div>
         )}
 
         {/* Active Study Views */}
         {!isLoading && studyMode && loadedQuiz && (
           <>
-            {studyMode === 'FLASHCARD' && <FlashcardViewer quiz={loadedQuiz} onBack={handleBackToDashboard} />}
-            {studyMode === 'PRACTICE' && <PracticeMode quiz={loadedQuiz} onBack={handleBackToDashboard} />}
-            {studyMode === 'EXAM' && <ExamMode quiz={loadedQuiz} onBack={handleBackToDashboard} />}
+            {studyMode === 'DETAIL' && (
+              <QuizDetailView
+                quiz={loadedQuiz}
+                onBack={handleBackToDetailOrDashboard}
+                onStartMode={(m) => setStudyMode(m)}
+                onOpenTestSetup={() => setIsTestSetupOpen(true)}
+              />
+            )}
+            {studyMode === 'FLASHCARD' && (
+              <FlashcardViewer
+                quiz={loadedQuiz}
+                onBack={handleBackToDetailOrDashboard}
+              />
+            )}
+            {studyMode === 'PRACTICE' && (
+              <PracticeMode
+                quiz={loadedQuiz}
+                onBack={handleBackToDetailOrDashboard}
+              />
+            )}
+            {studyMode === 'EXAM' && (
+              <ExamMode
+                quiz={loadedQuiz}
+                testConfig={testConfig}
+                onBack={handleBackToDetailOrDashboard}
+              />
+            )}
           </>
         )}
 
@@ -113,7 +173,7 @@ export default function App() {
                   Thư Thái Ghi Nhớ • Ôn Luyện Hiệu Quả
                 </h2>
                 <p className="text-sm text-slate-700 mt-2 leading-relaxed">
-                  Ghi nhớ flashcard, luyện tập trắc nghiệm và thư giãn cùng âm thanh không gian thư thái.
+                  Ghi nhớ flashcard 3D, xem lại danh sách câu hỏi Terms in this set và làm bài thi thử theo phong cách Quizlet.
                 </p>
               </div>
 
@@ -126,7 +186,7 @@ export default function App() {
                 <h3 className="text-lg font-bold text-warm-text flex items-center gap-2">
                   <Layers className="w-5 h-5 text-warm-slate" /> Danh Sách Bộ Đề ({filteredQuizzes.length})
                 </h3>
-                <p className="text-xs text-warm-muted">Chọn chế độ Lật thẻ, Luyện tập hoặc Thi thử để bắt đầu</p>
+                <p className="text-xs text-warm-muted">Bấm vào bộ đề để xem danh sách câu hỏi hoặc chọn chế độ học</p>
               </div>
             </div>
 
@@ -140,18 +200,29 @@ export default function App() {
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredQuizzes.map((quiz) => (
-                  <SubjectCard
-                    key={quiz.id}
-                    quiz={quiz}
-                    progress={progress}
-                    onSelectMode={handleSelectMode}
-                  />
+                  <div key={quiz.id} onClick={() => handleOpenQuizDetail(quiz.id)} className="cursor-pointer">
+                    <SubjectCard
+                      quiz={quiz}
+                      progress={progress}
+                      onSelectMode={(qId, mode) => {
+                        handleSelectModeDirect(qId, mode);
+                      }}
+                    />
+                  </div>
                 ))}
               </div>
             )}
           </div>
         )}
       </main>
+
+      {/* Test Setup Modal (Quizlet Pro Style) */}
+      <TestSetupModal
+        isOpen={isTestSetupOpen}
+        onClose={() => setIsTestSetupOpen(false)}
+        quiz={loadedQuiz}
+        onStartTest={handleStartConfiguredTest}
+      />
 
       {/* Starred Questions Modal */}
       <CustomModal
@@ -163,7 +234,7 @@ export default function App() {
           <div className="text-center py-8 text-warm-muted">
             <Star className="w-8 h-8 text-warm-border mx-auto mb-2" />
             <p className="text-sm font-semibold">Chưa có câu hỏi nào được lưu</p>
-            <p className="text-xs">Bấm vào biểu tượng ngôi sao trong chế độ lật thẻ để lưu câu hỏi cần xem lại.</p>
+            <p className="text-xs">Bấm vào biểu tượng ngôi sao ★ để lưu câu hỏi khó.</p>
           </div>
         ) : (
           <div className="space-y-3">

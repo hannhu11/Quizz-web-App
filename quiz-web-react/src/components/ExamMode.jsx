@@ -1,35 +1,69 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Clock, ArrowLeft, CheckCircle2, AlertCircle, Trophy, RotateCcw, ShieldCheck } from 'lucide-react';
-import { saveQuizProgress } from '../data/quizDataLoader';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Clock, ArrowLeft, CheckCircle2, AlertCircle, Trophy, RotateCcw, ShieldCheck, X } from 'lucide-react';
+import { saveQuizProgress, getStarredQuestions } from '../data/quizDataLoader';
 import confetti from 'canvas-confetti';
 
-export default function ExamMode({ quiz, onBack }) {
-  const questions = quiz.questions || [];
+export default function ExamMode({ quiz, testConfig, onBack }) {
+  // Extract configuration or defaults
+  const config = testConfig || {};
+  const timerConfig = config.timer || { enabled: false, mode: 'countdown', minutes: 20 };
+
+  // Prepare questions pool (filter starred if requested)
+  let initialQuestionsPool = quiz.questions || [];
+  if (config.studyStarredOnly) {
+    const starredIds = new Set(getStarredQuestions().map(s => s.questionId));
+    initialQuestionsPool = initialQuestionsPool.filter(q => starredIds.has(q.id));
+    if (initialQuestionsPool.length === 0) {
+      initialQuestionsPool = quiz.questions || []; // fallback if no starred questions exist
+    }
+  }
+
+  // Shuffle and slice requested question count
+  const targetCount = Math.min(config.questionCount || 20, initialQuestionsPool.length);
+  const [questions] = useState(() => {
+    return [...initialQuestionsPool].sort(() => Math.random() - 0.5).slice(0, targetCount);
+  });
+
   const [userAnswers, setUserAnswers] = useState({}); // { qIndex: answerId }
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(questions.length * 60); // 1 minute per question
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // Timer countdown
+  // Timer states
+  const [secondsElapsed, setSecondsElapsed] = useState(0);
+  const [secondsRemaining, setSecondsRemaining] = useState((timerConfig.minutes || 20) * 60);
+
+  // Modal Dialog states
+  const [showExitModal, setShowExitModal] = useState(false);
+  const [unansweredWarning, setUnansweredWarning] = useState(null); // { count, firstUnansweredIndex }
+
+  const questionRef = useRef(null);
+
+  // Timer Interval Effect
   useEffect(() => {
     if (isSubmitted) return;
-    const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        if (prev <= 1) {
-          clearInterval(timer);
-          handleSubmitExam();
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-    return () => clearInterval(timer);
-  }, [isSubmitted]);
 
-  const formatTime = (seconds) => {
-    const m = Math.floor(seconds / 60);
-    const s = seconds % 60;
+    const timer = setInterval(() => {
+      if (timerConfig.enabled && timerConfig.mode === 'countdown') {
+        setSecondsRemaining(prev => {
+          if (prev <= 1) {
+            clearInterval(timer);
+            handleAutoSubmit();
+            return 0;
+          }
+          return prev - 1;
+        });
+      } else {
+        setSecondsElapsed(prev => prev + 1);
+      }
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [isSubmitted, timerConfig.enabled, timerConfig.mode]);
+
+  const formatTime = (totalSec) => {
+    const m = Math.floor(totalSec / 60);
+    const s = totalSec % 60;
     return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
   };
 
@@ -38,7 +72,31 @@ export default function ExamMode({ quiz, onBack }) {
     setUserAnswers(prev => ({ ...prev, [currentIndex]: answerId }));
   };
 
-  const handleSubmitExam = () => {
+  const handleAttemptSubmit = () => {
+    // Check for unanswered questions
+    const unansweredIndices = [];
+    questions.forEach((_, idx) => {
+      if (userAnswers[idx] === undefined) {
+        unansweredIndices.push(idx);
+      }
+    });
+
+    if (unansweredIndices.length > 0) {
+      setUnansweredWarning({
+        count: unansweredIndices.length,
+        firstUnansweredIndex: unansweredIndices[0]
+      });
+      return;
+    }
+
+    forceSubmit();
+  };
+
+  const handleAutoSubmit = () => {
+    forceSubmit();
+  };
+
+  const forceSubmit = () => {
     setIsSubmitted(true);
     let correctCount = 0;
     questions.forEach((q, idx) => {
@@ -57,9 +115,27 @@ export default function ExamMode({ quiz, onBack }) {
     }
   };
 
+  const handleJumpToUnanswered = () => {
+    if (unansweredWarning) {
+      setCurrentIndex(unansweredWarning.firstUnansweredIndex);
+      setUnansweredWarning(null);
+      if (questionRef.current) {
+        questionRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
+  const handleExitRequest = () => {
+    if (isSubmitted || Object.keys(userAnswers).length === 0) {
+      onBack();
+    } else {
+      setShowExitModal(true);
+    }
+  };
+
   const currentQ = questions[currentIndex] || {};
 
-  // Compute final score if submitted
+  // Compute final score
   let finalScore = 0;
   if (isSubmitted) {
     questions.forEach((q, idx) => {
@@ -94,28 +170,28 @@ export default function ExamMode({ quiz, onBack }) {
             }`}>
               {isPassed ? 'ĐÃ ĐẠT (PASSED)' : 'CHƯA ĐẠT (RETAKE RECOMMENDED)'}
             </span>
-            <h2 className="text-2xl font-extrabold text-warm-text mt-3">Kết Quả Thi Thử</h2>
+            <h2 className="text-2xl font-extrabold text-slate-900 mt-3">Kết Quả Bài Thi</h2>
             <p className="text-xs text-warm-muted">{quiz.title}</p>
           </div>
 
           <div className="p-6 rounded-2xl bg-warm-bg border border-warm-border inline-block min-w-[280px]">
-            <div className="text-4xl font-extrabold text-warm-text">{finalScore} / {questions.length}</div>
+            <div className="text-4xl font-extrabold text-slate-900">{finalScore} / {questions.length}</div>
             <div className={`text-sm font-bold mt-1 ${isPassed ? 'text-emerald-600' : 'text-rose-600'}`}>
               Đạt {percentage}% điểm tổng
             </div>
           </div>
 
-          {/* Action buttons */}
+          {/* Action Buttons */}
           <div className="flex items-center justify-center gap-3 pt-4 border-t border-warm-border/60">
             <button
-              onClick={() => { setIsSubmitted(false); setUserAnswers({}); setCurrentIndex(0); setTimeLeft(questions.length * 60); }}
-              className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-white border border-warm-border hover:bg-warm-hover font-semibold text-sm shadow-sm transition-all active:scale-95 text-warm-text"
+              onClick={() => { setIsSubmitted(false); setUserAnswers({}); setCurrentIndex(0); setSecondsElapsed(0); setSecondsRemaining((timerConfig.minutes || 20) * 60); }}
+              className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-white border border-warm-border hover:bg-warm-hover font-semibold text-xs sm:text-sm shadow-xs transition-all active:scale-95 text-warm-text"
             >
-              <RotateCcw className="w-4 h-4 text-warm-slate" /> Thi lại
+              <RotateCcw className="w-4 h-4 text-warm-slate" /> Thi lại bài mới
             </button>
             <button
               onClick={onBack}
-              className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-warm-slate hover:bg-slate-700 text-white font-semibold text-sm shadow-sm transition-all active:scale-95"
+              className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-warm-slate hover:bg-slate-700 text-white font-semibold text-xs sm:text-sm shadow-xs transition-all active:scale-95"
             >
               Quay lại danh sách
             </button>
@@ -127,24 +203,31 @@ export default function ExamMode({ quiz, onBack }) {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-6">
-      {/* Header Bar with Countdown Timer */}
+      {/* Header Bar */}
       <div className="flex items-center justify-between mb-6">
         <button
-          onClick={onBack}
-          className="flex items-center gap-2 text-sm font-semibold text-warm-slate hover:text-warm-text bg-white border border-warm-border px-4 py-2 rounded-full shadow-sm hover:shadow transition-all active:scale-95"
+          onClick={handleExitRequest}
+          className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-warm-slate hover:text-warm-text bg-white border border-warm-border px-4 py-2 rounded-full shadow-xs hover:shadow transition-all active:scale-95"
         >
           <ArrowLeft className="w-4 h-4" /> Thoát bài thi
         </button>
 
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 border border-amber-200 text-amber-900 font-mono font-bold text-sm shadow-sm">
-            <Clock className="w-4 h-4 text-amber-600 animate-pulse" />
-            <span>{formatTime(timeLeft)}</span>
-          </div>
+        <div className="flex items-center gap-3">
+          {/* Timer Display if enabled */}
+          {timerConfig.enabled ? (
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 border border-amber-200 text-amber-900 font-mono font-bold text-xs sm:text-sm shadow-xs">
+              <Clock className="w-4 h-4 text-amber-600 animate-pulse" />
+              <span>{timerConfig.mode === 'countdown' ? formatTime(secondsRemaining) : formatTime(secondsElapsed)}</span>
+            </div>
+          ) : (
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-warm-bg border border-warm-border text-warm-muted font-mono text-xs font-bold">
+              <span>Không đếm giờ</span>
+            </div>
+          )}
 
           <button
-            onClick={handleSubmitExam}
-            className="px-5 py-2 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-sm transition-all active:scale-95"
+            onClick={handleAttemptSubmit}
+            className="px-5 py-2 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-xs transition-all active:scale-95"
           >
             Nộp Bài Thi
           </button>
@@ -153,19 +236,19 @@ export default function ExamMode({ quiz, onBack }) {
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* Main Question Panel */}
-        <div className="lg:col-span-3 bg-white rounded-3xl p-6 sm:p-8 border border-warm-border shadow-soft">
+        <div ref={questionRef} className="lg:col-span-3 bg-white rounded-3xl p-6 sm:p-8 border border-warm-border shadow-soft">
           <div className="flex items-center justify-between text-xs font-bold text-warm-muted mb-4">
             <span className="text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200/80">
               Câu {currentIndex + 1} / {questions.length}
             </span>
-            <span>Môn: {quiz.category}</span>
+            <span>{quiz.category}</span>
           </div>
 
-          <h3 className="text-lg sm:text-xl font-bold text-warm-text leading-relaxed mb-6">
+          <h3 className="text-base sm:text-xl font-bold text-slate-900 leading-relaxed mb-6 break-words">
             {currentQ.content}
           </h3>
 
-          {/* Options */}
+          {/* Options List */}
           <div className="space-y-3 mb-8">
             {(currentQ.answers || []).map((answer, aIdx) => {
               const isSelected = userAnswers[currentIndex] === answer.id;
@@ -173,9 +256,9 @@ export default function ExamMode({ quiz, onBack }) {
                 <button
                   key={answer.id || aIdx}
                   onClick={() => handleSelectOption(answer.id)}
-                  className={`w-full text-left p-4 rounded-2xl border transition-all duration-200 flex items-start gap-3 text-sm font-medium ${
+                  className={`w-full text-left p-4 rounded-2xl border transition-all duration-200 flex items-start gap-3 text-xs sm:text-sm font-medium ${
                     isSelected
-                      ? 'bg-warm-slate text-white border-warm-slate shadow-sm'
+                      ? 'bg-warm-slate text-white border-warm-slate shadow-xs'
                       : 'bg-white border-warm-border text-warm-text hover:bg-warm-hover'
                   }`}
                 >
@@ -184,7 +267,7 @@ export default function ExamMode({ quiz, onBack }) {
                   }`}>
                     {String.fromCharCode(65 + aIdx)}
                   </span>
-                  <span>{answer.content}</span>
+                  <span className="break-words">{answer.content}</span>
                 </button>
               );
             })}
@@ -211,7 +294,7 @@ export default function ExamMode({ quiz, onBack }) {
 
         {/* Question Grid Navigator Sidebar */}
         <div className="bg-white rounded-3xl p-5 border border-warm-border shadow-soft h-fit">
-          <h4 className="text-xs font-bold text-warm-text mb-3 uppercase tracking-wider">Danh Sách Câu Hỏi</h4>
+          <h4 className="text-xs font-bold text-slate-900 mb-3 uppercase tracking-wider">DANH SÁCH CÂU HỎI</h4>
           <div className="grid grid-cols-5 gap-2 max-h-[360px] overflow-y-auto pr-1">
             {questions.map((_, idx) => {
               const isAnswered = userAnswers[idx] !== undefined;
@@ -237,14 +320,82 @@ export default function ExamMode({ quiz, onBack }) {
 
           <div className="mt-4 pt-4 border-t border-warm-border/60 space-y-2 text-[11px] text-warm-muted font-medium">
             <div className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded bg-amber-100 border border-amber-300" /> Đã trả lời ({Object.keys(userAnswers).length})
+              <span className="w-3 h-3 rounded bg-amber-100 border border-amber-300" /> Đã chọn ({Object.keys(userAnswers).length})
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded bg-warm-bg border border-warm-border" /> Chưa trả lời ({questions.length - Object.keys(userAnswers).length})
+              <span className="w-3 h-3 rounded bg-warm-bg border border-warm-border" /> Chưa chọn ({questions.length - Object.keys(userAnswers).length})
             </div>
           </div>
         </div>
       </div>
+
+      {/* Unanswered Warning Modal */}
+      <AnimatePresence>
+        {unansweredWarning && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-slate-900/40 backdrop-blur-xs" />
+            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} className="relative bg-white rounded-3xl p-6 border border-warm-border shadow-soft-lg max-w-sm w-full z-10 text-center space-y-4">
+              <div className="w-12 h-12 rounded-full bg-rose-100 text-rose-600 mx-auto flex items-center justify-center">
+                <AlertCircle className="w-6 h-6" />
+              </div>
+              <div>
+                <h4 className="text-base font-bold text-slate-900">Còn câu chưa trả lời!</h4>
+                <p className="text-xs text-warm-muted mt-1">
+                  Bạn còn <span className="font-bold text-rose-600">{unansweredWarning.count} câu</span> chưa chọn đáp án.
+                </p>
+              </div>
+              <div className="flex items-center gap-2 pt-2">
+                <button
+                  onClick={handleJumpToUnanswered}
+                  className="flex-1 py-2 rounded-full bg-warm-slate text-white text-xs font-bold hover:bg-slate-700"
+                >
+                  Nhảy tới câu chưa chọn
+                </button>
+                <button
+                  onClick={forceSubmit}
+                  className="px-4 py-2 rounded-full border border-warm-border text-xs font-semibold text-warm-muted hover:bg-warm-hover"
+                >
+                  Vẫn nộp
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+
+      {/* Exit Guard Confirmation Modal */}
+      <AnimatePresence>
+        {showExitModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-slate-900/40 backdrop-blur-xs" />
+            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} className="relative bg-white rounded-3xl p-6 border border-warm-border shadow-soft-lg max-w-sm w-full z-10 text-center space-y-4">
+              <div className="w-12 h-12 rounded-full bg-amber-100 text-amber-600 mx-auto flex items-center justify-center">
+                <AlertCircle className="w-6 h-6" />
+              </div>
+              <div>
+                <h4 className="text-base font-bold text-slate-900">Xác nhận thoát bài thi?</h4>
+                <p className="text-xs text-warm-muted mt-1 leading-relaxed">
+                  Bạn đang làm bài kiểm tra. Nếu thoát ra, tiến trình bài làm hiện tại <span className="font-bold text-rose-600">sẽ KHÔNG được lưu</span>.
+                </p>
+              </div>
+              <div className="flex items-center gap-2 pt-2">
+                <button
+                  onClick={() => setShowExitModal(false)}
+                  className="flex-1 py-2 rounded-full border border-warm-border text-xs font-bold text-warm-text hover:bg-warm-hover"
+                >
+                  Tiếp tục làm bài
+                </button>
+                <button
+                  onClick={onBack}
+                  className="px-4 py-2 rounded-full bg-rose-600 text-white text-xs font-bold hover:bg-rose-700"
+                >
+                  Xác nhận thoát
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
