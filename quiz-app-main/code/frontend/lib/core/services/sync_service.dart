@@ -9,7 +9,7 @@ import 'package:frontend/features/library/models/subject.dart';
 
 class SyncService {
   static const String serverUrl = 'https://hannhu.io.vn/api/sync';
-  static const String fallbackUrl = 'http://140.245.119.189/api/sync';
+  static const String fallbackUrl = 'https://hannhu.io.vn/api/sync';
 
   /// Sync data from server to local ObjectBox DB automatically
   static Future<bool> syncDataWithServer() async {

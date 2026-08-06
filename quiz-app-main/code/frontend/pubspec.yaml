@@ -23,7 +23,6 @@ dependencies:
 
   # --- DATABASE: OBJECTBOX ---
   objectbox: ^5.1.0 # nâng từ 2.5.0
-  objectbox_flutter_libs: ^5.1.0
 
   path_provider: ^2.1.5
   riverpod_annotation: ^4.0.0 # nâng từ 2.6.1
@@ -41,6 +40,7 @@ dependencies:
   just_audio: ^0.9.40           # Lofi ambient audio player
   flutter_animate: ^4.5.2       # Smooth micro-animations
 dev_dependencies:
+  objectbox_flutter_libs: ^5.1.0
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
