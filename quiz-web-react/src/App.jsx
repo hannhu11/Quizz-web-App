@@ -26,10 +26,17 @@ export default function App() {
   const [isStarredModalOpen, setIsStarredModalOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // Load progress and starred questions on mount
+  // Synchronize progress and starred questions + listen for instant star events
   useEffect(() => {
-    setProgress(getUserProgress());
-    setStarredQuestions(getStarredQuestions());
+    const refreshData = () => {
+      setProgress(getUserProgress());
+      setStarredQuestions(getStarredQuestions());
+    };
+
+    refreshData();
+
+    window.addEventListener('quizzlet_star_updated', refreshData);
+    return () => window.removeEventListener('quizzlet_star_updated', refreshData);
   }, []);
 
   // Filter Categories list

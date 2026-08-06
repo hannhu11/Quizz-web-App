@@ -138,6 +138,11 @@ export function toggleStarQuestion(questionId, quizId, questionData, questionInd
       ];
     }
     localStorage.setItem(STORAGE_KEY_STARS, JSON.stringify(updated));
+
+    // Dispatch global event for instant reactivity across all open views
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('quizzlet_star_updated', { detail: updated }));
+    }
     return updated;
   } catch (e) {
     console.error('Error toggling star question', e);

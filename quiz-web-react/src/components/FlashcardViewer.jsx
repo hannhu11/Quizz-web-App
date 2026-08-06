@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { ArrowLeft, ArrowRight, RotateCw, Star, Shuffle, CheckCircle, HelpCircle } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { ArrowLeft, ArrowRight, RotateCw, Star, Shuffle, CheckCircle, HelpCircle, X, Check, Maximize2, Minimize2, RotateCcw } from 'lucide-react';
 import { toggleStarQuestion, getStarredQuestions } from '../data/quizDataLoader';
 
 export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
@@ -7,41 +7,64 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
   const [currentIndex, setCurrentIndex] = useState(initialIndex || 0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [isStarred, setIsStarred] = useState(false);
-  const [masteredIds, setMasteredIds] = useState(new Set());
+
+  // Track Progress States
+  const [isTrackProgressEnabled, setIsTrackProgressEnabled] = useState(false);
+  const [stillLearningCount, setStillLearningCount] = useState(0);
+  const [knowCount, setKnowCount] = useState(0);
+
+  // Fullscreen State
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const containerRef = useRef(null);
 
   const currentQ = questions[currentIndex] || {};
   const correctAnswer = (currentQ.answers || []).find(a => a.isCorrect);
 
-  // Update starting index if initialIndex prop changes
+  // Sync initialIndex prop
   useEffect(() => {
     if (initialIndex >= 0 && initialIndex < questions.length) {
       setCurrentIndex(initialIndex);
     }
   }, [initialIndex, questions.length]);
 
-  // Check starred status on index change
+  // Sync Starred status on change & listen to global star update event
   useEffect(() => {
-    if (!currentQ.id) return;
-    const stars = getStarredQuestions();
-    setIsStarred(stars.some(s => s.questionId === currentQ.id));
+    const checkStar = () => {
+      if (!currentQ.id) return;
+      const stars = getStarredQuestions();
+      setIsStarred(stars.some(s => s.questionId === currentQ.id));
+    };
+
+    checkStar();
     setIsFlipped(false);
+
+    window.addEventListener('quizzlet_star_updated', checkStar);
+    return () => window.removeEventListener('quizzlet_star_updated', checkStar);
   }, [currentIndex, currentQ.id]);
 
-  // Keyboard navigation shortcuts
+  // Keyboard Navigation Shortcuts
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.code === 'Space') {
         e.preventDefault();
         setIsFlipped(prev => !prev);
       } else if (e.code === 'ArrowRight') {
-        handleNext();
+        if (isTrackProgressEnabled) {
+          handleMarkKnow();
+        } else {
+          handleNext();
+        }
       } else if (e.code === 'ArrowLeft') {
-        handlePrev();
+        if (isTrackProgressEnabled) {
+          handleMarkStillLearning();
+        } else {
+          handlePrev();
+        }
       }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentIndex, questions.length]);
+  }, [currentIndex, questions.length, isTrackProgressEnabled]);
 
   const handleNext = () => {
     setIsFlipped(false);
@@ -53,6 +76,16 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
     setCurrentIndex(prev => (prev - 1 + questions.length) % questions.length);
   };
 
+  const handleMarkKnow = () => {
+    setKnowCount(prev => prev + 1);
+    handleNext();
+  };
+
+  const handleMarkStillLearning = () => {
+    setStillLearningCount(prev => prev + 1);
+    handleNext();
+  };
+
   const handleShuffle = () => {
     const shuffled = [...questions].sort(() => Math.random() - 0.5);
     setQuestions(shuffled);
@@ -62,34 +95,50 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
 
   const handleToggleStar = () => {
     if (!currentQ.id) return;
-    const updated = toggleStarQuestion(currentQ.id, quiz.id, currentQ, currentIndex);
-    setIsStarred(updated.some(s => s.questionId === currentQ.id));
+    toggleStarQuestion(currentQ.id, quiz.id, currentQ, currentIndex);
   };
 
-  const toggleMastered = () => {
-    setMasteredIds(prev => {
-      const next = new Set(prev);
-      if (next.has(currentQ.id)) {
-        next.delete(currentQ.id);
-      } else {
-        next.add(currentQ.id);
+  const toggleFullscreen = () => {
+    if (!document.fullscreenElement) {
+      if (containerRef.current?.requestFullscreen) {
+        containerRef.current.requestFullscreen();
+        setIsFullscreen(true);
       }
-      return next;
-    });
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+        setIsFullscreen(false);
+      }
+    }
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-4 py-4 flex flex-col justify-between text-warm-text dark:text-slate-100">
-      {/* Top Controls Header */}
+    <div
+      ref={containerRef}
+      className={`w-full max-w-4xl mx-auto px-4 py-4 flex flex-col justify-between text-warm-text dark:text-slate-100 ${
+        isFullscreen ? 'fixed inset-0 z-50 bg-warm-bg dark:bg-slate-950 p-8 max-w-none justify-between overflow-y-auto' : ''
+      }`}
+    >
+      {/* Top Header & Quizlet Position Indicator (X / Total  MÃ_MÔN) */}
       <div className="flex items-center justify-between gap-3 mb-4 shrink-0">
         <button
           onClick={onBack}
-          className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-warm-slate dark:text-slate-200 hover:text-warm-text bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 px-4 py-2 rounded-full shadow-xs hover:shadow transition-all active:scale-95"
+          className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-warm-slate dark:text-slate-300 hover:text-warm-text bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 px-4 py-2 rounded-full shadow-xs hover:shadow transition-all active:scale-95"
         >
           <ArrowLeft className="w-4 h-4" /> Quay lại
         </button>
 
-        <div className="flex items-center gap-2.5">
+        {/* Center Quizlet Position Badge */}
+        <div className="text-center">
+          <div className="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200">
+            {currentIndex + 1} / {questions.length}
+          </div>
+          <div className="text-[11px] font-semibold text-warm-muted dark:text-slate-400">
+            {quiz.category || 'MÔN'}
+          </div>
+        </div>
+
+        <div className="flex items-center gap-2">
           <button
             onClick={handleShuffle}
             className="flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 hover:bg-warm-hover dark:hover:bg-slate-800 text-warm-text dark:text-slate-100 text-xs font-semibold transition-all shadow-xs active:scale-95"
@@ -97,12 +146,21 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
           >
             <Shuffle className="w-3.5 h-3.5 text-warm-slate dark:text-slate-400" /> Xáo trộn
           </button>
-
-          <span className="text-xs font-bold text-warm-muted dark:text-slate-300 px-3.5 py-1.5 bg-warm-hover dark:bg-slate-800 rounded-full border border-warm-border/60 dark:border-slate-700">
-            {currentIndex + 1} / {questions.length}
-          </span>
         </div>
       </div>
+
+      {/* Progress Counter Badges (When Track Progress is ON) */}
+      {isTrackProgressEnabled && (
+        <div className="flex items-center justify-between mb-3 px-2">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold text-orange-700 dark:text-orange-300 bg-orange-50 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800">
+            <span className="w-2 h-2 rounded-full bg-orange-500" /> {stillLearningCount} Still learning
+          </span>
+
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800">
+            Know {knowCount} <span className="w-2 h-2 rounded-full bg-emerald-500" />
+          </span>
+        </div>
+      )}
 
       {/* Progress Bar */}
       <div className="w-full h-1.5 bg-warm-border/40 dark:bg-slate-800 rounded-full mb-4 overflow-hidden shrink-0">
@@ -112,7 +170,7 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
         />
       </div>
 
-      {/* HARDWARE-ACCELERATED GPU 3D FLASHCARD CONTAINER (min-h-[460px], NO LAG) */}
+      {/* HARDWARE-ACCELERATED GPU 3D FLASHCARD CONTAINER */}
       <div
         className="w-full max-w-[800px] h-[460px] min-h-[460px] mx-auto my-2 relative perspective-1000 select-none cursor-pointer"
         onClick={() => setIsFlipped(!isFlipped)}
@@ -124,7 +182,7 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
             willChange: 'transform'
           }}
         >
-          {/* Card Front (Question / Term + Flexible Auto-Wrapping Options List) */}
+          {/* Card Front (Question / Term + Options List) */}
           <div className="absolute inset-0 backface-hidden w-full h-full rounded-[24px] bg-white dark:bg-slate-900 p-6 sm:p-8 border border-warm-border dark:border-slate-800 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.05)] flex flex-col justify-between items-center text-center overflow-hidden">
             {/* Top Bar inside Card */}
             <div className="w-full flex items-center justify-between text-xs font-bold text-warm-muted dark:text-slate-400 shrink-0">
@@ -134,20 +192,20 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
 
               <button
                 onClick={(e) => { e.stopPropagation(); handleToggleStar(); }}
-                className="p-2 rounded-full hover:bg-warm-hover dark:hover:bg-slate-800 text-amber-400 transition-transform active:scale-125"
+                className="p-2 rounded-full hover:bg-warm-hover dark:hover:bg-slate-800 transition-transform active:scale-125"
                 title="Lưu câu hỏi ⭐"
               >
                 <Star className={`w-5 h-5 ${isStarred ? 'fill-amber-400 text-amber-500' : 'text-warm-muted dark:text-slate-500'}`} />
               </button>
             </div>
 
-            {/* Question / Term & Full Text Auto-Wrapping Options List */}
+            {/* Question Text & Full Auto-Wrapping Options List */}
             <div className="my-auto py-2 px-2 max-w-2xl w-full text-center flex flex-col items-center justify-center space-y-3">
               <p className="text-base sm:text-lg md:text-xl font-bold text-slate-900 dark:text-slate-100 leading-snug break-words">
                 {currentQ.content}
               </p>
 
-              {/* Display Options List (No truncate, full line-wrapping) */}
+              {/* Display Options List (Term & Options) */}
               {(currentQ.answers || []).length > 0 && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full pt-2">
                   {currentQ.answers.map((a, aIdx) => (
@@ -172,7 +230,7 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
             </div>
           </div>
 
-          {/* Card Back (Definition / Answer & Explanation) */}
+          {/* Card Back (ANSWER FIRST -> EXPLANATION SECOND RULE) */}
           <div className="absolute inset-0 backface-hidden rotate-y-180 w-full h-full rounded-[24px] bg-gradient-to-br from-amber-50/90 via-white to-indigo-50/70 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900 p-6 sm:p-8 border border-amber-200/80 dark:border-slate-800 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.05)] flex flex-col justify-between items-center text-center overflow-hidden">
             {/* Top Bar inside Answer Card */}
             <div className="w-full flex items-center justify-between text-xs font-bold text-emerald-800 dark:text-emerald-300 shrink-0">
@@ -182,17 +240,22 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
               <span className="text-warm-muted dark:text-slate-400">Bấm để lật lại câu hỏi</span>
             </div>
 
-            {/* Answer & Explanation Centered */}
-            <div className="my-auto py-2 px-2 max-w-2xl w-full text-center flex flex-col items-center justify-center space-y-3">
-              <div className="p-4 rounded-2xl bg-white/90 dark:bg-slate-800 border border-emerald-200 dark:border-emerald-800 text-center shadow-xs w-full">
+            {/* ANSWER FIRST -> EXPLANATION SECOND */}
+            <div className="my-auto py-2 px-2 max-w-2xl w-full text-center flex flex-col items-center justify-center space-y-4">
+              {/* 1. FULL CORRECT ANSWER TEXT (FIRST) */}
+              <div className="p-5 rounded-2xl bg-white/90 dark:bg-slate-800 border border-emerald-300 dark:border-emerald-700 text-center shadow-xs w-full">
+                <p className="text-xs font-bold text-emerald-700 dark:text-emerald-400 mb-1">
+                  ✓ Đáp án đúng
+                </p>
                 <p className="text-base sm:text-lg font-extrabold text-emerald-950 dark:text-emerald-200 leading-snug break-words">
                   {correctAnswer ? correctAnswer.content : 'Chưa có đáp án'}
                 </p>
               </div>
 
+              {/* 2. EXPLANATION CALLOUT BOX (BELOW / SECOND) */}
               {currentQ.explanation && (
-                <div className="p-3 rounded-xl bg-warm-hover/70 dark:bg-slate-800/80 border border-warm-border dark:border-slate-700 text-xs text-warm-text dark:text-slate-200 leading-relaxed text-left w-full">
-                  <span className="font-bold text-warm-slate dark:text-slate-300 block mb-1">💡 Giải thích chi tiết:</span>
+                <div className="p-3.5 rounded-xl bg-amber-50/90 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-xs text-amber-950 dark:text-amber-200 leading-relaxed text-left w-full">
+                  <span className="font-bold text-amber-900 dark:text-amber-300 block mb-1">💡 Giải thích chi tiết:</span>
                   {currentQ.explanation}
                 </div>
               )}
@@ -201,39 +264,71 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
             {/* Bottom Status Footer */}
             <div className="w-full flex items-center justify-between pt-3 border-t border-warm-border/40 dark:border-slate-800 text-xs text-warm-muted dark:text-slate-400 shrink-0">
               <span>{quiz.subject}</span>
-              <button
-                onClick={(e) => { e.stopPropagation(); toggleMastered(); }}
-                className={`px-3.5 py-1.5 rounded-full font-semibold transition-all ${
-                  masteredIds.has(currentQ.id)
-                    ? 'bg-emerald-600 text-white shadow-xs'
-                    : 'bg-white dark:bg-slate-800 border border-warm-border dark:border-slate-700 text-warm-muted dark:text-slate-300 hover:text-warm-text'
-                }`}
-              >
-                {masteredIds.has(currentQ.id) ? '✓ Đã thuộc' : '+ Đánh dấu đã thuộc'}
-              </button>
+              <span className="text-[11px] italic">Thẻ #{currentIndex + 1}</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Navigation Buttons */}
-      <div className="flex items-center justify-between gap-4 mt-4 shrink-0">
-        <button
-          onClick={handlePrev}
-          className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 hover:bg-warm-hover dark:hover:bg-slate-800 text-warm-text dark:text-slate-100 font-semibold text-xs sm:text-sm shadow-xs transition-all active:scale-95"
-        >
-          <ArrowLeft className="w-4 h-4 text-warm-slate dark:text-slate-300" /> Câu trước
-        </button>
+      {/* Bottom Action Controls Row (Track Progress & Fullscreen & Nav Buttons) */}
+      <div className="flex items-center justify-between gap-3 mt-4 shrink-0">
+        {/* Track Progress Toggle */}
+        <label className="flex items-center gap-2 cursor-pointer select-none text-xs font-semibold text-warm-text dark:text-slate-200">
+          <span>Track progress</span>
+          <input
+            type="checkbox"
+            checked={isTrackProgressEnabled}
+            onChange={(e) => setIsTrackProgressEnabled(e.target.checked)}
+            className="w-4 h-4 accent-warm-slate rounded cursor-pointer"
+          />
+        </label>
 
-        <div className="hidden sm:flex items-center gap-2 text-xs text-warm-muted dark:text-slate-400 font-medium bg-white/60 dark:bg-slate-900/60 px-4 py-1.5 rounded-full border border-warm-border/60 dark:border-slate-800">
-          <span>Phím <kbd className="px-1.5 py-0.5 bg-warm-hover dark:bg-slate-800 border dark:border-slate-700 rounded">←</kbd> <kbd className="px-1.5 py-0.5 bg-warm-hover dark:bg-slate-800 border dark:border-slate-700 rounded">→</kbd> chuyển câu</span>
-        </div>
+        {/* Center Action Buttons (Normal vs Track Progress) */}
+        {isTrackProgressEnabled ? (
+          <div className="flex items-center gap-4">
+            {/* Still learning button (Orange X) */}
+            <button
+              onClick={handleMarkStillLearning}
+              className="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-950/80 hover:bg-orange-200 text-orange-600 dark:text-orange-400 border border-orange-300 dark:border-orange-800 flex items-center justify-center shadow-xs transition-all active:scale-90"
+              title="Chưa thuộc (Phím ←)"
+            >
+              <X className="w-6 h-6 stroke-[3]" />
+            </button>
 
+            {/* Know button (Green Check) */}
+            <button
+              onClick={handleMarkKnow}
+              className="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-950/80 hover:bg-emerald-200 text-emerald-600 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800 flex items-center justify-center shadow-xs transition-all active:scale-90"
+              title="Đã thuộc (Phím →)"
+            >
+              <Check className="w-6 h-6 stroke-[3]" />
+            </button>
+          </div>
+        ) : (
+          <div className="flex items-center gap-3">
+            <button
+              onClick={handlePrev}
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 hover:bg-warm-hover dark:hover:bg-slate-800 text-warm-text dark:text-slate-100 font-semibold text-xs sm:text-sm shadow-xs transition-all active:scale-95"
+            >
+              <ArrowLeft className="w-4 h-4 text-warm-slate dark:text-slate-300" /> Câu trước
+            </button>
+
+            <button
+              onClick={handleNext}
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-warm-slate dark:bg-slate-800 hover:bg-slate-700 dark:hover:bg-slate-700 text-white font-semibold text-xs sm:text-sm shadow-xs transition-all active:scale-95"
+            >
+              Câu tiếp <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        )}
+
+        {/* Fullscreen Button */}
         <button
-          onClick={handleNext}
-          className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-warm-slate dark:bg-slate-800 hover:bg-slate-700 dark:hover:bg-slate-700 text-white font-semibold text-xs sm:text-sm shadow-xs transition-all active:scale-95"
+          onClick={toggleFullscreen}
+          className="p-2.5 rounded-full bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 hover:bg-warm-hover dark:hover:bg-slate-800 text-warm-muted dark:text-slate-300 hover:text-warm-text transition-all active:scale-95"
+          title="Bật/Tắt Toàn Màn Hình"
         >
-          Câu tiếp <ArrowRight className="w-4 h-4" />
+          {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
         </button>
       </div>
     </div>
