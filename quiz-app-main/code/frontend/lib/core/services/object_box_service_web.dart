@@ -1,6 +1,10 @@
+import 'dart:async';
+
 enum TxMode { read, write }
 
 class Store {
+  Box<T> box<T>() => ObjectBoxService.instance.get<T>();
+
   Future<R> runInTransactionAsync<R, P>(
     TxMode mode,
     Future<R> Function(P param) callback,
@@ -14,6 +18,11 @@ class Store {
 class QueryBuilder<T> {
   Query<T> build() => Query<T>();
   List<int> getIdsAndClose() => [];
+
+  Stream<Query<T>> watch({bool triggerImmediately = false}) async* {
+    yield build();
+  }
+
   QueryBuilder<T> safeLink<Target, V>(dynamic value, dynamic rel, dynamic builder) => this;
   QueryBuilder<T> safeLinkMany<Target, V>(dynamic value, dynamic rel, dynamic builder) => this;
   QueryBuilder<T> safeBacklink<Source, V>(dynamic value, dynamic rel, dynamic builder) => this;
@@ -32,6 +41,9 @@ class Query<T> {
   T? findFirst() => null;
   int remove() => 0;
   void close() {}
+  Stream<List<T>> findStream() async* {
+    yield [];
+  }
 }
 
 class Box<T> {

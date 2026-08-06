@@ -65,22 +65,28 @@ class ToOne<T> {
   ToOne();
 }
 
-class ToMany<T> {
+class ToMany<T> extends Iterable<T> {
   final List<T> _items = [];
 
-  List<T> toList() => _items;
+  @override
+  List<T> toList({bool growable = true}) => List.from(_items, growable: growable);
+  @override
   int get length => _items.length;
+  @override
   bool get isEmpty => _items.isEmpty;
+  @override
   bool get isNotEmpty => _items.isNotEmpty;
 
   void add(T item) => _items.add(item);
   void addAll(Iterable<T> items) => _items.addAll(items);
   void clear() => _items.clear();
   bool remove(Object? element) => _items.remove(element);
+  void removeWhere(bool Function(T element) test) => _items.removeWhere(test);
 
   T operator [](int index) => _items[index];
   void operator []=(int index, T value) => _items[index] = value;
 
+  @override
   Iterator<T> get iterator => _items.iterator;
 }
 
