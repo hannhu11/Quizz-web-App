@@ -1,13 +1,5 @@
-import React, { useState } from 'react';
-import { Search, Star, Moon, Sun, Image as ImageIcon, User, Share2 } from 'lucide-react';
-
-export const WALLPAPERS = [
-  { id: 'none', name: 'Tối Giản Ấm Áp', bgClass: 'bg-warm-bg', overlay: '', url: '' },
-  { id: 'switzerland', name: '🏔️ Thụy Sĩ (Swiss Alps)', url: 'https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1920&q=80', overlay: 'bg-slate-900/40 backdrop-blur-[2px]' },
-  { id: 'sweden', name: '🌲 Thụy Điển (Sweden Forest)', url: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1920&q=80', overlay: 'bg-slate-900/35 backdrop-blur-[2px]' },
-  { id: 'rain', name: '🌧️ Mưa Rơi Bên Cửa Sổ', url: 'https://images.unsplash.com/photo-1519692933481-e162a57d6721?auto=format&fit=crop&w=1920&q=80', overlay: 'bg-slate-950/45 backdrop-blur-[3px]' },
-  { id: 'kyoto', name: '⛩️ Kyoto Chiều Tà', url: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1920&q=80', overlay: 'bg-slate-900/40 backdrop-blur-[2px]' },
-];
+import React from 'react';
+import { Search, Star, Moon, Sun } from 'lucide-react';
 
 export default function Navbar({
   searchTerm,
@@ -18,16 +10,12 @@ export default function Navbar({
   starredCount,
   onOpenStarred,
   isDarkMode,
-  setIsDarkMode,
-  currentWallpaper,
-  setCurrentWallpaper
+  setIsDarkMode
 }) {
-  const [showBgDropdown, setShowBgDropdown] = useState(false);
-
   return (
     <header className="sticky top-0 z-30 w-full glass-panel border-b border-warm-border/60 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3 sm:gap-4">
-        {/* Brand / User Avatar Logo with Facebook link */}
+        {/* Brand / User 3D Glass Avatar & Facebook Link */}
         <div className="flex items-center gap-3">
           <a
             href="https://www.facebook.com/nhu.han.3979"
@@ -53,9 +41,9 @@ export default function Navbar({
 
           <div>
             <h1 className="text-base sm:text-lg font-bold tracking-tight text-warm-text flex items-center gap-2">
-              Quizzlet <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-amber-100/90 text-amber-900 border border-amber-200">Hàn Như</span>
+              Hàn Như Space <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-amber-100/90 text-amber-900 border border-amber-200">Góc Học Tập</span>
             </h1>
-            <p className="text-[11px] text-warm-muted hidden sm:block">Góc học tập & ôn thi nhẹ nhàng</p>
+            <p className="text-[11px] text-warm-muted hidden sm:block">Không gian học tập & ôn luyện tối giản</p>
           </div>
         </div>
 
@@ -75,34 +63,6 @@ export default function Navbar({
 
         {/* Action Controls */}
         <div className="flex items-center gap-2">
-          {/* Wallpaper Selector Dropdown */}
-          <div className="relative">
-            <button
-              onClick={() => setShowBgDropdown(!showBgDropdown)}
-              className="p-2 rounded-full hover:bg-warm-hover text-warm-muted hover:text-warm-text transition-all active:scale-95 flex items-center gap-1"
-              title="Đổi khung cảnh nền Chill"
-            >
-              <ImageIcon className="w-4 h-4 text-warm-slate" />
-            </button>
-
-            {showBgDropdown && (
-              <div className="absolute right-0 top-11 w-52 bg-white/95 backdrop-blur-md rounded-2xl p-2 border border-warm-border shadow-soft-lg z-50 text-xs space-y-1">
-                <div className="font-bold text-warm-muted px-2 py-1 border-b border-warm-border/40">Khung Cảnh Nền</div>
-                {WALLPAPERS.map((wp) => (
-                  <button
-                    key={wp.id}
-                    onClick={() => { setCurrentWallpaper(wp); setShowBgDropdown(false); }}
-                    className={`w-full text-left px-2.5 py-1.5 rounded-xl transition-all ${
-                      currentWallpaper.id === wp.id ? 'bg-amber-100 text-amber-900 font-bold' : 'hover:bg-warm-hover text-warm-text'
-                    }`}
-                  >
-                    {wp.name}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-
           {/* Starred Questions Button */}
           <button
             onClick={onOpenStarred}

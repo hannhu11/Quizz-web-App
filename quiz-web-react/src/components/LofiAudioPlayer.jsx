@@ -1,29 +1,35 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Music, Play, Pause, Volume2, VolumeX, CloudRain, Waves, Sparkles, ChevronUp, ChevronDown } from 'lucide-react';
+import { Music, Play, Pause, Volume2, VolumeX, CloudRain, Waves, Coffee, ChevronUp, ChevronDown } from 'lucide-react';
 
-const AUDIO_TRACKS = [
-  {
-    id: 'lofi-beats',
-    title: 'Lofi Chill Beats',
-    subtitle: 'Nhạc tập trung nhẹ nhàng',
-    icon: Sparkles,
-    // Reliable Royalty Free Lofi / Ambient Streams
-    src: 'https://stream.zeno.fm/f3wvbbqmdg8uv'
-  },
+const AMBIENT_SOUNDSCAPES = [
   {
     id: 'rain-sounds',
     title: 'Mưa Rơi Rì Rầm',
-    subtitle: 'Tiếng mưa tự nhiên chill out',
+    subtitle: 'Tiếng mưa rơi tĩnh lặng',
     icon: CloudRain,
     src: 'https://cdn.pixabay.com/download/audio/2021/09/06/audio_403c94511d.mp3'
   },
   {
+    id: 'cozy-cafe',
+    title: 'Quán Cà Phê Yên Tĩnh',
+    subtitle: 'Không gian góc quán quen',
+    icon: Coffee,
+    src: 'https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3'
+  },
+  {
     id: 'ocean-waves',
-    title: 'Sóng Biển Rì Rào',
-    subtitle: 'Sóng vỗ nhẹ bờ bãi',
+    title: 'Sóng Biển Hoàng Hôn',
+    subtitle: 'Sóng vỗ du dương bờ cát',
     icon: Waves,
     src: 'https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a2b5ef.mp3'
+  },
+  {
+    id: 'lofi-piano',
+    title: 'Lofi Piano Study',
+    subtitle: 'Giai điệu piano tập trung',
+    icon: Music,
+    src: 'https://stream.zeno.fm/f3wvbbqmdg8uv'
   }
 ];
 
@@ -35,7 +41,7 @@ export default function LofiAudioPlayer() {
   const [isExpanded, setIsExpanded] = useState(false);
   const audioRef = useRef(null);
 
-  const currentTrack = AUDIO_TRACKS[currentTrackIndex];
+  const currentTrack = AMBIENT_SOUNDSCAPES[currentTrackIndex];
 
   useEffect(() => {
     if (audioRef.current) {
@@ -52,7 +58,7 @@ export default function LofiAudioPlayer() {
       audioRef.current.play().then(() => {
         setIsPlaying(true);
       }).catch(err => {
-        console.warn('Audio playback prevented by browser auto-play policy', err);
+        console.warn('Audio playback user interaction required', err);
       });
     }
   };
@@ -80,39 +86,39 @@ export default function LofiAudioPlayer() {
         layout
         className="rounded-3xl glass-panel border border-warm-border shadow-soft-lg p-3 sm:p-4 text-warm-text max-w-xs transition-all duration-300"
       >
-        {/* Compact Widget Bar */}
+        {/* Compact Bar */}
         <div className="flex items-center gap-3">
-          {/* Animated Waveform / Music Icon */}
+          {/* Waveform / Sound Icon */}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-amber-200 via-rose-200 to-indigo-200 flex items-center justify-center shrink-0 shadow-sm relative group"
+            className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-amber-200 via-rose-200 to-indigo-200 flex items-center justify-center shrink-0 shadow-xs relative group"
           >
             {isPlaying ? (
               <div className="flex items-end justify-center gap-0.5 h-4">
-                <span className="w-1 bg-amber-700 animate-[bounce_1s_infinite_100ms] rounded-full h-3" />
-                <span className="w-1 bg-amber-700 animate-[bounce_1s_infinite_300ms] rounded-full h-4" />
-                <span className="w-1 bg-amber-700 animate-[bounce_1s_infinite_200ms] rounded-full h-2" />
+                <span className="w-1 bg-amber-800 animate-[bounce_1s_infinite_100ms] rounded-full h-3" />
+                <span className="w-1 bg-amber-800 animate-[bounce_1s_infinite_300ms] rounded-full h-4" />
+                <span className="w-1 bg-amber-800 animate-[bounce_1s_infinite_200ms] rounded-full h-2" />
               </div>
             ) : (
               <Music className="w-4 h-4 text-amber-900 group-hover:scale-110 transition-transform" />
             )}
           </button>
 
-          {/* Track Info */}
+          {/* Track Details */}
           <div className="flex-1 min-w-0 cursor-pointer" onClick={() => setIsExpanded(!isExpanded)}>
             <h4 className="text-xs font-bold truncate text-warm-text leading-tight">{currentTrack.title}</h4>
             <p className="text-[10px] text-warm-muted truncate">{currentTrack.subtitle}</p>
           </div>
 
-          {/* Play/Pause Button */}
+          {/* Play/Pause */}
           <button
             onClick={togglePlay}
-            className="w-9 h-9 rounded-full bg-warm-slate hover:bg-slate-700 text-white flex items-center justify-center shadow-sm transition-all active:scale-95 shrink-0"
+            className="w-9 h-9 rounded-full bg-warm-slate hover:bg-slate-700 text-white flex items-center justify-center shadow-xs transition-all active:scale-95 shrink-0"
           >
             {isPlaying ? <Pause className="w-4 h-4 fill-white" /> : <Play className="w-4 h-4 fill-white ml-0.5" />}
           </button>
 
-          {/* Toggle Expand Details */}
+          {/* Toggle Expand */}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
             className="p-1 rounded-full hover:bg-warm-hover text-warm-muted hover:text-warm-text transition-all"
@@ -121,7 +127,7 @@ export default function LofiAudioPlayer() {
           </button>
         </div>
 
-        {/* Expanded Panel (Track selector & Volume slider) */}
+        {/* Expanded Soundscape Selection Panel */}
         <AnimatePresence>
           {isExpanded && (
             <motion.div
@@ -130,7 +136,7 @@ export default function LofiAudioPlayer() {
               exit={{ height: 0, opacity: 0 }}
               className="mt-3 pt-3 border-t border-warm-border/60 space-y-3 overflow-hidden"
             >
-              {/* Audio Volume Controls */}
+              {/* Volume Controls */}
               <div className="flex items-center gap-2 px-1">
                 <button
                   onClick={() => setIsMuted(!isMuted)}
@@ -149,9 +155,9 @@ export default function LofiAudioPlayer() {
                 />
               </div>
 
-              {/* Tracks List */}
+              {/* Soundscapes List */}
               <div className="space-y-1">
-                {AUDIO_TRACKS.map((track, idx) => {
+                {AMBIENT_SOUNDSCAPES.map((track, idx) => {
                   const IconComp = track.icon;
                   const isSelected = currentTrackIndex === idx;
 
@@ -161,7 +167,7 @@ export default function LofiAudioPlayer() {
                       onClick={() => handleTrackChange(idx)}
                       className={`w-full flex items-center gap-2.5 p-2 rounded-xl text-left text-xs transition-all ${
                         isSelected
-                          ? 'bg-amber-100/70 font-bold text-amber-950 border border-amber-200/60'
+                          ? 'bg-amber-100/80 font-bold text-amber-950 border border-amber-200/80'
                           : 'hover:bg-warm-hover text-warm-muted hover:text-warm-text'
                       }`}
                     >
