@@ -40,7 +40,7 @@ dependencies:
   just_audio: ^0.9.40           # Lofi ambient audio player
   flutter_animate: ^4.5.2       # Smooth micro-animations
 dev_dependencies:
-  # objectbox_flutter_libs: ^5.1.0 # Un-comment for Windows Desktop builds requiring native objectbox.dll
+  objectbox_flutter_libs: ^5.1.0
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0

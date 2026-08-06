@@ -1,4 +1,4 @@
-import 'package:objectbox/objectbox.dart';
+import '../objectbox_imports.dart';
 
 extension QueryBuilderExt<T> on QueryBuilder<T> {
   // Kết thúc query: Build -> Lấy ID -> Close (Tất cả trong 1 nốt nhạc)

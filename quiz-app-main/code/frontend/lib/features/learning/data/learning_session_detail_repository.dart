@@ -1,7 +1,7 @@
 import 'package:frontend/core/services/object_box_service.dart';
 import 'package:frontend/features/learning/models/session/learning_session_detail.dart';
 import 'package:frontend/features/library/models/answer.dart';
-import 'package:frontend/objectbox.g.dart';
+import 'package:frontend/objectbox_g_imports.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'learning_session_detail_repository.g.dart';

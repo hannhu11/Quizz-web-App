@@ -8,7 +8,7 @@ import 'package:frontend/features/learning/models/search_params/learning_session
 import 'package:frontend/features/learning/models/session/learning_session.dart';
 import 'package:frontend/features/learning/models/session/learning_session_detail.dart';
 import 'package:frontend/features/library/models/quiz.dart';
-import 'package:frontend/objectbox.g.dart';
+import 'package:frontend/objectbox_g_imports.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'learning_session_repository.g.dart';

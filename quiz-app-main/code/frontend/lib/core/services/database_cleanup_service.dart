@@ -4,7 +4,7 @@ import 'package:frontend/features/learning/models/session/learning_session_detai
 import 'package:frontend/features/library/models/answer.dart'; // Thêm import model của phen
 import 'package:frontend/features/library/models/question.dart';
 import 'package:frontend/features/library/models/quiz.dart';
-import 'package:frontend/objectbox.g.dart';
+import 'package:frontend/objectbox_g_imports.dart';
 
 class DatabaseCleanupService {
   static Future<void> runFullCleanup() async {

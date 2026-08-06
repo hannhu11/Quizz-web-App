@@ -2,7 +2,7 @@ import 'package:frontend/core/exceptions/app_exception.dart';
 import 'package:frontend/core/services/object_box_service.dart';
 import 'package:frontend/features/library/models/answer.dart';
 import 'package:frontend/features/library/models/question.dart';
-import 'package:frontend/objectbox.g.dart';
+import 'package:frontend/objectbox_g_imports.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'answer_repository.g.dart';

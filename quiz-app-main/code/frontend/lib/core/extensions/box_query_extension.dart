@@ -1,4 +1,4 @@
-import 'package:frontend/objectbox.g.dart';
+import 'package:frontend/objectbox_g_imports.dart';
 
 extension BoxQueryExtension<T> on Box<T> {
   /// Giúp build Query nhanh gọn kèm theo phân trang

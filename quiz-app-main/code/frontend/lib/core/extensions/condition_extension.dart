@@ -1,4 +1,4 @@
-import 'package:objectbox/objectbox.dart';
+import '../objectbox_imports.dart';
 
 extension ConditionExtension<T> on Condition<T>? {
   /// Phép AND an toàn:
