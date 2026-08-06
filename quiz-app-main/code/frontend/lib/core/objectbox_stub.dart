@@ -1,5 +1,7 @@
 import 'dart:collection';
 
+export 'objectbox_g_stub.dart';
+
 class Entity {
   final int? realClassId;
   const Entity({this.realClassId});
@@ -114,6 +116,8 @@ class Box<T> {
   T? get(int id) => _items.isNotEmpty ? _items.first : null;
   Future<T?> getAsync(int id) async => get(id);
 
+  List<T?> getMany(List<int> ids) => ids.map((id) => get(id)).toList();
+
   bool remove(int id) {
     if (_items.isNotEmpty) {
       _items.removeAt(0);
@@ -124,9 +128,18 @@ class Box<T> {
 
   Future<bool> removeAsync(int id) async => remove(id);
 
+  int removeMany(List<int> ids) {
+    int count = 0;
+    for (var id in ids) {
+      if (remove(id)) count++;
+    }
+    return count;
+  }
+
   int removeAll() {
     final count = _items.length;
     _items.clear();
     return count;
   }
 }
+
