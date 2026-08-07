@@ -122,13 +122,17 @@ export default function CreateSetView({ onBack, onSetCreated, editQuiz = null })
         alert(err.message || 'Mật khẩu quản lý không chính xác!');
       }
     } else {
-      const createdSet = await createCustomQuizSet({
-        title,
-        description,
-        password: finalPassword,
-        questions: validQuestions
-      });
-      onSetCreated(createdSet);
+      try {
+        const createdSet = await createCustomQuizSet({
+          title,
+          description,
+          password: finalPassword,
+          questions: validQuestions
+        });
+        onSetCreated(createdSet);
+      } catch (err) {
+        alert(err.message || 'Lỗi khi tạo bộ đề. Vui lòng kiểm tra lại kết nối!');
+      }
     }
   };
 

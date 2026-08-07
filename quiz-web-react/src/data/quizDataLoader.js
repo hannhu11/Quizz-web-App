@@ -186,6 +186,10 @@ export async function syncCommunityQuizzes() {
 
 // Create Custom Quiz Set (Sync to Server VPS & Backup to GitHub)
 export async function createCustomQuizSet({ title, description, password, questions }) {
+  if (!password || password.trim() === '') {
+    throw new Error('Bắt buộc phải nhập mật khẩu cho bộ đề!');
+  }
+
   const id = `custom-${Date.now()}`;
   const category = 'TỰ TẠO';
   const newSet = {
@@ -231,9 +235,11 @@ export async function createCustomQuizSet({ title, description, password, questi
 
     if (res.ok) {
       await syncCommunityQuizzes();
+    } else {
+      throw new Error('API server error');
     }
   } catch (e) {
-    console.warn('Could not reach backend API for GitHub backup, stored locally.');
+    console.warn('Could not reach backend API, stored locally as fallback.');
     const currentCustoms = getCustomQuizSets();
     const updatedCustoms = [newSet, ...currentCustoms.filter(c => c.id !== id)];
     localStorage.setItem(STORAGE_KEY_CUSTOM_QUIZZES, JSON.stringify(updatedCustoms));

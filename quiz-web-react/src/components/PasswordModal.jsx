@@ -9,11 +9,9 @@ export default function PasswordModal({ isOpen, onClose, onConfirm, actionType =
 
   // Automatically reset input state and error whenever modal opens or closes
   useEffect(() => {
-    if (isOpen) {
-      setPassword('');
-      setErrorMsg('');
-      setIsSubmitting(false);
-    }
+    setPassword('');
+    setErrorMsg('');
+    setIsSubmitting(false);
   }, [isOpen]);
 
   if (!isOpen) return null;
