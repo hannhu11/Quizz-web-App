@@ -110,3 +110,10 @@ Trước khi commit, luôn đảm bảo các file nhạy cảm không bị push 
   git commit -m "mô tả thay đổi bằng tiếng Việt"
   git push origin main
   ```
+
+### 🪟 6. Refactor Chill Space Độc Lập (Floating Widgets - LifeAt Style)
+- Tách `LofiAudioPlayer.jsx` thành kiến trúc 4 file: `ChillDock.jsx`, `AmbientSoundWidget.jsx`, `MediaStreamWidget.jsx`, `PomodoroWidget.jsx` bên trong thư mục `src/components/chill/`.
+- Xóa bỏ tất cả các Emoji rẻ tiền (🇻🇳, ☕, 🧠, 🌧️) và sử dụng hoàn toàn SVG của thư viện **Lucide-React** để mang lại UI/UX chuẩn, sang trọng. 
+- Giữ nguyên trạng thái Audio & Iframe (DOM retention) bằng CSS classes `opacity-0 scale-95 pointer-events-none` thay vì unmount Component.
+- Tích hợp `framer-motion` cho phép kéo thả (drag) các widget tự do trên màn hình.
+- Các widgets hỗ trợ Dark/Light Theme hoàn hảo (dùng `bg-white/90 dark:bg-slate-900/90` backdrop blur glassmorphism).
