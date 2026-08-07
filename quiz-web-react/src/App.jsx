@@ -22,13 +22,22 @@ export default function App() {
   const [initialQuestionIndex, setInitialQuestionIndex] = useState(0);
   const [testConfig, setTestConfig] = useState(null);
   const [isTestSetupOpen, setIsTestSetupOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isStarredModalOpen, setIsStarredModalOpen] = useState(false);
 
   const [progress, setProgress] = useState({});
   const [starredQuestions, setStarredQuestions] = useState([]);
   const [customQuizList, setCustomQuizList] = useState([]);
   const [deletedQuizIds, setDeletedQuizIds] = useState([]);
-  const [isStarredModalOpen, setIsStarredModalOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Sync dark class to documentElement for full Tailwind CSS Dark Mode support
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDarkMode]);
 
   // Synchronize progress, community custom quizzes, deleted quiz IDs, and starred questions
   useEffect(() => {
@@ -293,16 +302,16 @@ export default function App() {
         {!studyMode && (
           <div className="space-y-8">
             {/* Hero Banner */}
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-100/90 via-rose-100/80 to-indigo-100/70 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 p-6 sm:p-8 border border-amber-200/80 dark:border-slate-800 shadow-soft flex items-center justify-between flex-wrap gap-4">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-50 via-rose-50 to-orange-50 dark:from-slate-900 dark:via-indigo-950/50 dark:to-slate-900 p-6 sm:p-8 border border-amber-200/80 dark:border-slate-800 shadow-soft flex items-center justify-between flex-wrap gap-4 transition-colors">
               <div className="max-w-2xl relative z-10">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/80 dark:bg-slate-800 border border-amber-200 dark:border-slate-700 text-amber-900 dark:text-amber-300 text-xs font-bold shadow-xs mb-3">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 dark:bg-slate-800/90 border border-amber-200/80 dark:border-indigo-900/80 text-amber-900 dark:text-amber-300 text-xs font-bold shadow-xs mb-3">
                   <Sparkles className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" /> Góc Ôn Luyện Kiến Thức
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight leading-snug">
-                  Thư Thái Ghi Nhớ • Ôn Luyện Hiệu Quả
+                  Thư Thái Ghi Nhớ • Bứt Phá Điểm Số
                 </h2>
                 <p className="text-sm text-slate-700 dark:text-slate-300 mt-2 leading-relaxed">
-                  Ghi nhớ flashcard 3D, xem lại danh sách câu hỏi Terms in this set, tự tạo bộ đề hoặc import y hệt Quizlet.
+                  Ghi nhớ Flashcard 3D, luyện tập trắc nghiệm thông minh, kết hợp nhạc Lofi thư giãn giúp tăng 200% độ tập trung.
                 </p>
               </div>
 
@@ -313,7 +322,7 @@ export default function App() {
                 <Plus className="w-5 h-5" /> + Tạo Bộ Đề Mới
               </button>
 
-              <div className="absolute -right-8 -bottom-8 w-48 h-48 rounded-full bg-amber-200/40 dark:bg-slate-800/40 blur-2xl pointer-events-none" />
+              <div className="absolute -right-8 -bottom-8 w-48 h-48 rounded-full bg-amber-200/40 dark:bg-indigo-900/20 blur-2xl pointer-events-none" />
             </div>
 
             {/* Quizzes List Grid Header */}

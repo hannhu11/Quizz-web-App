@@ -56,6 +56,21 @@ Tài liệu này lưu trữ toàn bộ lịch sử phát hiện lỗi, kiến tr
 - **Terms in this set**: Giữ nguyên danh sách lựa chọn trắc nghiệm A, B, C, D dưới mỗi thuật ngữ theo đúng yêu cầu hiển thị.
 - **Studying Progress & Search Bar**: Bổ sung thanh tiến độ học (KNOWT style) và thanh tìm kiếm từ vựng tiếng Việt trong `QuizDetailView.jsx`.
 
+### 🌙 4. Khắc Phục Lỗi Dark Mode & Đổi Mới Banner / Chill Widget
+- **Khắc phục lỗi Dark Mode toàn hệ thống**: 
+  - Trong `App.jsx`, thêm `useEffect` đồng bộ `isDarkMode` state trực tiếp lên `document.documentElement.classList.toggle('dark', isDarkMode)` để tất cả component, modal, portal đều nhận Dark Mode.
+  - Trong `index.css`, thêm directive `@custom-variant dark (&:where(.dark, .dark *));` của Tailwind v4 và style `html.dark body { background-color: #020617; color: #f8fafc; }`.
+- **Thiết kế lại Hero Banner & Slogan**:
+  - Tiêu đề chính: *"Thư Thái Ghi Nhớ • Bứt Phá Điểm Số"*.
+  - Mô tả: *"Ghi nhớ Flashcard 3D, luyện tập trắc nghiệm thông minh, kết hợp nhạc Lofi thư giãn giúp tăng 200% độ tập trung."*
+  - Gradient sáng: `from-amber-50 via-rose-50 to-orange-50`.
+  - Gradient tối: `dark:from-slate-900 dark:via-indigo-950/50 dark:to-slate-900`.
+- **Nâng cấp Widget Âm Nhạc / Chill Space 3-Tab (`LofiAudioPlayer.jsx`)**:
+  - Đặt cố định góc dưới bên phải màn hình (Bottom-Right), hỗ trợ Glassmorphic & Dark mode.
+  - Tab 1: **Âm thanh thiên nhiên (Ambient Sounds)** (Mưa rơi, Cà phê, Sóng biển, Lofi Piano với thanh chỉnh volume).
+  - Tab 2: **Lofi Live Stream** (Tích hợp Iframe Lofi Girl Live Stream).
+  - Tab 3: **Pomodoro Timer** (Đồng hồ 25m học / 5m nghỉ có âm thanh thông báo).
+
 ---
 
 ## 3. Quy Trình Build & Deploy VPS Chuẩn (Standard Operating Procedure)
