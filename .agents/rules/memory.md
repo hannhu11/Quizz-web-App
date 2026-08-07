@@ -1,0 +1,94 @@
+# AI Memory & Architectural Log - Quizzlet App (Hàn Như)
+
+Tài liệu này lưu trữ toàn bộ lịch sử phát hiện lỗi, kiến trúc hạ tầng, quy tắc logic và quy trình vận hành của dự án Quizzlet App. Mọi AI Agent làm việc sau này **BẮT BUỘC** phải tham chiếu tài liệu này trước khi chỉnh sửa hệ thống.
+
+---
+
+## 1. Thông Tin Hạ Tầng & Production (Single Source of Truth)
+
+- **Domain Production**: `https://hannhu.io.vn/`
+- **Repository GitHub**: `https://github.com/hannhu11/Quizz-web-App.git` (Branch: `main`)
+- **VPS Oracle IP**: `140.245.119.189` (OS: Ubuntu)
+- **SSH Credentials (Local)**:
+  - Key path: `C:\Users\ADMIN\Downloads\Open-claw\ssh-key-2026-03-01.key`
+  - User: `ubuntu`
+  - Lệnh SSH: `ssh -i "C:\Users\ADMIN\Downloads\Open-claw\ssh-key-2026-03-01.key" ubuntu@140.245.119.189`
+- **Cấu Trúc Thư Mục VPS**:
+  - Web Production Path: `/var/www/quiz-app/web/` và `/home/ubuntu/quizlet-app/web_dist/`
+  - Backend Server Path: `/home/ubuntu/quizlet-app/server/server.js` (Port 8701)
+  - Process Manager: PM2 (Process name: `quizlet-app`)
+  - Nginx Host Config: `/home/ubuntu/hannhu.io.vn.conf`
+
+---
+
+## 2. Phát Hiện Lỗi Gốc & Cách Khắc Phục (Diagnostic Findings)
+
+### 🐛 1. Lỗi Đồng Bộ Đề Giữa Các Tab Ẩn Danh (Real-time Sync Bug)
+- **Nguyên nhân gốc rễ**: 
+  1. Trên VPS, một tiến trình Node.js ngầm (`PID 1400122`) đã chiếm cổng `8701` bên ngoài PM2, khiến PM2 bị lỗi `errored` và không thể khởi chạy API backend đúng cách. Kết quả là API `/api/quizzes` bị trả về 404 / HTML.
+  2. Ở môi trường local, `vite.config.js` thiếu cấu hình `server.proxy` về cổng `8701`.
+  3. Frontend `quizDataLoader.js` khi bị lỗi fetch API đã âm thầm nhảy vào `catch` và lưu ngầm vào `LocalStorage`. Vì LocalStorage của 2 tab ẩn danh độc lập hoàn toàn, nên Tab B không thể thấy bộ đề Tab A vừa tạo.
+- **Cách đã khắc phục**:
+  1. Kill tiến trình rác trên VPS và khởi chạy lại chuẩn qua PM2: `pm2 start /home/ubuntu/quizlet-app/server/server.js --name quizlet-app --force`.
+  2. Cấu hình Proxy trong `quiz-web-react/vite.config.js`:
+     ```javascript
+     server: {
+       proxy: {
+         '/api': {
+           target: 'http://localhost:8701',
+           changeOrigin: true
+         }
+       }
+     }
+     ```
+  3. Cập nhật `createCustomQuizSet` trong `quizDataLoader.js` để quăng lỗi (throw Error) và cảnh báo người dùng khi API sập, loại bỏ việc âm thầm lưu ảo vào LocalStorage.
+
+### 🔑 2. Mật Khẩu Quản Lý Bộ Đề & Admin Master Key (`nhu`)
+- **Yêu cầu khắt khe**:
+  1. Người dùng khi tạo bộ đề bắt buộc phải nhập mật khẩu riêng (đã xóa bỏ hoàn toàn việc tự gán mặc định là `1`).
+  2. Admin Master Key: Chuỗi `nhu` được hardcode cả ở Backend (`server.js`) và Frontend (`quizDataLoader.js`).
+  3. Khi nhập mật khẩu `nhu` ở modal Sửa/Xóa, hệ thống sẽ tự động bypass (bỏ qua) mật khẩu gốc của người dùng và cho phép Admin can thiệp lập tức.
+- **Lỗi kẹt thông báo sai mật khẩu**:
+  - Đã sửa `PasswordModal.jsx`: Reset toàn bộ state `password` và `errorMsg` trong `useEffect` mỗi khi prop `isOpen` thay đổi.
+
+### 🎨 3. Giao Diện & Trải Nghiệm (UI/UX)
+- **Hover Thẻ Bộ Đề**: Đã kích hoạt class `hover:-translate-y-2 hover:shadow-xl transition-all duration-300` trong `SubjectCard.jsx` giúp thẻ nổi mượt mà khi di chuột vào.
+- **Terms in this set**: Giữ nguyên danh sách lựa chọn trắc nghiệm A, B, C, D dưới mỗi thuật ngữ theo đúng yêu cầu hiển thị.
+- **Studying Progress & Search Bar**: Bổ sung thanh tiến độ học (KNOWT style) và thanh tìm kiếm từ vựng tiếng Việt trong `QuizDetailView.jsx`.
+
+---
+
+## 3. Quy Trình Build & Deploy VPS Chuẩn (Standard Operating Procedure)
+
+Khi có bất kỳ thay đổi nào ở Frontend hoặc Backend, thực hiện đúng 4 bước sau:
+
+```powershell
+# BƯỚC 1: Build React App ở Local
+cd "C:\Users\ADMIN\Downloads\Quizzlet app\quiz-web-react"
+npm run build
+
+# BƯỚC 2: Đóng Gói Thành File Nén
+cd "C:\Users\ADMIN\Downloads\Quizzlet app"
+tar -czf scratch/react_web_dist.tar.gz -C quiz-web-react/dist .
+
+# BƯỚC 3: Upload Sang VPS via SCP
+scp -i "C:\Users\ADMIN\Downloads\Open-claw\ssh-key-2026-03-01.key" scratch/react_web_dist.tar.gz ubuntu@140.245.119.189:/home/ubuntu/quizlet-app/react_web_dist.tar.gz
+
+# BƯỚC 4: Giải Nén & Restart PM2 Trên VPS via SSH
+ssh -i "C:\Users\ADMIN\Downloads\Open-claw\ssh-key-2026-03-01.key" ubuntu@140.245.119.189 "mkdir -p /home/ubuntu/quizlet-app/web_dist && rm -rf /home/ubuntu/quizlet-app/web_dist/* && tar -xzf /home/ubuntu/quizlet-app/react_web_dist.tar.gz -C /home/ubuntu/quizlet-app/web_dist/ && sudo mkdir -p /var/www/quiz-app/web && sudo rm -rf /var/www/quiz-app/web/* && sudo cp -r /home/ubuntu/quizlet-app/web_dist/* /var/www/quiz-app/web/ && cd /home/ubuntu/quizlet-app/server && pm2 restart quizlet-app"
+```
+
+---
+
+## 4. Quy Chuẩn Commit & Push GitHub (Strict Security Exclusions)
+
+Trước khi commit, luôn đảm bảo các file nhạy cảm không bị push lên repository công khai:
+- **File bị cấm push**: `*.key`, `*.pem`, `*.pub`, `ssh-key*`, `.env`, `DEPLOY_GITHUB_VPS_GUIDE.md`, `scratch/`.
+- **Lệnh commit & push**:
+  ```powershell
+  cd "C:\Users\ADMIN\Downloads\Quizzlet app"
+  git status --short
+  git add quiz-web-react/ .agents/ .gitignore
+  git commit -m "mô tả thay đổi bằng tiếng Việt"
+  git push origin main
+  ```
