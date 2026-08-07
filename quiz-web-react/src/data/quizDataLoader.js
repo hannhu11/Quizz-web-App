@@ -125,29 +125,32 @@ export function calculateQuizProgressStats(quiz) {
   return { newCount, learningCount, almostCount, masteredCount, percentage };
 }
 
-// Community API Endpoint Sync (Fetches community quizzes created across device/browsers)
+// API-FIRST REAL-TIME COMMUNITY QUIZ SYNC WITH CACHE-BUSTING (KNOWT / QUIZLET PATTERN)
 export async function syncCommunityQuizzes() {
   try {
-    const res = await fetch('/api/quizzes');
+    const cacheBusterUrl = `/api/quizzes?t=${Date.now()}`;
+    const res = await fetch(cacheBusterUrl, {
+      headers: {
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0'
+      }
+    });
+
     if (res.ok) {
       const serverCommunitySets = await res.json();
       if (Array.isArray(serverCommunitySets)) {
-        const localSets = getCustomQuizSets();
-        // Merge without duplicates
-        const map = new Map();
-        localSets.forEach(s => map.set(s.id, s));
-        serverCommunitySets.forEach(s => map.set(s.id, s));
-
-        const merged = Array.from(map.values());
-        merged.forEach(cSet => {
+        // VPS Node.js Server is Single Source of Truth
+        serverCommunitySets.forEach(cSet => {
           normalizedQuizCache.set(cSet.id, cSet);
         });
 
-        localStorage.setItem(STORAGE_KEY_CUSTOM_QUIZZES, JSON.stringify(merged));
+        localStorage.setItem(STORAGE_KEY_CUSTOM_QUIZZES, JSON.stringify(serverCommunitySets));
+
         if (typeof window !== 'undefined') {
-          window.dispatchEvent(new CustomEvent('quizzlet_custom_created', { detail: merged }));
+          window.dispatchEvent(new CustomEvent('quizzlet_custom_created', { detail: serverCommunitySets }));
         }
-        return merged;
+        return serverCommunitySets;
       }
     }
   } catch (e) {
@@ -190,25 +193,29 @@ export async function createCustomQuizSet({ title, description, password, questi
     })
   };
 
-  // Update RAM cache & LocalStorage
+  // Update RAM cache immediately
   normalizedQuizCache.set(id, newSet);
-  const currentCustoms = getCustomQuizSets();
-  const updatedCustoms = [newSet, ...currentCustoms.filter(c => c.id !== id)];
-  localStorage.setItem(STORAGE_KEY_CUSTOM_QUIZZES, JSON.stringify(updatedCustoms));
 
-  // Sync with Server VPS & GitHub Backup
+  // POST directly to VPS Node.js Backend First (Single Source of Truth)
   try {
-    await fetch('/api/quizzes/create', {
+    const res = await fetch('/api/quizzes/create', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newSet)
     });
+
+    if (res.ok) {
+      await syncCommunityQuizzes();
+    }
   } catch (e) {
     console.warn('Could not reach backend API for GitHub backup, stored locally.');
+    const currentCustoms = getCustomQuizSets();
+    const updatedCustoms = [newSet, ...currentCustoms.filter(c => c.id !== id)];
+    localStorage.setItem(STORAGE_KEY_CUSTOM_QUIZZES, JSON.stringify(updatedCustoms));
   }
 
   if (typeof window !== 'undefined') {
-    window.dispatchEvent(new CustomEvent('quizzlet_custom_created', { detail: updatedCustoms }));
+    window.dispatchEvent(new CustomEvent('quizzlet_custom_created', { detail: newSet }));
   }
 
   return newSet;
@@ -270,9 +277,6 @@ export async function updateCustomQuizSet(quizId, password, { title, description
   };
 
   normalizedQuizCache.set(quizId, updatedSet);
-  const currentCustoms = getCustomQuizSets();
-  const updatedCustoms = currentCustoms.map(c => c.id === quizId ? updatedSet : c);
-  localStorage.setItem(STORAGE_KEY_CUSTOM_QUIZZES, JSON.stringify(updatedCustoms));
 
   try {
     await fetch('/api/quizzes/update', {
@@ -280,12 +284,13 @@ export async function updateCustomQuizSet(quizId, password, { title, description
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ quizId, password, updatedSet })
     });
+    await syncCommunityQuizzes();
   } catch (e) {
     console.warn('Update API offline');
   }
 
   if (typeof window !== 'undefined') {
-    window.dispatchEvent(new CustomEvent('quizzlet_custom_created', { detail: updatedCustoms }));
+    window.dispatchEvent(new CustomEvent('quizzlet_custom_created', { detail: updatedSet }));
   }
 
   return updatedSet;
@@ -299,9 +304,6 @@ export async function deleteCustomQuizSet(quizId, password) {
   }
 
   normalizedQuizCache.delete(quizId);
-  const currentCustoms = getCustomQuizSets();
-  const updatedCustoms = currentCustoms.filter(c => c.id !== quizId);
-  localStorage.setItem(STORAGE_KEY_CUSTOM_QUIZZES, JSON.stringify(updatedCustoms));
 
   try {
     await fetch('/api/quizzes/delete', {
@@ -309,12 +311,13 @@ export async function deleteCustomQuizSet(quizId, password) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ quizId, password })
     });
+    await syncCommunityQuizzes();
   } catch (e) {
     console.warn('Delete API offline');
   }
 
   if (typeof window !== 'undefined') {
-    window.dispatchEvent(new CustomEvent('quizzlet_custom_created', { detail: updatedCustoms }));
+    window.dispatchEvent(new CustomEvent('quizzlet_custom_created', { detail: [] }));
   }
 
   return true;

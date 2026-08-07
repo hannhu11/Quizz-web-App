@@ -34,17 +34,36 @@ export default function App() {
     const refreshData = () => {
       setProgress(getUserProgress());
       setStarredQuestions(getStarredQuestions());
-      setCustomQuizList(getCustomQuizSets());
+      syncCommunityQuizzes().then(sets => {
+        setCustomQuizList(sets);
+      });
     };
 
     refreshData();
-    syncCommunityQuizzes().then(sets => {
-      setCustomQuizList(sets);
-    });
 
+    // Window Focus & Visibility Revalidation (Real-time Sync like Knowt / Quizlet)
+    const handleFocusRevalidate = () => {
+      syncCommunityQuizzes().then(sets => {
+        setCustomQuizList(sets);
+      });
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        syncCommunityQuizzes().then(sets => {
+          setCustomQuizList(sets);
+        });
+      }
+    };
+
+    window.addEventListener('focus', handleFocusRevalidate);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
     window.addEventListener('quizzlet_star_updated', refreshData);
     window.addEventListener('quizzlet_custom_created', refreshData);
+
     return () => {
+      window.removeEventListener('focus', handleFocusRevalidate);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
       window.removeEventListener('quizzlet_star_updated', refreshData);
       window.removeEventListener('quizzlet_custom_created', refreshData);
     };
