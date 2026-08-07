@@ -144,7 +144,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
           </div>
         </div>
 
-        {/* 2-Column Clean Cards List (CLEAN QUIZLET STANDARD: TERM + DEFINITION ONLY) */}
+        {/* 2-Column Full Cards List (REVERTED TO FULL DETAILED PREVIEW WITH OPTIONS & EXPLANATION) */}
         {displayedQuestions.length === 0 ? (
           <div className="text-center py-12 bg-white dark:bg-slate-900 rounded-3xl border border-warm-border dark:border-slate-800 text-warm-muted dark:text-slate-400">
             <Star className="w-8 h-8 text-amber-400 mx-auto mb-2" />
@@ -172,7 +172,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
                   className="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-warm-border dark:border-slate-800 shadow-xs hover:shadow-soft transition-all duration-200 text-warm-text dark:text-slate-100"
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
-                    {/* Left Column: Question / Term */}
+                    {/* Left Column: Question / Term & Full Options List (A, B, C, D) */}
                     <div className="space-y-3 pr-4 border-b md:border-b-0 md:border-r border-warm-border/40 dark:border-slate-800 pb-4 md:pb-0">
                       <div className="text-xs font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-2.5 py-0.5 rounded-md border border-amber-200/80 dark:border-amber-800 inline-block">
                         Câu {idx + 1}
@@ -180,9 +180,28 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
                       <p className="text-sm font-semibold text-slate-900 dark:text-slate-100 leading-relaxed break-words whitespace-pre-wrap">
                         {q.content}
                       </p>
+
+                      {/* Full Options List (A, B, C, D) */}
+                      {(q.answers || []).length > 0 && (
+                        <div className="space-y-1.5 pt-2">
+                          {q.answers.map((a, aIdx) => (
+                            <div
+                              key={aIdx}
+                              className={`text-xs px-3 py-2 rounded-xl border leading-relaxed break-words whitespace-pre-wrap ${
+                                a.isCorrect
+                                  ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-950 dark:text-emerald-200 border-emerald-200 dark:border-emerald-800 font-semibold'
+                                  : 'bg-warm-bg dark:bg-slate-800/60 text-warm-text dark:text-slate-300 border-warm-border/60 dark:border-slate-700'
+                              }`}
+                            >
+                              <span className="font-bold mr-1.5">{String.fromCharCode(65 + aIdx)}.</span>
+                              {a.content}
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
 
-                    {/* Right Column: Definition / Correct Answer & Actions */}
+                    {/* Right Column: Correct Answer & Explanation */}
                     <div className="flex flex-col justify-between pl-0 md:pl-2 space-y-4">
                       <div>
                         <span className="text-[11px] font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-800 inline-block mb-2">
@@ -191,6 +210,14 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
                         <p className="text-sm font-bold text-emerald-950 dark:text-emerald-200 leading-relaxed break-words whitespace-pre-wrap">
                           {formattedAnswerText}
                         </p>
+
+                        {/* Explanation callout box */}
+                        {q.explanation && (
+                          <div className="mt-3 p-3 rounded-2xl bg-amber-50/90 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-xs text-amber-950 dark:text-amber-200 leading-relaxed break-words whitespace-pre-wrap">
+                            <span className="font-bold text-amber-900 dark:text-amber-300 block mb-0.5">💡 Giải thích chi tiết:</span>
+                            {q.explanation}
+                          </div>
+                        )}
                       </div>
 
                       {/* Action Icons (Star & Speech) */}
