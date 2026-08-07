@@ -7,7 +7,7 @@ import PracticeMode from './components/PracticeMode';
 import ExamMode from './components/ExamMode';
 import CreateSetView from './components/CreateSetView';
 import TestSetupModal from './components/TestSetupModal';
-import LofiAudioPlayer from './components/LofiAudioPlayer';
+import ChillDock from './components/chill/ChillDock';
 import CustomModal from './components/CustomModal';
 import { QUIZ_MANIFEST, fetchQuizById, getUserProgress, getStarredQuestions, toggleStarQuestion, unstarQuizSet, clearAllStarredQuestions, getCustomQuizSets, getDeletedQuizIds, syncCommunityQuizzes } from './data/quizDataLoader';
 import { Sparkles, BookOpen, Layers, Star, Trash2, ArrowRight, BookMarked, Plus } from 'lucide-react';
@@ -460,8 +460,8 @@ export default function App() {
         )}
       </CustomModal>
 
-      {/* Floating Compact Ambient Sound Player */}
-      <LofiAudioPlayer />
+      {/* Chill Space - Independent Floating Widgets (LifeAt Style) */}
+      <ChillDock />
     </div>
   );
 }

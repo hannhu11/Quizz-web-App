@@ -80,3 +80,39 @@ html.dark body {
 ::-webkit-scrollbar-thumb:hover {
   background: #CBD5E0;
 }
+
+/* === Chill Space Widget Utilities === */
+
+/* Hide scrollbar for ambient sound list */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom thin scrollbar for widget panels */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .animate-ping,
+  .animate-bounce,
+  .animate-pulse {
+    animation: none !important;
+  }
+}
+
