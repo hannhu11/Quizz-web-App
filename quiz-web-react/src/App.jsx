@@ -65,13 +65,14 @@ export default function App() {
     return matchesCategory && matchesSearch;
   });
 
-  // Top bar Navigation Reset when category clicked
+  // Top bar Navigation Reset when category clicked (triggers community sync)
   const handleSelectCategory = useCallback((category) => {
     setActiveCategory(category);
     setActiveQuizId(null);
     setStudyMode(null);
     setLoadedQuiz(null);
     setEditingQuizData(null);
+    syncCommunityQuizzes().then(sets => setCustomQuizList(sets));
   }, []);
 
   // Instant zero-latency navigation handlers (RAM Cached < 0.1ms)
@@ -103,7 +104,7 @@ export default function App() {
     setInitialQuestionIndex(0);
     setStudyMode('DETAIL');
     setEditingQuizData(null);
-    setCustomQuizList(getCustomQuizSets());
+    syncCommunityQuizzes().then(sets => setCustomQuizList(sets));
   }, []);
 
   // Edit Quiz Handler
@@ -118,7 +119,7 @@ export default function App() {
     setStudyMode(null);
     setLoadedQuiz(null);
     setEditingQuizData(null);
-    setCustomQuizList(getCustomQuizSets());
+    syncCommunityQuizzes().then(sets => setCustomQuizList(sets));
   }, []);
 
   // Start Test from Setup Modal
@@ -135,6 +136,7 @@ export default function App() {
       setStudyMode(null);
       setLoadedQuiz(null);
       setEditingQuizData(null);
+      syncCommunityQuizzes().then(sets => setCustomQuizList(sets));
     }
     setProgress(getUserProgress());
     setStarredQuestions(getStarredQuestions());
@@ -275,7 +277,7 @@ export default function App() {
               <div className="absolute -right-8 -bottom-8 w-48 h-48 rounded-full bg-amber-200/40 dark:bg-slate-800/40 blur-2xl pointer-events-none" />
             </div>
 
-            {/* Quizzes List Grid Header (HIGH CONTRAST DARK MODE TEXT FIX) */}
+            {/* Quizzes List Grid Header */}
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
