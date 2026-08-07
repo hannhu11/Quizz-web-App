@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, Star, Moon, Sun } from 'lucide-react';
+import { Search, Star, Moon, Sun, Plus } from 'lucide-react';
 
 export default function Navbar({
   searchTerm,
@@ -9,6 +9,7 @@ export default function Navbar({
   categories,
   starredCount,
   onOpenStarred,
+  onOpenCreateSet,
   isDarkMode,
   setIsDarkMode,
   onResetDashboard
@@ -65,10 +66,20 @@ export default function Navbar({
 
         {/* Action Controls */}
         <div className="flex items-center gap-2">
+          {/* Create New Set Button */}
+          <button
+            onClick={onOpenCreateSet}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition-all shadow-xs active:scale-95"
+            title="Tạo bộ đề Flashcard mới"
+          >
+            <Plus className="w-4 h-4" />
+            <span className="hidden md:inline">Tạo bộ đề</span>
+          </button>
+
           {/* Starred Questions Button */}
           <button
             onClick={onOpenStarred}
-            className="relative flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-amber-50 dark:bg-amber-950/60 hover:bg-amber-100 dark:hover:bg-amber-900/60 text-amber-900 dark:text-amber-300 border border-amber-200/80 dark:border-amber-800/80 text-xs font-semibold transition-all shadow-xs active:scale-95"
+            className="relative flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-50 dark:bg-amber-950/60 hover:bg-amber-100 dark:hover:bg-amber-900/60 text-amber-900 dark:text-amber-300 border border-amber-200/80 dark:border-amber-800/80 text-xs font-semibold transition-all shadow-xs active:scale-95"
             title="Danh sách câu hỏi đã lưu"
           >
             <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-500" />

@@ -54,6 +54,59 @@ QUIZ_MANIFEST.forEach(manifestItem => {
   }
 });
 
+// Load user-created custom quizzes from localStorage
+const STORAGE_KEY_CUSTOM_QUIZZES = 'quizzlet_custom_quizzes_v1';
+
+export function getCustomQuizSets() {
+  try {
+    const data = localStorage.getItem(STORAGE_KEY_CUSTOM_QUIZZES);
+    return data ? JSON.parse(data) : [];
+  } catch (e) {
+    return [];
+  }
+}
+
+// Initialize custom quizzes into memory cache
+const customSets = getCustomQuizSets();
+customSets.forEach(cSet => {
+  normalizedQuizCache.set(cSet.id, cSet);
+});
+
+export function createCustomQuizSet({ title, description, questions }) {
+  const id = `custom-${Date.now()}`;
+  const category = 'TỰ TẠO';
+  const newSet = {
+    id,
+    title: title || 'Bộ đề mới tạo',
+    subject: description || 'Bộ đề do người dùng tự tạo',
+    category,
+    color: 'from-amber-100 via-rose-100 to-indigo-100',
+    icon: 'Sparkles',
+    isCustom: true,
+    questions: questions.map((q, idx) => ({
+      id: idx + 1,
+      questionIndex: idx,
+      content: q.term || 'Thuật ngữ',
+      explanation: q.explanation || '',
+      answers: [
+        { id: 1, content: q.definition || 'Định nghĩa', isCorrect: true }
+      ]
+    }))
+  };
+
+  // Update RAM cache & LocalStorage
+  normalizedQuizCache.set(id, newSet);
+  const currentCustoms = getCustomQuizSets();
+  const updatedCustoms = [newSet, ...currentCustoms];
+  localStorage.setItem(STORAGE_KEY_CUSTOM_QUIZZES, JSON.stringify(updatedCustoms));
+
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('quizzlet_custom_created', { detail: newSet }));
+  }
+
+  return newSet;
+}
+
 export function fetchQuizById(quizId) {
   const cached = normalizedQuizCache.get(quizId);
   if (cached) {
@@ -149,7 +202,6 @@ export function toggleStarQuestion(questionId, quizId, questionData, questionInd
   }
 }
 
-// BATCH UNSTAR ENTIRE QUIZ SET (1-CLICK DESELECT ALL N)
 export function unstarQuizSet(quizId) {
   try {
     const stars = getStarredQuestions();
@@ -166,7 +218,6 @@ export function unstarQuizSet(quizId) {
   }
 }
 
-// CLEAR ALL STARRED QUESTIONS (1-CLICK RESET)
 export function clearAllStarredQuestions() {
   try {
     localStorage.setItem(STORAGE_KEY_STARS, JSON.stringify([]));

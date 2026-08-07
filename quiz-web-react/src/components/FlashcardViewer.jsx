@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowLeft, ArrowRight, RotateCw, Star, Shuffle, CheckCircle, HelpCircle, X, Check, Maximize2, Minimize2, RotateCcw } from 'lucide-react';
+import { ArrowLeft, ArrowRight, RotateCw, Star, Shuffle, CheckCircle, HelpCircle, X, Check, Maximize2, Minimize2 } from 'lucide-react';
 import { toggleStarQuestion, getStarredQuestions } from '../data/quizDataLoader';
 
 export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
@@ -19,6 +19,19 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
 
   const currentQ = questions[currentIndex] || {};
   const correctAnswer = (currentQ.answers || []).find(a => a.isCorrect);
+
+  // Format full answer text with letter prefix (e.g. "C. Cả a và b")
+  let formattedAnswerText = 'Chưa có đáp án';
+  if (correctAnswer) {
+    const answersList = currentQ.answers || [];
+    const correctIdx = answersList.findIndex(a => a.isCorrect);
+    if (correctIdx >= 0 && answersList.length > 1) {
+      const optionLetter = String.fromCharCode(65 + correctIdx);
+      formattedAnswerText = `${optionLetter}. ${correctAnswer.content}`;
+    } else {
+      formattedAnswerText = correctAnswer.content;
+    }
+  }
 
   // Sync initialIndex prop
   useEffect(() => {
@@ -199,13 +212,12 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
               </button>
             </div>
 
-            {/* Question Text & Full Auto-Wrapping Options List */}
+            {/* Question Text & Options List */}
             <div className="my-auto py-2 px-2 max-w-2xl w-full text-center flex flex-col items-center justify-center space-y-3">
               <p className="text-base sm:text-lg md:text-xl font-bold text-slate-900 dark:text-slate-100 leading-snug break-words">
                 {currentQ.content}
               </p>
 
-              {/* Display Options List (Term & Options) */}
               {(currentQ.answers || []).length > 0 && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full pt-2">
                   {currentQ.answers.map((a, aIdx) => (
@@ -230,7 +242,7 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
             </div>
           </div>
 
-          {/* Card Back (ANSWER FIRST -> EXPLANATION SECOND RULE) */}
+          {/* Card Back (ANSWER FIRST WITH OPTION PREFIX -> EXPLANATION SECOND RULE) */}
           <div className="absolute inset-0 backface-hidden rotate-y-180 w-full h-full rounded-[24px] bg-gradient-to-br from-amber-50/90 via-white to-indigo-50/70 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900 p-6 sm:p-8 border border-amber-200/80 dark:border-slate-800 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.05)] flex flex-col justify-between items-center text-center overflow-hidden">
             {/* Top Bar inside Answer Card */}
             <div className="w-full flex items-center justify-between text-xs font-bold text-emerald-800 dark:text-emerald-300 shrink-0">
@@ -240,15 +252,15 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
               <span className="text-warm-muted dark:text-slate-400">Bấm để lật lại câu hỏi</span>
             </div>
 
-            {/* ANSWER FIRST -> EXPLANATION SECOND */}
+            {/* ANSWER FIRST (WITH OPTION PREFIX) -> EXPLANATION SECOND */}
             <div className="my-auto py-2 px-2 max-w-2xl w-full text-center flex flex-col items-center justify-center space-y-4">
-              {/* 1. FULL CORRECT ANSWER TEXT (FIRST) */}
+              {/* 1. FULL CORRECT ANSWER TEXT WITH PREFIX (FIRST) */}
               <div className="p-5 rounded-2xl bg-white/90 dark:bg-slate-800 border border-emerald-300 dark:border-emerald-700 text-center shadow-xs w-full">
                 <p className="text-xs font-bold text-emerald-700 dark:text-emerald-400 mb-1">
                   ✓ Đáp án đúng
                 </p>
                 <p className="text-base sm:text-lg font-extrabold text-emerald-950 dark:text-emerald-200 leading-snug break-words">
-                  {correctAnswer ? correctAnswer.content : 'Chưa có đáp án'}
+                  {formattedAnswerText}
                 </p>
               </div>
 
@@ -270,7 +282,7 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
         </div>
       </div>
 
-      {/* Bottom Action Controls Row (Track Progress & Fullscreen & Nav Buttons) */}
+      {/* Bottom Action Controls Row */}
       <div className="flex items-center justify-between gap-3 mt-4 shrink-0">
         {/* Track Progress Toggle */}
         <label className="flex items-center gap-2 cursor-pointer select-none text-xs font-semibold text-warm-text dark:text-slate-200">
@@ -283,10 +295,9 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
           />
         </label>
 
-        {/* Center Action Buttons (Normal vs Track Progress) */}
+        {/* Center Action Buttons */}
         {isTrackProgressEnabled ? (
           <div className="flex items-center gap-4">
-            {/* Still learning button (Orange X) */}
             <button
               onClick={handleMarkStillLearning}
               className="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-950/80 hover:bg-orange-200 text-orange-600 dark:text-orange-400 border border-orange-300 dark:border-orange-800 flex items-center justify-center shadow-xs transition-all active:scale-90"
@@ -295,7 +306,6 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
               <X className="w-6 h-6 stroke-[3]" />
             </button>
 
-            {/* Know button (Green Check) */}
             <button
               onClick={handleMarkKnow}
               className="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-950/80 hover:bg-emerald-200 text-emerald-600 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800 flex items-center justify-center shadow-xs transition-all active:scale-90"

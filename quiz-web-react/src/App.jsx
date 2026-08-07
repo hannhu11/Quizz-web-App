@@ -5,17 +5,18 @@ import QuizDetailView from './components/QuizDetailView';
 import FlashcardViewer from './components/FlashcardViewer';
 import PracticeMode from './components/PracticeMode';
 import ExamMode from './components/ExamMode';
+import CreateSetView from './components/CreateSetView';
 import TestSetupModal from './components/TestSetupModal';
 import LofiAudioPlayer from './components/LofiAudioPlayer';
 import CustomModal from './components/CustomModal';
-import { QUIZ_MANIFEST, fetchQuizById, getUserProgress, getStarredQuestions, toggleStarQuestion, unstarQuizSet, clearAllStarredQuestions } from './data/quizDataLoader';
-import { Sparkles, BookOpen, Layers, Star, Trash2, ArrowRight, BookMarked } from 'lucide-react';
+import { QUIZ_MANIFEST, fetchQuizById, getUserProgress, getStarredQuestions, toggleStarQuestion, unstarQuizSet, clearAllStarredQuestions, getCustomQuizSets } from './data/quizDataLoader';
+import { Sparkles, BookOpen, Layers, Star, Trash2, ArrowRight, BookMarked, Plus } from 'lucide-react';
 
 export default function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('ALL');
   const [activeQuizId, setActiveQuizId] = useState(null);
-  const [studyMode, setStudyMode] = useState(null); // 'DETAIL' | 'FLASHCARD' | 'PRACTICE' | 'EXAM'
+  const [studyMode, setStudyMode] = useState(null); // 'DETAIL' | 'FLASHCARD' | 'PRACTICE' | 'EXAM' | 'CREATE_SET'
   const [loadedQuiz, setLoadedQuiz] = useState(null);
   const [initialQuestionIndex, setInitialQuestionIndex] = useState(0);
   const [testConfig, setTestConfig] = useState(null);
@@ -23,27 +24,36 @@ export default function App() {
 
   const [progress, setProgress] = useState({});
   const [starredQuestions, setStarredQuestions] = useState([]);
+  const [customQuizList, setCustomQuizList] = useState([]);
   const [isStarredModalOpen, setIsStarredModalOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // Synchronize progress and starred questions + listen for instant star events
+  // Synchronize progress, custom quizzes, and starred questions + listen for instant events
   useEffect(() => {
     const refreshData = () => {
       setProgress(getUserProgress());
       setStarredQuestions(getStarredQuestions());
+      setCustomQuizList(getCustomQuizSets());
     };
 
     refreshData();
 
     window.addEventListener('quizzlet_star_updated', refreshData);
-    return () => window.removeEventListener('quizzlet_star_updated', refreshData);
+    window.addEventListener('quizzlet_custom_created', refreshData);
+    return () => {
+      window.removeEventListener('quizzlet_star_updated', refreshData);
+      window.removeEventListener('quizzlet_custom_created', refreshData);
+    };
   }, []);
 
+  // Combine static manifest + custom user created quizzes
+  const allQuizzes = [...customQuizList, ...QUIZ_MANIFEST];
+
   // Filter Categories list
-  const categories = Array.from(new Set(QUIZ_MANIFEST.map(q => q.category)));
+  const categories = Array.from(new Set(allQuizzes.map(q => q.category)));
 
   // Filter Quizzes based on search & category
-  const filteredQuizzes = QUIZ_MANIFEST.filter(quiz => {
+  const filteredQuizzes = allQuizzes.filter(quiz => {
     const matchesCategory = activeCategory === 'ALL' || quiz.category === activeCategory;
     const matchesSearch = quiz.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           quiz.subject.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -79,6 +89,15 @@ export default function App() {
     } else {
       setStudyMode(mode);
     }
+  }, []);
+
+  // Handle Set Created
+  const handleSetCreated = useCallback((newSet) => {
+    setActiveQuizId(newSet.id);
+    setLoadedQuiz(newSet);
+    setInitialQuestionIndex(0);
+    setStudyMode('DETAIL');
+    setCustomQuizList(getCustomQuizSets());
   }, []);
 
   // Start Test from Setup Modal
@@ -154,6 +173,7 @@ export default function App() {
         categories={categories}
         starredCount={starredQuestions.length}
         onOpenStarred={() => setIsStarredModalOpen(true)}
+        onOpenCreateSet={() => setStudyMode('CREATE_SET')}
         isDarkMode={isDarkMode}
         setIsDarkMode={setIsDarkMode}
         onResetDashboard={() => handleSelectCategory('ALL')}
@@ -161,8 +181,16 @@ export default function App() {
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Create Set View */}
+        {studyMode === 'CREATE_SET' && (
+          <CreateSetView
+            onBack={() => setStudyMode(null)}
+            onSetCreated={handleSetCreated}
+          />
+        )}
+
         {/* Active Study Views */}
-        {studyMode && loadedQuiz && (
+        {studyMode && studyMode !== 'CREATE_SET' && loadedQuiz && (
           <>
             {studyMode === 'DETAIL' && (
               <QuizDetailView
@@ -199,7 +227,7 @@ export default function App() {
         {!studyMode && (
           <div className="space-y-8">
             {/* Hero Banner */}
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-100/90 via-rose-100/80 to-indigo-100/70 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 p-6 sm:p-8 border border-amber-200/80 dark:border-slate-800 shadow-soft">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-100/90 via-rose-100/80 to-indigo-100/70 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 p-6 sm:p-8 border border-amber-200/80 dark:border-slate-800 shadow-soft flex items-center justify-between flex-wrap gap-4">
               <div className="max-w-2xl relative z-10">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/80 dark:bg-slate-800 border border-amber-200 dark:border-slate-700 text-amber-900 dark:text-amber-300 text-xs font-bold shadow-xs mb-3">
                   <Sparkles className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" /> Góc Ôn Luyện Kiến Thức
@@ -208,9 +236,16 @@ export default function App() {
                   Thư Thái Ghi Nhớ • Ôn Luyện Hiệu Quả
                 </h2>
                 <p className="text-sm text-slate-700 dark:text-slate-300 mt-2 leading-relaxed">
-                  Ghi nhớ flashcard 3D, xem lại danh sách câu hỏi Terms in this set và làm bài thi thử theo phong cách Quizlet.
+                  Ghi nhớ flashcard 3D, xem lại danh sách câu hỏi Terms in this set, tự tạo bộ đề hoặc import y hệt Quizlet.
                 </p>
               </div>
+
+              <button
+                onClick={() => setStudyMode('CREATE_SET')}
+                className="relative z-10 flex items-center gap-2 px-6 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs sm:text-sm shadow-soft transition-all active:scale-95 shrink-0"
+              >
+                <Plus className="w-5 h-5" /> + Tạo Bộ Đề Mới
+              </button>
 
               <div className="absolute -right-8 -bottom-8 w-48 h-48 rounded-full bg-amber-200/40 dark:bg-slate-800/40 blur-2xl pointer-events-none" />
             </div>
