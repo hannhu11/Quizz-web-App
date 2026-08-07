@@ -1,19 +1,36 @@
-import React, { useState } from 'react';
-import { ArrowLeft, Plus, Trash2, FileText, Sparkles, Lock } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { ArrowLeft, Plus, Trash2, FileText, Sparkles, Lock, KeyRound } from 'lucide-react';
 import ImportModal from './ImportModal';
-import { createCustomQuizSet } from '../data/quizDataLoader';
+import { createCustomQuizSet, updateCustomQuizSet } from '../data/quizDataLoader';
 
-export default function CreateSetView({ onBack, onSetCreated }) {
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
+export default function CreateSetView({ onBack, onSetCreated, editQuiz = null }) {
+  const isEditing = Boolean(editQuiz && editQuiz.id);
+
+  const [title, setTitle] = useState(editQuiz?.title || '');
+  const [description, setDescription] = useState(editQuiz?.subject || '');
+  const [password, setPassword] = useState(editQuiz?.password || '1');
+  const [editAuthPassword, setEditAuthPassword] = useState('');
   const [isImportOpen, setIsImportOpen] = useState(false);
 
-  // Cards list state (default 3 cards)
-  const [cards, setCards] = useState([
-    { id: 1, term: '', definition: '', explanation: '' },
-    { id: 2, term: '', definition: '', explanation: '' },
-    { id: 3, term: '', definition: '', explanation: '' }
-  ]);
+  // Cards list state
+  const [cards, setCards] = useState(() => {
+    if (editQuiz && Array.isArray(editQuiz.questions) && editQuiz.questions.length > 0) {
+      return editQuiz.questions.map((q, idx) => {
+        const correctAns = (q.answers || []).find(a => a.isCorrect);
+        return {
+          id: q.id || idx + 1,
+          term: q.content || '',
+          definition: correctAns ? correctAns.content : '',
+          explanation: q.explanation || ''
+        };
+      });
+    }
+    return [
+      { id: 1, term: '', definition: '', explanation: '' },
+      { id: 2, term: '', definition: '', explanation: '' },
+      { id: 3, term: '', definition: '', explanation: '' }
+    ];
+  });
 
   const handleCardChange = (id, field, value) => {
     setCards(prev => prev.map(card => {
@@ -45,7 +62,6 @@ export default function CreateSetView({ onBack, onSetCreated }) {
       explanation: ic.explanation || ''
     }));
 
-    // Replace empty draft cards if all cards were blank, or append
     const hasExistingContent = cards.some(c => c.term.trim() || c.definition.trim());
     if (!hasExistingContent) {
       setCards(newCards);
@@ -54,7 +70,7 @@ export default function CreateSetView({ onBack, onSetCreated }) {
     }
   };
 
-  const handleCreate = () => {
+  const handleSave = async () => {
     if (!title.trim()) {
       alert('Vui lòng nhập Tiêu đề bộ đề!');
       return;
@@ -66,13 +82,28 @@ export default function CreateSetView({ onBack, onSetCreated }) {
       return;
     }
 
-    const createdSet = createCustomQuizSet({
-      title,
-      description,
-      questions: validQuestions
-    });
+    const finalPassword = password.trim() || '1';
 
-    onSetCreated(createdSet);
+    if (isEditing) {
+      try {
+        const updated = await updateCustomQuizSet(editQuiz.id, editAuthPassword || finalPassword, {
+          title,
+          description,
+          questions: validQuestions
+        });
+        onSetCreated(updated);
+      } catch (err) {
+        alert(err.message || 'Mật khẩu quản lý không chính xác!');
+      }
+    } else {
+      const createdSet = await createCustomQuizSet({
+        title,
+        description,
+        password: finalPassword,
+        questions: validQuestions
+      });
+      onSetCreated(createdSet);
+    }
   };
 
   return (
@@ -87,14 +118,14 @@ export default function CreateSetView({ onBack, onSetCreated }) {
         </button>
 
         <h1 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-slate-100">
-          Create a new flashcard set
+          {isEditing ? 'Chỉnh sửa bộ đề' : 'Create a new flashcard set'}
         </h1>
 
         <button
-          onClick={handleCreate}
+          onClick={handleSave}
           className="px-6 py-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm shadow-xs transition-all active:scale-95 flex items-center gap-2"
         >
-          <Sparkles className="w-4 h-4" /> Create
+          <Sparkles className="w-4 h-4" /> {isEditing ? 'Lưu chỉnh sửa' : 'Create'}
         </button>
       </div>
 
@@ -102,7 +133,7 @@ export default function CreateSetView({ onBack, onSetCreated }) {
       <div className="space-y-4 bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-warm-border dark:border-slate-800 shadow-soft">
         {/* Title Input */}
         <div className="space-y-1.5">
-          <label className="text-xs font-bold text-warm-muted dark:text-slate-400">Title</label>
+          <label className="text-xs font-bold text-warm-muted dark:text-slate-400">Title (Tiêu đề bộ đề)</label>
           <input
             type="text"
             placeholder="Enter title, e.g. 'MLN131 - Triết học Mác - Lênin'"
@@ -114,7 +145,7 @@ export default function CreateSetView({ onBack, onSetCreated }) {
 
         {/* Description Input */}
         <div className="space-y-1.5">
-          <label className="text-xs font-bold text-warm-muted dark:text-slate-400">Add a description...</label>
+          <label className="text-xs font-bold text-warm-muted dark:text-slate-400">Add a description... (Mô tả bộ đề)</label>
           <textarea
             rows={2}
             placeholder="Add a description..."
@@ -122,6 +153,23 @@ export default function CreateSetView({ onBack, onSetCreated }) {
             onChange={(e) => setDescription(e.target.value)}
             className="w-full p-4 rounded-2xl bg-warm-bg/60 dark:bg-slate-800/60 border border-warm-border dark:border-slate-700 text-xs sm:text-sm text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500/30 resize-none"
           />
+        </div>
+
+        {/* Password Management Input (Quiet Secure) */}
+        <div className="space-y-1.5 pt-1">
+          <label className="text-xs font-bold text-amber-800 dark:text-amber-300 flex items-center gap-1.5">
+            <KeyRound className="w-3.5 h-3.5" /> Mật khẩu quản lý bộ đề (Dùng để Sửa / Xóa)
+          </label>
+          <input
+            type="password"
+            placeholder="Mật khẩu (Mặc định là 1 nếu để trống)"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full p-3.5 rounded-2xl bg-amber-50/50 dark:bg-slate-800 border border-amber-200 dark:border-slate-700 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-amber-400/40"
+          />
+          <span className="text-[11px] text-warm-muted dark:text-slate-400 block">
+            Mật khẩu giúp bảo vệ bộ đề của bạn khỏi bị xóa hoặc chỉnh sửa trái phép bởi người khác.
+          </span>
         </div>
 
         {/* Action Tools Bar (+ Import, + Add diagram) */}
@@ -142,7 +190,7 @@ export default function CreateSetView({ onBack, onSetCreated }) {
         </div>
       </div>
 
-      {/* Cards List Inputs (3-Field Standard: Multi-line Auto-wrap Textarea) */}
+      {/* Cards List Inputs */}
       <div className="space-y-6">
         {cards.map((card, idx) => (
           <div

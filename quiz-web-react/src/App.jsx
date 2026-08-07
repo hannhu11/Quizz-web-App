@@ -9,7 +9,7 @@ import CreateSetView from './components/CreateSetView';
 import TestSetupModal from './components/TestSetupModal';
 import LofiAudioPlayer from './components/LofiAudioPlayer';
 import CustomModal from './components/CustomModal';
-import { QUIZ_MANIFEST, fetchQuizById, getUserProgress, getStarredQuestions, toggleStarQuestion, unstarQuizSet, clearAllStarredQuestions, getCustomQuizSets } from './data/quizDataLoader';
+import { QUIZ_MANIFEST, fetchQuizById, getUserProgress, getStarredQuestions, toggleStarQuestion, unstarQuizSet, clearAllStarredQuestions, getCustomQuizSets, syncCommunityQuizzes } from './data/quizDataLoader';
 import { Sparkles, BookOpen, Layers, Star, Trash2, ArrowRight, BookMarked, Plus } from 'lucide-react';
 
 export default function App() {
@@ -18,6 +18,7 @@ export default function App() {
   const [activeQuizId, setActiveQuizId] = useState(null);
   const [studyMode, setStudyMode] = useState(null); // 'DETAIL' | 'FLASHCARD' | 'PRACTICE' | 'EXAM' | 'CREATE_SET'
   const [loadedQuiz, setLoadedQuiz] = useState(null);
+  const [editingQuizData, setEditingQuizData] = useState(null);
   const [initialQuestionIndex, setInitialQuestionIndex] = useState(0);
   const [testConfig, setTestConfig] = useState(null);
   const [isTestSetupOpen, setIsTestSetupOpen] = useState(false);
@@ -28,7 +29,7 @@ export default function App() {
   const [isStarredModalOpen, setIsStarredModalOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // Synchronize progress, custom quizzes, and starred questions + listen for instant events
+  // Synchronize progress, community custom quizzes, and starred questions
   useEffect(() => {
     const refreshData = () => {
       setProgress(getUserProgress());
@@ -37,6 +38,9 @@ export default function App() {
     };
 
     refreshData();
+    syncCommunityQuizzes().then(sets => {
+      setCustomQuizList(sets);
+    });
 
     window.addEventListener('quizzlet_star_updated', refreshData);
     window.addEventListener('quizzlet_custom_created', refreshData);
@@ -46,7 +50,7 @@ export default function App() {
     };
   }, []);
 
-  // Combine static manifest + custom user created quizzes
+  // Combine static manifest + custom community created quizzes
   const allQuizzes = [...customQuizList, ...QUIZ_MANIFEST];
 
   // Filter Categories list
@@ -67,6 +71,7 @@ export default function App() {
     setActiveQuizId(null);
     setStudyMode(null);
     setLoadedQuiz(null);
+    setEditingQuizData(null);
   }, []);
 
   // Instant zero-latency navigation handlers (RAM Cached < 0.1ms)
@@ -91,12 +96,28 @@ export default function App() {
     }
   }, []);
 
-  // Handle Set Created
+  // Handle Set Created or Updated
   const handleSetCreated = useCallback((newSet) => {
     setActiveQuizId(newSet.id);
     setLoadedQuiz(newSet);
     setInitialQuestionIndex(0);
     setStudyMode('DETAIL');
+    setEditingQuizData(null);
+    setCustomQuizList(getCustomQuizSets());
+  }, []);
+
+  // Edit Quiz Handler
+  const handleEditQuizRequest = useCallback((quiz) => {
+    setEditingQuizData(quiz);
+    setStudyMode('CREATE_SET');
+  }, []);
+
+  // Delete Quiz Handler
+  const handleDeleteQuizRequest = useCallback((quizId) => {
+    setActiveQuizId(null);
+    setStudyMode(null);
+    setLoadedQuiz(null);
+    setEditingQuizData(null);
     setCustomQuizList(getCustomQuizSets());
   }, []);
 
@@ -113,6 +134,7 @@ export default function App() {
       setActiveQuizId(null);
       setStudyMode(null);
       setLoadedQuiz(null);
+      setEditingQuizData(null);
     }
     setProgress(getUserProgress());
     setStarredQuestions(getStarredQuestions());
@@ -173,7 +195,7 @@ export default function App() {
         categories={categories}
         starredCount={starredQuestions.length}
         onOpenStarred={() => setIsStarredModalOpen(true)}
-        onOpenCreateSet={() => setStudyMode('CREATE_SET')}
+        onOpenCreateSet={() => { setEditingQuizData(null); setStudyMode('CREATE_SET'); }}
         isDarkMode={isDarkMode}
         setIsDarkMode={setIsDarkMode}
         onResetDashboard={() => handleSelectCategory('ALL')}
@@ -181,11 +203,12 @@ export default function App() {
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Create Set View */}
+        {/* Create / Edit Set View */}
         {studyMode === 'CREATE_SET' && (
           <CreateSetView
             onBack={() => setStudyMode(null)}
             onSetCreated={handleSetCreated}
+            editQuiz={editingQuizData}
           />
         )}
 
@@ -198,6 +221,8 @@ export default function App() {
                 onBack={handleBackToDetailOrDashboard}
                 onStartMode={(m) => setStudyMode(m)}
                 onOpenTestSetup={() => setIsTestSetupOpen(true)}
+                onEditQuiz={handleEditQuizRequest}
+                onDeleteQuiz={handleDeleteQuizRequest}
               />
             )}
             {studyMode === 'FLASHCARD' && (
@@ -241,7 +266,7 @@ export default function App() {
               </div>
 
               <button
-                onClick={() => setStudyMode('CREATE_SET')}
+                onClick={() => { setEditingQuizData(null); setStudyMode('CREATE_SET'); }}
                 className="relative z-10 flex items-center gap-2 px-6 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs sm:text-sm shadow-soft transition-all active:scale-95 shrink-0"
               >
                 <Plus className="w-5 h-5" /> + Tạo Bộ Đề Mới
@@ -250,11 +275,11 @@ export default function App() {
               <div className="absolute -right-8 -bottom-8 w-48 h-48 rounded-full bg-amber-200/40 dark:bg-slate-800/40 blur-2xl pointer-events-none" />
             </div>
 
-            {/* Quizzes List Grid Header */}
+            {/* Quizzes List Grid Header (HIGH CONTRAST DARK MODE TEXT FIX) */}
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-lg font-bold text-warm-text dark:text-slate-100 flex items-center gap-2">
-                  <Layers className="w-5 h-5 text-warm-slate dark:text-slate-400" /> Danh Sách Bộ Đề ({filteredQuizzes.length})
+                <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+                  <Layers className="w-5 h-5 text-warm-slate dark:text-slate-300" /> Danh Sách Bộ Đề ({filteredQuizzes.length})
                 </h3>
                 <p className="text-xs text-warm-muted dark:text-slate-400">Bấm vào bộ đề để xem danh sách câu hỏi hoặc chọn chế độ học</p>
               </div>
@@ -264,7 +289,7 @@ export default function App() {
             {filteredQuizzes.length === 0 ? (
               <div className="text-center py-16 bg-white dark:bg-slate-900 rounded-3xl border border-warm-border dark:border-slate-800">
                 <BookOpen className="w-12 h-12 text-warm-muted dark:text-slate-500 mx-auto mb-3" />
-                <h4 className="text-base font-bold text-warm-text dark:text-slate-200">Không tìm thấy bộ đề phù hợp</h4>
+                <h4 className="text-base font-bold text-slate-900 dark:text-slate-100">Không tìm thấy bộ đề phù hợp</h4>
                 <p className="text-xs text-warm-muted dark:text-slate-400 mt-1">Hãy thử tìm kiếm với từ khóa khác</p>
               </div>
             ) : (

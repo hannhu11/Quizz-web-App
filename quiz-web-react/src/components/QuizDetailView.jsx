@@ -1,13 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowLeft, Layers, Play, CheckCircle2, Star, Volume2, BookOpen } from 'lucide-react';
-import { toggleStarQuestion, getStarredQuestions, unstarQuizSet } from '../data/quizDataLoader';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowLeft, Layers, Play, CheckCircle2, Star, Volume2, BookOpen, MoreHorizontal, Edit, Trash2 } from 'lucide-react';
+import { toggleStarQuestion, getStarredQuestions, unstarQuizSet, verifyQuizPassword, deleteCustomQuizSet } from '../data/quizDataLoader';
+import PasswordModal from './PasswordModal';
 
-export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSetup }) {
+export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSetup, onEditQuiz, onDeleteQuiz }) {
   const [filterMode, setFilterMode] = useState('ALL'); // 'ALL' | 'STARRED'
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [passwordModalConfig, setPasswordModalConfig] = useState(null); // { isOpen: true, actionType: 'EDIT' | 'DELETE' }
+
   const [starredIds, setStarredIds] = useState(() => {
     return new Set(getStarredQuestions().map(s => s.questionId));
   });
+
+  const menuRef = useRef(null);
+
+  // Close menu on click outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   // Listen to global star update event
   useEffect(() => {
@@ -37,6 +54,19 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
     }
   };
 
+  const handlePasswordVerification = async (password) => {
+    const isValid = await verifyQuizPassword(quiz.id, password);
+    if (!isValid) return false;
+
+    if (passwordModalConfig?.actionType === 'EDIT') {
+      onEditQuiz(quiz, password);
+    } else if (passwordModalConfig?.actionType === 'DELETE') {
+      await deleteCustomQuizSet(quiz.id, password);
+      onDeleteQuiz(quiz.id);
+    }
+    return true;
+  };
+
   const displayedQuestions = questions.filter(q => {
     if (filterMode === 'STARRED') {
       return starredIds.has(q.id);
@@ -48,7 +78,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-6 space-y-8 text-warm-text dark:text-slate-100">
-      {/* Top Header Row */}
+      {/* Top Header Row with 3-Dots Menu (Quizlet Style) */}
       <div className="flex items-center justify-between">
         <button
           onClick={onBack}
@@ -57,9 +87,50 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
           <ArrowLeft className="w-4 h-4" /> Quay lại danh sách
         </button>
 
-        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 dark:bg-amber-950/80 text-amber-900 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
-          {quiz.category} • {questions.length} câu hỏi
-        </span>
+        <div className="flex items-center gap-3">
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 dark:bg-amber-950/80 text-amber-900 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+            {quiz.category} • {questions.length} câu hỏi
+          </span>
+
+          {/* 3-Dots Menu Dropdown Button */}
+          <div ref={menuRef} className="relative">
+            <button
+              onClick={() => setIsMenuOpen(prev => !prev)}
+              className="p-2 rounded-full bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 hover:bg-warm-hover dark:hover:bg-slate-800 text-warm-slate dark:text-slate-300 hover:text-warm-text shadow-xs transition-all active:scale-95"
+              title="Tùy chọn bộ đề"
+            >
+              <MoreHorizontal className="w-5 h-5" />
+            </button>
+
+            {/* Menu Popup */}
+            <AnimatePresence>
+              {isMenuOpen && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95, y: -5 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.95, y: -5 }}
+                  className="absolute right-0 mt-2 w-48 bg-white dark:bg-slate-900 rounded-2xl p-1.5 border border-warm-border dark:border-slate-800 shadow-soft-lg z-30 space-y-1 text-xs font-semibold"
+                >
+                  <button
+                    onClick={() => { setIsMenuOpen(false); setPasswordModalConfig({ isOpen: true, actionType: 'EDIT' }); }}
+                    className="w-full flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-amber-50 dark:hover:bg-amber-950/60 text-slate-800 dark:text-slate-200 hover:text-amber-900 dark:hover:text-amber-300 transition-colors text-left"
+                  >
+                    <Edit className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+                    <span>Chỉnh sửa bộ đề</span>
+                  </button>
+
+                  <button
+                    onClick={() => { setIsMenuOpen(false); setPasswordModalConfig({ isOpen: true, actionType: 'DELETE' }); }}
+                    className="w-full flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-rose-50 dark:hover:bg-rose-950/60 text-rose-600 dark:text-rose-400 transition-colors text-left"
+                  >
+                    <Trash2 className="w-4 h-4" />
+                    <span>Xóa bộ đề</span>
+                  </button>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        </div>
       </div>
 
       {/* Hero Banner Section */}
@@ -100,11 +171,11 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
         </div>
       </div>
 
-      {/* Terms In This Set Section Header & Star Filter + Batch Unstar Button */}
+      {/* Terms In This Set Section Header (HIGH CONTRAST DARK MODE TEXT) */}
       <div className="space-y-4">
         <div className="flex items-center justify-between border-b border-warm-border/60 dark:border-slate-800 pb-3 flex-wrap gap-3">
           <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
-            <BookOpen className="w-5 h-5 text-warm-slate dark:text-slate-400" />
+            <BookOpen className="w-5 h-5 text-warm-slate dark:text-slate-300" />
             Terms in this set ({questions.length})
           </h3>
 
@@ -246,6 +317,15 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
           </div>
         )}
       </div>
+
+      {/* Password Modal Verification */}
+      <PasswordModal
+        isOpen={Boolean(passwordModalConfig?.isOpen)}
+        onClose={() => setPasswordModalConfig(null)}
+        actionType={passwordModalConfig?.actionType || 'DELETE'}
+        quizTitle={quiz.title}
+        onConfirm={handlePasswordVerification}
+      />
     </div>
   );
 }

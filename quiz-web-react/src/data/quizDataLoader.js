@@ -54,7 +54,7 @@ QUIZ_MANIFEST.forEach(manifestItem => {
   }
 });
 
-// Load user-created custom quizzes from localStorage
+// LocalStorage Custom Quizzes Persistence
 const STORAGE_KEY_CUSTOM_QUIZZES = 'quizzlet_custom_quizzes_v1';
 
 export function getCustomQuizSets() {
@@ -67,12 +67,36 @@ export function getCustomQuizSets() {
 }
 
 // Initialize custom quizzes into memory cache
-const customSets = getCustomQuizSets();
-customSets.forEach(cSet => {
+const initialCustomSets = getCustomQuizSets();
+initialCustomSets.forEach(cSet => {
   normalizedQuizCache.set(cSet.id, cSet);
 });
 
-export function createCustomQuizSet({ title, description, questions }) {
+// Community API Endpoint Sync (Fetches community quizzes created across device/browsers)
+export async function syncCommunityQuizzes() {
+  try {
+    const res = await fetch('/api/quizzes');
+    if (res.ok) {
+      const communitySets = await res.json();
+      if (Array.isArray(communitySets)) {
+        communitySets.forEach(cSet => {
+          normalizedQuizCache.set(cSet.id, cSet);
+        });
+        localStorage.setItem(STORAGE_KEY_CUSTOM_QUIZZES, JSON.stringify(communitySets));
+        if (typeof window !== 'undefined') {
+          window.dispatchEvent(new CustomEvent('quizzlet_custom_created', { detail: communitySets }));
+        }
+        return communitySets;
+      }
+    }
+  } catch (e) {
+    console.warn('Community sync offline fallback to LocalStorage');
+  }
+  return getCustomQuizSets();
+}
+
+// Create Custom Quiz Set (Sync to Server VPS & Backup to GitHub)
+export async function createCustomQuizSet({ title, description, password, questions }) {
   const id = `custom-${Date.now()}`;
   const category = 'TỰ TẠO';
   const newSet = {
@@ -83,6 +107,7 @@ export function createCustomQuizSet({ title, description, questions }) {
     color: 'from-amber-100 via-rose-100 to-indigo-100',
     icon: 'Sparkles',
     isCustom: true,
+    password: password || '1',
     questions: questions.map((q, idx) => ({
       id: idx + 1,
       questionIndex: idx,
@@ -97,14 +122,121 @@ export function createCustomQuizSet({ title, description, questions }) {
   // Update RAM cache & LocalStorage
   normalizedQuizCache.set(id, newSet);
   const currentCustoms = getCustomQuizSets();
-  const updatedCustoms = [newSet, ...currentCustoms];
+  const updatedCustoms = [newSet, ...currentCustoms.filter(c => c.id !== id)];
   localStorage.setItem(STORAGE_KEY_CUSTOM_QUIZZES, JSON.stringify(updatedCustoms));
+
+  // Sync with Server VPS & GitHub Backup
+  try {
+    await fetch('/api/quizzes/create', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newSet)
+    });
+  } catch (e) {
+    console.warn('Could not reach backend API for GitHub backup, stored locally.');
+  }
 
   if (typeof window !== 'undefined') {
     window.dispatchEvent(new CustomEvent('quizzlet_custom_created', { detail: newSet }));
   }
 
   return newSet;
+}
+
+// Verify Quiz Password securely via Server API or Hash
+export async function verifyQuizPassword(quizId, password) {
+  try {
+    const res = await fetch('/api/quizzes/verify-password', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ quizId, password })
+    });
+    if (res.ok) {
+      const data = await res.json();
+      return Boolean(data.valid);
+    }
+  } catch (e) {
+    console.warn('API password check offline, using local verification');
+  }
+
+  // Fallback local verification
+  const quiz = fetchQuizById(quizId);
+  const correctPassword = quiz?.password || '1';
+  return password === correctPassword;
+}
+
+// Update existing Custom Quiz Set
+export async function updateCustomQuizSet(quizId, password, { title, description, questions }) {
+  const isPasswordValid = await verifyQuizPassword(quizId, password);
+  if (!isPasswordValid) {
+    throw new Error('Mật khẩu không chính xác');
+  }
+
+  const existing = fetchQuizById(quizId);
+  const updatedSet = {
+    ...existing,
+    title: title || existing.title,
+    subject: description || existing.subject,
+    questions: questions.map((q, idx) => ({
+      id: idx + 1,
+      questionIndex: idx,
+      content: q.term || q.content || 'Thuật ngữ',
+      explanation: q.explanation || '',
+      answers: q.answers || [
+        { id: 1, content: q.definition || 'Định nghĩa', isCorrect: true }
+      ]
+    }))
+  };
+
+  normalizedQuizCache.set(quizId, updatedSet);
+  const currentCustoms = getCustomQuizSets();
+  const updatedCustoms = currentCustoms.map(c => c.id === quizId ? updatedSet : c);
+  localStorage.setItem(STORAGE_KEY_CUSTOM_QUIZZES, JSON.stringify(updatedCustoms));
+
+  try {
+    await fetch('/api/quizzes/update', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ quizId, password, updatedSet })
+    });
+  } catch (e) {
+    console.warn('Update API offline');
+  }
+
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('quizzlet_custom_created', { detail: updatedSet }));
+  }
+
+  return updatedSet;
+}
+
+// Delete Custom Quiz Set
+export async function deleteCustomQuizSet(quizId, password) {
+  const isPasswordValid = await verifyQuizPassword(quizId, password);
+  if (!isPasswordValid) {
+    return false;
+  }
+
+  normalizedQuizCache.delete(quizId);
+  const currentCustoms = getCustomQuizSets();
+  const updatedCustoms = currentCustoms.filter(c => c.id !== quizId);
+  localStorage.setItem(STORAGE_KEY_CUSTOM_QUIZZES, JSON.stringify(updatedCustoms));
+
+  try {
+    await fetch('/api/quizzes/delete', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ quizId, password })
+    });
+  } catch (e) {
+    console.warn('Delete API offline');
+  }
+
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('quizzlet_custom_created', { detail: updatedCustoms }));
+  }
+
+  return true;
 }
 
 export function fetchQuizById(quizId) {
