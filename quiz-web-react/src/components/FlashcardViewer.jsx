@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowLeft, ArrowRight, RotateCw, Star, Shuffle, CheckCircle, HelpCircle, X, Check, Maximize2, Minimize2 } from 'lucide-react';
-import { toggleStarQuestion, getStarredQuestions } from '../data/quizDataLoader';
+import { toggleStarQuestion, getStarredQuestions, setQuizCardState } from '../data/quizDataLoader';
 
 export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
   const [questions, setQuestions] = useState(quiz.questions || []);
@@ -77,7 +77,7 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentIndex, questions.length, isTrackProgressEnabled]);
+  }, [currentIndex, questions.length, isTrackProgressEnabled, currentQ.id]);
 
   const handleNext = () => {
     setIsFlipped(false);
@@ -90,11 +90,17 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
   };
 
   const handleMarkKnow = () => {
+    if (currentQ.id) {
+      setQuizCardState(quiz.id, currentQ.id, 'MASTERED');
+    }
     setKnowCount(prev => prev + 1);
     handleNext();
   };
 
   const handleMarkStillLearning = () => {
+    if (currentQ.id) {
+      setQuizCardState(quiz.id, currentQ.id, 'LEARNING');
+    }
     setStillLearningCount(prev => prev + 1);
     handleNext();
   };
@@ -132,7 +138,7 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
         isFullscreen ? 'fixed inset-0 z-50 bg-warm-bg dark:bg-slate-950 p-8 max-w-none justify-between overflow-y-auto' : ''
       }`}
     >
-      {/* Top Header & Quizlet Position Indicator (X / Total  MÃ_MÔN) */}
+      {/* Top Header & Quizlet Position Indicator */}
       <div className="flex items-center justify-between gap-3 mb-4 shrink-0">
         <button
           onClick={onBack}
@@ -195,12 +201,11 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
             willChange: 'transform'
           }}
         >
-          {/* Card Front (Question / Term + Options List) */}
+          {/* Card Front */}
           <div className="absolute inset-0 backface-hidden w-full h-full rounded-[24px] bg-white dark:bg-slate-900 p-6 sm:p-8 border border-warm-border dark:border-slate-800 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.05)] flex flex-col justify-between items-center text-center overflow-hidden">
-            {/* Top Bar inside Card */}
             <div className="w-full flex items-center justify-between text-xs font-bold text-warm-muted dark:text-slate-400 shrink-0">
               <span className="inline-flex items-center gap-1.5 text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-3 py-1 rounded-full border border-amber-200/80 dark:border-amber-800/80">
-                <HelpCircle className="w-3.5 h-3.5 text-amber-500" /> Câu hỏi #{currentIndex + 1}
+                <HelpCircle className="w-3.5 h-3.5 text-amber-500" /> Câu hỏi #{currentQ.questionIndex !== undefined ? currentQ.questionIndex + 1 : currentIndex + 1}
               </span>
 
               <button
@@ -212,7 +217,6 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
               </button>
             </div>
 
-            {/* Question Text & Options List */}
             <div className="my-auto py-2 px-2 max-w-2xl w-full text-center flex flex-col items-center justify-center space-y-3">
               <p className="text-base sm:text-lg md:text-xl font-bold text-slate-900 dark:text-slate-100 leading-snug break-words">
                 {currentQ.content}
@@ -235,16 +239,14 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
               )}
             </div>
 
-            {/* Flip Hint Footer */}
             <div className="w-full flex items-center justify-center gap-2 text-xs text-warm-muted dark:text-slate-400 font-medium pt-3 border-t border-warm-border/40 dark:border-slate-800 shrink-0">
               <RotateCw className="w-3.5 h-3.5 text-amber-600 animate-spin-slow" />
               <span>Bấm vào thẻ hoặc phím <kbd className="px-2 py-0.5 bg-warm-hover dark:bg-slate-800 border border-warm-border dark:border-slate-700 rounded font-mono text-[11px]">Space</kbd> để lật xem đáp án</span>
             </div>
           </div>
 
-          {/* Card Back (ANSWER FIRST WITH OPTION PREFIX -> EXPLANATION SECOND RULE) */}
+          {/* Card Back */}
           <div className="absolute inset-0 backface-hidden rotate-y-180 w-full h-full rounded-[24px] bg-gradient-to-br from-amber-50/90 via-white to-indigo-50/70 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900 p-6 sm:p-8 border border-amber-200/80 dark:border-slate-800 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.05)] flex flex-col justify-between items-center text-center overflow-hidden">
-            {/* Top Bar inside Answer Card */}
             <div className="w-full flex items-center justify-between text-xs font-bold text-emerald-800 dark:text-emerald-300 shrink-0">
               <span className="inline-flex items-center gap-1.5 bg-emerald-100 dark:bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-800">
                 <CheckCircle className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" /> Đáp án chính xác
@@ -252,9 +254,7 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
               <span className="text-warm-muted dark:text-slate-400">Bấm để lật lại câu hỏi</span>
             </div>
 
-            {/* ANSWER FIRST (WITH OPTION PREFIX) -> EXPLANATION SECOND */}
             <div className="my-auto py-2 px-2 max-w-2xl w-full text-center flex flex-col items-center justify-center space-y-4">
-              {/* 1. FULL CORRECT ANSWER TEXT WITH PREFIX (FIRST) */}
               <div className="p-5 rounded-2xl bg-white/90 dark:bg-slate-800 border border-emerald-300 dark:border-emerald-700 text-center shadow-xs w-full">
                 <p className="text-xs font-bold text-emerald-700 dark:text-emerald-400 mb-1">
                   ✓ Đáp án đúng
@@ -264,7 +264,6 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
                 </p>
               </div>
 
-              {/* 2. EXPLANATION CALLOUT BOX (BELOW / SECOND) */}
               {currentQ.explanation && (
                 <div className="p-3.5 rounded-xl bg-amber-50/90 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-xs text-amber-950 dark:text-amber-200 leading-relaxed text-left w-full">
                   <span className="font-bold text-amber-900 dark:text-amber-300 block mb-1">💡 Giải thích chi tiết:</span>
@@ -273,10 +272,9 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
               )}
             </div>
 
-            {/* Bottom Status Footer */}
             <div className="w-full flex items-center justify-between pt-3 border-t border-warm-border/40 dark:border-slate-800 text-xs text-warm-muted dark:text-slate-400 shrink-0">
               <span>{quiz.subject}</span>
-              <span className="text-[11px] italic">Thẻ #{currentIndex + 1}</span>
+              <span className="text-[11px] italic">Thẻ #{currentQ.questionIndex !== undefined ? currentQ.questionIndex + 1 : currentIndex + 1}</span>
             </div>
           </div>
         </div>
@@ -284,7 +282,6 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
 
       {/* Bottom Action Controls Row */}
       <div className="flex items-center justify-between gap-3 mt-4 shrink-0">
-        {/* Track Progress Toggle */}
         <label className="flex items-center gap-2 cursor-pointer select-none text-xs font-semibold text-warm-text dark:text-slate-200">
           <span>Track progress</span>
           <input
@@ -295,7 +292,6 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
           />
         </label>
 
-        {/* Center Action Buttons */}
         {isTrackProgressEnabled ? (
           <div className="flex items-center gap-4">
             <button
@@ -332,7 +328,6 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
           </div>
         )}
 
-        {/* Fullscreen Button */}
         <button
           onClick={toggleFullscreen}
           className="p-2.5 rounded-full bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 hover:bg-warm-hover dark:hover:bg-slate-800 text-warm-muted dark:text-slate-300 hover:text-warm-text transition-all active:scale-95"

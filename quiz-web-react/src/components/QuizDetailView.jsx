@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, Layers, Play, CheckCircle2, Star, Volume2, BookOpen, MoreHorizontal, Edit, Trash2, Search } from 'lucide-react';
-import { toggleStarQuestion, getStarredQuestions, unstarQuizSet, verifyQuizPassword, deleteCustomQuizSet, getUserProgress } from '../data/quizDataLoader';
+import { toggleStarQuestion, getStarredQuestions, unstarQuizSet, verifyQuizPassword, deleteCustomQuizSet, calculateQuizProgressStats } from '../data/quizDataLoader';
 import PasswordModal from './PasswordModal';
 
 function removeAccents(str) {
@@ -23,19 +23,26 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
     return new Set(getStarredQuestions().map(s => s.questionId));
   });
 
+  const [srsStats, setSrsStats] = useState(() => calculateQuizProgressStats(quiz));
+
   const menuRef = useRef(null);
   const questions = quiz.questions || [];
 
-  // Get user progress stats for Knowt-style Studying Progress
-  const userProgress = getUserProgress();
-  const quizProgress = userProgress[quiz.id] || { bestScore: 0, attempts: 0 };
-  const overallPercentage = quizProgress.bestScore || 0;
+  // Listen to SRS progress update event & star update event
+  useEffect(() => {
+    const refreshData = () => {
+      setStarredIds(new Set(getStarredQuestions().map(s => s.questionId)));
+      setSrsStats(calculateQuizProgressStats(quiz));
+    };
 
-  // Calculate Knowt Progress Categories
-  const newCardsCount = Math.max(0, questions.length - Math.round((questions.length * overallPercentage) / 100));
-  const masteredCount = Math.round((questions.length * overallPercentage) / 100);
-  const stillLearningCount = 0;
-  const almostDoneCount = 0;
+    refreshData();
+    window.addEventListener('quizzlet_star_updated', refreshData);
+    window.addEventListener('quizzlet_srs_updated', refreshData);
+    return () => {
+      window.removeEventListener('quizzlet_star_updated', refreshData);
+      window.removeEventListener('quizzlet_srs_updated', refreshData);
+    };
+  }, [quiz]);
 
   // Close menu on click outside
   useEffect(() => {
@@ -46,15 +53,6 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
-  // Listen to global star update event
-  useEffect(() => {
-    const checkStar = () => {
-      setStarredIds(new Set(getStarredQuestions().map(s => s.questionId)));
-    };
-    window.addEventListener('quizzlet_star_updated', checkStar);
-    return () => window.removeEventListener('quizzlet_star_updated', checkStar);
   }, []);
 
   const handleToggleStar = (q, idx) => {
@@ -209,7 +207,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
             Tiến độ học tập (Studying Progress)
           </h3>
           <span className="px-3 py-1 rounded-full bg-rose-50 dark:bg-rose-950/80 text-rose-600 dark:text-rose-300 border border-rose-200 dark:border-rose-800 text-xs font-bold">
-            {overallPercentage}%
+            {srsStats.percentage}%
           </span>
         </div>
 
@@ -221,7 +219,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
               <span className="w-3 h-3 rounded-full bg-rose-400 shrink-0" />
               <span className="font-bold text-rose-900 dark:text-rose-200">Thẻ mới (New cards)</span>
             </div>
-            <span className="font-extrabold text-rose-900 dark:text-rose-200">{newCardsCount}</span>
+            <span className="font-extrabold text-rose-900 dark:text-rose-200">{srsStats.newCount}</span>
             <button
               onClick={() => onStartMode('FLASHCARD')}
               className="px-4 py-1.5 rounded-full bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-bold hover:bg-rose-100 dark:hover:bg-slate-700 transition-colors shadow-xs"
@@ -236,7 +234,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
               <span className="w-3 h-3 rounded-full bg-purple-400 shrink-0" />
               <span className="font-bold text-purple-900 dark:text-purple-200">Đang học (Still learning)</span>
             </div>
-            <span className="font-extrabold text-purple-900 dark:text-purple-200">{stillLearningCount}</span>
+            <span className="font-extrabold text-purple-900 dark:text-purple-200">{srsStats.learningCount}</span>
             <button
               onClick={() => onStartMode('PRACTICE')}
               className="px-4 py-1.5 rounded-full bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-bold hover:bg-purple-100 dark:hover:bg-slate-700 transition-colors shadow-xs"
@@ -251,7 +249,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
               <span className="w-3 h-3 rounded-full bg-sky-400 shrink-0" />
               <span className="font-bold text-sky-900 dark:text-sky-200">Sắp thuộc (Almost done)</span>
             </div>
-            <span className="font-extrabold text-sky-900 dark:text-sky-200">{almostDoneCount}</span>
+            <span className="font-extrabold text-sky-900 dark:text-sky-200">{srsStats.almostCount}</span>
             <button
               onClick={() => onStartMode('PRACTICE')}
               className="px-4 py-1.5 rounded-full bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-bold hover:bg-sky-100 dark:hover:bg-slate-700 transition-colors shadow-xs"
@@ -266,7 +264,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
               <span className="w-3 h-3 rounded-full bg-emerald-400 shrink-0" />
               <span className="font-bold text-emerald-900 dark:text-emerald-200">Đã thuộc (Mastered)</span>
             </div>
-            <span className="font-extrabold text-emerald-900 dark:text-emerald-200">{masteredCount}</span>
+            <span className="font-extrabold text-emerald-900 dark:text-emerald-200">{srsStats.masteredCount}</span>
             <button
               onClick={() => onStartMode('FLASHCARD')}
               className="px-4 py-1.5 rounded-full bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-bold hover:bg-emerald-100 dark:hover:bg-slate-700 transition-colors shadow-xs"
@@ -344,6 +342,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
             {filteredQuestions.map((q, idx) => {
               const isStarred = starredIds.has(q.id);
               const correctAnswer = (q.answers || []).find(a => a.isCorrect);
+              const originalIndexDisplay = q.questionIndex !== undefined ? q.questionIndex + 1 : idx + 1;
 
               let formattedAnswerText = correctAnswer ? correctAnswer.content : 'Chưa có đáp án';
               const answersList = q.answers || [];
@@ -363,7 +362,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
                     {/* Left Column: Question / Term & Full Options List (A, B, C, D) */}
                     <div className="space-y-3 pr-4 border-b md:border-b-0 md:border-r border-warm-border/40 dark:border-slate-800 pb-4 md:pb-0">
                       <div className="text-xs font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-2.5 py-0.5 rounded-md border border-amber-200/80 dark:border-amber-800 inline-block">
-                        Câu {idx + 1}
+                        Câu #{originalIndexDisplay}
                       </div>
                       <p className="text-sm font-semibold text-slate-900 dark:text-slate-100 leading-relaxed break-words whitespace-pre-wrap">
                         {q.content}
@@ -419,7 +418,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
                         </button>
 
                         <button
-                          onClick={() => handleToggleStar(q, idx)}
+                          onClick={() => handleToggleStar(q, originalIndexDisplay - 1)}
                           className="p-2 rounded-full hover:bg-warm-hover dark:hover:bg-slate-800 transition-transform active:scale-125"
                           title="Lưu câu hỏi ⭐"
                         >

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Lock, X, AlertCircle, ShieldCheck } from 'lucide-react';
+import { Lock, X, AlertCircle } from 'lucide-react';
 
 export default function PasswordModal({ isOpen, onClose, onConfirm, actionType = 'DELETE', quizTitle = '' }) {
   const [password, setPassword] = useState('');
@@ -20,7 +20,7 @@ export default function PasswordModal({ isOpen, onClose, onConfirm, actionType =
     setErrorMsg('');
 
     try {
-      const isValid = await onConfirm(password);
+      const isValid = await onConfirm(password.trim());
       if (!isValid) {
         setErrorMsg('Mật khẩu không chính xác. Vui lòng thử lại!');
         setIsSubmitting(false);
@@ -80,7 +80,7 @@ export default function PasswordModal({ isOpen, onClose, onConfirm, actionType =
             <div className="space-y-2 text-left">
               <input
                 type="password"
-                placeholder="Nhập mật khẩu..."
+                placeholder="Nhập mật khẩu quản lý..."
                 value={password}
                 onChange={(e) => { setPassword(e.target.value); setErrorMsg(''); }}
                 autoFocus

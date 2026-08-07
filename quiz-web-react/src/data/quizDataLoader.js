@@ -72,6 +72,59 @@ initialCustomSets.forEach(cSet => {
   normalizedQuizCache.set(cSet.id, cSet);
 });
 
+// SRS Card State Tracking (Synchronized Knowt Learning Engine)
+export function getQuizCardStates(quizId) {
+  try {
+    const data = localStorage.getItem(`quizzlet_card_states_${quizId}`);
+    return data ? JSON.parse(data) : {};
+  } catch (e) {
+    return {};
+  }
+}
+
+export function setQuizCardState(quizId, questionId, state) {
+  try {
+    const cardStates = getQuizCardStates(quizId);
+    cardStates[questionId] = state; // 'NEW' | 'LEARNING' | 'ALMOST' | 'MASTERED'
+    localStorage.setItem(`quizzlet_card_states_${quizId}`, JSON.stringify(cardStates));
+
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('quizzlet_srs_updated', { detail: { quizId, questionId, state } }));
+    }
+    return cardStates;
+  } catch (e) {
+    console.error('Error setting card state', e);
+    return {};
+  }
+}
+
+export function calculateQuizProgressStats(quiz) {
+  if (!quiz || !Array.isArray(quiz.questions)) {
+    return { newCount: 0, learningCount: 0, almostCount: 0, masteredCount: 0, percentage: 0 };
+  }
+
+  const total = quiz.questions.length;
+  if (total === 0) return { newCount: 0, learningCount: 0, almostCount: 0, masteredCount: 0, percentage: 0 };
+
+  const cardStates = getQuizCardStates(quiz.id);
+
+  let learningCount = 0;
+  let almostCount = 0;
+  let masteredCount = 0;
+
+  quiz.questions.forEach(q => {
+    const st = cardStates[q.id];
+    if (st === 'LEARNING') learningCount++;
+    else if (st === 'ALMOST') almostCount++;
+    else if (st === 'MASTERED') masteredCount++;
+  });
+
+  const newCount = Math.max(0, total - (learningCount + almostCount + masteredCount));
+  const percentage = Math.round(((masteredCount + almostCount * 0.5) / total) * 100);
+
+  return { newCount, learningCount, almostCount, masteredCount, percentage };
+}
+
 // Community API Endpoint Sync (Fetches community quizzes created across device/browsers)
 export async function syncCommunityQuizzes() {
   try {
@@ -107,16 +160,26 @@ export async function createCustomQuizSet({ title, description, password, questi
     color: 'from-amber-100 via-rose-100 to-indigo-100',
     icon: 'Sparkles',
     isCustom: true,
-    password: password || '1',
-    questions: questions.map((q, idx) => ({
-      id: idx + 1,
-      questionIndex: idx,
-      content: q.term || 'Thuật ngữ',
-      explanation: q.explanation || '',
-      answers: [
-        { id: 1, content: q.definition || 'Định nghĩa', isCorrect: true }
-      ]
-    }))
+    password: password.trim(),
+    questions: questions.map((q, idx) => {
+      let content = q.term || q.content || 'Thuật ngữ';
+      let answers = [];
+      let explanation = q.explanation || '';
+
+      if (Array.isArray(q.answers) && q.answers.length > 0) {
+        answers = q.answers;
+      } else {
+        answers = [{ id: 1, content: q.definition || 'Định nghĩa', isCorrect: true }];
+      }
+
+      return {
+        id: idx + 1,
+        questionIndex: idx,
+        content,
+        explanation,
+        answers
+      };
+    })
   };
 
   // Update RAM cache & LocalStorage
@@ -143,7 +206,7 @@ export async function createCustomQuizSet({ title, description, password, questi
   return newSet;
 }
 
-// Verify Quiz Password securely via Server API or Hash
+// Verify Quiz Password securely via Server API
 export async function verifyQuizPassword(quizId, password) {
   try {
     const res = await fetch('/api/quizzes/verify-password', {
@@ -161,7 +224,7 @@ export async function verifyQuizPassword(quizId, password) {
 
   // Fallback local verification
   const quiz = fetchQuizById(quizId);
-  const correctPassword = quiz?.password || '1';
+  const correctPassword = quiz?.password || '';
   return password === correctPassword;
 }
 
@@ -177,15 +240,25 @@ export async function updateCustomQuizSet(quizId, password, { title, description
     ...existing,
     title: title || existing.title,
     subject: description || existing.subject,
-    questions: questions.map((q, idx) => ({
-      id: idx + 1,
-      questionIndex: idx,
-      content: q.term || q.content || 'Thuật ngữ',
-      explanation: q.explanation || '',
-      answers: q.answers || [
-        { id: 1, content: q.definition || 'Định nghĩa', isCorrect: true }
-      ]
-    }))
+    questions: questions.map((q, idx) => {
+      let content = q.term || q.content || 'Thuật ngữ';
+      let answers = [];
+      let explanation = q.explanation || '';
+
+      if (Array.isArray(q.answers) && q.answers.length > 0) {
+        answers = q.answers;
+      } else {
+        answers = [{ id: 1, content: q.definition || 'Định nghĩa', isCorrect: true }];
+      }
+
+      return {
+        id: idx + 1,
+        questionIndex: idx,
+        content,
+        explanation,
+        answers
+      };
+    })
   };
 
   normalizedQuizCache.set(quizId, updatedSet);
