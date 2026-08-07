@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Layers, Play, CheckCircle2, Star, Volume2, BookOpen, Trash2 } from 'lucide-react';
+import { ArrowLeft, Layers, Play, CheckCircle2, Star, Volume2, BookOpen } from 'lucide-react';
 import { toggleStarQuestion, getStarredQuestions, unstarQuizSet } from '../data/quizDataLoader';
 
 export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSetup }) {
@@ -144,7 +144,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
           </div>
         </div>
 
-        {/* 2-Column Cards List */}
+        {/* 2-Column Clean Cards List (CLEAN QUIZLET STANDARD: TERM + DEFINITION ONLY) */}
         {displayedQuestions.length === 0 ? (
           <div className="text-center py-12 bg-white dark:bg-slate-900 rounded-3xl border border-warm-border dark:border-slate-800 text-warm-muted dark:text-slate-400">
             <Star className="w-8 h-8 text-amber-400 mx-auto mb-2" />
@@ -156,6 +156,14 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
               const isStarred = starredIds.has(q.id);
               const correctAnswer = (q.answers || []).find(a => a.isCorrect);
 
+              // Format answer letter if available
+              let formattedAnswerText = correctAnswer ? correctAnswer.content : 'Chưa có đáp án';
+              const answersList = q.answers || [];
+              const correctIdx = answersList.findIndex(a => a.isCorrect);
+              if (correctIdx >= 0 && answersList.length > 1 && correctAnswer) {
+                formattedAnswerText = `${String.fromCharCode(65 + correctIdx)}. ${correctAnswer.content}`;
+              }
+
               return (
                 <motion.div
                   key={q.id || idx}
@@ -164,49 +172,25 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
                   className="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-warm-border dark:border-slate-800 shadow-xs hover:shadow-soft transition-all duration-200 text-warm-text dark:text-slate-100"
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
-                    {/* Left Column: Question & Options */}
+                    {/* Left Column: Question / Term */}
                     <div className="space-y-3 pr-4 border-b md:border-b-0 md:border-r border-warm-border/40 dark:border-slate-800 pb-4 md:pb-0">
                       <div className="text-xs font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-2.5 py-0.5 rounded-md border border-amber-200/80 dark:border-amber-800 inline-block">
                         Câu {idx + 1}
                       </div>
-                      <p className="text-sm font-semibold text-slate-900 dark:text-slate-100 leading-relaxed break-words">
+                      <p className="text-sm font-semibold text-slate-900 dark:text-slate-100 leading-relaxed break-words whitespace-pre-wrap">
                         {q.content}
                       </p>
-
-                      {/* Render option list */}
-                      {(q.answers || []).length > 0 && (
-                        <div className="space-y-1.5 pt-2">
-                          {q.answers.map((a, aIdx) => (
-                            <div
-                              key={aIdx}
-                              className={`text-xs px-3 py-2 rounded-xl border leading-relaxed break-words ${
-                                a.isCorrect
-                                  ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-950 dark:text-emerald-200 border-emerald-200 dark:border-emerald-800 font-semibold'
-                                  : 'bg-warm-bg dark:bg-slate-800/60 text-warm-text dark:text-slate-300 border-warm-border/60 dark:border-slate-700'
-                              }`}
-                            >
-                              <span className="font-bold mr-1.5">{String.fromCharCode(65 + aIdx)}.</span>
-                              {a.content}
-                            </div>
-                          ))}
-                        </div>
-                      )}
                     </div>
 
-                    {/* Right Column: Correct Answer & Actions */}
+                    {/* Right Column: Definition / Correct Answer & Actions */}
                     <div className="flex flex-col justify-between pl-0 md:pl-2 space-y-4">
                       <div>
                         <span className="text-[11px] font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-800 inline-block mb-2">
-                          Đáp án đúng
+                          Đáp án đúng (Definition)
                         </span>
-                        <p className="text-sm font-bold text-emerald-950 dark:text-emerald-200 leading-relaxed break-words">
-                          {correctAnswer ? correctAnswer.content : 'Chưa có đáp án'}
+                        <p className="text-sm font-bold text-emerald-950 dark:text-emerald-200 leading-relaxed break-words whitespace-pre-wrap">
+                          {formattedAnswerText}
                         </p>
-                        {q.explanation && (
-                          <p className="text-xs text-warm-muted dark:text-slate-300 mt-2 italic bg-warm-hover/60 dark:bg-slate-800/60 p-2.5 rounded-xl border border-warm-border dark:border-slate-700">
-                            💡 {q.explanation}
-                          </p>
-                        )}
                       </div>
 
                       {/* Action Icons (Star & Speech) */}

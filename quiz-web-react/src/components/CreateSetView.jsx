@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, Plus, Trash2, FileText, Sparkles, Image, Lock } from 'lucide-react';
+import { ArrowLeft, Plus, Trash2, FileText, Sparkles, Lock } from 'lucide-react';
 import ImportModal from './ImportModal';
 import { createCustomQuizSet } from '../data/quizDataLoader';
 
@@ -142,7 +142,7 @@ export default function CreateSetView({ onBack, onSetCreated }) {
         </div>
       </div>
 
-      {/* Cards List Inputs (3-Field Standard: Term, Definition, Explanation) */}
+      {/* Cards List Inputs (3-Field Standard: Multi-line Auto-wrap Textarea) */}
       <div className="space-y-6">
         {cards.map((card, idx) => (
           <div
@@ -164,48 +164,48 @@ export default function CreateSetView({ onBack, onSetCreated }) {
               </button>
             </div>
 
-            {/* 3 Input Fields Grid */}
+            {/* 3 Input Fields Grid with Auto-Wrapping Textarea */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Field 1: Enter Term */}
               <div className="space-y-1">
-                <input
-                  type="text"
+                <textarea
+                  rows={3}
                   placeholder="Enter term"
                   value={card.term}
                   onChange={(e) => handleCardChange(card.id, 'term', e.target.value)}
-                  className="w-full p-3.5 rounded-xl bg-warm-bg/70 dark:bg-slate-800/60 border border-warm-border/80 dark:border-slate-700 text-xs sm:text-sm font-semibold text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500/30"
+                  className="w-full p-3.5 rounded-xl bg-warm-bg/70 dark:bg-slate-800/60 border border-warm-border/80 dark:border-slate-700 text-xs sm:text-sm font-semibold text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500/30 resize-y leading-relaxed"
                 />
                 <span className="text-[10px] font-bold text-warm-muted dark:text-slate-500 uppercase tracking-wider block">
-                  TERM (Thuật ngữ / Câu hỏi)
+                  TERM (THUẬT NGỮ / CÂU HỎI)
                 </span>
               </div>
 
               {/* Field 2: Enter Definition */}
               <div className="space-y-1">
-                <input
-                  type="text"
+                <textarea
+                  rows={3}
                   placeholder="Enter definition"
                   value={card.definition}
                   onChange={(e) => handleCardChange(card.id, 'definition', e.target.value)}
-                  className="w-full p-3.5 rounded-xl bg-warm-bg/70 dark:bg-slate-800/60 border border-warm-border/80 dark:border-slate-700 text-xs sm:text-sm font-semibold text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500/30"
+                  className="w-full p-3.5 rounded-xl bg-warm-bg/70 dark:bg-slate-800/60 border border-warm-border/80 dark:border-slate-700 text-xs sm:text-sm font-semibold text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500/30 resize-y leading-relaxed"
                 />
                 <span className="text-[10px] font-bold text-warm-muted dark:text-slate-500 uppercase tracking-wider block">
-                  DEFINITION (Định nghĩa / Đáp án)
+                  DEFINITION (ĐỊNH NGHĨA / ĐÁP ÁN)
                 </span>
               </div>
             </div>
 
             {/* Field 3: Enter Explanation (Optional) */}
             <div className="space-y-1">
-              <input
-                type="text"
+              <textarea
+                rows={2}
                 placeholder="Enter explanation (Optional)"
                 value={card.explanation}
                 onChange={(e) => handleCardChange(card.id, 'explanation', e.target.value)}
-                className="w-full p-3 rounded-xl bg-amber-50/50 dark:bg-amber-950/30 border border-amber-200/60 dark:border-amber-900/60 text-xs text-amber-950 dark:text-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-400/30"
+                className="w-full p-3 rounded-xl bg-amber-50/50 dark:bg-amber-950/30 border border-amber-200/60 dark:border-amber-900/60 text-xs text-amber-950 dark:text-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-400/30 resize-y leading-relaxed"
               />
               <span className="text-[10px] font-bold text-amber-800 dark:text-amber-400 uppercase tracking-wider block">
-                EXPLANATION (Trường thứ 3 - Giải thích chi tiết)
+                EXPLANATION (TRƯỜNG THỨ 3 – GIẢI THÍCH CHI TIẾT)
               </span>
             </div>
           </div>

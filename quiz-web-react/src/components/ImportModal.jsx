@@ -1,69 +1,138 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Sparkles, FileText, CheckCircle2 } from 'lucide-react';
+import { X, Sparkles, FileText, CheckCircle2, Zap } from 'lucide-react';
 
 export default function ImportModal({ isOpen, onClose, onImportData }) {
   const [rawText, setRawText] = useState('');
+  
+  // Delimiter states
   const [termDelimiter, setTermDelimiter] = useState('tab'); // 'tab' | 'comma' | 'custom_term'
   const [customTermDelimiter, setCustomTermDelimiter] = useState('-');
   
+  const [expDelimiter, setExpDelimiter] = useState('none'); // 'none' | 'tab' | 'custom_exp'
+  const [customExpDelimiter, setCustomExpDelimiter] = useState('|');
+
   const [cardDelimiter, setCardDelimiter] = useState('newline'); // 'newline' | 'semicolon' | 'custom_card'
-  const [customCardDelimiter, setCustomCardDelimiter] = useState('||');
+  const [customCardDelimiter, setCustomCardDelimiter] = useState('%%%');
 
   const [parsedCards, setParsedCards] = useState([]);
+  const [isParsing, setIsParsing] = useState(false);
 
-  // Real-time Live Parser
+  // Debounced High-Performance Parser (200ms non-blocking delay)
   useEffect(() => {
     if (!rawText.trim()) {
       setParsedCards([]);
+      setIsParsing(false);
       return;
     }
 
-    // Determine actual card splitting string/regex
-    let rawCards = [];
-    if (cardDelimiter === 'newline') {
-      rawCards = rawText.split(/\r?\n/);
-    } else if (cardDelimiter === 'semicolon') {
-      rawCards = rawText.split(';');
-    } else if (cardDelimiter === 'custom_card') {
-      const sep = customCardDelimiter || '\n';
-      rawCards = rawText.split(sep);
-    }
+    setIsParsing(true);
 
-    // Determine term splitting
-    let termSep = '\t';
-    if (termDelimiter === 'comma') {
-      termSep = ',';
-    } else if (termDelimiter === 'custom_term') {
-      termSep = customTermDelimiter || '\t';
-    }
+    const parseTimer = setTimeout(() => {
+      // 1. Determine Card Delimiter
+      let cardSep = '\n';
+      if (cardDelimiter === 'semicolon') {
+        cardSep = ';';
+      } else if (cardDelimiter === 'custom_card') {
+        cardSep = customCardDelimiter || '%%%';
+      }
 
-    const cards = [];
-    rawCards.forEach((line) => {
-      const trimmed = line.trim();
-      if (!trimmed) return;
-
-      let parts = [];
-      if (termDelimiter === 'tab') {
-        parts = trimmed.split(/\t+/);
+      // Split raw cards
+      let rawCards = [];
+      if (cardDelimiter === 'newline') {
+        rawCards = rawText.split(/\r?\n/);
       } else {
-        parts = trimmed.split(termSep);
+        rawCards = rawText.split(cardSep);
       }
 
-      if (parts.length >= 2) {
-        const term = parts[0].trim();
-        const definition = parts[1].trim();
-        const explanation = parts.slice(2).join(' ').trim(); // Field 3 (Explanation if present)
-        if (term || definition) {
-          cards.push({ term, definition, explanation });
+      // 2. Determine Term & Explanation Delimiters
+      let termSep = '\t';
+      if (termDelimiter === 'comma') termSep = ',';
+      else if (termDelimiter === 'custom_term') termSep = customTermDelimiter || '-';
+
+      let expSep = null;
+      if (expDelimiter === 'tab') expSep = '\t';
+      else if (expDelimiter === 'custom_exp') expSep = customExpDelimiter || '|';
+
+      const results = [];
+
+      // Single-pass linear scan for max performance
+      for (let i = 0; i < rawCards.length; i++) {
+        const rawLine = rawCards[i].trim();
+        if (!rawLine) continue;
+
+        let term = '';
+        let definition = '';
+        let explanation = '';
+
+        // If 3rd field explanation delimiter is configured
+        if (expSep) {
+          const expParts = rawLine.split(expSep);
+          if (expParts.length >= 2) {
+            explanation = expParts.slice(1).join(' ').trim();
+            const termDefPart = expParts[0].trim();
+            
+            // Split term and definition from first part
+            let termDefParts = [];
+            if (termDelimiter === 'tab') {
+              termDefParts = termDefPart.split(/\t+/);
+            } else {
+              termDefParts = termDefPart.split(termSep);
+            }
+
+            term = (termDefParts[0] || '').trim();
+            definition = termDefParts.slice(1).join(' ').trim();
+          } else {
+            // Fallback split without explanation
+            let termDefParts = [];
+            if (termDelimiter === 'tab') {
+              termDefParts = rawLine.split(/\t+/);
+            } else {
+              termDefParts = rawLine.split(termSep);
+            }
+            term = (termDefParts[0] || '').trim();
+            definition = termDefParts.slice(1).join(' ').trim();
+          }
+        } else {
+          // Standard 2-Field split (term & definition)
+          let parts = [];
+          if (termDelimiter === 'tab') {
+            parts = rawLine.split(/\t+/);
+          } else {
+            parts = rawLine.split(termSep);
+          }
+
+          if (parts.length >= 3) {
+            term = (parts[0] || '').trim();
+            definition = (parts[1] || '').trim();
+            explanation = parts.slice(2).join(' ').trim(); // automatic 3rd tab fallback
+          } else if (parts.length === 2) {
+            term = (parts[0] || '').trim();
+            definition = (parts[1] || '').trim();
+          } else {
+            term = rawLine.trim();
+          }
         }
-      } else if (parts.length === 1 && parts[0].trim()) {
-        cards.push({ term: parts[0].trim(), definition: '', explanation: '' });
-      }
-    });
 
-    setParsedCards(cards);
-  }, [rawText, termDelimiter, customTermDelimiter, cardDelimiter, customCardDelimiter]);
+        if (term || definition || explanation) {
+          results.push({ term, definition, explanation });
+        }
+      }
+
+      setParsedCards(results);
+      setIsParsing(false);
+    }, 200);
+
+    return () => clearTimeout(parseTimer);
+  }, [
+    rawText,
+    termDelimiter,
+    customTermDelimiter,
+    expDelimiter,
+    customExpDelimiter,
+    cardDelimiter,
+    customCardDelimiter
+  ]);
 
   if (!isOpen) return null;
 
@@ -117,21 +186,21 @@ export default function ImportModal({ isOpen, onClose, onImportData }) {
             <div className="space-y-2">
               <textarea
                 rows={7}
-                placeholder="Word 1    Definition 1&#10;Word 2    Definition 2&#10;Word 3    Definition 3"
+                placeholder="Word 1    Definition 1    Explanation 1&#10;%%%&#10;Word 2    Definition 2    Explanation 2"
                 value={rawText}
                 onChange={(e) => setRawText(e.target.value)}
                 className="w-full p-4 rounded-2xl bg-warm-bg/60 dark:bg-slate-800/60 border border-warm-border dark:border-slate-700 text-xs sm:text-sm font-mono text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-amber-400/40 resize-y"
               />
             </div>
 
-            {/* Delimiter Options */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-4 rounded-2xl bg-warm-bg/40 dark:bg-slate-800/40 border border-warm-border/60 dark:border-slate-800 text-xs">
-              {/* Between Term and Definition */}
-              <div className="space-y-2.5">
+            {/* 3-Field Delimiter Controls Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 rounded-2xl bg-warm-bg/40 dark:bg-slate-800/40 border border-warm-border/60 dark:border-slate-800 text-xs">
+              {/* Field 1 & 2: Between Term and Definition */}
+              <div className="space-y-2">
                 <label className="font-bold text-slate-900 dark:text-slate-100 block">
                   Between Term and Definition
                 </label>
-                <div className="space-y-2">
+                <div className="space-y-1.5">
                   <label className="flex items-center gap-2 cursor-pointer">
                     <input
                       type="radio"
@@ -140,7 +209,7 @@ export default function ImportModal({ isOpen, onClose, onImportData }) {
                       onChange={() => setTermDelimiter('tab')}
                       className="accent-amber-600"
                     />
-                    <span>Tab (Default for Excel/Word)</span>
+                    <span>Tab (Excel/Word)</span>
                   </label>
 
                   <label className="flex items-center gap-2 cursor-pointer">
@@ -175,12 +244,61 @@ export default function ImportModal({ isOpen, onClose, onImportData }) {
                 </div>
               </div>
 
-              {/* Between cards */}
-              <div className="space-y-2.5">
+              {/* Field 3: Between Definition and Explanation */}
+              <div className="space-y-2">
+                <label className="font-bold text-amber-800 dark:text-amber-400 block">
+                  Field 3 Explanation Delimiter
+                </label>
+                <div className="space-y-1.5">
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="expDelim"
+                      checked={expDelimiter === 'none'}
+                      onChange={() => setExpDelimiter('none')}
+                      className="accent-amber-600"
+                    />
+                    <span>Auto (3rd Tab)</span>
+                  </label>
+
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="expDelim"
+                      checked={expDelimiter === 'tab'}
+                      onChange={() => setExpDelimiter('tab')}
+                      className="accent-amber-600"
+                    />
+                    <span>Tab</span>
+                  </label>
+
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="expDelim"
+                      checked={expDelimiter === 'custom_exp'}
+                      onChange={() => setExpDelimiter('custom_exp')}
+                      className="accent-amber-600"
+                    />
+                    <span>Custom:</span>
+                    {expDelimiter === 'custom_exp' && (
+                      <input
+                        type="text"
+                        value={customExpDelimiter}
+                        onChange={(e) => setCustomExpDelimiter(e.target.value)}
+                        className="w-16 px-2 py-0.5 rounded border border-warm-border dark:border-slate-700 bg-white dark:bg-slate-900 text-center font-mono"
+                      />
+                    )}
+                  </label>
+                </div>
+              </div>
+
+              {/* Between Cards */}
+              <div className="space-y-2">
                 <label className="font-bold text-slate-900 dark:text-slate-100 block">
                   Between cards
                 </label>
-                <div className="space-y-2">
+                <div className="space-y-1.5">
                   <label className="flex items-center gap-2 cursor-pointer">
                     <input
                       type="radio"
@@ -225,13 +343,16 @@ export default function ImportModal({ isOpen, onClose, onImportData }) {
               </div>
             </div>
 
-            {/* Live Real-time Preview Area */}
+            {/* Live Real-time Full-Text Preview Area (ZERO TRUNCATION) */}
             <div className="space-y-3 border-t border-warm-border/60 dark:border-slate-800 pt-4">
               <div className="flex items-center justify-between text-xs font-bold text-slate-900 dark:text-slate-100">
-                <span>Preview ({parsedCards.length} cards)</span>
-                {parsedCards.length > 0 && (
+                <span className="flex items-center gap-2">
+                  Preview ({parsedCards.length} cards)
+                  {isParsing && <Zap className="w-3.5 h-3.5 text-amber-500 animate-bounce" />}
+                </span>
+                {parsedCards.length > 0 && !isParsing && (
                   <span className="text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1">
-                    <CheckCircle2 className="w-3.5 h-3.5" /> Sẵn sàng Import
+                    <CheckCircle2 className="w-3.5 h-3.5" /> Sẵn sàng Import 100%
                   </span>
                 )}
               </div>
@@ -241,28 +362,47 @@ export default function ImportModal({ isOpen, onClose, onImportData }) {
                   Nothing to preview yet. Paste your text above.
                 </div>
               ) : (
-                <div className="space-y-2 max-h-48 overflow-y-auto pr-1">
+                <div className="space-y-3 max-h-64 overflow-y-auto pr-1">
                   {parsedCards.map((card, idx) => (
                     <div
                       key={idx}
-                      className="p-3 rounded-xl bg-white dark:bg-slate-800 border border-warm-border dark:border-slate-700 text-xs flex items-center justify-between gap-4"
+                      className="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-warm-border dark:border-slate-700 text-xs space-y-2 shadow-xs"
                     >
-                      <div className="flex items-center gap-2 flex-1 min-w-0">
-                        <span className="font-bold text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950 px-2 py-0.5 rounded border border-amber-200 dark:border-amber-800 shrink-0">
+                      <div className="flex items-start gap-3">
+                        <span className="font-extrabold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950 px-2.5 py-1 rounded-md border border-amber-200 dark:border-amber-800 shrink-0">
                           #{idx + 1}
                         </span>
-                        <span className="font-bold text-slate-900 dark:text-slate-100 truncate">
-                          {card.term || '(Trống)'}
-                        </span>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 flex-1 min-w-0">
+                          {/* Term (Full Text Auto-wrap) */}
+                          <div className="space-y-1">
+                            <span className="text-[10px] font-bold text-warm-muted dark:text-slate-400 uppercase tracking-wider block">
+                              TERM
+                            </span>
+                            <div className="font-semibold text-slate-900 dark:text-slate-100 break-words whitespace-pre-wrap leading-relaxed">
+                              {card.term || '(Trống)'}
+                            </div>
+                          </div>
+
+                          {/* Definition (Full Text Auto-wrap) */}
+                          <div className="space-y-1">
+                            <span className="text-[10px] font-bold text-warm-muted dark:text-slate-400 uppercase tracking-wider block">
+                              DEFINITION
+                            </span>
+                            <div className="font-medium text-warm-slate dark:text-slate-300 break-words whitespace-pre-wrap leading-relaxed">
+                              {card.definition || '(Chưa có định nghĩa)'}
+                            </div>
+                          </div>
+                        </div>
                       </div>
 
-                      <div className="flex-1 min-w-0 text-warm-slate dark:text-slate-300 truncate">
-                        {card.definition || '(Chưa có định nghĩa)'}
-                      </div>
-
+                      {/* Field 3 Explanation if present */}
                       {card.explanation && (
-                        <div className="text-[11px] italic text-amber-800 dark:text-amber-300 shrink-0">
-                          💡 {card.explanation}
+                        <div className="p-2.5 rounded-xl bg-amber-50/90 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-amber-950 dark:text-amber-200 leading-relaxed text-xs break-words whitespace-pre-wrap">
+                          <span className="font-bold text-amber-900 dark:text-amber-300 block mb-0.5">
+                            💡 EXPLANATION (Giải thích chi tiết):
+                          </span>
+                          {card.explanation}
                         </div>
                       )}
                     </div>
@@ -282,7 +422,7 @@ export default function ImportModal({ isOpen, onClose, onImportData }) {
             </button>
 
             <button
-              disabled={parsedCards.length === 0}
+              disabled={parsedCards.length === 0 || isParsing}
               onClick={handleConfirmImport}
               className="px-6 py-2.5 rounded-full bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold shadow-xs active:scale-95 transition-all disabled:opacity-40 flex items-center gap-2"
             >
