@@ -9,7 +9,7 @@ import CreateSetView from './components/CreateSetView';
 import TestSetupModal from './components/TestSetupModal';
 import LofiAudioPlayer from './components/LofiAudioPlayer';
 import CustomModal from './components/CustomModal';
-import { QUIZ_MANIFEST, fetchQuizById, getUserProgress, getStarredQuestions, toggleStarQuestion, unstarQuizSet, clearAllStarredQuestions, getCustomQuizSets, syncCommunityQuizzes } from './data/quizDataLoader';
+import { QUIZ_MANIFEST, fetchQuizById, getUserProgress, getStarredQuestions, toggleStarQuestion, unstarQuizSet, clearAllStarredQuestions, getCustomQuizSets, getDeletedQuizIds, syncCommunityQuizzes } from './data/quizDataLoader';
 import { Sparkles, BookOpen, Layers, Star, Trash2, ArrowRight, BookMarked, Plus } from 'lucide-react';
 
 export default function App() {
@@ -26,16 +26,20 @@ export default function App() {
   const [progress, setProgress] = useState({});
   const [starredQuestions, setStarredQuestions] = useState([]);
   const [customQuizList, setCustomQuizList] = useState([]);
+  const [deletedQuizIds, setDeletedQuizIds] = useState([]);
   const [isStarredModalOpen, setIsStarredModalOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // Synchronize progress, community custom quizzes, and starred questions
+  // Synchronize progress, community custom quizzes, deleted quiz IDs, and starred questions
   useEffect(() => {
     const refreshData = () => {
       setProgress(getUserProgress());
       setStarredQuestions(getStarredQuestions());
+      setCustomQuizList(getCustomQuizSets());
+      setDeletedQuizIds(getDeletedQuizIds());
       syncCommunityQuizzes().then(sets => {
         setCustomQuizList(sets);
+        setDeletedQuizIds(getDeletedQuizIds());
       });
     };
 
@@ -45,6 +49,7 @@ export default function App() {
     const handleFocusRevalidate = () => {
       syncCommunityQuizzes().then(sets => {
         setCustomQuizList(sets);
+        setDeletedQuizIds(getDeletedQuizIds());
       });
     };
 
@@ -52,6 +57,7 @@ export default function App() {
       if (document.visibilityState === 'visible') {
         syncCommunityQuizzes().then(sets => {
           setCustomQuizList(sets);
+          setDeletedQuizIds(getDeletedQuizIds());
         });
       }
     };
@@ -69,8 +75,10 @@ export default function App() {
     };
   }, []);
 
-  // Combine static manifest + custom community created quizzes
-  const allQuizzes = [...customQuizList, ...QUIZ_MANIFEST];
+  // Combine static manifest + custom community created quizzes, excluding deleted quiz IDs
+  const rawQuizzes = [...customQuizList, ...QUIZ_MANIFEST];
+  const deletedSet = new Set(deletedQuizIds);
+  const allQuizzes = rawQuizzes.filter(q => !deletedSet.has(q.id));
 
   // Filter Categories list
   const categories = Array.from(new Set(allQuizzes.map(q => q.category)));
@@ -91,7 +99,10 @@ export default function App() {
     setStudyMode(null);
     setLoadedQuiz(null);
     setEditingQuizData(null);
-    syncCommunityQuizzes().then(sets => setCustomQuizList(sets));
+    syncCommunityQuizzes().then(sets => {
+      setCustomQuizList(sets);
+      setDeletedQuizIds(getDeletedQuizIds());
+    });
   }, []);
 
   // Instant zero-latency navigation handlers (RAM Cached < 0.1ms)
@@ -123,7 +134,10 @@ export default function App() {
     setInitialQuestionIndex(0);
     setStudyMode('DETAIL');
     setEditingQuizData(null);
-    syncCommunityQuizzes().then(sets => setCustomQuizList(sets));
+    syncCommunityQuizzes().then(sets => {
+      setCustomQuizList(sets);
+      setDeletedQuizIds(getDeletedQuizIds());
+    });
   }, []);
 
   // Edit Quiz Handler
@@ -138,7 +152,10 @@ export default function App() {
     setStudyMode(null);
     setLoadedQuiz(null);
     setEditingQuizData(null);
-    syncCommunityQuizzes().then(sets => setCustomQuizList(sets));
+    syncCommunityQuizzes().then(sets => {
+      setCustomQuizList(sets);
+      setDeletedQuizIds(getDeletedQuizIds());
+    });
   }, []);
 
   // Start Test from Setup Modal
@@ -155,7 +172,10 @@ export default function App() {
       setStudyMode(null);
       setLoadedQuiz(null);
       setEditingQuizData(null);
-      syncCommunityQuizzes().then(sets => setCustomQuizList(sets));
+      syncCommunityQuizzes().then(sets => {
+        setCustomQuizList(sets);
+        setDeletedQuizIds(getDeletedQuizIds());
+      });
     }
     setProgress(getUserProgress());
     setStarredQuestions(getStarredQuestions());

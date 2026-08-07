@@ -54,8 +54,9 @@ QUIZ_MANIFEST.forEach(manifestItem => {
   }
 });
 
-// LocalStorage Custom Quizzes Persistence
+// LocalStorage Persistence Keys
 const STORAGE_KEY_CUSTOM_QUIZZES = 'quizzlet_custom_quizzes_v1';
+const STORAGE_KEY_DELETED_QUIZZES = 'quizzlet_deleted_quiz_ids_v1';
 
 export function getCustomQuizSets() {
   try {
@@ -66,10 +67,25 @@ export function getCustomQuizSets() {
   }
 }
 
+export function getDeletedQuizIds() {
+  try {
+    const data = localStorage.getItem(STORAGE_KEY_DELETED_QUIZZES);
+    return data ? JSON.parse(data) : [];
+  } catch (e) {
+    return [];
+  }
+}
+
 // Initialize custom quizzes into memory cache
 const initialCustomSets = getCustomQuizSets();
 initialCustomSets.forEach(cSet => {
   normalizedQuizCache.set(cSet.id, cSet);
+});
+
+// Purge any deleted quizzes from RAM Cache on startup
+const initialDeletedIds = getDeletedQuizIds();
+initialDeletedIds.forEach(delId => {
+  normalizedQuizCache.delete(delId);
 });
 
 // SRS Card State Tracking (Synchronized Knowt Learning Engine)
@@ -125,7 +141,7 @@ export function calculateQuizProgressStats(quiz) {
   return { newCount, learningCount, almostCount, masteredCount, percentage };
 }
 
-// API-FIRST REAL-TIME COMMUNITY QUIZ SYNC WITH CACHE-BUSTING (KNOWT / QUIZLET PATTERN)
+// API-FIRST REAL-TIME COMMUNITY QUIZ & GLOBAL DELETION SYNC
 export async function syncCommunityQuizzes() {
   try {
     const cacheBusterUrl = `/api/quizzes?t=${Date.now()}`;
@@ -138,25 +154,34 @@ export async function syncCommunityQuizzes() {
     });
 
     if (res.ok) {
-      const serverCommunitySets = await res.json();
-      if (Array.isArray(serverCommunitySets)) {
-        // VPS Node.js Server is Single Source of Truth
-        serverCommunitySets.forEach(cSet => {
-          normalizedQuizCache.set(cSet.id, cSet);
-        });
+      const data = await res.json();
+      const serverCommunitySets = data.customQuizzes || [];
+      const serverDeletedIds = data.deletedQuizIds || [];
 
-        localStorage.setItem(STORAGE_KEY_CUSTOM_QUIZZES, JSON.stringify(serverCommunitySets));
+      // 1. Sync deleted IDs
+      localStorage.setItem(STORAGE_KEY_DELETED_QUIZZES, JSON.stringify(serverDeletedIds));
+      serverDeletedIds.forEach(delId => {
+        normalizedQuizCache.delete(delId);
+      });
 
-        if (typeof window !== 'undefined') {
-          window.dispatchEvent(new CustomEvent('quizzlet_custom_created', { detail: serverCommunitySets }));
-        }
-        return serverCommunitySets;
+      // 2. Sync active community quizzes
+      const activeSets = serverCommunitySets.filter(s => !serverDeletedIds.includes(s.id));
+      activeSets.forEach(cSet => {
+        normalizedQuizCache.set(cSet.id, cSet);
+      });
+
+      localStorage.setItem(STORAGE_KEY_CUSTOM_QUIZZES, JSON.stringify(activeSets));
+
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('quizzlet_custom_created', { detail: activeSets }));
       }
+      return activeSets;
     }
   } catch (e) {
     console.warn('Community sync offline fallback to LocalStorage');
   }
-  return getCustomQuizSets();
+  const deletedIds = getDeletedQuizIds();
+  return getCustomQuizSets().filter(s => !deletedIds.includes(s.id));
 }
 
 // Create Custom Quiz Set (Sync to Server VPS & Backup to GitHub)
@@ -296,22 +321,33 @@ export async function updateCustomQuizSet(quizId, password, { title, description
   return updatedSet;
 }
 
-// Delete Custom Quiz Set
+// Delete ANY Quiz Set Globally (Custom or System sets)
 export async function deleteCustomQuizSet(quizId, password) {
   const isPasswordValid = await verifyQuizPassword(quizId, password);
   if (!isPasswordValid) {
     return false;
   }
 
+  // Delete from RAM cache immediately
   normalizedQuizCache.delete(quizId);
 
+  // Track deleted ID locally
+  const currentDeleted = getDeletedQuizIds();
+  if (!currentDeleted.includes(quizId)) {
+    const updatedDeleted = [...currentDeleted, quizId];
+    localStorage.setItem(STORAGE_KEY_DELETED_QUIZZES, JSON.stringify(updatedDeleted));
+  }
+
   try {
-    await fetch('/api/quizzes/delete', {
+    const res = await fetch('/api/quizzes/delete', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ quizId, password })
     });
-    await syncCommunityQuizzes();
+
+    if (res.ok) {
+      await syncCommunityQuizzes();
+    }
   } catch (e) {
     console.warn('Delete API offline');
   }
