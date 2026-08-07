@@ -65,14 +65,14 @@ Tài liệu này lưu trữ toàn bộ lịch sử phát hiện lỗi, kiến tr
   - Mô tả: *"Ghi nhớ Flashcard 3D, luyện tập trắc nghiệm thông minh, kết hợp nhạc Lofi thư giãn giúp tăng 200% độ tập trung."*
   - Gradient sáng: `from-amber-50 via-rose-50 to-orange-50`.
   - Gradient tối: `dark:from-slate-900 dark:via-indigo-950/50 dark:to-slate-900`.
-- **Nâng cấp Widget Âm Nhạc / Chill Space 3-Tab (`LofiAudioPlayer.jsx`)**:
-  - Đặt cố định góc dưới bên phải màn hình (Bottom-Right), hỗ trợ Glassmorphic & Dark mode.
-  - Tab 1: **Âm thanh thiên nhiên (Ambient Sounds)** (Mưa rơi, Cà phê, Sóng biển, Lofi Piano với thanh chỉnh volume).
-  - Tab 2: **Music Stream (Spotify Lounge & YouTube Lofi)**:
-    - **Sub-tab Spotify Lounge**: Tích hợp sẵn Playlist cá nhân của người dùng Hàn Như (*💖 Myy Happyyy* `43OQrrLcyzbUR1oL0r2RZO`), cùng các playlist tập trung (*Deep Focus*, *Lofi Beats*, *Peaceful Piano*). Hỗ trợ ô dán link/URI Spotify tự động parse và nút *"Mở App Spotify Cá Nhân"*.
-    - **Sub-tab YouTube Lofi**: Hỗ trợ ô dán bất kỳ đường dẫn YouTube Lofi nào (tự động dùng Regex parse Video ID qua `extractYouTubeId`) + 3 nút chọn nhanh Lofi Girl Live, Chillhop Radio, Synthwave Chill.
-    - Lưu trạng thái link YouTube và Spotify bằng LocalStorage (`quizzlet_last_youtube_id`, `quizzlet_last_spotify_url`).
-  - Tab 3: **Pomodoro Timer** (Đồng hồ 25m học / 5m nghỉ có âm thanh thông báo).
+### 🎧 5. Tái Cấu Trúc Chill Widget Theo Phong Cách LifeAt & imissmycafe
+- **Giải quyết dứt điểm lỗi dừng nhạc khi thu nhỏ (DOM Retention)**: 
+  - Thay vì unmount React tree khi thu nhỏ, giữ lại `<audio>` và `<iframe>` liên tục trong DOM bằng CSS transition/visibility. Nhạc và livestream vẫn phát mượt mà ở background kể cả khi thu nhỏ widget.
+- **Mở rộng Spotify Player lên 352px chuẩn**:
+  - Đưa chiều cao Iframe Spotify từ 152px lên **352px** chuẩn theo template imissmycafe. Hiển thị đầy đủ ảnh bìa album, controls, thanh tiến trình và danh sách phát cuộn dọc (*💖 Myy Happyyy* `43OQrrLcyzbUR1oL0r2RZO`), loại bỏ hoàn toàn lỗi chìm chữ/ép khung/Page Not Found.
+- **Floating Dock & Pomodoro Timer kiểu LifeAt**:
+  - Thanh công cụ nổi LifeAt Floating Dock với các icon rõ nét (`Âm thanh`, `Media Stream`, `Pomodoro`).
+  - Đồng hồ Pomodoro 3 chế độ (*Học 25m*, *Nghỉ 5m*, *Nghỉ dài 15m*) font chữ số điện tử cực nét `text-[5xl] font-mono`.
 
 ---
 
