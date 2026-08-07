@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Lock, X, AlertCircle } from 'lucide-react';
 
@@ -7,7 +7,23 @@ export default function PasswordModal({ isOpen, onClose, onConfirm, actionType =
   const [errorMsg, setErrorMsg] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Automatically reset input state and error whenever modal opens or closes
+  useEffect(() => {
+    if (isOpen) {
+      setPassword('');
+      setErrorMsg('');
+      setIsSubmitting(false);
+    }
+  }, [isOpen]);
+
   if (!isOpen) return null;
+
+  const handleCloseModal = () => {
+    setPassword('');
+    setErrorMsg('');
+    setIsSubmitting(false);
+    onClose();
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -44,7 +60,7 @@ export default function PasswordModal({ isOpen, onClose, onConfirm, actionType =
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          onClick={onClose}
+          onClick={handleCloseModal}
           className="fixed inset-0 bg-slate-900/50 backdrop-blur-xs"
         />
 
@@ -57,7 +73,7 @@ export default function PasswordModal({ isOpen, onClose, onConfirm, actionType =
         >
           {/* Close button */}
           <button
-            onClick={onClose}
+            onClick={handleCloseModal}
             className="absolute top-4 right-4 p-1.5 rounded-full hover:bg-warm-hover dark:hover:bg-slate-800 text-warm-muted dark:text-slate-400 hover:text-warm-text transition-colors"
           >
             <X className="w-4 h-4" />
@@ -98,7 +114,7 @@ export default function PasswordModal({ isOpen, onClose, onConfirm, actionType =
             <div className="flex items-center gap-2 pt-2">
               <button
                 type="button"
-                onClick={onClose}
+                onClick={handleCloseModal}
                 className="flex-1 py-2.5 rounded-full border border-warm-border dark:border-slate-700 text-xs font-bold text-warm-text dark:text-slate-300 hover:bg-warm-hover dark:hover:bg-slate-800 transition-colors"
               >
                 Hủy bỏ
