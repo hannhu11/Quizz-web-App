@@ -35,21 +35,25 @@ QUIZ_MANIFEST.forEach(manifestItem => {
   }
 
   if (rawData) {
+    const rawQuestions = rawData.questionsList || rawData.questions || [];
     const normalized = {
       ...manifestItem,
       rawId: rawData.id,
       originalName: rawData.name,
-      questions: (rawData.questionsList || []).map((q, idx) => ({
-        id: q.id || idx + 1,
-        questionIndex: idx,
-        content: q.content || 'Câu hỏi không có nội dung',
-        explanation: q.explanation || '',
-        answers: (q.answersList || []).map((a, aIdx) => ({
-          id: a.id || aIdx + 1,
-          content: a.content || '',
-          isCorrect: Boolean(a.is_correct),
-        }))
-      }))
+      questions: rawQuestions.map((q, idx) => {
+        const rawAnswers = q.answersList || q.answers || [];
+        return {
+          id: q.id || idx + 1,
+          questionIndex: idx,
+          content: q.content || 'Câu hỏi không có nội dung',
+          explanation: q.explanation || '',
+          answers: rawAnswers.map((a, aIdx) => ({
+            id: a.id || aIdx + 1,
+            content: a.content || '',
+            isCorrect: a.isCorrect !== undefined ? Boolean(a.isCorrect) : Boolean(a.is_correct),
+          }))
+        };
+      })
     };
     normalizedQuizCache.set(manifestItem.id, normalized);
   }
