@@ -114,6 +114,27 @@ Trước khi commit, luôn đảm bảo các file nhạy cảm không bị push 
 ### 🪟 6. Refactor Chill Space Độc Lập (Floating Widgets - LifeAt Style)
 - Tách `LofiAudioPlayer.jsx` thành kiến trúc 4 file: `ChillDock.jsx`, `AmbientSoundWidget.jsx`, `MediaStreamWidget.jsx`, `PomodoroWidget.jsx` bên trong thư mục `src/components/chill/`.
 - Xóa bỏ tất cả các Emoji rẻ tiền (🇻🇳, ☕, 🧠, 🌧️) và sử dụng hoàn toàn SVG của thư viện **Lucide-React** để mang lại UI/UX chuẩn, sang trọng. 
-- Giữ nguyên trạng thái Audio & Iframe (DOM retention) bằng CSS classes `opacity-0 scale-95 pointer-events-none` thay vì unmount Component.
-- Tích hợp `framer-motion` cho phép kéo thả (drag) các widget tự do trên màn hình.
-- Các widgets hỗ trợ Dark/Light Theme hoàn hảo (dùng `bg-white/90 dark:bg-slate-900/90` backdrop blur glassmorphism).
+- Giữ nguyên trạng thái Audio & Iframe (DOM retention) bằng CSS `display: flex / none` thay vì unmount Component hoặc dùng `-top-[9999px]`.
+- Tích hợp `framer-motion` cho phép kéo thả (drag) các widget tự do trên màn hình (loại bỏ thuộc tính `layout` để chống giật/rung).
+- Các widgets hỗ trợ Dark/Light Theme hoàn hảo (dùng `bg-white/95 dark:bg-slate-900/95` backdrop blur glassmorphism).
+
+---
+
+## 5. Quy Tắc Bắt Buộc 3 Thành Phần Cho Tất Cả Dữ Liệu JSON (Strict System Rule)
+
+Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashcard JSON được khởi tạo, cào về hoặc gửi xuống hệ thống **BẮT BUỘC** phải tuân thủ nghiêm ngặt **Quy tắc 3 Thành Phần**:
+
+1. **Câu hỏi & Các Lựa chọn (Question & Options):**
+   - Trường `content`: Chứa nội dung câu hỏi đầy đủ.
+   - Mảng `answers`: Danh sách các lựa chọn trắc nghiệm, mỗi lựa chọn gồm `id`, `content`, và `isCorrect` (boolean).
+2. **Đáp án đúng (Correct Answer):**
+   - Phải gán `isCorrect: true` chính xác cho đáp án chuẩn.
+3. **Giải thích chi tiết (Detailed Explanation):**
+   - Trường `explanation` **KHÔNG ĐƯỢC** chỉ ghi đơn thuần "Đáp án đúng là A/B/C/D" hoặc "Đáp án đúng: A".
+   - **BẮT BUỘC** phải chứa đoạn văn giải thích bối cảnh lịch sử/chuyên môn, mốc thời gian, ý nghĩa nghị quyết/sự kiện hoặc cơ sở lý luận chi tiết giải thích TẠI SAO đáp án đó lại đúng.
+
+### 📚 Cập Nhật Bộ Đề VNR202 (Lịch Sử Đảng Cộng Sản Việt Nam):
+- Đã bổ sung nội dung giải thích chuyên môn chi tiết cho TOÀN BỘ 420 câu hỏi môn VNR202.
+- Đã lưu file dữ liệu nén `VNR202 - FE - QuizApp.json` vào `quiz-app-main/quizzes/current/`.
+- Đã khai báo VNR202 vào `QUIZ_MANIFEST` trong `quiz-web-react/src/data/quizDataLoader.js`.
+

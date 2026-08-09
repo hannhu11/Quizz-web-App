@@ -4,6 +4,7 @@
 const quizFiles = import.meta.glob('../../../quiz-app-main/quizzes/current/*.json', { eager: true });
 
 export const QUIZ_MANIFEST = [
+  { id: 'vnr202-fe', filename: 'VNR202 - FE - QuizApp.json', title: 'VNR202 - Lịch Sử Đảng Cộng Sản Việt Nam (420 Câu)', subject: 'Lịch Sử Đảng', category: 'VNR202', color: 'from-rose-100 to-red-100', icon: 'BookOpen' },
   { id: 'mln111-1000', filename: 'MLN111 - 1000+ - QuizApp.json', title: 'MLN111 - 1000+ Câu Hỏi Tổng Hợp', subject: 'Triết Học Mác - Lênin', category: 'MLN111', color: 'from-amber-100 to-orange-100', icon: 'BookOpen' },
   { id: 'mln111-fe', filename: 'MLN111 - FE - QuizApp.json', title: 'MLN111 - Ôn Thi Final Exam', subject: 'Triết Học Mác - Lênin', category: 'MLN111', color: 'from-amber-100 to-yellow-100', icon: 'Award' },
   { id: 'mln122-batquytac', filename: 'MLN122 - FE - Bất quy tắc - QuizApp.json', title: 'MLN122 - Mẹo & Bất Quy Tắc', subject: 'Kinh Tế Chính Trị', category: 'MLN122', color: 'from-emerald-100 to-teal-100', icon: 'Sparkles' },

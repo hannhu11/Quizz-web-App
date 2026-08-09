@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Video, ExternalLink, Link2, X, Minimize2, Radio } from 'lucide-react';
+import { motion, useDragControls } from 'framer-motion';
+import { Video, ExternalLink, Link2, X, Minimize2, Radio, Square } from 'lucide-react';
 
 function extractYouTubeId(url) {
   if (!url) return null;
@@ -33,18 +33,16 @@ const YOUTUBE_PRESETS = [
   { name: 'Synthwave Chill', id: '4xDzrJKXOOY' },
 ];
 
-export default function MediaStreamWidget({ isExpanded, onClose, onToggleExpand, onStatusChange }) {
+export default function MediaStreamWidget({ isExpanded, onClose, onToggleExpand, onStatusChange, constraintsRef }) {
+  const dragControls = useDragControls();
   const [streamSubTab, setStreamSubTab] = useState('SPOTIFY');
-  
   const [activeSpotifyEmbedUrl, setActiveSpotifyEmbedUrl] = useState(() => {
     return localStorage.getItem('quizzlet_last_spotify_url') || SPOTIFY_PRESETS[0].uri;
   });
   const [activeSpotifyPresetName, setActiveSpotifyPresetName] = useState('Myy Happyyy');
-  
   const [activeYoutubeId, setActiveYoutubeId] = useState(() => {
     return localStorage.getItem('quizzlet_last_youtube_id') || YOUTUBE_PRESETS[0].id;
   });
-  
   const [spotifyInput, setSpotifyInput] = useState('');
   const [youtubeInput, setYoutubeInput] = useState('');
 
@@ -85,48 +83,48 @@ export default function MediaStreamWidget({ isExpanded, onClose, onToggleExpand,
     }
   };
 
-  const spotifyContainerStyle = {
-    position: streamSubTab === 'SPOTIFY' ? 'relative' : 'absolute',
-    visibility: streamSubTab === 'SPOTIFY' ? 'visible' : 'hidden',
-    height: streamSubTab === 'SPOTIFY' ? 'auto' : '0',
-    overflow: 'hidden'
-  };
-
-  const youtubeContainerStyle = {
-    position: streamSubTab === 'YOUTUBE' ? 'relative' : 'absolute',
-    visibility: streamSubTab === 'YOUTUBE' ? 'visible' : 'hidden',
-    height: streamSubTab === 'YOUTUBE' ? 'auto' : '0',
-    overflow: 'hidden'
-  };
-
   return (
     <motion.div
-      initial={false}
-      animate={{
-        opacity: isExpanded ? 1 : 0,
-        scale: isExpanded ? 1 : 0.95,
+      style={{
+        display: isExpanded ? 'flex' : 'none'
       }}
-      className={`fixed z-40 w-96 right-6 bottom-24 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border border-slate-200/60 dark:border-slate-700/60 rounded-2xl shadow-xl text-slate-800 dark:text-slate-100 transition-all duration-200 ${
-        !isExpanded ? 'opacity-0 scale-95 pointer-events-none absolute -z-10 overflow-hidden h-0 w-0' : ''
-      }`}
+      className="fixed bottom-20 right-4 sm:right-6 z-[41] w-80 sm:w-96 max-w-[calc(100vw-2rem)] bg-white/95 dark:bg-slate-900/95 backdrop-blur-2xl border border-slate-200/80 dark:border-slate-700/80 shadow-2xl rounded-2xl text-slate-800 dark:text-slate-100 flex-col"
+      drag
+      dragMomentum={false}
+      dragConstraints={constraintsRef}
+      dragListener={false}
+      dragControls={dragControls}
     >
-      <div className="flex items-center justify-between p-3 bg-slate-50/80 dark:bg-slate-800/80 border-b border-slate-200/60 dark:border-slate-700/60">
+      <div 
+        onPointerDown={(e) => dragControls.start(e)}
+        style={{ touchAction: 'none' }}
+        className="flex items-center justify-between p-3 bg-slate-50/90 dark:bg-slate-800/90 border-b border-slate-200/80 dark:border-slate-700/80 cursor-move rounded-t-2xl shrink-0"
+      >
         <div className="flex items-center gap-2">
           <Radio className="w-5 h-5 text-indigo-500" />
-          <h3 className="font-semibold">Media Stream</h3>
+          <h3 className="font-bold text-sm">Media Stream</h3>
         </div>
         <div className="flex items-center gap-1">
           <button 
             onClick={onToggleExpand}
             className="p-1.5 rounded-lg text-slate-500 hover:bg-slate-200/60 dark:text-slate-400 dark:hover:bg-slate-700/60 cursor-pointer transition-all duration-200"
+            title="Thu nhỏ"
           >
             <Minimize2 className="w-4 h-4" />
           </button>
           <button 
-            onClick={onClose}
-            className="p-1.5 rounded-lg text-slate-500 hover:bg-red-100 hover:text-red-600 dark:text-slate-400 dark:hover:bg-red-500/20 dark:hover:text-red-400 cursor-pointer transition-all duration-200"
+            onClick={onToggleExpand}
+            className="p-1.5 rounded-lg text-slate-500 hover:bg-slate-200/60 dark:text-slate-400 dark:hover:bg-slate-700/60 cursor-pointer transition-all duration-200"
+            title="Thu nhỏ xuống thanh trạng thái"
           >
             <X className="w-4 h-4" />
+          </button>
+          <button 
+            onClick={onClose}
+            className="p-1.5 rounded-lg text-slate-500 hover:bg-rose-100 hover:text-rose-600 dark:text-slate-400 dark:hover:bg-rose-950 dark:hover:text-rose-400 cursor-pointer transition-all duration-200"
+            title="Dừng phát hoàn toàn"
+          >
+            <Square className="w-4 h-4 fill-current" />
           </button>
         </div>
       </div>
@@ -135,9 +133,9 @@ export default function MediaStreamWidget({ isExpanded, onClose, onToggleExpand,
         <div className="flex gap-1 p-1 bg-slate-100/80 dark:bg-slate-800/80 rounded-xl border border-slate-200/60 dark:border-slate-700/60 mb-4">
           <button
             onClick={() => setStreamSubTab('SPOTIFY')}
-            className={`flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg text-sm cursor-pointer transition-all duration-200 ${
+            className={`flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg text-xs font-bold cursor-pointer transition-all duration-200 ${
               streamSubTab === 'SPOTIFY'
-                ? 'bg-[#1DB954] text-white font-bold shadow-sm'
+                ? 'bg-[#1DB954] text-white shadow-sm'
                 : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-white/60 dark:hover:bg-slate-700/60'
             }`}
           >
@@ -148,9 +146,9 @@ export default function MediaStreamWidget({ isExpanded, onClose, onToggleExpand,
           </button>
           <button
             onClick={() => setStreamSubTab('YOUTUBE')}
-            className={`flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg text-sm cursor-pointer transition-all duration-200 ${
+            className={`flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-lg text-xs font-bold cursor-pointer transition-all duration-200 ${
               streamSubTab === 'YOUTUBE'
-                ? 'bg-red-600 text-white font-bold shadow-sm'
+                ? 'bg-red-600 text-white shadow-sm'
                 : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-white/60 dark:hover:bg-slate-700/60'
             }`}
           >
@@ -159,7 +157,8 @@ export default function MediaStreamWidget({ isExpanded, onClose, onToggleExpand,
           </button>
         </div>
 
-        <div style={spotifyContainerStyle} className="flex flex-col gap-3">
+        {/* Spotify Section */}
+        <div className={streamSubTab === 'SPOTIFY' ? 'flex flex-col gap-3' : 'hidden'}>
           <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
             {SPOTIFY_PRESETS.map((preset) => (
               <button
@@ -168,7 +167,7 @@ export default function MediaStreamWidget({ isExpanded, onClose, onToggleExpand,
                   setActiveSpotifyEmbedUrl(preset.uri);
                   setActiveSpotifyPresetName(preset.name);
                 }}
-                className={`whitespace-nowrap px-3 py-1.5 rounded-xl text-sm border cursor-pointer transition-all duration-200 ${
+                className={`whitespace-nowrap px-3 py-1.5 rounded-xl text-xs border cursor-pointer transition-all duration-200 ${
                   activeSpotifyEmbedUrl === preset.uri
                     ? 'bg-[#1DB954]/15 text-[#1DB954] border-[#1DB954]/30 font-bold'
                     : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700'
@@ -198,12 +197,12 @@ export default function MediaStreamWidget({ isExpanded, onClose, onToggleExpand,
                 value={spotifyInput}
                 onChange={(e) => setSpotifyInput(e.target.value)}
                 placeholder="Spotify URL..."
-                className="w-full pl-9 pr-3 py-2 bg-slate-100/80 dark:bg-slate-800/80 border border-slate-200/60 dark:border-slate-700/60 rounded-xl text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1DB954]/50"
+                className="w-full pl-9 pr-3 py-2 bg-slate-100/80 dark:bg-slate-800/80 border border-slate-200/60 dark:border-slate-700/60 rounded-xl text-xs placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1DB954]/50"
               />
             </div>
             <button
               type="submit"
-              className="px-4 py-2 bg-[#1DB954] hover:bg-[#1ed760] text-white rounded-xl font-bold text-sm cursor-pointer transition-all duration-200"
+              className="px-4 py-2 bg-[#1DB954] hover:bg-[#1ed760] text-white rounded-xl font-bold text-xs cursor-pointer transition-all duration-200"
             >
               Phát
             </button>
@@ -213,20 +212,21 @@ export default function MediaStreamWidget({ isExpanded, onClose, onToggleExpand,
             href="https://open.spotify.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 w-full py-2 bg-slate-100/80 dark:bg-slate-800/80 border border-slate-200/60 dark:border-slate-700/60 text-[#1DB954] hover:bg-[#1DB954]/10 rounded-xl text-sm font-semibold cursor-pointer transition-all duration-200"
+            className="flex items-center justify-center gap-2 w-full py-2 bg-slate-100/80 dark:bg-slate-800/80 border border-slate-200/60 dark:border-slate-700/60 text-[#1DB954] hover:bg-[#1DB954]/10 rounded-xl text-xs font-semibold cursor-pointer transition-all duration-200"
           >
             Mở Spotify
             <ExternalLink className="w-4 h-4" />
           </a>
         </div>
 
-        <div style={youtubeContainerStyle} className="flex flex-col gap-3">
+        {/* YouTube Section */}
+        <div className={streamSubTab === 'YOUTUBE' ? 'flex flex-col gap-3' : 'hidden'}>
           <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
             {YOUTUBE_PRESETS.map((preset) => (
               <button
                 key={preset.id}
                 onClick={() => setActiveYoutubeId(preset.id)}
-                className={`whitespace-nowrap px-3 py-1.5 rounded-xl text-sm border cursor-pointer transition-all duration-200 ${
+                className={`whitespace-nowrap px-3 py-1.5 rounded-xl text-xs border cursor-pointer transition-all duration-200 ${
                   activeYoutubeId === preset.id
                     ? 'bg-red-600/15 text-red-600 border-red-600/30 font-bold'
                     : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700'
@@ -255,12 +255,12 @@ export default function MediaStreamWidget({ isExpanded, onClose, onToggleExpand,
                 value={youtubeInput}
                 onChange={(e) => setYoutubeInput(e.target.value)}
                 placeholder="YouTube URL..."
-                className="w-full pl-9 pr-3 py-2 bg-slate-100/80 dark:bg-slate-800/80 border border-slate-200/60 dark:border-slate-700/60 rounded-xl text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500/50"
+                className="w-full pl-9 pr-3 py-2 bg-slate-100/80 dark:bg-slate-800/80 border border-slate-200/60 dark:border-slate-700/60 rounded-xl text-xs placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500/50"
               />
             </div>
             <button
               type="submit"
-              className="px-4 py-2 bg-red-600 hover:bg-red-500 text-white rounded-xl font-bold text-sm cursor-pointer transition-all duration-200"
+              className="px-4 py-2 bg-red-600 hover:bg-red-500 text-white rounded-xl font-bold text-xs cursor-pointer transition-all duration-200"
             >
               Phát
             </button>
