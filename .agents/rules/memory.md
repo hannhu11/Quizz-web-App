@@ -144,5 +144,10 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   6. `VNR202 - Lịch Sử Đảng Cộng Sản Việt Nam` (420 câu): Giải thích các bối cảnh lịch sử, mốc thời gian, Nghị quyết Trung ương, các kỳ Đại hội Đảng và Chiến dịch lịch sử.
 - **Lưu file & Cập nhật Manifest:** Đã lưu 6 file JSON chuẩn vào `quiz-app-main/quizzes/current/`, khai báo đầy đủ trong `QUIZ_MANIFEST` (`quizDataLoader.js`), build và deploy lên VPS `140.245.119.189`.
 
+### 🗑️ Gỡ Bỏ Các Bộ Đề Cũ Không Còn Sử Dụng (Dọn Dẹp Danh Mục):
+- Theo yêu cầu của người dùng, đã loại bỏ toàn bộ các bộ đề cũ đã học xong hoặc không học khỏi `QUIZ_MANIFEST`: `MLN111`, `MLN122`, `PMG201c`, `PRM393`, `SBA301`, `SWD392`, `SYB302c`.
+- **Danh mục hiện tại (6 môn đang học):** `VNR202`, `HCM202`, `MLN131`, `ENW493c`, `WDU202c`, `AID301c`.
+
+
 
 

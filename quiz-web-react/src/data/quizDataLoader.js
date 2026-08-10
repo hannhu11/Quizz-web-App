@@ -10,21 +10,6 @@ export const QUIZ_MANIFEST = [
   { id: 'enw493c-flashcard', filename: 'ENW493c - Flashcard - QuizApp.json', title: 'ENW493c - Academic Writing (90 Câu)', subject: 'Tiếng Anh Chuyên Ngành', category: 'ENW493c', color: 'from-blue-100 to-indigo-100', icon: 'BookOpen' },
   { id: 'wdu202c-flashcard', filename: 'WDU202c - Flashcard - QuizApp.json', title: 'WDU202c - Web Design & UI/UX (200 Câu)', subject: 'Thiết Kế Web & UI/UX', category: 'WDU202c', color: 'from-purple-100 to-pink-100', icon: 'Layout' },
   { id: 'aid301c-flashcard', filename: 'AID301c - Flashcard - QuizApp.json', title: 'AID301c - Artificial Intelligence Applications (100 Câu)', subject: 'Trí Tuệ Nhân Tạo', category: 'AID301c', color: 'from-emerald-100 to-teal-100', icon: 'Cpu' },
-  { id: 'mln111-1000', filename: 'MLN111 - 1000+ - QuizApp.json', title: 'MLN111 - 1000+ Câu Hỏi Tổng Hợp', subject: 'Triết Học Mác - Lênin', category: 'MLN111', color: 'from-amber-100 to-orange-100', icon: 'BookOpen' },
-  { id: 'mln111-fe', filename: 'MLN111 - FE - QuizApp.json', title: 'MLN111 - Ôn Thi Final Exam', subject: 'Triết Học Mác - Lênin', category: 'MLN111', color: 'from-amber-100 to-yellow-100', icon: 'Award' },
-  { id: 'mln122-batquytac', filename: 'MLN122 - FE - Bất quy tắc - QuizApp.json', title: 'MLN122 - Mẹo & Bất Quy Tắc', subject: 'Kinh Tế Chính Trị', category: 'MLN122', color: 'from-emerald-100 to-teal-100', icon: 'Sparkles' },
-  { id: 'mln122-cachmang', filename: 'MLN122 - FE - Cách mạng - QuizApp.json', title: 'MLN122 - Chuyên Đề Cách Mạng', subject: 'Kinh Tế Chính Trị', category: 'MLN122', color: 'from-emerald-100 to-green-100', icon: 'Flame' },
-  { id: 'mln122-dainhat', filename: 'MLN122 - FE - Dài nhất - QuizApp.json', title: 'MLN122 - Các Câu Đáp Án Dài Nhất', subject: 'Kinh Tế Chính Trị', category: 'MLN122', color: 'from-teal-100 to-cyan-100', icon: 'FileText' },
-  { id: 'mln122-fe', filename: 'MLN122 - FE - QuizApp.json', title: 'MLN122 - Ôn Thi Final Exam', subject: 'Kinh Tế Chính Trị', category: 'MLN122', color: 'from-emerald-100 to-lime-100', icon: 'GraduationCap' },
-  { id: 'mln122-tacgia', filename: 'MLN122 - FE - Tác giả - QuizApp.json', title: 'MLN122 - Chuyên Đề Tác Giả', subject: 'Kinh Tế Chính Trị', category: 'MLN122', color: 'from-cyan-100 to-blue-100', icon: 'UserCheck' },
-  { id: 'mln122-daihoi', filename: 'MLN122 - FE - Đại hội - QuizApp.json', title: 'MLN122 - Chuyên Đề Các Kỳ Đại Hội', subject: 'Kinh Tế Chính Trị', category: 'MLN122', color: 'from-sky-100 to-indigo-100', icon: 'Bookmark' },
-  { id: 'pmg201c', filename: 'PMG201c - QuizApp.json', title: 'PMG201c - Project Management', subject: 'Quản Lý Dự Án', category: 'PMG201c', color: 'from-purple-100 to-indigo-100', icon: 'Briefcase' },
-  { id: 'prm393-fe', filename: 'PRM393 - FE - QuizApp.json', title: 'PRM393 - Ôn Thi Final Exam', subject: 'Lập Trình Di Động', category: 'PRM393', color: 'from-indigo-100 to-violet-100', icon: 'Smartphone' },
-  { id: 'prm393-flutter', filename: 'PRM393 - Flutter MCQ - QuizApp.json', title: 'PRM393 - Flutter MCQ Master', subject: 'Lập Trình Di Động', category: 'PRM393', color: 'from-violet-100 to-purple-100', icon: 'Code' },
-  { id: 'prm393-pt1', filename: 'PRM393 - PT1 - QuizApp.json', title: 'PRM393 - Progress Test 1', subject: 'Lập Trình Di Động', category: 'PRM393', color: 'from-purple-100 to-pink-100', icon: 'CheckCircle2' },
-  { id: 'sba301', filename: 'SBA301 - QuizApp.json', title: 'SBA301 - Small Business Administration', subject: 'Quản Trị Doanh Nghiệp', category: 'SBA301', color: 'from-rose-100 to-pink-100', icon: 'Building2' },
-  { id: 'swd392', filename: 'SWD392 - QuizApp.json', title: 'SWD392 - Software Architecture', subject: 'Kiến Trúc Phần Mềm', category: 'SWD392', color: 'from-blue-100 to-cyan-100', icon: 'Layers' },
-  { id: 'syb302c', filename: 'SYB302c - QuizApp.json', title: 'SYB302c - Start Your Business', subject: 'Khởi Nghiệp Kinh Doanh', category: 'SYB302c', color: 'from-amber-100 to-rose-100', icon: 'Rocket' },
 ];
 
 // PRE-COMPUTE AND MEMOIZE ALL QUIZZES ON INITIAL LOAD
