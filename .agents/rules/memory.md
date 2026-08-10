@@ -133,11 +133,16 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
    - Trường `explanation` **KHÔNG ĐƯỢC** chỉ ghi đơn thuần "Đáp án đúng là A/B/C/D" hoặc "Đáp án đúng: A".
    - **BẮT BUỘC** phải chứa đoạn văn giải thích bối cảnh lịch sử/chuyên môn, mốc thời gian, ý nghĩa nghị quyết/sự kiện hoặc cơ sở lý luận chi tiết giải thích TẠI SAO đáp án đó lại đúng.
 
-### 📚 Cập Nhật Bộ Đề VNR202 & Sửa Lỗi Schema Normalization (Fault-Tolerant Loader):
-- **Phát hiện lỗi mất Option & "Chưa có đáp án":** `VNR202_QuizApp.json` dùng key `answers` (camelCase) và `isCorrect` (boolean camelCase), trong khi loader cũ chỉ đọc `answersList` (snake_case) và `is_correct`. Do đó mảng đáp án bị xóa sạch (`answers = []`).
-- **Khắc phục triệt để:** Đã nâng cấp `quizDataLoader.js` hỗ trợ Multi-Schema đọc linh hoạt cả `questionsList` / `questions`, `answersList` / `answers` và `isCorrect` / `is_correct`.
-- **Kết quả:** Hiển thị 100% đầy đủ các lựa chọn A, B, C, D, Đáp án đúng chuẩn xác và Khung giải thích chi tiết cho toàn bộ 420 câu hỏi VNR202.
-- Đã lưu file `VNR202 - FE - QuizApp.json` vào `quiz-app-main/quizzes/current/`.
-- Đã khai báo VNR202 vào `QUIZ_MANIFEST` trong `quiz-web-react/src/data/quizDataLoader.js`.
+### 📚 Cập Nhật 6 Bộ Đề Flashcard Crawl & Quy Tắc Xóa Watermark Thương Hiệu:
+- **Xóa bỏ 100% Watermark Thương hiệu:** Đã tự động lọc sạch các chuỗi đóng dấu thương hiệu bên thứ ba như `(Trích xuất từ Flashcard FBOX ...)` trong toàn bộ nội dung giải thích.
+- **Bổ sung Lời giải thích chuyên môn sâu cho 6 bộ đề (Tổng cộng 1,470 câu):**
+  1. `ENW493c - Academic Writing` (90 câu): Giải thích cấu trúc đoạn văn, Thesis Statement, Topic Sentence, Citation APA/MLA, Cohesion, Paraphrasing.
+  2. `WDU202c - Web Design & UI/UX` (200 câu): Giải thích HTML5 Semantic, CSS Flexbox/Grid, Responsive Design, UI Contrast/Typography, UX Wireframe/Prototype.
+  3. `MLN131 - Chủ Nghĩa Xã Hội Khoa Học` (360 câu): Giải thích Sứ mệnh giai cấp công nhân, Thời kỳ quá độ, Dân chủ & Nhà nước XHCN, Vấn đề dân tộc, tôn giáo, gia đình.
+  4. `AID301c - Artificial Intelligence Applications` (100 câu): Giải thích Search Algorithms, Heuristics, Supervised/Unsupervised Learning, Neural Networks, Deep Learning, NLP.
+  5. `HCM202 - Tư Tưởng Hồ Chí Minh` (300 câu): Giải thích Cơ sở hình thành TTHCM, Độc lập dân tộc gắn liền với CNXH, Đảng & Nhà nước của dân, Đại đoàn kết, Đạo đức cách mạng.
+  6. `VNR202 - Lịch Sử Đảng Cộng Sản Việt Nam` (420 câu): Giải thích các bối cảnh lịch sử, mốc thời gian, Nghị quyết Trung ương, các kỳ Đại hội Đảng và Chiến dịch lịch sử.
+- **Lưu file & Cập nhật Manifest:** Đã lưu 6 file JSON chuẩn vào `quiz-app-main/quizzes/current/`, khai báo đầy đủ trong `QUIZ_MANIFEST` (`quizDataLoader.js`), build và deploy lên VPS `140.245.119.189`.
+
 
 

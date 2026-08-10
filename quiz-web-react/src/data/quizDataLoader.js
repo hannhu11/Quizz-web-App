@@ -5,6 +5,11 @@ const quizFiles = import.meta.glob('../../../quiz-app-main/quizzes/current/*.jso
 
 export const QUIZ_MANIFEST = [
   { id: 'vnr202-fe', filename: 'VNR202 - FE - QuizApp.json', title: 'VNR202 - Lịch Sử Đảng Cộng Sản Việt Nam (420 Câu)', subject: 'Lịch Sử Đảng', category: 'VNR202', color: 'from-rose-100 to-red-100', icon: 'BookOpen' },
+  { id: 'hcm202-flashcard', filename: 'HCM202 - Flashcard - QuizApp.json', title: 'HCM202 - Tư Tưởng Hồ Chí Minh (300 Câu)', subject: 'Tư Tưởng Hồ Chí Minh', category: 'HCM202', color: 'from-rose-100 to-orange-100', icon: 'Award' },
+  { id: 'mln131-flashcard', filename: 'MLN131 - Flashcard - QuizApp.json', title: 'MLN131 - Chủ Nghĩa Xã Hội Khoa Học (360 Câu)', subject: 'Chủ Nghĩa Xã Hội Khoa Học', category: 'MLN131', color: 'from-amber-100 to-orange-100', icon: 'BookOpen' },
+  { id: 'enw493c-flashcard', filename: 'ENW493c - Flashcard - QuizApp.json', title: 'ENW493c - Academic Writing (90 Câu)', subject: 'Tiếng Anh Chuyên Ngành', category: 'ENW493c', color: 'from-blue-100 to-indigo-100', icon: 'BookOpen' },
+  { id: 'wdu202c-flashcard', filename: 'WDU202c - Flashcard - QuizApp.json', title: 'WDU202c - Web Design & UI/UX (200 Câu)', subject: 'Thiết Kế Web & UI/UX', category: 'WDU202c', color: 'from-purple-100 to-pink-100', icon: 'Layout' },
+  { id: 'aid301c-flashcard', filename: 'AID301c - Flashcard - QuizApp.json', title: 'AID301c - Artificial Intelligence Applications (100 Câu)', subject: 'Trí Tuệ Nhân Tạo', category: 'AID301c', color: 'from-emerald-100 to-teal-100', icon: 'Cpu' },
   { id: 'mln111-1000', filename: 'MLN111 - 1000+ - QuizApp.json', title: 'MLN111 - 1000+ Câu Hỏi Tổng Hợp', subject: 'Triết Học Mác - Lênin', category: 'MLN111', color: 'from-amber-100 to-orange-100', icon: 'BookOpen' },
   { id: 'mln111-fe', filename: 'MLN111 - FE - QuizApp.json', title: 'MLN111 - Ôn Thi Final Exam', subject: 'Triết Học Mác - Lênin', category: 'MLN111', color: 'from-amber-100 to-yellow-100', icon: 'Award' },
   { id: 'mln122-batquytac', filename: 'MLN122 - FE - Bất quy tắc - QuizApp.json', title: 'MLN122 - Mẹo & Bất Quy Tắc', subject: 'Kinh Tế Chính Trị', category: 'MLN122', color: 'from-emerald-100 to-teal-100', icon: 'Sparkles' },

@@ -1,0 +1,5304 @@
+{
+  "id": "WDU202c_Flashcard_200",
+  "title": "WDU202c - Flashcard Ôn Tập (200 Câu)",
+  "subject": "UI/UX Design",
+  "category": "WDU202c",
+  "examType": "Flashcard",
+  "questionsList": [
+    {
+      "id": 1,
+      "questionIndex": 0,
+      "questionType": "Single Choice",
+      "content": "Which statement best summarizes the relationship between the four core areas (ideation, front-end, back-end, testing) in the early stages of development?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "They operate sequentially, with one completing before the next begins.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "They remain strictly separated to avoid unnecessary interference.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "They constantly exchange ideas and inform each other through iterative work.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "They compete for dominance, with the strongest influencing the final product.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "questionIndex": 1,
+      "questionType": "Single Choice",
+      "content": "Which form element is most appropriate for selecting a state when you have a large variety of options (For example: 50 states)?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Text field: Allows freeform input but can be messy with data processing.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Checkbox: Allows for multiple selections, not suitable for one choice.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Dropdown list: Saves screen space and efficiently presents numerous options.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "questionIndex": 2,
+      "questionType": "Single Choice",
+      "content": "What is the primary function of a sidebar on a website?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To showcase the most important content on the page",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To provide secondary navigation or additional information",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To display advertisements and monetize the website",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To act as a placeholder for future content updates",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "questionIndex": 3,
+      "questionType": "Single Choice",
+      "content": "How can using animation effectively in a UI/UX design enhance the user experience?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "By incorporating flashy and attention-grabbing animations regardless of context.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "By providing subtle visual cues and feedback to confirm user actions and progress.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "By distracting users from the actual functionality and content of the interface.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "questionIndex": 4,
+      "questionType": "Single Choice",
+      "content": "How can visual hierarchy be used effectively in UI design?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "By using the same font size and weight for all text.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "By highlighting important elements with larger size, bolder font, or contrasting colors.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "By randomly placing elements throughout the interface.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "By keeping all elements visually equal.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "questionIndex": 5,
+      "questionType": "Single Choice",
+      "content": "Once you define your initial app idea, you should stick to it throughout the development process without further exploration or refinement.",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "questionIndex": 6,
+      "questionType": "Single Choice",
+      "content": "Do generic website templates are a good choice for any type of content?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Yes",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "No",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "questionIndex": 7,
+      "questionType": "Single Choice",
+      "content": "What is a key benefit of using prototyping in the design process?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Reducing development costs and time to market.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Increasing stakeholder buy-in and investment.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Identifying and fixing usability problems early on.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "All of the above.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "questionIndex": 8,
+      "questionType": "Single Choice",
+      "content": "How can visual research findings be effectively translated into tangible design decisions for the app?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Directly copying user-preferred design elements without adaptation.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Defining clear design principles and mood boards inspired by the research.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Ignoring research insights and prioritizing personal design preferences.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Implementing all user suggestions regardless of feasibility or consistency.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "questionIndex": 9,
+      "questionType": "Single Choice",
+      "content": "What's the primary purpose of a button in digital design?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To add visual interest and break up text.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To trigger an action or navigate the user interface.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To display information or status updates.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To act as a placeholder for future features.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "questionIndex": 10,
+      "questionType": "Single Choice",
+      "content": "When should a website consider displaying the search function prominently as part of the header design? (Check all that apply)",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "For small websites where users might prefer quick access to specific content.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "On sites heavily reliant on search as the primary method of content discovery (e.g., e-commerce, streaming platforms).",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "When the website content is constantly updated and users need to find recently added items efficiently.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "questionIndex": 11,
+      "questionType": "Single Choice",
+      "content": "What potential consequence does an excessively cluttered content area pose for users?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "It enhances brand recognition and fosters user familiarity.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "It can overwhelm users and hinder information comprehension.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "It provides users with a wider variety of navigation options.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "questionIndex": 12,
+      "questionType": "Single Choice",
+      "content": "Can user interface design influence how users perceive real-world events?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Yes.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "No.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "questionIndex": 13,
+      "questionType": "Single Choice",
+      "content": "When should a website consider displaying the search function prominently as part of the header design? (Check all that apply)",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "For small websites where users might prefer quick access to specific content.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "On sites heavily reliant on search as the primary method of content discovery (e.g., e-commerce, streaming platforms).",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "When the website content is constantly updated and users need to find recently added items efficiently.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "questionIndex": 14,
+      "questionType": "Single Choice",
+      "content": "Which three factors are emphasized as central to structuring content and design hierarchies in mobile apps? (Check all that apply)",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Prioritizing visual elements over textual information",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Combining user goals and client goals into a single hierarchy",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Emphasizing immediate access to core functionality",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Providing multiple pathways for interacting with content",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Minimizing user effort through streamlined interactions",
+          "isCorrect": false
+        },
+        {
+          "id": 6,
+          "content": "Incorporating animation and motion into user journeys",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "questionIndex": 15,
+      "questionType": "Single Choice",
+      "content": "Consider two websites selling hiking gear: one targeting experienced mountaineers and another targeting beginner hikers. How would their content and features likely differ based on user segmentation?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Both websites would need advanced search filters for specific gear specifications.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The beginner website would likely prioritize detailed tutorials and instructional content.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Both websites would need an interactive map feature for route planning.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "questionIndex": 16,
+      "questionType": "Single Choice",
+      "content": "In the context of grid systems, what does the term \"gutter\" refer to?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The invisible horizontal lines defining rows in the grid.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The vertical lines separating columns within the grid.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Spacing between gridlines and design elements for visual balance and breathing room.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "The outermost border of the entire grid layout.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "questionIndex": 17,
+      "questionType": "Single Choice",
+      "content": "What is the advantage of using text better than using an icon in a function button?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "More compact size.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Simple to create.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Clear meaning.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Easy to color.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "questionIndex": 18,
+      "questionType": "Single Choice",
+      "content": "Which of the following methods is Least recommended for user research on a limited budget?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Conducting interviews with friends or family members.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Creating and distributing online questionnaires.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Hiring a professional user research agency.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Observing your own interaction with a website or app.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "questionIndex": 19,
+      "questionType": "Single Choice",
+      "content": "What is the primary focus of the \"Define\" phase in the UX process?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Developing wireframes and detailed interface layouts.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Establishing project goals, user personas, and success metrics.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Building high-fidelity prototypes for user testing.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Coding and implementing the final product design.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "questionIndex": 20,
+      "questionType": "Single Choice",
+      "content": "Determining an information hierarchy does not involve finding possible options for arranging content on a page.",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "questionIndex": 21,
+      "questionType": "Single Choice",
+      "content": "Which of the following is not a core purpose of content mapping?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Dictating the visual aesthetics of the final app.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Clarifying the app's scope, structure, and content placement.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Facilitating communication and explaining the app concept to others.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Establishing a hierarchy and relationships between various content elements.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "questionIndex": 22,
+      "questionType": "Single Choice",
+      "content": "What does a user interface typically leverage to help users understand product concepts?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Unique and unpredictable interactions to surprise and challenge users.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Real-world knowledge and conventions to facilitate intuitive understanding.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Visual elements with no inherent meaning, requiring explicit user learning.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "questionIndex": 23,
+      "questionType": "Single Choice",
+      "content": "What key takeaway should designers remember about button state design?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Button states should be designed primarily to impress users with visual flourishes.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Each state should provide clear and intuitive feedback, guiding users through their interaction with the button.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Consistency across different buttons and platforms is unimportant as long as each button is individually understandable.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "questionIndex": 24,
+      "questionType": "Single Choice",
+      "content": "Which statement best summarizes the key difference between UI and UX?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "UI is about functionality while UX is about aesthetics.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "UI deals with tangible design while UX focuses on intangible experiences.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "UI involves user research and feedback while UX relies solely on designer intuition.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "questionIndex": 25,
+      "questionType": "Single Choice",
+      "content": "Why is clear visual differentiation between button states crucial for usability?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To showcase design creativity and impress users with animation skills.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To provide immediate feedback and inform users about their interaction with the button.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To create a sense of mystery and encourage users to experiment with different states.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Visual differences are unnecessary as clear labels can explain each state.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "questionIndex": 26,
+      "questionType": "Single Choice",
+      "content": "What elements should typically be included in a well-defined app sitemap?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Detailed descriptions of user interface elements and screen layouts",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "High-fidelity mockups and prototypes of individual app screens.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "A hierarchical map of pages, screens, and their relationships.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "questionIndex": 27,
+      "questionType": "Single Choice",
+      "content": "In the context of UI/UX design, which of the following best describes the primary purpose of wireframes?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To represent the final visual aesthetic and branding of the user interface.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To define the precise layout and placement of individual UI elements.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To showcase interactive features and user functionalities through prototypes.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To document detailed user flow scenarios and decision points.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "questionIndex": 28,
+      "questionType": "Single Choice",
+      "content": "Compared to the Waterfall approach, the Agile approach to UX prioritizes:",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Comprehensive planning and documentation before any development begins.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Rapid iteration and continuous improvement based on user feedback.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Launching a finalized product with minimal ongoing changes or updates.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Avoiding user testing altogether to streamline the development process.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "questionIndex": 29,
+      "questionType": "Single Choice",
+      "content": "What's the primary purpose of a button in digital design?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To add visual interest and break up text",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To trigger an action or navigate the user interface.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To display information or status updates.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To act as a placeholder for future features.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "questionIndex": 30,
+      "questionType": "Single Choice",
+      "content": "What is the main purpose of creating a prototype?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To test and refine functionality and user experience.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "To document design decisions and specifications.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "To generate marketing materials for the product.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "questionIndex": 31,
+      "questionType": "Single Choice",
+      "content": "The composition and structure of a user interface should always be prioritized over the individual design details of its elements.",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "questionIndex": 32,
+      "questionType": "Single Choice",
+      "content": "Specific shapes can evoke different emotions and feelings in users. Which of the following shapes is most likely to be associated with a sense of playfulness and fun?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Triangle",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Rectangle",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Square",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Circle",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "questionIndex": 33,
+      "questionType": "Single Choice",
+      "content": "When a client requests a specific design feature without clear justification, the designer's role is to:",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Immediately implement the feature as requested by the client.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Politely refuse the request due to potential user experience disruptions.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Understand the underlying motivation behind the request and propose alternative solutions.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Ignore the request and focus on design aspects aligned with identified user needs.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "questionIndex": 34,
+      "questionType": "Single Choice",
+      "content": "What are the colors used in a wireframe?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "RGB.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "CMYK.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Greyscale.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "All the above.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "questionIndex": 35,
+      "questionType": "Single Choice",
+      "content": "Why do some websites separate \"cart\" and \"account\" links into the utility navigation instead of including them in the primary menu?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To visually differentiate them from the core content sections of the website.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To avoid cluttering the top navigation area with less frequently accessed functionalities.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "All of the above.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "questionIndex": 36,
+      "questionType": "Single Choice",
+      "content": "How do you suggest prioritizing the main navigation sections on the sitemap?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Alphabetical order based on section names.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Importance and relevance to users’ primary goals.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Number of subpages and content items within each section.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Visual appeal and aesthetic balance on the navigation bar.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "questionIndex": 37,
+      "questionType": "Single Choice",
+      "content": "What emphasizes mastering grid systems in UI design?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "They are a quick and easy solution for all layout needs.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "They offer a powerful foundation for building flexible and adaptable layouts.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "They are a temporary trend and may soon be replaced by new design approaches.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "questionIndex": 38,
+      "questionType": "Single Choice",
+      "content": "Which statement best summarizes the relationship between the four core areas (ideation, front-end, back-end, testing) in the early stages of development?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "They operate sequentially, with one completing before the next begins.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "They remain strictly separated to avoid unnecessary interference.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "They constantly exchange ideas and inform each other through iterative work.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "They compete for dominance, with the strongest influencing the final product.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "questionIndex": 39,
+      "questionType": "Multiple Choice",
+      "content": "What are three potential downsides of overly prioritizing aesthetics and graphical elements in UI design? (Check all that apply)",
+      "explanation": "Đáp án đúng: BDE. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Increased user satisfaction and brand loyalty",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Enhanced learning curve and user confusion",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Improved accessibility for diverse users",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Increased risk of rapid visual obsolescence",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "Potential for content obstruction and reduced functionality",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "questionIndex": 40,
+      "questionType": "Single Choice",
+      "content": "How can designers ensure an effective disabled state for buttons?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "By dimming the button and making it completely hidden from view.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Using low opacity and a clear label like \"Disabled\" or \"Coming Soon\" to inform users.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Replacing the button with a progress bar or loading animation.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Keeping the button visually active but preventing any actual interaction.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "questionIndex": 41,
+      "questionType": "Single Choice",
+      "content": "Which phase of the UX process typically involves user interviews, surveys, and testing to gather insights and understand user needs?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Design",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Prototyping",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Research",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Implementation",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "questionIndex": 42,
+      "questionType": "Single Choice",
+      "content": "At which stage of the design process do we create wireframes?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Planning.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Review & Revise.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Design and Prototyping.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "None of the above.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "questionIndex": 43,
+      "questionType": "Single Choice",
+      "content": "What is the primary purpose of a button in UI/UX design?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To showcase visual creativity and enhance the interface's aesthetic.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To trigger an action or response within the digital product.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To serve as a placeholder for future functionalities.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To emphasize specific content and draw user attention.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "questionIndex": 44,
+      "questionType": "Single Choice",
+      "content": "What is a graphical or text representation that illustrates the relationships between various content groups on a website?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Page template",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Wireframe",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Sitemap",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "CSS",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "questionIndex": 45,
+      "questionType": "Single Choice",
+      "content": "What is the right size for a button on a mobile interface?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Big enough to see clearly.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "So small to save space.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Different sizes for a variety.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Display size fits fingertip.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "questionIndex": 46,
+      "questionType": "Single Choice",
+      "content": "Which principle focuses on gathering user feedback and conducting research to understand their needs and expectations, informing the design process?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "User Research",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "User Centered Design",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Iteration",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Testing",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "questionIndex": 47,
+      "questionType": "Single Choice",
+      "content": "Which element is not explicitly mentioned as a key component of a user interface?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The visual elements, like buttons and menus",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The user interacting with the interface",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "The content or information being presented",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "questionIndex": 48,
+      "questionType": "Single Choice",
+      "content": "Which location is considered the most suitable to place the footer on the website?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The top of the website.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Left side of website.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Middle of the website.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The bottom of the website.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "questionIndex": 49,
+      "questionType": "Single Choice",
+      "content": "Which location is considered the most suitable to place the footer on the website?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The top of the website.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Left side of website.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Middle of the website.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The bottom of the website.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "questionIndex": 50,
+      "questionType": "Single Choice",
+      "content": "User-centric design implies that the designer's primary focus should always be on maximizing profit for the client, even if it comes at the expense of user experience.",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "questionIndex": 51,
+      "questionType": "Single Choice",
+      "content": "What is the primary benefit of using low-fidelity wireframes in the UI design process?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To showcase the final visual design aesthetics.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To test the overall information architecture and user flow.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To demonstrate complex interactions and animations.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "questionIndex": 52,
+      "questionType": "Single Choice",
+      "content": "Which statement best summarizes the key difference between UI and UX?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "UI is about functionality while UX is about aesthetics.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "UI deals with tangible design while UX focuses on intangible experiences.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "UI involves user research and feedback while UX relies solely on designer intuition.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "questionIndex": 53,
+      "questionType": "Single Choice",
+      "content": "When applying Design Thinking, the purpose is to identify the correct problems and subsequently create efficient solutions for them. Is this statement true or false?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "questionIndex": 54,
+      "questionType": "Single Choice",
+      "content": "What is the primary function of a website header? (Check all that apply)",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To display decorative graphics and animations.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To provide navigation options for users to explore the website.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To showcase the website's logo and branding.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To serve as a placeholder for future content updates.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "questionIndex": 55,
+      "questionType": "Single Choice",
+      "content": "Which of the following best exemplifies the idea of shaping UI language based on target audience and design direction?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Using technical jargon for scientific app content regardless of user expertise.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Employing formal academic language in all navigation prompts and instructions.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Choosing fun and playful vocabulary for a children's app while adopting a more serious tone for a financial app.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Maintaining the same casual conversational tone throughout the UI regardless of the app's function or user demographics.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "questionIndex": 56,
+      "questionType": "Single Choice",
+      "content": "Which of the following is not a typical method used in user-centric design research?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "User interviews: directly understanding user pain points and motivations.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "A/B testing: comparing different design versions to measure user preference.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Expert opinion: relying on designers' intuition and assumptions.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "User surveys: gathering quantitative data on user needs and perceptions.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "questionIndex": 57,
+      "questionType": "Single Choice",
+      "content": "Do the ergonomics of the human body significantly influence the optimal arrangement of elements on user interfaces?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Yes",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "No",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "questionIndex": 58,
+      "questionType": "Single Choice",
+      "content": "Is contrast an important element when designing UI?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Yes.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "No.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "questionIndex": 59,
+      "questionType": "Single Choice",
+      "content": "What's the main goal of UX design?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To create visually stunning interfaces with trendy aesthetics.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To enhance brand awareness and recognition.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "To prioritize technical functionality and efficiency.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To ensure users enjoy smooth, intuitive, and positive interactions.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "questionIndex": 60,
+      "questionType": "Single Choice",
+      "content": "Which of the following best summarizes the reason why text is still the preferred method for conveying specific information on screens?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Text is generally faster to read than images.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Text can represent abstract concepts more effectively than icons.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Text is more economical in terms of space on screens.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Text is universally understood across different cultures.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "questionIndex": 61,
+      "questionType": "Single Choice",
+      "content": "Which of the following statements is correct?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Content maps should always be visually designed and aesthetically pleasing.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Content maps focus on clarity and structure, not visual design.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "questionIndex": 62,
+      "questionType": "Single Choice",
+      "content": "What is the primary purpose of a pattern library in UI/UX design?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To create a collection of visual elements for aesthetic inspiration.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To document and reuse common UI components and interactions.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To store design assets for future projects without a specific purpose.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To showcase a designer's portfolio and technical skills.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "questionIndex": 63,
+      "questionType": "Single Choice",
+      "content": "A wireframe is a method for designing interfaces, but it may not be the primary process for thoroughly considering and addressing user experience problems.",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "questionIndex": 64,
+      "questionType": "Single Choice",
+      "content": "When exploring different possible forms for your app, what should you not do?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Limit yourself to ideas that seem realistic or achievable.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Use brainstorming techniques to generate diverse and creative options.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Consider alternative UI/UX elements and interaction models.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Prioritize user needs and preferences in your exploration.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "questionIndex": 65,
+      "questionType": "Single Choice",
+      "content": "______ is a representation or template of what a website will look like and how it will function.",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "A web page.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "A wireframe.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "A mockup.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "A prototype.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "questionIndex": 66,
+      "questionType": "Single Choice",
+      "content": "Which of the following is not a core principle of good UX design?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "User research: Understanding user needs and behaviors through testing and observation.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Accessibility: Ensuring everyone can access and use the product regardless of abilities.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Consistency: Maintaining familiar patterns and interactions across the interface.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Mystery: Introducing unexpected elements to keep users engaged.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "questionIndex": 67,
+      "questionType": "Single Choice",
+      "content": "When designing a checkout process, why is user control and freedom particularly important?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To enhance the feeling of luxury and exclusivity.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To allow users to easily review or edit their information before finalizing.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To encourage impulsive purchases through streamlined steps.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To prevent users from abandoning the process due to frustration.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "questionIndex": 68,
+      "questionType": "Single Choice",
+      "content": "Which of the following is correctly identified?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "When implementing a navigation system for a website, all sections listed on a website's sitemap should automatically be included in the primary navigation.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "When implementing a navigation system for a website, while sitemap sections inform primary navigation choices, some like \"cart\" and \"account\" may be handled separately depending on their specific function.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "questionIndex": 69,
+      "questionType": "Single Choice",
+      "content": "What is the primary function of breadcrumbs in website navigation?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To provide decorative visual elements and enhance the page layout.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To showcase the entire website hierarchy on a single page.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "To highlight user progress and offer alternative navigation paths.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "To collect user click data and improve website analytics.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "questionIndex": 70,
+      "questionType": "Single Choice",
+      "content": "How to make a button more recognizable?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The design resembles a real button.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Shading, contouring, use different colors with the background.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Use icons featured in the button.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "All the above.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "questionIndex": 71,
+      "questionType": "Single Choice",
+      "content": "According to Nielsen's Heuristics, the system should always keep users informed about what's happening through appropriate feedback within a reasonable time. This principle refers to:",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Aesthetic and minimalist design.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Visibility of system status.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Error prevention.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Help and documentation.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "questionIndex": 72,
+      "questionType": "Single Choice",
+      "content": "The aesthetics of the image directly influence ______",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "content",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "mood",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "navigation",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "layout",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "questionIndex": 73,
+      "questionType": "Single Choice",
+      "content": "What typefaces are recommended to be used on websites?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Decoration",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Script",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Handwriting",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Sans Serif",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "questionIndex": 74,
+      "questionType": "Single Choice",
+      "content": "Which of the following statements is correct?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The Waterfall approach to UX is considered universally superior to the Agile approach.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The Agile approach to UX is considered universally superior to the Waterfall approach.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Each approach has advantages and disadvantages, consider for adaptability based on project needs before applying.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "questionIndex": 75,
+      "questionType": "Single Choice",
+      "content": "How do you suggest prioritizing the main navigation sections on the sitemap?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Alphabetical order based on section names.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Importance and relevance to users' primary goals.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Number of subpages and content items within each section.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Visual appeal and aesthetic balance on the navigation bar.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "questionIndex": 76,
+      "questionType": "Single Choice",
+      "content": "User interface design should prioritize aesthetics over functionality for a unique and visually captivating experience.",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "questionIndex": 77,
+      "questionType": "Single Choice",
+      "content": "Which of the following is not a non-digital wireframing tool?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Paper sketching.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Blackboarding.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Figma.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Whiteboarding.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "questionIndex": 78,
+      "questionType": "Single Choice",
+      "content": "What is the primary purpose of establishing visual hierarchy in a graphic design piece?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To showcase all elements equally and avoid any dominant focus.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To guide the viewer's eye and prioritize the most important information.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To create a visually chaotic and attention-grabbing effect.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To comply with specific design trends and aesthetic preferences.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "questionIndex": 79,
+      "questionType": "Single Choice",
+      "content": "When designing a search bar, it's important to provide immediate results and suggestions as the user types. This best aligns with the heuristic of:",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Recognition rather than recall",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Visibility of system status",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "User control and freedom",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Match between system and the real world",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "questionIndex": 80,
+      "questionType": "Single Choice",
+      "content": "What are three advantages of using metaphorical icons and symbols in user interfaces? (Check all that apply)",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "They appeal to a wider range of cultural backgrounds.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "They provide a sense of nostalgia and familiarity.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "They are more efficient in terms of screen space.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "They simplify complex concepts and actions.",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "They create a unique and recognizable brand identity.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "questionIndex": 81,
+      "questionType": "Single Choice",
+      "content": "What is a key benefit of using prototyping in the design process?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Reducing development costs and time to market",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Increasing stakeholder buy-in and investment",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Identifying and fixing usability problems early on.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "All of the above.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "questionIndex": 82,
+      "questionType": "Single Choice",
+      "content": "Consider two websites selling hiking gear: one targeting experienced mountaineers and another targeting beginner hikers. How would their content and features likely differ based on user segmentation?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Both websites would need advanced search filters for specific gear specifications.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The beginner website would likely prioritize detailed tutorials and instructional content.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Both websites would need an interactive map feature for route planning.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "questionIndex": 83,
+      "questionType": "Single Choice",
+      "content": "What impact can the placement of a button have on user behavior and engagement?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Buttons should always be hidden and discovered through exploration.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Positioning buttons in natural user flow areas and key decision points encourages interaction.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Placing buttons in unexpected locations creates a sense of surprise and delight.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The location of a button has no significant impact on user engagement.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "questionIndex": 84,
+      "questionType": "Single Choice",
+      "content": "Which of the following tools is best suited for creating low-fidelity wireframes?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Adobe Photoshop with advanced design plugins",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Sketch or Figma with basic shapes and line drawing tools.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Code editors like Visual Studio or Sublime Text.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "User testing platforms like UserTesting or Usability Hub.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "questionIndex": 85,
+      "questionType": "Single Choice",
+      "content": "Whitespace primarily serves to fill empty space on a website and is generally considered a wasted design element.",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "questionIndex": 86,
+      "questionType": "Single Choice",
+      "content": "What advantage does responsive design offer over separate mobile websites?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "It reduces maintenance costs by managing only one codebase.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "It improves search engine optimization by avoiding content duplication.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "It provides a more consistent user experience across all devices.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "All of the above.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "questionIndex": 87,
+      "questionType": "Single Choice",
+      "content": "What is the primary goal of information architecture?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To create visually appealing website layouts",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To make information easily accessible and findable for users",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To ensure branding consistency across all platforms.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To increase website traffic and search engine ranking.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "questionIndex": 88,
+      "questionType": "Single Choice",
+      "content": "What does a user interface typically leverage to help users understand product concepts?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Unique and unpredictable interactions to surprise and challenge users.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Real-world knowledge and conventions to facilitate intuitive understanding.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Visual elements with no inherent meaning, requiring explicit user learning.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "questionIndex": 89,
+      "questionType": "Single Choice",
+      "content": "What are the factors that determine the success of UI?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Contrast, repetition, alignment, proximity.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Contrast, repetition, alignment, emotion",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Reaction, repetition, alignment, proximity.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "All is incorrect",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "questionIndex": 90,
+      "questionType": "Single Choice",
+      "content": "Which choice between a simple geometric and an illustration makes a button design visually clean and easy to interact with?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Simple geometric shape.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Illustration.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Natural shape.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "questionIndex": 91,
+      "questionType": "Single Choice",
+      "content": "What is the main advantage of using different visual approaches like photography and vector graphics for mood boards?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "It showcases diverse UI styles and user demographics.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "It requires minimal design commitment and effort.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "It provides detailed blueprints for final product implementation.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "questionIndex": 92,
+      "questionType": "Single Choice",
+      "content": "When setting the visual direction, which of the following is not mentioned as a component of developing the visual direction for an app?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Refining wireframe designs with specific visual elements.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Utilizing a mood board to consolidate visual research and ideas.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Conducting A/B testing on different visual directions.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "questionIndex": 93,
+      "questionType": "Single Choice",
+      "content": "How can designers strike a balance between offering helpful instructions and avoiding overwhelming users with excessive information?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Provide contextual hints and tips on-demand with minimal intrusion.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Force users to complete onboarding tutorials before using the interface.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Rely solely on user feedback and data to identify areas for improvement.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Design a static help manual accessible through a dedicated menu option.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "questionIndex": 94,
+      "questionType": "Single Choice",
+      "content": "What potential bias can occur when relying solely on self-reported data from users in user research?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Social desirability bias, where users answer in a way they think is socially acceptable.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Recall bias, where users may have difficulty accurately remembering past experiences.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Both of the above.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Neither of the above.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "questionIndex": 95,
+      "questionType": "Single Choice",
+      "content": "Which three factors are emphasized as central to structuring content and design hierarchies in mobile apps? (Check all that apply)",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Prioritizing visual elements over textual information.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Combining user goals and client goals into a single hierarchy.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Emphasizing immediate access to core functionality.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Providing multiple pathways for interacting with content.",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Minimizing user effort through streamlined interactions.",
+          "isCorrect": false
+        },
+        {
+          "id": 6,
+          "content": "Incorporating animation and motion into user journeys.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "questionIndex": 96,
+      "questionType": "Single Choice",
+      "content": "Where is the most effective placement for breadcrumbs within a website design?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Integrated within the website logo or hidden behind a menu for minimal visual impact.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Prominently displayed near the top of the page, close to the main navigation bar.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Dispersed throughout the footer of the page as subtle navigational cues.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "questionIndex": 97,
+      "questionType": "Single Choice",
+      "content": "How can UI/UX designers ensure users understand the meaning behind an icon or symbol?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Utilizing well-established conventions and maintaining consistency with industry standards.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Implementing interactive tooltips that appear on hover but never actively guide users.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Hiding their meaning and encouraging users to guess their function, creating a sense of discovery.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "questionIndex": 98,
+      "questionType": "Single Choice",
+      "content": "How can designers ensure an effective disabled state for buttons?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "By dimming the button and making it completely hidden from view.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Using low opacity and a clear label like \"Disabled\" or \"Coming Soon\" to inform users.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Replacing the button with a progress bar or loading animation.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Keeping the button visually active but preventing any actual interaction.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "questionIndex": 99,
+      "questionType": "Single Choice",
+      "content": "What potential drawback is mentioned for implementing \"sticky navigation\" where the header remains visible while scrolling?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Users might find it visually distracting from the content on the page.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "It takes up valuable screen real estate, reducing the available space for content.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "It hinders user accessibility and ease of navigation for certain devices.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "All of the above.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "questionIndex": 100,
+      "questionType": "Single Choice",
+      "content": "What are the factors that determine the success of UI?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Contrast, repetition, alignment, proximity.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Contrast, repetition, alignment, emotion.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Reaction, repetition, alignment, proximity.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "All is incorrect.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "questionIndex": 101,
+      "questionType": "Single Choice",
+      "content": "The primary purpose of developing a sitemap is to solidify the visual design of the final app.",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "questionIndex": 102,
+      "questionType": "Multiple Choice",
+      "content": "What are three advantages of using metaphorical icons and symbols in user interfaces? (Check all that apply)",
+      "explanation": "Đáp án đúng: BCD. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "They appeal to a wider range of cultural backgrounds",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "They provide a sense of nostalgia and familiarity.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "They are more efficient in terms of screen space.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "They simplify complex concepts and actions.",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "They create a unique and recognizable brand identity.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "questionIndex": 103,
+      "questionType": "Single Choice",
+      "content": "Blueprints of a website layout are intended to ______",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Prototype of the screen layout showing navigation and main design elements.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Show the grouping of pages and user journeys.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Indicate the site structure during design and as a user feature.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Prototype typical customer journeys or clickstreams through a website.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "questionIndex": 104,
+      "questionType": "Single Choice",
+      "content": "How to make a button more recognizable?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The design resembles a real button.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Shading, contouring, use different colors with the background.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Use icons featured in the button.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "All the above.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "questionIndex": 105,
+      "questionType": "Single Choice",
+      "content": "Which of the following best summarizes the reason why text is still the preferred method for conveying specific information on screens?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Text is generally faster to read than images.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Text can represent abstract concepts more effectively than icons.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Text is more economical in terms of space on screens.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Text is universally understood across different cultures.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "questionIndex": 106,
+      "questionType": "Single Choice",
+      "content": "What advantage does responsive design offer over separate mobile websites?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "It reduces maintenance costs by managing only one codebase.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "It improves search engine optimization by avoiding content duplication.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "It provides a more consistent user experience across all devices.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "All of the above.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "questionIndex": 107,
+      "questionType": "Single Choice",
+      "content": "What typefaces are recommended to be used on websites?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Decoration.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Script.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Handwriting.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Sans Serif.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "questionIndex": 108,
+      "questionType": "Single Choice",
+      "content": "Compared to the Waterfall approach, the Agile approach to UX prioritizes:",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Comprehensive planning and documentation before any development begins.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Rapid iteration and continuous improvement based on user feedback.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Launching a finalized product with minimal ongoing changes or updates.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Avoiding user testing altogether to streamline the development process.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "questionIndex": 109,
+      "questionType": "Single Choice",
+      "content": "According to Nielsen's Usability Heuristics, what is the \"User Control and Freedom\" principle?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Heuristic focuses on giving users ways to undo actions and explore different options.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Heuristic prioritizes using familiar concepts and language in the interface.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Heuristic emphasizes keeping users informed about what's happening in the system.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Heuristic emphasizes using consistent terminology, icons, and navigation patterns across the interface.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "questionIndex": 110,
+      "questionType": "Single Choice",
+      "content": "When implementing the empathize phase, what is the purpose of understanding user motivation?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The goal is to gain insights into what motivates and influences users' actions, decisions, and behaviors.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Understand the barriers users encounter in their problem-solving journey.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "questionIndex": 111,
+      "questionType": "Single Choice",
+      "content": "Users can effectively interact with an interface without any prior understanding of its functionality or visual cues.",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "questionIndex": 112,
+      "questionType": "Single Choice",
+      "content": "What is the primary goal of information architecture?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To create visually appealing website layouts.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To make information easily accessible and findable for users.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To ensure branding consistency across all platforms.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To increase website traffic and search engine ranking.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "questionIndex": 113,
+      "questionType": "Single Choice",
+      "content": "Which of the following is correctly identified?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Every website with subsections necessarily requires both primary and secondary navigation systems.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Simple and small websites may not need secondary navigation for subsections.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 115,
+      "questionIndex": 114,
+      "questionType": "Single Choice",
+      "content": "What design principle emphasizes providing users with control over their actions and undo options?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Visibility of system status",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Match between system and the real world.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "User control and freedom",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 116,
+      "questionIndex": 115,
+      "questionType": "Single Choice",
+      "content": "According to Nielsen's Usability Heuristics, which heuristic emphasizes keeping users informed about what's happening in the system?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Match between system and the real world",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "User control and freedom",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Visibility of system status",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Help users recognize, diagnose, and recover from errors",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 117,
+      "questionIndex": 116,
+      "questionType": "Single Choice",
+      "content": "What is the advantage of using text better than using an icon in a function button?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "More compact size",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Simple to create",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Clear meaning",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Easy to color",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "questionIndex": 117,
+      "questionType": "Single Choice",
+      "content": "Specific shapes can evoke different emotions and feelings in users. Which of the following shapes is most likely to be associated with a sense of playfulness and fun?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Triangle",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Rectangle",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Square",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Circle",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 119,
+      "questionIndex": 118,
+      "questionType": "Single Choice",
+      "content": "What are the 3 factors that determine the success of user experience design?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Alignment, emotion, reactions.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Action, emotion, reactions.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Contrast, emotion, reactions.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Proximity, emotion, reactions.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "questionIndex": 119,
+      "questionType": "Single Choice",
+      "content": "It would be intuitive for the user if the interface used similar colors to represent different functions.",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 121,
+      "questionIndex": 120,
+      "questionType": "Single Choice",
+      "content": "When creating user personas, what elements are essential to consider?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Technical proficiency and coding skills.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Goals, motivations, and pain points of the target user group.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Brand identity and marketing messages.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Visual design preferences and color palette choices.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 122,
+      "questionIndex": 121,
+      "questionType": "Single Choice",
+      "content": "Which elements are commonly found in website sidebars?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The website's main navigation menu.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Search bars and contact forms.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Large hero images and videos.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Links to social media profiles and sharing buttons.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 123,
+      "questionIndex": 122,
+      "questionType": "Single Choice",
+      "content": "What are effective personas?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "They are highly detailed and complex, incorporating every possible user behavior.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "They are based on real user research and represent specific user groups.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "They are created solely by the designer and reflect their personal preferences.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "They are used exclusively for marketing purposes and promotional campaigns.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 124,
+      "questionIndex": 123,
+      "questionType": "Single Choice",
+      "content": "When you plan to name the application, which of the following is not a likely goal for your app's name?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Use an individual's name to name the application.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Creating a memorable and original impression.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Setting the tone and mood for the user experience.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Aligning with the overall branding and identity.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 125,
+      "questionIndex": 124,
+      "questionType": "Single Choice",
+      "content": "When designing a checkout process, why is user control and freedom particularly important?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To enhance the feeling of luxury and exclusivity.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To allow users to easily review or edit their information before finalizing.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To encourage impulsive purchases through streamlined steps.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To prevent users from abandoning the process due to frustration.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 126,
+      "questionIndex": 125,
+      "questionType": "Single Choice",
+      "content": "How can visual research findings be effectively translated into tangible design decisions for the app?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Directly copying user-preferred design elements without adaptation.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Defining clear design principles and mood boards inspired by the research.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Ignoring research insights and prioritizing personal design preferences.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Implementing all user suggestions regardless of feasibility or consistency.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 127,
+      "questionIndex": 126,
+      "questionType": "Single Choice",
+      "content": "Which heuristic emphasizes minimizing the user's memory load by making necessary information and options readily available?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Match between system and the real world.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Recognition rather than recall.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "User control and freedom.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Flexibility and efficiency of use.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 128,
+      "questionIndex": 127,
+      "questionType": "Single Choice",
+      "content": "When conducting user research, which of the following techniques is best suited for exploring user attitudes and beliefs?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "A/B testing with quantitative data analysis",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "In-depth interviews with open-ended questions",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Usability testing with task completion tracking.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Online surveys with multiple-choice questions.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 129,
+      "questionIndex": 128,
+      "questionType": "Single Choice",
+      "content": "In the app design process, which department is responsible for analyzing user data in the project?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Business Analysis (BA)",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Project Manager (PM)",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Designer",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Developer",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 130,
+      "questionIndex": 129,
+      "questionType": "Single Choice",
+      "content": "What are three potential downsides of overly prioritizing aesthetics and graphical elements in UI design? (Check all that apply)",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Increased user satisfaction and brand loyalty.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Enhanced learning curve and user confusion.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Improved accessibility for diverse users.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Increased risk of rapid visual obsolescence.",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Potential for content obstruction and reduced functionality.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 131,
+      "questionIndex": 130,
+      "questionType": "Single Choice",
+      "content": "What is the primary benefit of using low-fidelity wireframes in the UI design process?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To showcase the final visual design aesthetics",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To test the overall information architecture and user flow",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To demonstrate complex interactions and animations.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 132,
+      "questionIndex": 131,
+      "questionType": "Single Choice",
+      "content": "Where is the most effective placement for breadcrumbs within a website design?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Integrated within the website logo or hidden behind a menu for minimal visual impact.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Prominently displayed near the top of the page, close to the main navigation bar.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Dispersed throughout the footer of the page as subtle navigational cues.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 133,
+      "questionIndex": 132,
+      "questionType": "Single Choice",
+      "content": "What is considered a good app idea?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Be completely original and unlike anything existing in the market.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Solve a real problem that users genuinely face in their lives.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Mirror the desires and functionality of another successful app.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Focus on offering entertainment and amusement rather than addressing problems.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 134,
+      "questionIndex": 133,
+      "questionType": "Single Choice",
+      "content": "What is the primary purpose of a button in UI/UX design?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To showcase visual creativity and enhance the interface's aesthetic.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To trigger an action or response within the digital product.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To serve as a placeholder for future functionalities.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To emphasize specific content and draw user attention.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 135,
+      "questionIndex": 134,
+      "questionType": "Single Choice",
+      "content": "What is the main key regarding the relationship between mobile and desktop UI design?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "They should always be designed separately with little overlap.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Mobile design should be the primary focus due to increasing mobile usage.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "The fundamental design principles like grid structure can be applied across both platforms.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Desktop screens offer more creative freedom for UI design compared to mobile.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 136,
+      "questionIndex": 135,
+      "questionType": "Single Choice",
+      "content": "In the context of grid systems, what does the term \"gutter\" refer to?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The invisible horizontal lines defining rows in the grid.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The vertical lines separating columns within the grid.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Spacing between gridlines and design elements for visual balance and breathing room.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "The outermost border of the entire grid layout.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 137,
+      "questionIndex": 136,
+      "questionType": "Single Choice",
+      "content": "Which of the following is correctly identified?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Every website with subsections necessarily requires both primary and secondary navigation systems.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Simple and small websites may not need secondary navigation for subsections.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 138,
+      "questionIndex": 137,
+      "questionType": "Single Choice",
+      "content": "What is the main benefit of iterative design in user-centric UI/UX development?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Reaching the final design solution quickly and efficiently.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Continuously testing and refining the design based on user feedback and data.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Avoiding user research and relying solely on design intuition.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Following a rigid design process with no space for adaptation.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 139,
+      "questionIndex": 138,
+      "questionType": "Single Choice",
+      "content": "Do the ergonomics of the human body significantly influence the optimal arrangement of elements on user interfaces?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Yes.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "No.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 140,
+      "questionIndex": 139,
+      "questionType": "Single Choice",
+      "content": "What design element visually communicates the intended purpose of a textfield?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The placeholder text within the field",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "The background color or border style of the field",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "The animation triggered when the field is interacted with",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 141,
+      "questionIndex": 140,
+      "questionType": "Single Choice",
+      "content": "What is the primary purpose of a textfield in a user interface?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To display formatted text content.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To allow users to input and edit textual information.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To navigate between different sections of the interface.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 142,
+      "questionIndex": 141,
+      "questionType": "Single Choice",
+      "content": "Which of the following areas most emphasizes the study of human behavior?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "User interface (UI) design",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "User experience (UX) design",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Visual design principles",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Anthropology and sociology",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 143,
+      "questionIndex": 142,
+      "questionType": "Single Choice",
+      "content": "What is considered a good app idea?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Be completely original and unlike anything existing in the market.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Solve a real problem that users genuinely face in their lives.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Mirror the desires and functionality of another successful app.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Focus on offering entertainment and amusement rather than addressing problems.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 144,
+      "questionIndex": 143,
+      "questionType": "Single Choice",
+      "content": "Which of the following is not a core principle of good UI design?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Consistency: Maintaining visual and interactional patterns across the interface.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Minimalism: Prioritizing clarity and functionality over unnecessary clutter.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Accessibility: Ensuring everyone can use the interface regardless of abilities.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Intricacy: Implementing complex and visually stunning elements.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 145,
+      "questionIndex": 144,
+      "questionType": "Single Choice",
+      "content": "Which elements are commonly found in website sidebars?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The website's main navigation menu",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Search bars and contact forms",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Large hero images and videos",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Links to social media profiles and sharing buttons",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 146,
+      "questionIndex": 145,
+      "questionType": "Single Choice",
+      "content": "What primary benefit of the color-coding different sections of the sitemap?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Facilitating visual hierarchy and differentiating primary functions.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Enhancing aesthetic appeal and making the map more visually engaging.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 147,
+      "questionIndex": 146,
+      "questionType": "Single Choice",
+      "content": "What are effective personas?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "They are highly detailed and complex, incorporating every possible user behavior.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "They are based on real user research and represent specific user groups.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "They are created solely by the designer and reflect their personal preferences.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "They are used exclusively for marketing purposes and promotional campaigns.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 148,
+      "questionIndex": 147,
+      "questionType": "Single Choice",
+      "content": "What is one example of a variable in a grid system, and how can it be managed?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The color of the grid lines, which should always be black.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The size of the gutter space, which can be adjusted for different content.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "The type of typeface used, which should be consistent throughout the grid.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The placement of navigation elements, which should always be fixed in one location.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 149,
+      "questionIndex": 148,
+      "questionType": "Single Choice",
+      "content": "Adding too much detail is necessary in a wireframe design.",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 150,
+      "questionIndex": 149,
+      "questionType": "Single Choice",
+      "content": "What is one example of a variable in a grid system, and how can it be managed?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The color of the grid lines, which should always be black.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The size of the gutter space, which can be adjusted for different content.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "The type of typeface used, which should be consistent throughout the grid.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The placement of navigation elements, which should always be fixed in one location.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 151,
+      "questionIndex": 150,
+      "questionType": "Single Choice",
+      "content": "What is the primary purpose of conducting visual research when defining the look and feel of an app?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To showcase the designer's creative vision without user input.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To identify app design trends and popular aesthetics.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To generate random design elements and hope for user approval.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "questionIndex": 151,
+      "questionType": "Single Choice",
+      "content": "Which choice between a simple geometric and an illustration makes a button design visually clean and easy to interact with?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Simple geometric shape",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Illustration",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Natural shape",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 153,
+      "questionIndex": 152,
+      "questionType": "Single Choice",
+      "content": "The primary purpose of developing a sitemap is to solidify the visual design of the final app.",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "questionIndex": 153,
+      "questionType": "Single Choice",
+      "content": "What potential bias can occur when relying solely on self-reported data from users in user research?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Social desirability bias, where users answer in a way they think is socially acceptable.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Recall bias, where users may have difficulty accurately remembering past experiences.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Both of the above.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Neither of the above.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 155,
+      "questionIndex": 154,
+      "questionType": "Single Choice",
+      "content": "What are the primary distinctions between UX and UI?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "A UX designer primarily concentrates on the user's journey to solve the overall problem, while a UI designer primarily concentrates on the aesthetics and functionality of a product's outward appearance.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "A UX designer is primarily concerned with the conceptual aspects of the design process, whereas a UI designer is intended to focus on the tangible elements.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Both statements are incorrect.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Both statements are correct.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 156,
+      "questionIndex": 155,
+      "questionType": "Single Choice",
+      "content": "When designing a search bar, it's important to provide immediate results and suggestions as the user types. This best aligns with the heuristic of:",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Recognition rather than recall",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Visibility of system status",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "User control and freedom",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Match between system and the real world",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 157,
+      "questionIndex": 156,
+      "questionType": "Single Choice",
+      "content": "Wireframing happens ____ in the project design process.",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "After user testing",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Early or beginning stage",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Middle stage",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "None of the above",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 158,
+      "questionIndex": 157,
+      "questionType": "Single Choice",
+      "content": "In the UX design process, the \"mapping\" mentioned in the envisioning stage refers to:",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Creating visual sitemaps that show the flow of users through the app.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Sketching rough layouts of individual screens.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Developing user personas and scenarios to understand user needs.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Building a detailed content inventory of all information within the app.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 159,
+      "questionIndex": 158,
+      "questionType": "Single Choice",
+      "content": "A website that uses consistent language, terminology, and layout across all pages aims to achieve the heuristic of:",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Aesthetic and minimalist design",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Consistency and standards",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Help and documentation",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Recognition rather than recall",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 160,
+      "questionIndex": 159,
+      "questionType": "Single Choice",
+      "content": "What is the main advantage of using different visual approaches like photography and vector graphics for mood boards?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "It showcases diverse UI styles and user demographics.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "It requires minimal design commitment and effort.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "It provides detailed blueprints for final product implementation.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 161,
+      "questionIndex": 160,
+      "questionType": "Single Choice",
+      "content": "What color combination is suitable to create an appetite for customers in a fast-food restaurant?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Hot colors like: yellow, orange, and red.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Cool colors like: blue, green and purple.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Colorful.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Only white and black.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 162,
+      "questionIndex": 161,
+      "questionType": "Single Choice",
+      "content": "User interface design should prioritize aesthetics over functionality for a unique and visually captivating experience.",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 163,
+      "questionIndex": 162,
+      "questionType": "Single Choice",
+      "content": "Which statement accurately describes the difference between relative grid and absolute grid?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Relative units are flexible and adjust based on screen size, while absolute units remain fixed.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Absolute units are preferred for static designs, while relative units are better for responsive projects.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 164,
+      "questionIndex": 163,
+      "questionType": "Single Choice",
+      "content": "What image size is suitable for the website interface?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Maximum size for a clear picture.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The size is compressed to the minimum even though the image is not clear.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Compressed to a suitable aspect ratio and format, keep the image is still clear.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Free size.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 165,
+      "questionIndex": 164,
+      "questionType": "Single Choice",
+      "content": "Which of the following methods is LEAST recommended for user research on a limited budget?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Conducting interviews with friends or family members",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Creating and distributing online questionnaires",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Hiring a professional user research agency.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Observing your own interaction with a website or app.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 166,
+      "questionIndex": 165,
+      "questionType": "Single Choice",
+      "content": "What potential issues can arise from inconsistent button state design across an interface?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Users may feel confused and unsure about whether buttons are clickable.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "It enhances visual variety and keeps users engaged by discovering different styles.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "It demonstrates the designer's creativity and willingness to experiment with different approaches.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Inconsistency has no impact on user experience as long as individual button states are clear.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 167,
+      "questionIndex": 166,
+      "questionType": "Single Choice",
+      "content": "Why is accessibility a crucial consideration in both aesthetics and functionality of UI/UX design?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To cater to a limited audience with specific needs and exclude others.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To ensure all users, regardless of their abilities, can effectively access and interact with the interface.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 168,
+      "questionIndex": 167,
+      "questionType": "Single Choice",
+      "content": "What design principle emphasizes providing users with control over their actions and undo options?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Visibility of system status.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Match between system and the real world.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "User control and freedom.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 169,
+      "questionIndex": 168,
+      "questionType": "Single Choice",
+      "content": "In Design Thinking, which step is responsible for outlining the project plan?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Empathize.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Define.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Ideate.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Prototype.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 170,
+      "questionIndex": 169,
+      "questionType": "Single Choice",
+      "content": "What design element visually communicates the intended purpose of a textfield?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The placeholder text within the field.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "The background color or border style of the field.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "The animation triggered when the field is interacted with.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 171,
+      "questionIndex": 170,
+      "questionType": "Single Choice",
+      "content": "Do generic website templates are a good choice for any type of content?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Yes.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "No.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 172,
+      "questionIndex": 171,
+      "questionType": "Single Choice",
+      "content": "The composition and structure of a user interface should always be prioritized over the individual design details of its elements.",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 173,
+      "questionIndex": 172,
+      "questionType": "Single Choice",
+      "content": "What is the impact of having a clear and consistent header design across all pages of a website?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "It confuses users by introducing unfamiliar navigation patterns.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "It reinforces brand recognition and user familiarity.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "It requires significant design effort and technical implementation.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "It has no influence on the overall user experience on the website.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 174,
+      "questionIndex": 173,
+      "questionType": "Single Choice",
+      "content": "How can using animation effectively in a UI/UX design enhance the user experience?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "By incorporating flashy and attention-grabbing animations regardless of context.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "By providing subtle visual cues and feedback to confirm user actions and progress.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "By distracting users from the actual functionality and content of the interface.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 175,
+      "questionIndex": 174,
+      "questionType": "Single Choice",
+      "content": "Body text of website should be at least:",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "8px",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "16px",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "24px",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "32px",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 176,
+      "questionIndex": 175,
+      "questionType": "Single Choice",
+      "content": "Users can effectively interact with an interface without any prior understanding of its functionality or visual cues.",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 177,
+      "questionIndex": 176,
+      "questionType": "Single Choice",
+      "content": "The increasing popularity of responsive design has led to a decline in the usage of sidebars in desktop website design.",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 178,
+      "questionIndex": 177,
+      "questionType": "Single Choice",
+      "content": "Which principle focuses on creating layouts that are balanced and visually pleasing, guiding the user's attention through the interface?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Usability",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Visual Hierarchy",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Minimalism",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Balance",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 179,
+      "questionIndex": 178,
+      "questionType": "Single Choice",
+      "content": "What key benefits do mood boards offer?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Providing precise technical specifications for UI elements.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Communicating the desired emotional tone and atmosphere of the app.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Demonstrating specific functionalities and user interactions.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Organizing and analyzing data collected from user testing sessions.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 180,
+      "questionIndex": 179,
+      "questionType": "Single Choice",
+      "content": "A website that uses consistent language, terminology, and layout across all pages aims to achieve the heuristic of:",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Aesthetic and minimalist design",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Consistency and standards",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Help and documentation",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Recognition rather than recall",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 181,
+      "questionIndex": 180,
+      "questionType": "Single Choice",
+      "content": "Why is aesthetic and minimalist design considered important for usability?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Because it increases visual complexity and keeps users engaged.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Because it prioritizes essential information and reduces cognitive load.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Because it makes the interface appear trendy and cutting-edge.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Because it allows for more creative freedom in design decisions.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 182,
+      "questionIndex": 181,
+      "questionType": "Single Choice",
+      "content": "Which state of a button is primarily concerned with providing visual feedback for user confirmation?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Normal state",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Hover state",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Activation state",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Inactive state",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 183,
+      "questionIndex": 182,
+      "questionType": "Single Choice",
+      "content": "The primary role of typography in user interfaces is to convey complex and specific ideas quickly and accurately.",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 184,
+      "questionIndex": 183,
+      "questionType": "Single Choice",
+      "content": "Which of the following is not a common visual indicator of a button state?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Hover effect: change in appearance when the cursor is over it.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Disabled state: indicating it's currently inactive.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Active state: showing it's been clicked or pressed.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Label: text describing the action triggered by the button.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 185,
+      "questionIndex": 184,
+      "questionType": "Single Choice",
+      "content": "When implementing a navigation system for a website, what key considerations emphasize when choosing the order of links within the primary navigation?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Aligning with the hierarchical structure of the website's content.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Prioritizing frequently accessed sections according to user research findings.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Maintaining visual balance and aesthetic appeal within the navigation bar layout.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Depends on the specific layout of the website.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 186,
+      "questionIndex": 185,
+      "questionType": "Single Choice",
+      "content": "What is the main key regarding the relationship between mobile and desktop UI design?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "They should always be designed separately with little overlap.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Mobile design should be the primary focus due to increasing mobile usage.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "The fundamental design principles like grid structure can be applied across both platforms.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Desktop screens offer more creative freedom for UI design compared to mobile.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 187,
+      "questionIndex": 186,
+      "questionType": "Single Choice",
+      "content": "What are the three main advantages of using typography as part of a branding system? (Check all that apply)",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Increased accessibility for users with visual impairments.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Improved clarity and hierarchy of information within the interface.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Creation of a unique visual identity and emotional connection with users.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Reduced development cost by eliminating the need for custom icons.",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Enhanced interactivity and responsiveness of UI elements.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 188,
+      "questionIndex": 187,
+      "questionType": "Single Choice",
+      "content": "When a client requests a specific design feature without clear justification, the designer's role is to:",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Immediately implement the feature as requested by the client.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Politely refuse the request due to potential user experience disruptions.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Understand the underlying motivation behind the request and propose alternative solutions.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Ignore the request and focus on design aspects aligned with identified user needs.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 189,
+      "questionIndex": 188,
+      "questionType": "Single Choice",
+      "content": "What element of UI design guides users through the interface and helps them accomplish tasks efficiently?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Color palette",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Typography",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Information architecture",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Iconography",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 190,
+      "questionIndex": 189,
+      "questionType": "Single Choice",
+      "content": "Whitespace primarily serves to fill empty space on a website and is generally considered a wasted design element.",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 191,
+      "questionIndex": 190,
+      "questionType": "Single Choice",
+      "content": "____ looks like the thing that it represents but ____ is not necessarily the case.",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Icon - Symbol",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Symbol - Icon",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 192,
+      "questionIndex": 191,
+      "questionType": "Single Choice",
+      "content": "Which of the following best describes the general focus of UI design?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Prioritizing usability and accessibility for diverse users.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Emphasizing user research and iterating based on feedback.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Highlighting design principles and visual aesthetics.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 193,
+      "questionIndex": 192,
+      "questionType": "Single Choice",
+      "content": "The UX process is a strict, linear sequence of steps that must be completed in a single, specific order.",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 194,
+      "questionIndex": 193,
+      "questionType": "Single Choice",
+      "content": "In visual design, what refers to the arrangement of elements to guide the user's attention and prioritize information?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Balance.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Negative Space.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Visual Hierarchy.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Color Scheme.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 195,
+      "questionIndex": 194,
+      "questionType": "Single Choice",
+      "content": "By offering keyboard shortcuts alongside mouse controls, designers can optimize the heuristic of:",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Error prevention",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Recognition rather than recall",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Flexibility and efficiency of use",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Dialogues",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 196,
+      "questionIndex": 195,
+      "questionType": "Single Choice",
+      "content": "The simplest form of website wireframe is:",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "High fidelity wireframe",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Medium fidelity wireframe",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Lo-fi wireframe",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Style guide",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 197,
+      "questionIndex": 196,
+      "questionType": "Single Choice",
+      "content": "Which of the following statements is correct?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Content maps should always be visually designed and aesthetically pleasing.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Content maps focus on clarity and structure, not visual design.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 198,
+      "questionIndex": 197,
+      "questionType": "Single Choice",
+      "content": "Images can work ____ because images accurately represent exactly what user is going to get when you click on them.",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "As content",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "As mood",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "As navigation",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "As part of the website interface system",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 199,
+      "questionIndex": 198,
+      "questionType": "Single Choice",
+      "content": "When conducting user research, which of the following techniques is best suited for exploring user attitudes and beliefs?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "A/B testing with quantitative data analysis.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "In-depth interviews with open-ended questions.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Usability testing with task completion tracking.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Online surveys with multiple-choice questions.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 200,
+      "questionIndex": 199,
+      "questionType": "Single Choice",
+      "content": "The increasing popularity of responsive design has led to a decline in the usage of sidebars in desktop website design.",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX WDU202c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

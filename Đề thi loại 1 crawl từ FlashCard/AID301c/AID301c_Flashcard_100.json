@@ -1,0 +1,2964 @@
+{
+  "id": "AID301c_Flashcard_100",
+  "title": "AID301c - Flashcard Ôn Tập (100 Câu)",
+  "subject": "Thiết kế sản phẩm TTNT",
+  "category": "AID301c",
+  "examType": "Flashcard",
+  "questionsList": [
+    {
+      "id": 1,
+      "questionIndex": 0,
+      "content": "Which of the following is NOT a factor that affects the time spent on data cleaning?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Team experience",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Data quality",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Project requirements",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Company size",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "questionIndex": 1,
+      "content": "When you use Watson Services like Watson Natural Language Understanding via the Python SDK, what are the three items that need to be saved?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "service version, service API key, service JSON map",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "service URL, service JSON map, service API key",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "service API key, service version, service URL",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "service version, service IAMAuthenticator, service URL",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "E. service API key, service URL, service IAMAuthenticator",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "questionIndex": 2,
+      "content": "Sparse matrices can be useful as a target destination for ETL, but what are the main caveats?",
+      "explanation": "Đáp án đúng: B E. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "You cannot convert directly from a numpy.array to any of the scipy.sparse matrices.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "NumPy linear algebra functions generally cannot be called directly.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Saving to disk is not possible directly from a scipy.sparse format.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The train test splits need to be performed by hand with scipy.sparse matrices.",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "E. It is difficult to print to screen scipy.sparse matrices directly.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "questionIndex": 3,
+      "content": "What is the purpose of kubectl in kubernetes?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Automatic logging of requests and responses",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "A tool that makes it easy to run a single-node cluster locally",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "The primary node agent on each node, responsible for the processes running on that machine",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The CLI for communicating with the kubernetes cluster",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "questionIndex": 4,
+      "content": "Câu 39",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "What is a key principle of design thinking mentioned in the course?",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Data collection",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Observation and Reflection",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Rapid prototyping",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "User testing",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "questionIndex": 5,
+      "content": "Which Python package supports spawning processes for code optimization?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "threading",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "subprocess",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "multiprocessing",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "numpy",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "questionIndex": 6,
+      "content": "Which country had the most total revenue when you summed across all purchases?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Singapore",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "United Kingdom",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "USA",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "EIRE",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "E. Germany",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "questionIndex": 7,
+      "content": "Which of the following classifiers is inherently designed for multiclass classification?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Linear Regression",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Naïve Bayes",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "K-Means Clustering",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Decision Trees (in binary mode)",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "questionIndex": 8,
+      "content": "Which library in Python is commonly used for reading and writing CSV files?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "NumPy",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Matplotlib",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Pandas",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "SciPy",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "questionIndex": 9,
+      "content": "What is a key principle of design thinking mentioned in the course?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Data collection",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Observation and Reflection",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Rapid prototyping",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "User testing",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "questionIndex": 10,
+      "content": "Thinking with the lens of the scientific process, what would your next steps be if you wanted to decide where to open the next store for your sled business?",
+      "explanation": "Đáp án đúng: B C D. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Start pulling sales and other data to create a business viability assessment for Vermont.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Gather more data and repeat the snowfall experiment.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Gather different data say snowfall by county and repeat the experiment.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Start a business viability assessment for all three states.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "questionIndex": 11,
+      "content": "The .fit_transform method corresponds to which scikit-learn interface(s)?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Transformer, Estimator, Predictor",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Transformer, Estimator",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Estimator, Predictor",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Transformer",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "E. Transformer, Predictor",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "questionIndex": 12,
+      "content": "There are many ways to carry out statistical inference. Which one method of the following is NOT used to compute estimates in the context of statistical inference.",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Null Hypothesis Significance Testing (NHST)",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Maximum Likelihood Estimation (MLE)",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Markov Chain Monte Carlo (MCMC)",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Expectation Maximization (EM)",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "E. Simulation via Permutations",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "questionIndex": 13,
+      "content": "The decision tree base models in random forests individually have high bias and low variance.",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "questionIndex": 14,
+      "content": "When you use Watson Services like Watson Natural Language Understanding via the Python SDK, what are the three items that need to be saved? These items are generally saved on a local machine and included in scripts and notebooks as imported variables.",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "service version, service API key, service JSON map",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "service URL, service JSON map, service API key",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "service API key, service version, service URL",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "service version, service IAMAuthenticator, service URL",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "E. service API key, service URL, service IAMAuthenticator",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "questionIndex": 15,
+      "content": "There are many ways to carry out statistical inference. Which one method of the following is NOT used to compute estimates in the context of statistical inference?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Null Hypothesis Significance Testing (NHST)",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Maximum Likelihood Estimation (MLE)",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Markov Chain Monte Carlo (MCMC)",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Expectation Maximization (EM)",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "E. Simulation via Permutations",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "questionIndex": 16,
+      "content": "When embarking on a data science project, why do you ultimately want to format your data so that it can be housed in something like a Pandas DataFrame or NumPy Array?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "DataFrames/Arrays most closely resemble tables in relational databases.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "DataFrames/Arrays are the only structures in Python capable of holding significant amounts of data.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Nearly all modeling algorithms take input data in a tabular format analogous to format of DataFrame/Arrays.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "All of the answers.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "questionIndex": 17,
+      "content": "What is a key reason for using existing NLP APIs instead of building models from scratch?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "They are always more accurate",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "They require less time and resources",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "They are easier to understand",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "They eliminate the need for data",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "questionIndex": 18,
+      "content": "Which of the following is NOT a component of the confusion matrix?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True Negatives (TN)",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False Positives (FP)",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "True Positives (TP)",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Average Score (AS)",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "E. False Negatives (FN)",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "questionIndex": 19,
+      "content": "Sparse matrices can be useful as a target destination for ETL, but what are the main caveats (choose one or more)?",
+      "explanation": "Đáp án đúng: B, E. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "You cannot convert directly from a numpy.array to any of the scipy.sparse matrices",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "NumPy linear algebra functions generally cannot be called directly",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Saving to disk is not possible directly from a scipy.sparse format",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The train test splits need to be performed by hand with scipy.sparse matrices",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "E. It is difficult to print to screen scipy.sparse matrices directly",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "questionIndex": 20,
+      "content": "What is a key reason for using existing NLP APIs instead of building models from scratch?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "They are always more accurate.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "They require less time and resources.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "They are easier to understand.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "They eliminate the need for data.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "questionIndex": 21,
+      "content": "In the context of NLP, what does sentiment analysis refer to?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Analyzing the structure of sentences",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Determining the emotional tone behind a series of words",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Translating text from one language to another",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Summarizing large documents",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "questionIndex": 22,
+      "content": "Which method is recommended for handling missing values in numerical data?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Convert missing values to a flag.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Use imputation techniques.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Delete the entire dataset.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Replace with a random value.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "questionIndex": 23,
+      "content": "Which of the following is a key aspect of applying data transformations?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Data collection",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Iteration",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Data visualization",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Data storage",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "questionIndex": 24,
+      "content": "When you worked on model deployment case study, which modification to the ALS algorithm had the largest effect on model performance?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The explicit training vs implicit training comparison",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "The lambda or regularization parameter",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "The epsilon or scale parameter",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The I1 vs I2 comparison",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "questionIndex": 25,
+      "content": "When you worked on model deployment case study, which modification to the ALS algorithm had the largest effect on model performance?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The explicit training vs implicit training comparison.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "The lambda or regularization parameter.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "The epsilon or scale parameter.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The I1 vs I2 comparison.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "questionIndex": 26,
+      "content": "Which command is used to install the Watson Developer Cloud Python SDK?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "pip install ibm-watson",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "pip install --upgrade ibm-watson",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "install ibm-watson",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "upgrade ibm-watson",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "questionIndex": 27,
+      "content": "Which process model is known for its open standard and has been around since 1996?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "OSEMN",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "CRISP-DM",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Design Thinking",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Agile",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "questionIndex": 28,
+      "content": "Why is granular data preferred over summary level data?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "It is easier to collect",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "It allows for more detailed analysis",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "It takes less time to process",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "It is more visually appealing",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "questionIndex": 29,
+      "content": "What is the primary purpose of documenting your data before starting a project?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To impress stakeholders",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To streamline the modeling process and ensure data quality",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To increase project costs",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To avoid using Python",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "questionIndex": 30,
+      "content": "A Kubernetes pod can contain multiple kubernetes deployments",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "questionIndex": 31,
+      "content": "What is the first stage of the design thinking process?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Ideate",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Empathize",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Prototype",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Test",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "questionIndex": 32,
+      "content": "In the script example-spark-submit.sh, what does the #!/bin/bash line indicate?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "It specifies the script's name.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "It indicates the script is written in Python.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "It tells the system to use the Bash shell to execute the script.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "It is a comment and has no effect.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "questionIndex": 33,
+      "content": "Which country had the most total revenue when you summed across all purchases?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Singapore",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "United Kingdom",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "USA",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "EIRE",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "E. Germany",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "questionIndex": 34,
+      "content": "What is the purpose of kubectl in Kubernetes?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Automatic logging of requests and responses.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "A tool that makes it easy to run a single-node cluster locally.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "The primary node agent on each node, responsible for the processes running on that machine.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The CLI for communicating with the Kubernetes cluster.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "questionIndex": 35,
+      "content": "Which of the following is NOT a component of the confusion matrix?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True Negatives (TN)",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False Positives (FP)",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "True Positives (TP)",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Average Score (AS)",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "E. False Negatives (FN)",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "questionIndex": 36,
+      "content": "When you compiled the JSON files into a single DataFrame or NumPy array, about how many days did the entire range of dates span?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "400",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "450",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "500",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "600",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "E. 650",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "questionIndex": 37,
+      "content": "If you have data with a large number of features and you are sure that it will take some time to train and tune the model, which approach is LEAST likely to result in a speed improvement during grid-searching?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "In your pipeline use variance thresholding to limit the number of features",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Use the Shuffle and split form of cross-validation",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Use a randomized grid search form of cross validation",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Randomly subset the data",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "E. Use PCA to reduce the dimensionality of the data before training",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "questionIndex": 38,
+      "content": "What will the management team want to know after the sales data is released?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The number of products sold.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "If the teams are well-optimized based on historical sales data.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "The marketing budget for each team.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The demographics of the customers.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "questionIndex": 39,
+      "content": "A decision tree classifier is useful as a model for the AAVAIl subscriber churn data.",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "questionIndex": 40,
+      "content": "What type of data structures are used as standardized input to the interfaces in scikit-learn?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Lists and dictionaries",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "DataFrames and Series",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "NumPy arrays and SciPy sparse matrices",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Strings and tuples",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "questionIndex": 41,
+      "content": "Which command-line tool is used to interact with the Kubernetes API?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Kubelet",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Kubectl",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Docker",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Helm",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "questionIndex": 42,
+      "content": "What is the first step in setting up the Watson Developer Cloud Python SDK?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Install the SDK",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Create an IBM Cloud account",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Create a resource for Natural Language Understanding",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Download the tutorial files",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "questionIndex": 43,
+      "content": "For given input lists: a,b,c and 1,2,3. Create a dictionary from two input lists",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "def make_dict(lst1,lst2): res = {}; for key,value in zip(lst1,lst2): res[key] = value; return res",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "def make_dict(lst1,lst2): res = {}; res[lst1] = lst2; return res",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "def make_dict(lst1,lst2): res = []; for key,value in (lst1,lst2): res[key] = value; return res",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "def make_dict(lst1,lst2): res = []; for key,value in zip(lst1,lst2): res[key] = value; return res",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "questionIndex": 44,
+      "content": "The .fit_transform method corresponds to which scikit-learn interface(s)?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Transformer, Estimator, Predictor",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Transformer, Estimator",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Estimator, Predictor",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Transformer",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "E. Transformer, Predictor",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "questionIndex": 45,
+      "content": "In the script example-spark-submit.sh, what does the #!/bin/bash line indicate?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "It specifies the script's name",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "It indicates the script is written in Python",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "It tells the system to use the Bash shell to execute the script",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "It is a comment and has no effect",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "questionIndex": 46,
+      "content": "Which of the following classifiers is inherently designed for multiclass classification?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Linear Regression",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Naïve Bayes",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "K-Means Clustering",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Decision Trees (in binary mode)",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "questionIndex": 47,
+      "content": "What is a common issue with using accuracy as a metric for imbalanced classes?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "It is always accurate.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "It can be misleading.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "It is the only metric available.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "It does not consider false positives.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "questionIndex": 48,
+      "content": "Which method is recommended for handling missing values in numerical data?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Convert missing values to a flag",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Use imputation techniques",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Delete the entire dataset",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Replace with a random value",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "questionIndex": 49,
+      "content": "Processing the corpus with the provided lemmatize_document reduces the total number of tokens to what percentage of the original?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "10-15%",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "20-35%",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "45-50%",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "70-75%",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "E. 85-95%",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "questionIndex": 50,
+      "content": "Docker images are the basis of containers. It is possible to pull an image from the registry and ask the Docker client to run a container based on that image. Some images are official while many others are user defined.",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "questionIndex": 51,
+      "content": "In the context of NLP, what does sentiment analysis refer to?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Analyzing the structure of sentences",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Determining the emotional tone behind a series of words",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Translating text from one language to another",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Summarizing large documents",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "questionIndex": 52,
+      "content": "In the context of the AI workflow presented in these materials which of the following is not an example of a valid feedback loop?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Trying different data transformations on a given model.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Returning to the data collection stage from transformations to reduce the number of transforms.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Performing EDA on the data after a model has been deployed and data have been logged.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Moving from the business opportunity and data collection to model iteration.",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "E. Returning to discuss the business opportunity after a model has been deployed.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "questionIndex": 53,
+      "content": "Which process model is known for its open standard and has been around since 1996?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "OSEMN",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "CRISP-DM",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Design Thinking",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Agile",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "questionIndex": 54,
+      "content": "Which Python package can be used to estimate test coverage?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "unittest",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "coverage",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "pytest",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "flask",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "questionIndex": 55,
+      "content": "A Kubernetes pod can contain multiple kubernetes deployments.",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "questionIndex": 56,
+      "content": "The decision tree base models in random forests individually have high bias and low variance.",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "questionIndex": 57,
+      "content": "What is a poisoning attack?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "An attack that occurs during model deployment.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "An attack that injects malicious data into the training set.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "An attack that modifies the model's architecture.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "An attack that occurs only at test time.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "questionIndex": 58,
+      "content": "What does the term \"trunk\" refer to in the context of Continuous Integration?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "A type of software bug",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The main branch of code where all changes are merged",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "A deployment strategy",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "A testing framework",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "questionIndex": 59,
+      "content": "What is the primary purpose of documenting your data before starting a project?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To impress stakeholders",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To streamline the modeling process and ensure data quality",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To increase project costs",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To avoid using Python",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "questionIndex": 60,
+      "content": "What is the primary purpose of dimensionality reduction in data science?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To increase the number of features",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To simplify models and reduce computation time",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To eliminate all data points",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To create more complex models",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "questionIndex": 61,
+      "content": "Thinking with the lens of the scientific process, what would your next steps be if you wanted to decide where to open the next store for your sled business?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Start pulling sales and other data to create a business viability assessment for Vermont",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Gather more data and repeat the snowfall experiment",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Gather different data say snowfall by county and repeat the experiment",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Start a business viability assessment for all three states",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "questionIndex": 62,
+      "content": "What is the first step in setting up the Watson Developer Cloud Python SDK?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Install the SDK.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Create an IBM Cloud account.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Create a resource for Natural Language Understanding.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Download the tutorial files.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "questionIndex": 63,
+      "content": "Which Python package can be used to estimate test coverage?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "unittest",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "coverage",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "pytest",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "flask",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "questionIndex": 64,
+      "content": "Docker images are the basis of containers. It is possible to pull an image from the registry and ask the Docker client to run a container based on that image. Some images are official while many others are user defined.",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "questionIndex": 65,
+      "content": "What is the purpose of profiling in code optimization?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To write new algorithms from scratch",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To identify which parts of the code are bottlenecks",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To increase the number of processor cores",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To reduce the amount of data used",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "questionIndex": 66,
+      "content": "Which of the following is the least valid statement when it comes to dashboards?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Dashboards are an easy way to share summaries and findings.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Dashboards have interactive functionality that helps create a rich experience for the user.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Dashboards are generally used after several iterations of the AI workflow.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Dashboards are quick way to create portable simple plots.",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "E. Dashboards can be used to tell the story of investigative visualizations.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "questionIndex": 67,
+      "content": "What is the community package of the Docker Engine called?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "docker-io",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "docker-ce",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "docker-compose",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "docker-toolbox",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "questionIndex": 68,
+      "content": "Docker containers run a private file system that is isolated from the host and other containers. What is the suggested way to access notebooks and scripts from within the container?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "tmpfs mount",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "use a named pipe",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "bind mounts",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "GitHub",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "E. volumes",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "questionIndex": 69,
+      "content": "Which command is used to install the Watson Developer Cloud Python SDK?",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "pip install ibm-watson",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "pip install --upgrade ibm-watson",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "install ibm-watson",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "upgrade ibm-watson",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "questionIndex": 70,
+      "content": "What is the primary purpose of dimensionality reduction in data science?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To increase the number of features",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To simplify models and reduce computation time",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To eliminate all data points",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To create more complex models",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "questionIndex": 71,
+      "content": "Which of the following is the least valid statement when it comes to dashboards?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Dashboards are an easy way to share summaries and findings",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Dashboards have interactive functionality that helps create a rich experience for the user",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Dashboards are generally used after serveral iterations of the AI workflow",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Dashboards are quick way to create portable simple plots",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "E. Dashboards can be used to tell the story of investigative visualizations",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "questionIndex": 72,
+      "content": "Processing the corpus with the provided lemmatize_document reduces the total number of tokens to what percentage of the original?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "10-15%",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "20-35%",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "45-50%",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "70-75%",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "E. 85-95%",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "questionIndex": 73,
+      "content": "If you have data with a large number of features and you are sure that it will take some time to train and tune the model, which approach is LEAST likely to result in a speed improvement during grid-searching?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "In your pipeline use variance thresholding to limit the number of features.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Use the Shuffle and split form of cross-validation.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Use a randomized grid search form of cross validation.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Randomly subset the data.",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "E. Use PCA to reduce the dimensionality of the data before training.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "questionIndex": 74,
+      "content": "A decision tree classifier is useful as a model for the AAVAIl subscriber churn data.",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "questionIndex": 75,
+      "content": "What is the purpose of profiling in code optimization?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To write new algorithms from scratch.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To identify which parts of the code are bottlenecks.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To increase the number of processor cores.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To reduce the amount of data used.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "questionIndex": 76,
+      "content": "When you compiled the JSON files into a single DataFrame or NumPy array, about how many days did the entire range of dates span?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "400",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "450",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "500",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "600",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "E. 650",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "questionIndex": 77,
+      "content": "Which of the following is a common challenge when optimizing code for machine learning models?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Lack of available data.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Difficulty in improving training time for large models.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Inability to use multiple GPUs.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Limited programming languages available.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "questionIndex": 78,
+      "content": "What is a common issue with using accuracy as a metric for imbalanced classes?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "It is always accurate.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "It can be misleading.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "It is the only metric available.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "It does not consider false positives.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "questionIndex": 79,
+      "content": "What is a poisoning attack?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "An attack that occurs during model deployment",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "An attack that injects malicious data into the training set",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "An attack that modifies the model's architecture",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "An attack that occurs only at test time",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "questionIndex": 80,
+      "content": "In the context of the AI workflow presented in these materials which of the following is not an example of a valid feedback loop?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Trying different data transformations on a given model",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Returning to the data collection stage from transformations to reduce the number of transforms",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Performing EDA on the data after a model has been deployed and data have been logged",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Moving from the business opportunity and data collection to model iteration",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "E. Returning to discuss the business opportunity after a model has been deployed",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "questionIndex": 81,
+      "content": "What will the management team want to know after the sales data is released?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The number of products sold",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "If the teams are well-optimized based on historical sales data",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "The marketing budget for each team",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The demographics of the customers",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "questionIndex": 82,
+      "content": "What type of data structures are used as standardized input to the interfaces in scikit-learn?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Lists and dictionaries",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "DataFrames and Series",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "NumPy arrays and SciPy sparse matrices",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Strings and tuples",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "questionIndex": 83,
+      "content": "Which library in Python is commonly used for reading and writing CSV files?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "NumPy",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Matplotlib",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Pandas",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "SciPy",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "questionIndex": 84,
+      "content": "Which of the following neural network architectures are most-commonly used for time-series analysis?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Multi-layer perceptron",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Recurrent neural networks",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Transfer learning",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Convolutional neural network",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "E. Autoencoders",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "questionIndex": 85,
+      "content": "When embarking on a data science project, why do you ultimately want to format your data so that it can be housed in something like a Pandas DataFrame or NumPy Array?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "DataFrames/Arrays most closely resemble tables in relational databases.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "DataFrames/Arrays are the only structures in Python capable of holding significant amounts of data.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Nearly all modeling algorithms take input data in a tabular format analogous to format of DataFrame/Arrays.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "All of the answers",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "questionIndex": 86,
+      "content": "Docker containers run a private file system that is isolated from the host and other containers. What is the suggested way to access notebooks and scripts from within the container?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "tmpfs mount",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "use a named pipe",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "bind mounts",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "GitHub",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "E. volumes",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "questionIndex": 87,
+      "content": "Which Python package supports spawning processes for code optimization?",
+      "explanation": "Đáp án đúng: C. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "threading",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "subprocess",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "multiprocessing",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "numpy",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "questionIndex": 88,
+      "content": "Which of the following is a common challenge when optimizing code for machine learning models?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Lack of available data",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Difficulty in improving training time for large models",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Inability to use multiple GPUs",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Limited programming languages available",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "questionIndex": 89,
+      "content": "Which of the following is NOT a factor that affects the time spent on data cleaning?",
+      "explanation": "Đáp án đúng: D. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Team experience",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Data quality",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Project requirements",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Company size",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "questionIndex": 90,
+      "content": "Which country had the most total revenue when you summed across all purchases?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Singapore",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "United Kingdom",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "USA",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "EIRE",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "E. Germany",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "questionIndex": 91,
+      "content": "Why is granular data preferred over summary level data?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "It is easier to collect.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "It allows for more detailed analysis.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "It takes less time to process.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "It is more visually appealing.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "questionIndex": 92,
+      "content": "What is the first stage of the design thinking process?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Ideate",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Empathize",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Prototype",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Test",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "questionIndex": 93,
+      "content": "Which command-line tool is used to interact with the Kubernetes API?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Kubelet",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Kube CTL",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Docker",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Helm",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "questionIndex": 94,
+      "content": "Which of the following neural network architectures are most-commonly used for time-series analysis?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Multi-layer perceptron",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Recurrent neural networks",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Transfer learning",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Convolutional neural network",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "E. Autoencoders",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "questionIndex": 95,
+      "content": "What is the purpose of the classification_report in sklearn?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To visualize data",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To summarize model performance",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To preprocess data",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To train a model",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "questionIndex": 96,
+      "content": "What is the purpose of the classification_report in sklearn?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To visualize data",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To summarize model performance",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To preprocess data",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To train a model",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "questionIndex": 97,
+      "content": "What is the community package of the Docker Engine called?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "docker-io",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "docker-ce",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "docker-compose",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "docker-toolbox",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "questionIndex": 98,
+      "content": "For given input lists: a,b,c and 1,2,3 Create a dictionary from two input lists",
+      "explanation": "Đáp án đúng: A. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "def make_dict(lst1,lst2):",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "res = {}",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "for key,value in zip(lst1,lst2):",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "res[key] = value",
+          "isCorrect": false
+        },
+        {
+          "id": 6,
+          "content": "return res",
+          "isCorrect": false
+        },
+        {
+          "id": 7,
+          "content": "",
+          "isCorrect": false
+        },
+        {
+          "id": 8,
+          "content": "def make_dict(lst1,lst2):",
+          "isCorrect": false
+        },
+        {
+          "id": 9,
+          "content": "res = {}",
+          "isCorrect": false
+        },
+        {
+          "id": 10,
+          "content": "res[lst1] = lst2",
+          "isCorrect": false
+        },
+        {
+          "id": 11,
+          "content": "return res",
+          "isCorrect": false
+        },
+        {
+          "id": 12,
+          "content": "",
+          "isCorrect": false
+        },
+        {
+          "id": 13,
+          "content": "def make_dict(lst1,lst2):",
+          "isCorrect": false
+        },
+        {
+          "id": 14,
+          "content": "res = []",
+          "isCorrect": false
+        },
+        {
+          "id": 15,
+          "content": "for key,value in (lst1,lst2):",
+          "isCorrect": false
+        },
+        {
+          "id": 16,
+          "content": "res[key] = value",
+          "isCorrect": false
+        },
+        {
+          "id": 17,
+          "content": "return res",
+          "isCorrect": false
+        },
+        {
+          "id": 18,
+          "content": "",
+          "isCorrect": false
+        },
+        {
+          "id": 19,
+          "content": "def make_dict(lst1,lst2):",
+          "isCorrect": false
+        },
+        {
+          "id": 20,
+          "content": "res = []",
+          "isCorrect": false
+        },
+        {
+          "id": 21,
+          "content": "for key,value in zip(lst1,lst2):",
+          "isCorrect": false
+        },
+        {
+          "id": 22,
+          "content": "res[key] = value",
+          "isCorrect": false
+        },
+        {
+          "id": 23,
+          "content": "return res",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "questionIndex": 99,
+      "content": "What does the term \"trunk\" refer to in the context of Continuous Integration?",
+      "explanation": "Đáp án đúng: B. (Trích xuất từ Flashcard FBOX AID301c)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "A type of software bug.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The main branch of code where all changes are merged.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "A deployment strategy.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "A testing framework.",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}
