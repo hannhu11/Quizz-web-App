@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Clock, ArrowLeft, CheckCircle2, XCircle, AlertCircle, Trophy, RotateCcw, ShieldCheck, Star, Check, X } from 'lucide-react';
-import { saveQuizProgress, getStarredQuestions, toggleStarQuestion } from '../data/quizDataLoader';
+import { saveQuizProgress, getStarredQuestions, toggleStarQuestion, getQuestionTypeInfo } from '../data/quizDataLoader';
 import confetti from 'canvas-confetti';
 
 export default function ExamMode({ quiz, testConfig, onBack }) {

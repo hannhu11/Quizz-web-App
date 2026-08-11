@@ -194,6 +194,12 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - **Đi thẳng vào Bản Chất Tri Thức:** Viết lại lời giải thích đi trực tiếp vào căn cứ lý luận, mốc lịch sử, nguyên lý khoa học và phân tích lý do tại sao các phương án nhiễu sai theo giáo trình chuẩn FPT của 6 môn học.
 - **Trạng Thái Deploy:** Đã build Web production và deploy lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 4025152).
 
+### 🐛 Cập Nhật Đợt 7: Sửa Lỗi Trắng Màn Hình (White Screen Fix) Khi Bấm Nút Thi Thử:
+- **Nguyên Nhân:** Trong tệp `ExamMode.jsx`, câu lệnh import ở đầu file thiếu hàm `getQuestionTypeInfo`, dẫn đến `ReferenceError: getQuestionTypeInfo is not defined` làm React bị crash khi người dùng vào chế độ Thi Thử.
+- **Biện Pháp Khắc Phục:** Thêm `getQuestionTypeInfo` vào danh sách import từ `../data/quizDataLoader` trong `ExamMode.jsx`.
+- **Trạng Thái Deploy:** Đã build lại Web production và deploy lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 4027213).
+
+
 
 
 
