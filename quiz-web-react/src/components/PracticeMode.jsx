@@ -6,31 +6,48 @@ import { toggleStarQuestion, getStarredQuestions, saveQuizProgress, setQuizCardS
 export default function PracticeMode({ quiz, onBack }) {
   const questions = quiz.questions || [];
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedAnswerId, setSelectedAnswerId] = useState(null);
+  const [selectedAnswerIds, setSelectedAnswerIds] = useState([]); // Array for multi-select support
   const [isAnswered, setIsAnswered] = useState(false);
   const [score, setScore] = useState(0);
   const [isCompleted, setIsCompleted] = useState(false);
 
   const [starredIds, setStarredIds] = useState(() => {
-    return new Set(getStarredQuestions().map(s => s.questionId));
+    return new Set(getStarredQuestions(quiz.id).map(s => s.questionId));
   });
 
   const currentQ = questions[currentIndex] || {};
   const isStarred = starredIds.has(currentQ.id);
 
+  const correctAnswers = (currentQ.answers || []).filter(a => a.isCorrect);
+  const isMultiSelect = correctAnswers.length > 1;
+
   // Sync Starred State
   useEffect(() => {
     const checkStar = () => {
-      setStarredIds(new Set(getStarredQuestions().map(s => s.questionId)));
+      setStarredIds(new Set(getStarredQuestions(quiz.id).map(s => s.questionId)));
     };
     window.addEventListener('quizzlet_star_updated', checkStar);
     return () => window.removeEventListener('quizzlet_star_updated', checkStar);
-  }, []);
+  }, [quiz.id]);
 
-  const handleSelectOption = (answerId, isCorrect) => {
+  const handleToggleOptionSelect = (answerId) => {
     if (isAnswered) return;
-    setSelectedAnswerId(answerId);
+    if (isMultiSelect) {
+      setSelectedAnswerIds(prev =>
+        prev.includes(answerId) ? prev.filter(id => id !== answerId) : [...prev, answerId]
+      );
+    } else {
+      // Single selection: evaluate immediately
+      setSelectedAnswerIds([answerId]);
+      evaluateAnswer([answerId]);
+    }
+  };
+
+  const evaluateAnswer = (selectedIds) => {
     setIsAnswered(true);
+    const correctIds = correctAnswers.map(a => a.id);
+    const isCorrect = correctIds.length === selectedIds.length &&
+      correctIds.every(id => selectedIds.includes(id));
 
     if (isCorrect) {
       setScore(prev => prev + 1);
@@ -44,10 +61,15 @@ export default function PracticeMode({ quiz, onBack }) {
     }
   };
 
+  const handleConfirmMultiSubmit = () => {
+    if (isAnswered || selectedAnswerIds.length === 0) return;
+    evaluateAnswer(selectedAnswerIds);
+  };
+
   const handleNextQuestion = () => {
     if (currentIndex + 1 < questions.length) {
       setCurrentIndex(prev => prev + 1);
-      setSelectedAnswerId(null);
+      setSelectedAnswerIds([]);
       setIsAnswered(false);
     } else {
       setIsCompleted(true);
@@ -57,7 +79,7 @@ export default function PracticeMode({ quiz, onBack }) {
 
   const handleRestart = () => {
     setCurrentIndex(0);
-    setSelectedAnswerId(null);
+    setSelectedAnswerIds([]);
     setIsAnswered(false);
     setScore(0);
     setIsCompleted(false);
@@ -173,9 +195,16 @@ export default function PracticeMode({ quiz, onBack }) {
       <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-warm-border dark:border-slate-800 shadow-soft space-y-6">
         <div className="flex items-start justify-between gap-4">
           <div className="space-y-1">
-            <span className="text-xs font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-2.5 py-0.5 rounded-md border border-amber-200/80 dark:border-amber-800 inline-block">
-              Câu hỏi #{currentQ.questionIndex !== undefined ? currentQ.questionIndex + 1 : currentIndex + 1}
-            </span>
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="text-xs font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-2.5 py-0.5 rounded-md border border-amber-200/80 dark:border-amber-800 inline-block">
+                Câu hỏi #{currentQ.questionIndex !== undefined ? currentQ.questionIndex + 1 : currentIndex + 1}
+              </span>
+              {isMultiSelect && (
+                <span className="text-xs font-bold text-purple-800 dark:text-purple-300 bg-purple-50 dark:bg-purple-950/60 px-2.5 py-0.5 rounded-md border border-purple-200 dark:border-purple-800 inline-block">
+                  Multiple Choice (Chọn tất cả đáp án đúng)
+                </span>
+              )}
+            </div>
             <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-slate-100 leading-relaxed pt-2">
               {currentQ.content}
             </h3>
@@ -193,7 +222,7 @@ export default function PracticeMode({ quiz, onBack }) {
         {/* Options List */}
         <div className="space-y-3 pt-2">
           {(currentQ.answers || []).map((answer, aIdx) => {
-            const isSelected = selectedAnswerId === answer.id;
+            const isSelected = selectedAnswerIds.includes(answer.id);
             let btnStyle = 'bg-warm-bg/70 dark:bg-slate-800/60 border-warm-border dark:border-slate-700 text-slate-900 dark:text-slate-100 hover:border-amber-400';
 
             if (isAnswered) {
@@ -204,17 +233,21 @@ export default function PracticeMode({ quiz, onBack }) {
               } else {
                 btnStyle = 'bg-warm-bg/40 dark:bg-slate-800/30 border-warm-border/40 dark:border-slate-800 opacity-60';
               }
+            } else if (isSelected) {
+              btnStyle = 'bg-amber-100 dark:bg-amber-950/80 border-amber-400 dark:border-amber-700 text-amber-950 dark:text-amber-200 font-bold shadow-xs';
             }
 
             return (
               <button
                 key={answer.id || aIdx}
                 disabled={isAnswered}
-                onClick={() => handleSelectOption(answer.id, answer.isCorrect)}
+                onClick={() => handleToggleOptionSelect(answer.id)}
                 className={`w-full p-4 rounded-2xl border text-left text-xs sm:text-sm transition-all duration-200 flex items-start gap-3 leading-relaxed break-words whitespace-pre-wrap ${btnStyle}`}
               >
-                <span className="font-extrabold shrink-0 mt-0.5">
-                  {String.fromCharCode(65 + aIdx)}.
+                <span className={`w-6 h-6 ${isMultiSelect ? 'rounded-md' : 'rounded-full'} flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 border ${
+                  isSelected ? 'bg-amber-500 text-white border-amber-600' : 'bg-warm-hover dark:bg-slate-800 text-warm-slate dark:text-slate-300 border-warm-border/60 dark:border-slate-700'
+                }`}>
+                  {isMultiSelect ? (isSelected ? '✓' : String.fromCharCode(65 + aIdx)) : String.fromCharCode(65 + aIdx)}
                 </span>
                 <span className="flex-1">{answer.content}</span>
 
@@ -229,6 +262,19 @@ export default function PracticeMode({ quiz, onBack }) {
           })}
         </div>
 
+        {/* Multi-Select Confirm Button */}
+        {isMultiSelect && !isAnswered && (
+          <div className="text-right pt-2">
+            <button
+              disabled={selectedAnswerIds.length === 0}
+              onClick={handleConfirmMultiSubmit}
+              className="px-6 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 text-white font-bold text-xs sm:text-sm shadow-xs transition-all active:scale-95 inline-flex items-center gap-2"
+            >
+              Xác nhận đáp án ({selectedAnswerIds.length}) <CheckCircle className="w-4 h-4" />
+            </button>
+          </div>
+        )}
+
         {/* Explanation & Correct Answer Box */}
         <AnimatePresence>
           {isAnswered && (
@@ -242,8 +288,13 @@ export default function PracticeMode({ quiz, onBack }) {
                 <span className="font-bold text-emerald-800 dark:text-emerald-300 block mb-1">
                   ✓ Đáp án đúng:
                 </span>
-                <p className="font-extrabold text-emerald-950 dark:text-emerald-100 text-sm">
-                  {correctAnswer ? correctAnswer.content : 'Chưa có đáp án'}
+                <p className="font-extrabold text-emerald-950 dark:text-emerald-100 text-sm whitespace-pre-wrap">
+                  {correctAnswers.length > 1
+                    ? correctAnswers.map(ca => {
+                        const cIdx = (currentQ.answers || []).indexOf(ca);
+                        return cIdx >= 0 ? `${String.fromCharCode(65 + cIdx)}. ${ca.content}` : ca.content;
+                      }).join('\n')
+                    : (correctAnswers[0]?.content || 'Chưa có đáp án')}
                 </p>
               </div>
 

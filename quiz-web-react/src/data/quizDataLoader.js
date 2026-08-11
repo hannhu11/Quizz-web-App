@@ -428,8 +428,7 @@ export function fetchQuizById(quizId) {
 }
 
 // LocalStorage Progress Tracker
-const STORAGE_KEY_PROGRESS = 'quizzlet_user_progress_v1';
-const STORAGE_KEY_STARS = 'quizzlet_starred_questions_v1';
+const STORAGE_KEY_PROGRESS = 'quizzlet_study_progress_v1';
 
 export function getUserProgress() {
   try {
@@ -464,10 +463,24 @@ export function saveQuizProgress(quizId, score, total, mode) {
   }
 }
 
-export function getStarredQuestions() {
+export const STORAGE_KEY_STARS = 'quiz_starred_questions_v2';
+const STORAGE_KEY_STARS_V1 = 'quizzlet_starred_questions_v1';
+
+export function getStarredQuestions(quizId) {
   try {
-    const data = localStorage.getItem(STORAGE_KEY_STARS);
-    return data ? JSON.parse(data) : [];
+    let data = localStorage.getItem(STORAGE_KEY_STARS);
+    if (!data) {
+      const v1Data = localStorage.getItem(STORAGE_KEY_STARS_V1);
+      if (v1Data) {
+        data = v1Data;
+        localStorage.setItem(STORAGE_KEY_STARS, v1Data);
+      }
+    }
+    const list = data ? JSON.parse(data) : [];
+    if (quizId) {
+      return list.filter(s => s.quizId === quizId);
+    }
+    return list;
   } catch (e) {
     return [];
   }
@@ -476,10 +489,10 @@ export function getStarredQuestions() {
 export function toggleStarQuestion(questionId, quizId, questionData, questionIndex = 0) {
   try {
     const stars = getStarredQuestions();
-    const index = stars.findIndex(s => s.questionId === questionId);
+    const index = stars.findIndex(s => s.questionId === questionId && s.quizId === quizId);
     let updated;
     if (index >= 0) {
-      updated = stars.filter(s => s.questionId !== questionId);
+      updated = stars.filter(s => !(s.questionId === questionId && s.quizId === quizId));
     } else {
       const quizInfo = normalizedQuizCache.get(quizId) || QUIZ_MANIFEST.find(q => q.id === quizId) || {};
       updated = [

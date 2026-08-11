@@ -225,6 +225,19 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - **Khóa Cứng Mã Nguồn Frontend:** Khôi phục nguyên trạng toàn bộ 6 tệp Frontend trong `quiz-web-react/src/` (`QuizDetailView.jsx`, `PracticeMode.jsx`, `ExamMode.jsx`, `FlashcardViewer.jsx`, `quizDataLoader.js`, `index.css`) về đúng bản gốc đã chốt theo ảnh `image_d61efd.png`.
 - **Trạng Thái Deploy:** Đã build Web production và deploy lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 4044674).
 
+### 🎯 Cập Nhật Đợt 11: Sửa Triệt Để Lỗi Gắn Sao Scoped Quiz ID, Multiple Choice Checkboxes & Nạp Lại Bộ Đề HCM202 (300 Câu):
+- **Sửa Lỗi Gắn Sao Scoped Quiz ID (Starred Items Collision Fix):**
+  - Cập nhật `getStarredQuestions(quizId)` trong `quizDataLoader.js` và tất cả các component (`QuizDetailView.jsx`, `PracticeMode.jsx`, `ExamMode.jsx`, `FlashcardViewer.jsx`) truyền `quiz.id`.
+  - Phân vùng 100% sao theo bộ đề. Mở bộ đề nào chỉ thấy & đếm đúng số câu sao của bộ đề đó (`${quizId}:${questionId}`).
+- **Sửa Lỗi Thi Thử / Luyện Tập Multiple Choice (Multi-Select Checkboxes):**
+  - Trong `ExamMode.jsx` và `PracticeMode.jsx`: Tự động nhận diện câu hỏi có số đáp án đúng (`isCorrect === true`) > 1.
+  - Chuyển giao diện chọn đáp án từ Radio tròn sang Checkbox ô vuông `[ ✓ ]` kèm nhãn `Multiple Choice (Chọn tất cả đáp án đúng)`.
+  - Hỗ trợ nút `[Xác nhận đáp án ({so_luong})]` khi Luyện tập và tính điểm chính xác khi chọn đủ 100% các đáp án đúng khi Thi thử.
+- **Xóa & Nạp Lại Bộ Đề HCM202 - Tư Tưởng Hồ Chí Minh (300 Câu):**
+  - Làm sạch và nạp lại toàn bộ 300 câu hỏi bộ đề HCM202 kèm 300 lời giải thích học thuật sâu, loại bỏ 100% văn bản rác template.
+- **Trạng Thái Deploy:** Đã build Web production và deploy lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 4061369).
+
+
 
 
 

@@ -20,7 +20,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
   const [passwordModalConfig, setPasswordModalConfig] = useState(null);
 
   const [starredIds, setStarredIds] = useState(() => {
-    return new Set(getStarredQuestions().map(s => s.questionId));
+    return new Set(getStarredQuestions(quiz.id).map(s => s.questionId));
   });
 
   const [srsStats, setSrsStats] = useState(() => calculateQuizProgressStats(quiz));
@@ -31,7 +31,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
   // Listen to SRS progress update event & star update event
   useEffect(() => {
     const refreshData = () => {
-      setStarredIds(new Set(getStarredQuestions().map(s => s.questionId)));
+      setStarredIds(new Set(getStarredQuestions(quiz.id).map(s => s.questionId)));
       setSrsStats(calculateQuizProgressStats(quiz));
     };
 

@@ -12,7 +12,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
   // Prepare questions pool (filter starred if requested)
   let initialQuestionsPool = quiz.questions || [];
   if (config.studyStarredOnly) {
-    const starredIds = new Set(getStarredQuestions().map(s => s.questionId));
+    const starredIds = new Set(getStarredQuestions(quiz.id).map(s => s.questionId));
     initialQuestionsPool = initialQuestionsPool.filter(q => starredIds.has(q.id));
     if (initialQuestionsPool.length === 0) {
       initialQuestionsPool = quiz.questions || []; // fallback if no starred questions exist
@@ -31,17 +31,17 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
 
   // Track starred items on result screen
   const [starredIds, setStarredIds] = useState(() => {
-    return new Set(getStarredQuestions().map(s => s.questionId));
+    return new Set(getStarredQuestions(quiz.id).map(s => s.questionId));
   });
 
   // Listen to global star update event
   useEffect(() => {
     const checkStar = () => {
-      setStarredIds(new Set(getStarredQuestions().map(s => s.questionId)));
+      setStarredIds(new Set(getStarredQuestions(quiz.id).map(s => s.questionId)));
     };
     window.addEventListener('quizzlet_star_updated', checkStar);
     return () => window.removeEventListener('quizzlet_star_updated', checkStar);
-  }, []);
+  }, [quiz.id]);
 
   // Timer states
   const [secondsElapsed, setSecondsElapsed] = useState(0);
@@ -81,15 +81,24 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
     return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
   };
 
-  const handleSelectOption = (answerId) => {
+  const handleSelectOption = (answerId, isMultiSelect) => {
     if (isSubmitted) return;
-    setUserAnswers(prev => ({ ...prev, [currentIndex]: answerId }));
+    if (isMultiSelect) {
+      const currentSelected = Array.isArray(userAnswers[currentIndex]) ? userAnswers[currentIndex] : [];
+      const updated = currentSelected.includes(answerId)
+        ? currentSelected.filter(id => id !== answerId)
+        : [...currentSelected, answerId];
+      setUserAnswers(prev => ({ ...prev, [currentIndex]: updated }));
+    } else {
+      setUserAnswers(prev => ({ ...prev, [currentIndex]: answerId }));
+    }
   };
 
   const handleAttemptSubmit = () => {
     const unansweredIndices = [];
     questions.forEach((_, idx) => {
-      if (userAnswers[idx] === undefined) {
+      const ans = userAnswers[idx];
+      if (ans === undefined || (Array.isArray(ans) && ans.length === 0)) {
         unansweredIndices.push(idx);
       }
     });
@@ -113,9 +122,14 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
     setIsSubmitted(true);
     let correctCount = 0;
     questions.forEach((q, idx) => {
-      const selectedId = userAnswers[idx];
-      const correctAns = q.answers?.find(a => a.isCorrect);
-      if (correctAns && selectedId === correctAns.id) {
+      const userSel = userAnswers[idx];
+      const selectedArr = Array.isArray(userSel) ? userSel : (userSel ? [userSel] : []);
+      const correctArr = (q.answers || []).filter(a => a.isCorrect).map(a => a.id);
+
+      const isAllMatched = correctArr.length === selectedArr.length &&
+        correctArr.every(id => selectedArr.includes(id));
+
+      if (isAllMatched && correctArr.length > 0) {
         correctCount += 1;
       }
     });
@@ -379,10 +393,17 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* Main Question Panel */}
         <div ref={questionRef} className="lg:col-span-3 bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-warm-border dark:border-slate-800 shadow-soft">
-          <div className="flex items-center justify-between text-xs font-bold text-warm-muted dark:text-slate-400 mb-4">
-            <span className="text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-3 py-1 rounded-full border border-amber-200/80 dark:border-amber-800">
-              Câu {currentIndex + 1} / {questions.length}
-            </span>
+          <div className="flex items-center justify-between text-xs font-bold text-warm-muted dark:text-slate-400 mb-4 flex-wrap gap-2">
+            <div className="flex items-center gap-2">
+              <span className="text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-3 py-1 rounded-full border border-amber-200/80 dark:border-amber-800">
+                Câu {currentIndex + 1} / {questions.length}
+              </span>
+              {(currentQ.answers || []).filter(a => a.isCorrect).length > 1 && (
+                <span className="text-purple-800 dark:text-purple-300 bg-purple-50 dark:bg-purple-950/60 px-2.5 py-0.5 rounded-md border border-purple-200 dark:border-purple-800">
+                  Multiple Choice (Chọn tất cả đáp án đúng)
+                </span>
+              )}
+            </div>
             <span>{quiz.category}</span>
           </div>
 
@@ -393,21 +414,26 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
           {/* Options List */}
           <div className="space-y-3 mb-8">
             {(currentQ.answers || []).map((answer, aIdx) => {
-              const isSelected = userAnswers[currentIndex] === answer.id;
+              const isMultiSelect = (currentQ.answers || []).filter(a => a.isCorrect).length > 1;
+              const userSel = userAnswers[currentIndex];
+              const isSelected = isMultiSelect
+                ? (Array.isArray(userSel) && userSel.includes(answer.id))
+                : (userSel === answer.id);
+
               return (
                 <button
                   key={answer.id || aIdx}
-                  onClick={() => handleSelectOption(answer.id)}
+                  onClick={() => handleSelectOption(answer.id, isMultiSelect)}
                   className={`w-full text-left p-4 rounded-2xl border transition-all duration-200 flex items-start gap-3 text-xs sm:text-sm font-medium ${
                     isSelected
                       ? 'bg-warm-slate dark:bg-slate-800 text-white border-warm-slate dark:border-slate-700 shadow-xs'
                       : 'bg-white dark:bg-slate-900 border-warm-border dark:border-slate-800 text-warm-text dark:text-slate-100 hover:bg-warm-hover dark:hover:bg-slate-800'
                   }`}
                 >
-                  <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 border ${
+                  <span className={`w-6 h-6 ${isMultiSelect ? 'rounded-md' : 'rounded-full'} flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 border ${
                     isSelected ? 'bg-white/20 text-white border-white/30' : 'bg-warm-hover dark:bg-slate-800 text-warm-slate dark:text-slate-300 border-warm-border/60 dark:border-slate-700'
                   }`}>
-                    {String.fromCharCode(65 + aIdx)}
+                    {isMultiSelect ? (isSelected ? '✓' : String.fromCharCode(65 + aIdx)) : String.fromCharCode(65 + aIdx)}
                   </span>
                   <span className="break-words leading-relaxed">{answer.content}</span>
                 </button>

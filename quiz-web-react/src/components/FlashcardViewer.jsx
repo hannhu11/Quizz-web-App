@@ -46,7 +46,7 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
   useEffect(() => {
     const checkStar = () => {
       if (!currentQ.id) return;
-      const stars = getStarredQuestions();
+      const stars = getStarredQuestions(quiz.id);
       setIsStarred(stars.some(s => s.questionId === currentQ.id));
     };
 
