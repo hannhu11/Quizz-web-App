@@ -239,10 +239,14 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
           </div>
 
           {questions.map((q, idx) => {
-            const userChosenId = userAnswers[idx];
-            const correctAns = (q.answers || []).find(a => a.isCorrect);
-            const isCorrect = correctAns && userChosenId === correctAns.id;
-            const isUnanswered = userChosenId === undefined;
+            const userSel = userAnswers[idx];
+            const userSelectedArr = Array.isArray(userSel) ? userSel : (userSel !== undefined ? [userSel] : []);
+            const correctAnswersArr = (q.answers || []).filter(a => a.isCorrect);
+            const correctIdsArr = correctAnswersArr.map(a => a.id);
+
+            const isQuestion100PercentCorrect = correctIdsArr.length === userSelectedArr.length &&
+              correctIdsArr.every(id => userSelectedArr.includes(id));
+            const isUnanswered = userSelectedArr.length === 0;
             const isStarred = starredIds.has(q.id);
 
             let statusBadge = (
@@ -257,7 +261,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
                   <AlertCircle className="w-3.5 h-3.5 text-amber-700 dark:text-amber-400" /> Chưa trả lời
                 </span>
               );
-            } else if (!isCorrect) {
+            } else if (!isQuestion100PercentCorrect) {
               statusBadge = (
                 <span className="inline-flex items-center gap-1 bg-rose-100 dark:bg-rose-950 text-rose-900 dark:text-rose-300 border border-rose-300 dark:border-rose-800 px-3 py-1 rounded-full text-xs font-bold">
                   <X className="w-3.5 h-3.5 text-rose-700 dark:text-rose-400" /> Chưa chính xác
@@ -294,8 +298,8 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
                 {/* Answer Options List with Color Coding */}
                 <div className="space-y-2.5">
                   {(q.answers || []).map((answer, aIdx) => {
-                    const isUserChoice = userChosenId === answer.id;
-                    const isRightAnswer = answer.isCorrect;
+                    const isUserChoice = userSelectedArr.includes(answer.id);
+                    const isRightAnswer = Boolean(answer.isCorrect);
 
                     let optionStyle = "bg-gray-50/50 dark:bg-slate-800/40 border-gray-200 dark:border-slate-800 text-gray-400 dark:text-slate-500 opacity-60";
                     let optionBadge = null;
@@ -314,7 +318,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
                           <XCircle className="w-4 h-4 text-rose-600 dark:text-rose-400" /> Bạn chọn sai
                         </span>
                       );
-                    } else if (isRightAnswer && !isCorrect) {
+                    } else if (isRightAnswer && !isUserChoice) {
                       optionStyle = "bg-emerald-50/60 dark:bg-emerald-950/40 border-2 border-dashed border-emerald-400 dark:border-emerald-700 text-emerald-900 dark:text-emerald-300 font-semibold";
                       optionBadge = (
                         <span className="flex items-center gap-1 text-xs font-bold text-emerald-800 dark:text-emerald-400">

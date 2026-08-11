@@ -237,6 +237,26 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Làm sạch và nạp lại toàn bộ 300 câu hỏi bộ đề HCM202 kèm 300 lời giải thích học thuật sâu, loại bỏ 100% văn bản rác template.
 - **Trạng Thái Deploy:** Đã build Web production và deploy lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 4061369).
 
+### ⌨️ Cập Nhật Đợt 12: Tích Hợp Điều Khiển Bàn Phím (Knowt Style Keyboard Nav) & Sửa Lỗi Hiển Thị Kết Quả Xem Lại Bài Thi (Exam Review Fix):
+- **Tích Hợp Điều Khiển Bàn Phím Trong Luyện Tập Trắc Nghiệm (`PracticeMode.jsx`):**
+  - **Di chuyển câu hỏi mượt mà bằng Phím Mũi Tên:**
+    - `ArrowRight` / `Enter`: Chuyển sang câu hỏi tiếp theo (khi đã trả lời) hoặc kích hoạt nút *Xác nhận đáp án* (khi chọn Multiple Choice).
+    - `ArrowLeft`: Quay lại câu hỏi phía trước.
+  - **Chọn đáp án bằng Phím Số (1-5) & Phím Chữ (A-E):**
+    - Bấm phím `1` / `A`: Chọn đáp án A (index 0).
+    - Bấm phím `2` / `B`: Chọn đáp án B (index 1)...
+  - **Bảo vệ Nhập Liệu (Input Safety Guards):** Tự động bỏ qua lắng nghe bàn phím khi người dùng đang nhập văn bản trong `<input>`, `<textarea>` hoặc `contenteditable`.
+  - **Giao Diện Gợi Ý Phím Tắt (UX Hotkey Hints):** Hiển thị badge badge `Phím 1 / A` trên từng thẻ option và thanh hướng dẫn bàn phím Knowt style ở chân card câu hỏi.
+- **Khắc Phục Lỗi Hiển Thị Kết Quả Bài Thi Thử ([`ExamMode.jsx`](file:///c:/Users/ADMIN/Downloads/Quizzlet%20app/quiz-web-react/src/components/ExamMode.jsx#L240)):**
+  - **Nguyên nhân:** Trước đây hàm render review kiểm tra `userChosenId === answer.id` với `userChosenId` là chuỗi đơn. Khi thi Multiple Choice, `userAnswers[idx]` lưu mảng `[ans1, ans2]` làm điều kiện so sánh bị trả về `false`, không tô màu các phương án người dùng đã chọn.
+  - **Biện pháp khắc phục:** Chuyển đổi `userSelectedArr` thành mảng và rà soát 4 trường hợp chuẩn:
+    - **Case A (Chọn Đúng):** Người dùng có chọn & đáp án đúng $\rightarrow$ Khung Xanh + Badge `[✓ Bạn chọn đúng]`.
+    - **Case B (Chọn Sai):** Người dùng có chọn & đáp án sai $\rightarrow$ Khung Đỏ + Badge `[✕ Bạn chọn sai]`.
+    - **Case C (Bỏ Sót Đáp Án Đúng):** Người dùng không chọn & đáp án đúng $\rightarrow$ Viền Xanh Đứt Nét + Badge `[Đáp án đúng chuẩn]`.
+    - **Case D (Không Chọn & Sai):** Mặc định xám chìm.
+- **Trạng Thái Deploy:** Đã build Web production và deploy lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 4087500).
+
+
 
 
 

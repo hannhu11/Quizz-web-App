@@ -90,6 +90,64 @@ export default function PracticeMode({ quiz, onBack }) {
     toggleStarQuestion(currentQ.id, quiz.id, currentQ, currentIndex);
   };
 
+  // Keyboard Shortcuts Navigation & Selection (Knowt / Quizlet Style)
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      // Input Safety Guard
+      const activeEl = document.activeElement;
+      const isInput = activeEl && (
+        activeEl.tagName === 'INPUT' ||
+        activeEl.tagName === 'TEXTAREA' ||
+        activeEl.isContentEditable
+      );
+      if (isInput || isCompleted) return;
+
+      const key = e.key;
+
+      // 1. Navigation Shortcuts
+      if (key === 'ArrowRight' || key === 'Enter') {
+        if (isAnswered) {
+          e.preventDefault();
+          handleNextQuestion();
+        } else if (isMultiSelect && selectedAnswerIds.length > 0) {
+          e.preventDefault();
+          handleConfirmMultiSubmit();
+        }
+      } else if (key === 'ArrowLeft') {
+        if (currentIndex > 0) {
+          e.preventDefault();
+          setCurrentIndex(prev => prev - 1);
+          setSelectedAnswerIds([]);
+          setIsAnswered(false);
+        }
+      }
+
+      // 2. Number / Letter Key Selection (1-5 or A-E)
+      if (!isAnswered) {
+        const options = currentQ.answers || [];
+        let optionIdx = -1;
+
+        if (['1', '2', '3', '4', '5'].includes(key)) {
+          optionIdx = parseInt(key, 10) - 1;
+        } else if (['a', 'b', 'c', 'd', 'e', 'A', 'B', 'C', 'D', 'E'].includes(key)) {
+          const lower = key.toLowerCase();
+          optionIdx = lower.charCodeAt(0) - 97;
+        }
+
+        if (optionIdx >= 0 && optionIdx < options.length) {
+          e.preventDefault();
+          const targetOption = options[optionIdx];
+          if (targetOption) {
+            handleToggleOptionSelect(targetOption.id);
+          }
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [currentIndex, isAnswered, isCompleted, isMultiSelect, selectedAnswerIds, currentQ, questions.length]);
+
   const handleSpeak = (text) => {
     if ('speechSynthesis' in window) {
       window.speechSynthesis.cancel();
@@ -251,6 +309,12 @@ export default function PracticeMode({ quiz, onBack }) {
                 </span>
                 <span className="flex-1">{answer.content}</span>
 
+                {!isAnswered && (
+                  <span className="hidden sm:inline-block text-[10px] font-mono text-warm-muted dark:text-slate-500 bg-warm-bg dark:bg-slate-800 px-1.5 py-0.5 rounded border border-warm-border dark:border-slate-700 shrink-0">
+                    Phím {aIdx + 1} / {String.fromCharCode(65 + aIdx)}
+                  </span>
+                )}
+
                 {isAnswered && answer.isCorrect && (
                   <CheckCircle className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0" />
                 )}
@@ -260,6 +324,12 @@ export default function PracticeMode({ quiz, onBack }) {
               </button>
             );
           })}
+        </div>
+
+        {/* Keyboard Helper Hint Bar (Knowt & Quizlet Style) */}
+        <div className="flex items-center justify-between text-[11px] font-medium text-warm-muted dark:text-slate-400 pt-2 border-t border-warm-border/40 dark:border-slate-800/60 flex-wrap gap-2">
+          <span>⌨️ <b>Bàn phím:</b> Bấm <code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">1-{Math.min((currentQ.answers || []).length, 5)}</code> hoặc <code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">A-E</code> để chọn đáp án</span>
+          <span>Bấm <code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">→</code> / <code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">Enter</code> câu tiếp • <code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">←</code> câu trước</span>
         </div>
 
         {/* Multi-Select Confirm Button */}
