@@ -268,6 +268,17 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Nhấn phím `?` trong cả chế độ Luyện tập và Thi thử sẽ hiển thị Bảng tra cứu Hotkey Knowt/Quizlet style cực đẹp.
 - **Trạng Thái Deploy:** Đã build Web production và deploy lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 4118372).
 
+### 🧹⚡ Cập Nhật Đợt 14: Thực Thi Quy Trình Thanh Lọc Skills (Skills Pruning & Optimization Protocol):
+- **Thanh Lọc 1,790 Skills Rác / Không Liên Quan:**
+  - Loại bỏ hoàn toàn 1,790 thư mục skill không phục vụ Tech Stack dự án (Mobile Android/Flutter, Sinh học AlphaFold, Cloud BigQuery/GCP, Scraping mảng riêng...).
+- **Giữ Lại 49 Skills Trọng Tâm Đạt Tiêu Chuẩn Cao Nhất (Tech Stack & Agent Workflow):**
+  1. **Frontend / UI/UX:** `react-best-practices`, `frontend-ui-engineering`, `tailwind-patterns`, `webperf`, `ui-ux-pro-max`...
+  2. **Chất Lượng Code & Kiểm Thử:** `test-driven-development` (`/tdd`), `code-simplification` (`/code-simplify`), `code-review-and-quality`...
+  3. **Backend & Bảo Mật:** `nodejs-backend-patterns`, `api-and-interface-design`, `security-and-hardening`, `security-auditor`...
+  4. **Quy Trình & Năng Suất Agent:** `grill-me`, `spec-driven-development`, `handoff`, `documentation-and-adrs`...
+- **Dọn Dẹp Thư Mục Phụ `NHOM_3_IGNORE`:** Giải phóng dung lượng và chống nhiễu bộ nhớ indexing của Agent.
+
+
 
 
 
