@@ -50,8 +50,97 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
   // Modal Dialog states
   const [showExitModal, setShowExitModal] = useState(false);
   const [unansweredWarning, setUnansweredWarning] = useState(null);
+  const [showGridModal, setShowGridModal] = useState(false);
+  const [showHotkeyModal, setShowHotkeyModal] = useState(false);
 
   const questionRef = useRef(null);
+
+  const handleToggleStar = (q, idx) => {
+    if (!q || !q.id) return;
+    toggleStarQuestion(q.id, quiz.id, q, idx);
+  };
+
+  // Keyboard Navigation in ExamMode (Knowt / Quizlet Style)
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      const activeEl = document.activeElement;
+      const isInput = activeEl && (
+        activeEl.tagName === 'INPUT' ||
+        activeEl.tagName === 'TEXTAREA' ||
+        activeEl.isContentEditable
+      );
+      if (isInput || isSubmitted) return;
+
+      const key = e.key;
+
+      // 1. Hotkey Help Overlay (?)
+      if (key === '?' || (key === '/' && e.shiftKey)) {
+        e.preventDefault();
+        setShowHotkeyModal(prev => !prev);
+        return;
+      }
+
+      // 2. Quick Question Grid Toggle (G or Tab)
+      if (key === 'g' || key === 'G' || key === 'Tab') {
+        e.preventDefault();
+        setShowGridModal(prev => !prev);
+        return;
+      }
+
+      // 3. Star Toggle (S or *)
+      if (key === 's' || key === 'S' || key === '*') {
+        e.preventDefault();
+        const currentQ = questions[currentIndex];
+        if (currentQ) {
+          handleToggleStar(currentQ, currentIndex);
+        }
+        return;
+      }
+
+      // 4. Navigation & Submit Shortcuts
+      if (key === 'Enter' && e.ctrlKey) {
+        e.preventDefault();
+        handleAttemptSubmit();
+        return;
+      }
+
+      if (key === 'ArrowRight' || key === 'Enter') {
+        if (currentIndex + 1 < questions.length) {
+          e.preventDefault();
+          setCurrentIndex(prev => prev + 1);
+        }
+      } else if (key === 'ArrowLeft') {
+        if (currentIndex > 0) {
+          e.preventDefault();
+          setCurrentIndex(prev => prev - 1);
+        }
+      }
+
+      // 5. Option Selection (1-5 or A-E)
+      const currentQ = questions[currentIndex] || {};
+      const options = currentQ.answers || [];
+      const isMultiSelect = (options.filter(a => a.isCorrect)).length > 1;
+
+      let optionIdx = -1;
+      if (['1', '2', '3', '4', '5'].includes(key)) {
+        optionIdx = parseInt(key, 10) - 1;
+      } else if (['a', 'b', 'c', 'd', 'e', 'A', 'B', 'C', 'D', 'E'].includes(key)) {
+        const lower = key.toLowerCase();
+        optionIdx = lower.charCodeAt(0) - 97;
+      }
+
+      if (optionIdx >= 0 && optionIdx < options.length) {
+        e.preventDefault();
+        const targetOption = options[optionIdx];
+        if (targetOption) {
+          handleSelectOption(targetOption.id, isMultiSelect);
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [currentIndex, isSubmitted, questions, userAnswers]);
 
   // Timer Interval Effect
   useEffect(() => {
@@ -158,10 +247,6 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
     } else {
       setShowExitModal(true);
     }
-  };
-
-  const handleToggleStar = (q, idx) => {
-    toggleStarQuestion(q.id, quiz.id, q, idx);
   };
 
   const currentQ = questions[currentIndex] || {};
@@ -439,10 +524,20 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
                   }`}>
                     {isMultiSelect ? (isSelected ? '✓' : String.fromCharCode(65 + aIdx)) : String.fromCharCode(65 + aIdx)}
                   </span>
-                  <span className="break-words leading-relaxed">{answer.content}</span>
+                  <span className="break-words leading-relaxed flex-1">{answer.content}</span>
+
+                  <span className="hidden sm:inline-block text-[10px] font-mono opacity-50 px-1.5 py-0.5 rounded border border-current shrink-0">
+                    Phím {aIdx + 1} / {String.fromCharCode(65 + aIdx)}
+                  </span>
                 </button>
               );
             })}
+          </div>
+
+          {/* Keyboard Helper Hint Bar (Knowt & Quizlet Style) */}
+          <div className="flex items-center justify-between text-[11px] font-medium text-warm-muted dark:text-slate-400 pt-2 pb-4 border-t border-warm-border/40 dark:border-slate-800/60 flex-wrap gap-2">
+            <span>⌨️ <b>Phím tắt:</b> <code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">1-5 / A-E</code> chọn • <code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">S / *</code> Gắn sao ⭐</span>
+            <span><code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">G / Tab</code> Bảng câu • <code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">?</code> Trợ giúp</span>
           </div>
 
           {/* Previous / Next buttons */}
@@ -466,7 +561,10 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
 
         {/* Question Grid Navigator Sidebar */}
         <div className="bg-white dark:bg-slate-900 rounded-3xl p-5 border border-warm-border dark:border-slate-800 shadow-soft h-fit">
-          <h4 className="text-xs font-bold text-slate-900 dark:text-slate-100 mb-3 uppercase tracking-wider">DANH SÁCH CÂU HỎI</h4>
+          <div className="flex items-center justify-between mb-3">
+            <h4 className="text-xs font-bold text-slate-900 dark:text-slate-100 uppercase tracking-wider">DANH SÁCH CÂU HỎI</h4>
+            <span className="text-[10px] font-mono text-warm-muted dark:text-slate-500 bg-warm-bg dark:bg-slate-800 px-1.5 py-0.5 rounded border border-warm-border dark:border-slate-700">Phím G / Tab</span>
+          </div>
           <div className="grid grid-cols-5 gap-2 max-h-[360px] overflow-y-auto pr-1">
             {questions.map((_, idx) => {
               const isAnswered = userAnswers[idx] !== undefined;
@@ -500,6 +598,92 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
           </div>
         </div>
       </div>
+
+      {/* Quick Question Grid Drawer / Modal (HotKey G or Tab) */}
+      <AnimatePresence>
+        {showGridModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4" onClick={() => setShowGridModal(false)}>
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs" />
+            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} className="relative bg-white dark:bg-slate-900 rounded-3xl p-6 border border-warm-border dark:border-slate-800 shadow-soft-lg max-w-lg w-full z-10 space-y-4" onClick={e => e.stopPropagation()}>
+              <div className="flex items-center justify-between border-b border-warm-border/60 dark:border-slate-800 pb-3">
+                <h3 className="text-base sm:text-lg font-bold flex items-center gap-2 text-slate-900 dark:text-slate-100">🎯 Bảng Nhảy Nhanh Câu Hỏi (Phím G / Tab)</h3>
+                <button onClick={() => setShowGridModal(false)} className="p-1.5 rounded-full hover:bg-warm-hover dark:hover:bg-slate-800 text-warm-muted dark:text-slate-400">✕</button>
+              </div>
+              <div className="grid grid-cols-6 sm:grid-cols-8 gap-2.5 max-h-[320px] overflow-y-auto p-1">
+                {questions.map((_, idx) => {
+                  const isAnswered = userAnswers[idx] !== undefined;
+                  const isCurrent = idx === currentIndex;
+                  return (
+                    <button
+                      key={idx}
+                      onClick={() => {
+                        setCurrentIndex(idx);
+                        setShowGridModal(false);
+                      }}
+                      className={`h-10 rounded-xl text-xs font-bold transition-all flex items-center justify-center border ${
+                        isCurrent
+                          ? 'ring-2 ring-warm-slate border-warm-slate bg-warm-slate text-white'
+                          : isAnswered
+                          ? 'bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-300 border-amber-300 dark:border-amber-800'
+                          : 'bg-warm-bg dark:bg-slate-800 text-warm-muted dark:text-slate-400 border-warm-border dark:border-slate-700 hover:bg-warm-hover dark:hover:bg-slate-700'
+                      }`}
+                    >
+                      {idx + 1}
+                    </button>
+                  );
+                })}
+              </div>
+              <button onClick={() => setShowGridModal(false)} className="w-full py-2.5 rounded-xl bg-warm-slate dark:bg-slate-800 text-white font-bold text-xs transition-colors">
+                Đóng
+              </button>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+
+      {/* Knowt Style Hotkey Overlay Modal (Hotkey ?) */}
+      <AnimatePresence>
+        {showHotkeyModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4" onClick={() => setShowHotkeyModal(false)}>
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs" />
+            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} className="relative bg-white dark:bg-slate-900 rounded-3xl p-6 border border-warm-border dark:border-slate-800 shadow-soft-lg max-w-md w-full z-10 space-y-4 text-warm-text dark:text-slate-100" onClick={e => e.stopPropagation()}>
+              <div className="flex items-center justify-between border-b border-warm-border/60 dark:border-slate-800 pb-3">
+                <h3 className="text-base sm:text-lg font-bold flex items-center gap-2">⌨️ Bảng Phím Tắt Thi Thử (Knowt Style)</h3>
+                <button onClick={() => setShowHotkeyModal(false)} className="p-1.5 rounded-full hover:bg-warm-hover dark:hover:bg-slate-800 text-warm-muted dark:text-slate-400">✕</button>
+              </div>
+              <div className="space-y-2.5 text-xs sm:text-sm">
+                <div className="flex justify-between items-center py-1.5 border-b border-warm-border/30 dark:border-slate-800/60">
+                  <span>Chọn đáp án (1 đến 5)</span>
+                  <code className="bg-warm-bg dark:bg-slate-800 px-2 py-1 rounded font-mono font-bold text-amber-600 dark:text-amber-400">1, 2, 3, 4, 5 / A, B, C, D, E</code>
+                </div>
+                <div className="flex justify-between items-center py-1.5 border-b border-warm-border/30 dark:border-slate-800/60">
+                  <span>Chuyển câu tiếp theo / trước</span>
+                  <code className="bg-warm-bg dark:bg-slate-800 px-2 py-1 rounded font-mono font-bold text-amber-600 dark:text-amber-400">→ / Enter  •  ←</code>
+                </div>
+                <div className="flex justify-between items-center py-1.5 border-b border-warm-border/30 dark:border-slate-800/60">
+                  <span>Gắn sao câu hỏi ⭐</span>
+                  <code className="bg-warm-bg dark:bg-slate-800 px-2 py-1 rounded font-mono font-bold text-amber-600 dark:text-amber-400">S / *</code>
+                </div>
+                <div className="flex justify-between items-center py-1.5 border-b border-warm-border/30 dark:border-slate-800/60">
+                  <span>Bật Bảng nhảy nhanh câu hỏi</span>
+                  <code className="bg-warm-bg dark:bg-slate-800 px-2 py-1 rounded font-mono font-bold text-amber-600 dark:text-amber-400">G / Tab</code>
+                </div>
+                <div className="flex justify-between items-center py-1.5 border-b border-warm-border/30 dark:border-slate-800/60">
+                  <span>Nộp bài thi khẩn cấp</span>
+                  <code className="bg-warm-bg dark:bg-slate-800 px-2 py-1 rounded font-mono font-bold text-amber-600 dark:text-amber-400">Ctrl + Enter</code>
+                </div>
+                <div className="flex justify-between items-center py-1.5">
+                  <span>Mở/Đóng Bảng trợ giúp này</span>
+                  <code className="bg-warm-bg dark:bg-slate-800 px-2 py-1 rounded font-mono font-bold text-amber-600 dark:text-amber-400">?</code>
+                </div>
+              </div>
+              <button onClick={() => setShowHotkeyModal(false)} className="w-full py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs transition-colors">
+                Đã hiểu
+              </button>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
 
       {/* Unanswered Warning Modal */}
       <AnimatePresence>

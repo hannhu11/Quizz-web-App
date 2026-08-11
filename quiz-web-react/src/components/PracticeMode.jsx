@@ -90,6 +90,8 @@ export default function PracticeMode({ quiz, onBack }) {
     toggleStarQuestion(currentQ.id, quiz.id, currentQ, currentIndex);
   };
 
+  const [showHotkeyModal, setShowHotkeyModal] = useState(false);
+
   // Keyboard Shortcuts Navigation & Selection (Knowt / Quizlet Style)
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -103,6 +105,20 @@ export default function PracticeMode({ quiz, onBack }) {
       if (isInput || isCompleted) return;
 
       const key = e.key;
+
+      // Hotkey Help Modal Toggle (?)
+      if (key === '?' || (key === '/' && e.shiftKey)) {
+        e.preventDefault();
+        setShowHotkeyModal(prev => !prev);
+        return;
+      }
+
+      // Star Toggle Shortcut (S or *)
+      if (key === 's' || key === 'S' || key === '*') {
+        e.preventDefault();
+        handleToggleStar();
+        return;
+      }
 
       // 1. Navigation Shortcuts
       if (key === 'ArrowRight' || key === 'Enter') {
@@ -146,7 +162,7 @@ export default function PracticeMode({ quiz, onBack }) {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentIndex, isAnswered, isCompleted, isMultiSelect, selectedAnswerIds, currentQ, questions.length]);
+  }, [currentIndex, isAnswered, isCompleted, isMultiSelect, selectedAnswerIds, currentQ, questions.length, currentQ.id]);
 
   const handleSpeak = (text) => {
     if ('speechSynthesis' in window) {
@@ -382,13 +398,50 @@ export default function PracticeMode({ quiz, onBack }) {
                   onClick={handleNextQuestion}
                   className="px-6 py-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm shadow-xs transition-all active:scale-95 inline-flex items-center gap-2"
                 >
-                  {currentIndex + 1 < questions.length ? 'Câu tiếp theo' : 'Xem kết quả'} <ArrowRight className="w-4 h-4" />
+                  Câu tiếp theo <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             </motion.div>
           )}
         </AnimatePresence>
       </div>
+
+      {/* Knowt Style Hotkey Overlay Modal */}
+      {showHotkeyModal && (
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4" onClick={() => setShowHotkeyModal(false)}>
+          <div className="bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 rounded-3xl p-6 max-w-md w-full shadow-2xl space-y-4 text-warm-text dark:text-slate-100" onClick={e => e.stopPropagation()}>
+            <div className="flex items-center justify-between border-b border-warm-border/60 dark:border-slate-800 pb-3">
+              <h3 className="text-base sm:text-lg font-bold flex items-center gap-2">⌨️ Bảng Phím Tắt Luyện Tập (Knowt Style)</h3>
+              <button onClick={() => setShowHotkeyModal(false)} className="p-1.5 rounded-full hover:bg-warm-hover dark:hover:bg-slate-800 text-warm-muted dark:text-slate-400">✕</button>
+            </div>
+            <div className="space-y-2.5 text-xs sm:text-sm">
+              <div className="flex justify-between items-center py-1.5 border-b border-warm-border/30 dark:border-slate-800/60">
+                <span>Chọn đáp án (1 đến 5)</span>
+                <code className="bg-warm-bg dark:bg-slate-800 px-2 py-1 rounded font-mono font-bold text-amber-600 dark:text-amber-400">1, 2, 3, 4, 5 / A, B, C, D, E</code>
+              </div>
+              <div className="flex justify-between items-center py-1.5 border-b border-warm-border/30 dark:border-slate-800/60">
+                <span>Chuyển câu tiếp theo</span>
+                <code className="bg-warm-bg dark:bg-slate-800 px-2 py-1 rounded font-mono font-bold text-amber-600 dark:text-amber-400">→ / Enter</code>
+              </div>
+              <div className="flex justify-between items-center py-1.5 border-b border-warm-border/30 dark:border-slate-800/60">
+                <span>Quay lại câu trước</span>
+                <code className="bg-warm-bg dark:bg-slate-800 px-2 py-1 rounded font-mono font-bold text-amber-600 dark:text-amber-400">←</code>
+              </div>
+              <div className="flex justify-between items-center py-1.5 border-b border-warm-border/30 dark:border-slate-800/60">
+                <span>Gắn sao câu hỏi ⭐</span>
+                <code className="bg-warm-bg dark:bg-slate-800 px-2 py-1 rounded font-mono font-bold text-amber-600 dark:text-amber-400">S / *</code>
+              </div>
+              <div className="flex justify-between items-center py-1.5">
+                <span>Mở/Đóng Bảng phím tắt này</span>
+                <code className="bg-warm-bg dark:bg-slate-800 px-2 py-1 rounded font-mono font-bold text-amber-600 dark:text-amber-400">?</code>
+              </div>
+            </div>
+            <button onClick={() => setShowHotkeyModal(false)} className="w-full py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs transition-colors">
+              Đã hiểu
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

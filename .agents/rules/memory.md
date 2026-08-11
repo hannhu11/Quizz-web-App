@@ -256,6 +256,19 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
     - **Case D (Không Chọn & Sai):** Mặc định xám chìm.
 - **Trạng Thái Deploy:** Đã build Web production và deploy lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 4087500).
 
+### ⌨️🚀 Cập Nhật Đợt 13: Hoàn Thành Điều Khiển Bàn Phím Toàn Diện Chế Độ Thi Thử (`ExamMode.jsx`), Bảng Nhảy Nhanh Câu Hỏi (`Phím G/Tab`) & Hotkey Overlay (`Phím ?`):
+- **Điều Khiển Bàn Phím Thi Thử Mượt Mà (`ExamMode.jsx`):**
+  - **Phím Mũi Tên & Chuyển Câu:** `ArrowRight` / `Enter` (chuyển câu tiếp), `ArrowLeft` (quay lại câu trước).
+  - **Phím Chọn Phương Án (`1-5` / `A-E` / `a-e`):** Chọn nhanh đáp án Single Choice hoặc toggle checkbox Multiple Choice tức thì.
+  - **Phím Gắn Sao ⭐ (`S` / `*`):** Bấm phím `S` hoặc `*` để lưu/gỡ sao câu hỏi hiện tại.
+  - **Phím Nộp Bài Thi Khẩn Cấp (`Ctrl + Enter`):** Nộp bài kiểm tra lập tức.
+- **Tích Hợp Bảng Nhảy Nhanh Câu Hỏi Quick Question Grid (`Phím G` / `Tab`):**
+  - Nhấn phím `G` hoặc `Tab` trong chế độ Thi thử sẽ tự động mở/đóng Modal Bảng lưới câu hỏi giúp nhảy đến bất kỳ câu hỏi nào bằng bàn phím mà không cần cuộn chuột.
+- **Tích Hợp Bảng Hướng Dẫn Phím Tắt Knowt Overlay (`Phím ?` / `Shift + /`):**
+  - Nhấn phím `?` trong cả chế độ Luyện tập và Thi thử sẽ hiển thị Bảng tra cứu Hotkey Knowt/Quizlet style cực đẹp.
+- **Trạng Thái Deploy:** Đã build Web production và deploy lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 4118372).
+
+
 
 
 

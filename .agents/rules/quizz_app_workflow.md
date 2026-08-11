@@ -1,3 +1,11 @@
+# AGENT SKILLS REFERENCE MAP
+
+Mọi AI Agent khi nhận nhiệm vụ BẮT BUỘC phải tham chiếu trực tiếp đến các file kỹ thuật trong thư mục Local:
+- Core Rules & Memory: `C:\Users\ADMIN\Downloads\Quizzlet app\.agents\rules\memory.md`
+- Phản biện & Skill tương tác: `C:\Users\ADMIN\Downloads\Quizzlet app\Reffernce\NHOM_2_CORE_LOGIC\skills-main`
+- Kỹ thuật Lập trình & TDD: `C:\Users\ADMIN\Downloads\Quizzlet app\Reffernce\NHOM_2_CORE_LOGIC\agent-skills-main`
+- Quy trình tự chủ Devin: `C:\Users\ADMIN\Downloads\Quizzlet app\Reffernce\NHOM_2_CORE_LOGIC\devin.cursorrules-master`
+
 # Quy Tắc Phát Triển & Deploy Dự Án Quizz App (Hàn Như)
 
 ## 1. Commit & Push GitHub Standard
