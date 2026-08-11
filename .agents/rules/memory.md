@@ -151,6 +151,14 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Đã kiểm tra từng câu hỏi, các lựa chọn, đáp án đúng và bổ sung giải thích học thuật sâu sắc cho toàn bộ các đề thi thử của 5 môn (`ENW493c`, `AID301c`, `MLN131`, `HCM202`, `VNR202`).
 - **Cập nhật `QUIZ_MANIFEST` & Deploy Production:** Đã lưu các tập tin JSON đã chuẩn hóa vào `quiz-app-main/quizzes/current/`, khai báo thêm vào `QUIZ_MANIFEST` trong `quizDataLoader.js`, build web và deploy thành công lên VPS `140.245.119.189`.
 
+### 🚨 BÀI HỌC KINH NGHIỆM & QUY TẮC TÁCH LẺ BỘ ĐỀ (NO-MERGE RULE):
+- **TUYỆT ĐỐ KHÔNG GỘP TẬP TIN JSON THI THỬ:** Mỗi file `.json` thi thử FBOX (hoặc file PDF PE) BẮT BUỘC phải được khai báo thành 1 bộ đề riêng biệt (Card riêng) trên giao diện Web.
+- **Quy tắc đặt ID và Title:**
+  - `id`: Giữ đúng tên tệp JSON không chứa đuôi mở rộng (Ví dụ: `MLN131_SP26_FE`).
+  - `title`: Chuẩn hóa theo dạng `${fileName} - (${numQuestions} câu có giải thích)` (Ví dụ: `MLN131_SP26_FE - (60 câu có giải thích)`).
+- **Tổng số bộ đề hoạt động trên Web:** 29 bộ đề (6 bộ Flashcard tổng hợp gốc + 23 bộ đề thi thử FBOX/PE tách lẻ).
+
+
 
 
 
