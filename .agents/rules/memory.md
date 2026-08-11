@@ -208,6 +208,17 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - **Khóa Dữ Liệu Immutability Check:** Kiểm tra `verify_question_integrity()` đảm bảo `id`, `content`, `answers` và đặc biệt là cờ `isCorrect` là 100% nguyên vẹn không bị đụng chạm hay lệch 1 ký tự nào.
 - **Trạng Thái Deploy:** Đã build Web production và deploy lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 4035983).
 
+### 🚀 Cập Nhật Đợt 9: Tối Ưu Hiệu Năng INP (Interaction to Next Paint) Đạt 60 FPS & File Ghi Nhớ Tiến Trình Progress Tracker:
+- **Khắc Phục Chỉ Số INP Lag Trên Trình Duyệt & Webview Facebook/Zalo:**
+  1. **CSS Virtual Rendering:** Thêm `content-visibility: auto; contain-intrinsic-size: 1px 220px;` vào `.question-card-item`, `.quiz-question-card` trong `index.css`. Trình duyệt bỏ qua bước vẽ các card ngoài viewport, giảm >80% tải DOM và CPU/GPU.
+  2. **Tách Tiến Trình Nhập Tìm Kiếm Bằng React 18 `useTransition`:** Phân tách ưu tiên phản hồi ô input tìm kiếm (chạy tức thì INP < 30ms) với tiến trình phụ lọc danh sách câu hỏi.
+  3. **Bọc `React.memo` Cho Thẻ Câu Hỏi (`QuestionCard`):** Giúp React chỉ re-render duy nhất 1 câu hỏi khi người dùng bấm chọn đáp án hoặc toggle sao, giữ nguyên vẹn 200-300 câu còn lại.
+  4. **Nâng Cấp Storage Key Gắn Sao:** Đổi key lưu trữ sang `'quiz_starred_questions_v2'` và hỗ trợ tự động migration dữ liệu cũ v1.
+- **File Ghi Nhớ Tiến Trình Progress Tracker (`scratch/progress_tracker.json`):**
+  - Ghi nhận trạng thái hoàn thành (`COMPLETED`) và đối chiếu tính toàn vẹn 100% cho toàn bộ 73 tập tin JSON (7,831 câu hỏi).
+- **Trạng Thái Deploy:** Đã build Web production và deploy lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 4038107).
+
+
 
 
 

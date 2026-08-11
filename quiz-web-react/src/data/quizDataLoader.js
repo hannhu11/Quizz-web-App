@@ -479,7 +479,14 @@ export function saveQuizProgress(quizId, score, total, mode) {
 
 export function getStarredQuestions(quizId) {
   try {
-    const data = localStorage.getItem(STORAGE_KEY_STARS);
+    let data = localStorage.getItem(STORAGE_KEY_STARS);
+    if (!data) {
+      const v1Data = localStorage.getItem(STORAGE_KEY_STARS_V1);
+      if (v1Data) {
+        data = v1Data;
+        localStorage.setItem(STORAGE_KEY_STARS, v1Data);
+      }
+    }
     const list = data ? JSON.parse(data) : [];
     if (quizId) {
       return list.filter(s => s.quizId === quizId);
