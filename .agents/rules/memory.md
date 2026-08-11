@@ -199,6 +199,16 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
 - **Biện Pháp Khắc Phục:** Thêm `getQuestionTypeInfo` vào danh sách import từ `../data/quizDataLoader` trong `ExamMode.jsx`.
 - **Trạng Thái Deploy:** Đã build lại Web production và deploy lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 4027213).
 
+### 🌟 Cập Nhật Đợt 8: Sửa Lỗi Gắn Sao Scoped Quiz ID & Thực Thi Quy Trình Backup Nén ZIP File-by-File Immutability:
+- **Khắc Phục Lỗi Gắn Sao Nhảy Nhầm Bộ Đề (Scoped Starred Questions):**
+  - **Nguyên Nhân:** Hàm `getStarredQuestions()` trên frontend trước đây lấy toàn bộ danh sách câu hỏi đã gắn sao của tất cả các bộ đề trong `localStorage` mà không lọc theo `quizId`. Dẫn đến việc mở bất kỳ bộ đề nào (như HCM202) cũng hiển thị câu hỏi đã gắn sao của bộ đề khác (như MLN131).
+  - **Biện Pháp Khắc Phục:** Cập nhật `getStarredQuestions(quizId)` nhận tham số `quizId` và cập nhật tất cả component (`QuizDetailView`, `PracticeMode`, `ExamMode`, `FlashcardViewer`) truyền `quiz.id` để lọc chính xác 100% câu sao thuộc về ĐÚNG BỘ ĐỀ ĐÓ.
+- **Thực Thi Quy Trình Backup Nén ZIP & Immutability Assertion Check:**
+  - **Tự động Nén ZIP Backup:** Trước khi chỉnh sửa dữ liệu, hệ thống tự động chạy script `enrich_strict_file_by_file.py` nén ZIP toàn bộ 2 thư mục mục tiêu vào `scratch/backups/TIMESTAMP/backup_quizzes_TIMESTAMP.zip`.
+  - **Khóa Dữ Liệu Immutability Check:** Kiểm tra `verify_question_integrity()` đảm bảo `id`, `content`, `answers` và đặc biệt là cờ `isCorrect` là 100% nguyên vẹn không bị đụng chạm hay lệch 1 ký tự nào.
+- **Trạng Thái Deploy:** Đã build Web production và deploy lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 4035983).
+
+
 
 
 

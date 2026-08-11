@@ -12,7 +12,7 @@ export default function PracticeMode({ quiz, onBack }) {
   const [isCompleted, setIsCompleted] = useState(false);
 
   const [starredIds, setStarredIds] = useState(() => {
-    return new Set(getStarredQuestions().map(s => s.questionId));
+    return new Set(getStarredQuestions(quiz.id).map(s => s.questionId));
   });
 
   const currentQ = questions[currentIndex] || {};
@@ -22,11 +22,11 @@ export default function PracticeMode({ quiz, onBack }) {
   // Sync Starred State
   useEffect(() => {
     const checkStar = () => {
-      setStarredIds(new Set(getStarredQuestions().map(s => s.questionId)));
+      setStarredIds(new Set(getStarredQuestions(quiz.id).map(s => s.questionId)));
     };
     window.addEventListener('quizzlet_star_updated', checkStar);
     return () => window.removeEventListener('quizzlet_star_updated', checkStar);
-  }, []);
+  }, [quiz.id]);
 
   const handleSelectOption = (answerId) => {
     if (isAnswered) return;

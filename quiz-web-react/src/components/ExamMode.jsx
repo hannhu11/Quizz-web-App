@@ -12,7 +12,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
   // Prepare questions pool (filter starred if requested)
   let initialQuestionsPool = quiz.questions || [];
   if (config.studyStarredOnly) {
-    const starredIds = new Set(getStarredQuestions().map(s => s.questionId));
+    const starredIds = new Set(getStarredQuestions(quiz.id).map(s => s.questionId));
     initialQuestionsPool = initialQuestionsPool.filter(q => starredIds.has(q.id));
     if (initialQuestionsPool.length === 0) {
       initialQuestionsPool = quiz.questions || []; // fallback if no starred questions exist
@@ -31,17 +31,17 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
 
   // Track starred items on result screen
   const [starredIds, setStarredIds] = useState(() => {
-    return new Set(getStarredQuestions().map(s => s.questionId));
+    return new Set(getStarredQuestions(quiz.id).map(s => s.questionId));
   });
 
   // Listen to global star update event
   useEffect(() => {
     const checkStar = () => {
-      setStarredIds(new Set(getStarredQuestions().map(s => s.questionId)));
+      setStarredIds(new Set(getStarredQuestions(quiz.id).map(s => s.questionId)));
     };
     window.addEventListener('quizzlet_star_updated', checkStar);
     return () => window.removeEventListener('quizzlet_star_updated', checkStar);
-  }, []);
+  }, [quiz.id]);
 
   // Timer states
   const [secondsElapsed, setSecondsElapsed] = useState(0);

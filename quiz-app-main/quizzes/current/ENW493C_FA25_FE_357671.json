@@ -1,14 +1,18 @@
 {
   "id": "ENW493C_FA25_FE_357671",
-  "title": "ENW493C_FA25_FE_357671 - (30 câu có giải thích)",
-  "subject": "Tiếng Anh Chuyên Ngành",
-  "category": "ENW493c",
+  "title": "ENW493C_FA25_FE_357671 [FE] - Hà Nội",
+  "subject": "Phương pháp nghiên cứu & Kỹ năng viết học thuật",
+  "category": "ENW493C",
+  "examType": "FE",
+  "rawSource": "HOLA",
+  "location": "Hà Nội",
   "questionsList": [
     {
       "id": 1,
       "questionIndex": 0,
+      "questionType": "Single Choice",
       "content": "Is this word appropriate for an academic essay? \n\"y'all\"",
-      "explanation": "The correct option is 'No'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'No'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
       "answers": [
         {
           "id": 1,
@@ -20,14 +24,14 @@
           "content": "No",
           "isCorrect": true
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 2,
       "questionIndex": 1,
+      "questionType": "Single Choice",
       "content": "Is this phrase appropriate for an academic essay? \"drunk as a skunk.\"",
-      "explanation": "The correct option is 'No'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'No'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
       "answers": [
         {
           "id": 1,
@@ -39,14 +43,14 @@
           "content": "Yes",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 3,
       "questionIndex": 2,
+      "questionType": "Single Choice",
       "content": "What is the first thing to do after you receive a research paper assignment?",
-      "explanation": "The correct option is 'Think of a research question.'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Think of a research question.).",
       "answers": [
         {
           "id": 1,
@@ -63,14 +67,14 @@
           "content": "Write the thesis statement.",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 4,
       "questionIndex": 3,
+      "questionType": "Single Choice",
       "content": "Which of the following is not an appropriate place to use a statistic in your research paper?",
-      "explanation": "Trong kỹ năng viết học thuật (Academic Writing), Thesis Statement là câu luận đề cốt lõi nêu rõ quan điểm và định hướng nội dung của toàn bộ bài luận.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'in the thesis statement'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
       "answers": [
         {
           "id": 1,
@@ -92,14 +96,14 @@
           "content": "as a hook in the introduction",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 5,
       "questionIndex": 4,
+      "questionType": "Single Choice",
       "content": "Most research papers share all of the following characteristics EXCEPT which one?",
-      "explanation": "The correct option is 'They are worth 150 pts.'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'They are worth 150 pts.'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
       "answers": [
         {
           "id": 1,
@@ -121,14 +125,14 @@
           "content": "They are worth 150 pts.",
           "isCorrect": true
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 6,
       "questionIndex": 5,
+      "questionType": "Single Choice",
       "content": "Which of the following is the most academic kind of source?",
-      "explanation": "The correct option is 'library databases'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'library databases'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
       "answers": [
         {
           "id": 1,
@@ -145,14 +149,14 @@
           "content": "library databases",
           "isCorrect": true
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 7,
       "questionIndex": 6,
+      "questionType": "Single Choice",
       "content": "Which of the following would be the most effective thesis statement for a research paper?",
-      "explanation": "S. government should require that all companies pay men and women the same amount of money for equal work.'. Trong kỹ năng viết học thuật (Academic Writing), Thesis Statement là câu luận đề cốt lõi nêu rõ quan điểm và định hướng nội dung của toàn bộ bài luận.",
+      "explanation": "The U.S. government should require that all companies pay men and women the same amount of money for equal work.).",
       "answers": [
         {
           "id": 1,
@@ -174,14 +178,14 @@
           "content": "Terrorism is really awful, so governments should prevent it.",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 8,
       "questionIndex": 7,
+      "questionType": "Single Choice",
       "content": "Is this word appropriate for an academic essay? \"increase\"",
-      "explanation": "The correct option is 'Yes'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Yes'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
       "answers": [
         {
           "id": 1,
@@ -193,14 +197,14 @@
           "content": "No",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 9,
       "questionIndex": 8,
+      "questionType": "Single Choice",
       "content": "Qualitative research is popular in market research due to the fact that there is no better way to understand the in-depth motivations and feelings of consumers.",
-      "explanation": "The correct option is 'True'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'True'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
       "answers": [
         {
           "id": 1,
@@ -212,14 +216,14 @@
           "content": "False",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 10,
       "questionIndex": 9,
+      "questionType": "Single Choice",
       "content": "The reflection on the action research cycle should be evaluated in terms of ________, quality of relationships, quality of action research process and outcomes.",
-      "explanation": "The correct option is 'Context'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Context'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
       "answers": [
         {
           "id": 1,
@@ -246,12 +250,12 @@
           "content": "Perceptions",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 11,
       "questionIndex": 10,
+      "questionType": "Single Choice",
       "content": "The development of a ________ scale commences with a concept that should be rated, such as the image of a brand or the quality of a service. The market researcher chooses opposite pairs of words or phrases (for instance, reliable (1) to unreliable (7)), which could be used to capture the concept. As a next step, respondents rate the concept on a scale, which is usually anchored from 1 to 7.",
       "explanation": "Thuật toán tìm kiếm A* sử dụng hàm đánh giá f(n) = g(n) + h(n), trong đó g(n) là chi phí thực tế từ điểm bắt đầu và h(n) là hàm Heuristic ước tính chi phí đến mục tiêu. Heuristic chuẩn (admissible) không bao giờ ước tính cao hơn chi phí thực.",
       "answers": [
@@ -275,14 +279,14 @@
           "content": "Likert",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 12,
       "questionIndex": 11,
+      "questionType": "Single Choice",
       "content": "The ________ scale consists of a number of statements that communicate a favorable or unfavorable attitude toward the concept under investigation.",
-      "explanation": "The correct option is 'Likert'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Likert'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
       "answers": [
         {
           "id": 1,
@@ -304,14 +308,14 @@
           "content": "Likert",
           "isCorrect": true
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 13,
       "questionIndex": 12,
+      "questionType": "Single Choice",
       "content": "_______ scale is a comparative scale in which key informants are requested to assign a constant sum of units such as points, euros, or dollars among a set of stimulus objects regarding some criterion.",
-      "explanation": "The correct option is 'Constant sum'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Constant sum'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
       "answers": [
         {
           "id": 1,
@@ -338,14 +342,14 @@
           "content": "Constant sum",
           "isCorrect": true
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 14,
       "questionIndex": 13,
+      "questionType": "Single Choice",
       "content": "The design of a qualitative study commences with broad ________ regarding the qualitative ________ and the theoretical lens which shape and direct the study.",
-      "explanation": "The correct option is 'Assumptions. Inquiry'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Assumptions. Inquiry'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
       "answers": [
         {
           "id": 1,
@@ -367,14 +371,14 @@
           "content": "Details. Structure",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 15,
       "questionIndex": 14,
+      "questionType": "Single Choice",
       "content": "\"In exponential discriminative snowball sampling, the market researcher screens very carefully the individuals before accepting them in the final sample.\"\nIs the above statement true or false?",
-      "explanation": "The correct option is 'True'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'True'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
       "answers": [
         {
           "id": 1,
@@ -386,14 +390,14 @@
           "content": "False",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 16,
       "questionIndex": 15,
+      "questionType": "Single Choice",
       "content": "Gathered market research data should be integrated with other research data coming from both ________ and external sources to make the most of their use and to make more confident strategic decision-making.",
-      "explanation": "The correct option is 'Internal'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Internal'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
       "answers": [
         {
           "id": 1,
@@ -415,14 +419,14 @@
           "content": "Experimental",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 17,
       "questionIndex": 16,
+      "questionType": "Single Choice",
       "content": "_______ scale is a scale where the numbers used to rank objects, such as numerically equal distances on the scale, demonstrate equal distances in the attribute being measured.",
-      "explanation": "The correct option is 'Interval'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Interval'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
       "answers": [
         {
           "id": 1,
@@ -444,14 +448,14 @@
           "content": "Ratio",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 18,
       "questionIndex": 17,
+      "questionType": "Single Choice",
       "content": "By investigating attitudes and behaviours using a case study approach through different points of time refers to a longitudinal case study methodology.",
-      "explanation": "The correct option is 'True'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'True'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
       "answers": [
         {
           "id": 1,
@@ -463,14 +467,14 @@
           "content": "False",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 19,
       "questionIndex": 18,
+      "questionType": "Single Choice",
       "content": "A ________ include(s) a collection of different and integrated databases developed in supporting decision-making and solving of problems. The data which are included can be accessed through data mining approaches.",
-      "explanation": "The correct option is 'Warehouse'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Warehouse'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
       "answers": [
         {
           "id": 1,
@@ -492,14 +496,14 @@
           "content": "Research document",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 20,
       "questionIndex": 19,
+      "questionType": "Single Choice",
       "content": "Survey approaches are based upon the design and development of well ________ questionnaires. Key informants may be asked several questions with respect to their intentions, motivations, attitudes, demographic and lifestyle characteristics among others. The questions may be asked verbally in writing or through a remote device (e.g., laptop) and the responses may be collected through these ways.",
-      "explanation": "Đáp án đúng là 'Structured'. Nguyên lý này thuộc kiến thức nền tảng trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và xử lý dữ liệu thông minh.",
+      "explanation": "Trong Trí tuệ nhân tạo (AID301c), đáp án đúng là 'Structured'. Nguyên lý này thuộc kiến thức nền tảng về Học máy (Machine Learning) và toán học ứng dụng.",
       "answers": [
         {
           "id": 1,
@@ -521,14 +525,14 @@
           "content": "Directed",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 21,
       "questionIndex": 20,
+      "questionType": "Single Choice",
       "content": "Market research assists companies in moving in the right manner, and in this vein, companies can use the collected information in order to improve strategic decision-making and to improve customer ________.",
-      "explanation": "The correct option is 'Metrics'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Metrics'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
       "answers": [
         {
           "id": 1,
@@ -550,14 +554,14 @@
           "content": "Focus",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 22,
       "questionIndex": 21,
+      "questionType": "Single Choice",
       "content": "The unstructured nature of the interview necessitates the researcher to have the competence in gathering and ________ the information collected.",
-      "explanation": "The correct option is 'Interpreting'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Interpreting'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
       "answers": [
         {
           "id": 1,
@@ -579,12 +583,12 @@
           "content": "Paraphrasing",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 23,
       "questionIndex": 22,
+      "questionType": "Single Choice",
       "content": "Well-trained researchers can enhance ________ rates and increase conversion and persuasion of key informants.",
       "explanation": "Thuật toán tìm kiếm A* sử dụng hàm đánh giá f(n) = g(n) + h(n), trong đó g(n) là chi phí thực tế từ điểm bắt đầu và h(n) là hàm Heuristic ước tính chi phí đến mục tiêu. Heuristic chuẩn (admissible) không bao giờ ước tính cao hơn chi phí thực.",
       "answers": [
@@ -608,14 +612,14 @@
           "content": "Questionnaire",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 24,
       "questionIndex": 23,
+      "questionType": "Single Choice",
       "content": "You are asked to review a theoretical research paper. In which of the following quality dimensions you expect the paper to be particularly strong? Select 01 correct answer.",
-      "explanation": "The correct option is 'Rigor'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Rigor'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
       "answers": [
         {
           "id": 1,
@@ -632,14 +636,14 @@
           "content": "Significance",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 25,
       "questionIndex": 24,
+      "questionType": "Single Choice",
       "content": "Which of the following statements about the distinction between basic and applied research are acceptable?",
-      "explanation": "The correct option is 'The spectrum between basic and applied research is continuous, and a researcher may engage in both kinds of research during his/her work.'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "The spectrum between basic and applied research is continuous, and a researcher may engage in both kinds of research during his/her work.).",
       "answers": [
         {
           "id": 1,
@@ -666,14 +670,14 @@
           "content": "Basic research is so fundamentally different from applied research that a researcher has to specialize and choose between the two upfront.",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 26,
       "questionIndex": 25,
+      "questionType": "Single Choice",
       "content": "This question is about originality. When can a research result be defined as original?",
-      "explanation": "The correct option is 'The research result was not known before.'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "The research result was not known before.).",
       "answers": [
         {
           "id": 1,
@@ -700,14 +704,14 @@
           "content": "The research result can lead to a useful product.",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 27,
       "questionIndex": 26,
+      "questionType": "Single Choice",
       "content": "What is a null hypothesis? Tick the correct answer.",
-      "explanation": "'. Trong kỹ năng viết học thuật (Academic Writing), Thesis Statement là câu luận đề cốt lõi nêu rõ quan điểm và định hướng nội dung của toàn bộ bài luận.",
+      "explanation": "Hypothesis framed in a negative form, which researchers try to reject to confirm a theory.).",
       "answers": [
         {
           "id": 1,
@@ -734,14 +738,14 @@
           "content": "Hypothesis framed in a negative form, which researchers try to reject to confirm a theory.",
           "isCorrect": true
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 28,
       "questionIndex": 27,
+      "questionType": "Single Choice",
       "content": "Which of the following statements about research are valid?",
-      "explanation": "New knowledge may generate innovations that may favor progress of society.'.",
+      "explanation": "Research may generate new knowledge. New knowledge may generate innovations that may favor progress of society.).",
       "answers": [
         {
           "id": 1,
@@ -768,14 +772,14 @@
           "content": "Research is only a hobby of talented individuals, who can afford investing their time and effort in it.",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 29,
       "questionIndex": 28,
+      "questionType": "Multiple Choice",
       "content": "Which of the following statements about funded research programs are appropriate? (Select 2 correct answers)",
-      "explanation": "C. A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor. | D. A top-down research program defines precisely the research topics that can be funded and should be addressed by applicants..\n\nD (C: A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor. D: A top-down research program defines precisely the research topics that can be funded and should be addressed by applicants.).",
+      "explanation": "A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor. D: A top-down research program defines precisely the research topics that can be funded and should be addressed by applicants.).",
       "answers": [
         {
           "id": 1,
@@ -802,14 +806,14 @@
           "content": "A top-down research program only funds research that aims at an empirical evaluation in a practical setting of previously achieved theoretical results.",
           "isCorrect": false
         }
-      ],
-      "questionType": "Multiple Choice"
+      ]
     },
     {
       "id": 30,
       "questionIndex": 29,
+      "questionType": "Single Choice",
       "content": "You are asked to review a survey paper. In which of the following dimensions you are not expecting the paper to be particularly strong? select one.",
-      "explanation": "The correct option is 'Originality'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Originality'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
       "answers": [
         {
           "id": 1,
@@ -826,8 +830,7 @@
           "content": "Rigor",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     }
   ]
 }

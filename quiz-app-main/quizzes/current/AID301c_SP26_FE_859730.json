@@ -1,14 +1,14 @@
 {
   "id": "AID301c_SP26_FE_859730",
-  "title": "AID301c_SP26_FE_859730 - (50 câu có giải thích)",
-  "subject": "Trí Tuệ Nhân Tạo",
+  "title": "AID301c_SP26_FE_859730 - Đề thi HCM 25/04/2026",
+  "subject": "Thiết kế sản phẩm TTNT",
   "category": "AID301c",
   "questionsList": [
     {
       "id": 1,
       "questionIndex": 0,
       "content": "What is a poisoning attack?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: An attack that injects malicious data into the training set).",
       "answers": [
         {
           "id": 1,
@@ -30,14 +30,13 @@
           "content": "An attack that occurs only at test time",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 2,
       "questionIndex": 1,
       "content": "Which command-line tool is used to interact with the Kubernetes API?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: Kube CTL).",
       "answers": [
         {
           "id": 1,
@@ -59,14 +58,13 @@
           "content": "Helm",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 3,
       "questionIndex": 2,
       "content": "What does the term \"trunk\" refer to in the context of Continuous Integration?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: The main branch of code where all changes are merged).",
       "answers": [
         {
           "id": 1,
@@ -88,14 +86,13 @@
           "content": "A testing framework",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 4,
       "questionIndex": 3,
       "content": "The decision tree base models in random forests individually have high bias and low variance.",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: False).",
       "answers": [
         {
           "id": 1,
@@ -107,14 +104,13 @@
           "content": "False",
           "isCorrect": true
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 5,
       "questionIndex": 4,
       "content": "Which Python package can be used to estimate test coverage?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: coverage).",
       "answers": [
         {
           "id": 1,
@@ -136,14 +132,13 @@
           "content": "flask",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 6,
       "questionIndex": 5,
       "content": "In the context of the AI workflow presented in these materials which of the following is not an example of a valid feedback loop?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: Returning to the data collection stage from transformations to reduce the number of transforms).",
       "answers": [
         {
           "id": 1,
@@ -170,14 +165,13 @@
           "content": "Returning to discuss the business opportunity after a model has been deployed",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 7,
       "questionIndex": 6,
       "content": "When you compiled the JSON files into a single DataFrame or NumPy array, about how many days did the entire range of dates span?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là C (C: 500).",
       "answers": [
         {
           "id": 1,
@@ -204,14 +198,13 @@
           "content": "650",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 8,
       "questionIndex": 7,
       "content": "What is the purpose of kubectl in kubernetes?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là D (D: The CLI for communicating with the kubernetes cluster).",
       "answers": [
         {
           "id": 1,
@@ -233,14 +226,13 @@
           "content": "The CLI for communicating with the kubernetes cluster",
           "isCorrect": true
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 9,
       "questionIndex": 8,
       "content": "A Kubernetes pod can contain multiple kubernetes deployments",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: False).",
       "answers": [
         {
           "id": 1,
@@ -252,14 +244,13 @@
           "content": "False",
           "isCorrect": true
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 10,
       "questionIndex": 9,
       "content": "Which country had the most total revenue when you summed across all purchases?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: United Kingdom).",
       "answers": [
         {
           "id": 1,
@@ -286,14 +277,13 @@
           "content": "Germany",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 11,
       "questionIndex": 10,
       "content": "Which of the following is a key aspect of applying data transformations?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: Iteration).",
       "answers": [
         {
           "id": 1,
@@ -315,14 +305,13 @@
           "content": "Data storage",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 12,
       "questionIndex": 11,
       "content": "What is the primary purpose of dimensionality reduction in data science?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: To simplify models and reduce computation time).",
       "answers": [
         {
           "id": 1,
@@ -344,14 +333,13 @@
           "content": "To create more complex models",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 13,
       "questionIndex": 12,
       "content": "What is a common issue with using accuracy as a metric for imbalanced classes?",
-      "explanation": "'. Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: It can be misleading.).",
       "answers": [
         {
           "id": 1,
@@ -373,14 +361,13 @@
           "content": "It does not consider false positives.",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 14,
       "questionIndex": 13,
       "content": "What type of data structures are used as standardized input to the interfaces in scikit-learn?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là C (C: NumPy arrays and SciPy sparse matrices).",
       "answers": [
         {
           "id": 1,
@@ -402,14 +389,13 @@
           "content": "Strings and tuples",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 15,
       "questionIndex": 14,
       "content": "The .fit_transform method corresponds to which scikit-learn interface(s)?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là D (D: Transformer).",
       "answers": [
         {
           "id": 1,
@@ -436,14 +422,13 @@
           "content": "Transformer, Predictor",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 16,
       "questionIndex": 15,
       "content": "Which process model is known for its open standard and has been around since 1996?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: CRISP-DM).",
       "answers": [
         {
           "id": 1,
@@ -465,14 +450,13 @@
           "content": "Agile",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 17,
       "questionIndex": 16,
       "content": "Which library in Python is commonly used for reading and writing CSV files?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là C (C: Pandas).",
       "answers": [
         {
           "id": 1,
@@ -494,14 +478,13 @@
           "content": "SciPy",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 18,
       "questionIndex": 17,
       "content": "When embarking on a data science project, why do you ultimately want to format your data so that it can be housed in something like a Pandas DataFrame or NumPy Array?",
-      "explanation": "'. Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là C (C: Nearly all modeling algorithms take input data in a tabular format analogous to format of DataFrame/Arrays.).",
       "answers": [
         {
           "id": 1,
@@ -523,14 +506,13 @@
           "content": "All of the answers.",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 19,
       "questionIndex": 18,
       "content": "What is the primary purpose of documenting your data before starting a project?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: To streamline the modeling process and ensure data quality).",
       "answers": [
         {
           "id": 1,
@@ -552,14 +534,13 @@
           "content": "To avoid using Python",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 20,
       "questionIndex": 19,
       "content": "For given input lists: a,b,c and 1,2,3\nCreate a dictionary from two input lists",
-      "explanation": "res = {}\n    for key,value in zip(lst1,lst2):\n        res[key] = value\n    return res).",
+      "explanation": "Đáp án chính xác là A (A: def make_dict(lst1,lst2):\n    res = {}\n    for key,value in zip(lst1,lst2):\n        res[key] = value\n    return res).",
       "answers": [
         {
           "id": 1,
@@ -581,14 +562,13 @@
           "content": "def make_dict(lst1,lst2):\n    res = []\n    for key,value in zip(lst1,lst2):\n        res[key] = value\n    return res",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 21,
       "questionIndex": 20,
       "content": "Which of the following is NOT a factor that affects the time spent on data cleaning?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là D (D: Company size).",
       "answers": [
         {
           "id": 1,
@@ -610,14 +590,13 @@
           "content": "Company size",
           "isCorrect": true
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 22,
       "questionIndex": 21,
       "content": "What is the first stage of the design thinking process?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: Empathize).",
       "answers": [
         {
           "id": 1,
@@ -639,14 +618,13 @@
           "content": "Test",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 23,
       "questionIndex": 22,
       "content": "Thinking with the lens of the scientific process, what would your next steps be if you wanted to decide where to open the next store for your sled business?",
-      "explanation": "B. Gather more data and repeat the snowfall experiment | C. Gather different data say snowfall by county and repeat the experiment | D. Start a business viability assessment for all three states.\n\nĐáp án đúng là 'Gather more data and repeat the snowfall experiment'. Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Gather more data and repeat the snowfall experiment | C: Gather different data say snowfall by county and repeat the experiment | D: Start a business viability assessment for all three states).",
       "answers": [
         {
           "id": 1,
@@ -668,14 +646,13 @@
           "content": "Start a business viability assessment for all three states",
           "isCorrect": true
         }
-      ],
-      "questionType": "Multiple Choice"
+      ]
     },
     {
       "id": 24,
       "questionIndex": 23,
       "content": "Sparse matrices can be useful as a target destination for ETL, but what are the main caveats (choose one or more)?",
-      "explanation": "B. NumPy linear algebra functions generally cannot be called directly | E. It is difficult to print to screen scipy.sparse matrices directly.\n\nE (B: NumPy linear algebra functions generally cannot be called directly | E: It is difficult to print to screen scipy.sparse matrices directly).",
+      "explanation": "Đáp án chính xác là B, E (B: NumPy linear algebra functions generally cannot be called directly | E: It is difficult to print to screen scipy.sparse matrices directly).",
       "answers": [
         {
           "id": 1,
@@ -702,14 +679,13 @@
           "content": "It is difficult to print to screen scipy.sparse matrices directly",
           "isCorrect": true
         }
-      ],
-      "questionType": "Multiple Choice"
+      ]
     },
     {
       "id": 25,
       "questionIndex": 24,
       "content": "Why is granular data preferred over summary level data?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: It allows for more detailed analysis).",
       "answers": [
         {
           "id": 1,
@@ -731,14 +707,13 @@
           "content": "It is more visually appealing",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 26,
       "questionIndex": 25,
       "content": "A decision tree classifier is useful as a model for the AAVAIl subscriber churn data.",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là A (A: True).",
       "answers": [
         {
           "id": 1,
@@ -750,14 +725,13 @@
           "content": "False",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 27,
       "questionIndex": 26,
       "content": "When you use Watson Services like Watson Natural Language Understanding via the Python SDK, what are the three items that need to be saved? These items are generally saved on a local machine and included in scripts and notebooks as imported variables.",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là C (C: service API key, service version, service URL).",
       "answers": [
         {
           "id": 1,
@@ -784,14 +758,13 @@
           "content": "service API key, service URL, service IAMAuthenticator",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 28,
       "questionIndex": 27,
       "content": "Which of the following neural network architectures are most-commonly used for time-series analysis?",
-      "explanation": "Mạng nơ-ron sâu (Deep Learning) trích xuất đặc trưng thông qua các lớp ẩn (Hidden Layers) và tối ưu hóa bằng Lan truyền ngược (Backpropagation).",
+      "explanation": "Đáp án chính xác là B (B: Recurrent neural networks).",
       "answers": [
         {
           "id": 1,
@@ -818,14 +791,13 @@
           "content": "Autoencoders",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 29,
       "questionIndex": 28,
       "content": "In the context of NLP, what does sentiment analysis refer to?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: Determining the emotional tone behind a series of words).",
       "answers": [
         {
           "id": 1,
@@ -847,14 +819,13 @@
           "content": "Summarizing large documents",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 30,
       "questionIndex": 29,
       "content": "What is the purpose of the classification_report in sklearn?",
-      "explanation": "Học có giám sát (Supervised Learning) huấn luyện mô hình dựa trên tập dữ liệu gán nhãn để tối thiểu hóa hàm mất mát (Loss Function).",
+      "explanation": "Đáp án chính xác là B (B: To summarize model performance).",
       "answers": [
         {
           "id": 1,
@@ -876,14 +847,13 @@
           "content": "To train a model",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 31,
       "questionIndex": 30,
       "content": "If you have data with a large number of features and you are sure that it will take some time to train and tune the model, which approach is LEAST likely to result in a speed improvement during grid-searching?",
-      "explanation": "Thuật toán tìm kiếm trong AI sử dụng hàm đánh giá Heuristic h(n) để ước tính chi phí ngắn nhất đến trạng thái mục tiêu.",
+      "explanation": "Đáp án chính xác là B (B: Use the Shuffle and split form of cross-validation).",
       "answers": [
         {
           "id": 1,
@@ -910,14 +880,13 @@
           "content": "Use PCA to reduce the dimensionality of the data before training",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 32,
       "questionIndex": 31,
       "content": "What is a key reason for using existing NLP APIs instead of building models from scratch?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: They require less time and resources).",
       "answers": [
         {
           "id": 1,
@@ -939,14 +908,13 @@
           "content": "They eliminate the need for data",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 33,
       "questionIndex": 32,
       "content": "Which of the following is NOT a component of the confusion matrix?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là D (D: Average Score (AS)).",
       "answers": [
         {
           "id": 1,
@@ -973,14 +941,13 @@
           "content": "False Negatives (FN)",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 34,
       "questionIndex": 33,
       "content": "Which of the following classifiers is inherently designed for multiclass classification?",
-      "explanation": "Học có giám sát (Supervised Learning) huấn luyện mô hình dựa trên tập dữ liệu gán nhãn để tối thiểu hóa hàm mất mát (Loss Function).",
+      "explanation": "Đáp án chính xác là B (B: Naïve Bayes).",
       "answers": [
         {
           "id": 1,
@@ -1002,14 +969,13 @@
           "content": "Decision Trees (in binary mode)",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 35,
       "questionIndex": 34,
       "content": "Processing the corpus with the provided lemmatize_document reduces the total number of tokens to what percentage of the original?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là D (D: 70-75%).",
       "answers": [
         {
           "id": 1,
@@ -1036,14 +1002,13 @@
           "content": "85-95%",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 36,
       "questionIndex": 35,
       "content": "Which of the following is the least valid statement when it comes to dashboards?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là D (D: Dashboards are quick way to create portable simple plots).",
       "answers": [
         {
           "id": 1,
@@ -1070,14 +1035,13 @@
           "content": "Dashboards can be used to tell the story of investigative visualizations",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 37,
       "questionIndex": 36,
       "content": "What will the management team want to know after the sales data is released?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: If the teams are well-optimized based on historical sales data).",
       "answers": [
         {
           "id": 1,
@@ -1099,14 +1063,13 @@
           "content": "The demographics of the customers",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 38,
       "questionIndex": 37,
       "content": "There are many ways to carry out statistical inference. Which one method of the following is NOT used to compute estimates in the context of statistical inference.",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là A (A: Null Hypothesis Significance Testing (NHST)).",
       "answers": [
         {
           "id": 1,
@@ -1133,14 +1096,13 @@
           "content": "Simulation via Permutations",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 39,
       "questionIndex": 38,
       "content": "What is a key principle of design thinking mentioned in the course?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là C (C: Rapid prototyping).",
       "answers": [
         {
           "id": 1,
@@ -1162,14 +1124,13 @@
           "content": "User testing",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 40,
       "questionIndex": 39,
       "content": "Which method is recommended for handling missing values in numerical data?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: Use imputation techniques).",
       "answers": [
         {
           "id": 1,
@@ -1191,14 +1152,13 @@
           "content": "Replace with a random value",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 41,
       "questionIndex": 40,
       "content": "In the script example-spark-submit.sh, what does the #!/bin/bash line indicate?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là C (C: It tells the system to use the Bash shell to execute the script).",
       "answers": [
         {
           "id": 1,
@@ -1220,14 +1180,13 @@
           "content": "It is a comment and has no effect",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 42,
       "questionIndex": 41,
       "content": "Which Python package supports spawning processes for code optimization?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là C (C: multiprocessing).",
       "answers": [
         {
           "id": 1,
@@ -1249,14 +1208,13 @@
           "content": "numpy",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 43,
       "questionIndex": 42,
       "content": "What is the first step in setting up the Watson Developer Cloud Python SDK?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: Create an IBM Cloud account).",
       "answers": [
         {
           "id": 1,
@@ -1278,14 +1236,13 @@
           "content": "Download the tutorial files",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 44,
       "questionIndex": 43,
       "content": "Which command is used to install the Watson Developer Cloud Python SDK?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là A (A: pip install ibm-watson).",
       "answers": [
         {
           "id": 1,
@@ -1307,14 +1264,13 @@
           "content": "upgrade ibm-watson",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 45,
       "questionIndex": 44,
       "content": "Which of the following is a common challenge when optimizing code for machine learning models?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: Difficulty in improving training time for large models).",
       "answers": [
         {
           "id": 1,
@@ -1336,14 +1292,13 @@
           "content": "Limited programming languages available",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 46,
       "questionIndex": 45,
       "content": "What is the purpose of profiling in code optimization?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: To identify which parts of the code are bottlenecks).",
       "answers": [
         {
           "id": 1,
@@ -1365,14 +1320,13 @@
           "content": "To reduce the amount of data used",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 47,
       "questionIndex": 46,
       "content": "Docker containers run a private file system that is isolated from the host and other containers. What is the suggested way to access notebooks and scripts from within the container?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là C (C: bind mounts).",
       "answers": [
         {
           "id": 1,
@@ -1399,14 +1353,13 @@
           "content": "volumes",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 48,
       "questionIndex": 47,
       "content": "When you worked on model deployment case study, which modification to the ALS algorithm had the largest effect on model performance?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là A (A: The explicit training vs implicit training comparison).",
       "answers": [
         {
           "id": 1,
@@ -1428,14 +1381,13 @@
           "content": "The I1 vs I2 comparison",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 49,
       "questionIndex": 48,
       "content": "Docker images are the basis of containers. It is possible to pull an image from the registry and ask the Docker client to run a container based on that image. Some images are official while many others are user defined.",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là A (A: True).",
       "answers": [
         {
           "id": 1,
@@ -1447,14 +1399,13 @@
           "content": "False",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     },
     {
       "id": 50,
       "questionIndex": 49,
       "content": "What is the community package of the Docker Engine called?",
-      "explanation": "Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Đáp án chính xác là B (B: docker-ce).",
       "answers": [
         {
           "id": 1,
@@ -1476,8 +1427,7 @@
           "content": "docker-toolbox",
           "isCorrect": false
         }
-      ],
-      "questionType": "Single Choice"
+      ]
     }
   ]
 }

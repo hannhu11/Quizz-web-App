@@ -477,10 +477,14 @@ export function saveQuizProgress(quizId, score, total, mode) {
   }
 }
 
-export function getStarredQuestions() {
+export function getStarredQuestions(quizId) {
   try {
     const data = localStorage.getItem(STORAGE_KEY_STARS);
-    return data ? JSON.parse(data) : [];
+    const list = data ? JSON.parse(data) : [];
+    if (quizId) {
+      return list.filter(s => s.quizId === quizId);
+    }
+    return list;
   } catch (e) {
     return [];
   }
@@ -489,10 +493,10 @@ export function getStarredQuestions() {
 export function toggleStarQuestion(questionId, quizId, questionData, questionIndex = 0) {
   try {
     const stars = getStarredQuestions();
-    const index = stars.findIndex(s => s.questionId === questionId);
+    const index = stars.findIndex(s => s.questionId === questionId && s.quizId === quizId);
     let updated;
     if (index >= 0) {
-      updated = stars.filter(s => s.questionId !== questionId);
+      updated = stars.filter(s => !(s.questionId === questionId && s.quizId === quizId));
     } else {
       const quizInfo = normalizedQuizCache.get(quizId) || QUIZ_MANIFEST.find(q => q.id === quizId) || {};
       updated = [
