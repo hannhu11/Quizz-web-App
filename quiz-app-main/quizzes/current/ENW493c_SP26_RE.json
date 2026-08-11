@@ -707,7 +707,7 @@
       "id": 27,
       "questionIndex": 26,
       "content": "Consider an algorithm that is supposed to find all possible occurrences in a text of person's names. (Select 2 correct answers)",
-      "explanation": "Các đáp án đúng gồm: D. The algorithm may find a name that is not a person's name and may fail to find certain person's names. In this case the algorithm can generate both false positives and false negatives. | E. The algorithm finds a name that is not a person's name. This is a false positive..\n\nD  Đúng Thuật toán có thể đồng thời: Phát hiện sai → False Positive Bỏ sót → False Negative E Đúng False Positive là trường hợp hệ thống nhận diện nhầm một đối tượng không đúng.",
+      "explanation": "D. The algorithm may find a name that is not a person's name and may fail to find certain person's names. In this case the algorithm can generate both false positives and false negatives. | E. The algorithm finds a name that is not a person's name. This is a false positive..\n\nD  Đúng Thuật toán có thể đồng thời: Phát hiện sai → False Positive Bỏ sót → False Negative E Đúng False Positive là trường hợp hệ thống nhận diện nhầm một đối tượng không đúng.",
       "answers": [
         {
           "id": 1,
@@ -799,7 +799,7 @@
       "id": 30,
       "questionIndex": 29,
       "content": "Which of the following statements correctly describe soundness and completeness of a theory? (Choose 2 answers)",
-      "explanation": "Các đáp án đúng gồm: C. A theory is sound if all its predictions are possible manifestations. | E. A theory is complete if it predicts all possible manifestations..\n\nC. A theory is sound if all its predictions are possible manifestations.  Đúng : Soundness nghĩa là mọi dự đoán của lý thuyết đều có thể xảy ra trong thực tế. E. A theory is complete if it predicts all possible manifestations. Đúng Giải thích: Completeness nghĩa là lý thuyết bao quát toàn bộ các trường hợp có thể xảy ra.",
+      "explanation": "C. A theory is sound if all its predictions are possible manifestations. | E. A theory is complete if it predicts all possible manifestations..\n\nC. A theory is sound if all its predictions are possible manifestations.  Đúng : Soundness nghĩa là mọi dự đoán của lý thuyết đều có thể xảy ra trong thực tế. E. A theory is complete if it predicts all possible manifestations. Đúng Giải thích: Completeness nghĩa là lý thuyết bao quát toàn bộ các trường hợp có thể xảy ra.",
       "answers": [
         {
           "id": 1,

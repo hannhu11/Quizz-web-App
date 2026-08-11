@@ -8,7 +8,7 @@
       "id": 1,
       "questionIndex": 0,
       "content": "Which statement best summarizes the relationship between the four core areas (ideation, front-end, back-end, testing) in the early stages of development?",
-      "explanation": "Đáp án đúng là 'They constantly exchange ideas and inform each other through iterative work.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -37,7 +37,7 @@
       "id": 2,
       "questionIndex": 1,
       "content": "Which form element is most appropriate for selecting a state when you have a large variety of options (For example: 50 states)?",
-      "explanation": "Đáp án đúng là 'Dropdown list: Saves screen space and efficiently presents numerous options.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "Saves screen space and efficiently presents numerous options.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -61,7 +61,7 @@
       "id": 3,
       "questionIndex": 2,
       "content": "What is the primary function of a sidebar on a website?",
-      "explanation": "Đáp án đúng là 'To provide secondary navigation or additional information'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -90,7 +90,7 @@
       "id": 4,
       "questionIndex": 3,
       "content": "How can using animation effectively in a UI/UX design enhance the user experience?",
-      "explanation": "Đáp án đúng là 'By providing subtle visual cues and feedback to confirm user actions and progress.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -114,7 +114,7 @@
       "id": 5,
       "questionIndex": 4,
       "content": "How can visual hierarchy be used effectively in UI design?",
-      "explanation": "Đáp án đúng là 'By highlighting important elements with larger size, bolder font, or contrasting colors.'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
+      "explanation": "'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
       "answers": [
         {
           "id": 1,
@@ -143,7 +143,7 @@
       "id": 6,
       "questionIndex": 5,
       "content": "Once you define your initial app idea, you should stick to it throughout the development process without further exploration or refinement.",
-      "explanation": "Đáp án đúng là 'False'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -162,7 +162,7 @@
       "id": 7,
       "questionIndex": 6,
       "content": "Do generic website templates are a good choice for any type of content?",
-      "explanation": "Đáp án đúng là 'No'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -181,7 +181,7 @@
       "id": 8,
       "questionIndex": 7,
       "content": "What is a key benefit of using prototyping in the design process?",
-      "explanation": "Đáp án đúng là 'All of the above.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -210,7 +210,7 @@
       "id": 9,
       "questionIndex": 8,
       "content": "How can visual research findings be effectively translated into tangible design decisions for the app?",
-      "explanation": "Đáp án đúng là 'Defining clear design principles and mood boards inspired by the research.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -239,7 +239,7 @@
       "id": 10,
       "questionIndex": 9,
       "content": "What's the primary purpose of a button in digital design?",
-      "explanation": "Đáp án đúng là 'To trigger an action or navigate the user interface.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -268,7 +268,7 @@
       "id": 11,
       "questionIndex": 10,
       "content": "When should a website consider displaying the search function prominently as part of the header design? (Check all that apply)",
-      "explanation": "Đáp án đúng là 'On sites heavily reliant on search as the primary method of content discovery (e.g., e-commerce, streaming platforms).'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "g., e-commerce, streaming platforms).'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -292,7 +292,7 @@
       "id": 12,
       "questionIndex": 11,
       "content": "What potential consequence does an excessively cluttered content area pose for users?",
-      "explanation": "Đáp án đúng là 'It can overwhelm users and hinder information comprehension.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -316,7 +316,7 @@
       "id": 13,
       "questionIndex": 12,
       "content": "Can user interface design influence how users perceive real-world events?",
-      "explanation": "Đáp án đúng là 'Yes.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -335,7 +335,7 @@
       "id": 14,
       "questionIndex": 13,
       "content": "When should a website consider displaying the search function prominently as part of the header design? (Check all that apply)",
-      "explanation": "Đáp án đúng là 'On sites heavily reliant on search as the primary method of content discovery (e.g., e-commerce, streaming platforms).'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "g., e-commerce, streaming platforms).'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -359,7 +359,7 @@
       "id": 15,
       "questionIndex": 14,
       "content": "Which three factors are emphasized as central to structuring content and design hierarchies in mobile apps? (Check all that apply)",
-      "explanation": "Đáp án đúng là 'Emphasizing immediate access to core functionality'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -398,7 +398,7 @@
       "id": 16,
       "questionIndex": 15,
       "content": "Consider two websites selling hiking gear: one targeting experienced mountaineers and another targeting beginner hikers. How would their content and features likely differ based on user segmentation?",
-      "explanation": "Đáp án đúng là 'The beginner website would likely prioritize detailed tutorials and instructional content.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -422,7 +422,7 @@
       "id": 17,
       "questionIndex": 16,
       "content": "In the context of grid systems, what does the term \"gutter\" refer to?",
-      "explanation": "Đáp án đúng là 'Spacing between gridlines and design elements for visual balance and breathing room.'. CSS Layout (Flexbox / Grid / Media Queries) giúp bố cục trang web tự động thích ứng mượt mà trên nhiều kích thước màn hình khác nhau (Responsive Web Design).",
+      "explanation": "'. CSS Layout (Flexbox / Grid / Media Queries) giúp bố cục trang web tự động thích ứng mượt mà trên nhiều kích thước màn hình khác nhau (Responsive Web Design).",
       "answers": [
         {
           "id": 1,
@@ -451,7 +451,7 @@
       "id": 18,
       "questionIndex": 17,
       "content": "What is the advantage of using text better than using an icon in a function button?",
-      "explanation": "Đáp án đúng là 'Clear meaning.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -480,7 +480,7 @@
       "id": 19,
       "questionIndex": 18,
       "content": "Which of the following methods is Least recommended for user research on a limited budget?",
-      "explanation": "Đáp án đúng là 'Hiring a professional user research agency.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -509,7 +509,7 @@
       "id": 20,
       "questionIndex": 19,
       "content": "What is the primary focus of the \"Define\" phase in the UX process?",
-      "explanation": "Đáp án đúng là 'Establishing project goals, user personas, and success metrics.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -538,7 +538,7 @@
       "id": 21,
       "questionIndex": 20,
       "content": "Determining an information hierarchy does not involve finding possible options for arranging content on a page.",
-      "explanation": "Đáp án đúng là 'False'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -557,7 +557,7 @@
       "id": 22,
       "questionIndex": 21,
       "content": "Which of the following is not a core purpose of content mapping?",
-      "explanation": "Đáp án đúng là 'Dictating the visual aesthetics of the final app.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -586,7 +586,7 @@
       "id": 23,
       "questionIndex": 22,
       "content": "What does a user interface typically leverage to help users understand product concepts?",
-      "explanation": "Đáp án đúng là 'Real-world knowledge and conventions to facilitate intuitive understanding.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -610,7 +610,7 @@
       "id": 24,
       "questionIndex": 23,
       "content": "What key takeaway should designers remember about button state design?",
-      "explanation": "Đáp án đúng là 'Each state should provide clear and intuitive feedback, guiding users through their interaction with the button.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -634,7 +634,7 @@
       "id": 25,
       "questionIndex": 24,
       "content": "Which statement best summarizes the key difference between UI and UX?",
-      "explanation": "Đáp án đúng là 'UI deals with tangible design while UX focuses on intangible experiences.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -658,7 +658,7 @@
       "id": 26,
       "questionIndex": 25,
       "content": "Why is clear visual differentiation between button states crucial for usability?",
-      "explanation": "Đáp án đúng là 'To provide immediate feedback and inform users about their interaction with the button.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -687,7 +687,7 @@
       "id": 27,
       "questionIndex": 26,
       "content": "What elements should typically be included in a well-defined app sitemap?",
-      "explanation": "Đáp án đúng là 'A hierarchical map of pages, screens, and their relationships.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -711,7 +711,7 @@
       "id": 28,
       "questionIndex": 27,
       "content": "In the context of UI/UX design, which of the following best describes the primary purpose of wireframes?",
-      "explanation": "Đáp án đúng là 'To define the precise layout and placement of individual UI elements.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -740,7 +740,7 @@
       "id": 29,
       "questionIndex": 28,
       "content": "Compared to the Waterfall approach, the Agile approach to UX prioritizes:",
-      "explanation": "Đáp án đúng là 'Rapid iteration and continuous improvement based on user feedback.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -769,7 +769,7 @@
       "id": 30,
       "questionIndex": 29,
       "content": "What's the primary purpose of a button in digital design?",
-      "explanation": "Đáp án đúng là 'To trigger an action or navigate the user interface.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -798,7 +798,7 @@
       "id": 31,
       "questionIndex": 30,
       "content": "What is the main purpose of creating a prototype?",
-      "explanation": "Đáp án đúng là 'To test and refine functionality and user experience.'. Wireframe và Prototype là các bước phác thảo và dựng mô hình tương tác ban đầu, giúp thử nghiệm luồng người dùng trước khi tiến hành lập trình giao diện chính thức.",
+      "explanation": "'. Wireframe và Prototype là các bước phác thảo và dựng mô hình tương tác ban đầu, giúp thử nghiệm luồng người dùng trước khi tiến hành lập trình giao diện chính thức.",
       "answers": [
         {
           "id": 1,
@@ -822,7 +822,7 @@
       "id": 32,
       "questionIndex": 31,
       "content": "The composition and structure of a user interface should always be prioritized over the individual design details of its elements.",
-      "explanation": "Đáp án đúng là 'True'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -841,7 +841,7 @@
       "id": 33,
       "questionIndex": 32,
       "content": "Specific shapes can evoke different emotions and feelings in users. Which of the following shapes is most likely to be associated with a sense of playfulness and fun?",
-      "explanation": "Đáp án đúng là 'Circle'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -870,7 +870,7 @@
       "id": 34,
       "questionIndex": 33,
       "content": "When a client requests a specific design feature without clear justification, the designer's role is to:",
-      "explanation": "Đáp án đúng là 'Understand the underlying motivation behind the request and propose alternative solutions.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -899,7 +899,7 @@
       "id": 35,
       "questionIndex": 34,
       "content": "What are the colors used in a wireframe?",
-      "explanation": "Đáp án đúng là 'Greyscale.'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
+      "explanation": "'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
       "answers": [
         {
           "id": 1,
@@ -928,7 +928,7 @@
       "id": 36,
       "questionIndex": 35,
       "content": "Why do some websites separate \"cart\" and \"account\" links into the utility navigation instead of including them in the primary menu?",
-      "explanation": "Đáp án đúng là 'All of the above.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -952,7 +952,7 @@
       "id": 37,
       "questionIndex": 36,
       "content": "How do you suggest prioritizing the main navigation sections on the sitemap?",
-      "explanation": "Đáp án đúng là 'Importance and relevance to users’ primary goals.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -981,7 +981,7 @@
       "id": 38,
       "questionIndex": 37,
       "content": "What emphasizes mastering grid systems in UI design?",
-      "explanation": "Đáp án đúng là 'They offer a powerful foundation for building flexible and adaptable layouts.'. CSS Layout (Flexbox / Grid / Media Queries) giúp bố cục trang web tự động thích ứng mượt mà trên nhiều kích thước màn hình khác nhau (Responsive Web Design).",
+      "explanation": "'. CSS Layout (Flexbox / Grid / Media Queries) giúp bố cục trang web tự động thích ứng mượt mà trên nhiều kích thước màn hình khác nhau (Responsive Web Design).",
       "answers": [
         {
           "id": 1,
@@ -1005,7 +1005,7 @@
       "id": 39,
       "questionIndex": 38,
       "content": "Which statement best summarizes the relationship between the four core areas (ideation, front-end, back-end, testing) in the early stages of development?",
-      "explanation": "Đáp án đúng là 'They constantly exchange ideas and inform each other through iterative work.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -1034,7 +1034,7 @@
       "id": 40,
       "questionIndex": 39,
       "content": "What are three potential downsides of overly prioritizing aesthetics and graphical elements in UI design? (Check all that apply)",
-      "explanation": "Các đáp án đúng gồm: B. Enhanced learning curve and user confusion | D. Increased risk of rapid visual obsolescence | E. Potential for content obstruction and reduced functionality.\n\nĐáp án đúng là 'Enhanced learning curve and user confusion'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "B. Enhanced learning curve and user confusion | D. Increased risk of rapid visual obsolescence | E. Potential for content obstruction and reduced functionality.\n\nĐáp án đúng là 'Enhanced learning curve and user confusion'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -1068,7 +1068,7 @@
       "id": 41,
       "questionIndex": 40,
       "content": "How can designers ensure an effective disabled state for buttons?",
-      "explanation": "Đáp án đúng là 'Using low opacity and a clear label like \"Disabled\" or \"Coming Soon\" to inform users.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -1097,7 +1097,7 @@
       "id": 42,
       "questionIndex": 41,
       "content": "Which phase of the UX process typically involves user interviews, surveys, and testing to gather insights and understand user needs?",
-      "explanation": "Đáp án đúng là 'Research'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -1126,7 +1126,7 @@
       "id": 43,
       "questionIndex": 42,
       "content": "At which stage of the design process do we create wireframes?",
-      "explanation": "Đáp án đúng là 'Design and Prototyping.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -1155,7 +1155,7 @@
       "id": 44,
       "questionIndex": 43,
       "content": "What is the primary purpose of a button in UI/UX design?",
-      "explanation": "Đáp án đúng là 'To trigger an action or response within the digital product.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -1184,7 +1184,7 @@
       "id": 45,
       "questionIndex": 44,
       "content": "What is a graphical or text representation that illustrates the relationships between various content groups on a website?",
-      "explanation": "Đáp án đúng là 'Sitemap'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -1213,7 +1213,7 @@
       "id": 46,
       "questionIndex": 45,
       "content": "What is the right size for a button on a mobile interface?",
-      "explanation": "Đáp án đúng là 'Display size fits fingertip.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -1242,7 +1242,7 @@
       "id": 47,
       "questionIndex": 46,
       "content": "Which principle focuses on gathering user feedback and conducting research to understand their needs and expectations, informing the design process?",
-      "explanation": "Đáp án đúng là 'User Research'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -1271,7 +1271,7 @@
       "id": 48,
       "questionIndex": 47,
       "content": "Which element is not explicitly mentioned as a key component of a user interface?",
-      "explanation": "Đáp án đúng là 'The user interacting with the interface'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -1295,7 +1295,7 @@
       "id": 49,
       "questionIndex": 48,
       "content": "Which location is considered the most suitable to place the footer on the website?",
-      "explanation": "Đáp án đúng là 'The bottom of the website.'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
+      "explanation": "'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
       "answers": [
         {
           "id": 1,
@@ -1324,7 +1324,7 @@
       "id": 50,
       "questionIndex": 49,
       "content": "Which location is considered the most suitable to place the footer on the website?",
-      "explanation": "Đáp án đúng là 'The bottom of the website.'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
+      "explanation": "'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
       "answers": [
         {
           "id": 1,
@@ -1353,7 +1353,7 @@
       "id": 51,
       "questionIndex": 50,
       "content": "User-centric design implies that the designer's primary focus should always be on maximizing profit for the client, even if it comes at the expense of user experience.",
-      "explanation": "Đáp án đúng là 'False.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -1372,7 +1372,7 @@
       "id": 52,
       "questionIndex": 51,
       "content": "What is the primary benefit of using low-fidelity wireframes in the UI design process?",
-      "explanation": "Đáp án đúng là 'To test the overall information architecture and user flow.'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
+      "explanation": "'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
       "answers": [
         {
           "id": 1,
@@ -1396,7 +1396,7 @@
       "id": 53,
       "questionIndex": 52,
       "content": "Which statement best summarizes the key difference between UI and UX?",
-      "explanation": "Đáp án đúng là 'UI deals with tangible design while UX focuses on intangible experiences.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -1420,7 +1420,7 @@
       "id": 54,
       "questionIndex": 53,
       "content": "When applying Design Thinking, the purpose is to identify the correct problems and subsequently create efficient solutions for them. Is this statement true or false?",
-      "explanation": "Đáp án đúng là 'True'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -1439,7 +1439,7 @@
       "id": 55,
       "questionIndex": 54,
       "content": "What is the primary function of a website header? (Check all that apply)",
-      "explanation": "Đáp án đúng là 'To provide navigation options for users to explore the website.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -1468,7 +1468,7 @@
       "id": 56,
       "questionIndex": 55,
       "content": "Which of the following best exemplifies the idea of shaping UI language based on target audience and design direction?",
-      "explanation": "Đáp án đúng là 'Choosing fun and playful vocabulary for a children's app while adopting a more serious tone for a financial app.'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
+      "explanation": "'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
       "answers": [
         {
           "id": 1,
@@ -1497,7 +1497,7 @@
       "id": 57,
       "questionIndex": 56,
       "content": "Which of the following is not a typical method used in user-centric design research?",
-      "explanation": "Đáp án đúng là 'Expert opinion: relying on designers' intuition and assumptions.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "relying on designers' intuition and assumptions.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -1526,7 +1526,7 @@
       "id": 58,
       "questionIndex": 57,
       "content": "Do the ergonomics of the human body significantly influence the optimal arrangement of elements on user interfaces?",
-      "explanation": "Đáp án đúng là 'Yes'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -1545,7 +1545,7 @@
       "id": 59,
       "questionIndex": 58,
       "content": "Is contrast an important element when designing UI?",
-      "explanation": "Đáp án đúng là 'Yes.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -1564,7 +1564,7 @@
       "id": 60,
       "questionIndex": 59,
       "content": "What's the main goal of UX design?",
-      "explanation": "Đáp án đúng là 'To ensure users enjoy smooth, intuitive, and positive interactions.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -1593,7 +1593,7 @@
       "id": 61,
       "questionIndex": 60,
       "content": "Which of the following best summarizes the reason why text is still the preferred method for conveying specific information on screens?",
-      "explanation": "Đáp án đúng là 'Text can represent abstract concepts more effectively than icons.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -1622,7 +1622,7 @@
       "id": 62,
       "questionIndex": 61,
       "content": "Which of the following statements is correct?",
-      "explanation": "Đáp án đúng là 'Content maps focus on clarity and structure, not visual design.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -1641,7 +1641,7 @@
       "id": 63,
       "questionIndex": 62,
       "content": "What is the primary purpose of a pattern library in UI/UX design?",
-      "explanation": "Đáp án đúng là 'To document and reuse common UI components and interactions.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -1670,7 +1670,7 @@
       "id": 64,
       "questionIndex": 63,
       "content": "A wireframe is a method for designing interfaces, but it may not be the primary process for thoroughly considering and addressing user experience problems.",
-      "explanation": "Đáp án đúng là 'True'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -1689,7 +1689,7 @@
       "id": 65,
       "questionIndex": 64,
       "content": "When exploring different possible forms for your app, what should you not do?",
-      "explanation": "Đáp án đúng là 'Limit yourself to ideas that seem realistic or achievable.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -1718,7 +1718,7 @@
       "id": 66,
       "questionIndex": 65,
       "content": "______ is a representation or template of what a website will look like and how it will function.",
-      "explanation": "Đáp án đúng là 'A wireframe.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -1747,7 +1747,7 @@
       "id": 67,
       "questionIndex": 66,
       "content": "Which of the following is not a core principle of good UX design?",
-      "explanation": "Đáp án đúng là 'Mystery: Introducing unexpected elements to keep users engaged.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "Introducing unexpected elements to keep users engaged.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -1776,7 +1776,7 @@
       "id": 68,
       "questionIndex": 67,
       "content": "When designing a checkout process, why is user control and freedom particularly important?",
-      "explanation": "Đáp án đúng là 'To allow users to easily review or edit their information before finalizing.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -1805,7 +1805,7 @@
       "id": 69,
       "questionIndex": 68,
       "content": "Which of the following is correctly identified?",
-      "explanation": "Đáp án đúng là 'When implementing a navigation system for a website, while sitemap sections inform primary navigation choices, some like \"cart\" and \"account\" may be handled separately depending on their specific function.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -1824,7 +1824,7 @@
       "id": 70,
       "questionIndex": 69,
       "content": "What is the primary function of breadcrumbs in website navigation?",
-      "explanation": "Đáp án đúng là 'To highlight user progress and offer alternative navigation paths.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -1853,7 +1853,7 @@
       "id": 71,
       "questionIndex": 70,
       "content": "How to make a button more recognizable?",
-      "explanation": "Đáp án đúng là 'All the above.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -1882,7 +1882,7 @@
       "id": 72,
       "questionIndex": 71,
       "content": "According to Nielsen's Heuristics, the system should always keep users informed about what's happening through appropriate feedback within a reasonable time. This principle refers to:",
-      "explanation": "Đáp án đúng là 'Visibility of system status.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -1911,7 +1911,7 @@
       "id": 73,
       "questionIndex": 72,
       "content": "The aesthetics of the image directly influence ______",
-      "explanation": "Đáp án đúng là 'mood'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -1940,7 +1940,7 @@
       "id": 74,
       "questionIndex": 73,
       "content": "What typefaces are recommended to be used on websites?",
-      "explanation": "Đáp án đúng là 'Sans Serif'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -1969,7 +1969,7 @@
       "id": 75,
       "questionIndex": 74,
       "content": "Which of the following statements is correct?",
-      "explanation": "Đáp án đúng là 'Each approach has advantages and disadvantages, consider for adaptability based on project needs before applying.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -1993,7 +1993,7 @@
       "id": 76,
       "questionIndex": 75,
       "content": "How do you suggest prioritizing the main navigation sections on the sitemap?",
-      "explanation": "Đáp án đúng là 'Importance and relevance to users' primary goals.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2022,7 +2022,7 @@
       "id": 77,
       "questionIndex": 76,
       "content": "User interface design should prioritize aesthetics over functionality for a unique and visually captivating experience.",
-      "explanation": "Đáp án đúng là 'False'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2041,7 +2041,7 @@
       "id": 78,
       "questionIndex": 77,
       "content": "Which of the following is not a non-digital wireframing tool?",
-      "explanation": "Đáp án đúng là 'Paper sketching.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2070,7 +2070,7 @@
       "id": 79,
       "questionIndex": 78,
       "content": "What is the primary purpose of establishing visual hierarchy in a graphic design piece?",
-      "explanation": "Đáp án đúng là 'To guide the viewer's eye and prioritize the most important information.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2099,7 +2099,7 @@
       "id": 80,
       "questionIndex": 79,
       "content": "When designing a search bar, it's important to provide immediate results and suggestions as the user types. This best aligns with the heuristic of:",
-      "explanation": "Đáp án đúng là 'Visibility of system status'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2128,7 +2128,7 @@
       "id": 81,
       "questionIndex": 80,
       "content": "What are three advantages of using metaphorical icons and symbols in user interfaces? (Check all that apply)",
-      "explanation": "Đáp án đúng là 'They are more efficient in terms of screen space.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -2162,7 +2162,7 @@
       "id": 82,
       "questionIndex": 81,
       "content": "What is a key benefit of using prototyping in the design process?",
-      "explanation": "Đáp án đúng là 'All of the above.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2191,7 +2191,7 @@
       "id": 83,
       "questionIndex": 82,
       "content": "Consider two websites selling hiking gear: one targeting experienced mountaineers and another targeting beginner hikers. How would their content and features likely differ based on user segmentation?",
-      "explanation": "Đáp án đúng là 'The beginner website would likely prioritize detailed tutorials and instructional content.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2215,7 +2215,7 @@
       "id": 84,
       "questionIndex": 83,
       "content": "What impact can the placement of a button have on user behavior and engagement?",
-      "explanation": "Đáp án đúng là 'Positioning buttons in natural user flow areas and key decision points encourages interaction.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2244,7 +2244,7 @@
       "id": 85,
       "questionIndex": 84,
       "content": "Which of the following tools is best suited for creating low-fidelity wireframes?",
-      "explanation": "Đáp án đúng là 'Sketch or Figma with basic shapes and line drawing tools.'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
+      "explanation": "'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
       "answers": [
         {
           "id": 1,
@@ -2273,7 +2273,7 @@
       "id": 86,
       "questionIndex": 85,
       "content": "Whitespace primarily serves to fill empty space on a website and is generally considered a wasted design element.",
-      "explanation": "Đáp án đúng là 'False.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -2292,7 +2292,7 @@
       "id": 87,
       "questionIndex": 86,
       "content": "What advantage does responsive design offer over separate mobile websites?",
-      "explanation": "Đáp án đúng là 'All of the above.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -2321,7 +2321,7 @@
       "id": 88,
       "questionIndex": 87,
       "content": "What is the primary goal of information architecture?",
-      "explanation": "Đáp án đúng là 'To make information easily accessible and findable for users'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2350,7 +2350,7 @@
       "id": 89,
       "questionIndex": 88,
       "content": "What does a user interface typically leverage to help users understand product concepts?",
-      "explanation": "Đáp án đúng là 'Real-world knowledge and conventions to facilitate intuitive understanding.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2374,7 +2374,7 @@
       "id": 90,
       "questionIndex": 89,
       "content": "What are the factors that determine the success of UI?",
-      "explanation": "Đáp án đúng là 'Contrast, repetition, alignment, proximity.'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
+      "explanation": "'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
       "answers": [
         {
           "id": 1,
@@ -2403,7 +2403,7 @@
       "id": 91,
       "questionIndex": 90,
       "content": "Which choice between a simple geometric and an illustration makes a button design visually clean and easy to interact with?",
-      "explanation": "Đáp án đúng là 'Simple geometric shape.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2427,7 +2427,7 @@
       "id": 92,
       "questionIndex": 91,
       "content": "What is the main advantage of using different visual approaches like photography and vector graphics for mood boards?",
-      "explanation": "Đáp án đúng là 'It showcases diverse UI styles and user demographics.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -2451,7 +2451,7 @@
       "id": 93,
       "questionIndex": 92,
       "content": "When setting the visual direction, which of the following is not mentioned as a component of developing the visual direction for an app?",
-      "explanation": "Đáp án đúng là 'Conducting A/B testing on different visual directions.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2475,7 +2475,7 @@
       "id": 94,
       "questionIndex": 93,
       "content": "How can designers strike a balance between offering helpful instructions and avoiding overwhelming users with excessive information?",
-      "explanation": "Đáp án đúng là 'Provide contextual hints and tips on-demand with minimal intrusion.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2504,7 +2504,7 @@
       "id": 95,
       "questionIndex": 94,
       "content": "What potential bias can occur when relying solely on self-reported data from users in user research?",
-      "explanation": "Đáp án đúng là 'Both of the above.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2533,7 +2533,7 @@
       "id": 96,
       "questionIndex": 95,
       "content": "Which three factors are emphasized as central to structuring content and design hierarchies in mobile apps? (Check all that apply)",
-      "explanation": "Đáp án đúng là 'Combining user goals and client goals into a single hierarchy.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2572,7 +2572,7 @@
       "id": 97,
       "questionIndex": 96,
       "content": "Where is the most effective placement for breadcrumbs within a website design?",
-      "explanation": "Đáp án đúng là 'Prominently displayed near the top of the page, close to the main navigation bar.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2596,7 +2596,7 @@
       "id": 98,
       "questionIndex": 97,
       "content": "How can UI/UX designers ensure users understand the meaning behind an icon or symbol?",
-      "explanation": "Đáp án đúng là 'Utilizing well-established conventions and maintaining consistency with industry standards.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -2620,7 +2620,7 @@
       "id": 99,
       "questionIndex": 98,
       "content": "How can designers ensure an effective disabled state for buttons?",
-      "explanation": "Đáp án đúng là 'Using low opacity and a clear label like \"Disabled\" or \"Coming Soon\" to inform users.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2649,7 +2649,7 @@
       "id": 100,
       "questionIndex": 99,
       "content": "What potential drawback is mentioned for implementing \"sticky navigation\" where the header remains visible while scrolling?",
-      "explanation": "Đáp án đúng là 'All of the above.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2678,7 +2678,7 @@
       "id": 101,
       "questionIndex": 100,
       "content": "What are the factors that determine the success of UI?",
-      "explanation": "Đáp án đúng là 'Contrast, repetition, alignment, proximity.'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
+      "explanation": "'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
       "answers": [
         {
           "id": 1,
@@ -2707,7 +2707,7 @@
       "id": 102,
       "questionIndex": 101,
       "content": "The primary purpose of developing a sitemap is to solidify the visual design of the final app.",
-      "explanation": "Đáp án đúng là 'False'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2726,7 +2726,7 @@
       "id": 103,
       "questionIndex": 102,
       "content": "What are three advantages of using metaphorical icons and symbols in user interfaces? (Check all that apply)",
-      "explanation": "Các đáp án đúng gồm: B. They provide a sense of nostalgia and familiarity. | C. They are more efficient in terms of screen space. | D. They simplify complex concepts and actions..\n\nĐáp án đúng là 'They provide a sense of nostalgia and familiarity.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "B. They provide a sense of nostalgia and familiarity. | C. They are more efficient in terms of screen space. | D. They simplify complex concepts and actions..\n\nĐáp án đúng là 'They provide a sense of nostalgia and familiarity.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -2760,7 +2760,7 @@
       "id": 104,
       "questionIndex": 103,
       "content": "Blueprints of a website layout are intended to ______",
-      "explanation": "Đáp án đúng là 'Prototype of the screen layout showing navigation and main design elements.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2789,7 +2789,7 @@
       "id": 105,
       "questionIndex": 104,
       "content": "How to make a button more recognizable?",
-      "explanation": "Đáp án đúng là 'All the above.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2818,7 +2818,7 @@
       "id": 106,
       "questionIndex": 105,
       "content": "Which of the following best summarizes the reason why text is still the preferred method for conveying specific information on screens?",
-      "explanation": "Đáp án đúng là 'Text can represent abstract concepts more effectively than icons.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2847,7 +2847,7 @@
       "id": 107,
       "questionIndex": 106,
       "content": "What advantage does responsive design offer over separate mobile websites?",
-      "explanation": "Đáp án đúng là 'All of the above.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -2876,7 +2876,7 @@
       "id": 108,
       "questionIndex": 107,
       "content": "What typefaces are recommended to be used on websites?",
-      "explanation": "Đáp án đúng là 'Sans Serif.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2905,7 +2905,7 @@
       "id": 109,
       "questionIndex": 108,
       "content": "Compared to the Waterfall approach, the Agile approach to UX prioritizes:",
-      "explanation": "Đáp án đúng là 'Rapid iteration and continuous improvement based on user feedback.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -2934,7 +2934,7 @@
       "id": 110,
       "questionIndex": 109,
       "content": "According to Nielsen's Usability Heuristics, what is the \"User Control and Freedom\" principle?",
-      "explanation": "Đáp án đúng là 'Heuristic focuses on giving users ways to undo actions and explore different options.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -2963,7 +2963,7 @@
       "id": 111,
       "questionIndex": 110,
       "content": "When implementing the empathize phase, what is the purpose of understanding user motivation?",
-      "explanation": "Đáp án đúng là 'The goal is to gain insights into what motivates and influences users' actions, decisions, and behaviors.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -2982,7 +2982,7 @@
       "id": 112,
       "questionIndex": 111,
       "content": "Users can effectively interact with an interface without any prior understanding of its functionality or visual cues.",
-      "explanation": "Đáp án đúng là 'False'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -3001,7 +3001,7 @@
       "id": 113,
       "questionIndex": 112,
       "content": "What is the primary goal of information architecture?",
-      "explanation": "Đáp án đúng là 'To make information easily accessible and findable for users.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -3030,7 +3030,7 @@
       "id": 114,
       "questionIndex": 113,
       "content": "Which of the following is correctly identified?",
-      "explanation": "Đáp án đúng là 'Simple and small websites may not need secondary navigation for subsections.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -3049,7 +3049,7 @@
       "id": 115,
       "questionIndex": 114,
       "content": "What design principle emphasizes providing users with control over their actions and undo options?",
-      "explanation": "Đáp án đúng là 'User control and freedom'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -3073,7 +3073,7 @@
       "id": 116,
       "questionIndex": 115,
       "content": "According to Nielsen's Usability Heuristics, which heuristic emphasizes keeping users informed about what's happening in the system?",
-      "explanation": "Đáp án đúng là 'Visibility of system status'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -3102,7 +3102,7 @@
       "id": 117,
       "questionIndex": 116,
       "content": "What is the advantage of using text better than using an icon in a function button?",
-      "explanation": "Đáp án đúng là 'Clear meaning'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -3131,7 +3131,7 @@
       "id": 118,
       "questionIndex": 117,
       "content": "Specific shapes can evoke different emotions and feelings in users. Which of the following shapes is most likely to be associated with a sense of playfulness and fun?",
-      "explanation": "Đáp án đúng là 'Circle'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -3160,7 +3160,7 @@
       "id": 119,
       "questionIndex": 118,
       "content": "What are the 3 factors that determine the success of user experience design?",
-      "explanation": "Đáp án đúng là 'Action, emotion, reactions.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -3189,7 +3189,7 @@
       "id": 120,
       "questionIndex": 119,
       "content": "It would be intuitive for the user if the interface used similar colors to represent different functions.",
-      "explanation": "Đáp án đúng là 'False.'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
+      "explanation": "'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
       "answers": [
         {
           "id": 1,
@@ -3208,7 +3208,7 @@
       "id": 121,
       "questionIndex": 120,
       "content": "When creating user personas, what elements are essential to consider?",
-      "explanation": "Đáp án đúng là 'Goals, motivations, and pain points of the target user group.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -3237,7 +3237,7 @@
       "id": 122,
       "questionIndex": 121,
       "content": "Which elements are commonly found in website sidebars?",
-      "explanation": "Đáp án đúng là 'Search bars and contact forms.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -3266,7 +3266,7 @@
       "id": 123,
       "questionIndex": 122,
       "content": "What are effective personas?",
-      "explanation": "Đáp án đúng là 'They are based on real user research and represent specific user groups.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -3295,7 +3295,7 @@
       "id": 124,
       "questionIndex": 123,
       "content": "When you plan to name the application, which of the following is not a likely goal for your app's name?",
-      "explanation": "Đáp án đúng là 'Use an individual's name to name the application.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -3324,7 +3324,7 @@
       "id": 125,
       "questionIndex": 124,
       "content": "When designing a checkout process, why is user control and freedom particularly important?",
-      "explanation": "Đáp án đúng là 'To allow users to easily review or edit their information before finalizing.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -3353,7 +3353,7 @@
       "id": 126,
       "questionIndex": 125,
       "content": "How can visual research findings be effectively translated into tangible design decisions for the app?",
-      "explanation": "Đáp án đúng là 'Defining clear design principles and mood boards inspired by the research.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -3382,7 +3382,7 @@
       "id": 127,
       "questionIndex": 126,
       "content": "Which heuristic emphasizes minimizing the user's memory load by making necessary information and options readily available?",
-      "explanation": "Đáp án đúng là 'Recognition rather than recall.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -3411,7 +3411,7 @@
       "id": 128,
       "questionIndex": 127,
       "content": "When conducting user research, which of the following techniques is best suited for exploring user attitudes and beliefs?",
-      "explanation": "Đáp án đúng là 'In-depth interviews with open-ended questions'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
+      "explanation": "Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
       "answers": [
         {
           "id": 1,
@@ -3440,7 +3440,7 @@
       "id": 129,
       "questionIndex": 128,
       "content": "In the app design process, which department is responsible for analyzing user data in the project?",
-      "explanation": "Đáp án đúng là 'Business Analysis (BA)'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -3469,7 +3469,7 @@
       "id": 130,
       "questionIndex": 129,
       "content": "What are three potential downsides of overly prioritizing aesthetics and graphical elements in UI design? (Check all that apply)",
-      "explanation": "Đáp án đúng là 'Enhanced learning curve and user confusion.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -3503,7 +3503,7 @@
       "id": 131,
       "questionIndex": 130,
       "content": "What is the primary benefit of using low-fidelity wireframes in the UI design process?",
-      "explanation": "Đáp án đúng là 'To test the overall information architecture and user flow'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
+      "explanation": "Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
       "answers": [
         {
           "id": 1,
@@ -3527,7 +3527,7 @@
       "id": 132,
       "questionIndex": 131,
       "content": "Where is the most effective placement for breadcrumbs within a website design?",
-      "explanation": "Đáp án đúng là 'Prominently displayed near the top of the page, close to the main navigation bar.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -3551,7 +3551,7 @@
       "id": 133,
       "questionIndex": 132,
       "content": "What is considered a good app idea?",
-      "explanation": "Đáp án đúng là 'Solve a real problem that users genuinely face in their lives.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -3580,7 +3580,7 @@
       "id": 134,
       "questionIndex": 133,
       "content": "What is the primary purpose of a button in UI/UX design?",
-      "explanation": "Đáp án đúng là 'To trigger an action or response within the digital product.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -3609,7 +3609,7 @@
       "id": 135,
       "questionIndex": 134,
       "content": "What is the main key regarding the relationship between mobile and desktop UI design?",
-      "explanation": "Đáp án đúng là 'The fundamental design principles like grid structure can be applied across both platforms.'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
+      "explanation": "'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
       "answers": [
         {
           "id": 1,
@@ -3638,7 +3638,7 @@
       "id": 136,
       "questionIndex": 135,
       "content": "In the context of grid systems, what does the term \"gutter\" refer to?",
-      "explanation": "Đáp án đúng là 'Spacing between gridlines and design elements for visual balance and breathing room.'. CSS Layout (Flexbox / Grid / Media Queries) giúp bố cục trang web tự động thích ứng mượt mà trên nhiều kích thước màn hình khác nhau (Responsive Web Design).",
+      "explanation": "'. CSS Layout (Flexbox / Grid / Media Queries) giúp bố cục trang web tự động thích ứng mượt mà trên nhiều kích thước màn hình khác nhau (Responsive Web Design).",
       "answers": [
         {
           "id": 1,
@@ -3667,7 +3667,7 @@
       "id": 137,
       "questionIndex": 136,
       "content": "Which of the following is correctly identified?",
-      "explanation": "Đáp án đúng là 'Simple and small websites may not need secondary navigation for subsections.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -3686,7 +3686,7 @@
       "id": 138,
       "questionIndex": 137,
       "content": "What is the main benefit of iterative design in user-centric UI/UX development?",
-      "explanation": "Đáp án đúng là 'Continuously testing and refining the design based on user feedback and data.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -3715,7 +3715,7 @@
       "id": 139,
       "questionIndex": 138,
       "content": "Do the ergonomics of the human body significantly influence the optimal arrangement of elements on user interfaces?",
-      "explanation": "Đáp án đúng là 'Yes.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -3734,7 +3734,7 @@
       "id": 140,
       "questionIndex": 139,
       "content": "What design element visually communicates the intended purpose of a textfield?",
-      "explanation": "Đáp án đúng là 'The placeholder text within the field'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -3758,7 +3758,7 @@
       "id": 141,
       "questionIndex": 140,
       "content": "What is the primary purpose of a textfield in a user interface?",
-      "explanation": "Đáp án đúng là 'To allow users to input and edit textual information.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -3782,7 +3782,7 @@
       "id": 142,
       "questionIndex": 141,
       "content": "Which of the following areas most emphasizes the study of human behavior?",
-      "explanation": "Đáp án đúng là 'Anthropology and sociology'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -3811,7 +3811,7 @@
       "id": 143,
       "questionIndex": 142,
       "content": "What is considered a good app idea?",
-      "explanation": "Đáp án đúng là 'Solve a real problem that users genuinely face in their lives.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -3840,7 +3840,7 @@
       "id": 144,
       "questionIndex": 143,
       "content": "Which of the following is not a core principle of good UI design?",
-      "explanation": "Đáp án đúng là 'Intricacy: Implementing complex and visually stunning elements.'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
+      "explanation": "Implementing complex and visually stunning elements.'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
       "answers": [
         {
           "id": 1,
@@ -3869,7 +3869,7 @@
       "id": 145,
       "questionIndex": 144,
       "content": "Which elements are commonly found in website sidebars?",
-      "explanation": "Đáp án đúng là 'Links to social media profiles and sharing buttons'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -3898,7 +3898,7 @@
       "id": 146,
       "questionIndex": 145,
       "content": "What primary benefit of the color-coding different sections of the sitemap?",
-      "explanation": "Đáp án đúng là 'Facilitating visual hierarchy and differentiating primary functions.'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
+      "explanation": "'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
       "answers": [
         {
           "id": 1,
@@ -3917,7 +3917,7 @@
       "id": 147,
       "questionIndex": 146,
       "content": "What are effective personas?",
-      "explanation": "Đáp án đúng là 'They are based on real user research and represent specific user groups.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -3946,7 +3946,7 @@
       "id": 148,
       "questionIndex": 147,
       "content": "What is one example of a variable in a grid system, and how can it be managed?",
-      "explanation": "Đáp án đúng là 'The size of the gutter space, which can be adjusted for different content.'. CSS Layout (Flexbox / Grid / Media Queries) giúp bố cục trang web tự động thích ứng mượt mà trên nhiều kích thước màn hình khác nhau (Responsive Web Design).",
+      "explanation": "'. CSS Layout (Flexbox / Grid / Media Queries) giúp bố cục trang web tự động thích ứng mượt mà trên nhiều kích thước màn hình khác nhau (Responsive Web Design).",
       "answers": [
         {
           "id": 1,
@@ -3975,7 +3975,7 @@
       "id": 149,
       "questionIndex": 148,
       "content": "Adding too much detail is necessary in a wireframe design.",
-      "explanation": "Đáp án đúng là 'False'. Wireframe và Prototype là các bước phác thảo và dựng mô hình tương tác ban đầu, giúp thử nghiệm luồng người dùng trước khi tiến hành lập trình giao diện chính thức.",
+      "explanation": "Wireframe và Prototype là các bước phác thảo và dựng mô hình tương tác ban đầu, giúp thử nghiệm luồng người dùng trước khi tiến hành lập trình giao diện chính thức.",
       "answers": [
         {
           "id": 1,
@@ -3994,7 +3994,7 @@
       "id": 150,
       "questionIndex": 149,
       "content": "What is one example of a variable in a grid system, and how can it be managed?",
-      "explanation": "Đáp án đúng là 'The size of the gutter space, which can be adjusted for different content.'. CSS Layout (Flexbox / Grid / Media Queries) giúp bố cục trang web tự động thích ứng mượt mà trên nhiều kích thước màn hình khác nhau (Responsive Web Design).",
+      "explanation": "'. CSS Layout (Flexbox / Grid / Media Queries) giúp bố cục trang web tự động thích ứng mượt mà trên nhiều kích thước màn hình khác nhau (Responsive Web Design).",
       "answers": [
         {
           "id": 1,
@@ -4023,7 +4023,7 @@
       "id": 151,
       "questionIndex": 150,
       "content": "What is the primary purpose of conducting visual research when defining the look and feel of an app?",
-      "explanation": "Đáp án đúng là 'To identify app design trends and popular aesthetics.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -4047,7 +4047,7 @@
       "id": 152,
       "questionIndex": 151,
       "content": "Which choice between a simple geometric and an illustration makes a button design visually clean and easy to interact with?",
-      "explanation": "Đáp án đúng là 'Simple geometric shape'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -4071,7 +4071,7 @@
       "id": 153,
       "questionIndex": 152,
       "content": "The primary purpose of developing a sitemap is to solidify the visual design of the final app.",
-      "explanation": "Đáp án đúng là 'False'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -4090,7 +4090,7 @@
       "id": 154,
       "questionIndex": 153,
       "content": "What potential bias can occur when relying solely on self-reported data from users in user research?",
-      "explanation": "Đáp án đúng là 'Both of the above.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -4119,7 +4119,7 @@
       "id": 155,
       "questionIndex": 154,
       "content": "What are the primary distinctions between UX and UI?",
-      "explanation": "Đáp án đúng là 'Both statements are correct.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -4148,7 +4148,7 @@
       "id": 156,
       "questionIndex": 155,
       "content": "When designing a search bar, it's important to provide immediate results and suggestions as the user types. This best aligns with the heuristic of:",
-      "explanation": "Đáp án đúng là 'Recognition rather than recall'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -4177,7 +4177,7 @@
       "id": 157,
       "questionIndex": 156,
       "content": "Wireframing happens ____ in the project design process.",
-      "explanation": "Đáp án đúng là 'Early or beginning stage'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -4206,7 +4206,7 @@
       "id": 158,
       "questionIndex": 157,
       "content": "In the UX design process, the \"mapping\" mentioned in the envisioning stage refers to:",
-      "explanation": "Đáp án đúng là 'Creating visual sitemaps that show the flow of users through the app.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -4235,7 +4235,7 @@
       "id": 159,
       "questionIndex": 158,
       "content": "A website that uses consistent language, terminology, and layout across all pages aims to achieve the heuristic of:",
-      "explanation": "Đáp án đúng là 'Consistency and standards'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -4264,7 +4264,7 @@
       "id": 160,
       "questionIndex": 159,
       "content": "What is the main advantage of using different visual approaches like photography and vector graphics for mood boards?",
-      "explanation": "Đáp án đúng là 'It showcases diverse UI styles and user demographics.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -4288,7 +4288,7 @@
       "id": 161,
       "questionIndex": 160,
       "content": "What color combination is suitable to create an appetite for customers in a fast-food restaurant?",
-      "explanation": "Đáp án đúng là 'Hot colors like: yellow, orange, and red.'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
+      "explanation": "yellow, orange, and red.'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
       "answers": [
         {
           "id": 1,
@@ -4317,7 +4317,7 @@
       "id": 162,
       "questionIndex": 161,
       "content": "User interface design should prioritize aesthetics over functionality for a unique and visually captivating experience.",
-      "explanation": "Đáp án đúng là 'False.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -4336,7 +4336,7 @@
       "id": 163,
       "questionIndex": 162,
       "content": "Which statement accurately describes the difference between relative grid and absolute grid?",
-      "explanation": "Đáp án đúng là 'Relative units are flexible and adjust based on screen size, while absolute units remain fixed.'. CSS Layout (Flexbox / Grid / Media Queries) giúp bố cục trang web tự động thích ứng mượt mà trên nhiều kích thước màn hình khác nhau (Responsive Web Design).",
+      "explanation": "'. CSS Layout (Flexbox / Grid / Media Queries) giúp bố cục trang web tự động thích ứng mượt mà trên nhiều kích thước màn hình khác nhau (Responsive Web Design).",
       "answers": [
         {
           "id": 1,
@@ -4355,7 +4355,7 @@
       "id": 164,
       "questionIndex": 163,
       "content": "What image size is suitable for the website interface?",
-      "explanation": "Đáp án đúng là 'Compressed to a suitable aspect ratio and format, keep the image is still clear.'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
+      "explanation": "'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
       "answers": [
         {
           "id": 1,
@@ -4384,7 +4384,7 @@
       "id": 165,
       "questionIndex": 164,
       "content": "Which of the following methods is LEAST recommended for user research on a limited budget?",
-      "explanation": "Đáp án đúng là 'Hiring a professional user research agency.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -4413,7 +4413,7 @@
       "id": 166,
       "questionIndex": 165,
       "content": "What potential issues can arise from inconsistent button state design across an interface?",
-      "explanation": "Đáp án đúng là 'Users may feel confused and unsure about whether buttons are clickable.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -4442,7 +4442,7 @@
       "id": 167,
       "questionIndex": 166,
       "content": "Why is accessibility a crucial consideration in both aesthetics and functionality of UI/UX design?",
-      "explanation": "Đáp án đúng là 'To ensure all users, regardless of their abilities, can effectively access and interact with the interface.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -4461,7 +4461,7 @@
       "id": 168,
       "questionIndex": 167,
       "content": "What design principle emphasizes providing users with control over their actions and undo options?",
-      "explanation": "Đáp án đúng là 'User control and freedom.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -4485,7 +4485,7 @@
       "id": 169,
       "questionIndex": 168,
       "content": "In Design Thinking, which step is responsible for outlining the project plan?",
-      "explanation": "Đáp án đúng là 'Define.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -4514,7 +4514,7 @@
       "id": 170,
       "questionIndex": 169,
       "content": "What design element visually communicates the intended purpose of a textfield?",
-      "explanation": "Đáp án đúng là 'The placeholder text within the field.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -4538,7 +4538,7 @@
       "id": 171,
       "questionIndex": 170,
       "content": "Do generic website templates are a good choice for any type of content?",
-      "explanation": "Đáp án đúng là 'No.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -4557,7 +4557,7 @@
       "id": 172,
       "questionIndex": 171,
       "content": "The composition and structure of a user interface should always be prioritized over the individual design details of its elements.",
-      "explanation": "Đáp án đúng là 'True'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -4576,7 +4576,7 @@
       "id": 173,
       "questionIndex": 172,
       "content": "What is the impact of having a clear and consistent header design across all pages of a website?",
-      "explanation": "Đáp án đúng là 'It reinforces brand recognition and user familiarity.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -4605,7 +4605,7 @@
       "id": 174,
       "questionIndex": 173,
       "content": "How can using animation effectively in a UI/UX design enhance the user experience?",
-      "explanation": "Đáp án đúng là 'By providing subtle visual cues and feedback to confirm user actions and progress.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -4629,7 +4629,7 @@
       "id": 175,
       "questionIndex": 174,
       "content": "Body text of website should be at least:",
-      "explanation": "Đáp án đúng là '16px'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -4658,7 +4658,7 @@
       "id": 176,
       "questionIndex": 175,
       "content": "Users can effectively interact with an interface without any prior understanding of its functionality or visual cues.",
-      "explanation": "Đáp án đúng là 'False'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -4677,7 +4677,7 @@
       "id": 177,
       "questionIndex": 176,
       "content": "The increasing popularity of responsive design has led to a decline in the usage of sidebars in desktop website design.",
-      "explanation": "Đáp án đúng là 'True'. CSS Layout (Flexbox / Grid / Media Queries) giúp bố cục trang web tự động thích ứng mượt mà trên nhiều kích thước màn hình khác nhau (Responsive Web Design).",
+      "explanation": "CSS Layout (Flexbox / Grid / Media Queries) giúp bố cục trang web tự động thích ứng mượt mà trên nhiều kích thước màn hình khác nhau (Responsive Web Design).",
       "answers": [
         {
           "id": 1,
@@ -4696,7 +4696,7 @@
       "id": 178,
       "questionIndex": 177,
       "content": "Which principle focuses on creating layouts that are balanced and visually pleasing, guiding the user's attention through the interface?",
-      "explanation": "Đáp án đúng là 'Visual Hierarchy'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
+      "explanation": "Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
       "answers": [
         {
           "id": 1,
@@ -4725,7 +4725,7 @@
       "id": 179,
       "questionIndex": 178,
       "content": "What key benefits do mood boards offer?",
-      "explanation": "Đáp án đúng là 'Communicating the desired emotional tone and atmosphere of the app.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -4754,7 +4754,7 @@
       "id": 180,
       "questionIndex": 179,
       "content": "A website that uses consistent language, terminology, and layout across all pages aims to achieve the heuristic of:",
-      "explanation": "Đáp án đúng là 'Consistency and standards'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -4783,7 +4783,7 @@
       "id": 181,
       "questionIndex": 180,
       "content": "Why is aesthetic and minimalist design considered important for usability?",
-      "explanation": "Đáp án đúng là 'Because it prioritizes essential information and reduces cognitive load.'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -4812,7 +4812,7 @@
       "id": 182,
       "questionIndex": 181,
       "content": "Which state of a button is primarily concerned with providing visual feedback for user confirmation?",
-      "explanation": "Đáp án đúng là 'Activation state'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -4841,7 +4841,7 @@
       "id": 183,
       "questionIndex": 182,
       "content": "The primary role of typography in user interfaces is to convey complex and specific ideas quickly and accurately.",
-      "explanation": "Đáp án đúng là 'True'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
+      "explanation": "Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
       "answers": [
         {
           "id": 1,
@@ -4860,7 +4860,7 @@
       "id": 184,
       "questionIndex": 183,
       "content": "Which of the following is not a common visual indicator of a button state?",
-      "explanation": "Đáp án đúng là 'Label: text describing the action triggered by the button.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "text describing the action triggered by the button.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -4889,7 +4889,7 @@
       "id": 185,
       "questionIndex": 184,
       "content": "When implementing a navigation system for a website, what key considerations emphasize when choosing the order of links within the primary navigation?",
-      "explanation": "Đáp án đúng là 'Aligning with the hierarchical structure of the website's content.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -4918,7 +4918,7 @@
       "id": 186,
       "questionIndex": 185,
       "content": "What is the main key regarding the relationship between mobile and desktop UI design?",
-      "explanation": "Đáp án đúng là 'The fundamental design principles like grid structure can be applied across both platforms.'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
+      "explanation": "'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
       "answers": [
         {
           "id": 1,
@@ -4947,7 +4947,7 @@
       "id": 187,
       "questionIndex": 186,
       "content": "What are the three main advantages of using typography as part of a branding system? (Check all that apply)",
-      "explanation": "Đáp án đúng là 'Increased accessibility for users with visual impairments.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -4981,7 +4981,7 @@
       "id": 188,
       "questionIndex": 187,
       "content": "When a client requests a specific design feature without clear justification, the designer's role is to:",
-      "explanation": "Đáp án đúng là 'Understand the underlying motivation behind the request and propose alternative solutions.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -5010,7 +5010,7 @@
       "id": 189,
       "questionIndex": 188,
       "content": "What element of UI design guides users through the interface and helps them accomplish tasks efficiently?",
-      "explanation": "Đáp án đúng là 'Information architecture'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -5039,7 +5039,7 @@
       "id": 190,
       "questionIndex": 189,
       "content": "Whitespace primarily serves to fill empty space on a website and is generally considered a wasted design element.",
-      "explanation": "Đáp án đúng là 'False'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -5058,7 +5058,7 @@
       "id": 191,
       "questionIndex": 190,
       "content": "____ looks like the thing that it represents but ____ is not necessarily the case.",
-      "explanation": "Đáp án đúng là 'Icon - Symbol'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -5077,7 +5077,7 @@
       "id": 192,
       "questionIndex": 191,
       "content": "Which of the following best describes the general focus of UI design?",
-      "explanation": "Đáp án đúng là 'Highlighting design principles and visual aesthetics.'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
+      "explanation": "'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
       "answers": [
         {
           "id": 1,
@@ -5101,7 +5101,7 @@
       "id": 193,
       "questionIndex": 192,
       "content": "The UX process is a strict, linear sequence of steps that must be completed in a single, specific order.",
-      "explanation": "Đáp án đúng là 'False'. Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
+      "explanation": "Trải nghiệm người dùng (UX Design) tập trung vào việc tối ưu hóa mức độ dễ sử dụng (Usability), luồng thao tác và sự hài lòng của người dùng khi tương tác với sản phẩm.",
       "answers": [
         {
           "id": 1,
@@ -5120,7 +5120,7 @@
       "id": 194,
       "questionIndex": 193,
       "content": "In visual design, what refers to the arrangement of elements to guide the user's attention and prioritize information?",
-      "explanation": "Đáp án đúng là 'Visual Hierarchy.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -5149,7 +5149,7 @@
       "id": 195,
       "questionIndex": 194,
       "content": "By offering keyboard shortcuts alongside mouse controls, designers can optimize the heuristic of:",
-      "explanation": "Đáp án đúng là 'Flexibility and efficiency of use'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -5178,7 +5178,7 @@
       "id": 196,
       "questionIndex": 195,
       "content": "The simplest form of website wireframe is:",
-      "explanation": "Đáp án đúng là 'Lo-fi wireframe'. Wireframe và Prototype là các bước phác thảo và dựng mô hình tương tác ban đầu, giúp thử nghiệm luồng người dùng trước khi tiến hành lập trình giao diện chính thức.",
+      "explanation": "Wireframe và Prototype là các bước phác thảo và dựng mô hình tương tác ban đầu, giúp thử nghiệm luồng người dùng trước khi tiến hành lập trình giao diện chính thức.",
       "answers": [
         {
           "id": 1,
@@ -5207,7 +5207,7 @@
       "id": 197,
       "questionIndex": 196,
       "content": "Which of the following statements is correct?",
-      "explanation": "Đáp án đúng là 'Content maps focus on clarity and structure, not visual design.'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -5226,7 +5226,7 @@
       "id": 198,
       "questionIndex": 197,
       "content": "Images can work ____ because images accurately represent exactly what user is going to get when you click on them.",
-      "explanation": "Đáp án đúng là 'As navigation'. Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
+      "explanation": "Đây là nguyên tắc cốt lõi trong quy trình thiết kế Web & UI/UX hiện đại, đảm bảo giao diện đẹp mắt, tối ưu hiệu năng và nâng cao trải nghiệm người dùng.",
       "answers": [
         {
           "id": 1,
@@ -5255,7 +5255,7 @@
       "id": 199,
       "questionIndex": 198,
       "content": "When conducting user research, which of the following techniques is best suited for exploring user attitudes and beliefs?",
-      "explanation": "Đáp án đúng là 'In-depth interviews with open-ended questions.'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
+      "explanation": "'. Thiết kế giao diện (UI Design) chú trọng tới độ tương phản (Contrast), phân cấp thị giác (Visual Hierarchy), màu sắc và kiểu chữ (Typography) để tạo dựng giao diện thu hút.",
       "answers": [
         {
           "id": 1,
@@ -5284,7 +5284,7 @@
       "id": 200,
       "questionIndex": 199,
       "content": "The increasing popularity of responsive design has led to a decline in the usage of sidebars in desktop website design.",
-      "explanation": "Đáp án đúng là 'True'. CSS Layout (Flexbox / Grid / Media Queries) giúp bố cục trang web tự động thích ứng mượt mà trên nhiều kích thước màn hình khác nhau (Responsive Web Design).",
+      "explanation": "CSS Layout (Flexbox / Grid / Media Queries) giúp bố cục trang web tự động thích ứng mượt mà trên nhiều kích thước màn hình khác nhau (Responsive Web Design).",
       "answers": [
         {
           "id": 1,

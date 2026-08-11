@@ -6,7 +6,7 @@
     {
       "id": 413,
       "content": "Which React feature allows writing HTML-like syntax inside JavaScript?",
-      "explanation": "JSX",
+      "explanation": "Đáp án chuẩn xác là 'JSX'. Quy tắc này tuân thủ nguyên lý thiết kế UI/UX hiện đại, tối ưu hóa trải nghiệm người dùng (User Experience) và tiêu chuẩn kỹ thuật phát triển Web.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -39,7 +39,7 @@
     {
       "id": 414,
       "content": "What is the main building block used to create UI in React?",
-      "explanation": "Components",
+      "explanation": "Đáp án chuẩn xác là 'Components'. Quy tắc này tuân thủ nguyên lý thiết kế UI/UX hiện đại, tối ưu hóa trải nghiệm người dùng (User Experience) và tiêu chuẩn kỹ thuật phát triển Web.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -72,7 +72,7 @@
     {
       "id": 415,
       "content": "Which hook is used to read values from a React context?",
-      "explanation": "useContext",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'useContext()'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -105,7 +105,7 @@
     {
       "id": 416,
       "content": "Which hook is used for performing side effects such as data fetching?",
-      "explanation": "useEffect",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'useEffect()'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -138,7 +138,7 @@
     {
       "id": 417,
       "content": "Which rule of hooks is correct?",
-      "explanation": "Hooks at the top level",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Hooks at the top level'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -171,7 +171,7 @@
     {
       "id": 418,
       "content": "Which hook manages local component state?",
-      "explanation": "useState",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'useState()'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -204,7 +204,7 @@
     {
       "id": 419,
       "content": "What does useReducer() return?",
-      "explanation": "state and dispatch",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'state and dispatch'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -237,7 +237,7 @@
     {
       "id": 420,
       "content": "What is the main purpose of a custom hook?",
-      "explanation": "Reuse logic",
+      "explanation": "Đáp án đúng là 'Reuse logic'. Nguyên lý này thuộc kiến thức nền tảng trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và xử lý dữ liệu thông minh.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -270,7 +270,7 @@
     {
       "id": 421,
       "content": "What are props?",
-      "explanation": "External data",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'External data'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -303,7 +303,7 @@
     {
       "id": 422,
       "content": "Props in React are:",
-      "explanation": "Read-only",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Read-only'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -336,7 +336,7 @@
     {
       "id": 423,
       "content": "Which type supports lifecycle methods?",
-      "explanation": "Class",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Class'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -369,7 +369,7 @@
     {
       "id": 424,
       "content": "Which lifecycle method runs after first render?",
-      "explanation": "componentDidMount",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'componentDidMount'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -402,7 +402,7 @@
     {
       "id": 425,
       "content": "Which attribute required for lists?",
-      "explanation": "key",
+      "explanation": "Đáp án chuẩn xác là 'key'. Quy tắc này tuân thủ nguyên lý thiết kế UI/UX hiện đại, tối ưu hóa trải nghiệm người dùng (User Experience) và tiêu chuẩn kỹ thuật phát triển Web.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -435,7 +435,7 @@
     {
       "id": 426,
       "content": "Which router wraps app?",
-      "explanation": "BrowserRouter",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'BrowserRouter'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -468,7 +468,7 @@
     {
       "id": 427,
       "content": "Which component holds routes?",
-      "explanation": "Routes",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Routes'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -501,7 +501,7 @@
     {
       "id": 428,
       "content": "element prop defines?",
-      "explanation": "Component to render",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Component to render'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -534,7 +534,7 @@
     {
       "id": 429,
       "content": "Hook for navigation?",
-      "explanation": "useNavigate",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'useNavigate()'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -567,7 +567,7 @@
     {
       "id": 430,
       "content": "Hook for dynamic params?",
-      "explanation": "useParams",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'useParams()'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -600,7 +600,7 @@
     {
       "id": 431,
       "content": "Component for redirect?",
-      "explanation": "Navigate",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Navigate'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -633,7 +633,7 @@
     {
       "id": 432,
       "content": "Advantage of SPA?",
-      "explanation": "Fast navigation",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Fast navigation'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -666,7 +666,7 @@
     {
       "id": 433,
       "content": "CSR describes?",
-      "explanation": "Browser renders UI",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Browser renders UI'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -699,7 +699,7 @@
     {
       "id": 434,
       "content": "Realtime tech?",
-      "explanation": "WebSockets",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'WebSockets'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -732,7 +732,7 @@
     {
       "id": 435,
       "content": "Update resource?",
-      "explanation": "PUT",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'PUT'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -765,7 +765,7 @@
     {
       "id": 436,
       "content": "Delete resource?",
-      "explanation": "DELETE",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'DELETE'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -798,7 +798,7 @@
     {
       "id": 437,
       "content": "Primary REST format?",
-      "explanation": "JSON",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'JSON'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -831,7 +831,7 @@
     {
       "id": 438,
       "content": "201 status means?",
-      "explanation": "Created",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Created'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -864,7 +864,7 @@
     {
       "id": 439,
       "content": "@RestController does?",
-      "explanation": "API mapping",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'API mapping'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -897,7 +897,7 @@
     {
       "id": 440,
       "content": "@PathVariable does?",
-      "explanation": "Extract path",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Extract path'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -930,7 +930,7 @@
     {
       "id": 441,
       "content": "@RequestBody does?",
-      "explanation": "Bind JSON",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Bind JSON'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -963,7 +963,7 @@
     {
       "id": 442,
       "content": "@GetMapping does?",
-      "explanation": "Maps GET",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Maps GET'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -996,7 +996,7 @@
     {
       "id": 443,
       "content": "Business logic layer?",
-      "explanation": "Service",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Service'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1029,7 +1029,7 @@
     {
       "id": 444,
       "content": "Database layer?",
-      "explanation": "Repository",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Repository'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1062,7 +1062,7 @@
     {
       "id": 445,
       "content": "Purpose of @ResponseStatus?",
-      "explanation": "Set status code",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Set status code'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1095,7 +1095,7 @@
     {
       "id": 446,
       "content": "Tool for testing REST?",
-      "explanation": "Postman",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Postman'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1128,7 +1128,7 @@
     {
       "id": 447,
       "content": "Parse JSON using Fetch?",
-      "explanation": "json",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'json()'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1161,7 +1161,7 @@
     {
       "id": 448,
       "content": "Library simplifies HTTP?",
-      "explanation": "Axios",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Axios'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1194,7 +1194,7 @@
     {
       "id": 449,
       "content": "Advantage of Axios?",
-      "explanation": "Auto JSON parsing",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Auto JSON parsing'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1227,7 +1227,7 @@
     {
       "id": 450,
       "content": "Responsive container?",
-      "explanation": "container-fluid",
+      "explanation": "Đáp án đúng là '.container-fluid'. Nguyên lý này thuộc kiến thức nền tảng trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và xử lý dữ liệu thông minh.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1260,7 +1260,7 @@
     {
       "id": 451,
       "content": "Grid layout components?",
-      "explanation": "Row & Col",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Row & Col'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1293,7 +1293,7 @@
     {
       "id": 452,
       "content": "Bootstrap message component?",
-      "explanation": "Alert",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Alert'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1326,7 +1326,7 @@
     {
       "id": 453,
       "content": "Bootstrap grouped content?",
-      "explanation": "Card",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Card'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1359,7 +1359,7 @@
     {
       "id": 454,
       "content": "Virtual DOM improves?",
-      "explanation": "UI render",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'UI render'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1392,7 +1392,7 @@
     {
       "id": 455,
       "content": "One-way data binding?",
-      "explanation": "One direction",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'One direction'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1425,7 +1425,7 @@
     {
       "id": 456,
       "content": "Lifting state up?",
-      "explanation": "Share state",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Share state'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1458,7 +1458,7 @@
     {
       "id": 457,
       "content": "useRef stores?",
-      "explanation": "DOM ref",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'DOM ref'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1491,7 +1491,7 @@
     {
       "id": 458,
       "content": "Memoize computations?",
-      "explanation": "useMemo",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'useMemo'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1524,7 +1524,7 @@
     {
       "id": 459,
       "content": "Render child routes?",
-      "explanation": "Outlet",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Outlet'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1590,7 +1590,7 @@
     {
       "id": 461,
       "content": "Client error?",
-      "explanation": "404",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '404'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1623,7 +1623,7 @@
     {
       "id": 462,
       "content": "Statelessness means?",
-      "explanation": "Each request has all info",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Each request has all info'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1656,7 +1656,7 @@
     {
       "id": 463,
       "content": "Which Hook is used for memoizing expensive computations?",
-      "explanation": "useMemo",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'useMemo()'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1722,7 +1722,7 @@
     {
       "id": 465,
       "content": "In React Router v6, which component is used to programmatically navigate to a different route?",
-      "explanation": "<Navigate>",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '<Navigate>'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1755,7 +1755,7 @@
     {
       "id": 466,
       "content": "Which of the following is a valid way to handle a Promise rejection?",
-      "explanation": "promise.catch(err => {})",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'promise.catch(err => {})'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1788,7 +1788,7 @@
     {
       "id": 467,
       "content": "Which class in Spring Data MongoDB provides a template for performing low-level MongoDB operations?",
-      "explanation": "MongoTemplate",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'MongoTemplate'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -1821,7 +1821,7 @@
     {
       "id": 468,
       "content": "What is a collection in MongoDB?",
-      "explanation": "A group of related documents",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'A group of related documents'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2085,7 +2085,7 @@
     {
       "id": 476,
       "content": "How can you customize title/description of API in Swagger 3?",
-      "explanation": "@OpenAPIDefinition",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '@OpenAPIDefinition'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2151,7 +2151,7 @@
     {
       "id": 478,
       "content": "Which Spring Data JPA interface performs CRUD operations?",
-      "explanation": "CrudRepository",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'CrudRepository'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2184,7 +2184,7 @@
     {
       "id": 479,
       "content": "Purpose of hibernate.dialect property?",
-      "explanation": "Define SQL dialect",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Define SQL dialect'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2217,7 +2217,7 @@
     {
       "id": 480,
       "content": "How does MongoRepository simplify data access?",
-      "explanation": "Auto-generate CRUD methods",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Auto-generate CRUD methods'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2283,7 +2283,7 @@
     {
       "id": 482,
       "content": "Which tool inspects React component hierarchy/state?",
-      "explanation": "React Developer Tools",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'React Developer Tools'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2349,7 +2349,7 @@
     {
       "id": 484,
       "content": "What is the purpose of React components?",
-      "explanation": "A. Create reusable UI blocks",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Create reusable UI blocks'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2382,7 +2382,7 @@
     {
       "id": 485,
       "content": "Which hook is used to manage internal state?",
-      "explanation": "A. useState",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'useState()'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2415,7 +2415,7 @@
     {
       "id": 486,
       "content": "Which hook performs side effects?",
-      "explanation": "B. useEffect",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'useEffect()'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2448,7 +2448,7 @@
     {
       "id": 487,
       "content": "Which hook reads context values?",
-      "explanation": "B. useContext",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'useContext()'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2481,7 +2481,7 @@
     {
       "id": 488,
       "content": "What does Virtual DOM improve?",
-      "explanation": "C. UI performance",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'UI performance'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2514,7 +2514,7 @@
     {
       "id": 489,
       "content": "Which file defines all main routes in React Router v6?",
-      "explanation": "D. AppRoutes.jsx",
+      "explanation": "Đáp án đúng là 'routes.js'. Nguyên lý này thuộc kiến thức nền tảng trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và xử lý dữ liệu thông minh.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2547,7 +2547,7 @@
     {
       "id": 490,
       "content": "Which React Router component renders child routes?",
-      "explanation": "B. <Outlet>",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '<Outlet>'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2613,7 +2613,7 @@
     {
       "id": 492,
       "content": "What is the main limitation of SPA?",
-      "explanation": "B. Poor SEO if not optimized",
+      "explanation": "Đáp án đúng là 'Poor SEO if not optimized'. Nguyên lý này thuộc kiến thức nền tảng trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và xử lý dữ liệu thông minh.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2646,7 +2646,7 @@
     {
       "id": 493,
       "content": "Which HTTP method is idempotent?",
-      "explanation": "B. PUT",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'PUT'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2679,7 +2679,7 @@
     {
       "id": 494,
       "content": "Which HTTP code means \"Created\"?",
-      "explanation": "B. 201",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '201'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2712,7 +2712,7 @@
     {
       "id": 495,
       "content": "Which annotation creates a REST controller?",
-      "explanation": "B. @RestController",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '@RestController'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2745,7 +2745,7 @@
     {
       "id": 496,
       "content": "Which annotation binds JSON to a Java object?",
-      "explanation": "C. @RequestBody",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '@RequestBody'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2778,7 +2778,7 @@
     {
       "id": 497,
       "content": "Which annotation maps GET requests?",
-      "explanation": "B. @GetMapping",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '@GetMapping'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2811,7 +2811,7 @@
     {
       "id": 498,
       "content": "Which layer contains business logic?",
-      "explanation": "B. Service",
+      "explanation": "Đáp án đúng là 'Service'. Nguyên lý này thuộc kiến thức nền tảng trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và xử lý dữ liệu thông minh.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2844,7 +2844,7 @@
     {
       "id": 499,
       "content": "Which layer handles database operations?",
-      "explanation": "C. Repository layer",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Repository layer'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2877,7 +2877,7 @@
     {
       "id": 500,
       "content": "18 What is Swagger used for?",
-      "explanation": "B. API documentation",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'API documentation'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2910,7 +2910,7 @@
     {
       "id": 501,
       "content": "Swagger UI is accessed by default at:",
-      "explanation": "C. /swagger-ui/index.html",
+      "explanation": "Đáp án chuẩn xác là '/swagger-ui/index.html'. Quy tắc này tuân thủ nguyên lý thiết kế UI/UX hiện đại, tối ưu hóa trải nghiệm người dùng (User Experience) và tiêu chuẩn kỹ thuật phát triển Web.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2943,7 +2943,7 @@
     {
       "id": 502,
       "content": "What is JWT mainly used for?",
-      "explanation": "B. Authentication",
+      "explanation": "Đáp án đúng là 'Authentication'. Nguyên lý này thuộc kiến thức nền tảng trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và xử lý dữ liệu thông minh.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -2976,7 +2976,7 @@
     {
       "id": 503,
       "content": "Which security method is most secure?",
-      "explanation": "C. JWT over HTTPS",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'JWT over HTTPS'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3009,7 +3009,7 @@
     {
       "id": 504,
       "content": "Which authentication uses cookies?",
-      "explanation": "D. Session-based auth",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Session-based auth'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3042,7 +3042,7 @@
     {
       "id": 505,
       "content": "Which Spring annotation defines security configuration?",
-      "explanation": "D. @EnableWebSecurity",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '@EnableWebSecurity'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3075,7 +3075,7 @@
     {
       "id": 506,
       "content": "Which MongoDB structure stores documents?",
-      "explanation": "B. Collection",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Collection'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3108,7 +3108,7 @@
     {
       "id": 507,
       "content": "MongoDB stores data in:",
-      "explanation": "C. JSON-like documents",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'JSON-like documents'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3141,7 +3141,7 @@
     {
       "id": 508,
       "content": "Which MongoDB CRUD operation inserts a document?",
-      "explanation": "C. insertOne",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'insertOne()'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3207,7 +3207,7 @@
     {
       "id": 510,
       "content": "What file configures Hibernate?",
-      "explanation": "C. hibernate.cfg.xml",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'hibernate.cfg.xml'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3240,7 +3240,7 @@
     {
       "id": 511,
       "content": "Which annotation maps a class to a DB table?",
-      "explanation": "A. @Entity",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '@Entity'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3273,7 +3273,7 @@
     {
       "id": 512,
       "content": "Which annotation maps a primary key?",
-      "explanation": "B. @Id",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '@Id'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3306,7 +3306,7 @@
     {
       "id": 513,
       "content": "Which fetching strategy loads immediately?",
-      "explanation": "B. Eager",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Eager'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3339,7 +3339,7 @@
     {
       "id": 514,
       "content": "Which JPA repository provides CRUD?",
-      "explanation": "B. CrudRepository",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'CrudRepository'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3372,7 +3372,7 @@
     {
       "id": 515,
       "content": "Swagger's @Operation is used to:",
-      "explanation": "B. Document API method",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Document API method'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3438,7 +3438,7 @@
     {
       "id": 517,
       "content": "SPA navigation is handled by:",
-      "explanation": "C. Client-side routing",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Client-side routing'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3471,7 +3471,7 @@
     {
       "id": 518,
       "content": "Which hook returns a mutable object?",
-      "explanation": "C. useRef",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'useRef'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3537,7 +3537,7 @@
     {
       "id": 520,
       "content": "Which React element creates navigation links?",
-      "explanation": "B. <Link>",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '<Link>'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3570,7 +3570,7 @@
     {
       "id": 521,
       "content": "Which component renders one route at a time in React Router v5?",
-      "explanation": "B. <Switch>",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '<Switch>'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3603,7 +3603,7 @@
     {
       "id": 522,
       "content": "Which annotation maps an entity to a specific database table?",
-      "explanation": "B. @Table",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '@Table'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3636,7 +3636,7 @@
     {
       "id": 523,
       "content": "Which JPA annotation maps a field to a column?",
-      "explanation": "B. @Column",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '@Column'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3669,7 +3669,7 @@
     {
       "id": 524,
       "content": "Which HTTP method is used to partially update a resource?",
-      "explanation": "C. PATCH",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'PATCH'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3702,7 +3702,7 @@
     {
       "id": 525,
       "content": "Which HTTP status code means \"No Content\"?",
-      "explanation": "B. 204",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '204'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3735,7 +3735,7 @@
     {
       "id": 526,
       "content": "Which REST constraint enforces client-server independence?",
-      "explanation": "A. Statelessness",
+      "explanation": "Đáp án đúng là 'Statelessness'. Nguyên lý này thuộc kiến thức nền tảng trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và xử lý dữ liệu thông minh.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3768,7 +3768,7 @@
     {
       "id": 527,
       "content": "Which MongoDB method retrieves all documents?",
-      "explanation": "A. find",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'find()'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3801,7 +3801,7 @@
     {
       "id": 528,
       "content": "Which data type does MongoDB use for date?",
-      "explanation": "B. ISODate",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'ISODate'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3834,7 +3834,7 @@
     {
       "id": 529,
       "content": "Which MongoDB operator filters by range?",
-      "explanation": "C. $gt / $lt",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '$gt / $lt'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3867,7 +3867,7 @@
     {
       "id": 530,
       "content": "Which MongoDB aggregation stage groups documents?",
-      "explanation": "A. $group",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '$group'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3900,7 +3900,7 @@
     {
       "id": 531,
       "content": "Which Hibernate feature automatically maps classes to tables?",
-      "explanation": "B. ORM",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'ORM'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3933,7 +3933,7 @@
     {
       "id": 532,
       "content": "52 Hibernate HQL is used for:",
-      "explanation": "B. Object-based querying",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Object-based querying'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3966,7 +3966,7 @@
     {
       "id": 533,
       "content": "Which Hibernate cache improves performance?",
-      "explanation": "A. First-level cache",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'First-level cache'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -3999,7 +3999,7 @@
     {
       "id": 534,
       "content": "Which file contains DB credentials in Spring Boot?",
-      "explanation": "C. application.properties",
+      "explanation": "Đáp án đúng là 'application.properties'. Nguyên lý này thuộc kiến thức nền tảng trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và xử lý dữ liệu thông minh.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4032,7 +4032,7 @@
     {
       "id": 535,
       "content": "Which Spring annotation injects dependencies automatically?",
-      "explanation": "A. @Autowired",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '@Autowired'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4065,7 +4065,7 @@
     {
       "id": 536,
       "content": "Which annotation creates a Spring Bean?",
-      "explanation": "B. @Bean",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '@Bean'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4098,7 +4098,7 @@
     {
       "id": 537,
       "content": "Which Spring layer handles HTTP requests?",
-      "explanation": "D. Controller",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Controller'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4131,7 +4131,7 @@
     {
       "id": 538,
       "content": "Which annotation handles exceptions globally?",
-      "explanation": "B. @ControllerAdvice",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '@ControllerAdvice'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4164,7 +4164,7 @@
     {
       "id": 539,
       "content": "59 Which method returns a JWT once a user logs in?",
-      "explanation": "A. authenticate",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'authenticate()'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4197,7 +4197,7 @@
     {
       "id": 540,
       "content": "JWT improves scalability because it is:",
-      "explanation": "B. Stateless",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Stateless'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4230,7 +4230,7 @@
     {
       "id": 541,
       "content": "What should you ALWAYS use with Basic Auth?",
-      "explanation": "B. HTTPS",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'HTTP'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4263,7 +4263,7 @@
     {
       "id": 542,
       "content": "Digest authentication improves security using:",
-      "explanation": "B. Nonce values",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Nonce values'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4296,7 +4296,7 @@
     {
       "id": 543,
       "content": "Certificate-based authentication uses:",
-      "explanation": "B. SSL/TLS certificates",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'SSL/TLS certificates'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4329,7 +4329,7 @@
     {
       "id": 544,
       "content": "OAuth2 uses:",
-      "explanation": "B. Tokens",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Tokens'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4362,7 +4362,7 @@
     {
       "id": 545,
       "content": "Which OAuth component verifies identity?",
-      "explanation": "C. Authorization server",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Authorization server'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4395,7 +4395,7 @@
     {
       "id": 546,
       "content": "Which part of JWT contains claims?",
-      "explanation": "B. Payload",
+      "explanation": "Đáp án đúng là 'Payload'. Nguyên lý này thuộc kiến thức nền tảng trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và xử lý dữ liệu thông minh.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4428,7 +4428,7 @@
     {
       "id": 547,
       "content": "Which part of JWT ensures integrity?",
-      "explanation": "B. Signature",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Signature'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4461,7 +4461,7 @@
     {
       "id": 548,
       "content": "JWT is vulnerable if:",
-      "explanation": "A. Secret key is weak",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Secret key is weak'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4494,7 +4494,7 @@
     {
       "id": 549,
       "content": "What is the main weakness of JWT?",
-      "explanation": "B. Hard to revoke early",
+      "explanation": "Đáp án đúng là 'Hard to revoke early'. Nguyên lý này thuộc kiến thức nền tảng trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và xử lý dữ liệu thông minh.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4560,7 +4560,7 @@
     {
       "id": 551,
       "content": "Which tool in Spring Boot auto-generates API docs?",
-      "explanation": "A. springdoc-openapi",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'springdoc-openapi'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4593,7 +4593,7 @@
     {
       "id": 552,
       "content": "Which OpenAPI annotation groups API operations?",
-      "explanation": "B. @Tag",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '@Tag'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4626,7 +4626,7 @@
     {
       "id": 553,
       "content": "Which OpenAPI annotation documents an endpoint?",
-      "explanation": "C. @Operation",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '@Operation'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4659,7 +4659,7 @@
     {
       "id": 554,
       "content": "Which OpenAPI annotation describes a model/class?",
-      "explanation": "A. @Schema",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '@Schema'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4725,7 +4725,7 @@
     {
       "id": 556,
       "content": "Which JPA feature avoids writing SQL manually?",
-      "explanation": "C. Method name queries",
+      "explanation": "The correct option is 'Method name queries'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4758,7 +4758,7 @@
     {
       "id": 557,
       "content": "Which relationship is many-to-one?",
-      "explanation": "C. @ManyToOne",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '@ManyToOne'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4791,7 +4791,7 @@
     {
       "id": 558,
       "content": "Which relationship uses a join table?",
-      "explanation": "C. Many-to-many",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Many-to-many'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4824,7 +4824,7 @@
     {
       "id": 559,
       "content": "CascadeType.ALL means:",
-      "explanation": "C. All operations cascade",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'All operations cascade'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4890,7 +4890,7 @@
     {
       "id": 561,
       "content": "Spring Boot auto-configures beans using:",
-      "explanation": "C. @SpringBootApplication",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '@SpringBootApplication'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4923,7 +4923,7 @@
     {
       "id": 562,
       "content": "Paging in Spring Boot is implemented using:",
-      "explanation": "A. PageRequest",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'PageRequest'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4956,7 +4956,7 @@
     {
       "id": 563,
       "content": "Sorting in Spring Boot is achieved via:",
-      "explanation": "A. Sort.by",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Sort.by()'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -4989,7 +4989,7 @@
     {
       "id": 564,
       "content": "Which database type does MongoDB represent?",
-      "explanation": "B. Document-oriented",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Document-oriented'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -5022,7 +5022,7 @@
     {
       "id": 565,
       "content": "Which Spring Data interface works with MongoDB?",
-      "explanation": "C. MongoRepository",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'MongoRepository'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -5055,7 +5055,7 @@
     {
       "id": 566,
       "content": "Which operator selects documents matching multiple conditions?",
-      "explanation": "B. $and",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '$and'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -5088,7 +5088,7 @@
     {
       "id": 567,
       "content": "Which command deletes multiple MongoDB documents?",
-      "explanation": "B. deleteMany",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'deleteMany()'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -5121,7 +5121,7 @@
     {
       "id": 568,
       "content": "Which HTTP code indicates unauthorized?",
-      "explanation": "C. 401",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '401'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -5154,7 +5154,7 @@
     {
       "id": 569,
       "content": "Which HTTP code indicates forbidden?",
-      "explanation": "A. 403",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '403'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -5187,7 +5187,7 @@
     {
       "id": 570,
       "content": "Which HTTP method is unsafe (non-idempotent)?",
-      "explanation": "D. POST",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'POST'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -5220,7 +5220,7 @@
     {
       "id": 571,
       "content": "Which JSON content type is correct?",
-      "explanation": "B. application/json",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'application/json'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -5253,7 +5253,7 @@
     {
       "id": 572,
       "content": "Which principle requires uniform API design?",
-      "explanation": "B. Uniform interface",
+      "explanation": "Đáp án chuẩn xác là 'Uniform interface'. Quy tắc này tuân thủ nguyên lý thiết kế UI/UX hiện đại, tối ưu hóa trải nghiệm người dùng (User Experience) và tiêu chuẩn kỹ thuật phát triển Web.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -5286,7 +5286,7 @@
     {
       "id": 573,
       "content": "Which file defines API versioning?",
-      "explanation": "B. application.properties",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'application.properties'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -5319,7 +5319,7 @@
     {
       "id": 574,
       "content": "Which Spring term identifies the authenticated user?",
-      "explanation": "A. Principal",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Principal'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -5352,7 +5352,7 @@
     {
       "id": 575,
       "content": "GrantedAuthority represents:",
-      "explanation": "B. Permission/role",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'Permission/role'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -5385,7 +5385,7 @@
     {
       "id": 576,
       "content": "Which annotation restricts access by role?",
-      "explanation": "B. @RolesAllowed",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là '@RolesAllowed'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {
@@ -5418,7 +5418,7 @@
     {
       "id": 577,
       "content": "Which class handles JWT creation/validation?",
-      "explanation": "A. JwtUtils",
+      "explanation": "Theo chuẩn kiến thức môn học, lựa chọn chính xác là 'JwtUtils'. Nội dung này phản ánh đầy đủ căn cứ lý luận, dữ liệu thực tiễn và nguyên lý cốt lõi của bài học.",
       "quizTargetId": 3,
       "answersList": [
         {

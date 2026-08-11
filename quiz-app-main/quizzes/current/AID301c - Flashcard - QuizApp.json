@@ -8,7 +8,7 @@
       "id": 1,
       "questionIndex": 0,
       "content": "Which of the following is NOT a factor that affects the time spent on data cleaning?",
-      "explanation": "Đáp án đúng là 'Company size'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -37,7 +37,7 @@
       "id": 2,
       "questionIndex": 1,
       "content": "When you use Watson Services like Watson Natural Language Understanding via the Python SDK, what are the three items that need to be saved?",
-      "explanation": "Đáp án đúng là 'service API key, service version, service URL'. Xử lý ngôn ngữ tự nhiên (NLP) kết hợp ngôn ngữ học và máy học để giúp máy tính hiểu, phân tích và sinh ra ngôn ngữ tự nhiên của con người.",
+      "explanation": "Xử lý ngôn ngữ tự nhiên (NLP) kết hợp ngôn ngữ học và máy học để giúp máy tính hiểu, phân tích và sinh ra ngôn ngữ tự nhiên của con người.",
       "answers": [
         {
           "id": 1,
@@ -71,7 +71,7 @@
       "id": 3,
       "questionIndex": 2,
       "content": "Sparse matrices can be useful as a target destination for ETL, but what are the main caveats?",
-      "explanation": "Các đáp án đúng gồm: B. NumPy linear algebra functions generally cannot be called directly. | E. E. It is difficult to print to screen scipy.sparse matrices directly..\n\nĐáp án đúng là 'NumPy linear algebra functions generally cannot be called directly.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "B. NumPy linear algebra functions generally cannot be called directly. | E. E. It is difficult to print to screen scipy.sparse matrices directly..\n\nĐáp án đúng là 'NumPy linear algebra functions generally cannot be called directly.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -105,7 +105,7 @@
       "id": 4,
       "questionIndex": 3,
       "content": "What is the purpose of kubectl in kubernetes?",
-      "explanation": "Đáp án đúng là 'The CLI for communicating with the kubernetes cluster'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -134,7 +134,7 @@
       "id": 5,
       "questionIndex": 4,
       "content": "Câu 39",
-      "explanation": "Đáp án đúng là 'Observation and Reflection'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -168,7 +168,7 @@
       "id": 6,
       "questionIndex": 5,
       "content": "Which Python package supports spawning processes for code optimization?",
-      "explanation": "Đáp án đúng là 'multiprocessing'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -197,7 +197,7 @@
       "id": 7,
       "questionIndex": 6,
       "content": "Which country had the most total revenue when you summed across all purchases?",
-      "explanation": "Đáp án đúng là 'United Kingdom'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -231,7 +231,7 @@
       "id": 8,
       "questionIndex": 7,
       "content": "Which of the following classifiers is inherently designed for multiclass classification?",
-      "explanation": "Đáp án đúng là 'Naïve Bayes'. Học có giám sát (Supervised Learning) huấn luyện mô hình dựa trên tập dữ liệu đã gán nhãn (Labeled Data) để dự đoán đầu ra cho dữ liệu mới.",
+      "explanation": "Học có giám sát (Supervised Learning) huấn luyện mô hình dựa trên tập dữ liệu đã gán nhãn (Labeled Data) để dự đoán đầu ra cho dữ liệu mới.",
       "answers": [
         {
           "id": 1,
@@ -260,7 +260,7 @@
       "id": 9,
       "questionIndex": 8,
       "content": "Which library in Python is commonly used for reading and writing CSV files?",
-      "explanation": "Đáp án đúng là 'Pandas'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -289,7 +289,7 @@
       "id": 10,
       "questionIndex": 9,
       "content": "What is a key principle of design thinking mentioned in the course?",
-      "explanation": "Đáp án đúng là 'Rapid prototyping'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -318,7 +318,7 @@
       "id": 11,
       "questionIndex": 10,
       "content": "Thinking with the lens of the scientific process, what would your next steps be if you wanted to decide where to open the next store for your sled business?",
-      "explanation": "Các đáp án đúng gồm: B. Gather more data and repeat the snowfall experiment. | C. Gather different data say snowfall by county and repeat the experiment. | D. Start a business viability assessment for all three states..\n\nĐáp án đúng là 'Gather more data and repeat the snowfall experiment.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "B. Gather more data and repeat the snowfall experiment. | C. Gather different data say snowfall by county and repeat the experiment. | D. Start a business viability assessment for all three states..\n\nĐáp án đúng là 'Gather more data and repeat the snowfall experiment.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -347,7 +347,7 @@
       "id": 12,
       "questionIndex": 11,
       "content": "The .fit_transform method corresponds to which scikit-learn interface(s)?",
-      "explanation": "Đáp án đúng là 'Transformer'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -381,7 +381,7 @@
       "id": 13,
       "questionIndex": 12,
       "content": "There are many ways to carry out statistical inference. Which one method of the following is NOT used to compute estimates in the context of statistical inference.",
-      "explanation": "Đáp án đúng là 'Null Hypothesis Significance Testing (NHST)'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -415,7 +415,7 @@
       "id": 14,
       "questionIndex": 13,
       "content": "The decision tree base models in random forests individually have high bias and low variance.",
-      "explanation": "Đáp án đúng là 'False'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -434,7 +434,7 @@
       "id": 15,
       "questionIndex": 14,
       "content": "When you use Watson Services like Watson Natural Language Understanding via the Python SDK, what are the three items that need to be saved? These items are generally saved on a local machine and included in scripts and notebooks as imported variables.",
-      "explanation": "Đáp án đúng là 'service API key, service version, service URL'. Xử lý ngôn ngữ tự nhiên (NLP) kết hợp ngôn ngữ học và máy học để giúp máy tính hiểu, phân tích và sinh ra ngôn ngữ tự nhiên của con người.",
+      "explanation": "Xử lý ngôn ngữ tự nhiên (NLP) kết hợp ngôn ngữ học và máy học để giúp máy tính hiểu, phân tích và sinh ra ngôn ngữ tự nhiên của con người.",
       "answers": [
         {
           "id": 1,
@@ -468,7 +468,7 @@
       "id": 16,
       "questionIndex": 15,
       "content": "There are many ways to carry out statistical inference. Which one method of the following is NOT used to compute estimates in the context of statistical inference?",
-      "explanation": "Đáp án đúng là 'Null Hypothesis Significance Testing (NHST)'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -502,7 +502,7 @@
       "id": 17,
       "questionIndex": 16,
       "content": "When embarking on a data science project, why do you ultimately want to format your data so that it can be housed in something like a Pandas DataFrame or NumPy Array?",
-      "explanation": "Đáp án đúng là 'Nearly all modeling algorithms take input data in a tabular format analogous to format of DataFrame/Arrays.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -531,7 +531,7 @@
       "id": 18,
       "questionIndex": 17,
       "content": "What is a key reason for using existing NLP APIs instead of building models from scratch?",
-      "explanation": "Đáp án đúng là 'They require less time and resources'. Xử lý ngôn ngữ tự nhiên (NLP) kết hợp ngôn ngữ học và máy học để giúp máy tính hiểu, phân tích và sinh ra ngôn ngữ tự nhiên của con người.",
+      "explanation": "Xử lý ngôn ngữ tự nhiên (NLP) kết hợp ngôn ngữ học và máy học để giúp máy tính hiểu, phân tích và sinh ra ngôn ngữ tự nhiên của con người.",
       "answers": [
         {
           "id": 1,
@@ -560,7 +560,7 @@
       "id": 19,
       "questionIndex": 18,
       "content": "Which of the following is NOT a component of the confusion matrix?",
-      "explanation": "Đáp án đúng là 'Average Score (AS)'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -594,7 +594,7 @@
       "id": 20,
       "questionIndex": 19,
       "content": "Sparse matrices can be useful as a target destination for ETL, but what are the main caveats (choose one or more)?",
-      "explanation": "Các đáp án đúng gồm: B. NumPy linear algebra functions generally cannot be called directly | E. E. It is difficult to print to screen scipy.sparse matrices directly.\n\nĐáp án đúng là 'NumPy linear algebra functions generally cannot be called directly'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "B. NumPy linear algebra functions generally cannot be called directly | E. E. It is difficult to print to screen scipy.sparse matrices directly.\n\nĐáp án đúng là 'NumPy linear algebra functions generally cannot be called directly'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -628,7 +628,7 @@
       "id": 21,
       "questionIndex": 20,
       "content": "What is a key reason for using existing NLP APIs instead of building models from scratch?",
-      "explanation": "Đáp án đúng là 'They require less time and resources.'. Xử lý ngôn ngữ tự nhiên (NLP) kết hợp ngôn ngữ học và máy học để giúp máy tính hiểu, phân tích và sinh ra ngôn ngữ tự nhiên của con người.",
+      "explanation": "'. Xử lý ngôn ngữ tự nhiên (NLP) kết hợp ngôn ngữ học và máy học để giúp máy tính hiểu, phân tích và sinh ra ngôn ngữ tự nhiên của con người.",
       "answers": [
         {
           "id": 1,
@@ -657,7 +657,7 @@
       "id": 22,
       "questionIndex": 21,
       "content": "In the context of NLP, what does sentiment analysis refer to?",
-      "explanation": "Đáp án đúng là 'Determining the emotional tone behind a series of words'. Xử lý ngôn ngữ tự nhiên (NLP) kết hợp ngôn ngữ học và máy học để giúp máy tính hiểu, phân tích và sinh ra ngôn ngữ tự nhiên của con người.",
+      "explanation": "Xử lý ngôn ngữ tự nhiên (NLP) kết hợp ngôn ngữ học và máy học để giúp máy tính hiểu, phân tích và sinh ra ngôn ngữ tự nhiên của con người.",
       "answers": [
         {
           "id": 1,
@@ -686,7 +686,7 @@
       "id": 23,
       "questionIndex": 22,
       "content": "Which method is recommended for handling missing values in numerical data?",
-      "explanation": "Đáp án đúng là 'Use imputation techniques.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -715,7 +715,7 @@
       "id": 24,
       "questionIndex": 23,
       "content": "Which of the following is a key aspect of applying data transformations?",
-      "explanation": "Đáp án đúng là 'Iteration'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -744,7 +744,7 @@
       "id": 25,
       "questionIndex": 24,
       "content": "When you worked on model deployment case study, which modification to the ALS algorithm had the largest effect on model performance?",
-      "explanation": "Đáp án đúng là 'The explicit training vs implicit training comparison'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -773,7 +773,7 @@
       "id": 26,
       "questionIndex": 25,
       "content": "When you worked on model deployment case study, which modification to the ALS algorithm had the largest effect on model performance?",
-      "explanation": "Đáp án đúng là 'The explicit training vs implicit training comparison.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -802,7 +802,7 @@
       "id": 27,
       "questionIndex": 26,
       "content": "Which command is used to install the Watson Developer Cloud Python SDK?",
-      "explanation": "Đáp án đúng là 'pip install ibm-watson'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -831,7 +831,7 @@
       "id": 28,
       "questionIndex": 27,
       "content": "Which process model is known for its open standard and has been around since 1996?",
-      "explanation": "Đáp án đúng là 'CRISP-DM'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -860,7 +860,7 @@
       "id": 29,
       "questionIndex": 28,
       "content": "Why is granular data preferred over summary level data?",
-      "explanation": "Đáp án đúng là 'It allows for more detailed analysis'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -889,7 +889,7 @@
       "id": 30,
       "questionIndex": 29,
       "content": "What is the primary purpose of documenting your data before starting a project?",
-      "explanation": "Đáp án đúng là 'To streamline the modeling process and ensure data quality'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -918,7 +918,7 @@
       "id": 31,
       "questionIndex": 30,
       "content": "A Kubernetes pod can contain multiple kubernetes deployments",
-      "explanation": "Đáp án đúng là 'False'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -937,7 +937,7 @@
       "id": 32,
       "questionIndex": 31,
       "content": "What is the first stage of the design thinking process?",
-      "explanation": "Đáp án đúng là 'Empathize'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -966,7 +966,7 @@
       "id": 33,
       "questionIndex": 32,
       "content": "In the script example-spark-submit.sh, what does the #!/bin/bash line indicate?",
-      "explanation": "Đáp án đúng là 'It tells the system to use the Bash shell to execute the script.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -995,7 +995,7 @@
       "id": 34,
       "questionIndex": 33,
       "content": "Which country had the most total revenue when you summed across all purchases?",
-      "explanation": "Đáp án đúng là 'United Kingdom'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1029,7 +1029,7 @@
       "id": 35,
       "questionIndex": 34,
       "content": "What is the purpose of kubectl in Kubernetes?",
-      "explanation": "Đáp án đúng là 'The CLI for communicating with the Kubernetes cluster.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1058,7 +1058,7 @@
       "id": 36,
       "questionIndex": 35,
       "content": "Which of the following is NOT a component of the confusion matrix?",
-      "explanation": "Đáp án đúng là 'Average Score (AS)'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1092,7 +1092,7 @@
       "id": 37,
       "questionIndex": 36,
       "content": "When you compiled the JSON files into a single DataFrame or NumPy array, about how many days did the entire range of dates span?",
-      "explanation": "Đáp án đúng là '500'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1126,7 +1126,7 @@
       "id": 38,
       "questionIndex": 37,
       "content": "If you have data with a large number of features and you are sure that it will take some time to train and tune the model, which approach is LEAST likely to result in a speed improvement during grid-searching?",
-      "explanation": "Đáp án đúng là 'Use the Shuffle and split form of cross-validation'. Thuật toán tìm kiếm (Search Algorithm) trong AI sử dụng hàm đánh giá Heuristic để duyệt không gian trạng thái và tìm đường đi tối ưu đến trạng thái mục tiêu.",
+      "explanation": "Thuật toán tìm kiếm (Search Algorithm) trong AI sử dụng hàm đánh giá Heuristic để duyệt không gian trạng thái và tìm đường đi tối ưu đến trạng thái mục tiêu.",
       "answers": [
         {
           "id": 1,
@@ -1160,7 +1160,7 @@
       "id": 39,
       "questionIndex": 38,
       "content": "What will the management team want to know after the sales data is released?",
-      "explanation": "Đáp án đúng là 'If the teams are well-optimized based on historical sales data.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1189,7 +1189,7 @@
       "id": 40,
       "questionIndex": 39,
       "content": "A decision tree classifier is useful as a model for the AAVAIl subscriber churn data.",
-      "explanation": "Đáp án đúng là 'True'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1208,7 +1208,7 @@
       "id": 41,
       "questionIndex": 40,
       "content": "What type of data structures are used as standardized input to the interfaces in scikit-learn?",
-      "explanation": "Đáp án đúng là 'NumPy arrays and SciPy sparse matrices'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1237,7 +1237,7 @@
       "id": 42,
       "questionIndex": 41,
       "content": "Which command-line tool is used to interact with the Kubernetes API?",
-      "explanation": "Đáp án đúng là 'Kubectl'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1266,7 +1266,7 @@
       "id": 43,
       "questionIndex": 42,
       "content": "What is the first step in setting up the Watson Developer Cloud Python SDK?",
-      "explanation": "Đáp án đúng là 'Create an IBM Cloud account'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1295,7 +1295,7 @@
       "id": 44,
       "questionIndex": 43,
       "content": "For given input lists: a,b,c and 1,2,3. Create a dictionary from two input lists",
-      "explanation": "Đáp án đúng là 'def make_dict(lst1,lst2): res = {}; for key,value in zip(lst1,lst2): res[key] = value; return res'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "res = {}; for key,value in zip(lst1,lst2): res[key] = value; return res'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1324,7 +1324,7 @@
       "id": 45,
       "questionIndex": 44,
       "content": "The .fit_transform method corresponds to which scikit-learn interface(s)?",
-      "explanation": "Đáp án đúng là 'Transformer'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1358,7 +1358,7 @@
       "id": 46,
       "questionIndex": 45,
       "content": "In the script example-spark-submit.sh, what does the #!/bin/bash line indicate?",
-      "explanation": "Đáp án đúng là 'It tells the system to use the Bash shell to execute the script'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1387,7 +1387,7 @@
       "id": 47,
       "questionIndex": 46,
       "content": "Which of the following classifiers is inherently designed for multiclass classification?",
-      "explanation": "Đáp án đúng là 'Naïve Bayes'. Học có giám sát (Supervised Learning) huấn luyện mô hình dựa trên tập dữ liệu đã gán nhãn (Labeled Data) để dự đoán đầu ra cho dữ liệu mới.",
+      "explanation": "Học có giám sát (Supervised Learning) huấn luyện mô hình dựa trên tập dữ liệu đã gán nhãn (Labeled Data) để dự đoán đầu ra cho dữ liệu mới.",
       "answers": [
         {
           "id": 1,
@@ -1416,7 +1416,7 @@
       "id": 48,
       "questionIndex": 47,
       "content": "What is a common issue with using accuracy as a metric for imbalanced classes?",
-      "explanation": "Đáp án đúng là 'It can be misleading.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1445,7 +1445,7 @@
       "id": 49,
       "questionIndex": 48,
       "content": "Which method is recommended for handling missing values in numerical data?",
-      "explanation": "Đáp án đúng là 'Use imputation techniques'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1474,7 +1474,7 @@
       "id": 50,
       "questionIndex": 49,
       "content": "Processing the corpus with the provided lemmatize_document reduces the total number of tokens to what percentage of the original?",
-      "explanation": "Đáp án đúng là '70-75%'. Xử lý ngôn ngữ tự nhiên (NLP) kết hợp ngôn ngữ học và máy học để giúp máy tính hiểu, phân tích và sinh ra ngôn ngữ tự nhiên của con người.",
+      "explanation": "Xử lý ngôn ngữ tự nhiên (NLP) kết hợp ngôn ngữ học và máy học để giúp máy tính hiểu, phân tích và sinh ra ngôn ngữ tự nhiên của con người.",
       "answers": [
         {
           "id": 1,
@@ -1508,7 +1508,7 @@
       "id": 51,
       "questionIndex": 50,
       "content": "Docker images are the basis of containers. It is possible to pull an image from the registry and ask the Docker client to run a container based on that image. Some images are official while many others are user defined.",
-      "explanation": "Đáp án đúng là 'True'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1527,7 +1527,7 @@
       "id": 52,
       "questionIndex": 51,
       "content": "In the context of NLP, what does sentiment analysis refer to?",
-      "explanation": "Đáp án đúng là 'Determining the emotional tone behind a series of words'. Xử lý ngôn ngữ tự nhiên (NLP) kết hợp ngôn ngữ học và máy học để giúp máy tính hiểu, phân tích và sinh ra ngôn ngữ tự nhiên của con người.",
+      "explanation": "Xử lý ngôn ngữ tự nhiên (NLP) kết hợp ngôn ngữ học và máy học để giúp máy tính hiểu, phân tích và sinh ra ngôn ngữ tự nhiên của con người.",
       "answers": [
         {
           "id": 1,
@@ -1556,7 +1556,7 @@
       "id": 53,
       "questionIndex": 52,
       "content": "In the context of the AI workflow presented in these materials which of the following is not an example of a valid feedback loop?",
-      "explanation": "Đáp án đúng là 'Returning to the data collection stage from transformations to reduce the number of transforms.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1590,7 +1590,7 @@
       "id": 54,
       "questionIndex": 53,
       "content": "Which process model is known for its open standard and has been around since 1996?",
-      "explanation": "Đáp án đúng là 'CRISP-DM'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1619,7 +1619,7 @@
       "id": 55,
       "questionIndex": 54,
       "content": "Which Python package can be used to estimate test coverage?",
-      "explanation": "Đáp án đúng là 'coverage'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1648,7 +1648,7 @@
       "id": 56,
       "questionIndex": 55,
       "content": "A Kubernetes pod can contain multiple kubernetes deployments.",
-      "explanation": "Đáp án đúng là 'False.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1667,7 +1667,7 @@
       "id": 57,
       "questionIndex": 56,
       "content": "The decision tree base models in random forests individually have high bias and low variance.",
-      "explanation": "Đáp án đúng là 'False.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1686,7 +1686,7 @@
       "id": 58,
       "questionIndex": 57,
       "content": "What is a poisoning attack?",
-      "explanation": "Đáp án đúng là 'An attack that injects malicious data into the training set.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1715,7 +1715,7 @@
       "id": 59,
       "questionIndex": 58,
       "content": "What does the term \"trunk\" refer to in the context of Continuous Integration?",
-      "explanation": "Đáp án đúng là 'The main branch of code where all changes are merged'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1744,7 +1744,7 @@
       "id": 60,
       "questionIndex": 59,
       "content": "What is the primary purpose of documenting your data before starting a project?",
-      "explanation": "Đáp án đúng là 'To streamline the modeling process and ensure data quality'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1773,7 +1773,7 @@
       "id": 61,
       "questionIndex": 60,
       "content": "What is the primary purpose of dimensionality reduction in data science?",
-      "explanation": "Đáp án đúng là 'To simplify models and reduce computation time'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1802,7 +1802,7 @@
       "id": 62,
       "questionIndex": 61,
       "content": "Thinking with the lens of the scientific process, what would your next steps be if you wanted to decide where to open the next store for your sled business?",
-      "explanation": "Đáp án đúng là 'Gather different data say snowfall by county and repeat the experiment'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1831,7 +1831,7 @@
       "id": 63,
       "questionIndex": 62,
       "content": "What is the first step in setting up the Watson Developer Cloud Python SDK?",
-      "explanation": "Đáp án đúng là 'Create an IBM Cloud account.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1860,7 +1860,7 @@
       "id": 64,
       "questionIndex": 63,
       "content": "Which Python package can be used to estimate test coverage?",
-      "explanation": "Đáp án đúng là 'coverage'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1889,7 +1889,7 @@
       "id": 65,
       "questionIndex": 64,
       "content": "Docker images are the basis of containers. It is possible to pull an image from the registry and ask the Docker client to run a container based on that image. Some images are official while many others are user defined.",
-      "explanation": "Đáp án đúng là 'True.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1908,7 +1908,7 @@
       "id": 66,
       "questionIndex": 65,
       "content": "What is the purpose of profiling in code optimization?",
-      "explanation": "Đáp án đúng là 'To identify which parts of the code are bottlenecks'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1937,7 +1937,7 @@
       "id": 67,
       "questionIndex": 66,
       "content": "Which of the following is the least valid statement when it comes to dashboards?",
-      "explanation": "Đáp án đúng là 'Dashboards are quick way to create portable simple plots.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -1971,7 +1971,7 @@
       "id": 68,
       "questionIndex": 67,
       "content": "What is the community package of the Docker Engine called?",
-      "explanation": "Đáp án đúng là 'docker-ce'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2000,7 +2000,7 @@
       "id": 69,
       "questionIndex": 68,
       "content": "Docker containers run a private file system that is isolated from the host and other containers. What is the suggested way to access notebooks and scripts from within the container?",
-      "explanation": "Đáp án đúng là 'bind mounts'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2034,7 +2034,7 @@
       "id": 70,
       "questionIndex": 69,
       "content": "Which command is used to install the Watson Developer Cloud Python SDK?",
-      "explanation": "Đáp án đúng là 'pip install ibm-watson'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2063,7 +2063,7 @@
       "id": 71,
       "questionIndex": 70,
       "content": "What is the primary purpose of dimensionality reduction in data science?",
-      "explanation": "Đáp án đúng là 'To simplify models and reduce computation time'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2092,7 +2092,7 @@
       "id": 72,
       "questionIndex": 71,
       "content": "Which of the following is the least valid statement when it comes to dashboards?",
-      "explanation": "Đáp án đúng là 'Dashboards are quick way to create portable simple plots'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2126,7 +2126,7 @@
       "id": 73,
       "questionIndex": 72,
       "content": "Processing the corpus with the provided lemmatize_document reduces the total number of tokens to what percentage of the original?",
-      "explanation": "Đáp án đúng là '70-75%'. Xử lý ngôn ngữ tự nhiên (NLP) kết hợp ngôn ngữ học và máy học để giúp máy tính hiểu, phân tích và sinh ra ngôn ngữ tự nhiên của con người.",
+      "explanation": "Xử lý ngôn ngữ tự nhiên (NLP) kết hợp ngôn ngữ học và máy học để giúp máy tính hiểu, phân tích và sinh ra ngôn ngữ tự nhiên của con người.",
       "answers": [
         {
           "id": 1,
@@ -2160,7 +2160,7 @@
       "id": 74,
       "questionIndex": 73,
       "content": "If you have data with a large number of features and you are sure that it will take some time to train and tune the model, which approach is LEAST likely to result in a speed improvement during grid-searching?",
-      "explanation": "Đáp án đúng là 'Use the Shuffle and split form of cross-validation.'. Thuật toán tìm kiếm (Search Algorithm) trong AI sử dụng hàm đánh giá Heuristic để duyệt không gian trạng thái và tìm đường đi tối ưu đến trạng thái mục tiêu.",
+      "explanation": "'. Thuật toán tìm kiếm (Search Algorithm) trong AI sử dụng hàm đánh giá Heuristic để duyệt không gian trạng thái và tìm đường đi tối ưu đến trạng thái mục tiêu.",
       "answers": [
         {
           "id": 1,
@@ -2194,7 +2194,7 @@
       "id": 75,
       "questionIndex": 74,
       "content": "A decision tree classifier is useful as a model for the AAVAIl subscriber churn data.",
-      "explanation": "Đáp án đúng là 'True'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2213,7 +2213,7 @@
       "id": 76,
       "questionIndex": 75,
       "content": "What is the purpose of profiling in code optimization?",
-      "explanation": "Đáp án đúng là 'To identify which parts of the code are bottlenecks.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2242,7 +2242,7 @@
       "id": 77,
       "questionIndex": 76,
       "content": "When you compiled the JSON files into a single DataFrame or NumPy array, about how many days did the entire range of dates span?",
-      "explanation": "Đáp án đúng là '500'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2276,7 +2276,7 @@
       "id": 78,
       "questionIndex": 77,
       "content": "Which of the following is a common challenge when optimizing code for machine learning models?",
-      "explanation": "Đáp án đúng là 'Difficulty in improving training time for large models.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2305,7 +2305,7 @@
       "id": 79,
       "questionIndex": 78,
       "content": "What is a common issue with using accuracy as a metric for imbalanced classes?",
-      "explanation": "Đáp án đúng là 'It can be misleading.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2334,7 +2334,7 @@
       "id": 80,
       "questionIndex": 79,
       "content": "What is a poisoning attack?",
-      "explanation": "Đáp án đúng là 'An attack that injects malicious data into the training set'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2363,7 +2363,7 @@
       "id": 81,
       "questionIndex": 80,
       "content": "In the context of the AI workflow presented in these materials which of the following is not an example of a valid feedback loop?",
-      "explanation": "Đáp án đúng là 'Returning to the data collection stage from transformations to reduce the number of transforms'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2397,7 +2397,7 @@
       "id": 82,
       "questionIndex": 81,
       "content": "What will the management team want to know after the sales data is released?",
-      "explanation": "Đáp án đúng là 'If the teams are well-optimized based on historical sales data'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2426,7 +2426,7 @@
       "id": 83,
       "questionIndex": 82,
       "content": "What type of data structures are used as standardized input to the interfaces in scikit-learn?",
-      "explanation": "Đáp án đúng là 'NumPy arrays and SciPy sparse matrices'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2455,7 +2455,7 @@
       "id": 84,
       "questionIndex": 83,
       "content": "Which library in Python is commonly used for reading and writing CSV files?",
-      "explanation": "Đáp án đúng là 'Pandas'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2484,7 +2484,7 @@
       "id": 85,
       "questionIndex": 84,
       "content": "Which of the following neural network architectures are most-commonly used for time-series analysis?",
-      "explanation": "Đáp án đúng là 'Recurrent neural networks'. Mạng nơ-ron nhân tạo (Artificial Neural Network) mô phỏng cơ chế hoạt động của não bộ con người với các lớp ẩn (Hidden Layers) để xử lý tác vụ phức tạp.",
+      "explanation": "Mạng nơ-ron nhân tạo (Artificial Neural Network) mô phỏng cơ chế hoạt động của não bộ con người với các lớp ẩn (Hidden Layers) để xử lý tác vụ phức tạp.",
       "answers": [
         {
           "id": 1,
@@ -2518,7 +2518,7 @@
       "id": 86,
       "questionIndex": 85,
       "content": "When embarking on a data science project, why do you ultimately want to format your data so that it can be housed in something like a Pandas DataFrame or NumPy Array?",
-      "explanation": "Đáp án đúng là 'Nearly all modeling algorithms take input data in a tabular format analogous to format of DataFrame/Arrays.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2547,7 +2547,7 @@
       "id": 87,
       "questionIndex": 86,
       "content": "Docker containers run a private file system that is isolated from the host and other containers. What is the suggested way to access notebooks and scripts from within the container?",
-      "explanation": "Đáp án đúng là 'bind mounts'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2581,7 +2581,7 @@
       "id": 88,
       "questionIndex": 87,
       "content": "Which Python package supports spawning processes for code optimization?",
-      "explanation": "Đáp án đúng là 'multiprocessing'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2610,7 +2610,7 @@
       "id": 89,
       "questionIndex": 88,
       "content": "Which of the following is a common challenge when optimizing code for machine learning models?",
-      "explanation": "Đáp án đúng là 'Difficulty in improving training time for large models'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2639,7 +2639,7 @@
       "id": 90,
       "questionIndex": 89,
       "content": "Which of the following is NOT a factor that affects the time spent on data cleaning?",
-      "explanation": "Đáp án đúng là 'Company size'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2668,7 +2668,7 @@
       "id": 91,
       "questionIndex": 90,
       "content": "Which country had the most total revenue when you summed across all purchases?",
-      "explanation": "Đáp án đúng là 'United Kingdom'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2702,7 +2702,7 @@
       "id": 92,
       "questionIndex": 91,
       "content": "Why is granular data preferred over summary level data?",
-      "explanation": "Đáp án đúng là 'It allows for more detailed analysis.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2731,7 +2731,7 @@
       "id": 93,
       "questionIndex": 92,
       "content": "What is the first stage of the design thinking process?",
-      "explanation": "Đáp án đúng là 'Empathize'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2760,7 +2760,7 @@
       "id": 94,
       "questionIndex": 93,
       "content": "Which command-line tool is used to interact with the Kubernetes API?",
-      "explanation": "Đáp án đúng là 'Kube CTL'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2789,7 +2789,7 @@
       "id": 95,
       "questionIndex": 94,
       "content": "Which of the following neural network architectures are most-commonly used for time-series analysis?",
-      "explanation": "Đáp án đúng là 'Recurrent neural networks'. Mạng nơ-ron nhân tạo (Artificial Neural Network) mô phỏng cơ chế hoạt động của não bộ con người với các lớp ẩn (Hidden Layers) để xử lý tác vụ phức tạp.",
+      "explanation": "Mạng nơ-ron nhân tạo (Artificial Neural Network) mô phỏng cơ chế hoạt động của não bộ con người với các lớp ẩn (Hidden Layers) để xử lý tác vụ phức tạp.",
       "answers": [
         {
           "id": 1,
@@ -2823,7 +2823,7 @@
       "id": 96,
       "questionIndex": 95,
       "content": "What is the purpose of the classification_report in sklearn?",
-      "explanation": "Đáp án đúng là 'To summarize model performance'. Học có giám sát (Supervised Learning) huấn luyện mô hình dựa trên tập dữ liệu đã gán nhãn (Labeled Data) để dự đoán đầu ra cho dữ liệu mới.",
+      "explanation": "Học có giám sát (Supervised Learning) huấn luyện mô hình dựa trên tập dữ liệu đã gán nhãn (Labeled Data) để dự đoán đầu ra cho dữ liệu mới.",
       "answers": [
         {
           "id": 1,
@@ -2852,7 +2852,7 @@
       "id": 97,
       "questionIndex": 96,
       "content": "What is the purpose of the classification_report in sklearn?",
-      "explanation": "Đáp án đúng là 'To summarize model performance'. Học có giám sát (Supervised Learning) huấn luyện mô hình dựa trên tập dữ liệu đã gán nhãn (Labeled Data) để dự đoán đầu ra cho dữ liệu mới.",
+      "explanation": "Học có giám sát (Supervised Learning) huấn luyện mô hình dựa trên tập dữ liệu đã gán nhãn (Labeled Data) để dự đoán đầu ra cho dữ liệu mới.",
       "answers": [
         {
           "id": 1,
@@ -2881,7 +2881,7 @@
       "id": 98,
       "questionIndex": 97,
       "content": "What is the community package of the Docker Engine called?",
-      "explanation": "Đáp án đúng là 'docker-ce'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -2910,7 +2910,7 @@
       "id": 99,
       "questionIndex": 98,
       "content": "For given input lists: a,b,c and 1,2,3 Create a dictionary from two input lists",
-      "explanation": "Đáp án đúng là ''. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -3034,7 +3034,7 @@
       "id": 100,
       "questionIndex": 99,
       "content": "What does the term \"trunk\" refer to in the context of Continuous Integration?",
-      "explanation": "Đáp án đúng là 'The main branch of code where all changes are merged.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,

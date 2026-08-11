@@ -412,6 +412,19 @@ export async function deleteCustomQuizSet(quizId, password) {
   return true;
 }
 
+export function getQuestionTypeInfo(question) {
+  const answers = question?.answers || [];
+  const correctAnswers = answers.filter(a => Boolean(a.isCorrect));
+  const count = correctAnswers.length;
+  const isMultipleChoice = count > 1;
+  return {
+    isMultipleChoice,
+    correctCount: count,
+    correctAnswers,
+    displayType: isMultipleChoice ? `Multiple Choice (${count} đáp án đúng)` : 'Single Choice'
+  };
+}
+
 export function fetchQuizById(quizId) {
   const cached = normalizedQuizCache.get(quizId);
   if (cached) {

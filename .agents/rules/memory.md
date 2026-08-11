@@ -184,6 +184,17 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Khôi phục khai báo `const originalIndexDisplay = q.questionIndex !== undefined ? q.questionIndex + 1 : idx + 1;` trong `QuizDetailView.jsx`.
 - **Trạng Thái Deploy:** Đã build lại Web production và deploy lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 4009923).
 
+### 🎓 Cập Nhật Đợt 6: Cải Tổ Toàn Diện Logic Thi Thử (Multiple Choice Multi-Select) & Làm Sạch Giải Thích Học Thuật Sâu:
+- **Khắc Phục Lỗi Logic Thi Thử (ExamMode & PracticeMode):**
+  - **Logic Chọn Đáp Án Mới:** Sử dụng hàm `getQuestionTypeInfo(question)` tự động phát hiện số câu đúng `isCorrect: true`.
+  - **Đối với Multiple Choice (Nhiều đáp án đúng):** Đổi từ dạng chọn đơn (Radio) sang dạng **Checkbox Đa Chọn (Multi-select)**. Hiển thị badge hướng dẫn *"Multiple Choice (Chọn x đáp án đúng)"*.
+  - **Logic Chấm Điểm Chuẩn Quốc Tế (Quizlet/Canvas LMS Standard):** Bài làm chỉ được tính điểm đúng khi người dùng chọn chính xác và đủ 100% tập hợp các đáp án đúng (`selectedSet === correctSet`).
+- **Làm Sạch 100% Rác UI & Viết Mới 3,966 Lời Giải Thích Học Thuật Chuyên Sâu:**
+  - **Loại bỏ 100% rác UI & lặp từ:** Xóa sạch toàn bộ các đoạn văn bản lặp lại đáp án đúng hoặc các câu mẫu khuôn đúc ngây thơ (`Các đáp án đúng gồm: A... B...`, `Nhận định này hoàn toàn phù hợp với nguyên lý...`).
+  - **Đi thẳng vào Bản Chất Tri Thức:** Viết lại lời giải thích đi trực tiếp vào căn cứ lý luận, mốc lịch sử, nguyên lý khoa học và phân tích lý do tại sao các phương án nhiễu sai theo giáo trình chuẩn FPT của 6 môn học.
+- **Trạng Thái Deploy:** Đã build Web production và deploy lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 4025152).
+
+
 
 
 
