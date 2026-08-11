@@ -30,7 +30,8 @@
           "content": "Thiết lập chính quyền nhà nước của giai cấp công nhân và nhân dân lao động",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 2,
@@ -58,7 +59,8 @@
           "content": "Vấn đề đoàn kết dân tộc là điều kiện cần cho sự nghiệp cách mạng ở nước ta hiện nay.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 3,
@@ -86,7 +88,8 @@
           "content": "Yếu tố tâm lý, tình cảm và kinh tế",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 4,
@@ -114,7 +117,8 @@
           "content": "Tiếp thu toàn bộ các yếu tố văn hóa nhân loại trong tiến trình hội nhập và tăng trưởng kinh tế",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 5,
@@ -142,7 +146,8 @@
           "content": "Từ các yếu tố đạo đức truyền thống",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 6,
@@ -170,7 +175,8 @@
           "content": "Thực hiện đường lối đối ngoại độc lập, tự chủ, hòa bình, hữu nghị, hợp tác và phát triển; chủ động và tích cực hội nhập quốc tế",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 7,
@@ -198,7 +204,8 @@
           "content": "Một cuộc cách mạng xã hội",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 8,
@@ -226,7 +233,8 @@
           "content": "Chức năng thỏa mãn nhu cầu tâm sinh lý, duy trì tình cảm gia đình",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 9,
@@ -254,13 +262,14 @@
           "content": "Đội ngũ doanh nhân",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10,
       "questionIndex": 9,
       "content": "Những bước chuyển mang tính bước ngoặt của kinh tế gia đình ở Việt Nam hiện nay là?",
-      "explanation": "Hai chuyển biến lớn của kinh tế gia đình Việt Nam hiện nay là chuyển từ tự cấp tự túc sang sản xuất hàng hóa (A) và nâng tầm từ phục vụ thị trường trong nước tiến tới hội nhập thị trường toàn cầu (C).",
+      "explanation": "Các đáp án đúng gồm: A. Từ kinh tế tự cấp tự túc thành kinh tế hàng hóa | C. Từ đơn vị kinh tế đáp ứng nhu cầu của thị trường quốc gia thành tổ chức kinh tế đáp ứng nhu cầu thị trường toàn cầu.\n\nHai chuyển biến lớn của kinh tế gia đình Việt Nam hiện nay là chuyển từ tự cấp tự túc sang sản xuất hàng hóa (A) và nâng tầm từ phục vụ thị trường trong nước tiến tới hội nhập thị trường toàn cầu (C).",
       "answers": [
         {
           "id": 1,
@@ -282,7 +291,8 @@
           "content": "Từ kinh tế hộ gia đình thành kinh tế thị trường",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 11,
@@ -310,7 +320,8 @@
           "content": "Kinh tế; Chính trị - xã hội; Văn hóa, tư tưởng",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 12,
@@ -338,7 +349,8 @@
           "content": "Công nhân",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 13,
@@ -366,7 +378,8 @@
           "content": "Trong đấu tranh giai cấp, mỗi giai cấp đứng ở vị trí trung tâm đều phải thống trị được các giai cấp, tầng lớp xã hội khác có những lợi ích phù hợp để tập hợp lực lượng thực hiện những nhu cầu, lợi ích chung",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 14,
@@ -394,7 +407,8 @@
           "content": "Hình thái kinh tế - xã hội cộng sản chủ nghĩa",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 15,
@@ -422,7 +436,8 @@
           "content": "Là quyền thống trị của nhân dân trong lĩnh vực kinh tế",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 16,
@@ -450,7 +465,8 @@
           "content": "Cộng đồng dân tộc phát triển hưng thịnh sẽ có ý định tách ra hình thành quốc gia - dân tộc độc lập",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 17,
@@ -478,7 +494,8 @@
           "content": "Tồn tại nhiều giai cấp, tầng lớp, mâu thuẫn, xung đột ngày càng gay gắt với nhau",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 18,
@@ -506,7 +523,8 @@
           "content": "Phong kiến",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 19,
@@ -534,7 +552,8 @@
           "content": "Là những cộng đồng người cùng toàn bộ những mối quan hệ xã hội do sự tác động của cộng đồng người ấy với tự nhiên tạo nên",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 20,
@@ -562,7 +581,8 @@
           "content": "Giáo dục và tư tưởng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 21,
@@ -590,7 +610,8 @@
           "content": "Vì chủ nghĩa xã hội là giai đoạn chuyển tiếp của hình thái kinh tế - xã hội cộng sản chủ nghĩa",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 22,
@@ -618,7 +639,8 @@
           "content": "Trí thức",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 23,
@@ -646,7 +668,8 @@
           "content": "Thực hiện nhất quán một nguyên tắc duy nhất là tập trung dân chủ",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 24,
@@ -674,7 +697,8 @@
           "content": "Gia đình là nơi giao lưu văn hóa của các cộng đồng tộc người",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 25,
@@ -702,7 +726,8 @@
           "content": "Trong lúc Đảng Cộng sản đã giành được chính quyền",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 26,
@@ -730,7 +755,8 @@
           "content": "Sự phát triển về lực lượng sản xuất và sự trưởng thành của tầng lớp trí thức",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 27,
@@ -758,7 +784,8 @@
           "content": "Chính đảng tiên phong",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 28,
@@ -786,7 +813,8 @@
           "content": "Xuất phát từ một nước công nghiệp phát triển tiến lên chủ nghĩa xã hội",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 29,
@@ -814,7 +842,8 @@
           "content": "Tôn giáo và tín ngưỡng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 30,
@@ -842,7 +871,8 @@
           "content": "Là những người có sở hữu một số tư liệu sản xuất nhỏ, có thể tự sản xuất, nhưng nhỏ lẻ, dễ phá sản nên phải bán sức lao động cho nhà tư bản là chính",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 31,
@@ -870,7 +900,8 @@
           "content": "Không đúng, vì cần tuân theo nguyên tắc quản lý của giai cấp công nhân",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 32,
@@ -898,7 +929,8 @@
           "content": "Hình thức",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 33,
@@ -926,7 +958,8 @@
           "content": "Là sự hợp tác giữa họ, đồng thời mở rộng liên kết với các lực lượng khác để xây dựng nền chính trị dân chủ",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 34,
@@ -954,7 +987,8 @@
           "content": "Tín ngưỡng thờ mẫu",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 35,
@@ -982,7 +1016,8 @@
           "content": "Chống Đuyrinh",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 36,
@@ -1010,7 +1045,8 @@
           "content": "Chủ nghĩa duy vật biện chứng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 37,
@@ -1038,7 +1074,8 @@
           "content": "Chức năng đối nội và chức năng đối ngoại",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 38,
@@ -1066,7 +1103,8 @@
           "content": "Có tinh thần cách mạng, chống giai cấp tư sản",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 39,
@@ -1094,7 +1132,8 @@
           "content": "Từ khi tiến hành đổi mới vào năm 1986",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 40,
@@ -1122,7 +1161,8 @@
           "content": "Xây dựng nhà nước phát triển và hợp tác quốc tế tốt",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 41,
@@ -1150,7 +1190,8 @@
           "content": "Quá độ toàn diện",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 42,
@@ -1178,7 +1219,8 @@
           "content": "Sở hữu tập thể và thành phần kinh tế tập thể",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 43,
@@ -1206,7 +1248,8 @@
           "content": "Là lực lượng củng cố khối đại đoàn kết dân tộc",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 44,
@@ -1234,13 +1277,14 @@
           "content": "Tập Cận Bình",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 45,
       "questionIndex": 44,
       "content": "Đâu là những nội dung cơ bản, lâu dài tạo điều kiện cho liên minh giai cấp, tầng lớp phát triển bền vững ở Việt Nam?",
-      "explanation": "Đáp án D sai vì mô hình kinh tế của Việt Nam là kinh tế thị trường \"định hướng XHCN\", không phải \"tự do hiện đại\". Các phương án A, B, C thuộc nội dung văn hóa - xã hội của liên minh.",
+      "explanation": "Các đáp án đúng gồm: A. Nâng cao chất lượng nguồn nhân lực, xóa đói giảm nghèo | B. Thực hiện tốt chính sách xã hội đối với các thành phần liên minh | C. Chăm lo sức khỏe, nâng cao chất lượng sống, nâng cao dân trí cho mọi tầng lớp nhân dân.\n\nĐáp án D sai vì mô hình kinh tế của Việt Nam là kinh tế thị trường \"định hướng XHCN\", không phải \"tự do hiện đại\". Các phương án A, B, C thuộc nội dung văn hóa - xã hội của liên minh.",
       "answers": [
         {
           "id": 1,
@@ -1262,7 +1306,8 @@
           "content": "Đảm bảo phân chia lợi ích kinh tế công bằng trong mô hình kinh tế thị trường tự do hiện đại",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 46,
@@ -1290,7 +1335,8 @@
           "content": "Gia đình kết nối",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 47,
@@ -1318,7 +1364,8 @@
           "content": "Người con trong gia đình",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 48,
@@ -1346,13 +1393,14 @@
           "content": "Mong muốn chủ quan của giai cấp công nhân",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 49,
       "questionIndex": 48,
       "content": "Cơ cấu xã hội - giai cấp của nước ta trong thời kỳ quá độ lên chủ nghĩa xã hội hiện nay bao gồm những giai cấp, tầng lớp cơ bản nào?",
-      "explanation": "Cơ cấu xã hội - giai cấp Việt Nam thời kỳ quá độ bao gồm các giai cấp, tầng lớp cơ bản: giai cấp công nhân, giai cấp nông dân, đội ngũ trí thức, đội ngũ doanh nhân, tiểu thương, thanh niên, phụ nữ...",
+      "explanation": "Các đáp án đúng gồm: A. Giai cấp công nhân | B. Giai cấp nông dân | C. Đội ngũ trí thức và đội ngũ doanh nhân.\n\nCơ cấu xã hội - giai cấp Việt Nam thời kỳ quá độ bao gồm các giai cấp, tầng lớp cơ bản: giai cấp công nhân, giai cấp nông dân, đội ngũ trí thức, đội ngũ doanh nhân, tiểu thương, thanh niên, phụ nữ...",
       "answers": [
         {
           "id": 1,
@@ -1374,7 +1422,8 @@
           "content": "Đội ngũ trí thức và đội ngũ đảng viên",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 50,
@@ -1402,7 +1451,8 @@
           "content": "Chủ nghĩa duy tâm biện chứng và chủ nghĩa duy vật lịch sử",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 51,
@@ -1430,7 +1480,8 @@
           "content": "Là một hình thái kinh tế - xã hội",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 52,
@@ -1458,7 +1509,8 @@
           "content": "Xác lập một thế giới hiện thực không có áp bức, bất công, nghèo đói và thất học...",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 53,
@@ -1486,7 +1538,8 @@
           "content": "Trong lĩnh vực kinh tế và tư tưởng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 54,
@@ -1514,7 +1567,8 @@
           "content": "Ph.Ăngghen",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 55,
@@ -1542,7 +1596,8 @@
           "content": "Cơ cấu tổ chức, quản lý và đào tạo",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 56,
@@ -1570,7 +1625,8 @@
           "content": "Giai cấp công nhân tham gia ở những vị trí, cấp bậc cao hơn trong các công xưởng, doanh nghiệp và ngày càng có xu hướng thỏa hiệp với giai cấp tư sản",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 57,
@@ -1598,7 +1654,8 @@
           "content": "Giữ vững vai trò định hướng, kim chỉ nam của kinh tế nhà nước trong nền kinh tế thị trường tự do hiện đại",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 58,
@@ -1626,7 +1683,8 @@
           "content": "Là những quy luật, tính quy luật chính trị - xã hội của quá trình phát sinh, hình thành và phát triển của hình thái kinh tế - xã hội tư bản chủ nghĩa và cộng sản chủ nghĩa",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 59,
@@ -1654,7 +1712,8 @@
           "content": "Người bị bóc lột / lên làm chủ",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 60,
@@ -1682,7 +1741,8 @@
           "content": "Góp phần phê phán triết học pháp quyền của Héghen",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     }
   ]
 }

@@ -35,7 +35,8 @@
           "content": "85-95%",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 2,
@@ -68,7 +69,8 @@
           "content": "Dashboards can be used to tell the story of investigative visualizations",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 3,
@@ -96,7 +98,8 @@
           "content": "The demographics of the customers",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 4,
@@ -129,7 +132,8 @@
           "content": "Simulation via Permutations",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 5,
@@ -157,7 +161,8 @@
           "content": "User testing",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 6,
@@ -185,7 +190,8 @@
           "content": "Replace with a random value",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 7,
@@ -213,7 +219,8 @@
           "content": "It is a comment and has no effect",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 8,
@@ -241,7 +248,8 @@
           "content": "numpy",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 9,
@@ -269,7 +277,8 @@
           "content": "Download the tutorial files",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10,
@@ -297,7 +306,8 @@
           "content": "upgrade ibm-watson",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 11,
@@ -325,7 +335,8 @@
           "content": "Limited programming languages available",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 12,
@@ -353,7 +364,8 @@
           "content": "To reduce the amount of data used",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 13,
@@ -386,7 +398,8 @@
           "content": "volumes",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 14,
@@ -414,7 +427,8 @@
           "content": "The I1 vs I2 comparison",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 15,
@@ -432,7 +446,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 16,
@@ -460,7 +475,8 @@
           "content": "docker-toolbox",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 17,
@@ -488,7 +504,8 @@
           "content": "An attack that occurs only at test time",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 18,
@@ -516,7 +533,8 @@
           "content": "Helm",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 19,
@@ -544,7 +562,8 @@
           "content": "A testing framework",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 20,
@@ -562,7 +581,8 @@
           "content": "False",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 21,
@@ -590,7 +610,8 @@
           "content": "flask",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 22,
@@ -623,7 +644,8 @@
           "content": "Returning to discuss the business opportunity after a model has been deployed",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 23,
@@ -656,7 +678,8 @@
           "content": "650",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 24,
@@ -684,7 +707,8 @@
           "content": "The CLI for communicating with the kubernetes cluster",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 25,
@@ -702,7 +726,8 @@
           "content": "False",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 26,
@@ -735,7 +760,8 @@
           "content": "Germany",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 27,
@@ -768,7 +794,8 @@
           "content": "Germany",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 28,
@@ -796,7 +823,8 @@
           "content": "To create more complex models",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 29,
@@ -824,7 +852,8 @@
           "content": "It does not consider false positives.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 30,
@@ -852,7 +881,8 @@
           "content": "Strings and tuples",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 31,
@@ -885,7 +915,8 @@
           "content": "Transformer, Predictor",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 32,
@@ -913,7 +944,8 @@
           "content": "Agile",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 33,
@@ -941,7 +973,8 @@
           "content": "SciPy",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 34,
@@ -969,7 +1002,8 @@
           "content": "All of the answers",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 35,
@@ -997,7 +1031,8 @@
           "content": "To avoid using Python",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 36,
@@ -1025,7 +1060,8 @@
           "content": "def make_dict(lst1,lst2): res = []; for key,value in zip(lst1,lst2): res[key] = value; return res",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 37,
@@ -1053,7 +1089,8 @@
           "content": "Company size",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 38,
@@ -1081,7 +1118,8 @@
           "content": "Test",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 39,
@@ -1109,13 +1147,14 @@
           "content": "Start a business viability assessment for all three states",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 40,
       "questionIndex": 39,
       "content": "Sparse matrices can be useful as a target destination for ETL, but what are the main caveats (choose one or more)?",
-      "explanation": "Ma trận thưa (sparse matrices) giúp tiết kiệm bộ nhớ nhưng có hạn chế: chúng không hỗ trợ gọi trực tiếp nhiều hàm đại số tuyến tính có sẵn của NumPy (B), và rất khó để in ra màn hình để con người có thể quan sát dễ dàng như ma trận thường (E).",
+      "explanation": "Các đáp án đúng gồm: B. NumPy linear algebra functions generally cannot be called directly | E. It is difficult to print to screen scipy.sparse matrices directly.\n\nMa trận thưa (sparse matrices) giúp tiết kiệm bộ nhớ nhưng có hạn chế: chúng không hỗ trợ gọi trực tiếp nhiều hàm đại số tuyến tính có sẵn của NumPy (B), và rất khó để in ra màn hình để con người có thể quan sát dễ dàng như ma trận thường (E).",
       "answers": [
         {
           "id": 1,
@@ -1142,7 +1181,8 @@
           "content": "It is difficult to print to screen scipy.sparse matrices directly",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 41,
@@ -1170,7 +1210,8 @@
           "content": "It is more visually appealing",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 42,
@@ -1188,7 +1229,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 43,
@@ -1221,7 +1263,8 @@
           "content": "service API key, service URL, service IAMAuthenticator",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 44,
@@ -1254,7 +1297,8 @@
           "content": "Autoencoders",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 45,
@@ -1282,7 +1326,8 @@
           "content": "Summarizing large documents",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 46,
@@ -1310,7 +1355,8 @@
           "content": "To train a model",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 47,
@@ -1343,7 +1389,8 @@
           "content": "Use PCA to reduce the dimensionality of the data before training",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 48,
@@ -1371,7 +1418,8 @@
           "content": "They eliminate the need for data",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 49,
@@ -1404,7 +1452,8 @@
           "content": "False Negatives (FN)",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 50,
@@ -1432,7 +1481,8 @@
           "content": "Decision Trees (in binary mode)",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     }
   ]
 }

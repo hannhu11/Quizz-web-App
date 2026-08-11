@@ -30,7 +30,8 @@
           "content": "Quân sự, chạy đua vũ trang",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 2,
@@ -58,7 +59,8 @@
           "content": "Xoá bỏ dần sự chênh lệch về mọi mặt giữa các dân tộc do lịch sử để lại",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 3,
@@ -86,7 +88,8 @@
           "content": "Khi chủ nghĩa Mác - Lênin ra đời",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 4,
@@ -114,7 +117,8 @@
           "content": "Tận dụng mọi nguồn lực để tăng trưởng kinh tế khi ở các vùng đồng bằng đã can kiệt",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 5,
@@ -142,7 +146,8 @@
           "content": "Giáo dục truyền thống",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 6,
@@ -170,7 +175,8 @@
           "content": "6",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 7,
@@ -198,7 +204,8 @@
           "content": "Chung một nền văn hóa và tâm lý",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 8,
@@ -226,7 +233,8 @@
           "content": "Sự biến đổi của phương thức sản xuất",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 9,
@@ -254,7 +262,8 @@
           "content": "Thực hiện đa nguyên chính trị",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10,
@@ -282,7 +291,8 @@
           "content": "Thành công của cách mạng tháng Tám năm 1945",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 11,
@@ -310,7 +320,8 @@
           "content": "Cuộc cách mạng vô sản do giai cấp nông nhân tiến hành",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 12,
@@ -338,7 +349,8 @@
           "content": "B và C đều đúng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 13,
@@ -366,7 +378,8 @@
           "content": "Triển khai mạnh mẽ, đồng bộ hóa hệ thống pháp luật",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 14,
@@ -394,7 +407,8 @@
           "content": "Một cuộc cách mạng",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 15,
@@ -422,7 +436,8 @@
           "content": "Ý chí, nguyện vọng của nhân dân lao động",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 16,
@@ -450,7 +465,8 @@
           "content": "Chế độ chiếm hữu nô lệ",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 17,
@@ -478,7 +494,8 @@
           "content": "Càng đông con càng tốt",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 18,
@@ -506,7 +523,8 @@
           "content": "Là các quan niệm đạo đức lỗi thời",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 19,
@@ -534,7 +552,8 @@
           "content": "Hôn nhân huyết thống",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 20,
@@ -562,7 +581,8 @@
           "content": "Thiết lập chính quyền nhà nước của giai cấp công nhân và nhân dân lao động",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 21,
@@ -590,7 +610,8 @@
           "content": "Chức năng giáo dục, nuôi dưỡng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 22,
@@ -618,7 +639,8 @@
           "content": "Không nên can thiệp, vì đây là chức năng tự nhiên, quyền tự do của mỗi gia đình",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 23,
@@ -646,7 +668,8 @@
           "content": "Người con trong gia đình",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 24,
@@ -674,7 +697,8 @@
           "content": "Quan hệ nuôi dưỡng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 25,
@@ -702,7 +726,8 @@
           "content": "Sự ra đời của Quốc tế I",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 26,
@@ -730,7 +755,8 @@
           "content": "Được dung hòa cùng với các học thuyết tư sản khác",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 27,
@@ -758,7 +784,8 @@
           "content": "Chủ nghĩa duy vật biện chứng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 28,
@@ -786,7 +813,8 @@
           "content": "C.Mác",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 29,
@@ -814,7 +842,8 @@
           "content": "S.Simon",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 30,
@@ -842,7 +871,8 @@
           "content": "Bộ Tư bản",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 31,
@@ -870,7 +900,8 @@
           "content": "Là một hình thái kinh tế - xã hội trong tiến trình lịch sử tự nhiên của loài người",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 32,
@@ -898,7 +929,8 @@
           "content": "Tăng cường đội ngũ doanh nhân nữ giới",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 33,
@@ -926,7 +958,8 @@
           "content": "Ngăn chặn tình trạng chuyển đổi mục đích sử dụng đất nông nghiệp thành các mục đích khác để đảm bảo sinh kế của người nông dân",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 34,
@@ -954,7 +987,8 @@
           "content": "Tạo điều kiện thuận lợi để các giai cấp công nhân có thể cạnh tranh tốt trên tất cả các lĩnh vực của đời sống xã hội",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 35,
@@ -982,7 +1016,8 @@
           "content": "Là hệ thống giai cấp, tầng lớp xã hội tồn tại chủ quan trong một chế độ xã hội nhất định, thông qua những mối quan hệ về phân chia quyền lực nhà nước ... giữa các giai cấp, tầng lớp đó",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 36,
@@ -1010,7 +1045,8 @@
           "content": "Vì trong xã hội còn tồn tại nhiều giai cấp, tầng lớp",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 37,
@@ -1038,7 +1074,8 @@
           "content": "Giữ vững vai trò định hướng, kim chỉ nam của kinh tế nhà nước trong nền kinh tế thị trường tự do hiện đại",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 38,
@@ -1066,7 +1103,8 @@
           "content": "Họ cùng nhau cải tạo xã hội cũ, xây dựng xã hội mới trong lĩnh vực kinh tế, chính trị",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 39,
@@ -1094,7 +1132,8 @@
           "content": "Cơ cấu xã hội - giai cấp",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 40,
@@ -1122,13 +1161,14 @@
           "content": "XIII",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 41,
       "questionIndex": 40,
       "content": "Theo nghĩa hẹp, các tiêu chí xác định các đặc trưng cơ bản của một dân tộc - tộc người là gì? Lựa chọn các đáp án đúng.",
-      "explanation": "B và C (A: Cộng đồng về ngôn ngữ; B: Cộng đồng về văn hóa; C: Ý thức tự giác tộc người).",
+      "explanation": "Các đáp án đúng gồm: A. Cộng đồng về ngôn ngữ | B. Cộng đồng về văn hóa | C. Ý thức tự giác tộc người.\n\nB và C (A: Cộng đồng về ngôn ngữ; B: Cộng đồng về văn hóa; C: Ý thức tự giác tộc người).",
       "answers": [
         {
           "id": 1,
@@ -1150,13 +1190,14 @@
           "content": "Cộng đồng về lãnh thổ",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 42,
       "questionIndex": 41,
       "content": "Theo V.I. Lênin, các xu hướng khách quan của sự phát triển quan hệ dân tộc là gì?",
-      "explanation": "và B (A: Cộng đồng dân cư muốn tách ra để hình thành cộng đồng dân tộc độc lập; B: Các dân tộc trong từng quốc gia, thậm chí các dân tộc ở nhiều quốc gia muốn liên hiệp lại với nhau).",
+      "explanation": "Các đáp án đúng gồm: A. Cộng đồng dân cư muốn tách ra để hình thành cộng đồng dân tộc độc lập | B. Các dân tộc trong từng quốc gia, thậm chí các dân tộc ở nhiều quốc gia muốn liên hiệp lại với nhau.\n\nvà B (A: Cộng đồng dân cư muốn tách ra để hình thành cộng đồng dân tộc độc lập; B: Các dân tộc trong từng quốc gia, thậm chí các dân tộc ở nhiều quốc gia muốn liên hiệp lại với nhau).",
       "answers": [
         {
           "id": 1,
@@ -1178,13 +1219,14 @@
           "content": "Cộng đồng dân tộc phát triển hơn sẽ có ý định tách ra hình thành quốc gia - dân tộc độc lập",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 43,
       "questionIndex": 42,
       "content": "Với tư cách là một hình thái nhà nước, một chế độ chính trị, cho đến nay đã có những nền dân chủ nào đã và đang tồn tại? Chọn các đáp án đúng.",
-      "explanation": "B, C (A: Dân chủ chủ nô; B: Dân chủ tư sản; C: Dân chủ xã hội chủ nghĩa).",
+      "explanation": "Các đáp án đúng gồm: A. Dân chủ chủ nô | B. Dân chủ tư sản | C. Dân chủ xã hội chủ nghĩa.\n\nB, C (A: Dân chủ chủ nô; B: Dân chủ tư sản; C: Dân chủ xã hội chủ nghĩa).",
       "answers": [
         {
           "id": 1,
@@ -1206,13 +1248,14 @@
           "content": "Dân chủ cộng sản chủ nghĩa",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 44,
       "questionIndex": 43,
       "content": "Những đặc điểm cơ bản của thời kì quá độ lên chủ nghĩa xã hội là gì?",
-      "explanation": "và B (A: Thời kì cải tạo cách mạng sâu sắc, triệt để xã hội tư bản chủ nghĩa trên mọi lĩnh vực; B: Thời kì xây dựng từng bước cơ sở vật chất - kỹ thuật và đời sống tinh thần của chủ nghĩa xã hội).",
+      "explanation": "Các đáp án đúng gồm: A. Thời kì cải tạo cách mạng sâu sắc, triệt để xã hội tư bản chủ nghĩa trên mọi lĩnh vực | B. Thời kì xây dựng từng bước cơ sở vật chất - kỹ thuật và đời sống tinh thần của chủ nghĩa xã hội.\n\nvà B (A: Thời kì cải tạo cách mạng sâu sắc, triệt để xã hội tư bản chủ nghĩa trên mọi lĩnh vực; B: Thời kì xây dựng từng bước cơ sở vật chất - kỹ thuật và đời sống tinh thần của chủ nghĩa xã hội).",
       "answers": [
         {
           "id": 1,
@@ -1234,7 +1277,8 @@
           "content": "Thời kì thực hiện nền chuyên chính vô sản",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 45,
@@ -1262,7 +1306,8 @@
           "content": "Thống trị",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 46,
@@ -1290,7 +1335,8 @@
           "content": "Là những người có sở hữu một số tư liệu sản xuất nhỏ, có thể tự sản xuất, nhưng nhỏ lẻ, dễ phá sản nên phải bán sức lao động cho nhà tư bản là chính",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 47,
@@ -1318,7 +1364,8 @@
           "content": "Chống bất công, bất bình đẳng xã hội",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 48,
@@ -1346,7 +1393,8 @@
           "content": "Xóa bỏ sự thống trị áp bức của chủ nghĩa tư bản, xây dựng thành công chế độ xã hội mới - phong kiến",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 49,
@@ -1374,7 +1422,8 @@
           "content": "Mâu thuẫn giữa giai cấp công nhân Việt Nam và giai cấp tư sản trong giai đoạn này chưa gay gắt như các nước tư bản chủ nghĩa",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 50,
@@ -1402,7 +1451,8 @@
           "content": "Tư tưởng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 51,
@@ -1430,7 +1480,8 @@
           "content": "Trong lúc Đảng Cộng sản đã giành được chính quyền",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 52,
@@ -1458,7 +1509,8 @@
           "content": "A và B đều đúng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 53,
@@ -1486,7 +1538,8 @@
           "content": "Chính trị/xã hội",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 54,
@@ -1514,7 +1567,8 @@
           "content": "Kinh tế hàng hóa giản đơn",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 55,
@@ -1542,7 +1596,8 @@
           "content": "Sự gia tăng nhanh chóng của lực lượng lao động nước ta",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 56,
@@ -1570,7 +1625,8 @@
           "content": "Phát triển từ thấp lên cao",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 57,
@@ -1598,7 +1654,8 @@
           "content": "Con đường bạo động lật đổ",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 58,
@@ -1626,7 +1683,8 @@
           "content": "Hình thái kinh tế - xã hội cộng sản chủ nghĩa là quay trở lại cộng sản nguyên thủy",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 59,
@@ -1654,7 +1712,8 @@
           "content": "Là giai đoạn phát triển cao của hình thái kinh tế - xã hội cộng sản chủ nghĩa",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 60,
@@ -1682,7 +1741,8 @@
           "content": "Phân phối theo bao cấp",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     }
   ]
 }

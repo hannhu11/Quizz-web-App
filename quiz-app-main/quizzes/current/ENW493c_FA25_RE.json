@@ -30,13 +30,14 @@
           "content": "Suggestions",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 2,
       "questionIndex": 1,
       "content": "Which of the following statements correctly describe soundness and completeness of a theory? (choose two answers)",
-      "explanation": "C (A: Ideally, a theory should be both sound and complete. | C: A theory for a given phenomenon is sound if all its predictions are possible manifestations of the phenomenon.). .",
+      "explanation": "Các đáp án đúng gồm: A. Ideally, a theory should be both sound and complete. | C. A theory for a given phenomenon is sound if all its predictions are possible manifestations of the phenomenon..\n\nC (A: Ideally, a theory should be both sound and complete. | C: A theory for a given phenomenon is sound if all its predictions are possible manifestations of the phenomenon.). .",
       "answers": [
         {
           "id": 1,
@@ -58,13 +59,14 @@
           "content": "A complete theory for a given phenomenon can predict impossible manifestations. E. A theory for a given phenomenon is complete if it predicts all the possible manifestations.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 3,
       "questionIndex": 2,
       "content": "Consider the following statements about precision and recall of an algorithm. Which are correct? (Select all that apply)",
-      "explanation": "C, D (B: Precision and recall are equal to one for algorithms computing exact solutions. | C: Precision is less than one for algorithms that compute false positives. | D: If we are given two approximate algorithms for the same problem, they can differ in precision and recall. E. Recall is less than one for algorithms that produce false negatives.). .",
+      "explanation": "Các đáp án đúng gồm: B. Precision and recall are equal to one for algorithms computing exact solutions. | C. Precision is less than one for algorithms that compute false positives. | D. If we are given two approximate algorithms for the same problem, they can differ in precision and recall. E. Recall is less than one for algorithms that produce false negatives..\n\nC, D (B: Precision and recall are equal to one for algorithms computing exact solutions. | C: Precision is less than one for algorithms that compute false positives. | D: If we are given two approximate algorithms for the same problem, they can differ in precision and recall. E. Recall is less than one for algorithms that produce false negatives.). .",
       "answers": [
         {
           "id": 1,
@@ -86,7 +88,8 @@
           "content": "If we are given two approximate algorithms for the same problem, they can differ in precision and recall. E. Recall is less than one for algorithms that produce false negatives.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 4,
@@ -114,7 +117,8 @@
           "content": "dynamic, prohibit, identical",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 5,
@@ -142,7 +146,8 @@
           "content": "Charisma",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 6,
@@ -170,7 +175,8 @@
           "content": "The method is purely theoretical, and does not require any experiments. E. The method assures that a certain theory explaining a natural phenomenon is valid (i.e., it is an undisputable truth) after carefully chosen experiments confirm it.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 7,
@@ -198,7 +204,8 @@
           "content": "Is guaranteed to be unfalsifiable when it is published. E. Is valid until further findings disprove it.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 8,
@@ -226,7 +233,8 @@
           "content": "scholar.google.com",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 9,
@@ -254,7 +262,8 @@
           "content": "Creativity",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10,
@@ -282,7 +291,8 @@
           "content": "Likert E. Constant sum",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 11,
@@ -310,7 +320,8 @@
           "content": "locate, remove, specify",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 12,
@@ -338,13 +349,14 @@
           "content": "Attitudinal",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 13,
       "questionIndex": 12,
       "content": "What is an annotated bibliography?",
-      "explanation": "A (A: It is a list of articles related to your topic, and it summarizes and evaluates these. | C: It is a list of articles by one author who is an expert on your topic.). .",
+      "explanation": "Các đáp án đúng gồm: A. It is a list of articles related to your topic, and it summarizes and evaluates these. | C. It is a list of articles by one author who is an expert on your topic..\n\nA (A: It is a list of articles related to your topic, and it summarizes and evaluates these. | C: It is a list of articles by one author who is an expert on your topic.). .",
       "answers": [
         {
           "id": 1,
@@ -361,7 +373,8 @@
           "content": "It is a list of articles by one author who is an expert on your topic.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 14,
@@ -389,7 +402,8 @@
           "content": "Nominal",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 15,
@@ -417,7 +431,8 @@
           "content": "The research result may be used by other researchers to advance their research. E. The research result may lead to an improvement of a certain practical process, which reduces its cost and improves its performance.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 16,
@@ -445,7 +460,8 @@
           "content": "How long is the source? E. Is the source biased?",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 17,
@@ -468,7 +484,8 @@
           "content": "Google",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 18,
@@ -496,7 +513,8 @@
           "content": "Nominal",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 19,
@@ -524,7 +542,8 @@
           "content": "Discussions",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 20,
@@ -552,7 +571,8 @@
           "content": "The algorithm may find a name that is not a person's name and may fail to find the occurrence of certain person's names. In this case the algorithm can generate both false positives and false negatives. E. The algorithm finds a name that is not a person's name. This is a false positive.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 21,
@@ -575,7 +595,8 @@
           "content": "to make your paper longer",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 22,
@@ -603,13 +624,14 @@
           "content": "Reconfiguring",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 23,
       "questionIndex": 22,
       "content": "Deduction vs. induction. Select 3 correct statements:",
-      "explanation": "C, D (B: Modus ponens is a typical deductive inference rule. | C: In deductive inference, the consequences are guaranteed to be true if premises are true. | D: Deductive inferences can be used to generate predictions from a given theory. E. Inductive inferences always lead to necessary conclusions.). .",
+      "explanation": "Các đáp án đúng gồm: B. Modus ponens is a typical deductive inference rule. | C. In deductive inference, the consequences are guaranteed to be true if premises are true. | D. Deductive inferences can be used to generate predictions from a given theory. E. Inductive inferences always lead to necessary conclusions..\n\nC, D (B: Modus ponens is a typical deductive inference rule. | C: In deductive inference, the consequences are guaranteed to be true if premises are true. | D: Deductive inferences can be used to generate predictions from a given theory. E. Inductive inferences always lead to necessary conclusions.). .",
       "answers": [
         {
           "id": 1,
@@ -631,7 +653,8 @@
           "content": "Deductive inferences can be used to generate predictions from a given theory. E. Inductive inferences always lead to necessary conclusions.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 24,
@@ -659,7 +682,8 @@
           "content": "Probability",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 25,
@@ -687,7 +711,8 @@
           "content": "Pre-step E. Act",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 26,
@@ -715,7 +740,8 @@
           "content": "to help you summarize and evaluate your sources",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 27,
@@ -743,7 +769,8 @@
           "content": "Analyses",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 28,
@@ -761,7 +788,8 @@
           "content": "Random",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 29,
@@ -779,7 +807,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 30,
@@ -807,7 +836,8 @@
           "content": "Interval",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     }
   ]
 }

@@ -9,11 +9,36 @@
       "explanation": "Đáp án đúng: D",
       "quizTargetId": 20,
       "answersList": [
-        {"id":45490,"content":"Ph. Ăngghen","is_correct":false,"index_order":0,"question_target_id":10247},
-        {"id":45491,"content":"C. Mác","is_correct":false,"index_order":0,"question_target_id":10247},
-        {"id":45492,"content":"Ph. Ăngghen và C. Mác","is_correct":false,"index_order":0,"question_target_id":10247},
-        {"id":45493,"content":"V.I.Lêinin.","is_correct":true,"index_order":0,"question_target_id":10247}
-      ]
+        {
+          "id": 45490,
+          "content": "Ph. Ăngghen",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10247
+        },
+        {
+          "id": 45491,
+          "content": "C. Mác",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10247
+        },
+        {
+          "id": 45492,
+          "content": "Ph. Ăngghen và C. Mác",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10247
+        },
+        {
+          "id": 45493,
+          "content": "V.I.Lêinin.",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10247
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10318,
@@ -21,10 +46,29 @@
       "explanation": "Đáp án đúng: B",
       "quizTargetId": 20,
       "answersList": [
-        {"id":45757,"content":"Francois Quesney","is_correct":false,"index_order":0,"question_target_id":10318},
-        {"id":45758,"content":"Antoine Montchretiên","is_correct":true,"index_order":0,"question_target_id":10318},
-        {"id":45759,"content":"William Petty","is_correct":false,"index_order":0,"question_target_id":10318}
-      ]
+        {
+          "id": 45757,
+          "content": "Francois Quesney",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10318
+        },
+        {
+          "id": 45758,
+          "content": "Antoine Montchretiên",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10318
+        },
+        {
+          "id": 45759,
+          "content": "William Petty",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10318
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10393,
@@ -32,11 +76,36 @@
       "explanation": "Đáp án đúng: A",
       "quizTargetId": 20,
       "answersList": [
-        {"id":46027,"content":"Aristoteles","is_correct":true,"index_order":0,"question_target_id":10393},
-        {"id":46028,"content":"Platon","is_correct":false,"index_order":0,"question_target_id":10393},
-        {"id":46029,"content":"Xenophon","is_correct":false,"index_order":0,"question_target_id":10393},
-        {"id":46030,"content":"Karl Marx","is_correct":false,"index_order":0,"question_target_id":10393}
-      ]
+        {
+          "id": 46027,
+          "content": "Aristoteles",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10393
+        },
+        {
+          "id": 46028,
+          "content": "Platon",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10393
+        },
+        {
+          "id": 46029,
+          "content": "Xenophon",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10393
+        },
+        {
+          "id": 46030,
+          "content": "Karl Marx",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10393
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10421,
@@ -44,11 +113,36 @@
       "explanation": "Đáp án đúng: C",
       "quizTargetId": 20,
       "answersList": [
-        {"id":46135,"content":"C. Mác","is_correct":false,"index_order":0,"question_target_id":10421},
-        {"id":46136,"content":"Ph. Ăngghen","is_correct":false,"index_order":0,"question_target_id":10421},
-        {"id":46137,"content":"V. I Lênin","is_correct":true,"index_order":0,"question_target_id":10421},
-        {"id":46138,"content":"Hồ Chí Minh","is_correct":false,"index_order":0,"question_target_id":10421}
-      ]
+        {
+          "id": 46135,
+          "content": "C. Mác",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10421
+        },
+        {
+          "id": 46136,
+          "content": "Ph. Ăngghen",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10421
+        },
+        {
+          "id": 46137,
+          "content": "V. I Lênin",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10421
+        },
+        {
+          "id": 46138,
+          "content": "Hồ Chí Minh",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10421
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10425,
@@ -56,11 +150,36 @@
       "explanation": "Đáp án đúng: A",
       "quizTargetId": 20,
       "answersList": [
-        {"id":46149,"content":"Paul A.Samuelson","is_correct":true,"index_order":0,"question_target_id":10425},
-        {"id":46150,"content":"David Begg","is_correct":false,"index_order":0,"question_target_id":10425},
-        {"id":46151,"content":"Stanley Fischer","is_correct":false,"index_order":0,"question_target_id":10425},
-        {"id":46152,"content":"Rudiger Dornbusch","is_correct":false,"index_order":0,"question_target_id":10425}
-      ]
+        {
+          "id": 46149,
+          "content": "Paul A.Samuelson",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10425
+        },
+        {
+          "id": 46150,
+          "content": "David Begg",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10425
+        },
+        {
+          "id": 46151,
+          "content": "Stanley Fischer",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10425
+        },
+        {
+          "id": 46152,
+          "content": "Rudiger Dornbusch",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10425
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10471,
@@ -68,11 +187,36 @@
       "explanation": "Đáp án đúng: A",
       "quizTargetId": 20,
       "answersList": [
-        {"id":46325,"content":"Adam Smith","is_correct":true,"index_order":0,"question_target_id":10471},
-        {"id":46326,"content":"David Ricardo","is_correct":false,"index_order":0,"question_target_id":10471},
-        {"id":46327,"content":"Karl Marx","is_correct":false,"index_order":0,"question_target_id":10471},
-        {"id":46328,"content":"Willian Stafford","is_correct":false,"index_order":0,"question_target_id":10471}
-      ]
+        {
+          "id": 46325,
+          "content": "Adam Smith",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10471
+        },
+        {
+          "id": 46326,
+          "content": "David Ricardo",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10471
+        },
+        {
+          "id": 46327,
+          "content": "Karl Marx",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10471
+        },
+        {
+          "id": 46328,
+          "content": "Willian Stafford",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10471
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10472,
@@ -80,11 +224,36 @@
       "explanation": "Đáp án đúng: B",
       "quizTargetId": 20,
       "answersList": [
-        {"id":46329,"content":"David Ricardo","is_correct":false,"index_order":0,"question_target_id":10472},
-        {"id":46330,"content":"Adam Smith","is_correct":true,"index_order":0,"question_target_id":10472},
-        {"id":46331,"content":"William Petty","is_correct":false,"index_order":0,"question_target_id":10472},
-        {"id":46332,"content":"Thomas Mun","is_correct":false,"index_order":0,"question_target_id":10472}
-      ]
+        {
+          "id": 46329,
+          "content": "David Ricardo",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10472
+        },
+        {
+          "id": 46330,
+          "content": "Adam Smith",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10472
+        },
+        {
+          "id": 46331,
+          "content": "William Petty",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10472
+        },
+        {
+          "id": 46332,
+          "content": "Thomas Mun",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10472
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10500,
@@ -92,11 +261,36 @@
       "explanation": "Đáp án đúng: D",
       "quizTargetId": 20,
       "answersList": [
-        {"id":46436,"content":"Thomas Mun","is_correct":false,"index_order":0,"question_target_id":10500},
-        {"id":46437,"content":"David Ricardo","is_correct":false,"index_order":0,"question_target_id":10500},
-        {"id":46438,"content":"Adam Smith","is_correct":false,"index_order":0,"question_target_id":10500},
-        {"id":46439,"content":"William Petty","is_correct":true,"index_order":0,"question_target_id":10500}
-      ]
+        {
+          "id": 46436,
+          "content": "Thomas Mun",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10500
+        },
+        {
+          "id": 46437,
+          "content": "David Ricardo",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10500
+        },
+        {
+          "id": 46438,
+          "content": "Adam Smith",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10500
+        },
+        {
+          "id": 46439,
+          "content": "William Petty",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10500
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10566,
@@ -104,11 +298,36 @@
       "explanation": "Đáp án đúng: B",
       "quizTargetId": 20,
       "answersList": [
-        {"id":46686,"content":"Đ. Ricacđô","is_correct":false,"index_order":0,"question_target_id":10566},
-        {"id":46687,"content":"C. Mác","is_correct":true,"index_order":0,"question_target_id":10566},
-        {"id":46688,"content":"Ph. Ăngghen","is_correct":false,"index_order":0,"question_target_id":10566},
-        {"id":46689,"content":"V.I. Lênin","is_correct":false,"index_order":0,"question_target_id":10566}
-      ]
+        {
+          "id": 46686,
+          "content": "Đ. Ricacđô",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10566
+        },
+        {
+          "id": 46687,
+          "content": "C. Mác",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10566
+        },
+        {
+          "id": 46688,
+          "content": "Ph. Ăngghen",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10566
+        },
+        {
+          "id": 46689,
+          "content": "V.I. Lênin",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10566
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10598,
@@ -116,11 +335,36 @@
       "explanation": "Đáp án đúng: A",
       "quizTargetId": 20,
       "answersList": [
-        {"id":46801,"content":"A. Smith và là câu nói đúng","is_correct":true,"index_order":0,"question_target_id":10598},
-        {"id":46802,"content":"Đ. Ricacđô và là câu nói đúng","is_correct":false,"index_order":0,"question_target_id":10598},
-        {"id":46803,"content":"C. Mác và là câu nói đúng","is_correct":false,"index_order":0,"question_target_id":10598},
-        {"id":46804,"content":"Đ. Ricacđô và là câu nói sai","is_correct":false,"index_order":0,"question_target_id":10598}
-      ]
+        {
+          "id": 46801,
+          "content": "A. Smith và là câu nói đúng",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10598
+        },
+        {
+          "id": 46802,
+          "content": "Đ. Ricacđô và là câu nói đúng",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10598
+        },
+        {
+          "id": 46803,
+          "content": "C. Mác và là câu nói đúng",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10598
+        },
+        {
+          "id": 46804,
+          "content": "Đ. Ricacđô và là câu nói sai",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10598
+        }
+      ],
+      "questionType": "Single Choice"
     }
   ]
 }

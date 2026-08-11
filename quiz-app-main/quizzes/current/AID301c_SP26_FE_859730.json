@@ -30,7 +30,8 @@
           "content": "An attack that occurs only at test time",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 2,
@@ -58,7 +59,8 @@
           "content": "Helm",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 3,
@@ -86,7 +88,8 @@
           "content": "A testing framework",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 4,
@@ -104,7 +107,8 @@
           "content": "False",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 5,
@@ -132,7 +136,8 @@
           "content": "flask",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 6,
@@ -165,7 +170,8 @@
           "content": "Returning to discuss the business opportunity after a model has been deployed",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 7,
@@ -198,7 +204,8 @@
           "content": "650",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 8,
@@ -226,7 +233,8 @@
           "content": "The CLI for communicating with the kubernetes cluster",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 9,
@@ -244,7 +252,8 @@
           "content": "False",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10,
@@ -277,7 +286,8 @@
           "content": "Germany",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 11,
@@ -305,7 +315,8 @@
           "content": "Data storage",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 12,
@@ -333,7 +344,8 @@
           "content": "To create more complex models",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 13,
@@ -361,7 +373,8 @@
           "content": "It does not consider false positives.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 14,
@@ -389,7 +402,8 @@
           "content": "Strings and tuples",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 15,
@@ -422,7 +436,8 @@
           "content": "Transformer, Predictor",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 16,
@@ -450,7 +465,8 @@
           "content": "Agile",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 17,
@@ -478,7 +494,8 @@
           "content": "SciPy",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 18,
@@ -506,7 +523,8 @@
           "content": "All of the answers.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 19,
@@ -534,7 +552,8 @@
           "content": "To avoid using Python",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 20,
@@ -562,7 +581,8 @@
           "content": "def make_dict(lst1,lst2):\n    res = []\n    for key,value in zip(lst1,lst2):\n        res[key] = value\n    return res",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 21,
@@ -590,7 +610,8 @@
           "content": "Company size",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 22,
@@ -618,13 +639,14 @@
           "content": "Test",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 23,
       "questionIndex": 22,
       "content": "Thinking with the lens of the scientific process, what would your next steps be if you wanted to decide where to open the next store for your sled business?",
-      "explanation": "Đáp án đúng là 'Gather more data and repeat the snowfall experiment'. Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
+      "explanation": "Các đáp án đúng gồm: B. Gather more data and repeat the snowfall experiment | C. Gather different data say snowfall by county and repeat the experiment | D. Start a business viability assessment for all three states.\n\nĐáp án đúng là 'Gather more data and repeat the snowfall experiment'. Đây là nguyên lý kỹ thuật chuẩn mực trong Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Xử lý dữ liệu thông minh.",
       "answers": [
         {
           "id": 1,
@@ -646,13 +668,14 @@
           "content": "Start a business viability assessment for all three states",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 24,
       "questionIndex": 23,
       "content": "Sparse matrices can be useful as a target destination for ETL, but what are the main caveats (choose one or more)?",
-      "explanation": "E (B: NumPy linear algebra functions generally cannot be called directly | E: It is difficult to print to screen scipy.sparse matrices directly).",
+      "explanation": "Các đáp án đúng gồm: B. NumPy linear algebra functions generally cannot be called directly | E. It is difficult to print to screen scipy.sparse matrices directly.\n\nE (B: NumPy linear algebra functions generally cannot be called directly | E: It is difficult to print to screen scipy.sparse matrices directly).",
       "answers": [
         {
           "id": 1,
@@ -679,7 +702,8 @@
           "content": "It is difficult to print to screen scipy.sparse matrices directly",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 25,
@@ -707,7 +731,8 @@
           "content": "It is more visually appealing",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 26,
@@ -725,7 +750,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 27,
@@ -758,7 +784,8 @@
           "content": "service API key, service URL, service IAMAuthenticator",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 28,
@@ -791,7 +818,8 @@
           "content": "Autoencoders",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 29,
@@ -819,7 +847,8 @@
           "content": "Summarizing large documents",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 30,
@@ -847,7 +876,8 @@
           "content": "To train a model",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 31,
@@ -880,7 +910,8 @@
           "content": "Use PCA to reduce the dimensionality of the data before training",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 32,
@@ -908,7 +939,8 @@
           "content": "They eliminate the need for data",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 33,
@@ -941,7 +973,8 @@
           "content": "False Negatives (FN)",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 34,
@@ -969,7 +1002,8 @@
           "content": "Decision Trees (in binary mode)",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 35,
@@ -1002,7 +1036,8 @@
           "content": "85-95%",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 36,
@@ -1035,7 +1070,8 @@
           "content": "Dashboards can be used to tell the story of investigative visualizations",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 37,
@@ -1063,7 +1099,8 @@
           "content": "The demographics of the customers",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 38,
@@ -1096,7 +1133,8 @@
           "content": "Simulation via Permutations",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 39,
@@ -1124,7 +1162,8 @@
           "content": "User testing",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 40,
@@ -1152,7 +1191,8 @@
           "content": "Replace with a random value",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 41,
@@ -1180,7 +1220,8 @@
           "content": "It is a comment and has no effect",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 42,
@@ -1208,7 +1249,8 @@
           "content": "numpy",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 43,
@@ -1236,7 +1278,8 @@
           "content": "Download the tutorial files",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 44,
@@ -1264,7 +1307,8 @@
           "content": "upgrade ibm-watson",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 45,
@@ -1292,7 +1336,8 @@
           "content": "Limited programming languages available",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 46,
@@ -1320,7 +1365,8 @@
           "content": "To reduce the amount of data used",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 47,
@@ -1353,7 +1399,8 @@
           "content": "volumes",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 48,
@@ -1381,7 +1428,8 @@
           "content": "The I1 vs I2 comparison",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 49,
@@ -1399,7 +1447,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 50,
@@ -1427,7 +1476,8 @@
           "content": "docker-toolbox",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     }
   ]
 }

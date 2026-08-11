@@ -35,7 +35,8 @@
           "content": "Is the source biased?",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 2,
@@ -63,7 +64,8 @@
           "content": "scholar.google.com",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 3,
@@ -86,7 +88,8 @@
           "content": "Google",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 4,
@@ -114,7 +117,8 @@
           "content": "to help you summarize and evaluate your sources",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 5,
@@ -137,7 +141,8 @@
           "content": "to make your paper longer",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 6,
@@ -160,7 +165,8 @@
           "content": "It is a list of articles by one author who is an expert on your topic.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 7,
@@ -188,7 +194,8 @@
           "content": "locate, remove, specify",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 8,
@@ -216,7 +223,8 @@
           "content": "dynamic, prohibit, identical",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 9,
@@ -244,7 +252,8 @@
           "content": "Charisma",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10,
@@ -272,7 +281,8 @@
           "content": "Suggestions",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 11,
@@ -305,7 +315,8 @@
           "content": "Constant sum",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 12,
@@ -323,7 +334,8 @@
           "content": "Random",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 13,
@@ -341,7 +353,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 14,
@@ -369,7 +382,8 @@
           "content": "Attitudinal",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 15,
@@ -397,7 +411,8 @@
           "content": "Discussions",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 16,
@@ -425,7 +440,8 @@
           "content": "Analyses",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 17,
@@ -453,7 +469,8 @@
           "content": "Creativity",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 18,
@@ -486,7 +503,8 @@
           "content": "Act",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 19,
@@ -514,7 +532,8 @@
           "content": "Reconfiguring",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 20,
@@ -542,7 +561,8 @@
           "content": "Nominal",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 21,
@@ -570,7 +590,8 @@
           "content": "Nominal",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 22,
@@ -598,7 +619,8 @@
           "content": "Interval",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 23,
@@ -626,13 +648,14 @@
           "content": "Probability",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 24,
       "questionIndex": 23,
       "content": "Deduction vs. induction. Select 3 correct statements:",
-      "explanation": "C,D (B: Modus ponens is a typical deductive inference rule.; C: In deductive inference, the consequences are guaranteed to be true if premises are true.; D: Deductive inferences can be used to generate predictions from a given theory.).",
+      "explanation": "Các đáp án đúng gồm: B. Modus ponens is a typical deductive inference rule. | C. In deductive inference, the consequences are guaranteed to be true if premises are true. | D. Deductive inferences can be used to generate predictions from a given theory..\n\nC,D (B: Modus ponens is a typical deductive inference rule.; C: In deductive inference, the consequences are guaranteed to be true if premises are true.; D: Deductive inferences can be used to generate predictions from a given theory.).",
       "answers": [
         {
           "id": 1,
@@ -659,13 +682,14 @@
           "content": "Inductive inferences always lead to necessary conclusions.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 25,
       "questionIndex": 24,
       "content": "Consider the following statements about precision and recall of an algorithm. Which are correct? (Select all that apply)",
-      "explanation": "C,D (B: Precision and recall are equal to one for algorithms computing exact solutions; C: Precision is less than one for algorithms that compute false positives; D: If we are given two approximate algorithms for the same problem, they can differ in precision and recall.).",
+      "explanation": "Các đáp án đúng gồm: B. Precision and recall are equal to one for algorithms computing exact solutions. | C. Precision is less than one for algorithms that compute false positives. | D. If we are given two approximate algorithms for the same problem, they can differ in precision and recall..\n\nC,D (B: Precision and recall are equal to one for algorithms computing exact solutions; C: Precision is less than one for algorithms that compute false positives; D: If we are given two approximate algorithms for the same problem, they can differ in precision and recall.).",
       "answers": [
         {
           "id": 1,
@@ -692,13 +716,14 @@
           "content": "Recall is less than one for algorithms that produce false negatives.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 26,
       "questionIndex": 25,
       "content": "Consider an algorithm that is supposed to find all possible occurrences in a text of person's names. (select 02 correct answers)",
-      "explanation": "E (D: The algorithm may find a name that is not a person's name and may fail to find the occurrence of certain person's names. In this case the algorithm can generate both false positives and false negatives.; E: The algorithm finds a name that is not a person's name. This is a false positive.).",
+      "explanation": "Các đáp án đúng gồm: D. The algorithm may find a name that is not a person's name and may fail to find the occurrence of certain person's names. In this case the algorithm can generate both false positives and false negatives. | E. The algorithm finds a name that is not a person's name. This is a false positive..\n\nE (D: The algorithm may find a name that is not a person's name and may fail to find the occurrence of certain person's names. In this case the algorithm can generate both false positives and false negatives.; E: The algorithm finds a name that is not a person's name. This is a false positive.).",
       "answers": [
         {
           "id": 1,
@@ -725,7 +750,8 @@
           "content": "The algorithm finds a name that is not a person's name. This is a false positive.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 27,
@@ -758,7 +784,8 @@
           "content": "Is valid until further findings disprove it.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 28,
@@ -791,13 +818,14 @@
           "content": "The method assures that a certain theory explaining a natural phenomenon is valid (i.e., it is an undisputable truth) after carefully chosen experiments confirm it.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 29,
       "questionIndex": 28,
       "content": "Which of the following statements correctly describe soundness and completeness of a theory? (choose two answers)",
-      "explanation": "Đáp án đúng là 'Ideally, a theory should be both sound and complete.'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "explanation": "Các đáp án đúng gồm: A. Ideally, a theory should be both sound and complete. | E. A theory for a given phenomenon is complete if it predicts all the possible manifestations..\n\nĐáp án đúng là 'Ideally, a theory should be both sound and complete.'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
       "answers": [
         {
           "id": 1,
@@ -824,7 +852,8 @@
           "content": "A theory for a given phenomenon is complete if it predicts all the possible manifestations.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 30,
@@ -857,7 +886,8 @@
           "content": "The research result may lead to an improvement of a certain practical process, which reduces its cost and improves its performance.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     }
   ]
 }

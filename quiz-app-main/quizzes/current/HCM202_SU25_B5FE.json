@@ -30,7 +30,8 @@
           "content": "Nhà nước bảo hộ cho phép",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 2,
@@ -58,7 +59,8 @@
           "content": "Chống chủ nghĩa tư bản, giải phóng cho giai cấp",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 3,
@@ -86,7 +88,8 @@
           "content": "Vấn đề dân tộc và vấn đề giai cấp là quan hệ văn hoá",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 4,
@@ -114,7 +117,8 @@
           "content": "Dù tài giỏi mấy cũng không xứng đáng là người cách mạng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 5,
@@ -142,7 +146,8 @@
           "content": "Độc lập dân tộc gắn liền với chế độ dân chủ",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 6,
@@ -170,7 +175,8 @@
           "content": "Phụng sự xã hội",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 7,
@@ -198,7 +204,8 @@
           "content": "Văn hóa tham gia vào nhiệm vụ các hoạt động kinh tế, xã hội và trong hoạt động của kinh tế, chính trị, xã hội cũng phải có tinh thần quốc tế",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 8,
@@ -221,7 +228,8 @@
           "content": "Nhân sinh và hạnh phúc",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 9,
@@ -249,7 +257,8 @@
           "content": "Hồ Chí Minh",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10,
@@ -277,7 +286,8 @@
           "content": "Xác định tính chất cầm quyền của Đảng",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 11,
@@ -305,7 +315,8 @@
           "content": "Sự ra đời của CNXH ở Việt Nam là sản phẩm tất yếu của quá trình phát triển lịch sử, quá trình cách mạng Châu Á",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 12,
@@ -333,7 +344,8 @@
           "content": "Giá trị truyền thống lễ tiết của Việt Nam",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 13,
@@ -361,7 +373,8 @@
           "content": "Làm quan cách mạng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 14,
@@ -389,7 +402,8 @@
           "content": "Kháng chiến chống Pháp",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 15,
@@ -417,7 +431,8 @@
           "content": "Chia sẻ",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 16,
@@ -445,7 +460,8 @@
           "content": "35 năm",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 17,
@@ -473,7 +489,8 @@
           "content": "Thống nhất giữa tính khoa học và tính đảng",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 18,
@@ -501,7 +518,8 @@
           "content": "Lập trường trí thức, ưu tiên phát triển khoa học công nghệ",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 19,
@@ -529,7 +547,8 @@
           "content": "Nhà nước hợp hiến, hợp pháp",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 20,
@@ -557,7 +576,8 @@
           "content": "Truyền thống đoàn kết, lạc quan, yêu đời; có niềm tin vào chính nghĩa, tin vào sức mạnh của bản thân và dân tộc",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 21,
@@ -585,7 +605,8 @@
           "content": "Là tiền đề cho thắng lợi của Cách mạng tháng 8",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 22,
@@ -613,7 +634,8 @@
           "content": "Hồ Chí Minh",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 23,
@@ -641,7 +663,8 @@
           "content": "Có hiệu lực pháp lý hiệu quả",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 24,
@@ -669,7 +692,8 @@
           "content": "Khôi phục văn hóa",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 25,
@@ -692,7 +716,8 @@
           "content": "Văn hoá là tổng hợp của mọi phương thức sinh hoạt cùng với biểu hiện của nó mà loài người đã sản sinh ra nhằm thích ứng những nhu cầu đời sống và đòi hỏi của sự trường tồn",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 26,
@@ -720,7 +745,8 @@
           "content": "Quan điểm toán cục",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 27,
@@ -748,7 +774,8 @@
           "content": "Tầng lớp trí thức, lực lượng xã hội chủ nghĩa, phong trào cộng sản và công nhân quốc tế, với các dân tộc thuộc địa bị áp bức và các lực lượng tiến bộ trên thế giới",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 28,
@@ -776,7 +803,8 @@
           "content": "Theo Hồ Chí Minh, văn hoá không thụ động, ngồi chờ cho kinh tế phát triển. Phát triển văn hoá tạo điều kiện thúc đẩy phát triển thiết chế pháp luật",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 29,
@@ -804,7 +832,8 @@
           "content": "Đại đoàn kết toàn dân",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 30,
@@ -832,7 +861,8 @@
           "content": "Bồi dưỡng những phẩm chất tốt đẹp và phong cách lành mạnh cho quần chúng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 31,
@@ -860,7 +890,8 @@
           "content": "Tất cả các phương án trên",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 32,
@@ -888,7 +919,8 @@
           "content": "Phân tích đúng tình hình nước ta",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 33,
@@ -916,7 +948,8 @@
           "content": "Tiếng Nga",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 34,
@@ -939,7 +972,8 @@
           "content": "Kết hợp giáo dục pháp luật và nghề nghiệp, hình thành pháp quyền nhân nghĩa",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 35,
@@ -962,7 +996,8 @@
           "content": "Của dân, do dân và vì dân",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 36,
@@ -990,7 +1025,8 @@
           "content": "Căn cứ quốc tế vô sản",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 37,
@@ -1018,7 +1054,8 @@
           "content": "Từ năm 1895 đến năm 1905",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 38,
@@ -1041,7 +1078,8 @@
           "content": "Nền tảng tư tưởng của Đảng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 39,
@@ -1069,7 +1107,8 @@
           "content": "Liên minh công-nông và các lực lượng yêu nước khác",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 40,
@@ -1097,7 +1136,8 @@
           "content": "Lý luận mà không liên hệ với thực tiễn là lý luận trống rỗng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 41,
@@ -1125,7 +1165,8 @@
           "content": "Triển vọng của cách mạng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 42,
@@ -1153,7 +1194,8 @@
           "content": "Kết cấu tư tưởng Hồ Chí Minh",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 43,
@@ -1181,7 +1223,8 @@
           "content": "Tư tưởng của Giêsu",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 44,
@@ -1209,7 +1252,8 @@
           "content": "Năm",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 45,
@@ -1237,7 +1281,8 @@
           "content": "Đại đoàn kết dân tộc là phương pháp chính trị",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 46,
@@ -1265,7 +1310,8 @@
           "content": "Có mối liên hệ mật thiết với nhân dân",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 47,
@@ -1293,7 +1339,8 @@
           "content": "Viện nghiên cứu các vấn đề dân tộc và thuộc địa",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 48,
@@ -1316,7 +1363,8 @@
           "content": "Công, nông nghiệp hiện đại, khoa học - kỹ thuật tiên tiến, bóc lột được bỏ dần, vật chất được cải thiện",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 49,
@@ -1344,7 +1392,8 @@
           "content": "Trung với nước, hiếu với xã hội",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 50,
@@ -1372,7 +1421,8 @@
           "content": "Xây dựng xã hội mới",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 51,
@@ -1395,7 +1445,8 @@
           "content": "1/4/1922",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 52,
@@ -1423,7 +1474,8 @@
           "content": "Văn hoá là tiêu chí để đánh giá trình độ dân tộc",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 53,
@@ -1451,7 +1503,8 @@
           "content": "Không xác định lực lượng chủ thể",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 54,
@@ -1479,7 +1532,8 @@
           "content": "Làm chủ",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 55,
@@ -1507,7 +1561,8 @@
           "content": "Vừa \"kiệm” vừa “liêm\"",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 56,
@@ -1535,7 +1590,8 @@
           "content": "Truyền thống dân tộc",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 57,
@@ -1563,7 +1619,8 @@
           "content": "Thiết yếu",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 58,
@@ -1591,7 +1648,8 @@
           "content": "Chủ nghĩa vị kỷ",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 59,
@@ -1619,7 +1677,8 @@
           "content": "Có trình độ và hiểu biết",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 60,
@@ -1647,7 +1706,8 @@
           "content": "Đánh đổ ách thống trị của chủ nghĩa thực dân, giành độc lập dân tộc và thiết lập chính quyền của công nông",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     }
   ]
 }

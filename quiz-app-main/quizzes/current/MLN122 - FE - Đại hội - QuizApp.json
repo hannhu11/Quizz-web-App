@@ -9,11 +9,36 @@
       "explanation": "Đáp án đúng: C",
       "quizTargetId": 20,
       "answersList": [
-        {"id":45400,"content":"Đại hội đảng X","is_correct":false,"index_order":0,"question_target_id":10222},
-        {"id":45401,"content":"Đại hội đảng XI","is_correct":false,"index_order":0,"question_target_id":10222},
-        {"id":45402,"content":"Đại hội đảng XII","is_correct":true,"index_order":0,"question_target_id":10222},
-        {"id":45403,"content":"Đại hội đảng XIII","is_correct":false,"index_order":0,"question_target_id":10222}
-      ]
+        {
+          "id": 45400,
+          "content": "Đại hội đảng X",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10222
+        },
+        {
+          "id": 45401,
+          "content": "Đại hội đảng XI",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10222
+        },
+        {
+          "id": 45402,
+          "content": "Đại hội đảng XII",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10222
+        },
+        {
+          "id": 45403,
+          "content": "Đại hội đảng XIII",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10222
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10408,
@@ -21,11 +46,36 @@
       "explanation": "Đáp án đúng: D",
       "quizTargetId": 20,
       "answersList": [
-        {"id":46084,"content":"Đại hội Đảng toàn quốc lần thứ VI","is_correct":false,"index_order":0,"question_target_id":10408},
-        {"id":46085,"content":"Đại hội Đảng toàn quốc lần thứ VII","is_correct":false,"index_order":0,"question_target_id":10408},
-        {"id":46086,"content":"Đại hội Đảng toàn quốc lần thứ VIII","is_correct":false,"index_order":0,"question_target_id":10408},
-        {"id":46087,"content":"Đại hội Đảng toàn quốc lần thứ IX","is_correct":true,"index_order":0,"question_target_id":10408}
-      ]
+        {
+          "id": 46084,
+          "content": "Đại hội Đảng toàn quốc lần thứ VI",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10408
+        },
+        {
+          "id": 46085,
+          "content": "Đại hội Đảng toàn quốc lần thứ VII",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10408
+        },
+        {
+          "id": 46086,
+          "content": "Đại hội Đảng toàn quốc lần thứ VIII",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10408
+        },
+        {
+          "id": 46087,
+          "content": "Đại hội Đảng toàn quốc lần thứ IX",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10408
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10469,
@@ -33,11 +83,36 @@
       "explanation": "Đáp án đúng: A",
       "quizTargetId": 20,
       "answersList": [
-        {"id":46318,"content":"Đại hội VI (1986)","is_correct":true,"index_order":0,"question_target_id":10469},
-        {"id":46319,"content":"Đại hội X (2006)","is_correct":false,"index_order":0,"question_target_id":10469},
-        {"id":46320,"content":"Đại hội XI (2011)","is_correct":false,"index_order":0,"question_target_id":10469},
-        {"id":46321,"content":"Đại hội V (1982)","is_correct":false,"index_order":0,"question_target_id":10469}
-      ]
+        {
+          "id": 46318,
+          "content": "Đại hội VI (1986)",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10469
+        },
+        {
+          "id": 46319,
+          "content": "Đại hội X (2006)",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10469
+        },
+        {
+          "id": 46320,
+          "content": "Đại hội XI (2011)",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10469
+        },
+        {
+          "id": 46321,
+          "content": "Đại hội V (1982)",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10469
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10485,
@@ -45,11 +120,36 @@
       "explanation": "Đáp án đúng: B",
       "quizTargetId": 20,
       "answersList": [
-        {"id":46377,"content":"Đại hội XI","is_correct":false,"index_order":0,"question_target_id":10485},
-        {"id":46378,"content":"Đại hội X","is_correct":true,"index_order":0,"question_target_id":10485},
-        {"id":46379,"content":"Đại hội VIII","is_correct":false,"index_order":0,"question_target_id":10485},
-        {"id":46380,"content":"Đại hội IX","is_correct":false,"index_order":0,"question_target_id":10485}
-      ]
+        {
+          "id": 46377,
+          "content": "Đại hội XI",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10485
+        },
+        {
+          "id": 46378,
+          "content": "Đại hội X",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10485
+        },
+        {
+          "id": 46379,
+          "content": "Đại hội VIII",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10485
+        },
+        {
+          "id": 46380,
+          "content": "Đại hội IX",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10485
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10490,
@@ -57,11 +157,36 @@
       "explanation": "Đáp án đúng: D",
       "quizTargetId": 20,
       "answersList": [
-        {"id":46396,"content":"Đại hội V (1982)","is_correct":false,"index_order":0,"question_target_id":10490},
-        {"id":46397,"content":"Đại hội X (2006)","is_correct":false,"index_order":0,"question_target_id":10490},
-        {"id":46398,"content":"Đại hội VI (1986)","is_correct":false,"index_order":0,"question_target_id":10490},
-        {"id":46399,"content":"Đại hội XI (2011)","is_correct":true,"index_order":0,"question_target_id":10490}
-      ]
+        {
+          "id": 46396,
+          "content": "Đại hội V (1982)",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10490
+        },
+        {
+          "id": 46397,
+          "content": "Đại hội X (2006)",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10490
+        },
+        {
+          "id": 46398,
+          "content": "Đại hội VI (1986)",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10490
+        },
+        {
+          "id": 46399,
+          "content": "Đại hội XI (2011)",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10490
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10508,
@@ -69,11 +194,36 @@
       "explanation": "Đáp án đúng: B",
       "quizTargetId": 20,
       "answersList": [
-        {"id":46467,"content":"Đại hội đảng VII","is_correct":false,"index_order":0,"question_target_id":10508},
-        {"id":46468,"content":"Đại hội đảng VI","is_correct":true,"index_order":0,"question_target_id":10508},
-        {"id":46469,"content":"Đại hội đảng VIII","is_correct":false,"index_order":0,"question_target_id":10508},
-        {"id":46470,"content":"Đại hội đảng V","is_correct":false,"index_order":0,"question_target_id":10508}
-      ]
+        {
+          "id": 46467,
+          "content": "Đại hội đảng VII",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10508
+        },
+        {
+          "id": 46468,
+          "content": "Đại hội đảng VI",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10508
+        },
+        {
+          "id": 46469,
+          "content": "Đại hội đảng VIII",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10508
+        },
+        {
+          "id": 46470,
+          "content": "Đại hội đảng V",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10508
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10651,
@@ -81,11 +231,36 @@
       "explanation": "Đáp án đúng: A",
       "quizTargetId": 20,
       "answersList": [
-        {"id":47005,"content":"Đại hội IX (2001)","is_correct":true,"index_order":0,"question_target_id":10651},
-        {"id":47006,"content":"Đại hội X (2006)","is_correct":false,"index_order":0,"question_target_id":10651},
-        {"id":47007,"content":"Đại hội XI (2011)","is_correct":false,"index_order":0,"question_target_id":10651},
-        {"id":47008,"content":"Đại hội V (1982)","is_correct":false,"index_order":0,"question_target_id":10651}
-      ]
+        {
+          "id": 47005,
+          "content": "Đại hội IX (2001)",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10651
+        },
+        {
+          "id": 47006,
+          "content": "Đại hội X (2006)",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10651
+        },
+        {
+          "id": 47007,
+          "content": "Đại hội XI (2011)",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10651
+        },
+        {
+          "id": 47008,
+          "content": "Đại hội V (1982)",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10651
+        }
+      ],
+      "questionType": "Single Choice"
     }
   ]
 }

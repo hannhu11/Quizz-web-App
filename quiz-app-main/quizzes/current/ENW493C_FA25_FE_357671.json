@@ -20,7 +20,8 @@
           "content": "No",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 2,
@@ -38,7 +39,8 @@
           "content": "Yes",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 3,
@@ -61,7 +63,8 @@
           "content": "Write the thesis statement.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 4,
@@ -89,7 +92,8 @@
           "content": "as a hook in the introduction",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 5,
@@ -117,7 +121,8 @@
           "content": "They are worth 150 pts.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 6,
@@ -140,7 +145,8 @@
           "content": "library databases",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 7,
@@ -168,7 +174,8 @@
           "content": "Terrorism is really awful, so governments should prevent it.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 8,
@@ -186,7 +193,8 @@
           "content": "No",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 9,
@@ -204,7 +212,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10,
@@ -237,7 +246,8 @@
           "content": "Perceptions",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 11,
@@ -265,7 +275,8 @@
           "content": "Likert",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 12,
@@ -293,7 +304,8 @@
           "content": "Likert",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 13,
@@ -326,7 +338,8 @@
           "content": "Constant sum",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 14,
@@ -354,7 +367,8 @@
           "content": "Details. Structure",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 15,
@@ -372,7 +386,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 16,
@@ -400,7 +415,8 @@
           "content": "Experimental",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 17,
@@ -428,7 +444,8 @@
           "content": "Ratio",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 18,
@@ -446,7 +463,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 19,
@@ -474,7 +492,8 @@
           "content": "Research document",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 20,
@@ -502,7 +521,8 @@
           "content": "Directed",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 21,
@@ -530,7 +550,8 @@
           "content": "Focus",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 22,
@@ -558,7 +579,8 @@
           "content": "Paraphrasing",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 23,
@@ -586,7 +608,8 @@
           "content": "Questionnaire",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 24,
@@ -609,7 +632,8 @@
           "content": "Significance",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 25,
@@ -642,7 +666,8 @@
           "content": "Basic research is so fundamentally different from applied research that a researcher has to specialize and choose between the two upfront.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 26,
@@ -675,7 +700,8 @@
           "content": "The research result can lead to a useful product.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 27,
@@ -708,7 +734,8 @@
           "content": "Hypothesis framed in a negative form, which researchers try to reject to confirm a theory.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 28,
@@ -741,13 +768,14 @@
           "content": "Research is only a hobby of talented individuals, who can afford investing their time and effort in it.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 29,
       "questionIndex": 28,
       "content": "Which of the following statements about funded research programs are appropriate? (Select 2 correct answers)",
-      "explanation": "D (C: A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor. D: A top-down research program defines precisely the research topics that can be funded and should be addressed by applicants.).",
+      "explanation": "Các đáp án đúng gồm: C. A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor. | D. A top-down research program defines precisely the research topics that can be funded and should be addressed by applicants..\n\nD (C: A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor. D: A top-down research program defines precisely the research topics that can be funded and should be addressed by applicants.).",
       "answers": [
         {
           "id": 1,
@@ -774,7 +802,8 @@
           "content": "A top-down research program only funds research that aims at an empirical evaluation in a practical setting of previously achieved theoretical results.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 30,
@@ -797,7 +826,8 @@
           "content": "Rigor",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     }
   ]
 }

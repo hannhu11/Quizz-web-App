@@ -8,7 +8,7 @@
       "id": 1,
       "questionIndex": 0,
       "content": "What is an annotated bibliography?",
-      "explanation": "Đáp án đúng là 'It is a list of articles related to your topic, and it summarizes and evaluates these.'. Lựa chọn này tuân thủ chính xác ngữ pháp, phong cách diễn đạt trang trọng (Formal Tone) và chuẩn mực trình bày trong kỹ năng viết học thuật (Academic Writing).",
+      "explanation": "Các đáp án đúng gồm: A. It is a list of articles related to your topic, and it summarizes and evaluates these. | C. It is a list of articles by one author who is an expert on your topic..\n\nĐáp án đúng là 'It is a list of articles related to your topic, and it summarizes and evaluates these.'. Lựa chọn này tuân thủ chính xác ngữ pháp, phong cách diễn đạt trang trọng (Formal Tone) và chuẩn mực trình bày trong kỹ năng viết học thuật (Academic Writing).",
       "answers": [
         {
           "id": 1,
@@ -25,7 +25,8 @@
           "content": "It is a list of articles by one author who is an expert on your topic.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 2,
@@ -53,7 +54,8 @@
           "content": "Audit services",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 3,
@@ -81,7 +83,8 @@
           "content": "The method is purely theoretical, and does not require any experiments. E. The method assures that a certain theory explaining a natural phenomenon is valid (i.e., it is an undisputable truth) after carefully chosen experiments confirm it.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 4,
@@ -109,7 +112,8 @@
           "content": "Directed",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 5,
@@ -137,7 +141,8 @@
           "content": "Likert E. Constant sum",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 6,
@@ -165,7 +170,8 @@
           "content": "Discussions",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 7,
@@ -183,7 +189,8 @@
           "content": "No",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 8,
@@ -211,7 +218,8 @@
           "content": "Ratio",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 9,
@@ -239,13 +247,14 @@
           "content": "Direct or indirect",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10,
       "questionIndex": 9,
       "content": "Which of the following statements correctly describe soundness and completeness of a theory? (choose two answers)",
-      "explanation": "Đáp án đúng là 'Ideally, a theory should be both sound and complete.'. Lựa chọn này tuân thủ chính xác ngữ pháp, phong cách diễn đạt trang trọng (Formal Tone) và chuẩn mực trình bày trong kỹ năng viết học thuật (Academic Writing).",
+      "explanation": "Các đáp án đúng gồm: A. Ideally, a theory should be both sound and complete. | C. A theory for a given phenomenon is sound if all its predictions are possible manifestations of the phenomenon..\n\nĐáp án đúng là 'Ideally, a theory should be both sound and complete.'. Lựa chọn này tuân thủ chính xác ngữ pháp, phong cách diễn đạt trang trọng (Formal Tone) và chuẩn mực trình bày trong kỹ năng viết học thuật (Academic Writing).",
       "answers": [
         {
           "id": 1,
@@ -267,7 +276,8 @@
           "content": "A complete theory for a given phenomenon can predict impossible manifestations. E. A theory for a given phenomenon is complete if it predicts all the possible manifestations.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 11,
@@ -295,7 +305,8 @@
           "content": "Suggestions",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 12,
@@ -313,7 +324,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 13,
@@ -341,7 +353,8 @@
           "content": "as a hook in the introduction",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 14,
@@ -369,7 +382,8 @@
           "content": "Is guaranteed to be unfalsifiable when it is published. E. Is valid until further findings disprove it.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 15,
@@ -397,7 +411,8 @@
           "content": "Terrorism is really awful, so governments should prevent it.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 16,
@@ -430,13 +445,14 @@
           "content": "Is the source biased?",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 17,
       "questionIndex": 16,
       "content": "Deduction vs. induction. Select 3 correct statements:",
-      "explanation": "Đáp án đúng là 'Modus ponens is a typical deductive inference rule.'. Lựa chọn này tuân thủ chính xác ngữ pháp, phong cách diễn đạt trang trọng (Formal Tone) và chuẩn mực trình bày trong kỹ năng viết học thuật (Academic Writing).",
+      "explanation": "Các đáp án đúng gồm: B. Modus ponens is a typical deductive inference rule. | C. In deductive inference, the consequences are guaranteed to be true if premises are true. | D. Deductive inferences can be used to generate predictions from a given theory. E. Inductive inferences always lead to necessary conclusions..\n\nĐáp án đúng là 'Modus ponens is a typical deductive inference rule.'. Lựa chọn này tuân thủ chính xác ngữ pháp, phong cách diễn đạt trang trọng (Formal Tone) và chuẩn mực trình bày trong kỹ năng viết học thuật (Academic Writing).",
       "answers": [
         {
           "id": 1,
@@ -458,7 +474,8 @@
           "content": "Deductive inferences can be used to generate predictions from a given theory. E. Inductive inferences always lead to necessary conclusions.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 18,
@@ -486,7 +503,8 @@
           "content": "to help you summarize and evaluate your sources",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 19,
@@ -519,7 +537,8 @@
           "content": "The research result can lead to a useful product.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 20,
@@ -552,7 +571,8 @@
           "content": "The research result may lead to an improvement of a certain practical process, which reduces its cost and improves its performance.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 21,
@@ -575,7 +595,8 @@
           "content": "to make your paper longer",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 22,
@@ -603,7 +624,8 @@
           "content": "Suggestions",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 23,
@@ -626,7 +648,8 @@
           "content": "It is a list of articles by one author who is an expert on your topic.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 24,
@@ -654,13 +677,14 @@
           "content": "Pre-step E. Act",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 25,
       "questionIndex": 24,
       "content": "Which of the following statements correctly describe soundness and completeness of a theory? (Choose 2 answers)",
-      "explanation": "Đáp án đúng là 'A theory is sound if all its predictions are possible manifestations.'. Lựa chọn này tuân thủ chính xác ngữ pháp, phong cách diễn đạt trang trọng (Formal Tone) và chuẩn mực trình bày trong kỹ năng viết học thuật (Academic Writing).",
+      "explanation": "Các đáp án đúng gồm: C. A theory is sound if all its predictions are possible manifestations. | E. A theory is complete if it predicts all possible manifestations..\n\nĐáp án đúng là 'A theory is sound if all its predictions are possible manifestations.'. Lựa chọn này tuân thủ chính xác ngữ pháp, phong cách diễn đạt trang trọng (Formal Tone) và chuẩn mực trình bày trong kỹ năng viết học thuật (Academic Writing).",
       "answers": [
         {
           "id": 1,
@@ -687,7 +711,8 @@
           "content": "A theory is complete if it predicts all possible manifestations.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 26,
@@ -720,7 +745,8 @@
           "content": "Is valid until further findings disprove it.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 27,
@@ -753,7 +779,8 @@
           "content": "Constant sum",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 28,
@@ -771,13 +798,14 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 29,
       "questionIndex": 28,
       "content": "Deduction vs. induction. Select 3 correct statements:",
-      "explanation": "Đáp án đúng là 'Modus ponens is a typical deductive inference rule.'. Lựa chọn này tuân thủ chính xác ngữ pháp, phong cách diễn đạt trang trọng (Formal Tone) và chuẩn mực trình bày trong kỹ năng viết học thuật (Academic Writing).",
+      "explanation": "Các đáp án đúng gồm: B. Modus ponens is a typical deductive inference rule. | C. In deductive inference, the consequences are guaranteed to be true if premises are true. | D. Deductive inferences can be used to generate predictions from a given theory..\n\nĐáp án đúng là 'Modus ponens is a typical deductive inference rule.'. Lựa chọn này tuân thủ chính xác ngữ pháp, phong cách diễn đạt trang trọng (Formal Tone) và chuẩn mực trình bày trong kỹ năng viết học thuật (Academic Writing).",
       "answers": [
         {
           "id": 1,
@@ -804,7 +832,8 @@
           "content": "Inductive inferences always lead to necessary conclusions.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 30,
@@ -822,7 +851,8 @@
           "content": "Random",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 31,
@@ -850,7 +880,8 @@
           "content": "Likert",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 32,
@@ -878,13 +909,14 @@
           "content": "Questionnaire",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 33,
       "questionIndex": 32,
       "content": "Consider an algorithm that is supposed to find all possible occurrences in a text of person's names. (Select 2 correct answers)",
-      "explanation": "Đáp án đúng là 'The algorithm may find a name that is not a person's name and may fail to find certain person's names. In this case the algorithm can generate both false positives and false negatives.'. Lựa chọn này tuân thủ chính xác ngữ pháp, phong cách diễn đạt trang trọng (Formal Tone) và chuẩn mực trình bày trong kỹ năng viết học thuật (Academic Writing).",
+      "explanation": "Các đáp án đúng gồm: D. The algorithm may find a name that is not a person's name and may fail to find certain person's names. In this case the algorithm can generate both false positives and false negatives. | E. The algorithm finds a name that is not a person's name. This is a false positive..\n\nĐáp án đúng là 'The algorithm may find a name that is not a person's name and may fail to find certain person's names. In this case the algorithm can generate both false positives and false negatives.'. Lựa chọn này tuân thủ chính xác ngữ pháp, phong cách diễn đạt trang trọng (Formal Tone) và chuẩn mực trình bày trong kỹ năng viết học thuật (Academic Writing).",
       "answers": [
         {
           "id": 1,
@@ -911,7 +943,8 @@
           "content": "The algorithm finds a name that is not a person's name. This is a false positive.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 34,
@@ -939,7 +972,8 @@
           "content": "Creativity",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 35,
@@ -967,7 +1001,8 @@
           "content": "Nominal",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 36,
@@ -985,7 +1020,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 37,
@@ -1013,7 +1049,8 @@
           "content": "Discussions",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 38,
@@ -1036,7 +1073,8 @@
           "content": "Significance",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 39,
@@ -1054,7 +1092,8 @@
           "content": "No",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 40,
@@ -1082,7 +1121,8 @@
           "content": "the right to own a gun",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 41,
@@ -1115,7 +1155,8 @@
           "content": "Hypothesis framed in a negative form, which researchers try to reject to confirm a theory.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 42,
@@ -1133,7 +1174,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 43,
@@ -1156,7 +1198,8 @@
           "content": "Write the thesis statement.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 44,
@@ -1174,7 +1217,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 45,
@@ -1202,7 +1246,8 @@
           "content": "Experimental",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 46,
@@ -1235,7 +1280,8 @@
           "content": "Guarantees absolute truth.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 47,
@@ -1258,7 +1304,8 @@
           "content": "Google",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 48,
@@ -1281,7 +1328,8 @@
           "content": "Google",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 49,
@@ -1309,7 +1357,8 @@
           "content": "Interval",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 50,
@@ -1337,7 +1386,8 @@
           "content": "Analyses",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 51,
@@ -1355,7 +1405,8 @@
           "content": "Yes",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 52,
@@ -1383,7 +1434,8 @@
           "content": "Likert",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 53,
@@ -1411,7 +1463,8 @@
           "content": "Interval",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 54,
@@ -1429,7 +1482,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 55,
@@ -1457,7 +1511,8 @@
           "content": "Charisma",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 56,
@@ -1485,7 +1540,8 @@
           "content": "Nominal",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 57,
@@ -1513,7 +1569,8 @@
           "content": "locate, remove, specify",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 58,
@@ -1541,7 +1598,8 @@
           "content": "dynamic, prohibit, identical",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 59,
@@ -1574,7 +1632,8 @@
           "content": "Basic research is so fundamentally different that researchers must choose one permanently.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 60,
@@ -1607,7 +1666,8 @@
           "content": "Research is only a hobby of talented individuals, who can afford investing their time and effort in it.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 61,
@@ -1635,7 +1695,8 @@
           "content": "scholar.google.com",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 62,
@@ -1663,13 +1724,14 @@
           "content": "Obvious",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 63,
       "questionIndex": 62,
       "content": "Consider the following statements about precision and recall of an algorithm. Which are correct?",
-      "explanation": "Đáp án đúng là 'Precision and recall are equal to one for algorithms computing exact solutions.'. Lựa chọn này tuân thủ chính xác ngữ pháp, phong cách diễn đạt trang trọng (Formal Tone) và chuẩn mực trình bày trong kỹ năng viết học thuật (Academic Writing).",
+      "explanation": "Các đáp án đúng gồm: B. Precision and recall are equal to one for algorithms computing exact solutions. | C. Precision is less than one for algorithms that compute false positives. | E. Recall is less than one for algorithms that produce false negatives..\n\nĐáp án đúng là 'Precision and recall are equal to one for algorithms computing exact solutions.'. Lựa chọn này tuân thủ chính xác ngữ pháp, phong cách diễn đạt trang trọng (Formal Tone) và chuẩn mực trình bày trong kỹ năng viết học thuật (Academic Writing).",
       "answers": [
         {
           "id": 1,
@@ -1696,7 +1758,8 @@
           "content": "Recall is less than one for algorithms that produce false negatives.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 64,
@@ -1719,7 +1782,8 @@
           "content": "They are worth 150 pts.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 65,
@@ -1747,7 +1811,8 @@
           "content": "Manual",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 66,
@@ -1770,7 +1835,8 @@
           "content": "library databases",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 67,
@@ -1798,7 +1864,8 @@
           "content": "Random",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 68,
@@ -1826,7 +1893,8 @@
           "content": "locate, remove, specify",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 69,
@@ -1854,7 +1922,8 @@
           "content": "Nominal",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 70,
@@ -1882,7 +1951,8 @@
           "content": "Nominal",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 71,
@@ -1910,7 +1980,8 @@
           "content": "Probability",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 72,
@@ -1938,7 +2009,8 @@
           "content": "Probability",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 73,
@@ -1966,7 +2038,8 @@
           "content": "Mixed",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 74,
@@ -1994,13 +2067,14 @@
           "content": "Attitudinal",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 75,
       "questionIndex": 74,
       "content": "Consider the following statements about precision and recall of an algorithm. Which are correct? (Select all that apply)",
-      "explanation": "Đáp án đúng là 'Precision and recall are equal to one for algorithms computing exact solutions.'. Lựa chọn này tuân thủ chính xác ngữ pháp, phong cách diễn đạt trang trọng (Formal Tone) và chuẩn mực trình bày trong kỹ năng viết học thuật (Academic Writing).",
+      "explanation": "Các đáp án đúng gồm: B. Precision and recall are equal to one for algorithms computing exact solutions. | C. Precision is less than one for algorithms that compute false positives. | D. If we are given two approximate algorithms for the same problem, they can differ in precision and recall. E. Recall is less than one for algorithms that produce false negatives..\n\nĐáp án đúng là 'Precision and recall are equal to one for algorithms computing exact solutions.'. Lựa chọn này tuân thủ chính xác ngữ pháp, phong cách diễn đạt trang trọng (Formal Tone) và chuẩn mực trình bày trong kỹ năng viết học thuật (Academic Writing).",
       "answers": [
         {
           "id": 1,
@@ -2022,7 +2096,8 @@
           "content": "If we are given two approximate algorithms for the same problem, they can differ in precision and recall. E. Recall is less than one for algorithms that produce false negatives.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 76,
@@ -2050,7 +2125,8 @@
           "content": "Details, Structure",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 77,
@@ -2078,7 +2154,8 @@
           "content": "How long is the source? E. Is the source biased?",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 78,
@@ -2106,7 +2183,8 @@
           "content": "to help you summarize and evaluate your sources",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 79,
@@ -2129,7 +2207,8 @@
           "content": "to make your paper longer",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 80,
@@ -2157,7 +2236,8 @@
           "content": "The algorithm may find a name that is not a person's name and may fail to find the occurrence of certain person's names. In this case the algorithm can generate both false positives and false negatives. E. The algorithm finds a name that is not a person's name. This is a false positive.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 81,
@@ -2180,7 +2260,8 @@
           "content": "Rigor",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 82,
@@ -2208,7 +2289,8 @@
           "content": "dynamic, prohibit, identical",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 83,
@@ -2231,13 +2313,14 @@
           "content": "Data cleaning",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 84,
       "questionIndex": 83,
       "content": "Which of the following statements about funded research programs are appropriate? (Select 2 correct answers)",
-      "explanation": "Đáp án đúng là 'A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor.'. Lựa chọn này tuân thủ chính xác ngữ pháp, phong cách diễn đạt trang trọng (Formal Tone) và chuẩn mực trình bày trong kỹ năng viết học thuật (Academic Writing).",
+      "explanation": "Các đáp án đúng gồm: C. A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor. | D. A top-down research program defines precisely the research topics that can be funded and should be addressed by applicants..\n\nĐáp án đúng là 'A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor.'. Lựa chọn này tuân thủ chính xác ngữ pháp, phong cách diễn đạt trang trọng (Formal Tone) và chuẩn mực trình bày trong kỹ năng viết học thuật (Academic Writing).",
       "answers": [
         {
           "id": 1,
@@ -2264,7 +2347,8 @@
           "content": "A top-down research program only funds research that aims at an empirical evaluation in a practical setting of previously achieved theoretical results.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 85,
@@ -2292,7 +2376,8 @@
           "content": "Analyses",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 86,
@@ -2320,7 +2405,8 @@
           "content": "Reconfiguring",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 87,
@@ -2348,7 +2434,8 @@
           "content": "Charisma",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 88,
@@ -2366,7 +2453,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 89,
@@ -2394,7 +2482,8 @@
           "content": "Suggestions",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 90,
@@ -2422,7 +2511,8 @@
           "content": "The research result may be used by other researchers to advance their research. E. The research result may lead to an improvement of a certain practical process, which reduces its cost and improves its performance.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     }
   ]
 }

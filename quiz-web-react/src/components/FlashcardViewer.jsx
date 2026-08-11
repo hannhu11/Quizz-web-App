@@ -18,19 +18,21 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
   const containerRef = useRef(null);
 
   const currentQ = questions[currentIndex] || {};
-  const correctAnswer = (currentQ.answers || []).find(a => a.isCorrect);
+  const correctAnswers = (currentQ.answers || []).filter(a => a.isCorrect);
 
   // Format full answer text with letter prefix (e.g. "C. Cả a và b")
   let formattedAnswerText = 'Chưa có đáp án';
-  if (correctAnswer) {
-    const answersList = currentQ.answers || [];
-    const correctIdx = answersList.findIndex(a => a.isCorrect);
-    if (correctIdx >= 0 && answersList.length > 1) {
-      const optionLetter = String.fromCharCode(65 + correctIdx);
-      formattedAnswerText = `${optionLetter}. ${correctAnswer.content}`;
-    } else {
-      formattedAnswerText = correctAnswer.content;
-    }
+  if (correctAnswers.length > 1) {
+    formattedAnswerText = correctAnswers.map(ca => {
+      const cIdx = (currentQ.answers || []).indexOf(ca);
+      return cIdx >= 0 ? `${String.fromCharCode(65 + cIdx)}. ${ca.content}` : ca.content;
+    }).join('\n');
+  } else if (correctAnswers.length === 1) {
+    const ca = correctAnswers[0];
+    const cIdx = (currentQ.answers || []).indexOf(ca);
+    formattedAnswerText = cIdx >= 0 && (currentQ.answers || []).length > 1
+      ? `${String.fromCharCode(65 + cIdx)}. ${ca.content}`
+      : ca.content;
   }
 
   // Sync initialIndex prop

@@ -25,7 +25,8 @@
           "content": "They are worth 150 pts.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 2,
@@ -53,7 +54,8 @@
           "content": "locate, remove, specify",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 3,
@@ -76,7 +78,8 @@
           "content": "to make your paper longer",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 4,
@@ -104,7 +107,8 @@
           "content": "to help you summarize and evaluate your sources",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 5,
@@ -132,7 +136,8 @@
           "content": "dynamic, prohibit, identical",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 6,
@@ -160,7 +165,8 @@
           "content": "Terrorism is really awful, so governments should prevent it.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 7,
@@ -183,7 +189,8 @@
           "content": "Google",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 8,
@@ -211,7 +218,8 @@
           "content": "as a hook in the introduction",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 9,
@@ -239,7 +247,8 @@
           "content": "Manual",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10,
@@ -267,7 +276,8 @@
           "content": "Data cleaning",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 11,
@@ -295,7 +305,8 @@
           "content": "Likert",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 12,
@@ -313,7 +324,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 13,
@@ -341,7 +353,8 @@
           "content": "Nominal",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 14,
@@ -359,7 +372,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 15,
@@ -392,7 +406,8 @@
           "content": "Constant sum",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 16,
@@ -420,7 +435,8 @@
           "content": "Charisma",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 17,
@@ -448,7 +464,8 @@
           "content": "Questionnaire",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 18,
@@ -476,7 +493,8 @@
           "content": "Nominal",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 19,
@@ -504,7 +522,8 @@
           "content": "Probability",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 20,
@@ -522,7 +541,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 21,
@@ -550,7 +570,8 @@
           "content": "Random",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 22,
@@ -578,7 +599,8 @@
           "content": "Details, Structure",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 23,
@@ -606,7 +628,8 @@
           "content": "Mixed",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 24,
@@ -639,13 +662,14 @@
           "content": "The research result may lead to an improvement of a certain practical process, which reduces its cost and improves its performance.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 25,
       "questionIndex": 24,
       "content": "Deduction vs. induction. Select 3 correct statements:",
-      "explanation": "C,D (B: Modus ponens is a typical deductive inference rule.; C: In deductive inference, the consequences are guaranteed to be true if premises are true.; D: Deductive inferences can be used to generate predictions from a given theory.).",
+      "explanation": "Các đáp án đúng gồm: B. Modus ponens is a typical deductive inference rule. | C. In deductive inference, the consequences are guaranteed to be true if premises are true. | D. Deductive inferences can be used to generate predictions from a given theory..\n\nC,D (B: Modus ponens is a typical deductive inference rule.; C: In deductive inference, the consequences are guaranteed to be true if premises are true.; D: Deductive inferences can be used to generate predictions from a given theory.).",
       "answers": [
         {
           "id": 1,
@@ -672,13 +696,14 @@
           "content": "Inductive inferences always lead to necessary conclusions.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 26,
       "questionIndex": 25,
       "content": "Which of the following statements about funded research programs are appropriate? (Select 2 correct answers)",
-      "explanation": "D (C: A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor.; D: A top-down research program defines precisely the research topics that can be funded and should be addressed by applicants.).",
+      "explanation": "Các đáp án đúng gồm: C. A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor. | D. A top-down research program defines precisely the research topics that can be funded and should be addressed by applicants..\n\nD (C: A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor.; D: A top-down research program defines precisely the research topics that can be funded and should be addressed by applicants.).",
       "answers": [
         {
           "id": 1,
@@ -705,13 +730,14 @@
           "content": "A top-down research program only funds research that aims at an empirical evaluation in a practical setting of previously achieved theoretical results.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 27,
       "questionIndex": 26,
       "content": "Consider the following statements about precision and recall of an algorithm. Which are correct? (Select all that apply)",
-      "explanation": "C,E (B: Precision and recall are equal to one for algorithms computing exact solutions.; C: Precision is less than one for algorithms that compute false positives.; E: Recall is less than one for algorithms that produce false negatives.).",
+      "explanation": "Các đáp án đúng gồm: B. Precision and recall are equal to one for algorithms computing exact solutions. | C. Precision is less than one for algorithms that compute false positives. | E. Recall is less than one for algorithms that produce false negatives..\n\nC,E (B: Precision and recall are equal to one for algorithms computing exact solutions.; C: Precision is less than one for algorithms that compute false positives.; E: Recall is less than one for algorithms that produce false negatives.).",
       "answers": [
         {
           "id": 1,
@@ -738,7 +764,8 @@
           "content": "Recall is less than one for algorithms that produce false negatives.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 28,
@@ -771,7 +798,8 @@
           "content": "Research is only a hobby of talented individuals, who can afford investing their time and effort in it.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 29,
@@ -804,7 +832,8 @@
           "content": "The research result can lead to a useful product.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 30,
@@ -827,7 +856,8 @@
           "content": "Significance",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     }
   ]
 }

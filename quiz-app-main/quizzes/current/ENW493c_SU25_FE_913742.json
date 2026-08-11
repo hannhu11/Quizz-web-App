@@ -35,7 +35,8 @@
           "content": "Research is only a hobby of talented individuals, who can afford investing their time and effort in it.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 2,
@@ -63,7 +64,8 @@
           "content": "They are worth 150 pts.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 3,
@@ -91,7 +93,8 @@
           "content": "Direct or indirect",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 4,
@@ -124,7 +127,8 @@
           "content": "The method assures that a certain theory explaining a natural phenomenon is valid (i.e., it is an undisputable truth) after carefully chosen experiments confirm it.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 5,
@@ -157,7 +161,8 @@
           "content": "Constant sum",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 6,
@@ -175,7 +180,8 @@
           "content": "Random",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 7,
@@ -198,7 +204,8 @@
           "content": "Significance",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 8,
@@ -226,13 +233,14 @@
           "content": "Likert",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 9,
       "questionIndex": 8,
       "content": "Which of the following statement is correctly describe soundness and completeness of a theory? (choose two answers)",
-      "explanation": "E (C: A theory for a given phenomenon is sound if all its predictions are possible manifestations of the phenomenon.; E: A theory for a given phenomenon is complete if it predicts all the possible manifestations.).",
+      "explanation": "Các đáp án đúng gồm: C. A theory for a given phenomenon is sound if all its predictions are possible manifestations of the phenomenon. | E. A theory for a given phenomenon is complete if it predicts all the possible manifestations..\n\nE (C: A theory for a given phenomenon is sound if all its predictions are possible manifestations of the phenomenon.; E: A theory for a given phenomenon is complete if it predicts all the possible manifestations.).",
       "answers": [
         {
           "id": 1,
@@ -259,7 +267,8 @@
           "content": "A theory for a given phenomenon is complete if it predicts all the possible manifestations.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 10,
@@ -287,7 +296,8 @@
           "content": "Questionnaire",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 11,
@@ -310,7 +320,8 @@
           "content": "library databases",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 12,
@@ -338,13 +349,14 @@
           "content": "Nominal",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 13,
       "questionIndex": 12,
       "content": "Consider the following statements about precision and recall of an algorithm. Which are correct? (Select all that apply)",
-      "explanation": "C,D (B: Precision and recall are equal to one for algorithms computing exact solutions.; C: Precision is less than one for algorithms that compute false positives.; D: If we are given two approximate algorithms for the same problem, they can differ in precision and recall.).",
+      "explanation": "Các đáp án đúng gồm: B. Precision and recall are equal to one for algorithms computing exact solutions. | C. Precision is less than one for algorithms that compute false positives. | D. If we are given two approximate algorithms for the same problem, they can differ in precision and recall..\n\nC,D (B: Precision and recall are equal to one for algorithms computing exact solutions.; C: Precision is less than one for algorithms that compute false positives.; D: If we are given two approximate algorithms for the same problem, they can differ in precision and recall.).",
       "answers": [
         {
           "id": 1,
@@ -371,7 +383,8 @@
           "content": "Recall is less than one for algorithms that produce false negatives.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 14,
@@ -404,7 +417,8 @@
           "content": "The research result can lead to a useful product.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 15,
@@ -432,7 +446,8 @@
           "content": "Obvious",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 16,
@@ -460,7 +475,8 @@
           "content": "Random",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 17,
@@ -478,7 +494,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 18,
@@ -506,7 +523,8 @@
           "content": "Suggestions",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 19,
@@ -534,7 +552,8 @@
           "content": "Manual",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 20,
@@ -562,7 +581,8 @@
           "content": "the right to own a gun",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 21,
@@ -585,7 +605,8 @@
           "content": "Google",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 22,
@@ -613,7 +634,8 @@
           "content": "Mixed",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 23,
@@ -641,13 +663,14 @@
           "content": "Terrorism is really awful, so governments should prevent it.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 24,
       "questionIndex": 23,
       "content": "This question is about rigor. When can a research result be defined as rigorous? (Choose 2 answers)",
-      "explanation": "D (B: The research result is a new artifact, whose design and validation are clearly and thoroughly described.; D: The research result is properly formalized in mathematical form, and definitions and proofs are described clearly, correctly, and elegantly.).",
+      "explanation": "Các đáp án đúng gồm: B. The research result is a new artifact, whose design and validation are clearly and thoroughly described. | D. The research result is properly formalized in mathematical form, and definitions and proofs are described clearly, correctly, and elegantly..\n\nD (B: The research result is a new artifact, whose design and validation are clearly and thoroughly described.; D: The research result is properly formalized in mathematical form, and definitions and proofs are described clearly, correctly, and elegantly.).",
       "answers": [
         {
           "id": 1,
@@ -674,7 +697,8 @@
           "content": "The research result may be used by other researchers to advance their own research.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 25,
@@ -702,7 +726,8 @@
           "content": "as a hook in the introduction",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 26,
@@ -720,7 +745,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 27,
@@ -748,7 +774,8 @@
           "content": "Probability",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 28,
@@ -781,7 +808,8 @@
           "content": "Is the source biased?",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 29,
@@ -804,7 +832,8 @@
           "content": "Write the thesis statement.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 30,
@@ -832,7 +861,8 @@
           "content": "Research document",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     }
   ]
 }

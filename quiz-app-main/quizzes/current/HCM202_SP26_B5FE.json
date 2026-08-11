@@ -30,7 +30,8 @@
           "content": "Tầng lớp trí thức...",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 2,
@@ -58,7 +59,8 @@
           "content": "Cách mạng Pháp",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 3,
@@ -86,7 +88,8 @@
           "content": "Viện nghiên cứu các vấn đề dân tộc và thuộc địa",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 4,
@@ -114,7 +117,8 @@
           "content": "7/1920",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 5,
@@ -142,7 +146,8 @@
           "content": "Đoàn thanh niên",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 6,
@@ -170,7 +175,8 @@
           "content": "Năm 1910 - 1911",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 7,
@@ -198,7 +204,8 @@
           "content": "Xác định tính chất cầm quyền của Đảng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 8,
@@ -226,7 +233,8 @@
           "content": "Tất cả các phương án",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 9,
@@ -254,7 +262,8 @@
           "content": "Tinh thần quốc tế trong sáng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10,
@@ -282,7 +291,8 @@
           "content": "Thiết yếu",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 11,
@@ -310,7 +320,8 @@
           "content": "Việc hít thở hằng ngày",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 12,
@@ -338,7 +349,8 @@
           "content": "Phương pháp chính trị",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 13,
@@ -366,7 +378,8 @@
           "content": "Giặc đói",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 14,
@@ -394,7 +407,8 @@
           "content": "Diễn văn khai mạc Đại hội đại biểu toàn quốc lần thứ II tháng 2 - 1952",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 15,
@@ -422,7 +436,8 @@
           "content": "Tất cả các phương án",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 16,
@@ -450,7 +465,8 @@
           "content": "Xây dựng nhà nước",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 17,
@@ -478,7 +494,8 @@
           "content": "Làm mãi mới được",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 18,
@@ -506,7 +523,8 @@
           "content": "Tiếp thu tất cả các văn hóa du nhập",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 19,
@@ -534,7 +552,8 @@
           "content": "Dựa vào đạo đức cách mạng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 20,
@@ -562,13 +581,14 @@
           "content": "Có sẵn trong tự nhiên",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 21,
       "questionIndex": 20,
       "content": "Đảng lãnh đạo Nhà nước bằng phương thức nào? (3 đáp án)",
-      "explanation": "Đảng lãnh đạo Nhà nước chủ yếu bằng:\nĐề ra đường lối, chủ trương, chính sách (A).\nThông qua các tổ chức Đảng và đội ngũ đảng viên trong hệ thống chính trị (B).\nThực hiện công tác kiểm tra, giám sát việc thực hiện đường lối, chủ trương của Đảng (C).\nTổ chức tôn giáo không phải là phương thức lãnh đạo của Đảng đối với Nhà nước nên D sai.",
+      "explanation": "Các đáp án đúng gồm: A. Đường lối, chủ trương, chính sách | B. Qua tổ chức Đảng, đảng viên | C. Công tác kiểm tra.\n\nĐảng lãnh đạo Nhà nước chủ yếu bằng:\nĐề ra đường lối, chủ trương, chính sách (A).\nThông qua các tổ chức Đảng và đội ngũ đảng viên trong hệ thống chính trị (B).\nThực hiện công tác kiểm tra, giám sát việc thực hiện đường lối, chủ trương của Đảng (C).\nTổ chức tôn giáo không phải là phương thức lãnh đạo của Đảng đối với Nhà nước nên D sai.",
       "answers": [
         {
           "id": 1,
@@ -590,7 +610,8 @@
           "content": "Qua tổ chức tôn giáo",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 22,
@@ -618,7 +639,8 @@
           "content": "Làm chủ",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 23,
@@ -646,7 +668,8 @@
           "content": "1924",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 24,
@@ -674,7 +697,8 @@
           "content": "Có chính sách ngoại giao đúng đắn",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 25,
@@ -697,7 +721,8 @@
           "content": "Sức mạnh do con người và vì thần linh",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 26,
@@ -725,7 +750,8 @@
           "content": "Năm",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 27,
@@ -753,7 +779,8 @@
           "content": "Phê bình",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 28,
@@ -781,7 +808,8 @@
           "content": "Phải đi theo con đường cách mạng của các bậc tiền bối Việt Nam",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 29,
@@ -809,7 +837,8 @@
           "content": "Bản chất con người mang tính kế thừa",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 30,
@@ -837,7 +866,8 @@
           "content": "Phong trào Duy Tân của Phan Châu Trinh",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 31,
@@ -865,7 +895,8 @@
           "content": "Xây dựng đức tin vững chắc",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 32,
@@ -893,7 +924,8 @@
           "content": "Đạo đức",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 33,
@@ -921,7 +953,8 @@
           "content": "Đất nước tôi được phát triển",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 34,
@@ -949,7 +982,8 @@
           "content": "… đối lập với chủ nghĩa vị kỷ",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 35,
@@ -977,7 +1011,8 @@
           "content": "Tất cả các phương án trên",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 36,
@@ -1005,7 +1040,8 @@
           "content": "Độc lập, bình đẳng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 37,
@@ -1033,7 +1069,8 @@
           "content": "Nguyên tắc",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 38,
@@ -1061,7 +1098,8 @@
           "content": "Đảng Cộng sản Việt Nam không là thành viên của Mặt trận dân tộc thống nhất",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 39,
@@ -1089,7 +1127,8 @@
           "content": "Sức mạnh vượt khó khăn",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 40,
@@ -1117,7 +1156,8 @@
           "content": "Đạo đức là gốc của người lãnh đạo",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 41,
@@ -1145,7 +1185,8 @@
           "content": "Làm quan cách mạng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 42,
@@ -1173,7 +1214,8 @@
           "content": "Đội ngũ lãnh đạo của Đảng Cộng sản",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 43,
@@ -1201,7 +1243,8 @@
           "content": "1921-1930",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 44,
@@ -1229,7 +1272,8 @@
           "content": "Chủ nghĩa Mác - Lênin",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 45,
@@ -1257,7 +1301,8 @@
           "content": "Phong cách tiểu tư sản",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 46,
@@ -1285,7 +1330,8 @@
           "content": "Kinh tế",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 47,
@@ -1313,7 +1359,8 @@
           "content": "Quyền con người",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 48,
@@ -1341,7 +1388,8 @@
           "content": "Kháng chiến chống Pháp",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 49,
@@ -1369,7 +1417,8 @@
           "content": "Di chúc",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 50,
@@ -1397,7 +1446,8 @@
           "content": "Mang bản chất giai cấp công nhân",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 51,
@@ -1425,7 +1475,8 @@
           "content": "Phù hợp với truyền thống",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 52,
@@ -1453,7 +1504,8 @@
           "content": "Mục tiêu cần phải gạt bỏ",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 53,
@@ -1481,7 +1533,8 @@
           "content": "Giai cấp công nhân",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 54,
@@ -1509,7 +1562,8 @@
           "content": "Mang tính dân tộc",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 55,
@@ -1537,7 +1591,8 @@
           "content": "Cộng đồng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 56,
@@ -1565,7 +1620,8 @@
           "content": "Căn cứ quốc tế vô sản",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 57,
@@ -1593,7 +1649,8 @@
           "content": "Còn vì lợi ích cá nhân",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 58,
@@ -1621,7 +1678,8 @@
           "content": "Tất cả các công việc",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 59,
@@ -1649,7 +1707,8 @@
           "content": "Xây đi đôi với chống",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 60,
@@ -1672,7 +1731,8 @@
           "content": "Ruộng đất",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     }
   ]
 }

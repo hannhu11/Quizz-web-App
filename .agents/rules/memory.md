@@ -169,6 +169,16 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Chuyển đổi thành 5 bộ đề PE Essay Guide độc lập tích hợp sẵn Dàn ý 4 đoạn, Từ vựng học thuật Band 8.0 và Bài viết mẫu phân tích.
 - **Trạng Thái Deploy:** Đã nạp 58 bộ đề vào `QUIZ_MANIFEST`, build production và deploy lên VPS Oracle `140.245.119.189`.
 
+### 🛠️ Cập Nhật Đợt 4: Khắc Phục Triệt Để Lỗi Hiển Thị Multiple Choice & Đồng Bộ Dữ Liệu:
+- **Sửa Lỗi Render Frontend (`QuizDetailView.jsx` & `FlashcardViewer.jsx`):**
+  - Thay thế logic cũ chỉ `.find()` 1 đáp án đúng thành `.filter(a => a.isCorrect)` để lấy toàn bộ mảng các đáp án đúng.
+  - Khi câu hỏi có từ 2 đáp án đúng trở lên: Render đầy đủ tất cả các đáp án đúng ở cột *Đáp án đúng (Definition)* (Ví dụ: `A. Nội dung A | B. Nội dung B | C. Nội dung C`) kèm nhãn nổi bật `Multiple Choice (x đáp án đúng)`.
+- **Đồng Bộ Dữ Liệu 100% Cho 7831 Câu Hỏi / 73 Tập Tin JSON:**
+  - **Giữ nguyên 100% cờ `isCorrect` (true/false)** của mảng `answers` trong mọi file JSON.
+  - Quy quét và phát hiện **164 câu Multiple Choice**: Tự động gán `"questionType": "Multiple Choice"` và cập nhật trường `explanation` đồng bộ hiển thị tất cả các phương án đúng.
+- **Trạng Thái Deploy:** Đã build Web production và deploy lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` restarted).
+
+
 
 
 

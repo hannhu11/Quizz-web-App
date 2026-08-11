@@ -341,14 +341,19 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
           <div className="space-y-4">
             {filteredQuestions.map((q, idx) => {
               const isStarred = starredIds.has(q.id);
-              const correctAnswer = (q.answers || []).find(a => a.isCorrect);
-              const originalIndexDisplay = q.questionIndex !== undefined ? q.questionIndex + 1 : idx + 1;
-
-              let formattedAnswerText = correctAnswer ? correctAnswer.content : 'Chưa có đáp án';
-              const answersList = q.answers || [];
-              const correctIdx = answersList.findIndex(a => a.isCorrect);
-              if (correctIdx >= 0 && answersList.length > 1 && correctAnswer) {
-                formattedAnswerText = `${String.fromCharCode(65 + correctIdx)}. ${correctAnswer.content}`;
+              const correctAnswers = (q.answers || []).filter(a => a.isCorrect);
+              let formattedAnswerText = 'Chưa có đáp án';
+              if (correctAnswers.length > 1) {
+                formattedAnswerText = correctAnswers.map(ca => {
+                  const cIdx = (q.answers || []).indexOf(ca);
+                  return cIdx >= 0 ? `${String.fromCharCode(65 + cIdx)}. ${ca.content}` : ca.content;
+                }).join('\n');
+              } else if (correctAnswers.length === 1) {
+                const ca = correctAnswers[0];
+                const cIdx = (q.answers || []).indexOf(ca);
+                formattedAnswerText = cIdx >= 0 && (q.answers || []).length > 1
+                  ? `${String.fromCharCode(65 + cIdx)}. ${ca.content}`
+                  : ca.content;
               }
 
               return (
@@ -361,8 +366,15 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
                     {/* Left Column: Question / Term & Full Options List (A, B, C, D) */}
                     <div className="space-y-3 pr-4 border-b md:border-b-0 md:border-r border-warm-border/40 dark:border-slate-800 pb-4 md:pb-0">
-                      <div className="text-xs font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-2.5 py-0.5 rounded-md border border-amber-200/80 dark:border-amber-800 inline-block">
-                        Câu #{originalIndexDisplay}
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <div className="text-xs font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-2.5 py-0.5 rounded-md border border-amber-200/80 dark:border-amber-800 inline-block">
+                          Câu #{originalIndexDisplay}
+                        </div>
+                        {correctAnswers.length > 1 && (
+                          <div className="text-xs font-bold text-purple-800 dark:text-purple-300 bg-purple-50 dark:bg-purple-950/60 px-2 py-0.5 rounded-md border border-purple-200 dark:border-purple-800 inline-block">
+                            Multiple Choice ({correctAnswers.length} đáp án đúng)
+                          </div>
+                        )}
                       </div>
                       <p className="text-sm font-semibold text-slate-900 dark:text-slate-100 leading-relaxed break-words whitespace-pre-wrap">
                         {q.content}
@@ -391,9 +403,16 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
                     {/* Right Column: Correct Answer & Explanation */}
                     <div className="flex flex-col justify-between pl-0 md:pl-2 space-y-4">
                       <div>
-                        <span className="text-[11px] font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-800 inline-block mb-2">
-                          Đáp án đúng (Definition)
-                        </span>
+                        <div className="flex items-center gap-2 mb-2 flex-wrap">
+                          <span className="text-[11px] font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-800 inline-block">
+                            Đáp án đúng (Definition)
+                          </span>
+                          {correctAnswers.length > 1 && (
+                            <span className="text-[11px] font-bold text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-950/80 px-2 py-0.5 rounded border border-amber-300 dark:border-amber-700 inline-block">
+                              Gồm {correctAnswers.length} đáp án đúng
+                            </span>
+                          )}
+                        </div>
                         <p className="text-sm font-bold text-emerald-950 dark:text-emerald-200 leading-relaxed break-words whitespace-pre-wrap">
                           {formattedAnswerText}
                         </p>

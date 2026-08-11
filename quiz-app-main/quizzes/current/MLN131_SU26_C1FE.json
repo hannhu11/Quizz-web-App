@@ -30,7 +30,8 @@
           "content": "Cả hai mặt đều có tính chất mâu thuẫn đối kháng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 2,
@@ -58,7 +59,8 @@
           "content": "Tổng thể các giai cấp, tầng lớp trong liên minh công - nông - trí, có mối quan hệ hợp tác, gắn bó chặt chẽ với nhau.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 3,
@@ -86,7 +88,8 @@
           "content": "Sở hữu tập thể và thành phần kinh tế tập thể",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 4,
@@ -114,7 +117,8 @@
           "content": "Là thời kỳ cải biến cách mạng từ xã hội xã hội chủ nghĩa lên xã hội cộng sản chủ nghĩa",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 5,
@@ -142,13 +146,14 @@
           "content": "Điều kiện khoa học",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 6,
       "questionIndex": 5,
       "content": "Theo V.I.Lênin, mục đích cao cả nhất mà chủ nghĩa xã hội cần đạt đến bao gồm những nội dung nào? Các lựa chọn:",
-      "explanation": "Ba nội dung A, B, C phản ánh đúng mục tiêu cuối cùng, giải phóng hoàn toàn xã hội của chủ nghĩa cộng sản theo Lênin. Thiết lập chuyên chính vô sản chỉ là phương tiện/công cụ chứ không phải mục đích cao cả nhất.",
+      "explanation": "Các đáp án đúng gồm: A. Xóa bỏ sự phân chia xã hội thành giai cấp | B. Biến tất cả thành viên trong xã hội thành người lao động | C. Tiêu diệt cơ sở của mọi tình trạng người bóc lột người.\n\nBa nội dung A, B, C phản ánh đúng mục tiêu cuối cùng, giải phóng hoàn toàn xã hội của chủ nghĩa cộng sản theo Lênin. Thiết lập chuyên chính vô sản chỉ là phương tiện/công cụ chứ không phải mục đích cao cả nhất.",
       "answers": [
         {
           "id": 1,
@@ -170,13 +175,14 @@
           "content": "Cả A, B, C đều đúng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 7,
       "questionIndex": 6,
       "content": "Những bước chuyển mang tính bước ngoặt của kinh tế gia đình ở Việt Nam hiện nay bao gồm: Các lựa chọn:",
-      "explanation": "Công cuộc Đổi mới ở Việt Nam đã chuyển đổi nền kinh tế nói chung và kinh tế gia đình nói riêng vượt bậc từ tự cấp tự túc sang sản xuất hàng hóa (A) và phá bỏ cơ chế bao cấp để vận hành theo cơ chế thị trường (B).",
+      "explanation": "Các đáp án đúng gồm: A. Từ kinh tế tự cấp tự túc thành kinh tế hàng hóa | B. Từ kinh tế bao cấp thành kinh tế thị trường.\n\nCông cuộc Đổi mới ở Việt Nam đã chuyển đổi nền kinh tế nói chung và kinh tế gia đình nói riêng vượt bậc từ tự cấp tự túc sang sản xuất hàng hóa (A) và phá bỏ cơ chế bao cấp để vận hành theo cơ chế thị trường (B).",
       "answers": [
         {
           "id": 1,
@@ -198,7 +204,8 @@
           "content": "Từ kinh tế hộ gia đình thành kinh tế tập thể",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 8,
@@ -226,7 +233,8 @@
           "content": "Giai cấp chủ nô",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 9,
@@ -254,7 +262,8 @@
           "content": "Vì trong xã hội còn tồn tại nhiều giai cấp, tầng lớp",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10,
@@ -282,7 +291,8 @@
           "content": "Giao thông và kết cấu hạ tầng, y tế, giáo dục",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 11,
@@ -310,7 +320,8 @@
           "content": "Tôn trọng tôn giáo",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 12,
@@ -338,7 +349,8 @@
           "content": "V.I.Lênin.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 13,
@@ -366,7 +378,8 @@
           "content": "Giữa tăng trưởng kinh tế và phát triển văn hóa, thực hiện tiến bộ, công bằng xã hội",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 14,
@@ -394,7 +407,8 @@
           "content": "Xây dựng Đảng Cộng sản Việt Nam trong sạch, vững mạnh",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 15,
@@ -422,7 +436,8 @@
           "content": "Là một thực thể xã hội, điều chỉnh tâm lý con người hiệu quả",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 16,
@@ -450,13 +465,14 @@
           "content": "Chủ nghĩa xã hội có nhà nước kiểu mới mang bản chất giai cấp công nhân, đại biểu cho lợi ích, quyền lực và ý chí của riêng giai cấp công nhân",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 17,
       "questionIndex": 16,
       "content": "Theo V.I.Lênin, các xu hướng khách quan của sự phát triển quan hệ dân tộc bao gồm những nội dung nào? Các lựa chọn:",
-      "explanation": "Lênin chỉ ra 2 xu hướng khách quan của dân tộc: Xu hướng thứ nhất là thức tỉnh, tách ra hình thành quốc gia độc lập (A); Xu hướng thứ hai là các dân tộc xích lại gần nhau, liên hiệp lại (B).",
+      "explanation": "Các đáp án đúng gồm: A. Cộng đồng dân cư muốn tách ra để hình thành cộng đồng dân tộc độc lập | B. Các dân tộc muốn liên hiệp lại với nhau.\n\nLênin chỉ ra 2 xu hướng khách quan của dân tộc: Xu hướng thứ nhất là thức tỉnh, tách ra hình thành quốc gia độc lập (A); Xu hướng thứ hai là các dân tộc xích lại gần nhau, liên hiệp lại (B).",
       "answers": [
         {
           "id": 1,
@@ -478,7 +494,8 @@
           "content": "Cả A và B đều đúng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 18,
@@ -506,7 +523,8 @@
           "content": "Thoả mãn tâm sinh lý",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 19,
@@ -534,7 +552,8 @@
           "content": "Các yếu tố đạo đức của một xã hội",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 20,
@@ -562,7 +581,8 @@
           "content": "Sự biến đổi của phương thức sản xuất",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 21,
@@ -590,7 +610,8 @@
           "content": "Quan hệ giữa các dân tộc chủ yếu được hình thành trên cơ sở cùng chung tín ngưỡng, tôn giáo",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 22,
@@ -618,7 +639,8 @@
           "content": "Ý chí, nguyện vọng của nhân dân lao động",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 23,
@@ -646,7 +668,8 @@
           "content": "Lực lượng sản xuất và quan hệ sản xuất",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 24,
@@ -674,13 +697,14 @@
           "content": "Tín ngưỡng truyền thống",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 25,
       "questionIndex": 24,
       "content": "Theo quan điểm của chủ nghĩa Mác - Lênin, các nguồn gốc thực tế sinh ra tôn giáo bao gồm: Các lựa chọn:",
-      "explanation": "Chủ nghĩa Mác - Lênin bác bỏ thế giới siêu nhiên và chỉ ra 3 nguồn gốc thực tế của tôn giáo gồm: Tự nhiên, kinh tế - xã hội; Nhận thức; Tâm lý.",
+      "explanation": "Các đáp án đúng gồm: A. Nguồn gốc tự nhiên, kinh tế - xã hội | B. Nguồn gốc nhận thức | C. Nguồn gốc tâm lý.\n\nChủ nghĩa Mác - Lênin bác bỏ thế giới siêu nhiên và chỉ ra 3 nguồn gốc thực tế của tôn giáo gồm: Tự nhiên, kinh tế - xã hội; Nhận thức; Tâm lý.",
       "answers": [
         {
           "id": 1,
@@ -702,7 +726,8 @@
           "content": "Cả A, B, C đều đúng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 26,
@@ -730,7 +755,8 @@
           "content": "Vì chưa có tinh thần đấu tranh giai cấp, đấu tranh giải phóng dân tộc",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 27,
@@ -758,7 +784,8 @@
           "content": "Năng lực tổ chức khởi nghĩa giành chính quyền",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 28,
@@ -786,7 +813,8 @@
           "content": "Nguồn gốc ý chí",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 29,
@@ -814,7 +842,8 @@
           "content": "Dân chủ trực tiếp và dân chủ gián tiếp",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 30,
@@ -842,7 +871,8 @@
           "content": "Đảng Cộng sản đã được thành lập, và ngày càng thể hiện vai trò lãnh đạo tích cực trong phong trào đấu tranh giành chính quyền",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 31,
@@ -870,7 +900,8 @@
           "content": "Là chủ thể của quá trình nghiên cứu khoa học và phát triển công nghệ nhằm tạo ra tri thức mới cho xã hội",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 32,
@@ -898,7 +929,8 @@
           "content": "Đội ngũ doanh nhân",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 33,
@@ -926,7 +958,8 @@
           "content": "Tư tưởng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 34,
@@ -954,7 +987,8 @@
           "content": "Thiếu đi sự quản lý của nhà nước.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 35,
@@ -982,7 +1016,8 @@
           "content": "Từ thấp đến cao, diễn ra một cách từ từ",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 36,
@@ -1010,7 +1045,8 @@
           "content": "Cơ cấu xã hội - giai cấp",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 37,
@@ -1038,7 +1074,8 @@
           "content": "Trình độ phát triển văn hoá, tư tưởng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 38,
@@ -1066,7 +1103,8 @@
           "content": "Tư tưởng vô sản và tư tưởng chủ nô",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 39,
@@ -1094,7 +1132,8 @@
           "content": "B và C đều đúng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 40,
@@ -1122,7 +1161,8 @@
           "content": "Thực hiện bước nhảy",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 41,
@@ -1150,7 +1190,8 @@
           "content": "Trí thức",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 42,
@@ -1178,7 +1219,8 @@
           "content": "Đảng Cộng sản Việt Nam",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 43,
@@ -1206,7 +1248,8 @@
           "content": "Làm theo công việc, hưởng theo tiền lương",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 44,
@@ -1234,7 +1277,8 @@
           "content": "Đơn độc, không có sự liên minh với nông dân",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 45,
@@ -1262,7 +1306,8 @@
           "content": "Giải quyết vấn đề tôn giáo song song với vấn đề dân tộc",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 46,
@@ -1290,7 +1335,8 @@
           "content": "Lấy hệ tư tưởng Mác - Lênin làm chủ đạo, kế thừa truyền thống tốt đẹp của dân tộc, ngăn chặn yếu tố ngoại lai xâm phạm",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 47,
@@ -1318,7 +1364,8 @@
           "content": "Quân sự, chạy đua vũ trang",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 48,
@@ -1346,7 +1393,8 @@
           "content": "Của sự thống trị về chính trị",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 49,
@@ -1374,7 +1422,8 @@
           "content": "Do chính sách điều tiết của Nhà nước thúc đẩy kinh tế hộ gia đình phát triển thành doanh nghiệp",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 50,
@@ -1402,7 +1451,8 @@
           "content": "Gián tiếp",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 51,
@@ -1430,7 +1480,8 @@
           "content": "Cơ cấu dân cư",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 52,
@@ -1458,7 +1509,8 @@
           "content": "Cuộc cách mạng dân chủ nhân dân do liên minh công-nông-trí tiến hành",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 53,
@@ -1486,7 +1538,8 @@
           "content": "Lịch sử - tự nhiên",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 54,
@@ -1514,7 +1567,8 @@
           "content": "Vì gia đình là nền tảng tinh thần của xã hội",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 55,
@@ -1542,7 +1596,8 @@
           "content": "C.Mác khởi xướng, Ph.Ăngghen bổ sung phát triển",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 56,
@@ -1570,7 +1625,8 @@
           "content": "Cuộc đấu tranh giành quyền điều hành quốc gia của các đảng phái tư sản",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 57,
@@ -1598,7 +1654,8 @@
           "content": "Lực lượng sản xuất và quan hệ sản xuất",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 58,
@@ -1626,13 +1683,14 @@
           "content": "Quy mô nhỏ ở nông thôn và quy mô lớn ở thành thị",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 59,
       "questionIndex": 58,
       "content": "Những điều kiện khách quan quy định sứ mệnh lịch sử của giai cấp công nhân bao gồm các nội dung nào? Các lựa chọn:",
-      "explanation": "Sứ mệnh lịch sử của giai cấp công nhân được quy định bởi hai điều kiện khách quan lớn: Địa vị kinh tế (đại biểu lực lượng sản xuất tiên tiến) và Địa vị chính trị - xã hội (tiên phong, cách mạng, có tính kỷ luật).",
+      "explanation": "Các đáp án đúng gồm: A. Địa vị kinh tế của giai cấp công nhân | B. Địa vị chính trị - xã hội của giai cấp công nhân.\n\nSứ mệnh lịch sử của giai cấp công nhân được quy định bởi hai điều kiện khách quan lớn: Địa vị kinh tế (đại biểu lực lượng sản xuất tiên tiến) và Địa vị chính trị - xã hội (tiên phong, cách mạng, có tính kỷ luật).",
       "answers": [
         {
           "id": 1,
@@ -1654,7 +1712,8 @@
           "content": "Cả A và B đều đúng",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 60,
@@ -1682,7 +1741,8 @@
           "content": "Không ngừng mở rộng kiến trúc thượng tầng, nâng cao mức độ giải phóng cho những người lao động, thu hút họ tham gia tự giác vào công việc quản lý nhà nước, quản lý xã hội",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     }
   ]
 }

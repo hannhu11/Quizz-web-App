@@ -30,7 +30,8 @@
           "content": "They compete for dominance, with the strongest influencing the final product.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 2,
@@ -53,7 +54,8 @@
           "content": "Dropdown list: Saves screen space and efficiently presents numerous options.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 3,
@@ -81,7 +83,8 @@
           "content": "To act as a placeholder for future content updates",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 4,
@@ -104,7 +107,8 @@
           "content": "By distracting users from the actual functionality and content of the interface.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 5,
@@ -132,7 +136,8 @@
           "content": "By keeping all elements visually equal.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 6,
@@ -150,7 +155,8 @@
           "content": "False",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 7,
@@ -168,7 +174,8 @@
           "content": "No",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 8,
@@ -196,7 +203,8 @@
           "content": "All of the above.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 9,
@@ -224,7 +232,8 @@
           "content": "Implementing all user suggestions regardless of feasibility or consistency.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10,
@@ -252,7 +261,8 @@
           "content": "To act as a placeholder for future features.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 11,
@@ -275,7 +285,8 @@
           "content": "When the website content is constantly updated and users need to find recently added items efficiently.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 12,
@@ -298,7 +309,8 @@
           "content": "It provides users with a wider variety of navigation options.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 13,
@@ -316,7 +328,8 @@
           "content": "No.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 14,
@@ -339,7 +352,8 @@
           "content": "When the website content is constantly updated and users need to find recently added items efficiently.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 15,
@@ -377,7 +391,8 @@
           "content": "Incorporating animation and motion into user journeys",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 16,
@@ -400,7 +415,8 @@
           "content": "Both websites would need an interactive map feature for route planning.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 17,
@@ -428,7 +444,8 @@
           "content": "The outermost border of the entire grid layout.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 18,
@@ -456,7 +473,8 @@
           "content": "Easy to color.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 19,
@@ -484,7 +502,8 @@
           "content": "Observing your own interaction with a website or app.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 20,
@@ -512,7 +531,8 @@
           "content": "Coding and implementing the final product design.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 21,
@@ -530,7 +550,8 @@
           "content": "False",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 22,
@@ -558,7 +579,8 @@
           "content": "Establishing a hierarchy and relationships between various content elements.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 23,
@@ -581,7 +603,8 @@
           "content": "Visual elements with no inherent meaning, requiring explicit user learning.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 24,
@@ -604,7 +627,8 @@
           "content": "Consistency across different buttons and platforms is unimportant as long as each button is individually understandable.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 25,
@@ -627,7 +651,8 @@
           "content": "UI involves user research and feedback while UX relies solely on designer intuition.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 26,
@@ -655,7 +680,8 @@
           "content": "Visual differences are unnecessary as clear labels can explain each state.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 27,
@@ -678,7 +704,8 @@
           "content": "A hierarchical map of pages, screens, and their relationships.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 28,
@@ -706,7 +733,8 @@
           "content": "To document detailed user flow scenarios and decision points.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 29,
@@ -734,7 +762,8 @@
           "content": "Avoiding user testing altogether to streamline the development process.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 30,
@@ -762,7 +791,8 @@
           "content": "To act as a placeholder for future features.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 31,
@@ -785,7 +815,8 @@
           "content": "To generate marketing materials for the product.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 32,
@@ -803,7 +834,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 33,
@@ -831,7 +863,8 @@
           "content": "Circle",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 34,
@@ -859,7 +892,8 @@
           "content": "Ignore the request and focus on design aspects aligned with identified user needs.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 35,
@@ -887,7 +921,8 @@
           "content": "All the above.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 36,
@@ -910,7 +945,8 @@
           "content": "All of the above.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 37,
@@ -938,7 +974,8 @@
           "content": "Visual appeal and aesthetic balance on the navigation bar.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 38,
@@ -961,7 +998,8 @@
           "content": "They are a temporary trend and may soon be replaced by new design approaches.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 39,
@@ -989,13 +1027,14 @@
           "content": "They compete for dominance, with the strongest influencing the final product.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 40,
       "questionIndex": 39,
       "content": "What are three potential downsides of overly prioritizing aesthetics and graphical elements in UI design? (Check all that apply)",
-      "explanation": "Đáp án đúng là 'Enhanced learning curve and user confusion'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "Các đáp án đúng gồm: B. Enhanced learning curve and user confusion | D. Increased risk of rapid visual obsolescence | E. Potential for content obstruction and reduced functionality.\n\nĐáp án đúng là 'Enhanced learning curve and user confusion'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -1022,7 +1061,8 @@
           "content": "Potential for content obstruction and reduced functionality",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 41,
@@ -1050,7 +1090,8 @@
           "content": "Keeping the button visually active but preventing any actual interaction.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 42,
@@ -1078,7 +1119,8 @@
           "content": "Implementation",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 43,
@@ -1106,7 +1148,8 @@
           "content": "None of the above.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 44,
@@ -1134,7 +1177,8 @@
           "content": "To emphasize specific content and draw user attention.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 45,
@@ -1162,7 +1206,8 @@
           "content": "CSS",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 46,
@@ -1190,7 +1235,8 @@
           "content": "Display size fits fingertip.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 47,
@@ -1218,7 +1264,8 @@
           "content": "Testing",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 48,
@@ -1241,7 +1288,8 @@
           "content": "The content or information being presented",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 49,
@@ -1269,7 +1317,8 @@
           "content": "The bottom of the website.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 50,
@@ -1297,7 +1346,8 @@
           "content": "The bottom of the website.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 51,
@@ -1315,7 +1365,8 @@
           "content": "False.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 52,
@@ -1338,7 +1389,8 @@
           "content": "To demonstrate complex interactions and animations.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 53,
@@ -1361,7 +1413,8 @@
           "content": "UI involves user research and feedback while UX relies solely on designer intuition.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 54,
@@ -1379,7 +1432,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 55,
@@ -1407,7 +1461,8 @@
           "content": "To serve as a placeholder for future content updates.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 56,
@@ -1435,7 +1490,8 @@
           "content": "Maintaining the same casual conversational tone throughout the UI regardless of the app's function or user demographics.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 57,
@@ -1463,7 +1519,8 @@
           "content": "User surveys: gathering quantitative data on user needs and perceptions.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 58,
@@ -1481,7 +1538,8 @@
           "content": "No",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 59,
@@ -1499,7 +1557,8 @@
           "content": "No.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 60,
@@ -1527,7 +1586,8 @@
           "content": "To ensure users enjoy smooth, intuitive, and positive interactions.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 61,
@@ -1555,7 +1615,8 @@
           "content": "Text is universally understood across different cultures.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 62,
@@ -1573,7 +1634,8 @@
           "content": "Content maps focus on clarity and structure, not visual design.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 63,
@@ -1601,7 +1663,8 @@
           "content": "To showcase a designer's portfolio and technical skills.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 64,
@@ -1619,7 +1682,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 65,
@@ -1647,7 +1711,8 @@
           "content": "Prioritize user needs and preferences in your exploration.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 66,
@@ -1675,7 +1740,8 @@
           "content": "A prototype.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 67,
@@ -1703,7 +1769,8 @@
           "content": "Mystery: Introducing unexpected elements to keep users engaged.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 68,
@@ -1731,7 +1798,8 @@
           "content": "To prevent users from abandoning the process due to frustration.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 69,
@@ -1749,7 +1817,8 @@
           "content": "When implementing a navigation system for a website, while sitemap sections inform primary navigation choices, some like \"cart\" and \"account\" may be handled separately depending on their specific function.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 70,
@@ -1777,7 +1846,8 @@
           "content": "To collect user click data and improve website analytics.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 71,
@@ -1805,7 +1875,8 @@
           "content": "All the above.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 72,
@@ -1833,7 +1904,8 @@
           "content": "Help and documentation.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 73,
@@ -1861,7 +1933,8 @@
           "content": "layout",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 74,
@@ -1889,7 +1962,8 @@
           "content": "Sans Serif",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 75,
@@ -1912,7 +1986,8 @@
           "content": "Each approach has advantages and disadvantages, consider for adaptability based on project needs before applying.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 76,
@@ -1940,7 +2015,8 @@
           "content": "Visual appeal and aesthetic balance on the navigation bar.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 77,
@@ -1958,7 +2034,8 @@
           "content": "False",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 78,
@@ -1986,7 +2063,8 @@
           "content": "Whiteboarding.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 79,
@@ -2014,7 +2092,8 @@
           "content": "To comply with specific design trends and aesthetic preferences.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 80,
@@ -2042,7 +2121,8 @@
           "content": "Match between system and the real world",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 81,
@@ -2075,7 +2155,8 @@
           "content": "They create a unique and recognizable brand identity.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 82,
@@ -2103,7 +2184,8 @@
           "content": "All of the above.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 83,
@@ -2126,7 +2208,8 @@
           "content": "Both websites would need an interactive map feature for route planning.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 84,
@@ -2154,7 +2237,8 @@
           "content": "The location of a button has no significant impact on user engagement.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 85,
@@ -2182,7 +2266,8 @@
           "content": "User testing platforms like UserTesting or Usability Hub.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 86,
@@ -2200,7 +2285,8 @@
           "content": "False.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 87,
@@ -2228,7 +2314,8 @@
           "content": "All of the above.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 88,
@@ -2256,7 +2343,8 @@
           "content": "To increase website traffic and search engine ranking.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 89,
@@ -2279,7 +2367,8 @@
           "content": "Visual elements with no inherent meaning, requiring explicit user learning.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 90,
@@ -2307,7 +2396,8 @@
           "content": "All is incorrect",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 91,
@@ -2330,7 +2420,8 @@
           "content": "Natural shape.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 92,
@@ -2353,7 +2444,8 @@
           "content": "It provides detailed blueprints for final product implementation.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 93,
@@ -2376,7 +2468,8 @@
           "content": "Conducting A/B testing on different visual directions.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 94,
@@ -2404,7 +2497,8 @@
           "content": "Design a static help manual accessible through a dedicated menu option.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 95,
@@ -2432,7 +2526,8 @@
           "content": "Neither of the above.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 96,
@@ -2470,7 +2565,8 @@
           "content": "Incorporating animation and motion into user journeys.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 97,
@@ -2493,7 +2589,8 @@
           "content": "Dispersed throughout the footer of the page as subtle navigational cues.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 98,
@@ -2516,7 +2613,8 @@
           "content": "Hiding their meaning and encouraging users to guess their function, creating a sense of discovery.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 99,
@@ -2544,7 +2642,8 @@
           "content": "Keeping the button visually active but preventing any actual interaction.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 100,
@@ -2572,7 +2671,8 @@
           "content": "All of the above.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 101,
@@ -2600,7 +2700,8 @@
           "content": "All is incorrect.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 102,
@@ -2618,13 +2719,14 @@
           "content": "False",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 103,
       "questionIndex": 102,
       "content": "What are three advantages of using metaphorical icons and symbols in user interfaces? (Check all that apply)",
-      "explanation": "Đáp án đúng là 'They provide a sense of nostalgia and familiarity.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
+      "explanation": "Các đáp án đúng gồm: B. They provide a sense of nostalgia and familiarity. | C. They are more efficient in terms of screen space. | D. They simplify complex concepts and actions..\n\nĐáp án đúng là 'They provide a sense of nostalgia and familiarity.'. Trong thiết kế web, HTML5 cung cấp các thẻ chuẩn nghĩa (Semantic Elements) giúp tối ưu cấu trúc trang web, nâng cao khả năng truy cập (Accessibility) và SEO.",
       "answers": [
         {
           "id": 1,
@@ -2651,7 +2753,8 @@
           "content": "They create a unique and recognizable brand identity.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 104,
@@ -2679,7 +2782,8 @@
           "content": "Prototype typical customer journeys or clickstreams through a website.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 105,
@@ -2707,7 +2811,8 @@
           "content": "All the above.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 106,
@@ -2735,7 +2840,8 @@
           "content": "Text is universally understood across different cultures.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 107,
@@ -2763,7 +2869,8 @@
           "content": "All of the above.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 108,
@@ -2791,7 +2898,8 @@
           "content": "Sans Serif.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 109,
@@ -2819,7 +2927,8 @@
           "content": "Avoiding user testing altogether to streamline the development process.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 110,
@@ -2847,7 +2956,8 @@
           "content": "Heuristic emphasizes using consistent terminology, icons, and navigation patterns across the interface.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 111,
@@ -2865,7 +2975,8 @@
           "content": "Understand the barriers users encounter in their problem-solving journey.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 112,
@@ -2883,7 +2994,8 @@
           "content": "False",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 113,
@@ -2911,7 +3023,8 @@
           "content": "To increase website traffic and search engine ranking.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 114,
@@ -2929,7 +3042,8 @@
           "content": "Simple and small websites may not need secondary navigation for subsections.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 115,
@@ -2952,7 +3066,8 @@
           "content": "User control and freedom",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 116,
@@ -2980,7 +3095,8 @@
           "content": "Help users recognize, diagnose, and recover from errors",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 117,
@@ -3008,7 +3124,8 @@
           "content": "Easy to color",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 118,
@@ -3036,7 +3153,8 @@
           "content": "Circle",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 119,
@@ -3064,7 +3182,8 @@
           "content": "Proximity, emotion, reactions.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 120,
@@ -3082,7 +3201,8 @@
           "content": "False.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 121,
@@ -3110,7 +3230,8 @@
           "content": "Visual design preferences and color palette choices.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 122,
@@ -3138,7 +3259,8 @@
           "content": "Links to social media profiles and sharing buttons.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 123,
@@ -3166,7 +3288,8 @@
           "content": "They are used exclusively for marketing purposes and promotional campaigns.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 124,
@@ -3194,7 +3317,8 @@
           "content": "Aligning with the overall branding and identity.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 125,
@@ -3222,7 +3346,8 @@
           "content": "To prevent users from abandoning the process due to frustration.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 126,
@@ -3250,7 +3375,8 @@
           "content": "Implementing all user suggestions regardless of feasibility or consistency.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 127,
@@ -3278,7 +3404,8 @@
           "content": "Flexibility and efficiency of use.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 128,
@@ -3306,7 +3433,8 @@
           "content": "Online surveys with multiple-choice questions.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 129,
@@ -3334,7 +3462,8 @@
           "content": "Developer",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 130,
@@ -3367,7 +3496,8 @@
           "content": "Potential for content obstruction and reduced functionality.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 131,
@@ -3390,7 +3520,8 @@
           "content": "To demonstrate complex interactions and animations.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 132,
@@ -3413,7 +3544,8 @@
           "content": "Dispersed throughout the footer of the page as subtle navigational cues.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 133,
@@ -3441,7 +3573,8 @@
           "content": "Focus on offering entertainment and amusement rather than addressing problems.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 134,
@@ -3469,7 +3602,8 @@
           "content": "To emphasize specific content and draw user attention.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 135,
@@ -3497,7 +3631,8 @@
           "content": "Desktop screens offer more creative freedom for UI design compared to mobile.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 136,
@@ -3525,7 +3660,8 @@
           "content": "The outermost border of the entire grid layout.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 137,
@@ -3543,7 +3679,8 @@
           "content": "Simple and small websites may not need secondary navigation for subsections.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 138,
@@ -3571,7 +3708,8 @@
           "content": "Following a rigid design process with no space for adaptation.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 139,
@@ -3589,7 +3727,8 @@
           "content": "No.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 140,
@@ -3612,7 +3751,8 @@
           "content": "The animation triggered when the field is interacted with",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 141,
@@ -3635,7 +3775,8 @@
           "content": "To navigate between different sections of the interface.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 142,
@@ -3663,7 +3804,8 @@
           "content": "Anthropology and sociology",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 143,
@@ -3691,7 +3833,8 @@
           "content": "Focus on offering entertainment and amusement rather than addressing problems.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 144,
@@ -3719,7 +3862,8 @@
           "content": "Intricacy: Implementing complex and visually stunning elements.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 145,
@@ -3747,7 +3891,8 @@
           "content": "Links to social media profiles and sharing buttons",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 146,
@@ -3765,7 +3910,8 @@
           "content": "Enhancing aesthetic appeal and making the map more visually engaging.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 147,
@@ -3793,7 +3939,8 @@
           "content": "They are used exclusively for marketing purposes and promotional campaigns.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 148,
@@ -3821,7 +3968,8 @@
           "content": "The placement of navigation elements, which should always be fixed in one location.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 149,
@@ -3839,7 +3987,8 @@
           "content": "False",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 150,
@@ -3867,7 +4016,8 @@
           "content": "The placement of navigation elements, which should always be fixed in one location.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 151,
@@ -3890,7 +4040,8 @@
           "content": "To generate random design elements and hope for user approval.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 152,
@@ -3913,7 +4064,8 @@
           "content": "Natural shape",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 153,
@@ -3931,7 +4083,8 @@
           "content": "False",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 154,
@@ -3959,7 +4112,8 @@
           "content": "Neither of the above.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 155,
@@ -3987,7 +4141,8 @@
           "content": "Both statements are correct.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 156,
@@ -4015,7 +4170,8 @@
           "content": "Match between system and the real world",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 157,
@@ -4043,7 +4199,8 @@
           "content": "None of the above",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 158,
@@ -4071,7 +4228,8 @@
           "content": "Building a detailed content inventory of all information within the app.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 159,
@@ -4099,7 +4257,8 @@
           "content": "Recognition rather than recall",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 160,
@@ -4122,7 +4281,8 @@
           "content": "It provides detailed blueprints for final product implementation.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 161,
@@ -4150,7 +4310,8 @@
           "content": "Only white and black.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 162,
@@ -4168,7 +4329,8 @@
           "content": "False.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 163,
@@ -4186,7 +4348,8 @@
           "content": "Absolute units are preferred for static designs, while relative units are better for responsive projects.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 164,
@@ -4214,7 +4377,8 @@
           "content": "Free size.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 165,
@@ -4242,7 +4406,8 @@
           "content": "Observing your own interaction with a website or app.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 166,
@@ -4270,7 +4435,8 @@
           "content": "Inconsistency has no impact on user experience as long as individual button states are clear.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 167,
@@ -4288,7 +4454,8 @@
           "content": "To ensure all users, regardless of their abilities, can effectively access and interact with the interface.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 168,
@@ -4311,7 +4478,8 @@
           "content": "User control and freedom.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 169,
@@ -4339,7 +4507,8 @@
           "content": "Prototype.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 170,
@@ -4362,7 +4531,8 @@
           "content": "The animation triggered when the field is interacted with.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 171,
@@ -4380,7 +4550,8 @@
           "content": "No.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 172,
@@ -4398,7 +4569,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 173,
@@ -4426,7 +4598,8 @@
           "content": "It has no influence on the overall user experience on the website.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 174,
@@ -4449,7 +4622,8 @@
           "content": "By distracting users from the actual functionality and content of the interface.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 175,
@@ -4477,7 +4651,8 @@
           "content": "32px",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 176,
@@ -4495,7 +4670,8 @@
           "content": "False",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 177,
@@ -4513,7 +4689,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 178,
@@ -4541,7 +4718,8 @@
           "content": "Balance",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 179,
@@ -4569,7 +4747,8 @@
           "content": "Organizing and analyzing data collected from user testing sessions.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 180,
@@ -4597,7 +4776,8 @@
           "content": "Recognition rather than recall",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 181,
@@ -4625,7 +4805,8 @@
           "content": "Because it allows for more creative freedom in design decisions.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 182,
@@ -4653,7 +4834,8 @@
           "content": "Inactive state",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 183,
@@ -4671,7 +4853,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 184,
@@ -4699,7 +4882,8 @@
           "content": "Label: text describing the action triggered by the button.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 185,
@@ -4727,7 +4911,8 @@
           "content": "Depends on the specific layout of the website.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 186,
@@ -4755,7 +4940,8 @@
           "content": "Desktop screens offer more creative freedom for UI design compared to mobile.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 187,
@@ -4788,7 +4974,8 @@
           "content": "Enhanced interactivity and responsiveness of UI elements.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 188,
@@ -4816,7 +5003,8 @@
           "content": "Ignore the request and focus on design aspects aligned with identified user needs.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 189,
@@ -4844,7 +5032,8 @@
           "content": "Iconography",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 190,
@@ -4862,7 +5051,8 @@
           "content": "False",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 191,
@@ -4880,7 +5070,8 @@
           "content": "Symbol - Icon",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 192,
@@ -4903,7 +5094,8 @@
           "content": "Highlighting design principles and visual aesthetics.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 193,
@@ -4921,7 +5113,8 @@
           "content": "False",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 194,
@@ -4949,7 +5142,8 @@
           "content": "Color Scheme.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 195,
@@ -4977,7 +5171,8 @@
           "content": "Dialogues",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 196,
@@ -5005,7 +5200,8 @@
           "content": "Style guide",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 197,
@@ -5023,7 +5219,8 @@
           "content": "Content maps focus on clarity and structure, not visual design.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 198,
@@ -5051,7 +5248,8 @@
           "content": "As part of the website interface system",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 199,
@@ -5079,7 +5277,8 @@
           "content": "Online surveys with multiple-choice questions.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 200,
@@ -5097,7 +5296,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     }
   ]
 }

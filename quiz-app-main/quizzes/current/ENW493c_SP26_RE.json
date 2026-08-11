@@ -30,7 +30,8 @@
           "content": "the right to own a gun",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 2,
@@ -48,7 +49,8 @@
           "content": "Yes",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 3,
@@ -71,7 +73,8 @@
           "content": "Write the thesis statement.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 4,
@@ -89,7 +92,8 @@
           "content": "No",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 5,
@@ -112,7 +116,8 @@
           "content": "It is a list of articles by one author who is an expert on your topic.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 6,
@@ -145,7 +150,8 @@
           "content": "Is the source biased?",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 7,
@@ -163,7 +169,8 @@
           "content": "No",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 8,
@@ -186,7 +193,8 @@
           "content": "library databases",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 9,
@@ -214,7 +222,8 @@
           "content": "Suggestions",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10,
@@ -232,7 +241,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 11,
@@ -260,7 +270,8 @@
           "content": "Suggestions",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 12,
@@ -288,7 +299,8 @@
           "content": "Discussions",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 13,
@@ -316,7 +328,8 @@
           "content": "Analyses",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 14,
@@ -344,7 +357,8 @@
           "content": "Directed",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 15,
@@ -372,7 +386,8 @@
           "content": "Interval",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 16,
@@ -400,7 +415,8 @@
           "content": "Obvious",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 17,
@@ -428,7 +444,8 @@
           "content": "Experimental",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 18,
@@ -456,7 +473,8 @@
           "content": "Ratio",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 19,
@@ -474,7 +492,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 20,
@@ -492,7 +511,8 @@
           "content": "False",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 21,
@@ -520,7 +540,8 @@
           "content": "Audit services",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 22,
@@ -548,7 +569,8 @@
           "content": "Likert",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 23,
@@ -576,7 +598,8 @@
           "content": "Direct or indirect",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 24,
@@ -609,7 +632,8 @@
           "content": "Is valid until further findings disprove it.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 25,
@@ -642,7 +666,8 @@
           "content": "Basic research is so fundamentally different that researchers must choose one permanently.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 26,
@@ -675,13 +700,14 @@
           "content": "Guarantees absolute truth.",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 27,
       "questionIndex": 26,
       "content": "Consider an algorithm that is supposed to find all possible occurrences in a text of person's names. (Select 2 correct answers)",
-      "explanation": "D  Đúng Thuật toán có thể đồng thời: Phát hiện sai → False Positive Bỏ sót → False Negative E Đúng False Positive là trường hợp hệ thống nhận diện nhầm một đối tượng không đúng.",
+      "explanation": "Các đáp án đúng gồm: D. The algorithm may find a name that is not a person's name and may fail to find certain person's names. In this case the algorithm can generate both false positives and false negatives. | E. The algorithm finds a name that is not a person's name. This is a false positive..\n\nD  Đúng Thuật toán có thể đồng thời: Phát hiện sai → False Positive Bỏ sót → False Negative E Đúng False Positive là trường hợp hệ thống nhận diện nhầm một đối tượng không đúng.",
       "answers": [
         {
           "id": 1,
@@ -708,7 +734,8 @@
           "content": "The algorithm finds a name that is not a person's name. This is a false positive.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 28,
@@ -741,7 +768,8 @@
           "content": "Hypothesis framed in a negative form, which researchers try to reject to confirm a theory.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 29,
@@ -764,13 +792,14 @@
           "content": "Rigor",
           "isCorrect": false
         }
-      ]
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 30,
       "questionIndex": 29,
       "content": "Which of the following statements correctly describe soundness and completeness of a theory? (Choose 2 answers)",
-      "explanation": "C. A theory is sound if all its predictions are possible manifestations.  Đúng : Soundness nghĩa là mọi dự đoán của lý thuyết đều có thể xảy ra trong thực tế. E. A theory is complete if it predicts all possible manifestations. Đúng Giải thích: Completeness nghĩa là lý thuyết bao quát toàn bộ các trường hợp có thể xảy ra.",
+      "explanation": "Các đáp án đúng gồm: C. A theory is sound if all its predictions are possible manifestations. | E. A theory is complete if it predicts all possible manifestations..\n\nC. A theory is sound if all its predictions are possible manifestations.  Đúng : Soundness nghĩa là mọi dự đoán của lý thuyết đều có thể xảy ra trong thực tế. E. A theory is complete if it predicts all possible manifestations. Đúng Giải thích: Completeness nghĩa là lý thuyết bao quát toàn bộ các trường hợp có thể xảy ra.",
       "answers": [
         {
           "id": 1,
@@ -797,7 +826,8 @@
           "content": "A theory is complete if it predicts all possible manifestations.",
           "isCorrect": true
         }
-      ]
+      ],
+      "questionType": "Multiple Choice"
     }
   ]
 }
