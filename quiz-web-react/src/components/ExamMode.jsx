@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Clock, ArrowLeft, CheckCircle2, XCircle, AlertCircle, Trophy, RotateCcw, ShieldCheck, Star, Check, X } from 'lucide-react';
-import { saveQuizProgress, getStarredQuestions, toggleStarQuestion, getQuestionTypeInfo } from '../data/quizDataLoader';
+import { saveQuizProgress, getStarredQuestions, toggleStarQuestion } from '../data/quizDataLoader';
 import confetti from 'canvas-confetti';
 
 export default function ExamMode({ quiz, testConfig, onBack }) {
@@ -12,7 +12,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
   // Prepare questions pool (filter starred if requested)
   let initialQuestionsPool = quiz.questions || [];
   if (config.studyStarredOnly) {
-    const starredIds = new Set(getStarredQuestions(quiz.id).map(s => s.questionId));
+    const starredIds = new Set(getStarredQuestions().map(s => s.questionId));
     initialQuestionsPool = initialQuestionsPool.filter(q => starredIds.has(q.id));
     if (initialQuestionsPool.length === 0) {
       initialQuestionsPool = quiz.questions || []; // fallback if no starred questions exist
@@ -31,17 +31,17 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
 
   // Track starred items on result screen
   const [starredIds, setStarredIds] = useState(() => {
-    return new Set(getStarredQuestions(quiz.id).map(s => s.questionId));
+    return new Set(getStarredQuestions().map(s => s.questionId));
   });
 
   // Listen to global star update event
   useEffect(() => {
     const checkStar = () => {
-      setStarredIds(new Set(getStarredQuestions(quiz.id).map(s => s.questionId)));
+      setStarredIds(new Set(getStarredQuestions().map(s => s.questionId)));
     };
     window.addEventListener('quizzlet_star_updated', checkStar);
     return () => window.removeEventListener('quizzlet_star_updated', checkStar);
-  }, [quiz.id]);
+  }, []);
 
   // Timer states
   const [secondsElapsed, setSecondsElapsed] = useState(0);
@@ -83,27 +83,13 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
 
   const handleSelectOption = (answerId) => {
     if (isSubmitted) return;
-    const currentQ = questions[currentIndex];
-    const typeInfo = getQuestionTypeInfo(currentQ);
-    setUserAnswers(prev => {
-      const selectedList = prev[currentIndex] || [];
-      if (typeInfo.isMultipleChoice) {
-        const exists = selectedList.includes(answerId);
-        const updated = exists
-          ? selectedList.filter(id => id !== answerId)
-          : [...selectedList, answerId];
-        return { ...prev, [currentIndex]: updated };
-      } else {
-        return { ...prev, [currentIndex]: [answerId] };
-      }
-    });
+    setUserAnswers(prev => ({ ...prev, [currentIndex]: answerId }));
   };
 
   const handleAttemptSubmit = () => {
     const unansweredIndices = [];
     questions.forEach((_, idx) => {
-      const sel = userAnswers[idx];
-      if (!sel || !Array.isArray(sel) || sel.length === 0) {
+      if (userAnswers[idx] === undefined) {
         unansweredIndices.push(idx);
       }
     });
@@ -127,10 +113,9 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
     setIsSubmitted(true);
     let correctCount = 0;
     questions.forEach((q, idx) => {
-      const selectedList = userAnswers[idx] || [];
-      const selectedSet = new Set(selectedList);
-      const correctSet = new Set((q.answers || []).filter(a => Boolean(a.isCorrect)).map(a => a.id));
-      if (selectedSet.size === correctSet.size && [...correctSet].every(id => selectedSet.has(id))) {
+      const selectedId = userAnswers[idx];
+      const correctAns = q.answers?.find(a => a.isCorrect);
+      if (correctAns && selectedId === correctAns.id) {
         correctCount += 1;
       }
     });
@@ -167,50 +152,51 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
 
   const currentQ = questions[currentIndex] || {};
 
-  // RESULT & REVIEW SCREEN
+  // Compute final score
+  let finalScore = 0;
   if (isSubmitted) {
-    let scoreCount = 0;
     questions.forEach((q, idx) => {
-      const selectedList = userAnswers[idx] || [];
-      const selectedSet = new Set(selectedList);
-      const correctSet = new Set((q.answers || []).filter(a => Boolean(a.isCorrect)).map(a => a.id));
-      if (selectedSet.size === correctSet.size && [...correctSet].every(id => selectedSet.has(id))) {
-        scoreCount += 1;
+      const selectedId = userAnswers[idx];
+      const correctAns = q.answers?.find(a => a.isCorrect);
+      if (correctAns && selectedId === correctAns.id) {
+        finalScore += 1;
       }
     });
+  }
 
-    const percentage = Math.round((scoreCount / questions.length) * 100);
+  // EXAM RESULT SCREEN WITH DETAILED QUESTION BREAKDOWN
+  if (isSubmitted) {
+    const percentage = Math.round((finalScore / questions.length) * 100);
     const isPassed = percentage >= 70;
 
     return (
       <div className="max-w-4xl mx-auto px-4 py-8 space-y-8 text-warm-text dark:text-slate-100">
-        {/* Result Header Banner */}
+        {/* Score Summary Box */}
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-warm-border dark:border-slate-800 shadow-soft text-center space-y-6"
+          initial={{ scale: 0.95, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          className="bg-white dark:bg-slate-900 rounded-3xl p-8 border border-warm-border dark:border-slate-800 shadow-soft text-center space-y-6"
         >
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-tr from-amber-100 to-emerald-100 dark:from-slate-800 dark:to-emerald-950 border border-emerald-300 dark:border-emerald-800 shadow-xs">
-            <Trophy className={`w-10 h-10 ${isPassed ? 'text-amber-500' : 'text-slate-400'}`} />
+          <div className={`w-20 h-20 rounded-full mx-auto flex items-center justify-center border ${
+            isPassed ? 'bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 border-emerald-200 dark:border-emerald-800' : 'bg-rose-100 dark:bg-rose-950 text-rose-600 dark:text-rose-400 border-rose-200 dark:border-rose-800'
+          }`}>
+            {isPassed ? <ShieldCheck className="w-10 h-10" /> : <AlertCircle className="w-10 h-10" />}
           </div>
 
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-warm-muted dark:text-slate-400">Kết quả bài thi thử</span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-slate-100 mt-1">{quiz.title}</h2>
+            <span className={`text-xs font-bold px-3.5 py-1 rounded-full ${
+              isPassed ? 'bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300' : 'bg-rose-100 dark:bg-rose-950 text-rose-800 dark:text-rose-300'
+            }`}>
+              {isPassed ? 'ĐÃ ĐẠT (PASSED)' : 'CHƯA ĐẠT (RETAKE RECOMMENDED)'}
+            </span>
+            <h2 className="text-2xl font-extrabold text-slate-900 dark:text-slate-100 mt-3">Kết Quả Bài Thi</h2>
+            <p className="text-xs text-warm-muted dark:text-slate-400">{quiz.title}</p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-lg mx-auto">
-            <div className="p-4 rounded-2xl bg-warm-bg dark:bg-slate-800/60 border border-warm-border/60 dark:border-slate-800">
-              <div className="text-2xl font-black text-emerald-600 dark:text-emerald-400">{scoreCount}/{questions.length}</div>
-              <div className="text-xs font-bold text-warm-muted dark:text-slate-400 mt-0.5">Số câu trả lời đúng</div>
-            </div>
-            <div className="p-4 rounded-2xl bg-warm-bg dark:bg-slate-800/60 border border-warm-border/60 dark:border-slate-800">
-              <div className="text-2xl font-black text-blue-600 dark:text-blue-400">{percentage}%</div>
-              <div className="text-xs font-bold text-warm-muted dark:text-slate-400 mt-0.5">Tỷ lệ chính xác</div>
-            </div>
-            <div className="col-span-2 sm:col-span-1 p-4 rounded-2xl bg-warm-bg dark:bg-slate-800/60 border border-warm-border/60 dark:border-slate-800">
-              <div className="text-2xl font-black text-amber-600 dark:text-amber-400">{timerConfig.enabled ? (timerConfig.mode === 'countdown' ? formatTime((timerConfig.minutes * 60) - secondsRemaining) : formatTime(secondsElapsed)) : 'N/A'}</div>
-              <div className="text-xs font-bold text-warm-muted dark:text-slate-400 mt-0.5">Thời gian làm bài</div>
+          <div className="p-6 rounded-2xl bg-warm-bg dark:bg-slate-800 border border-warm-border dark:border-slate-700 inline-block min-w-[280px]">
+            <div className="text-4xl font-extrabold text-slate-900 dark:text-slate-100">{finalScore} / {questions.length}</div>
+            <div className={`text-sm font-bold mt-1 ${isPassed ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'}`}>
+              Đạt {percentage}% điểm tổng
             </div>
           </div>
 
@@ -239,15 +225,11 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
           </div>
 
           {questions.map((q, idx) => {
-            const userChosenIds = userAnswers[idx] || [];
-            const userChosenSet = new Set(userChosenIds);
-            const correctAnswersList = (q.answers || []).filter(a => Boolean(a.isCorrect));
-            const correctIdsSet = new Set(correctAnswersList.map(a => a.id));
-
-            const isCorrect = userChosenSet.size === correctIdsSet.size && [...correctIdsSet].every(id => userChosenSet.has(id));
-            const isUnanswered = userChosenIds.length === 0;
+            const userChosenId = userAnswers[idx];
+            const correctAns = (q.answers || []).find(a => a.isCorrect);
+            const isCorrect = correctAns && userChosenId === correctAns.id;
+            const isUnanswered = userChosenId === undefined;
             const isStarred = starredIds.has(q.id);
-            const typeInfo = getQuestionTypeInfo(q);
 
             let statusBadge = (
               <span className="inline-flex items-center gap-1 bg-emerald-100 dark:bg-emerald-950 text-emerald-900 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 px-3 py-1 rounded-full text-xs font-bold">
@@ -277,18 +259,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
                 {/* Header Row */}
                 <div className="flex items-start justify-between gap-4">
                   <div className="space-y-1">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <span className="text-xs font-bold text-warm-muted dark:text-slate-400">Câu hỏi {idx + 1}</span>
-                      {typeInfo.isMultipleChoice ? (
-                        <span className="text-[11px] font-bold text-purple-800 dark:text-purple-300 bg-purple-100 dark:bg-purple-950/80 px-2 py-0.5 rounded border border-purple-300 dark:border-purple-800">
-                          Multiple Choice ({typeInfo.correctCount} đáp án đúng)
-                        </span>
-                      ) : (
-                        <span className="text-[11px] font-bold text-blue-800 dark:text-blue-300 bg-blue-50 dark:bg-blue-950/60 px-2 py-0.5 rounded border border-blue-200 dark:border-blue-800">
-                          Single Choice
-                        </span>
-                      )}
-                    </div>
+                    <span className="text-xs font-bold text-warm-muted dark:text-slate-400">Câu hỏi {idx + 1}</span>
                     <h4 className="text-base sm:text-lg font-bold text-slate-900 dark:text-slate-100 leading-relaxed break-words">
                       {q.content}
                     </h4>
@@ -309,8 +280,8 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
                 {/* Answer Options List with Color Coding */}
                 <div className="space-y-2.5">
                   {(q.answers || []).map((answer, aIdx) => {
-                    const isUserChoice = userChosenSet.has(answer.id);
-                    const isRightAnswer = Boolean(answer.isCorrect);
+                    const isUserChoice = userChosenId === answer.id;
+                    const isRightAnswer = answer.isCorrect;
 
                     let optionStyle = "bg-gray-50/50 dark:bg-slate-800/40 border-gray-200 dark:border-slate-800 text-gray-400 dark:text-slate-500 opacity-60";
                     let optionBadge = null;
@@ -329,7 +300,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
                           <XCircle className="w-4 h-4 text-rose-600 dark:text-rose-400" /> Bạn chọn sai
                         </span>
                       );
-                    } else if (isRightAnswer) {
+                    } else if (isRightAnswer && !isCorrect) {
                       optionStyle = "bg-emerald-50/60 dark:bg-emerald-950/40 border-2 border-dashed border-emerald-400 dark:border-emerald-700 text-emerald-900 dark:text-emerald-300 font-semibold";
                       optionBadge = (
                         <span className="flex items-center gap-1 text-xs font-bold text-emerald-800 dark:text-emerald-400">
@@ -358,7 +329,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
 
                 {/* Explanation Callout Box */}
                 {q.explanation && (
-                  <div className="p-4 rounded-2xl bg-amber-50/80 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-xs text-amber-950 dark:text-amber-200 leading-relaxed break-words whitespace-pre-wrap">
+                  <div className="p-4 rounded-2xl bg-amber-50/80 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-xs text-amber-950 dark:text-amber-200 leading-relaxed">
                     <span className="font-bold text-amber-900 dark:text-amber-300 block mb-1">💡 Giải thích chi tiết:</span>
                     {q.explanation}
                   </div>
@@ -408,22 +379,11 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* Main Question Panel */}
         <div ref={questionRef} className="lg:col-span-3 bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-warm-border dark:border-slate-800 shadow-soft">
-          <div className="flex items-center justify-between text-xs font-bold text-warm-muted dark:text-slate-400 mb-4 flex-wrap gap-2">
+          <div className="flex items-center justify-between text-xs font-bold text-warm-muted dark:text-slate-400 mb-4">
             <span className="text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-3 py-1 rounded-full border border-amber-200/80 dark:border-amber-800">
               Câu {currentIndex + 1} / {questions.length}
             </span>
-            {(() => {
-              const typeInfo = getQuestionTypeInfo(currentQ);
-              return typeInfo.isMultipleChoice ? (
-                <span className="text-xs font-bold text-purple-800 dark:text-purple-300 bg-purple-100 dark:bg-purple-950/80 px-3 py-1 rounded-full border border-purple-300 dark:border-purple-800">
-                  Multiple Choice (Chọn {typeInfo.correctCount} đáp án đúng)
-                </span>
-              ) : (
-                <span className="text-xs font-bold text-blue-800 dark:text-blue-300 bg-blue-50 dark:bg-blue-950/60 px-3 py-1 rounded-full border border-blue-200 dark:border-blue-800">
-                  Single Choice (Chọn 1 đáp án đúng)
-                </span>
-              );
-            })()}
+            <span>{quiz.category}</span>
           </div>
 
           <h3 className="text-base sm:text-xl font-bold text-slate-900 dark:text-slate-100 leading-relaxed mb-6 break-words">
@@ -433,33 +393,22 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
           {/* Options List */}
           <div className="space-y-3 mb-8">
             {(currentQ.answers || []).map((answer, aIdx) => {
-              const selectedList = userAnswers[currentIndex] || [];
-              const isSelected = selectedList.includes(answer.id);
-              const typeInfo = getQuestionTypeInfo(currentQ);
-
+              const isSelected = userAnswers[currentIndex] === answer.id;
               return (
                 <button
                   key={answer.id || aIdx}
                   onClick={() => handleSelectOption(answer.id)}
                   className={`w-full text-left p-4 rounded-2xl border transition-all duration-200 flex items-start gap-3 text-xs sm:text-sm font-medium ${
                     isSelected
-                      ? 'bg-purple-900 dark:bg-purple-950 text-white border-purple-700 dark:border-purple-600 shadow-xs'
+                      ? 'bg-warm-slate dark:bg-slate-800 text-white border-warm-slate dark:border-slate-700 shadow-xs'
                       : 'bg-white dark:bg-slate-900 border-warm-border dark:border-slate-800 text-warm-text dark:text-slate-100 hover:bg-warm-hover dark:hover:bg-slate-800'
                   }`}
                 >
-                  {typeInfo.isMultipleChoice ? (
-                    <div className={`w-5 h-5 rounded-md flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 border ${
-                      isSelected ? 'bg-purple-500 text-white border-purple-400' : 'bg-warm-hover dark:bg-slate-800 text-warm-slate dark:text-slate-400 border-warm-border/60 dark:border-slate-700'
-                    }`}>
-                      {isSelected ? '✓' : String.fromCharCode(65 + aIdx)}
-                    </div>
-                  ) : (
-                    <div className={`w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 border ${
-                      isSelected ? 'bg-blue-500 text-white border-blue-400' : 'bg-warm-hover dark:bg-slate-800 text-warm-slate dark:text-slate-300 border-warm-border/60 dark:border-slate-700'
-                    }`}>
-                      {String.fromCharCode(65 + aIdx)}
-                    </div>
-                  )}
+                  <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 border ${
+                    isSelected ? 'bg-white/20 text-white border-white/30' : 'bg-warm-hover dark:bg-slate-800 text-warm-slate dark:text-slate-300 border-warm-border/60 dark:border-slate-700'
+                  }`}>
+                    {String.fromCharCode(65 + aIdx)}
+                  </span>
                   <span className="break-words leading-relaxed">{answer.content}</span>
                 </button>
               );

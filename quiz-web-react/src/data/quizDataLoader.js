@@ -412,19 +412,6 @@ export async function deleteCustomQuizSet(quizId, password) {
   return true;
 }
 
-export function getQuestionTypeInfo(question) {
-  const answers = question?.answers || [];
-  const correctAnswers = answers.filter(a => Boolean(a.isCorrect));
-  const count = correctAnswers.length;
-  const isMultipleChoice = count > 1;
-  return {
-    isMultipleChoice,
-    correctCount: count,
-    correctAnswers,
-    displayType: isMultipleChoice ? `Multiple Choice (${count} đáp án đúng)` : 'Single Choice'
-  };
-}
-
 export function fetchQuizById(quizId) {
   const cached = normalizedQuizCache.get(quizId);
   if (cached) {
@@ -477,21 +464,10 @@ export function saveQuizProgress(quizId, score, total, mode) {
   }
 }
 
-export function getStarredQuestions(quizId) {
+export function getStarredQuestions() {
   try {
-    let data = localStorage.getItem(STORAGE_KEY_STARS);
-    if (!data) {
-      const v1Data = localStorage.getItem(STORAGE_KEY_STARS_V1);
-      if (v1Data) {
-        data = v1Data;
-        localStorage.setItem(STORAGE_KEY_STARS, v1Data);
-      }
-    }
-    const list = data ? JSON.parse(data) : [];
-    if (quizId) {
-      return list.filter(s => s.quizId === quizId);
-    }
-    return list;
+    const data = localStorage.getItem(STORAGE_KEY_STARS);
+    return data ? JSON.parse(data) : [];
   } catch (e) {
     return [];
   }
@@ -500,10 +476,10 @@ export function getStarredQuestions(quizId) {
 export function toggleStarQuestion(questionId, quizId, questionData, questionIndex = 0) {
   try {
     const stars = getStarredQuestions();
-    const index = stars.findIndex(s => s.questionId === questionId && s.quizId === quizId);
+    const index = stars.findIndex(s => s.questionId === questionId);
     let updated;
     if (index >= 0) {
-      updated = stars.filter(s => !(s.questionId === questionId && s.quizId === quizId));
+      updated = stars.filter(s => s.questionId !== questionId);
     } else {
       const quizInfo = normalizedQuizCache.get(quizId) || QUIZ_MANIFEST.find(q => q.id === quizId) || {};
       updated = [

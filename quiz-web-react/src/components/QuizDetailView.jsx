@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef, useMemo, useTransition } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, Play, Sparkles, BookOpen, Star, RotateCcw, Search, Volume2, Trophy, MoreVertical, Lock, Key, Trash2, Edit3, ShieldAlert, CheckCircle2, AlertCircle } from 'lucide-react';
+import { ArrowLeft, Layers, Play, CheckCircle2, Star, Volume2, BookOpen, MoreHorizontal, Edit, Trash2, Search } from 'lucide-react';
 import { toggleStarQuestion, getStarredQuestions, unstarQuizSet, verifyQuizPassword, deleteCustomQuizSet, calculateQuizProgressStats } from '../data/quizDataLoader';
 import PasswordModal from './PasswordModal';
 
@@ -13,133 +13,25 @@ function removeAccents(str) {
     .replace(/Đ/g, 'D');
 }
 
-const QuestionCard = React.memo(({ q, idx, isStarred, onToggleStar, onSpeak }) => {
-  const originalIndexDisplay = q.questionIndex !== undefined ? q.questionIndex + 1 : idx + 1;
-  const correctAnswers = (q.answers || []).filter(a => Boolean(a.isCorrect));
-  let formattedAnswerText = 'Chưa có đáp án';
-  if (correctAnswers.length > 1) {
-    formattedAnswerText = correctAnswers.map(ca => {
-      const cIdx = (q.answers || []).indexOf(ca);
-      return cIdx >= 0 ? `${String.fromCharCode(65 + cIdx)}. ${ca.content}` : ca.content;
-    }).join('\n');
-  } else if (correctAnswers.length === 1) {
-    const ca = correctAnswers[0];
-    const cIdx = (q.answers || []).indexOf(ca);
-    formattedAnswerText = cIdx >= 0 && (q.answers || []).length > 1
-      ? `${String.fromCharCode(65 + cIdx)}. ${ca.content}`
-      : ca.content;
-  }
-
-  return (
-    <div className="question-card-item quiz-question-card bg-white dark:bg-slate-900 rounded-3xl p-6 border border-warm-border dark:border-slate-800 shadow-xs hover:shadow-soft transition-all duration-200 text-warm-text dark:text-slate-100">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
-        <div className="space-y-3 pr-4 border-b md:border-b-0 md:border-r border-warm-border/40 dark:border-slate-800 pb-4 md:pb-0">
-          <div className="flex items-center gap-2 flex-wrap">
-            <div className="text-xs font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-2.5 py-0.5 rounded-md border border-amber-200/80 dark:border-amber-800 inline-block">
-              Câu #{originalIndexDisplay}
-            </div>
-            {correctAnswers.length > 1 && (
-              <div className="text-xs font-bold text-purple-800 dark:text-purple-300 bg-purple-50 dark:bg-purple-950/60 px-2 py-0.5 rounded-md border border-purple-200 dark:border-purple-800 inline-block">
-                Multiple Choice ({correctAnswers.length} đáp án đúng)
-              </div>
-            )}
-          </div>
-          <p className="text-sm font-semibold text-slate-900 dark:text-slate-100 leading-relaxed break-words whitespace-pre-wrap">
-            {q.content}
-          </p>
-
-          {(q.answers || []).length > 0 && (
-            <div className="space-y-1.5 pt-2">
-              {q.answers.map((a, aIdx) => (
-                <div
-                  key={aIdx}
-                  className={`text-xs px-3 py-2 rounded-xl border leading-relaxed break-words whitespace-pre-wrap ${
-                    a.isCorrect
-                      ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-950 dark:text-emerald-200 border-emerald-200 dark:border-emerald-800 font-semibold'
-                      : 'bg-warm-bg dark:bg-slate-800/60 text-warm-text dark:text-slate-300 border-warm-border/60 dark:border-slate-700'
-                  }`}
-                >
-                  <span className="font-bold mr-1.5">{String.fromCharCode(65 + aIdx)}.</span>
-                  {a.content}
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-
-        <div className="flex flex-col justify-between pl-0 md:pl-2 space-y-4">
-          <div>
-            <div className="flex items-center gap-2 mb-2 flex-wrap">
-              <span className="text-[11px] font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-800 inline-block">
-                Đáp án đúng (Definition)
-              </span>
-              {correctAnswers.length > 1 && (
-                <span className="text-[11px] font-bold text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-950/80 px-2 py-0.5 rounded border border-amber-300 dark:border-amber-700 inline-block">
-                  Gồm {correctAnswers.length} đáp án đúng
-                </span>
-              )}
-            </div>
-            <p className="text-sm font-bold text-emerald-950 dark:text-emerald-200 leading-relaxed break-words whitespace-pre-wrap">
-              {formattedAnswerText}
-            </p>
-
-            {q.explanation && (
-              <div className="mt-3 p-3 rounded-2xl bg-amber-50/90 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-xs text-amber-950 dark:text-amber-200 leading-relaxed break-words whitespace-pre-wrap">
-                <span className="font-bold text-amber-900 dark:text-amber-300 block mb-0.5">💡 Giải thích chi tiết:</span>
-                {q.explanation}
-              </div>
-            )}
-          </div>
-
-          <div className="flex items-center justify-end gap-2 pt-2 border-t border-warm-border/40 dark:border-slate-800">
-            <button
-              onClick={() => onSpeak(q.content)}
-              className="p-2 rounded-full hover:bg-warm-hover dark:hover:bg-slate-800 text-warm-muted dark:text-slate-400 hover:text-warm-text transition-colors"
-              title="Đọc phát âm"
-            >
-              <Volume2 className="w-4 h-4" />
-            </button>
-
-            <button
-              onClick={() => onToggleStar(q, originalIndexDisplay - 1)}
-              className="p-2 rounded-full hover:bg-warm-hover dark:hover:bg-slate-800 transition-transform active:scale-125"
-              title="Lưu câu hỏi ⭐"
-            >
-              <Star className={`w-5 h-5 ${isStarred ? 'fill-amber-400 text-amber-500' : 'text-warm-muted dark:text-slate-500'}`} />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}, (prev, next) => {
-  return (
-    prev.isStarred === next.isStarred &&
-    prev.idx === next.idx &&
-    prev.q.id === next.q.id &&
-    prev.q.explanation === next.q.explanation
-  );
-});
-
 export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSetup, onEditQuiz, onDeleteQuiz }) {
-  const [filterMode, setFilterMode] = useState('ALL');
-  const [searchInput, setSearchInput] = useState('');
+  const [filterMode, setFilterMode] = useState('ALL'); // 'ALL' | 'STARRED'
   const [searchQuery, setSearchQuery] = useState('');
-  const [isPending, startTransition] = useTransition();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [passwordModalConfig, setPasswordModalConfig] = useState(null);
 
   const [starredIds, setStarredIds] = useState(() => {
-    return new Set(getStarredQuestions(quiz.id).map(s => s.questionId));
+    return new Set(getStarredQuestions().map(s => s.questionId));
   });
 
   const [srsStats, setSrsStats] = useState(() => calculateQuizProgressStats(quiz));
+
   const menuRef = useRef(null);
   const questions = quiz.questions || [];
 
+  // Listen to SRS progress update event & star update event
   useEffect(() => {
     const refreshData = () => {
-      setStarredIds(new Set(getStarredQuestions(quiz.id).map(s => s.questionId)));
+      setStarredIds(new Set(getStarredQuestions().map(s => s.questionId)));
       setSrsStats(calculateQuizProgressStats(quiz));
     };
 
@@ -152,6 +44,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
     };
   }, [quiz]);
 
+  // Close menu on click outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -192,14 +85,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
     return true;
   };
 
-  const handleSearchInputChange = (e) => {
-    const val = e.target.value;
-    setSearchInput(val);
-    startTransition(() => {
-      setSearchQuery(val);
-    });
-  };
-
+  // Instant Vietnamese Search Filtering (<10ms)
   const filteredQuestions = useMemo(() => {
     let result = questions;
     if (filterMode === 'STARRED') {
@@ -221,6 +107,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-6 space-y-8 text-warm-text dark:text-slate-100">
+      {/* Top Header Row with 3-Dots Menu (Quizlet Style) */}
       <div className="flex items-center justify-between">
         <button
           onClick={onBack}
@@ -234,35 +121,39 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
             {quiz.category} • {questions.length} câu hỏi
           </span>
 
+          {/* 3-Dots Menu Dropdown Button */}
           <div ref={menuRef} className="relative">
             <button
               onClick={() => setIsMenuOpen(prev => !prev)}
               className="p-2 rounded-full bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 hover:bg-warm-hover dark:hover:bg-slate-800 text-warm-slate dark:text-slate-300 hover:text-warm-text shadow-xs transition-all active:scale-95"
               title="Tùy chọn bộ đề"
             >
-              <MoreVertical className="w-5 h-5" />
+              <MoreHorizontal className="w-5 h-5" />
             </button>
 
+            {/* Menu Popup */}
             <AnimatePresence>
               {isMenuOpen && (
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.95, y: -8 }}
+                  initial={{ opacity: 0, scale: 0.95, y: -5 }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.95, y: -8 }}
-                  className="absolute right-0 mt-2 w-48 bg-white dark:bg-slate-900 rounded-2xl border border-warm-border dark:border-slate-800 shadow-lg py-2 z-50 text-xs font-semibold"
+                  exit={{ opacity: 0, scale: 0.95, y: -5 }}
+                  className="absolute right-0 mt-2 w-48 bg-white dark:bg-slate-900 rounded-2xl p-1.5 border border-warm-border dark:border-slate-800 shadow-soft-lg z-30 space-y-1 text-xs font-semibold"
                 >
                   <button
                     onClick={() => { setIsMenuOpen(false); setPasswordModalConfig({ isOpen: true, actionType: 'EDIT' }); }}
-                    className="w-full text-left px-4 py-2.5 hover:bg-warm-hover dark:hover:bg-slate-800 flex items-center gap-2 text-slate-800 dark:text-slate-200"
+                    className="w-full flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-amber-50 dark:hover:bg-amber-950/60 text-slate-800 dark:text-slate-200 hover:text-amber-900 dark:hover:text-amber-300 transition-colors text-left"
                   >
-                    <Edit3 className="w-4 h-4 text-warm-slate dark:text-slate-300" /> Chỉnh sửa bộ đề
+                    <Edit className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+                    <span>Chỉnh sửa bộ đề</span>
                   </button>
 
                   <button
                     onClick={() => { setIsMenuOpen(false); setPasswordModalConfig({ isOpen: true, actionType: 'DELETE' }); }}
-                    className="w-full text-left px-4 py-2.5 hover:bg-rose-50 dark:hover:bg-rose-950/50 flex items-center gap-2 text-rose-600 dark:text-rose-400"
+                    className="w-full flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl hover:bg-rose-50 dark:hover:bg-rose-950/60 text-rose-600 dark:text-rose-400 transition-colors text-left"
                   >
-                    <Trash2 className="w-4 h-4 text-rose-500" /> Xóa bộ đề
+                    <Trash2 className="w-4 h-4" />
+                    <span>Xóa bộ đề</span>
                   </button>
                 </motion.div>
               )}
@@ -271,90 +162,162 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
         </div>
       </div>
 
-      <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-warm-border dark:border-slate-800 shadow-soft space-y-6">
+      {/* Hero Banner Section */}
+      <div className="rounded-3xl bg-white dark:bg-slate-900 p-6 sm:p-8 border border-warm-border dark:border-slate-800 shadow-soft space-y-6">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-slate-100 leading-tight">
-            {quiz.title}
-          </h1>
-          {quiz.description && (
-            <p className="text-xs sm:text-sm text-warm-muted dark:text-slate-400 mt-2 leading-relaxed">
-              {quiz.description}
-            </p>
-          )}
+          <span className="text-xs font-bold text-warm-muted dark:text-slate-400">{quiz.subject}</span>
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-slate-100 mt-1">{quiz.title}</h1>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+        {/* 3 Main Action Triggers */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+          {/* Flashcard Button */}
           <button
             onClick={() => onStartMode('FLASHCARD')}
-            className="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 hover:bg-amber-100 dark:hover:bg-amber-900/80 transition-all active:scale-95 group text-amber-900 dark:text-amber-300"
+            className="flex items-center justify-center gap-3 p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/60 hover:bg-amber-100 dark:hover:bg-amber-900/60 text-amber-900 dark:text-amber-300 border border-amber-200/80 dark:border-amber-800 font-bold text-sm shadow-xs transition-all active:scale-98 group"
           >
-            <BookOpen className="w-6 h-6 text-amber-600 dark:text-amber-400 group-hover:scale-110 transition-transform" />
-            <span className="text-xs font-bold">Thẻ ghi nhớ</span>
+            <Layers className="w-5 h-5 text-amber-600 dark:text-amber-400 group-hover:scale-110 transition-transform" />
+            <span>Lật Thẻ (Flashcards)</span>
           </button>
 
+          {/* Practice Button */}
           <button
             onClick={() => onStartMode('PRACTICE')}
-            className="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 hover:bg-emerald-100 dark:hover:bg-emerald-900/80 transition-all active:scale-95 group text-emerald-900 dark:text-emerald-300"
+            className="flex items-center justify-center gap-3 p-4 rounded-2xl bg-indigo-50 dark:bg-indigo-950/60 hover:bg-indigo-100 dark:hover:bg-indigo-900/60 text-indigo-900 dark:text-indigo-300 border border-indigo-200/80 dark:border-indigo-800 font-bold text-sm shadow-xs transition-all active:scale-98 group"
           >
-            <Sparkles className="w-6 h-6 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform" />
-            <span className="text-xs font-bold">Học ôn luyện</span>
+            <Play className="w-5 h-5 text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform" />
+            <span>Luyện Tập Trắc Nghiệm</span>
           </button>
 
+          {/* Setup Test Button */}
           <button
-            onClick={() => onStartMode('EXAM')}
-            className="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 hover:bg-blue-100 dark:hover:bg-blue-900/80 transition-all active:scale-95 group text-blue-900 dark:text-blue-300"
+            onClick={onOpenTestSetup}
+            className="flex items-center justify-center gap-3 p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 text-emerald-900 dark:text-emerald-300 border border-emerald-200/80 dark:border-emerald-800 font-bold text-sm shadow-xs transition-all active:scale-98 group"
           >
-            <Play className="w-6 h-6 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform" />
-            <span className="text-xs font-bold">Thi thử</span>
-          </button>
-
-          <button
-            onClick={() => onOpenTestSetup(quiz)}
-            className="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-purple-50 dark:bg-purple-950/60 border border-purple-200 dark:border-purple-800 hover:bg-purple-100 dark:hover:bg-purple-900/80 transition-all active:scale-95 group text-purple-900 dark:text-purple-300"
-          >
-            <Trophy className="w-6 h-6 text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform" />
-            <span className="text-xs font-bold">Cấu hình bài thi</span>
+            <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform" />
+            <span>Thi Thử (Set up test)</span>
           </button>
         </div>
       </div>
 
-      <div className="space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-          <div className="relative flex-1">
-            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-warm-muted dark:text-slate-500" />
-            <input
-              type="text"
-              value={searchInput}
-              onChange={handleSearchInputChange}
-              placeholder="Tìm kiếm câu hỏi, đáp án, hoặc nội dung giải thích..."
-              className="w-full pl-10 pr-4 py-2.5 rounded-2xl bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 text-xs sm:text-sm text-warm-text dark:text-slate-100 placeholder-warm-muted dark:placeholder-slate-500 focus:outline-none focus:border-amber-400 dark:focus:border-slate-700 shadow-xs"
-            />
+      {/* KNOWT-STYLE STUDYING PROGRESS BOX */}
+      <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-warm-border dark:border-slate-800 shadow-soft space-y-4">
+        <div className="flex items-center justify-between">
+          <h3 className="text-base font-extrabold text-slate-900 dark:text-slate-100">
+            Tiến độ học tập (Studying Progress)
+          </h3>
+          <span className="px-3 py-1 rounded-full bg-rose-50 dark:bg-rose-950/80 text-rose-600 dark:text-rose-300 border border-rose-200 dark:border-rose-800 text-xs font-bold">
+            {srsStats.percentage}%
+          </span>
+        </div>
+
+        {/* 4 Category Progress Bars */}
+        <div className="space-y-3">
+          {/* 1. New cards (Thẻ mới) */}
+          <div className="flex items-center justify-between gap-3 p-2.5 rounded-2xl bg-rose-50/70 dark:bg-rose-950/40 border border-rose-200/60 dark:border-rose-900/40 text-xs">
+            <div className="flex items-center gap-2.5 flex-1">
+              <span className="w-3 h-3 rounded-full bg-rose-400 shrink-0" />
+              <span className="font-bold text-rose-900 dark:text-rose-200">Thẻ mới (New cards)</span>
+            </div>
+            <span className="font-extrabold text-rose-900 dark:text-rose-200">{srsStats.newCount}</span>
+            <button
+              onClick={() => onStartMode('FLASHCARD')}
+              className="px-4 py-1.5 rounded-full bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-bold hover:bg-rose-100 dark:hover:bg-slate-700 transition-colors shadow-xs"
+            >
+              Học
+            </button>
           </div>
 
-          <div className="flex items-center gap-2">
+          {/* 2. Still learning (Đang học) */}
+          <div className="flex items-center justify-between gap-3 p-2.5 rounded-2xl bg-purple-50/70 dark:bg-purple-950/40 border border-purple-200/60 dark:border-purple-900/40 text-xs">
+            <div className="flex items-center gap-2.5 flex-1">
+              <span className="w-3 h-3 rounded-full bg-purple-400 shrink-0" />
+              <span className="font-bold text-purple-900 dark:text-purple-200">Đang học (Still learning)</span>
+            </div>
+            <span className="font-extrabold text-purple-900 dark:text-purple-200">{srsStats.learningCount}</span>
             <button
-              onClick={() => setFilterMode('ALL')}
-              className={`px-4 py-2 rounded-xl text-xs font-bold border transition-all ${
-                filterMode === 'ALL'
-                  ? 'bg-warm-slate dark:bg-slate-800 text-white border-warm-slate dark:border-slate-700 shadow-xs'
-                  : 'bg-white dark:bg-slate-900 text-warm-muted dark:text-slate-400 border-warm-border dark:border-slate-800 hover:bg-warm-hover'
-              }`}
+              onClick={() => onStartMode('PRACTICE')}
+              className="px-4 py-1.5 rounded-full bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-bold hover:bg-purple-100 dark:hover:bg-slate-700 transition-colors shadow-xs"
             >
-              Tất cả ({questions.length})
+              Học
             </button>
+          </div>
 
+          {/* 3. Almost done (Sắp thuộc) */}
+          <div className="flex items-center justify-between gap-3 p-2.5 rounded-2xl bg-sky-50/70 dark:bg-sky-950/40 border border-sky-200/60 dark:border-sky-900/40 text-xs">
+            <div className="flex items-center gap-2.5 flex-1">
+              <span className="w-3 h-3 rounded-full bg-sky-400 shrink-0" />
+              <span className="font-bold text-sky-900 dark:text-sky-200">Sắp thuộc (Almost done)</span>
+            </div>
+            <span className="font-extrabold text-sky-900 dark:text-sky-200">{srsStats.almostCount}</span>
             <button
-              onClick={() => setFilterMode('STARRED')}
-              className={`px-4 py-2 rounded-xl text-xs font-bold border transition-all flex items-center gap-1.5 ${
-                filterMode === 'STARRED'
-                  ? 'bg-amber-500 text-white border-amber-600 shadow-xs'
-                  : 'bg-white dark:bg-slate-900 text-warm-muted dark:text-slate-400 border-warm-border dark:border-slate-800 hover:bg-warm-hover'
-              }`}
+              onClick={() => onStartMode('PRACTICE')}
+              className="px-4 py-1.5 rounded-full bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-bold hover:bg-sky-100 dark:hover:bg-slate-700 transition-colors shadow-xs"
             >
-              <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-500" />
-              <span>Đã gắn sao ({starredCountInSet})</span>
+              Học
             </button>
+          </div>
 
+          {/* 4. Mastered (Đã thuộc) */}
+          <div className="flex items-center justify-between gap-3 p-2.5 rounded-2xl bg-emerald-50/70 dark:bg-emerald-950/40 border border-emerald-200/60 dark:border-emerald-900/40 text-xs">
+            <div className="flex items-center gap-2.5 flex-1">
+              <span className="w-3 h-3 rounded-full bg-emerald-400 shrink-0" />
+              <span className="font-bold text-emerald-900 dark:text-emerald-200">Đã thuộc (Mastered)</span>
+            </div>
+            <span className="font-extrabold text-emerald-900 dark:text-emerald-200">{srsStats.masteredCount}</span>
+            <button
+              onClick={() => onStartMode('FLASHCARD')}
+              className="px-4 py-1.5 rounded-full bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-bold hover:bg-emerald-100 dark:hover:bg-slate-700 transition-colors shadow-xs"
+            >
+              Học
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Terms In This Set Section Header with Search Bar */}
+      <div className="space-y-4">
+        <div className="flex items-center justify-between border-b border-warm-border/60 dark:border-slate-800 pb-3 flex-wrap gap-3">
+          <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+            <BookOpen className="w-5 h-5 text-warm-slate dark:text-slate-300" />
+            Danh sách thuật ngữ & câu hỏi ({questions.length})
+          </h3>
+
+          <div className="flex items-center gap-3 flex-wrap">
+            {/* Search Bar for Terms & Definitions */}
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-warm-muted dark:text-slate-400" />
+              <input
+                type="text"
+                placeholder="Tìm thuật ngữ, câu hỏi, đáp án..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-8 pr-3 py-1.5 text-xs rounded-full bg-white dark:bg-slate-800 border border-warm-border dark:border-slate-700 text-slate-900 dark:text-slate-100 placeholder:text-warm-muted dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-400/40 w-48 sm:w-64"
+              />
+            </div>
+
+            {/* Filter Tabs */}
+            <div className="flex items-center gap-1 text-xs font-semibold bg-warm-bg dark:bg-slate-800 p-1 rounded-xl border border-warm-border dark:border-slate-700">
+              <button
+                onClick={() => setFilterMode('ALL')}
+                className={`px-3 py-1 rounded-lg transition-all ${
+                  filterMode === 'ALL' ? 'bg-white dark:bg-slate-900 text-warm-text dark:text-slate-100 font-bold shadow-xs' : 'text-warm-muted dark:text-slate-400 hover:text-warm-text'
+                }`}
+              >
+                Tất cả ({questions.length})
+              </button>
+              <button
+                onClick={() => setFilterMode('STARRED')}
+                className={`px-3 py-1 rounded-lg transition-all flex items-center gap-1 ${
+                  filterMode === 'STARRED' ? 'bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-300 font-bold shadow-xs' : 'text-warm-muted dark:text-slate-400 hover:text-warm-text'
+                }`}
+              >
+                <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-500" />
+                <span>Đã gắn sao ({starredCountInSet})</span>
+              </button>
+            </div>
+
+            {/* Batch Unstar Button (Deselect All N / Unstar these N) */}
             {starredCountInSet > 0 && (
               <button
                 onClick={handleDeselectAllSet}
@@ -368,6 +331,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
           </div>
         </div>
 
+        {/* 2-Column Full Cards List (WITH OPTIONS & EXPLANATION) */}
         {filteredQuestions.length === 0 ? (
           <div className="text-center py-12 bg-white dark:bg-slate-900 rounded-3xl border border-warm-border dark:border-slate-800 text-warm-muted dark:text-slate-400">
             <Star className="w-8 h-8 text-amber-400 mx-auto mb-2" />
@@ -377,21 +341,120 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
           <div className="space-y-4">
             {filteredQuestions.map((q, idx) => {
               const isStarred = starredIds.has(q.id);
+              const originalIndexDisplay = q.questionIndex !== undefined ? q.questionIndex + 1 : idx + 1;
+              const correctAnswers = (q.answers || []).filter(a => a.isCorrect);
+              let formattedAnswerText = 'Chưa có đáp án';
+              if (correctAnswers.length > 1) {
+                formattedAnswerText = correctAnswers.map(ca => {
+                  const cIdx = (q.answers || []).indexOf(ca);
+                  return cIdx >= 0 ? `${String.fromCharCode(65 + cIdx)}. ${ca.content}` : ca.content;
+                }).join('\n');
+              } else if (correctAnswers.length === 1) {
+                const ca = correctAnswers[0];
+                const cIdx = (q.answers || []).indexOf(ca);
+                formattedAnswerText = cIdx >= 0 && (q.answers || []).length > 1
+                  ? `${String.fromCharCode(65 + cIdx)}. ${ca.content}`
+                  : ca.content;
+              }
+
               return (
-                <QuestionCard
+                <motion.div
                   key={q.id || idx}
-                  q={q}
-                  idx={idx}
-                  isStarred={isStarred}
-                  onToggleStar={handleToggleStar}
-                  onSpeak={handleSpeak}
-                />
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-warm-border dark:border-slate-800 shadow-xs hover:shadow-soft transition-all duration-200 text-warm-text dark:text-slate-100"
+                >
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
+                    {/* Left Column: Question / Term & Full Options List (A, B, C, D) */}
+                    <div className="space-y-3 pr-4 border-b md:border-b-0 md:border-r border-warm-border/40 dark:border-slate-800 pb-4 md:pb-0">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <div className="text-xs font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-2.5 py-0.5 rounded-md border border-amber-200/80 dark:border-amber-800 inline-block">
+                          Câu #{originalIndexDisplay}
+                        </div>
+                        {correctAnswers.length > 1 && (
+                          <div className="text-xs font-bold text-purple-800 dark:text-purple-300 bg-purple-50 dark:bg-purple-950/60 px-2 py-0.5 rounded-md border border-purple-200 dark:border-purple-800 inline-block">
+                            Multiple Choice ({correctAnswers.length} đáp án đúng)
+                          </div>
+                        )}
+                      </div>
+                      <p className="text-sm font-semibold text-slate-900 dark:text-slate-100 leading-relaxed break-words whitespace-pre-wrap">
+                        {q.content}
+                      </p>
+
+                      {/* Full Options List (A, B, C, D) */}
+                      {(q.answers || []).length > 0 && (
+                        <div className="space-y-1.5 pt-2">
+                          {q.answers.map((a, aIdx) => (
+                            <div
+                              key={aIdx}
+                              className={`text-xs px-3 py-2 rounded-xl border leading-relaxed break-words whitespace-pre-wrap ${
+                                a.isCorrect
+                                  ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-950 dark:text-emerald-200 border-emerald-200 dark:border-emerald-800 font-semibold'
+                                  : 'bg-warm-bg dark:bg-slate-800/60 text-warm-text dark:text-slate-300 border-warm-border/60 dark:border-slate-700'
+                              }`}
+                            >
+                              <span className="font-bold mr-1.5">{String.fromCharCode(65 + aIdx)}.</span>
+                              {a.content}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Right Column: Correct Answer & Explanation */}
+                    <div className="flex flex-col justify-between pl-0 md:pl-2 space-y-4">
+                      <div>
+                        <div className="flex items-center gap-2 mb-2 flex-wrap">
+                          <span className="text-[11px] font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-800 inline-block">
+                            Đáp án đúng (Definition)
+                          </span>
+                          {correctAnswers.length > 1 && (
+                            <span className="text-[11px] font-bold text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-950/80 px-2 py-0.5 rounded border border-amber-300 dark:border-amber-700 inline-block">
+                              Gồm {correctAnswers.length} đáp án đúng
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-sm font-bold text-emerald-950 dark:text-emerald-200 leading-relaxed break-words whitespace-pre-wrap">
+                          {formattedAnswerText}
+                        </p>
+
+                        {/* Explanation callout box */}
+                        {q.explanation && (
+                          <div className="mt-3 p-3 rounded-2xl bg-amber-50/90 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-xs text-amber-950 dark:text-amber-200 leading-relaxed break-words whitespace-pre-wrap">
+                            <span className="font-bold text-amber-900 dark:text-amber-300 block mb-0.5">💡 Giải thích chi tiết:</span>
+                            {q.explanation}
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Action Icons (Star & Speech) */}
+                      <div className="flex items-center justify-end gap-2 pt-2 border-t border-warm-border/40 dark:border-slate-800">
+                        <button
+                          onClick={() => handleSpeak(q.content)}
+                          className="p-2 rounded-full hover:bg-warm-hover dark:hover:bg-slate-800 text-warm-muted dark:text-slate-400 hover:text-warm-text transition-colors"
+                          title="Đọc phát âm"
+                        >
+                          <Volume2 className="w-4 h-4" />
+                        </button>
+
+                        <button
+                          onClick={() => handleToggleStar(q, originalIndexDisplay - 1)}
+                          className="p-2 rounded-full hover:bg-warm-hover dark:hover:bg-slate-800 transition-transform active:scale-125"
+                          title="Lưu câu hỏi ⭐"
+                        >
+                          <Star className={`w-5 h-5 ${isStarred ? 'fill-amber-400 text-amber-500' : 'text-warm-muted dark:text-slate-500'}`} />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
               );
             })}
           </div>
         )}
       </div>
 
+      {/* Password Modal Verification */}
       <PasswordModal
         isOpen={Boolean(passwordModalConfig?.isOpen)}
         onClose={() => setPasswordModalConfig(null)}

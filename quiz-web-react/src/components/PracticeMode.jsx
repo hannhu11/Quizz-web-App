@@ -1,56 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight, RotateCw, Star, CheckCircle, XCircle, Volume2, Award, Sparkles, HelpCircle } from 'lucide-react';
-import { toggleStarQuestion, getStarredQuestions, saveQuizProgress, setQuizCardState, getQuestionTypeInfo } from '../data/quizDataLoader';
+import { toggleStarQuestion, getStarredQuestions, saveQuizProgress, setQuizCardState } from '../data/quizDataLoader';
 
 export default function PracticeMode({ quiz, onBack }) {
   const questions = quiz.questions || [];
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedAnswerIds, setSelectedAnswerIds] = useState([]);
+  const [selectedAnswerId, setSelectedAnswerId] = useState(null);
   const [isAnswered, setIsAnswered] = useState(false);
   const [score, setScore] = useState(0);
   const [isCompleted, setIsCompleted] = useState(false);
 
   const [starredIds, setStarredIds] = useState(() => {
-    return new Set(getStarredQuestions(quiz.id).map(s => s.questionId));
+    return new Set(getStarredQuestions().map(s => s.questionId));
   });
 
   const currentQ = questions[currentIndex] || {};
   const isStarred = starredIds.has(currentQ.id);
-  const typeInfo = getQuestionTypeInfo(currentQ);
 
   // Sync Starred State
   useEffect(() => {
     const checkStar = () => {
-      setStarredIds(new Set(getStarredQuestions(quiz.id).map(s => s.questionId)));
+      setStarredIds(new Set(getStarredQuestions().map(s => s.questionId)));
     };
     window.addEventListener('quizzlet_star_updated', checkStar);
     return () => window.removeEventListener('quizzlet_star_updated', checkStar);
-  }, [quiz.id]);
+  }, []);
 
-  const handleSelectOption = (answerId) => {
+  const handleSelectOption = (answerId, isCorrect) => {
     if (isAnswered) return;
-
-    if (typeInfo.isMultipleChoice) {
-      setSelectedAnswerIds(prev => {
-        const exists = prev.includes(answerId);
-        return exists ? prev.filter(id => id !== answerId) : [...prev, answerId];
-      });
-    } else {
-      const selected = [answerId];
-      setSelectedAnswerIds(selected);
-      evaluateAnswer(selected);
-    }
-  };
-
-  const evaluateAnswer = (chosenIds) => {
+    setSelectedAnswerId(answerId);
     setIsAnswered(true);
-    const chosenSet = new Set(chosenIds);
-    const correctSet = new Set((currentQ.answers || []).filter(a => Boolean(a.isCorrect)).map(a => a.id));
 
-    const isMatch = chosenSet.size === correctSet.size && [...correctSet].every(id => chosenSet.has(id));
-
-    if (isMatch) {
+    if (isCorrect) {
       setScore(prev => prev + 1);
       if (currentQ.id) {
         setQuizCardState(quiz.id, currentQ.id, 'MASTERED');
@@ -62,15 +44,10 @@ export default function PracticeMode({ quiz, onBack }) {
     }
   };
 
-  const handleConfirmMultipleChoice = () => {
-    if (isAnswered || selectedAnswerIds.length === 0) return;
-    evaluateAnswer(selectedAnswerIds);
-  };
-
   const handleNextQuestion = () => {
     if (currentIndex + 1 < questions.length) {
       setCurrentIndex(prev => prev + 1);
-      setSelectedAnswerIds([]);
+      setSelectedAnswerId(null);
       setIsAnswered(false);
     } else {
       setIsCompleted(true);
@@ -80,10 +57,15 @@ export default function PracticeMode({ quiz, onBack }) {
 
   const handleRestart = () => {
     setCurrentIndex(0);
-    setSelectedAnswerIds([]);
+    setSelectedAnswerId(null);
     setIsAnswered(false);
     setScore(0);
     setIsCompleted(false);
+  };
+
+  const handleToggleStar = () => {
+    if (!currentQ.id) return;
+    toggleStarQuestion(currentQ.id, quiz.id, currentQ, currentIndex);
   };
 
   const handleSpeak = (text) => {
@@ -95,6 +77,7 @@ export default function PracticeMode({ quiz, onBack }) {
     }
   };
 
+  // Completion Screen
   if (isCompleted) {
     const percentage = Math.round((score / questions.length) * 100);
     return (
@@ -116,40 +99,42 @@ export default function PracticeMode({ quiz, onBack }) {
           </p>
         </div>
 
-        <div className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 shadow-soft max-w-sm mx-auto space-y-3">
-          <div className="text-4xl font-extrabold text-emerald-600 dark:text-emerald-400">
-            {score} / {questions.length}
+        <div className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 shadow-soft grid grid-cols-2 gap-4">
+          <div className="space-y-1">
+            <span className="text-xs font-bold text-warm-muted dark:text-slate-400">Điểm số</span>
+            <p className="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">{score} / {questions.length}</p>
           </div>
-          <div className="text-xs font-bold text-warm-muted dark:text-slate-400">
-            Tỷ lệ chính xác: {percentage}%
+
+          <div className="space-y-1">
+            <span className="text-xs font-bold text-warm-muted dark:text-slate-400">Tỷ lệ chính xác</span>
+            <p className="text-2xl font-extrabold text-amber-600 dark:text-amber-400">{percentage}%</p>
           </div>
         </div>
 
         <div className="flex items-center justify-center gap-3 pt-4">
           <button
+            onClick={onBack}
+            className="px-6 py-3 rounded-full bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 hover:bg-warm-hover dark:hover:bg-slate-800 font-bold text-xs sm:text-sm text-warm-text dark:text-slate-100 transition-colors shadow-xs"
+          >
+            Quay lại bộ đề
+          </button>
+
+          <button
             onClick={handleRestart}
-            className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-white dark:bg-slate-800 border border-warm-border dark:border-slate-700 hover:bg-warm-hover font-bold text-xs sm:text-sm shadow-xs transition-all active:scale-95 text-warm-text dark:text-slate-100"
+            className="px-6 py-3 rounded-full bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs sm:text-sm transition-colors shadow-xs flex items-center gap-2"
           >
             <RotateCw className="w-4 h-4" /> Luyện tập lại
-          </button>
-          <button
-            onClick={onBack}
-            className="px-6 py-2.5 rounded-full bg-warm-slate dark:bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs sm:text-sm shadow-xs transition-all active:scale-95"
-          >
-            Quay lại danh sách
           </button>
         </div>
       </div>
     );
   }
 
-  const correctAnswersText = typeInfo.correctAnswers.map(ca => {
-    const cIdx = (currentQ.answers || []).indexOf(ca);
-    return cIdx >= 0 ? `${String.fromCharCode(65 + cIdx)}. ${ca.content}` : ca.content;
-  }).join(' | ');
+  const correctAnswer = (currentQ.answers || []).find(a => a.isCorrect);
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-6 space-y-6 text-warm-text dark:text-slate-100">
+      {/* Top Header */}
       <div className="flex items-center justify-between gap-3">
         <button
           onClick={onBack}
@@ -168,7 +153,7 @@ export default function PracticeMode({ quiz, onBack }) {
         </div>
 
         <button
-          onClick={toggleStarQuestion.bind(null, currentQ.id, quiz.id, currentQ, currentIndex)}
+          onClick={handleToggleStar}
           className="p-2 rounded-full bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 hover:bg-warm-hover dark:hover:bg-slate-800 text-warm-slate dark:text-slate-300 transition-transform active:scale-125"
           title="Lưu câu hỏi ⭐"
         >
@@ -176,6 +161,7 @@ export default function PracticeMode({ quiz, onBack }) {
         </button>
       </div>
 
+      {/* Progress Bar */}
       <div className="w-full h-1.5 bg-warm-border/40 dark:bg-slate-800 rounded-full overflow-hidden">
         <div
           className="h-full bg-gradient-to-r from-amber-400 to-indigo-500 transition-all duration-300 rounded-full"
@@ -183,24 +169,14 @@ export default function PracticeMode({ quiz, onBack }) {
         />
       </div>
 
+      {/* Question Card */}
       <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-warm-border dark:border-slate-800 shadow-soft space-y-6">
-        <div className="flex items-start justify-between gap-4 border-b border-warm-border/40 dark:border-slate-800 pb-4">
+        <div className="flex items-start justify-between gap-4">
           <div className="space-y-1">
-            <div className="flex items-center gap-2 flex-wrap">
-              <span className="text-xs font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-2.5 py-0.5 rounded-md border border-amber-200/80 dark:border-amber-800">
-                Câu #{currentIndex + 1}
-              </span>
-              {typeInfo.isMultipleChoice ? (
-                <span className="text-xs font-bold text-purple-800 dark:text-purple-300 bg-purple-100 dark:bg-purple-950/80 px-2.5 py-0.5 rounded-md border border-purple-300 dark:border-purple-800">
-                  Multiple Choice (Chọn tất cả {typeInfo.correctCount} đáp án đúng)
-                </span>
-              ) : (
-                <span className="text-xs font-bold text-blue-800 dark:text-blue-300 bg-blue-50 dark:bg-blue-950/60 px-2.5 py-0.5 rounded-md border border-blue-200 dark:border-blue-800">
-                  Single Choice
-                </span>
-              )}
-            </div>
-            <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-slate-100 leading-relaxed break-words whitespace-pre-wrap">
+            <span className="text-xs font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-2.5 py-0.5 rounded-md border border-amber-200/80 dark:border-amber-800 inline-block">
+              Câu hỏi #{currentQ.questionIndex !== undefined ? currentQ.questionIndex + 1 : currentIndex + 1}
+            </span>
+            <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-slate-100 leading-relaxed pt-2">
               {currentQ.content}
             </h3>
           </div>
@@ -214,9 +190,10 @@ export default function PracticeMode({ quiz, onBack }) {
           </button>
         </div>
 
+        {/* Options List */}
         <div className="space-y-3 pt-2">
           {(currentQ.answers || []).map((answer, aIdx) => {
-            const isSelected = selectedAnswerIds.includes(answer.id);
+            const isSelected = selectedAnswerId === answer.id;
             let btnStyle = 'bg-warm-bg/70 dark:bg-slate-800/60 border-warm-border dark:border-slate-700 text-slate-900 dark:text-slate-100 hover:border-amber-400';
 
             if (isAnswered) {
@@ -227,28 +204,18 @@ export default function PracticeMode({ quiz, onBack }) {
               } else {
                 btnStyle = 'bg-warm-bg/40 dark:bg-slate-800/30 border-warm-border/40 dark:border-slate-800 opacity-60';
               }
-            } else if (isSelected) {
-              btnStyle = 'bg-purple-100 dark:bg-purple-950/80 border-purple-400 dark:border-purple-600 font-semibold shadow-xs';
             }
 
             return (
               <button
                 key={answer.id || aIdx}
                 disabled={isAnswered}
-                onClick={() => handleSelectOption(answer.id)}
+                onClick={() => handleSelectOption(answer.id, answer.isCorrect)}
                 className={`w-full p-4 rounded-2xl border text-left text-xs sm:text-sm transition-all duration-200 flex items-start gap-3 leading-relaxed break-words whitespace-pre-wrap ${btnStyle}`}
               >
-                {typeInfo.isMultipleChoice ? (
-                  <div className={`w-5 h-5 rounded-md flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 border ${
-                    isSelected ? 'bg-purple-600 text-white border-purple-700' : 'bg-warm-hover dark:bg-slate-800 text-slate-600 dark:text-slate-400 border-warm-border/60'
-                  }`}>
-                    {isSelected ? '✓' : String.fromCharCode(65 + aIdx)}
-                  </div>
-                ) : (
-                  <span className="font-extrabold shrink-0 mt-0.5">
-                    {String.fromCharCode(65 + aIdx)}.
-                  </span>
-                )}
+                <span className="font-extrabold shrink-0 mt-0.5">
+                  {String.fromCharCode(65 + aIdx)}.
+                </span>
                 <span className="flex-1">{answer.content}</span>
 
                 {isAnswered && answer.isCorrect && (
@@ -262,18 +229,7 @@ export default function PracticeMode({ quiz, onBack }) {
           })}
         </div>
 
-        {typeInfo.isMultipleChoice && !isAnswered && (
-          <div className="pt-3 text-right">
-            <button
-              disabled={selectedAnswerIds.length === 0}
-              onClick={handleConfirmMultipleChoice}
-              className="px-6 py-2.5 rounded-full bg-purple-600 hover:bg-purple-700 disabled:opacity-40 text-white font-bold text-xs sm:text-sm shadow-xs transition-all active:scale-95 inline-flex items-center gap-2"
-            >
-              Kiểm Tra Đáp Án ({selectedAnswerIds.length} chọn) <ArrowRight className="w-4 h-4" />
-            </button>
-          </div>
-        )}
-
+        {/* Explanation & Correct Answer Box */}
         <AnimatePresence>
           {isAnswered && (
             <motion.div
@@ -281,22 +237,25 @@ export default function PracticeMode({ quiz, onBack }) {
               animate={{ opacity: 1, y: 0 }}
               className="space-y-4 pt-4 border-t border-warm-border/60 dark:border-slate-800"
             >
+              {/* Correct Answer Display */}
               <div className="p-4 rounded-2xl bg-emerald-50/90 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-xs">
                 <span className="font-bold text-emerald-800 dark:text-emerald-300 block mb-1">
-                  ✓ Đáp án đúng ({typeInfo.correctCount} đáp án):
+                  ✓ Đáp án đúng:
                 </span>
-                <p className="font-extrabold text-emerald-950 dark:text-emerald-100 text-sm leading-relaxed">
-                  {correctAnswersText || 'Chưa có đáp án'}
+                <p className="font-extrabold text-emerald-950 dark:text-emerald-100 text-sm">
+                  {correctAnswer ? correctAnswer.content : 'Chưa có đáp án'}
                 </p>
               </div>
 
+              {/* Detailed Explanation */}
               {currentQ.explanation && (
-                <div className="p-4 rounded-2xl bg-amber-50/90 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-xs text-amber-950 dark:text-amber-200 leading-relaxed break-words whitespace-pre-wrap">
+                <div className="p-4 rounded-2xl bg-amber-50/90 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-xs text-amber-950 dark:text-amber-200 leading-relaxed">
                   <span className="font-bold text-amber-900 dark:text-amber-300 block mb-1">💡 Giải thích chi tiết:</span>
                   {currentQ.explanation}
                 </div>
               )}
 
+              {/* Next Question Trigger */}
               <div className="text-right pt-2">
                 <button
                   onClick={handleNextQuestion}

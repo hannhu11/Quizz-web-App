@@ -47,12 +47,6 @@ html.dark body {
   transform: rotateY(180deg);
 }
 
-/* Virtual rendering optimization for 60 FPS INP */
-.question-card-item, .quiz-question-card {
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 220px;
-}
-
 /* Glassmorphism utility */
 .glass-panel {
   background: rgba(255, 255, 255, 0.75);

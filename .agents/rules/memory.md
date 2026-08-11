@@ -218,6 +218,14 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Ghi nhận trạng thái hoàn thành (`COMPLETED`) và đối chiếu tính toàn vẹn 100% cho toàn bộ 73 tập tin JSON (7,831 câu hỏi).
 - **Trạng Thái Deploy:** Đã build Web production và deploy lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 4038107).
 
+### ↺ Cập Nhật Đợt 10: Khôi Phục 100% Giao Diện Frontend Nguyên Bản Đã Duyệt (UI Restoration Lock):
+- **Khôi Phục Giao Diện Chuẩn (Commit `878d333`):**
+  - **Khôi phục Khung Theo Dõi Tiến Độ Spaced Repetition (Knowt Style Progress Box):** Đã đưa trở lại 4 thanh tiến độ (*Thẻ mới*, *Đang học*, *Sắp thuộc*, *Đã thuộc*) cùng với tỉ lệ % học tập của từng bộ đề.
+  - **Khôi phục Tiêu Đề Mục:** Đưa trở lại tiêu đề chuẩn `📖 Danh sách thuật ngữ & câu hỏi ( X )`.
+  - **Khóa Cứng Mã Nguồn Frontend:** Khôi phục nguyên trạng toàn bộ 6 tệp Frontend trong `quiz-web-react/src/` (`QuizDetailView.jsx`, `PracticeMode.jsx`, `ExamMode.jsx`, `FlashcardViewer.jsx`, `quizDataLoader.js`, `index.css`) về đúng bản gốc đã chốt theo ảnh `image_d61efd.png`.
+- **Trạng Thái Deploy:** Đã build Web production và deploy lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 4044674).
+
+
 
 
 
