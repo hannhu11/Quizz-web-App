@@ -5,11 +5,17 @@ const quizFiles = import.meta.glob('../../../quiz-app-main/quizzes/current/*.jso
 
 export const QUIZ_MANIFEST = [
   { id: 'vnr202-fe', filename: 'VNR202 - FE - QuizApp.json', title: 'VNR202 - Lịch Sử Đảng Cộng Sản Việt Nam (420 Câu)', subject: 'Lịch Sử Đảng', category: 'VNR202', color: 'from-rose-100 to-red-100', icon: 'BookOpen' },
+  { id: 'vnr202-thi-thu-fbox', filename: 'VNR202 - Thi Thử FBOX - QuizApp.json', title: 'VNR202 - Bộ Đề Thi Thử FBOX (420 Câu)', subject: 'Lịch Sử Đảng', category: 'VNR202', color: 'from-red-100 to-amber-100', icon: 'FileText' },
   { id: 'hcm202-flashcard', filename: 'HCM202 - Flashcard - QuizApp.json', title: 'HCM202 - Tư Tưởng Hồ Chí Minh (300 Câu)', subject: 'Tư Tưởng Hồ Chí Minh', category: 'HCM202', color: 'from-rose-100 to-orange-100', icon: 'Award' },
+  { id: 'hcm202-thi-thu-fbox', filename: 'HCM202 - Thi Thử FBOX - QuizApp.json', title: 'HCM202 - Bộ Đề Thi Thử FBOX (300 Câu)', subject: 'Tư Tưởng Hồ Chí Minh', category: 'HCM202', color: 'from-amber-100 to-rose-100', icon: 'FileText' },
   { id: 'mln131-flashcard', filename: 'MLN131 - Flashcard - QuizApp.json', title: 'MLN131 - Chủ Nghĩa Xã Hội Khoa Học (360 Câu)', subject: 'Chủ Nghĩa Xã Hội Khoa Học', category: 'MLN131', color: 'from-amber-100 to-orange-100', icon: 'BookOpen' },
+  { id: 'mln131-thi-thu-fbox', filename: 'MLN131 - Thi Thử FBOX - QuizApp.json', title: 'MLN131 - Bộ Đề Thi Thử FBOX (360 Câu)', subject: 'Chủ Nghĩa Xã Hội Khoa Học', category: 'MLN131', color: 'from-orange-100 to-yellow-100', icon: 'FileText' },
   { id: 'enw493c-flashcard', filename: 'ENW493c - Flashcard - QuizApp.json', title: 'ENW493c - Academic Writing (90 Câu)', subject: 'Tiếng Anh Chuyên Ngành', category: 'ENW493c', color: 'from-blue-100 to-indigo-100', icon: 'BookOpen' },
+  { id: 'enw493c-thi-thu-fbox', filename: 'ENW493c - Thi Thử FBOX - QuizApp.json', title: 'ENW493c - Bộ Đề Thi Thử FBOX (90 Câu)', subject: 'Tiếng Anh Chuyên Ngành', category: 'ENW493c', color: 'from-sky-100 to-blue-100', icon: 'FileText' },
+  { id: 'enw493c-pe-writing', filename: 'ENW493c - PE Writing Master - QuizApp.json', title: 'ENW493c - PE Practical Writing Essay Master Guide', subject: 'Tiếng Anh Chuyên Ngành', category: 'ENW493c', color: 'from-indigo-100 to-purple-100', icon: 'Sparkles' },
   { id: 'wdu202c-flashcard', filename: 'WDU202c - Flashcard - QuizApp.json', title: 'WDU202c - Web Design & UI/UX (200 Câu)', subject: 'Thiết Kế Web & UI/UX', category: 'WDU202c', color: 'from-purple-100 to-pink-100', icon: 'Layout' },
   { id: 'aid301c-flashcard', filename: 'AID301c - Flashcard - QuizApp.json', title: 'AID301c - Artificial Intelligence Applications (100 Câu)', subject: 'Trí Tuệ Nhân Tạo', category: 'AID301c', color: 'from-emerald-100 to-teal-100', icon: 'Cpu' },
+  { id: 'aid301c-thi-thu-fbox', filename: 'AID301c - Thi Thử FBOX - QuizApp.json', title: 'AID301c - Bộ Đề Thi Thử FBOX (50 Câu)', subject: 'Trí Tuệ Nhân Tạo', category: 'AID301c', color: 'from-teal-100 to-cyan-100', icon: 'FileText' },
 ];
 
 // PRE-COMPUTE AND MEMOIZE ALL QUIZZES ON INITIAL LOAD

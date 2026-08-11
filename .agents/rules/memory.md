@@ -144,9 +144,13 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   6. `VNR202 - Lịch Sử Đảng Cộng Sản Việt Nam` (420 câu): Giải thích các bối cảnh lịch sử, mốc thời gian, Nghị quyết Trung ương, các kỳ Đại hội Đảng và Chiến dịch lịch sử.
 - **Lưu file & Cập nhật Manifest:** Đã lưu 6 file JSON chuẩn vào `quiz-app-main/quizzes/current/`, khai báo đầy đủ trong `QUIZ_MANIFEST` (`quizDataLoader.js`), build và deploy lên VPS `140.245.119.189`.
 
-### 🗑️ Gỡ Bỏ Các Bộ Đề Cũ Không Còn Sử Dụng (Dọn Dẹp Danh Mục):
-- Theo yêu cầu của người dùng, đã loại bỏ toàn bộ các bộ đề cũ đã học xong hoặc không học khỏi `QUIZ_MANIFEST`: `MLN111`, `MLN122`, `PMG201c`, `PRM393`, `SBA301`, `SWD392`, `SYB302c`.
-- **Danh mục hiện tại (6 môn đang học):** `VNR202`, `HCM202`, `MLN131`, `ENW493c`, `WDU202c`, `AID301c`.
+### 📚 Cập Nhật Đợt 2: Các Bộ Đề Thi Thử FBOX (1,220 Câu) & Đề Thi PE PDF (ENW493c):
+- **Xử lý Đề Thi Thực Hành PE PDF (`ENW493c_SP26_RE_W_PE.pdf`):** Đã chuyển đổi đề bài tự luận PDF thành file JSON chuẩn `ENW493c - PE Writing Master - QuizApp.json` tích hợp sẵn Dàn ý bài viết (Essay Outline), Từ vựng học thuật Band 8.0 và Bài mẫu phân tích chi tiết.
+- **Xử lý 22 File JSON Thi Thử FBOX (1,220 câu hỏi & 91 lượt watermark):**
+  - Đã loại bỏ 100% các chuỗi đóng dấu thương hiệu bên thứ ba `(Trích xuất từ...)` hoặc `FBOX`.
+  - Đã kiểm tra từng câu hỏi, các lựa chọn, đáp án đúng và bổ sung giải thích học thuật sâu sắc cho toàn bộ các đề thi thử của 5 môn (`ENW493c`, `AID301c`, `MLN131`, `HCM202`, `VNR202`).
+- **Cập nhật `QUIZ_MANIFEST` & Deploy Production:** Đã lưu các tập tin JSON đã chuẩn hóa vào `quiz-app-main/quizzes/current/`, khai báo thêm vào `QUIZ_MANIFEST` trong `quizDataLoader.js`, build web và deploy thành công lên VPS `140.245.119.189`.
+
 
 
 

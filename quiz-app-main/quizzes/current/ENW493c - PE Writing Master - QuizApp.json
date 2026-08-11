@@ -1,0 +1,36 @@
+{
+  "id": "enw493c-pe-writing",
+  "title": "ENW493c - Practical Exam (PE) Writing Prompt & Master Guide",
+  "subject": "Tiếng Anh Chuyên Ngành",
+  "category": "ENW493c",
+  "questionsList": [
+    {
+      "id": 1,
+      "questionIndex": 0,
+      "content": "ENW493c PE Writing Prompt: Many people believe that good planning is the key factor to success in life, while hard work and supportive relationships are important. Discuss both views and give your opinion (450-500 words).",
+      "explanation": "📌 HƯỚNG DẪN BÀI VIẾT THI THỰC HÀNH (PE WRITING MASTER GUIDE & BAND 8.0 SAMPLE):\n\n1. CẤU TRÚC BÀI LUẬN 4 ĐOẠN (ESSAY OUTLINE):\n- Introduction: Hook + Rephrase Prompt + Thesis Statement (Stating that while hard work and relationships build foundation, strategic planning optimizes resources for long-term success).\n- Body 1 (Hard Work & Supportive Relationships): Analyze how diligence creates momentum and social networks provide emotional/financial backing.\n- Body 2 (Good Planning as Key Factor): Explain how planning provides clear vision, risk mitigation, resource allocation, and milestone tracking.\n- Conclusion: Restate opinion & final synthesis.\n\n2. TỪ VỰNG HỌC THUẬT NÂNG CAO (ACADEMIC VOCABULARY):\n- Strategic foresight (tầm nhìn chiến lược), Resource allocation (phân bổ nguồn lực), Risk mitigation (giảm thiểu rủi ro), Interpersonal synergy (sự cộng hưởng mối quan hệ).",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Option A: Discuss both views and provide a balanced argument with planning as primary driver",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Option B: Only write about hard work without mentioning planning",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Option C: Write less than 200 words without structure",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Option D: Copy the prompt word for word without thesis statement",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}
