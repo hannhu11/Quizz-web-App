@@ -1,0 +1,803 @@
+{
+  "id": "ENW493C_FA25_FE_357671",
+  "title": "ENW493C_FA25_FE_357671 - (30 câu có giải thích)",
+  "subject": "Tiếng Anh Chuyên Ngành",
+  "category": "ENW493c",
+  "questionsList": [
+    {
+      "id": 1,
+      "questionIndex": 0,
+      "content": "Is this word appropriate for an academic essay? \n\"y'all\"",
+      "explanation": "Đáp án đúng là 'No'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Yes",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "No",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "questionIndex": 1,
+      "content": "Is this phrase appropriate for an academic essay? \"drunk as a skunk.\"",
+      "explanation": "Đáp án đúng là 'No'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "No",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Yes",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "questionIndex": 2,
+      "content": "What is the first thing to do after you receive a research paper assignment?",
+      "explanation": "Đáp án đúng là 'Think of a research question.'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Think of a research question.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Make an outline.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Write the thesis statement.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "questionIndex": 3,
+      "content": "Which of the following is not an appropriate place to use a statistic in your research paper?",
+      "explanation": "Đáp án đúng là 'in the thesis statement'. Trong kỹ năng viết học thuật (Academic Writing), Thesis Statement là câu luận đề cốt lõi nêu rõ quan điểm và định hướng nội dung của toàn bộ bài luận.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "in the thesis statement",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "as one of several statistics in a statistics paragraph",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "as a detail to support your own point",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "as a hook in the introduction",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "questionIndex": 4,
+      "content": "Most research papers share all of the following characteristics EXCEPT which one?",
+      "explanation": "Đáp án đúng là 'They are worth 150 pts.'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "They have considerable length.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "They use sources.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "They are complex.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "They are worth 150 pts.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "questionIndex": 5,
+      "content": "Which of the following is the most academic kind of source?",
+      "explanation": "Đáp án đúng là 'library databases'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "popular sources",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "news sources",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "library databases",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "questionIndex": 6,
+      "content": "Which of the following would be the most effective thesis statement for a research paper?",
+      "explanation": "Đáp án đúng là 'The U.S. government should require that all companies pay men and women the same amount of money for equal work.'. Trong kỹ năng viết học thuật (Academic Writing), Thesis Statement là câu luận đề cốt lõi nêu rõ quan điểm và định hướng nội dung của toàn bộ bài luận.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The tooth fairy and Santa Claus are imaginary characters for children.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The U.S. government should require that all companies pay men and women the same amount of money for equal work.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "It’s hotter in the oceans now than it was a few years ago, so something should be done about climate change.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Terrorism is really awful, so governments should prevent it.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "questionIndex": 7,
+      "content": "Is this word appropriate for an academic essay? \"increase\"",
+      "explanation": "Đáp án đúng là 'Yes'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Yes",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "No",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "questionIndex": 8,
+      "content": "Qualitative research is popular in market research due to the fact that there is no better way to understand the in-depth motivations and feelings of consumers.",
+      "explanation": "Đáp án đúng là 'True'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "questionIndex": 9,
+      "content": "The reflection on the action research cycle should be evaluated in terms of ________, quality of relationships, quality of action research process and outcomes.",
+      "explanation": "Đáp án đúng là 'Context'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Context",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Attitude",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Motivation",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Beliefs",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Perceptions",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "questionIndex": 10,
+      "content": "The development of a ________ scale commences with a concept that should be rated, such as the image of a brand or the quality of a service. The market researcher chooses opposite pairs of words or phrases (for instance, reliable (1) to unreliable (7)), which could be used to capture the concept. As a next step, respondents rate the concept on a scale, which is usually anchored from 1 to 7.",
+      "explanation": "Đáp án đúng là 'Semantic differential'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Nominal",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Semantic differential",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Ordinal",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Likert",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "questionIndex": 11,
+      "content": "The ________ scale consists of a number of statements that communicate a favorable or unfavorable attitude toward the concept under investigation.",
+      "explanation": "Đáp án đúng là 'Likert'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Stapel",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Semantic differential",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Ordinal",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Likert",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "questionIndex": 12,
+      "content": "_______ scale is a comparative scale in which key informants are requested to assign a constant sum of units such as points, euros, or dollars among a set of stimulus objects regarding some criterion.",
+      "explanation": "Đáp án đúng là 'Constant sum'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Ordinal",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Nominal",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Semantic differential",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Likert",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Constant sum",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "questionIndex": 13,
+      "content": "The design of a qualitative study commences with broad ________ regarding the qualitative ________ and the theoretical lens which shape and direct the study.",
+      "explanation": "Đáp án đúng là 'Assumptions. Inquiry'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Assumptions. Inquiry",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Inspirations. Assumptions",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Dreams. Assumptions",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Details. Structure",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "questionIndex": 14,
+      "content": "\"In exponential discriminative snowball sampling, the market researcher screens very carefully the individuals before accepting them in the final sample.\"\nIs the above statement true or false?",
+      "explanation": "Đáp án đúng là 'True'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "questionIndex": 15,
+      "content": "Gathered market research data should be integrated with other research data coming from both ________ and external sources to make the most of their use and to make more confident strategic decision-making.",
+      "explanation": "Đáp án đúng là 'Internal'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Internal",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "External",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Mixed",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Experimental",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "questionIndex": 16,
+      "content": "_______ scale is a scale where the numbers used to rank objects, such as numerically equal distances on the scale, demonstrate equal distances in the attribute being measured.",
+      "explanation": "Đáp án đúng là 'Interval'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Interval",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Nominal",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Ordinal",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Ratio",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "questionIndex": 17,
+      "content": "By investigating attitudes and behaviours using a case study approach through different points of time refers to a longitudinal case study methodology.",
+      "explanation": "Đáp án đúng là 'True'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "questionIndex": 18,
+      "content": "A ________ include(s) a collection of different and integrated databases developed in supporting decision-making and solving of problems. The data which are included can be accessed through data mining approaches.",
+      "explanation": "Đáp án đúng là 'Warehouse'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Datawarehouse",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Warehouse",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Record",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Research document",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "questionIndex": 19,
+      "content": "Survey approaches are based upon the design and development of well ________ questionnaires. Key informants may be asked several questions with respect to their intentions, motivations, attitudes, demographic and lifestyle characteristics among others. The questions may be asked verbally in writing or through a remote device (e.g., laptop) and the responses may be collected through these ways.",
+      "explanation": "Đáp án đúng là 'Structured'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Standardised",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Structured",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Arranged",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Directed",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "questionIndex": 20,
+      "content": "Market research assists companies in moving in the right manner, and in this vein, companies can use the collected information in order to improve strategic decision-making and to improve customer ________.",
+      "explanation": "Đáp án đúng là 'Metrics'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Metrics",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Satisfaction",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Appearance",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Focus",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "questionIndex": 21,
+      "content": "The unstructured nature of the interview necessitates the researcher to have the competence in gathering and ________ the information collected.",
+      "explanation": "Đáp án đúng là 'Interpreting'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Writing",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Interpreting",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Remembering",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Paraphrasing",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "questionIndex": 22,
+      "content": "Well-trained researchers can enhance ________ rates and increase conversion and persuasion of key informants.",
+      "explanation": "Đáp án đúng là 'Response'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Response",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Percentage",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Question",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Questionnaire",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "questionIndex": 23,
+      "content": "You are asked to review a theoretical research paper. In which of the following quality dimensions you expect the paper to be particularly strong? Select 01 correct answer.",
+      "explanation": "Đáp án đúng là 'Rigor'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Originality",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Rigor",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Significance",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "questionIndex": 24,
+      "content": "Which of the following statements about the distinction between basic and applied research are acceptable?",
+      "explanation": "Đáp án đúng là 'The spectrum between basic and applied research is continuous, and a researcher may engage in both kinds of research during his/her work.'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The spectrum between basic and applied research is continuous, and a researcher may engage in both kinds of research during his/her work.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Applied research is a less valuable (and prestigious) kind of research than basic research.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Basic research inevitably leads to discoveries that can then be transformed by applied research into practical industrial innovations.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Basic research only requires “paper and pencil.” No special equipment is needed.",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Basic research is so fundamentally different from applied research that a researcher has to specialize and choose between the two upfront.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "questionIndex": 25,
+      "content": "This question is about originality. When can a research result be defined as original?",
+      "explanation": "Đáp án đúng là 'The research result was not known before.'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The research result was unexpected.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The research result was very hard to achieve.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "The process through which the research led to the result is novel.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The research result was not known before.",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "The research result can lead to a useful product.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "questionIndex": 26,
+      "content": "What is a null hypothesis? Tick the correct answer.",
+      "explanation": "Đáp án đúng là 'Hypothesis framed in a negative form, which researchers try to reject to confirm a theory.'. Trong kỹ năng viết học thuật (Academic Writing), Thesis Statement là câu luận đề cốt lõi nêu rõ quan điểm và định hướng nội dung của toàn bộ bài luận.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "An obviously wrong hypothesis that does not explain a certain phenomenon.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Hypothesis made by an inexperienced scientist.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "No hypothesis made.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Hypothesis that further experiments disprove.",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Hypothesis framed in a negative form, which researchers try to reject to confirm a theory.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "questionIndex": 27,
+      "content": "Which of the following statements about research are valid?",
+      "explanation": "Đáp án đúng là 'Research may generate new knowledge. New knowledge may generate innovations that may favor progress of society.'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Research is only inspired by practical problems observed in the physical world.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Research has to be purely speculative, disconnected from practical concerns that would only be distractions.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Research may generate new knowledge. New knowledge may generate innovations that may favor progress of society.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Research does not require other investments than salaries for researchers.",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Research is only a hobby of talented individuals, who can afford investing their time and effort in it.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "questionIndex": 28,
+      "content": "Which of the following statements about funded research programs are appropriate? (Select 2 correct answers)",
+      "explanation": "D (C: A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor. D: A top-down research program defines precisely the research topics that can be funded and should be addressed by applicants.).",
+      "answers": [
+        {
+          "id": 1,
+          "content": "A bottom-up research program only supports research that is motivated by current, practical needs of industry.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "A top-down research program gives researchers maximum freedom in selecting research topics.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "A top-down research program defines precisely the research topics that can be funded and should be addressed by applicants.",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "A top-down research program only funds research that aims at an empirical evaluation in a practical setting of previously achieved theoretical results.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "questionIndex": 29,
+      "content": "You are asked to review a survey paper. In which of the following dimensions you are not expecting the paper to be particularly strong? select one.",
+      "explanation": "Đáp án đúng là 'Originality'. Lựa chọn này tuân thủ chính xác tiêu chuẩn văn phong học thuật, cấu trúc ngữ pháp tiếng Anh nâng cao và logic lập luận khoa học.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Originality",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Significance",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Rigor",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

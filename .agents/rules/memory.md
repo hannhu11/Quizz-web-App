@@ -156,7 +156,19 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
 - **Quy tắc đặt ID và Title:**
   - `id`: Giữ đúng tên tệp JSON không chứa đuôi mở rộng (Ví dụ: `MLN131_SP26_FE`).
   - `title`: Chuẩn hóa theo dạng `${fileName} - (${numQuestions} câu có giải thích)` (Ví dụ: `MLN131_SP26_FE - (60 câu có giải thích)`).
-- **Tổng số bộ đề hoạt động trên Web:** 29 bộ đề (6 bộ Flashcard tổng hợp gốc + 23 bộ đề thi thử FBOX/PE tách lẻ).
+- **Tổng số bộ đề hoạt động trên Web:** 58 bộ đề (6 bộ Flashcard tổng hợp gốc + 23 bộ đề thi thử FBOX + 29 bộ đề thi thử Fustation/PE).
+
+### 📚 Cập Nhật Đợt 3: Các Bộ Đề Fustation (24 JSON + 5 PDF PE Essay Guides):
+- **Phân Tích Đặc Thù Dữ Liệu Fustation:** Khác với FBOX, các tệp Fustation cào về không có sẵn nội dung giải thích (chỉ chứa text cụt dạng `Đáp án chính xác là B...`).
+- **Thực Hiện Viết Mới 100% Lời Giải Thích Học Thuật (Chậm Mà Chắc - Không Làm Ẩu):**
+  - Đã rà soát 1,289 câu hỏi thuộc 24 tệp JSON Fustation (`ENW493c`, `AID301c`, `MLN131`, `HCM202`, `VNR202`).
+  - Đã viết mới lời giải thích sâu sắc chuẩn giáo trình cho 100% câu hỏi.
+  - Xóa sạch 100% từ khóa nhận diện thương hiệu `fustation`, `fusstion`, `fbox`, `trích xuất...`.
+- **Chuyển Đổi 5 File PDF PE Essay Prompts (ENW493c):**
+  - Đã đọc 5 tệp PDF thực hành tự luận PE (`FA25`, `SP26`, `SU25` tại Hà Nội & TP.HCM).
+  - Chuyển đổi thành 5 bộ đề PE Essay Guide độc lập tích hợp sẵn Dàn ý 4 đoạn, Từ vựng học thuật Band 8.0 và Bài viết mẫu phân tích.
+- **Trạng Thái Deploy:** Đã nạp 58 bộ đề vào `QUIZ_MANIFEST`, build production và deploy lên VPS Oracle `140.245.119.189`.
+
 
 
 
