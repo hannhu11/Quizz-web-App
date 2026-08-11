@@ -341,6 +341,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
           <div className="space-y-4">
             {filteredQuestions.map((q, idx) => {
               const isStarred = starredIds.has(q.id);
+              const originalIndexDisplay = q.questionIndex !== undefined ? q.questionIndex + 1 : idx + 1;
               const correctAnswers = (q.answers || []).filter(a => a.isCorrect);
               let formattedAnswerText = 'Chưa có đáp án';
               if (correctAnswers.length > 1) {

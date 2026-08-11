@@ -178,6 +178,13 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Quy quét và phát hiện **164 câu Multiple Choice**: Tự động gán `"questionType": "Multiple Choice"` và cập nhật trường `explanation` đồng bộ hiển thị tất cả các phương án đúng.
 - **Trạng Thái Deploy:** Đã build Web production và deploy lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` restarted).
 
+### 🐛 Cập Nhật Đợt 5: Sửa Lỗi Trắng Màn Hình (White Screen Fix) Khi Mở Bộ Đề:
+- **Phân Tích Nguyên Nhân:** Trong lần cập nhật trước, biến `originalIndexDisplay` bị thiếu trong hàm render của `QuizDetailView.jsx`, dẫn đến lỗi `ReferenceError: originalIndexDisplay is not defined` làm React bị crash và hiển thị trang trắng.
+- **Biện Pháp Khắc Phục:**
+  - Khôi phục khai báo `const originalIndexDisplay = q.questionIndex !== undefined ? q.questionIndex + 1 : idx + 1;` trong `QuizDetailView.jsx`.
+- **Trạng Thái Deploy:** Đã build lại Web production và deploy lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 4009923).
+
+
 
 
 
