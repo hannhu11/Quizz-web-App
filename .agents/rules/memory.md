@@ -311,6 +311,35 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Thêm các Security Headers chống clickjacking & MIME-sniffing: `X-Frame-Options: SAMEORIGIN`, `X-Content-Type-Options: nosniff`, `X-XSS-Protection: 1; mode=block`, ẩn `x-powered-by`.
 - **Trạng Thái Deploy:** Build Vite production thành công (`1.75s`) và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 530457).
 
+### 📝🎯 Cập Nhật Đợt 18: Rà Soát & Chuẩn Hóa Triệt Để Dữ Liệu Bộ Đề AET102c (AET102c Data Fix & Standardization Protocol):
+- **Sửa Lỗi Đáp Án Quan Trọng (Câu 193):**
+  - Chuyển `is_correct: true` cho **Option C** (`There are one correct interpretations of the work.`), đặt Option A `is_correct: false` và cập nhật lời giải thích đồng bộ.
+- **Bổ Sung Đầy Đủ Nội Dung Bị Trích Đoạn (Câu 42 - Option A):**
+  - Khôi phục trọn vẹn nội dung câu nói của Oswald Hanfling: `"Oswald Hanfling did not argue as such. Oswald Hanfling believes that \"An artwork is a kind of creation whose primary function is to provide aesthetic satisfaction to others.\""`.
+- **Sửa Lỗi Chính Tả & Chuẩn Hóa 25 Điểm Dữ Liệu Khác:**
+  - **Câu 38:** Sửa `'naive'` $\rightarrow$ `'native'`.
+  - **Câu 50:** Xóa dấu `:` thừa sau `Fill in the blank`.
+  - **Câu 80 & 83:** Loại bỏ các tiền tố thô `Multiple Choice (2 đáp án đúng)` / `Multiple Choice (3 đáp án đúng)` khỏi tiêu đề câu hỏi.
+  - **Câu 100:** Sửa `'EaStern Painting'` $\rightarrow$ `'Eastern Painting'`.
+  - **Câu 101:** Chuẩn hóa khoảng trắng trong `"Six Principles of Chinese painting" which`.
+  - **Câu 103:** Sửa `'Đong Son'` $\rightarrow$ `'Dong Son'`.
+  - **Câu 109:** Sửa `'I . Kant'` $\rightarrow$ `'I. Kant'`.
+  - **Câu 125:** Sửa `'Romanticsm'` $\rightarrow$ `'Romanticism'`.
+  - **Câu 128:** Viết hoa đầu câu `'In Beardsley\'s view,'`.
+  - **Câu 136:** Bổ sung dấu phẩy `'the problem, of tragedy'`.
+  - **Câu 137:** Chuẩn hóa `'The Rhetoric - the Poetics'`.
+  - **Câu 144:** Sửa `'philosolhy'` $\rightarrow$ `'philosophy'`.
+  - **Câu 182:** Sửa `'Metapphysics'` $\rightarrow$ `'Metaphysics'`.
+  - **Câu 184:** Sửa `'Nomarl'` $\rightarrow$ `'Normal'`.
+  - **Câu 188:** Sửa `'Chistoph'` $\rightarrow$ `'Christoph'`.
+  - **Câu 189:** Sửa `'RV Tangoroa'` $\rightarrow$ `'RV Tangaroa'`.
+  - **Câu 195:** Viết hoa đầu từ `'Determinate concepts'`.
+  - **Câu 196:** Bổ sung chữ `s` bị thiếu: `'because we lack his sort of genius'`.
+  - **Câu 200:** Sửa `'thus gaving rise'` $\rightarrow$ `'thus giving rise'`.
+  - **Câu 203:** Thêm khoảng trắng `'Leon Battista Alberti'`.
+- **Trạng Thái Deploy:** Build Vite production thành công (`1.48s`) và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 551205).
+
+
 
 
 

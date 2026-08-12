@@ -2525,7 +2525,7 @@
     {
       "id": 38,
       "questionIndex": 37,
-      "content": "According to Anne Eaton, why is it 'naive' or 'mischievous' to remove the special position of the artist or critic from the equation?",
+      "content": "According to Anne Eaton, why is it 'native' or 'mischievous' to remove the special position of the artist or critic from the equation?",
       "explanation": "Đáp án chuẩn: B. Chuẩn kiến thức giáo trình AET102c - Nghệ thuật & Mỹ học .",
       "answers": [
         {
@@ -2802,7 +2802,7 @@
       "answers": [
         {
           "id": 421,
-          "content": "Oswald Hanfling did not argue as such.",
+          "content": "Oswald Hanfling did not argue as such. Oswald Hanfling believes that \"An artwork is a kind of creation whose primary function is to provide aesthetic satisfaction to others.\"",
           "is_correct": false,
           "index_order": 0,
           "question_target_id": 42
@@ -3341,7 +3341,7 @@
     {
       "id": 50,
       "questionIndex": 49,
-      "content": "Fill in the blank: Berys Gaut argues against a global theory of interpretation in his essay \"Interpreting the Arts: The Patchwork Theory\" because:",
+      "content": "Fill in the blank Berys Gaut argues against a global theory of interpretation in his essay \"Interpreting the Arts: The Patchwork Theory\" because:",
       "explanation": "Đáp án chuẩn: D. Chuẩn kiến thức giáo trình AET102c - Nghệ thuật & Mỹ học .",
       "answers": [
         {
@@ -9091,7 +9091,7 @@
     {
       "id": 136,
       "questionIndex": 135,
-      "content": "Like the paradox of fiction, the problem of tragedy finds its roots in ancient ...",
+      "content": "Like the paradox of fiction, the problem, of tragedy finds its roots in ancient ...",
       "explanation": "Đáp án chuẩn: C. Chuẩn kiến thức giáo trình AET102c - Nghệ thuật & Mỹ học .",
       "answers": [
         {
@@ -12940,12 +12940,12 @@
       "id": 193,
       "questionIndex": 192,
       "content": "Regarding the interpretation of work, what is the point of 'critical pluralism'?",
-      "explanation": "Đáp án chuẩn: C. Chuẩn kiến thức giáo trình AET102c - Nghệ thuật & Mỹ học .",
+      "explanation": "Đáp án chuẩn: C. Point of 'critical pluralism' is that there are one correct interpretations of the work.",
       "answers": [
         {
           "id": 1931,
           "content": "Good work allows for multiple interpretations, each of which has as much claim to being right as any other",
-          "is_correct": true,
+          "is_correct": false,
           "index_order": 0,
           "question_target_id": 193
         },
@@ -12959,7 +12959,7 @@
         {
           "id": 1933,
           "content": "There are one correct interpretations of the work.",
-          "is_correct": false,
+          "is_correct": true,
           "index_order": 2,
           "question_target_id": 193
         },
