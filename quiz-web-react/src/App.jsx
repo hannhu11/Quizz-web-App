@@ -339,11 +339,13 @@ export default function App() {
     }
   }, [starredQuestions, setHashState]);
 
-  // Group Starred Questions by Quiz Title / Subject Group
-  const groupedStarred = starredQuestions.reduce((acc, q) => {
+  // Group Starred Questions by Quiz Title / Subject Group (Safe String Conversion)
+  const groupedStarred = (starredQuestions || []).reduce((acc, q) => {
+    if (!q) return acc;
+    const strQuizId = String(q.quizId || '');
     const titleKey = q.quizTitle || q.question?.quizTitle || 'Bộ Đề Ôn Tập';
-    const groupKey = q.quizId && !q.quizId.startsWith('custom_') && !q.quizId.startsWith('exam_') 
-      ? q.quizId 
+    const groupKey = strQuizId && !strQuizId.startsWith('custom_') && !strQuizId.startsWith('exam_') 
+      ? strQuizId 
       : titleKey;
 
     if (!acc[groupKey]) {
@@ -358,7 +360,7 @@ export default function App() {
     return acc;
   }, {});
 
-  const groupedStarredList = Object.values(groupedStarred).filter(group => group.items.length > 0);
+  const groupedStarredList = Object.values(groupedStarred).filter(group => group.items && group.items.length > 0);
 
   return (
     <div className={`min-h-screen flex flex-col transition-colors duration-300 ${isDarkMode ? 'dark bg-slate-950 text-slate-100' : 'bg-warm-bg text-warm-text'}`}>

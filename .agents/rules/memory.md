@@ -484,6 +484,15 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Chuyển layout bảng câu hỏi bên phải sang `grid-cols-6`, kích thước nút `w-11 h-11 rounded-2xl font-extrabold`, chữ số thoáng mát dễ nhìn.
 - **Trạng Thái Deploy:** Build Vite production thành công (`1.12s`), deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 699370).
 
+### 🛠️⚡ Cập Nhật Đợt 31: Vá Lỗi Blank Screen Trang Chủ (String Conversion for quizId) & Bổ Sung Global ErrorBoundary:
+- **Sửa Triệt Để Lỗi Màn Hình Trắng Trang Chủ (`App.jsx`):**
+  - Khắc phục lỗi `TypeError: q.quizId.startsWith is not a function` khi `starredQuestions` chứa bộ đề có ID kiểu Số (Number). Ép kiểu an toàn `String(q.quizId || '')` trước khi so sánh tiền tố.
+  - Phôi phục ngay lập tức trang chủ `https://hannhu.io.vn/#/` hiển thị 100% mượt mà.
+- **Tích Hợp Global ErrorBoundary (`main.jsx`):**
+  - Bọc ứng dụng trong `GlobalErrorBoundary` với cơ chế Self-Healing khôi phục giao diện tự động khi xảy ra lỗi bất ngờ tại client.
+- **Trạng Thái Deploy:** Build Vite production thành công (`822ms`), deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 700761).
+
+
 
 
 
