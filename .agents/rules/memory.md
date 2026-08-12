@@ -339,6 +339,15 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - **Câu 203:** Thêm khoảng trắng `'Leon Battista Alberti'`.
 - **Trạng Thái Deploy:** Build Vite production thành công (`1.48s`) và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 551205).
 
+### 💡🔥 Cập Nhật Đợt 19: Nạp Dữ Liệu Nâng Cao AET102c Enriched (211 Lời Giải Thích Học Thuật) & Đồng Bộ Tuyệt Đối `answers` & `answersList`:
+- **Đồng Bộ Dữ Liệu Tệp `AET102c_211_enriched.json`:**
+  - Nạp toàn bộ 211 câu hỏi với **211 lời giải thích chi tiết tiếng Việt** vào bộ đề chính thức [`AET102c_211.json`](file:///c:/Users/ADMIN/Downloads/Quizzlet%20app/quiz-app-main/quizzes/current/AET102c_211.json).
+  - Chuẩn hóa đồng bộ 100% giữa hai mảng `answers` và `answersList` (0 mismatches):
+    - **Câu 42:** Đưa phương án A đầy đủ câu vào cả 2 mảng (`"Oswald Hanfling did not argue as such. Oswald Hanfling believes that \"An artwork is a kind of creation whose primary function is to provide aesthetic satisfaction to others.\""`).
+    - **Câu 193:** Đặt **Option A** (`"Good work allows for multiple interpretations..."`) làm đáp án đúng (`is_correct: true`) trên cả 2 mảng và cập nhật lời giải thích chuẩn học thuật.
+- **Trạng Thái Deploy:** Build Vite production thành công (`1.43s`) và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 594100).
+
+
 
 
 
