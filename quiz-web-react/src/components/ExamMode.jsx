@@ -580,17 +580,26 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
             <button
               disabled={currentIndex === 0}
               onClick={() => setCurrentIndex(prev => prev - 1)}
-              className="px-4 py-2 rounded-full border border-warm-border dark:border-slate-800 text-xs font-semibold text-warm-text dark:text-slate-200 hover:bg-warm-hover dark:hover:bg-slate-800 disabled:opacity-40 min-h-[44px]"
+              className="px-4 py-2 rounded-full border border-warm-border dark:border-slate-800 text-xs font-bold text-warm-text dark:text-slate-200 hover:bg-warm-hover dark:hover:bg-slate-800 disabled:opacity-40 min-h-[44px]"
             >
-              Câu trước
+              ← Câu trước
             </button>
-            <button
-              disabled={currentIndex === questions.length - 1}
-              onClick={() => setCurrentIndex(prev => prev + 1)}
-              className="px-4 py-2 rounded-full bg-warm-slate dark:bg-slate-800 text-white text-xs font-semibold hover:bg-slate-700 dark:hover:bg-slate-700 disabled:opacity-40 min-h-[44px]"
-            >
-              Câu tiếp theo
-            </button>
+
+            {currentIndex === questions.length - 1 ? (
+              <button
+                onClick={handleFinishExam}
+                className="px-6 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-extrabold shadow-sm active:scale-95 transition-all min-h-[44px] flex items-center gap-1.5"
+              >
+                ✓ Nộp bài thi
+              </button>
+            ) : (
+              <button
+                onClick={() => setCurrentIndex(prev => prev + 1)}
+                className="px-5 py-2.5 rounded-full bg-slate-900 dark:bg-slate-100 hover:bg-slate-800 dark:hover:bg-white text-white dark:text-slate-900 text-xs sm:text-sm font-extrabold shadow-xs active:scale-95 transition-all min-h-[44px]"
+              >
+                Câu tiếp theo →
+              </button>
+            )}
           </div>
         </div>
 
@@ -604,30 +613,33 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
             ← Câu trước
           </button>
 
-          <button
-            onClick={() => setShowGridModal(true)}
-            className="px-3 py-2 rounded-xl bg-warm-bg dark:bg-slate-800 border border-warm-border dark:border-slate-700 text-xs font-bold min-h-[44px] flex items-center gap-1.5"
-          >
+          <div className="px-3 py-2 rounded-xl bg-warm-bg dark:bg-slate-800 border border-warm-border dark:border-slate-700 text-xs font-bold min-h-[44px] flex items-center gap-1.5">
             <span>{currentIndex + 1} / {questions.length}</span>
-            <BarChart2 className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
-          </button>
+          </div>
 
-          <button
-            disabled={currentIndex === questions.length - 1}
-            onClick={() => setCurrentIndex(prev => prev + 1)}
-            className="px-3 py-2 rounded-xl bg-warm-slate dark:bg-slate-800 text-white text-xs font-bold disabled:opacity-40 min-h-[44px] flex items-center gap-1"
-          >
-            Câu tiếp →
-          </button>
+          {currentIndex === questions.length - 1 ? (
+            <button
+              onClick={handleFinishExam}
+              className="px-4 py-2 rounded-xl bg-emerald-600 text-white text-xs font-extrabold active:scale-95 min-h-[44px]"
+            >
+              ✓ Nộp bài thi
+            </button>
+          ) : (
+            <button
+              onClick={() => setCurrentIndex(prev => prev + 1)}
+              className="px-3 py-2 rounded-xl bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 text-xs font-bold active:scale-95 min-h-[44px]"
+            >
+              Câu tiếp →
+            </button>
+          )}
         </div>
 
-        {/* Question Grid Navigator Sidebar */}
-        <div className="bg-white dark:bg-slate-900 rounded-3xl p-5 border border-warm-border dark:border-slate-800 shadow-soft h-fit">
-          <div className="flex items-center justify-between mb-3">
-            <h4 className="text-xs font-bold text-slate-900 dark:text-slate-100 uppercase tracking-wider">DANH SÁCH CÂU HỎI</h4>
-            <span className="text-[10px] font-mono text-slate-800 dark:text-slate-200 font-extrabold bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded border border-slate-300 dark:border-slate-700">Phím G / Tab</span>
+        {/* Expanded Spacious Question Grid Navigator Sidebar */}
+        <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-warm-border dark:border-slate-800 shadow-soft h-fit">
+          <div className="flex items-center justify-between mb-4">
+            <h4 className="text-xs font-extrabold text-slate-900 dark:text-slate-100 uppercase tracking-wider">DANH SÁCH CÂU HỎI ({questions.length})</h4>
           </div>
-          <div className="grid grid-cols-5 gap-2 max-h-[360px] overflow-y-auto pr-1">
+          <div className="grid grid-cols-5 gap-2.5 max-h-[480px] overflow-y-auto pr-1">
             {questions.map((_, idx) => {
               const isAnswered = userAnswers[idx] !== undefined;
               const isCurrent = idx === currentIndex;
@@ -636,12 +648,12 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
                 <button
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
-                  className={`w-9 h-9 rounded-xl text-xs font-bold transition-all flex items-center justify-center border ${
+                  className={`w-10 h-10 rounded-xl text-xs font-extrabold transition-all flex items-center justify-center border ${
                     isCurrent
-                      ? 'ring-2 ring-warm-slate border-warm-slate bg-warm-slate text-white font-extrabold'
+                      ? 'ring-2 ring-indigo-500 border-indigo-500 bg-indigo-600 text-white shadow-xs'
                       : isAnswered
-                      ? 'bg-amber-100 dark:bg-amber-950 text-amber-950 dark:text-amber-100 border-amber-300 dark:border-amber-700 font-extrabold'
-                      : 'bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-extrabold border-slate-300 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700'
+                      ? 'bg-amber-100 dark:bg-amber-950 text-amber-950 dark:text-amber-100 border-amber-300 dark:border-amber-700'
+                      : 'bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 border-slate-300 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700'
                   }`}
                 >
                   {idx + 1}
@@ -650,58 +662,16 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
             })}
           </div>
 
-          <div className="mt-4 pt-4 border-t border-warm-border/60 dark:border-slate-800 space-y-2 text-[11px] text-warm-muted dark:text-slate-400 font-medium">
+          <div className="mt-4 pt-4 border-t border-warm-border/60 dark:border-slate-800 space-y-2 text-[11px] text-warm-muted dark:text-slate-400 font-bold">
             <div className="flex items-center gap-2">
               <span className="w-3 h-3 rounded bg-amber-100 dark:bg-amber-950 border border-amber-300 dark:border-amber-800" /> Đã chọn ({Object.keys(userAnswers).length})
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded bg-warm-bg dark:bg-slate-800 border border-warm-border dark:border-slate-700" /> Chưa chọn ({questions.length - Object.keys(userAnswers).length})
+              <span className="w-3 h-3 rounded bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700" /> Chưa chọn ({questions.length - Object.keys(userAnswers).length})
             </div>
           </div>
         </div>
       </div>
-
-      {/* Quick Question Grid Drawer / Modal (HotKey G or Tab) */}
-      <AnimatePresence>
-        {showGridModal && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4" onClick={() => setShowGridModal(false)}>
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs" />
-            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} className="relative bg-white dark:bg-slate-900 rounded-3xl p-6 border border-warm-border dark:border-slate-800 shadow-soft-lg max-w-lg w-full z-10 space-y-4" onClick={e => e.stopPropagation()}>
-              <div className="flex items-center justify-between border-b border-warm-border/60 dark:border-slate-800 pb-3">
-                <h3 className="text-base sm:text-lg font-bold flex items-center gap-2 text-slate-900 dark:text-slate-100">🎯 Bảng Nhảy Nhanh Câu Hỏi (Phím G / Tab)</h3>
-                <button onClick={() => setShowGridModal(false)} className="p-1.5 rounded-full hover:bg-warm-hover dark:hover:bg-slate-800 text-warm-muted dark:text-slate-400">✕</button>
-              </div>
-              <div className="grid grid-cols-6 sm:grid-cols-8 gap-2.5 max-h-[320px] overflow-y-auto p-1">
-                {questions.map((_, idx) => {
-                  const isAnswered = userAnswers[idx] !== undefined;
-                  const isCurrent = idx === currentIndex;
-                  return (
-                    <button
-                      key={idx}
-                      onClick={() => {
-                        setCurrentIndex(idx);
-                        setShowGridModal(false);
-                      }}
-                      className={`h-10 rounded-xl text-xs font-bold transition-all flex items-center justify-center border ${
-                        isCurrent
-                          ? 'ring-2 ring-warm-slate border-warm-slate bg-warm-slate text-white'
-                          : isAnswered
-                          ? 'bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-300 border-amber-300 dark:border-amber-800'
-                          : 'bg-warm-bg dark:bg-slate-800 text-warm-muted dark:text-slate-400 border-warm-border dark:border-slate-700 hover:bg-warm-hover dark:hover:bg-slate-700'
-                      }`}
-                    >
-                      {idx + 1}
-                    </button>
-                  );
-                })}
-              </div>
-              <button onClick={() => setShowGridModal(false)} className="w-full py-2.5 rounded-xl bg-warm-slate dark:bg-slate-800 text-white font-bold text-xs transition-colors">
-                Đóng
-              </button>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
 
       {/* Knowt Style Hotkey Overlay Modal (Hotkey ?) */}
       <AnimatePresence>

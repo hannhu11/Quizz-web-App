@@ -81,45 +81,45 @@ export default function TestSetupModal({ isOpen, onClose, quiz, onStartTest }) {
           initial={{ scale: 0.95, opacity: 0, y: 15 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.95, opacity: 0, y: 15 }}
-          className="relative w-full max-w-xl bg-white rounded-3xl p-6 sm:p-8 border border-warm-border shadow-soft-lg z-10 max-h-[90vh] flex flex-col overflow-hidden text-warm-text"
+          className="relative w-full max-w-xl bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xl z-10 max-h-[90vh] flex flex-col overflow-hidden text-slate-900 dark:text-slate-100"
         >
           {/* Header Bar */}
-          <div className="flex items-start justify-between pb-4 border-b border-warm-border/60">
+          <div className="flex items-start justify-between pb-4 border-b border-slate-100 dark:border-slate-800">
             <div>
-              <span className="text-[11px] font-bold text-amber-800 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200">
-                {quiz.category || 'Quizlet Test'}
+              <span className="text-[11px] font-bold text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 px-2.5 py-0.5 rounded-full border border-slate-200 dark:border-slate-700">
+                {quiz.category || 'Tùy Chỉnh Bài Thi'}
               </span>
-              <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 mt-1 flex items-center gap-2">
-                <FileText className="w-5 h-5 text-warm-slate" /> Set up your test
+              <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-slate-100 mt-1 flex items-center gap-2">
+                <FileText className="w-5 h-5 text-indigo-600 dark:text-indigo-400" /> Thiết Lập Bài Thi (Set up your test)
               </h2>
-              <p className="text-xs text-warm-muted">{quiz.title}</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">{quiz.title}</p>
             </div>
             <button
               onClick={onClose}
-              className="p-1.5 rounded-full hover:bg-warm-hover text-warm-muted hover:text-warm-text transition-colors"
+              className="p-1.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
           </div>
 
           {/* Body Options Scroll Area */}
-          <div className="py-5 overflow-y-auto flex-1 space-y-6 pr-1">
+          <div className="py-5 overflow-y-auto flex-1 space-y-5 pr-1">
 
             {/* Questions count slider & bidirectional input sync */}
-            <div className="space-y-3 p-4 rounded-2xl bg-warm-bg border border-warm-border">
-              <div className="flex items-center justify-between text-xs font-bold text-warm-text">
-                <span>Questions (max {totalQuestionsAvailable})</span>
+            <div className="space-y-3 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
+              <div className="flex items-center justify-between text-xs font-extrabold text-slate-800 dark:text-slate-200">
+                <span>Số lượng câu hỏi (Tối đa {totalQuestionsAvailable})</span>
                 {/* Synchronized Editable Input Box */}
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-1.5">
                   <input
                     type="number"
                     min="1"
                     max={totalQuestionsAvailable}
                     value={questionCount}
                     onChange={(e) => handleQuestionCountInput(e.target.value)}
-                    className="w-16 px-2 py-1 text-center font-mono font-bold rounded-lg border border-warm-border bg-white text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-warm-slate/30"
+                    className="w-16 px-2 py-1 text-center font-mono font-extrabold rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/40"
                   />
-                  <span className="text-xs text-warm-muted">câu</span>
+                  <span className="text-xs text-slate-500 dark:text-slate-400 font-semibold">câu</span>
                 </div>
               </div>
               {/* Range Slider */}
@@ -129,39 +129,43 @@ export default function TestSetupModal({ isOpen, onClose, quiz, onStartTest }) {
                 max={totalQuestionsAvailable}
                 value={questionCount}
                 onChange={(e) => handleQuestionCountInput(e.target.value)}
-                className="w-full h-2 bg-warm-border rounded-lg appearance-none cursor-pointer accent-warm-slate"
+                className="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-600 dark:accent-indigo-400"
               />
             </div>
 
-            {/* Study starred terms only toggle */}
-            <div className="flex items-center justify-between p-3.5 rounded-2xl bg-amber-50/70 border border-amber-200/80">
+            {/* Study starred terms only toggle (Streamlined Notion / Linear style) */}
+            <div className="flex items-center justify-between p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
               <div>
-                <label className="text-xs font-bold text-amber-950 block">Study starred terms only ⭐</label>
-                <span className="text-[11px] text-amber-800">Chỉ tạo bài thi với những câu đã lưu ngôi sao</span>
+                <label className="text-xs font-extrabold text-slate-900 dark:text-slate-100 block">Chỉ câu hỏi đã lưu</label>
+                <span className="text-[11px] text-slate-500 dark:text-slate-400 font-semibold">Chỉ tạo bài thi với những câu đã lưu</span>
               </div>
               <input
                 type="checkbox"
                 checked={studyStarredOnly}
                 onChange={(e) => setStudyStarredOnly(e.target.checked)}
-                className="w-5 h-5 accent-amber-600 rounded cursor-pointer"
+                className="w-5 h-5 accent-indigo-600 dark:accent-indigo-400 rounded cursor-pointer"
               />
             </div>
 
             {/* Answer With Mode */}
             <div className="space-y-2">
-              <label className="text-xs font-bold text-warm-text block">Answer with</label>
+              <label className="text-xs font-extrabold text-slate-800 dark:text-slate-200 block">Trả lời theo (Answer with)</label>
               <div className="grid grid-cols-3 gap-2">
-                {['Term', 'Definition', 'Both'].map((opt) => (
+                {[
+                  { key: 'Term', label: 'Thuật ngữ (Term)' },
+                  { key: 'Definition', label: 'Định nghĩa (Definition)' },
+                  { key: 'Both', label: 'Cả hai (Both)' }
+                ].map((opt) => (
                   <button
-                    key={opt}
-                    onClick={() => setAnswerWith(opt)}
-                    className={`py-2 px-3 rounded-xl text-xs font-semibold transition-all border ${
-                      answerWith === opt
-                        ? 'bg-warm-slate text-white border-warm-slate shadow-xs'
-                        : 'bg-white border-warm-border text-warm-muted hover:text-warm-text'
+                    key={opt.key}
+                    onClick={() => setAnswerWith(opt.key)}
+                    className={`py-2.5 px-3 rounded-xl text-xs font-extrabold transition-all border ${
+                      answerWith === opt.key
+                        ? 'bg-indigo-600 text-white border-indigo-600 shadow-xs'
+                        : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-slate-300 dark:hover:border-slate-700'
                     }`}
                   >
-                    {opt}
+                    {opt.label}
                   </button>
                 ))}
               </div>
@@ -169,95 +173,88 @@ export default function TestSetupModal({ isOpen, onClose, quiz, onStartTest }) {
 
             {/* Question Types Toggles */}
             <div className="space-y-2.5">
-              <label className="text-xs font-bold text-warm-text block">Question types</label>
-              <div className="grid grid-cols-2 gap-2 text-xs font-medium">
-                <label className="flex items-center justify-between p-3 rounded-xl border border-warm-border bg-white cursor-pointer hover:bg-warm-hover">
-                  <span>True/False</span>
+              <label className="text-xs font-extrabold text-slate-800 dark:text-slate-200 block">Loại câu hỏi (Question types)</label>
+              <div className="grid grid-cols-2 gap-2 text-xs font-semibold">
+                <label className="flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800/60">
+                  <span className="text-slate-800 dark:text-slate-200">Đúng / Sai (True/False)</span>
                   <input
                     type="checkbox"
                     checked={enableTrueFalse}
                     onChange={(e) => setEnableTrueFalse(e.target.checked)}
-                    className="w-4 h-4 accent-warm-slate rounded"
+                    className="w-4 h-4 accent-indigo-600 dark:accent-indigo-400 rounded"
                   />
                 </label>
 
-                <label className="flex items-center justify-between p-3 rounded-xl border border-warm-border bg-white cursor-pointer hover:bg-warm-hover">
-                  <span>Multiple Choice</span>
+                <label className="flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800/60">
+                  <span className="text-slate-800 dark:text-slate-200">Trắc nghiệm (Multiple Choice)</span>
                   <input
                     type="checkbox"
                     checked={enableMultipleChoice}
                     onChange={(e) => setEnableMultipleChoice(e.target.checked)}
-                    className="w-4 h-4 accent-warm-slate rounded"
+                    className="w-4 h-4 accent-indigo-600 dark:accent-indigo-400 rounded"
                   />
                 </label>
 
-                <label className="flex items-center justify-between p-3 rounded-xl border border-warm-border bg-white cursor-pointer hover:bg-warm-hover">
-                  <span>Matching</span>
+                <label className="flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800/60">
+                  <span className="text-slate-800 dark:text-slate-200">Nối từ (Matching)</span>
                   <input
                     type="checkbox"
                     checked={enableMatching}
                     onChange={(e) => setEnableMatching(e.target.checked)}
-                    className="w-4 h-4 accent-warm-slate rounded"
+                    className="w-4 h-4 accent-indigo-600 dark:accent-indigo-400 rounded"
                   />
                 </label>
 
-                <label className="flex items-center justify-between p-3 rounded-xl border border-warm-border bg-white cursor-pointer hover:bg-warm-hover">
-                  <span>Written</span>
+                <label className="flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800/60">
+                  <span className="text-slate-800 dark:text-slate-200">Tự luận (Written)</span>
                   <input
                     type="checkbox"
                     checked={enableWritten}
                     onChange={(e) => setEnableWritten(e.target.checked)}
-                    className="w-4 h-4 accent-warm-slate rounded"
+                    className="w-4 h-4 accent-indigo-600 dark:accent-indigo-400 rounded"
                   />
                 </label>
               </div>
             </div>
 
             {/* Timer Setup Section */}
-            <div className="p-4 rounded-2xl bg-warm-bg border border-warm-border space-y-3">
+            <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 space-y-3">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-warm-slate" />
-                  <span className="text-xs font-bold text-warm-text">Hẹn giờ bài thi (Timer)</span>
+                  <Clock className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+                  <span className="text-xs font-extrabold text-slate-800 dark:text-slate-200">Đếm thời gian làm bài</span>
                 </div>
                 <input
                   type="checkbox"
                   checked={enableTimer}
                   onChange={(e) => setEnableTimer(e.target.checked)}
-                  className="w-4 h-4 accent-warm-slate rounded cursor-pointer"
+                  className="w-4 h-4 accent-indigo-600 dark:accent-indigo-400 rounded cursor-pointer"
                 />
               </div>
 
               {enableTimer && (
-                <div className="pt-2 border-t border-warm-border/60 space-y-3 text-xs">
-                  <div className="flex items-center gap-2">
-                    <button
-                      onClick={() => setTimerMode('countdown')}
-                      className={`flex-1 py-1.5 rounded-lg font-semibold border ${
-                        timerMode === 'countdown' ? 'bg-warm-slate text-white border-warm-slate' : 'bg-white border-warm-border text-warm-muted'
-                      }`}
+                <div className="grid grid-cols-2 gap-3 pt-2 border-t border-slate-200 dark:border-slate-700 text-xs font-semibold">
+                  <div>
+                    <label className="block text-[11px] font-extrabold text-slate-600 dark:text-slate-400 mb-1">Chế độ đếm</label>
+                    <select
+                      value={timerMode}
+                      onChange={(e) => setTimerMode(e.target.value)}
+                      className="w-full px-2.5 py-1.5 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 text-xs font-bold"
                     >
-                      Đếm ngược (Tự nộp)
-                    </button>
-                    <button
-                      onClick={() => setTimerMode('countup')}
-                      className={`flex-1 py-1.5 rounded-lg font-semibold border ${
-                        timerMode === 'countup' ? 'bg-warm-slate text-white border-warm-slate' : 'bg-white border-warm-border text-warm-muted'
-                      }`}
-                    >
-                      Đếm tiến (Tùy nộp)
-                    </button>
+                      <option value="countdown">Đếm ngược (Countdown)</option>
+                      <option value="countup">Đếm xuôi (Countup)</option>
+                    </select>
                   </div>
 
-                  <div className="flex items-center justify-between">
-                    <span className="text-warm-muted font-medium">Thời gian (phút):</span>
+                  <div>
+                    <label className="block text-[11px] font-extrabold text-slate-600 dark:text-slate-400 mb-1">Thời gian (phút)</label>
                     <input
                       type="number"
                       min="1"
                       max="180"
                       value={timerMinutes}
-                      onChange={(e) => setTimerMinutes(parseInt(e.target.value) || 1)}
-                      className="w-20 px-2 py-1 text-center font-mono font-bold rounded-lg border border-warm-border bg-white"
+                      onChange={(e) => setTimerMinutes(parseInt(e.target.value, 10) || 1)}
+                      className="w-full px-2.5 py-1.5 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 text-xs font-mono font-bold"
                     />
                   </div>
                 </div>

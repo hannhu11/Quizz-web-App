@@ -400,9 +400,13 @@ export default function PracticeMode({ quiz, onBack }) {
               <div className="text-right pt-2 hidden sm:block">
                 <button
                   onClick={handleNextQuestion}
-                  className="px-6 py-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm shadow-xs transition-all active:scale-95 inline-flex items-center gap-2 min-h-[44px]"
+                  className={`px-6 py-2.5 rounded-full text-white font-extrabold text-xs sm:text-sm shadow-xs transition-all active:scale-95 inline-flex items-center gap-2 min-h-[44px] ${
+                    currentIndex === questions.length - 1
+                      ? 'bg-emerald-600 hover:bg-emerald-700'
+                      : 'bg-indigo-600 hover:bg-indigo-700'
+                  }`}
                 >
-                  Câu tiếp theo <ArrowRight className="w-4 h-4" />
+                  {currentIndex === questions.length - 1 ? '✓ Nộp bài thi' : 'Câu tiếp theo →'}
                 </button>
               </div>
             </motion.div>
@@ -413,19 +417,32 @@ export default function PracticeMode({ quiz, onBack }) {
       {/* Mobile Ergonomic Sticky Bottom Bar (< 640px) */}
       <div className="sm:hidden fixed bottom-0 left-0 right-0 z-30 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-warm-border dark:border-slate-800 p-3 flex items-center justify-between gap-3 shadow-lg">
         <button
-          onClick={handlePrevQuestion}
           disabled={currentIndex === 0}
-          className="px-3 py-2 rounded-xl border border-warm-border dark:border-slate-800 disabled:opacity-40 text-xs font-bold min-h-[44px] flex items-center gap-1"
+          onClick={() => {
+            if (currentIndex > 0) {
+              setCurrentIndex(prev => prev - 1);
+              setIsAnswered(false);
+            }
+          }}
+          className="px-4 py-2 rounded-xl border border-warm-border dark:border-slate-800 text-xs font-bold disabled:opacity-40 min-h-[44px] flex items-center gap-1"
         >
-          <ArrowLeft className="w-4 h-4" /> Câu trước
+          ← Câu trước
         </button>
+
+        <span className="text-xs font-bold text-slate-800 dark:text-slate-200">
+          {currentIndex + 1} / {questions.length}
+        </span>
 
         {isAnswered ? (
           <button
             onClick={handleNextQuestion}
-            className="flex-1 py-2.5 rounded-xl bg-blue-600 text-white font-extrabold text-xs min-h-[44px] shadow-xs active:scale-95 flex items-center justify-center gap-1.5"
+            className={`px-4 py-2 rounded-xl text-white text-xs font-extrabold active:scale-95 min-h-[44px] flex items-center gap-1 ${
+              currentIndex === questions.length - 1
+                ? 'bg-emerald-600'
+                : 'bg-indigo-600'
+            }`}
           >
-            Câu tiếp theo <ArrowRight className="w-4 h-4" />
+            {currentIndex === questions.length - 1 ? '✓ Nộp bài' : 'Câu tiếp →'}
           </button>
         ) : isMultiSelect ? (
           <button

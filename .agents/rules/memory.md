@@ -455,6 +455,20 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Đổi slogan dưới logo QuizzFlow thành: **"Nền tảng ôn luyện và ghi nhớ tối ưu"**.
 - **Trạng Thái Deploy:** Build Vite production thành công (`1.22s`) và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 682277).
 
+### 🎨⚡ Cập Nhật Đợt 29: Redesign Modal "Set up your test" Chuẩn Notion/Linear, Tối Ưu Nút Nộp Bài Thi Câu Cuối & Bảo Mật Nginx JSON Data:
+- **Tái Thiết Kế Modal "Set up your test" (`TestSetupModal.jsx`):**
+  - Loại bỏ hoàn toàn viền/nền vàng AI (`bg-amber-50`) và icon lấp lánh `✨`. Áp dụng phong cách phẳng tối giản Notion/Linear (`bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl`).
+  - Chuẩn hóa nhãn filter câu hỏi đã lưu thành: **"Chỉ tạo bài thi với những câu đã lưu"**.
+  - Thiết kế nút bấm chính phẳng sang trọng **"Bắt đầu bài thi"** (`id="test-start-button"`).
+- **Tối Ưu Nút Chuyển Câu & Nộp Bài Thi (`ExamMode.jsx` & `PracticeMode.jsx`):**
+  - Tại câu hỏi cuối cùng của đề thi (VD: Câu 20/20), nút "Câu tiếp theo" tự động đổi thành nút **"✓ Nộp bài thi"** (màu xanh lá Emerald nổi bật).
+  - Mở rộng bảng danh sách câu hỏi bên cạnh (`w-10 h-10 rounded-xl font-extrabold`) giúp thao tác chọn câu dễ dàng.
+  - Xóa vĩnh viễn badge "Phím G / Tab" và modal popup "Bảng nhảy nhanh câu hỏi".
+- **Bảo Mật API Dữ Liệu Bộ Đề (`scratch/hannhu.io.vn.conf`):**
+  - Thêm quy tắc Nginx `location ~* \.json$ { deny all; return 403; }` trên Docker Nginx (`pethub-nginx`), cấm tải trực tiếp các file `.json` thô qua trình duyệt để chống cào dữ liệu.
+- **Trạng Thái Deploy:** Build Vite production thành công (`947ms`), Nginx Docker reload và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 690126).
+
+
 
 
 
