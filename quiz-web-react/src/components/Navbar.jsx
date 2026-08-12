@@ -85,7 +85,7 @@ export default function Navbar({
             <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-500" />
             <span className="hidden md:inline">Đã lưu</span>
             {starredCount > 0 && (
-              <span className="px-1.5 py-0.2 bg-amber-500 text-white rounded-full text-[10px] font-bold">
+              <span className="px-1.5 py-0.2 bg-amber-100 text-amber-950 dark:bg-amber-900/90 dark:text-amber-100 border border-amber-300 dark:border-amber-700 rounded-full text-[10px] font-extrabold">
                 {starredCount}
               </span>
             )}

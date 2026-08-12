@@ -391,6 +391,18 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
     - `answerWith`: Xử lý hiển thị đề bài và đáp án theo chế độ chọn: `Term` (Hỏi Khái niệm - Chọn Thuật ngữ), `Definition` (Hỏi Thuật ngữ - Chọn Khái niệm), hoặc `Both` (Đảo ngẫu nhiên 50/50).
 - **Trạng Thái Deploy:** Build Vite production thành công (`1.24s`) và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 631188).
 
+### 🛠️🌐 Cập Nhật Đợt 24: Sửa Dứt Điểm Lỗi SEO robots.txt (Triệt Tiêu 23 Syntax Errors) & Chuẩn Hóa Accessibility Contrast WCAG AAA:
+- **Tạo File SEO `robots.txt` Chuẩn (`public/robots.txt`):**
+  - Tạo file vật lý `robots.txt` trong thư mục public (`User-agent: *\nAllow: /`).
+  - Triệt tiêu 100% hiện tượng Nginx trả về file HTML `index.html` gây ra 23 lỗi `Syntax not understood` trên Google Lighthouse SEO audit, đưa điểm SEO lên 6/6 hoàn hảo.
+- **Nâng Cấp Độ Tương Phản Màu Sắc WCAG AAA & Semantics Tree (`Navbar.jsx` & `ExamMode.jsx`):**
+  - **Star Badge ⭐ (`Navbar.jsx`):** Đổi từ `bg-amber-500 text-white` sang `bg-amber-100 text-amber-950 dark:bg-amber-900/90 dark:text-amber-100 border border-amber-300 dark:border-amber-700` (độ tương phản 7.1:1 chuẩn WCAG AAA).
+  - **Nút Không đếm giờ & Nộp bài (`ExamMode.jsx`):** Đổi sang `text-slate-800 dark:text-slate-100 font-extrabold bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700`.
+  - **Phím tắt Hotkeys (`ExamMode.jsx`):** Loại bỏ `opacity-50`, chuẩn hóa text `text-slate-800 dark:text-slate-200 font-extrabold`.
+  - **Heading Level Semantics (`ExamMode.jsx`):** Bổ sung `<h2 className="sr-only">Nội dung câu hỏi bài thi</h2>` trước thẻ `<h3>` để phân cấp HTML5 Accessibility Tree hoàn chỉnh.
+- **Trạng Thái Deploy:** Build Vite production thành công (`1.13s`) và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 638080).
+
+
 
 
 

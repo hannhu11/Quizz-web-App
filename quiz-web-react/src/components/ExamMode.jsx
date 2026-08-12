@@ -491,12 +491,12 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           {/* Timer Display if enabled */}
           {timerConfig.enabled ? (
-            <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-full bg-amber-50 dark:bg-amber-950/80 border border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-300 font-mono font-bold text-xs sm:text-sm shadow-xs whitespace-nowrap shrink-0">
-              <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-600 dark:text-amber-400 animate-pulse shrink-0" />
+            <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-full bg-amber-100 dark:bg-amber-900/90 border border-amber-300 dark:border-amber-700 text-amber-950 dark:text-amber-100 font-mono font-extrabold text-xs sm:text-sm shadow-xs whitespace-nowrap shrink-0">
+              <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-700 dark:text-amber-300 animate-pulse shrink-0" />
               <span>{timerConfig.mode === 'countdown' ? formatTime(secondsRemaining) : formatTime(secondsElapsed)}</span>
             </div>
           ) : (
-            <div className="flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-full bg-warm-bg dark:bg-slate-800 border border-warm-border dark:border-slate-700 text-warm-muted dark:text-slate-400 font-mono text-xs font-bold whitespace-nowrap shrink-0">
+            <div className="flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-100 font-mono text-xs font-extrabold whitespace-nowrap shrink-0">
               <span className="hidden sm:inline">Không đếm giờ</span>
               <span className="sm:hidden">Không đếm</span>
             </div>
@@ -504,7 +504,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
 
           <button
             onClick={handleAttemptSubmit}
-            className="px-3.5 sm:px-5 py-2 rounded-full bg-emerald-600 dark:bg-emerald-700 hover:bg-emerald-700 text-white font-extrabold text-xs shadow-xs transition-all active:scale-95 whitespace-nowrap shrink-0"
+            className="px-3.5 sm:px-5 py-2 rounded-full bg-emerald-700 dark:bg-emerald-600 hover:bg-emerald-800 text-white font-extrabold text-xs shadow-xs transition-all active:scale-95 whitespace-nowrap shrink-0"
           >
             <span className="hidden sm:inline">Nộp Bài Thi</span>
             <span className="sm:hidden">Nộp bài</span>
@@ -515,20 +515,22 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* Main Question Panel */}
         <div ref={questionRef} className="lg:col-span-3 bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-warm-border dark:border-slate-800 shadow-soft">
-          <div className="flex items-center justify-between text-xs font-bold text-warm-muted dark:text-slate-400 mb-4 flex-wrap gap-2">
+          <div className="flex items-center justify-between text-xs font-bold text-slate-700 dark:text-slate-300 mb-4 flex-wrap gap-2">
             <div className="flex items-center gap-2">
-              <span className="text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-3 py-1 rounded-full border border-amber-200/80 dark:border-amber-800">
+              <span className="text-amber-950 dark:text-amber-100 bg-amber-100 dark:bg-amber-900/80 px-3 py-1 rounded-full border border-amber-300 dark:border-amber-700 font-extrabold">
                 Câu {currentIndex + 1} / {questions.length}
               </span>
               {(currentQ.answers || []).filter(a => a.isCorrect).length > 1 && (
-                <span className="text-purple-800 dark:text-purple-300 bg-purple-50 dark:bg-purple-950/60 px-2.5 py-0.5 rounded-md border border-purple-200 dark:border-purple-800">
+                <span className="text-purple-950 dark:text-purple-100 bg-purple-100 dark:bg-purple-900/80 px-2.5 py-0.5 rounded-md border border-purple-300 dark:border-purple-700 font-extrabold">
                   Multiple Choice (Chọn tất cả đáp án đúng)
                 </span>
               )}
             </div>
-            <span>{quiz.category}</span>
+            <span className="font-extrabold text-slate-800 dark:text-slate-200">{quiz.category}</span>
           </div>
 
+          {/* Accessibility Landmark Heading Level 2 */}
+          <h2 className="sr-only">Nội dung câu hỏi bài thi</h2>
           <h3 className="text-base sm:text-xl font-bold text-slate-900 dark:text-slate-100 leading-relaxed mb-6 break-words">
             {currentQ.content}
           </h3>
@@ -559,7 +561,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
                   </span>
                   <span className="break-words leading-relaxed flex-1">{answer.content}</span>
 
-                  <span className="hidden sm:inline-block text-[10px] font-mono opacity-50 px-1.5 py-0.5 rounded border border-current shrink-0">
+                  <span className="hidden sm:inline-block text-[10px] font-mono text-slate-700 dark:text-slate-200 font-extrabold px-1.5 py-0.5 rounded border border-slate-300 dark:border-slate-700 shrink-0">
                     Phím {aIdx + 1} / {String.fromCharCode(65 + aIdx)}
                   </span>
                 </button>
@@ -568,9 +570,9 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
           </div>
 
           {/* Keyboard Helper Hint Bar (Knowt & Quizlet Style) */}
-          <div className="flex items-center justify-between text-[11px] font-medium text-warm-muted dark:text-slate-400 pt-2 pb-4 border-t border-warm-border/40 dark:border-slate-800/60 flex-wrap gap-2">
-            <span className="flex items-center gap-1.5"><Keyboard className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" /> <b>Phím tắt:</b> <code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">1-5 / A-E</code> chọn • <code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">S / *</code> Gắn sao</span>
-            <span><code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">G / Tab</code> Bảng câu • <code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">?</code> Trợ giúp</span>
+          <div className="flex items-center justify-between text-[11px] font-medium text-slate-700 dark:text-slate-300 pt-2 pb-4 border-t border-warm-border/40 dark:border-slate-800/60 flex-wrap gap-2">
+            <span className="flex items-center gap-1.5"><Keyboard className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" /> <b>Phím tắt:</b> <code className="bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 px-1 py-0.5 rounded border border-slate-300 dark:border-slate-700 font-mono font-extrabold">1-5 / A-E</code> chọn • <code className="bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 px-1 py-0.5 rounded border border-slate-300 dark:border-slate-700 font-mono font-extrabold">S / *</code> Gắn sao</span>
+            <span><code className="bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 px-1 py-0.5 rounded border border-slate-300 dark:border-slate-700 font-mono font-extrabold">G / Tab</code> Bảng câu • <code className="bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 px-1 py-0.5 rounded border border-slate-300 dark:border-slate-700 font-mono font-extrabold">?</code> Trợ giúp</span>
           </div>
 
           {/* Previous / Next buttons (Desktop) */}
