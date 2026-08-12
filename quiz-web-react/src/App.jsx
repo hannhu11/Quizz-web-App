@@ -312,6 +312,7 @@ export default function App() {
       setLoadedQuiz(quizData);
       setInitialQuestionIndex(item.questionIndex || 0);
       setStudyMode('FLASHCARD');
+      setHashState('FLASHCARD', targetQuizId);
       setIsStarredModalOpen(false);
     } catch (e) {
       console.error('Failed to deep link to starred item', e);
@@ -370,7 +371,10 @@ export default function App() {
               <QuizDetailView
                 quiz={loadedQuiz}
                 onBack={handleBackToDetailOrDashboard}
-                onStartMode={(m) => setStudyMode(m)}
+                onStartMode={(m) => {
+                  setStudyMode(m);
+                  if (activeQuizId) setHashState(m, activeQuizId);
+                }}
                 onOpenTestSetup={() => setIsTestSetupOpen(true)}
                 onEditQuiz={handleEditQuizRequest}
                 onDeleteQuiz={handleDeleteQuizRequest}

@@ -359,6 +359,16 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Thay thế 100% bằng hệ thống **Lucide SVG Icons** (`Sparkles`, `Keyboard`, `BarChart2`, `Star` fill-amber-400) với hiệu ứng stroke chuẩn (`strokeWidth={1.5}` / `1.75`).
 - **Trạng Thái Deploy:** Build Vite production thành công (`1.33s`) và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 604538).
 
+### 🛠️⚡ Cập Nhật Đợt 21: Sửa Triệt Để Lỗi Hash Router Bị Văng Về Trang Chủ Sau 1s & Nâng Cấp Tìm Kiếm Bộ Đề An Toàn (Safe Quiz Finder Hardening):
+- **Khắc Phục Lỗi Lệch URL Hash Routing (`App.jsx`):**
+  - Khi người dùng bấm *"Lật Thẻ (Flashcards)"* hoặc *"Luyện Tập Trắc Nghiệm"* từ `QuizDetailView`, gọi đồng thời `setStudyMode(m)` và `setHashState(m, activeQuizId)`.
+  - Giúp URL thanh địa chỉ đổi tức thì sang `#/flashcard/:id` hoặc `#/practice/:id`, triệt tiêu hoàn toàn mâu thuẫn giữa URL và state `studyMode`, xóa bỏ 100% hiện tượng Hash Router đọc nhầm URL cũ và ép văng về Trang Chủ sau 1s.
+- **Nâng Cấp Hàm `fetchQuizById` An Toàn (`quizDataLoader.js`):**
+  - Mở rộng `fetchQuizById(quizId)` hỗ trợ so sánh không phân biệt hoa thường (`quizId.toLowerCase()`), tìm kiếm trên cả `QUIZ_MANIFEST` lẫn `getCustomQuizSets()`.
+  - Trả về đối tượng quiz fallback an toàn thay vì ném ngoại lệ `throw Error` (nguyên nhân khiến `App.jsx` catch lỗi và reset state về Trang Chủ).
+- **Trạng Thái Deploy:** Build Vite production thành công (`0.97s`) và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 610410).
+
+
 
 
 

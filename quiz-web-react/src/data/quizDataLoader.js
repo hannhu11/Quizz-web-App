@@ -414,16 +414,39 @@ export async function deleteCustomQuizSet(quizId, password) {
 }
 
 export function fetchQuizById(quizId) {
-  const cached = normalizedQuizCache.get(quizId);
-  if (cached) {
-    return cached;
+  if (!quizId) return null;
+  const targetId = String(quizId).trim().toLowerCase();
+  
+  // 1. Check normalized RAM cache
+  for (let [key, val] of normalizedQuizCache.entries()) {
+    if (String(key).trim().toLowerCase() === targetId) {
+      return val;
+    }
   }
-  const manifestItem = QUIZ_MANIFEST.find(q => q.id === quizId);
-  if (!manifestItem) {
-    throw new Error(`Quiz with id ${quizId} not found`);
+
+  // 2. Check static QUIZ_MANIFEST
+  const manifestItem = QUIZ_MANIFEST.find(q => String(q.id).trim().toLowerCase() === targetId);
+  if (manifestItem) {
+    return {
+      ...manifestItem,
+      questions: []
+    };
   }
+
+  // 3. Check custom user-created / community quiz sets
+  const customSets = getCustomQuizSets();
+  const customItem = customSets.find(q => String(q.id).trim().toLowerCase() === targetId);
+  if (customItem) {
+    return customItem;
+  }
+
+  // 4. Safe Fallback instead of throw Error
+  console.warn(`[quizDataLoader] Quiz with id "${quizId}" not found in manifest or custom sets. Returning safe fallback.`);
   return {
-    ...manifestItem,
+    id: quizId,
+    title: 'Bộ Đề Học Tập',
+    subject: 'Ôn Tập',
+    category: 'CHUNG',
     questions: []
   };
 }
