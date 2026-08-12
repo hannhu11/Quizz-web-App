@@ -519,21 +519,39 @@ export function getStarredQuestions(quizId) {
 export function toggleStarQuestion(questionId, quizId, questionData, questionIndex = 0) {
   try {
     const stars = getStarredQuestions();
-    const index = stars.findIndex(s => s.questionId === questionId && s.quizId === quizId);
+    const index = stars.findIndex(s => String(s.questionId) === String(questionId) && String(s.quizId) === String(quizId));
     let updated;
     if (index >= 0) {
-      updated = stars.filter(s => !(s.questionId === questionId && s.quizId === quizId));
+      updated = stars.filter((_, idx) => idx !== index);
     } else {
-      const quizInfo = normalizedQuizCache.get(quizId) || QUIZ_MANIFEST.find(q => q.id === quizId) || {};
+      const realQuizId = quizId || questionData?.quizId || 'STARRED';
+      let quizTitle = questionData?.quizTitle;
+      let subjectCode = questionData?.subjectCode || 'THI';
+      
+      if (!quizTitle || quizTitle === 'Bộ Đề Ôn Tập') {
+        const quizInfo = normalizedQuizCache.get(realQuizId) || QUIZ_MANIFEST.find(q => String(q.id).trim().toLowerCase() === String(realQuizId).trim().toLowerCase()) || {};
+        quizTitle = quizInfo.title || quizInfo.subject || 'Bộ Đề Ôn Tập';
+        if (quizInfo.category) subjectCode = quizInfo.category;
+      }
+      
+      const formattedQuestion = {
+        id: questionId,
+        content: questionData?.content || 'Nội dung câu hỏi',
+        answers: questionData?.answers || questionData?.answersList || [],
+        explanation: questionData?.explanation || '',
+        quizId: realQuizId,
+        quizTitle: quizTitle
+      };
+
       updated = [
         ...stars,
         {
           questionId,
-          quizId,
-          subjectCode: quizInfo.category || 'THI',
-          quizTitle: quizInfo.title || 'Bộ Đề Ôn Tập',
+          quizId: realQuizId,
+          subjectCode: subjectCode,
+          quizTitle: quizTitle,
           questionIndex: questionData?.questionIndex ?? questionIndex,
-          question: questionData,
+          question: formattedQuestion,
           timestamp: Date.now()
         }
       ];

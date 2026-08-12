@@ -444,6 +444,18 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Bổ sung `<h2 className="sr-only">Chi tiết bộ đề và tiến độ học tập</h2>` vào `QuizDetailView.jsx`.
 - **Trạng Thái Deploy:** Build Vite production thành công (`1.18s`) và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 674764).
 
+### 🛠️⚡ Cập Nhật Đợt 28: Sửa Triệt Để Lỗi Thẻ Flashcard Đã Lưu Trắng Tinh, Đổi Tiêu Đề Tab Chrome & Slogan QuizzFlow:
+- **Khắc Phục Dứt Điểm Lỗi Thẻ Trắng Tinh / "Chưa Có Đáp Án" Khi Xem Câu Hỏi Đã Lưu (`quizDataLoader.js`, `App.jsx`, `FlashcardViewer.jsx`):**
+  - Cập nhật hàm `toggleStarQuestion`: Lưu trọn bộ Object dữ liệu câu hỏi (`id`, `content`, `answers`, `explanation`, `quizId` gốc, `quizTitle` gốc) vào `localStorage`. Tự động tra cứu tên bộ đề thực tế từ Manifest/Cache thay vì để mặc định `'Bộ Đề Ôn Tập'`.
+  - Xây dựng cơ chế **Virtual Starred Quiz Set** trong `App.jsx`: Khi nhảy vào câu hỏi đã lưu trong chế độ Flashcard, nếu bộ đề gốc không tải được từ server/file tĩnh, ứng dụng sẽ tự động dựng bộ đề ảo từ dữ liệu cache local.
+  - Cập nhật `FlashcardViewer.jsx`: Thêm `useEffect` đồng bộ `quiz.questions` prop khi `quiz` thay đổi, triệt tiêu 100% tình trạng Flashcard hiển thị `2 / 0` hay trắng tinh.
+- **Cập Nhật Chrome Tab Title (`index.html`):**
+  - Đổi tiêu đề `<title>` từ *"Hàn Như Space..."* thành: `<title>QuizzFlow - Nền Tảng Ôn Luyện & Trắc Nghiệm Thông Minh</title>`.
+- **Cập Nhật Slogan Header (`Navbar.jsx`):**
+  - Đổi slogan dưới logo QuizzFlow thành: **"Nền tảng ôn luyện và ghi nhớ tối ưu"**.
+- **Trạng Thái Deploy:** Build Vite production thành công (`1.22s`) và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 682277).
+
+
 
 
 

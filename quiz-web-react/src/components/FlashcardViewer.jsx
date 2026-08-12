@@ -35,6 +35,13 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
       : ca.content;
   }
 
+  // Sync quiz questions prop
+  useEffect(() => {
+    if (quiz && Array.isArray(quiz.questions) && quiz.questions.length > 0) {
+      setQuestions(quiz.questions);
+    }
+  }, [quiz]);
+
   // Sync initialIndex prop
   useEffect(() => {
     if (initialIndex >= 0 && initialIndex < questions.length) {

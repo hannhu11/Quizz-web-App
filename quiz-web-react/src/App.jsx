@@ -306,18 +306,38 @@ export default function App() {
   // Click-to-Jump Deep Linking from Starred Modal
   const handleJumpToStarredQuestion = useCallback((item) => {
     try {
-      const targetQuizId = item.quizId || item.question?.quizId || QUIZ_MANIFEST[0].id;
-      const quizData = fetchQuizById(targetQuizId);
-      setActiveQuizId(targetQuizId);
+      const targetQuizId = item.quizId || item.question?.quizId || 'STARRED';
+      let quizData = fetchQuizById(targetQuizId);
+      
+      // If quizData questions are empty or quiz is not found, construct a Virtual Starred Quiz Set
+      if (!quizData || !quizData.questions || quizData.questions.length === 0) {
+        const setQuestions = starredQuestions
+          .filter(s => String(s.quizId) === String(targetQuizId) || targetQuizId === 'STARRED')
+          .map(s => s.question)
+          .filter(Boolean);
+
+        quizData = {
+          id: targetQuizId,
+          title: item.quizTitle || 'Câu Hỏi Đã Lưu',
+          subject: item.subjectCode || 'Câu Hỏi Đã Lưu',
+          category: 'ĐÃ LƯU',
+          questions: setQuestions.length > 0 ? setQuestions : [item.question].filter(Boolean)
+        };
+      }
+
+      // Find index of clicked item within questions array
+      const targetIdx = quizData.questions.findIndex(q => String(q.id) === String(item.questionId));
+
+      setActiveQuizId(quizData.id);
       setLoadedQuiz(quizData);
-      setInitialQuestionIndex(item.questionIndex || 0);
+      setInitialQuestionIndex(targetIdx >= 0 ? targetIdx : (item.questionIndex || 0));
       setStudyMode('FLASHCARD');
-      setHashState('FLASHCARD', targetQuizId);
+      setHashState('FLASHCARD', quizData.id);
       setIsStarredModalOpen(false);
     } catch (e) {
       console.error('Failed to deep link to starred item', e);
     }
-  }, []);
+  }, [starredQuestions, setHashState]);
 
   // Group Starred Questions by Quiz Set
   const groupedStarred = starredQuestions.reduce((acc, q) => {

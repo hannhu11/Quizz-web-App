@@ -51,7 +51,7 @@ export default function Navbar({
             <h1 className="text-sm sm:text-lg font-extrabold tracking-tight text-warm-text dark:text-slate-100 flex items-center gap-1.5 whitespace-nowrap">
               QuizzFlow <span className="text-[10px] sm:text-[11px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-indigo-100/90 dark:bg-indigo-950/80 text-indigo-900 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 whitespace-nowrap">STUDY HUB</span>
             </h1>
-            <p className="text-[11px] text-slate-600 dark:text-slate-300 font-semibold hidden sm:block">Không gian ôn luyện & học tập tối giản</p>
+            <p className="text-[11px] text-slate-600 dark:text-slate-300 font-semibold hidden sm:block">Nền tảng ôn luyện và ghi nhớ tối ưu</p>
           </div>
         </div>
 
