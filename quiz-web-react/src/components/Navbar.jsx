@@ -28,12 +28,17 @@ export default function Navbar({
             title="Ghé thăm Facebook Hàn Như"
           >
             <div className="w-10 h-10 rounded-full p-0.5 bg-gradient-to-tr from-amber-300 via-rose-300 to-indigo-400 shadow-soft group-hover:scale-105 transition-transform duration-300 overflow-hidden">
-              <img
-                src="/user-avatar.png"
-                alt="Hàn Như Avatar"
-                className="w-full h-full object-cover rounded-full"
-                onError={(e) => { e.target.src = '/vite.svg'; }}
-              />
+              <picture>
+                <source srcset="/user-avatar.webp" type="image/webp" />
+                <img
+                  src="/user-avatar.png"
+                  alt="Hàn Như Avatar"
+                  width="40"
+                  height="40"
+                  className="w-full h-full object-cover rounded-full"
+                  onError={(e) => { e.target.src = '/vite.svg'; }}
+                />
+              </picture>
             </div>
             <span className="absolute -bottom-0.5 -right-0.5 p-0.5 bg-blue-600 text-white rounded-full border border-white shadow-xs">
               <svg className="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24">
@@ -46,7 +51,7 @@ export default function Navbar({
             <h1 className="text-sm sm:text-lg font-extrabold tracking-tight text-warm-text dark:text-slate-100 flex items-center gap-1.5 whitespace-nowrap">
               QuizzFlow <span className="text-[10px] sm:text-[11px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-indigo-100/90 dark:bg-indigo-950/80 text-indigo-900 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 whitespace-nowrap">STUDY HUB</span>
             </h1>
-            <p className="text-[11px] text-warm-muted dark:text-slate-400 hidden sm:block">Không gian ôn luyện & học tập tối giản</p>
+            <p className="text-[11px] text-slate-600 dark:text-slate-300 font-semibold hidden sm:block">Không gian ôn luyện & học tập tối giản</p>
           </div>
         </div>
 
@@ -106,10 +111,10 @@ export default function Navbar({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-3 overflow-x-auto scrollbar-none flex items-center gap-2">
         <button
           onClick={() => onSelectCategory('ALL')}
-          className={`px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
+          className={`px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
             activeCategory === 'ALL'
               ? 'bg-warm-text dark:bg-slate-100 text-white dark:text-slate-900 font-bold shadow-xs'
-              : 'bg-white/70 dark:bg-slate-800/70 hover:bg-white dark:hover:bg-slate-800 text-warm-muted dark:text-slate-300 hover:text-warm-text border border-warm-border/60 dark:border-slate-700'
+              : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-warm-hover dark:hover:bg-slate-700 border border-warm-border dark:border-slate-700 font-semibold'
           }`}
         >
           Tất cả môn học
@@ -119,10 +124,10 @@ export default function Navbar({
           <button
             key={category}
             onClick={() => onSelectCategory(category)}
-            className={`px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
+            className={`px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
               activeCategory === category
                 ? 'bg-warm-text dark:bg-slate-100 text-white dark:text-slate-900 font-bold shadow-xs'
-                : 'bg-white/70 dark:bg-slate-800/70 hover:bg-white dark:hover:bg-slate-800 text-warm-muted dark:text-slate-300 hover:text-warm-text border border-warm-border/60 dark:border-slate-700'
+                : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-warm-hover dark:hover:bg-slate-700 border border-warm-border dark:border-slate-700 font-semibold'
             }`}
           >
             {category}

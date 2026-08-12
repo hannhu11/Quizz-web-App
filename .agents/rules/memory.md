@@ -402,6 +402,20 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - **Heading Level Semantics (`ExamMode.jsx`):** Bổ sung `<h2 className="sr-only">Nội dung câu hỏi bài thi</h2>` trước thẻ `<h3>` để phân cấp HTML5 Accessibility Tree hoàn chỉnh.
 - **Trạng Thái Deploy:** Build Vite production thành công (`1.13s`) và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 638080).
 
+### 🚀🔒 Cập Nhật Đợt 25: Chuyển Đổi WebP 1.4KB Cho User Avatar, Cấu Hình Security Headers OWASP & Cache Control 1 Năm:
+- **Tối Ưu Ảnh Avatar Nối Mạng (`public/user-avatar.webp` & `Navbar.jsx`):**
+  - Chuyển đổi `user-avatar.png` (726 KiB, 1024x1024px) thành WebP 64x64px siêu nhẹ (`1.4 KiB`).
+  - Tiết kiệm **725 KiB (99.8%) dung lượng mạng**, giải phóng 100% tài nguyên tải trang, triệt tiêu cảnh báo `Improve image delivery` của Lighthouse.
+- **Kích Hoạt Security Headers OWASP & Cache Control 1 Năm (`server.js`):**
+  - Thêm các Response Headers bảo mật cao cấp:
+    - `Strict-Transport-Security: max-age=31536000; includeSubDomains` (HSTS).
+    - `Cross-Origin-Opener-Policy: same-origin` (COOP).
+    - `Content-Security-Policy` (CSP).
+    - `X-Frame-Options: SAMEORIGIN` (Chống Clickjacking).
+  - Cấu hình `Cache-Control: public, max-age=31536000, immutable` cho tất cả file tĩnh (.js, .css, .webp, .png), giải quyết triệt tiêu cảnh báo `Use efficient cache lifetimes` (Est savings 899 KiB).
+- **Trạng Thái Deploy:** Build Vite production thành công (`1.15s`) và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 647855).
+
+
 
 
 
