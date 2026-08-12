@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, Layers, Play, CheckCircle2, Star, Volume2, BookOpen, MoreHorizontal, Edit, Trash2, Search } from 'lucide-react';
+import { ArrowLeft, Layers, Play, CheckCircle2, Star, Volume2, BookOpen, MoreHorizontal, Edit, Trash2, Search, Sparkles } from 'lucide-react';
 import { toggleStarQuestion, getStarredQuestions, unstarQuizSet, verifyQuizPassword, deleteCustomQuizSet, calculateQuizProgressStats } from '../data/quizDataLoader';
 import PasswordModal from './PasswordModal';
 
@@ -418,11 +418,18 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
                           {formattedAnswerText}
                         </p>
 
-                        {/* Explanation callout box */}
+                        {/* Academic Insight Explanation Box */}
                         {q.explanation && (
-                          <div className="mt-3 p-3 rounded-2xl bg-amber-50/90 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-xs text-amber-950 dark:text-amber-200 leading-relaxed break-words whitespace-pre-wrap">
-                            <span className="font-bold text-amber-900 dark:text-amber-300 block mb-0.5">💡 Giải thích chi tiết:</span>
-                            {q.explanation}
+                          <div className="mt-3 overflow-hidden rounded-xl border border-slate-200/80 bg-slate-50/80 p-3.5 border-l-4 border-l-indigo-500 dark:border-slate-800 dark:bg-slate-900/50 dark:border-l-indigo-400 shadow-xs transition-all">
+                            <div className="flex items-center gap-1.5 mb-1.5 text-indigo-700 dark:text-indigo-300">
+                              <Sparkles className="w-3.5 h-3.5 stroke-[1.75]" />
+                              <span className="text-[11px] font-extrabold uppercase tracking-wider">
+                                Phân Tích Học Thuật
+                              </span>
+                            </div>
+                            <p className="text-xs sm:text-sm leading-relaxed text-slate-700 dark:text-slate-300 font-normal break-words whitespace-pre-wrap">
+                              {q.explanation}
+                            </p>
                           </div>
                         )}
                       </div>

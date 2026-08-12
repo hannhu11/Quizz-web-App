@@ -396,13 +396,18 @@ export default function ImportModal({ isOpen, onClose, onImportData }) {
                         </div>
                       </div>
 
-                      {/* Field 3 Explanation if present */}
+                      {/* Academic Insight Explanation Box */}
                       {card.explanation && (
-                        <div className="p-2.5 rounded-xl bg-amber-50/90 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-amber-950 dark:text-amber-200 leading-relaxed text-xs break-words whitespace-pre-wrap">
-                          <span className="font-bold text-amber-900 dark:text-amber-300 block mb-0.5">
-                            💡 EXPLANATION (Giải thích chi tiết):
-                          </span>
-                          {card.explanation}
+                        <div className="mt-2.5 overflow-hidden rounded-xl border border-slate-200/80 bg-slate-50/80 p-3 border-l-4 border-l-indigo-500 dark:border-slate-800 dark:bg-slate-900/50 dark:border-l-indigo-400 shadow-xs text-xs">
+                          <div className="flex items-center gap-1.5 mb-1 text-indigo-700 dark:text-indigo-300">
+                            <Sparkles className="w-3.5 h-3.5 stroke-[1.75]" />
+                            <span className="text-[10px] font-extrabold uppercase tracking-wider">
+                              Phân Tích Học Thuật
+                            </span>
+                          </div>
+                          <p className="leading-relaxed text-slate-700 dark:text-slate-300 font-normal break-words whitespace-pre-wrap">
+                            {card.explanation}
+                          </p>
                         </div>
                       )}
                     </div>

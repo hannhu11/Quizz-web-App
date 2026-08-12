@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, ArrowRight, RotateCw, Star, CheckCircle, XCircle, Volume2, Award, Sparkles, HelpCircle, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, ArrowRight, RotateCw, Star, CheckCircle, XCircle, Volume2, Award, Sparkles, HelpCircle, CheckCircle2, Keyboard } from 'lucide-react';
 import { toggleStarQuestion, getStarredQuestions, saveQuizProgress, setQuizCardState } from '../data/quizDataLoader';
 
 export default function PracticeMode({ quiz, onBack }) {
@@ -381,11 +381,18 @@ export default function PracticeMode({ quiz, onBack }) {
                 </p>
               </div>
 
-              {/* Detailed Explanation */}
+              {/* Academic Insight Explanation Box */}
               {currentQ.explanation && (
-                <div className="p-4 rounded-2xl bg-amber-50/90 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-xs text-amber-950 dark:text-amber-200 leading-relaxed">
-                  <span className="font-bold text-amber-900 dark:text-amber-300 block mb-1">💡 Giải thích chi tiết:</span>
-                  {currentQ.explanation}
+                <div className="mt-4 overflow-hidden rounded-xl border border-slate-200/80 bg-slate-50/80 p-4 border-l-4 border-l-indigo-500 dark:border-slate-800 dark:bg-slate-900/50 dark:border-l-indigo-400 shadow-xs transition-all">
+                  <div className="flex items-center gap-1.5 mb-1.5 text-indigo-700 dark:text-indigo-300">
+                    <Sparkles className="w-4 h-4 stroke-[1.75]" />
+                    <span className="text-[11px] font-extrabold uppercase tracking-wider">
+                      Phân Tích Học Thuật
+                    </span>
+                  </div>
+                  <p className="text-xs sm:text-sm leading-relaxed text-slate-700 dark:text-slate-300 font-normal break-words whitespace-pre-wrap">
+                    {currentQ.explanation}
+                  </p>
                 </div>
               )}
 
@@ -440,7 +447,10 @@ export default function PracticeMode({ quiz, onBack }) {
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4" onClick={() => setShowHotkeyModal(false)}>
           <div className="bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 rounded-3xl p-6 max-w-md w-full shadow-2xl space-y-4 text-warm-text dark:text-slate-100" onClick={e => e.stopPropagation()}>
             <div className="flex items-center justify-between border-b border-warm-border/60 dark:border-slate-800 pb-3">
-              <h3 className="text-base sm:text-lg font-bold flex items-center gap-2">⌨️ Bảng Phím Tắt Luyện Tập (Knowt Style)</h3>
+              <h3 className="text-base sm:text-lg font-bold flex items-center gap-2">
+                <Keyboard className="w-5 h-5 text-indigo-600 dark:text-indigo-400 stroke-[1.75]" />
+                Bảng Phím Tắt Luyện Tập (Knowt Style)
+              </h3>
               <button onClick={() => setShowHotkeyModal(false)} className="p-1.5 rounded-full hover:bg-warm-hover dark:hover:bg-slate-800 text-warm-muted dark:text-slate-400">✕</button>
             </div>
             <div className="space-y-2.5 text-xs sm:text-sm">

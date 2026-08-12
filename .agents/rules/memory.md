@@ -347,6 +347,19 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
     - **Câu 193:** Đặt **Option A** (`"Good work allows for multiple interpretations..."`) làm đáp án đúng (`is_correct: true`) trên cả 2 mảng và cập nhật lời giải thích chuẩn học thuật.
 - **Trạng Thái Deploy:** Build Vite production thành công (`1.43s`) và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 594100).
 
+### 🎨✨ Cập Nhật Đợt 20: Refactor UI/UX Khối Giải Thích Sang Academic Insight Card & Chuẩn Hóa Design System Anti-Cheap AI (Notion/Linear Pro Aesthetics):
+- **Tái Thiết Khối "Giải Thích Chi Tiết" (Academic Insight Card Refactor):**
+  - Loại bỏ 100% khung màu vàng gắt (`bg-amber-50 border-amber-200`) và emoji `💡` thô bị coi là "nhựa AI".
+  - Chuyển sang phong cách **Academic Insight Card** chuẩn Linear.app / Notion Pro trên cả 4 màn hình (`QuizDetailView`, `PracticeMode`, `ExamMode`, `FlashcardViewer`, `ImportModal`):
+    - Left Accent Border: `border-l-4 border-l-indigo-500 dark:border-l-indigo-400`.
+    - Container Neutral Tint: `rounded-xl border border-slate-200/80 bg-slate-50/80 p-3.5 shadow-xs dark:bg-slate-900/50 dark:border-slate-800`.
+    - Eyebrow Header: Vector SVG Icon `Sparkles` (`strokeWidth={1.75}`) + Badge uppercase `[ PHÂN TÍCH HỌC THUẬT ]` (`text-[11px] font-extrabold tracking-wider text-indigo-700 dark:text-indigo-300`).
+- **Thanh Lọc Emoji Thô Trên Toàn Bộ Giao Diện (Anti-Cheap Emoji Standard):**
+  - Loại bỏ hoàn toàn các emoji thô (`💡`, `⭐`, `📊`, `⌨️`, `⚠️`) ở tất cả các container, nút bấm và modal header.
+  - Thay thế 100% bằng hệ thống **Lucide SVG Icons** (`Sparkles`, `Keyboard`, `BarChart2`, `Star` fill-amber-400) với hiệu ứng stroke chuẩn (`strokeWidth={1.5}` / `1.75`).
+- **Trạng Thái Deploy:** Build Vite production thành công (`1.33s`) và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 604538).
+
+
 
 
 

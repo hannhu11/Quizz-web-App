@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowLeft, ArrowRight, RotateCw, Star, Shuffle, CheckCircle, HelpCircle, X, Check, Maximize2, Minimize2 } from 'lucide-react';
+import { ArrowLeft, ArrowRight, RotateCw, Star, Shuffle, CheckCircle, HelpCircle, X, Check, Maximize2, Minimize2, Sparkles } from 'lucide-react';
 import { toggleStarQuestion, getStarredQuestions, setQuizCardState } from '../data/quizDataLoader';
 
 export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
@@ -266,10 +266,18 @@ export default function FlashcardViewer({ quiz, onBack, initialIndex = 0 }) {
                 </p>
               </div>
 
+              {/* Academic Insight Explanation Box */}
               {currentQ.explanation && (
-                <div className="p-3.5 rounded-xl bg-amber-50/90 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-xs text-amber-950 dark:text-amber-200 leading-relaxed text-left w-full">
-                  <span className="font-bold text-amber-900 dark:text-amber-300 block mb-1">💡 Giải thích chi tiết:</span>
-                  {currentQ.explanation}
+                <div className="mt-3 overflow-hidden rounded-xl border border-slate-200/80 bg-slate-50/80 p-3.5 border-l-4 border-l-indigo-500 dark:border-slate-800 dark:bg-slate-900/50 dark:border-l-indigo-400 shadow-xs transition-all w-full text-left">
+                  <div className="flex items-center gap-1.5 mb-1 text-indigo-700 dark:text-indigo-300">
+                    <Sparkles className="w-3.5 h-3.5 stroke-[1.75]" />
+                    <span className="text-[11px] font-extrabold uppercase tracking-wider">
+                      Phân Tích Học Thuật
+                    </span>
+                  </div>
+                  <p className="text-xs sm:text-sm leading-relaxed text-slate-700 dark:text-slate-300 font-normal break-words whitespace-pre-wrap">
+                    {currentQ.explanation}
+                  </p>
                 </div>
               )}
             </div>

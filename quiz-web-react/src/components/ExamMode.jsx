@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Clock, ArrowLeft, CheckCircle2, XCircle, AlertCircle, Trophy, RotateCcw, ShieldCheck, Star, Check, X } from 'lucide-react';
+import { Clock, ArrowLeft, CheckCircle2, XCircle, AlertCircle, Trophy, RotateCcw, ShieldCheck, Star, Check, X, Sparkles, Keyboard, BarChart2 } from 'lucide-react';
 import { saveQuizProgress, getStarredQuestions, toggleStarQuestion } from '../data/quizDataLoader';
 import confetti from 'canvas-confetti';
 
@@ -430,11 +430,18 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
                   })}
                 </div>
 
-                {/* Explanation Callout Box */}
+                {/* Academic Insight Explanation Box */}
                 {q.explanation && (
-                  <div className="p-4 rounded-2xl bg-amber-50/80 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-xs text-amber-950 dark:text-amber-200 leading-relaxed">
-                    <span className="font-bold text-amber-900 dark:text-amber-300 block mb-1">💡 Giải thích chi tiết:</span>
-                    {q.explanation}
+                  <div className="mt-3 overflow-hidden rounded-xl border border-slate-200/80 bg-slate-50/80 p-3.5 border-l-4 border-l-indigo-500 dark:border-slate-800 dark:bg-slate-900/50 dark:border-l-indigo-400 shadow-xs transition-all">
+                    <div className="flex items-center gap-1.5 mb-1.5 text-indigo-700 dark:text-indigo-300">
+                      <Sparkles className="w-3.5 h-3.5 stroke-[1.75]" />
+                      <span className="text-[11px] font-extrabold uppercase tracking-wider">
+                        Phân Tích Học Thuật
+                      </span>
+                    </div>
+                    <p className="text-xs sm:text-sm leading-relaxed text-slate-700 dark:text-slate-300 font-normal break-words whitespace-pre-wrap">
+                      {q.explanation}
+                    </p>
                   </div>
                 )}
               </div>
@@ -536,7 +543,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
 
           {/* Keyboard Helper Hint Bar (Knowt & Quizlet Style) */}
           <div className="flex items-center justify-between text-[11px] font-medium text-warm-muted dark:text-slate-400 pt-2 pb-4 border-t border-warm-border/40 dark:border-slate-800/60 flex-wrap gap-2">
-            <span>⌨️ <b>Phím tắt:</b> <code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">1-5 / A-E</code> chọn • <code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">S / *</code> Gắn sao ⭐</span>
+            <span className="flex items-center gap-1.5"><Keyboard className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" /> <b>Phím tắt:</b> <code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">1-5 / A-E</code> chọn • <code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">S / *</code> Gắn sao</span>
             <span><code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">G / Tab</code> Bảng câu • <code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">?</code> Trợ giúp</span>
           </div>
 
@@ -571,9 +578,10 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
 
           <button
             onClick={() => setShowGridModal(true)}
-            className="px-3 py-2 rounded-xl bg-warm-bg dark:bg-slate-800 border border-warm-border dark:border-slate-700 text-xs font-bold min-h-[44px]"
+            className="px-3 py-2 rounded-xl bg-warm-bg dark:bg-slate-800 border border-warm-border dark:border-slate-700 text-xs font-bold min-h-[44px] flex items-center gap-1.5"
           >
-            {currentIndex + 1} / {questions.length} 📊
+            <span>{currentIndex + 1} / {questions.length}</span>
+            <BarChart2 className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
           </button>
 
           <button
