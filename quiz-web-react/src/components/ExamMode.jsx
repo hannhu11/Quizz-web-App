@@ -513,7 +513,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
                 <button
                   key={answer.id || aIdx}
                   onClick={() => handleSelectOption(answer.id, isMultiSelect)}
-                  className={`w-full text-left p-4 rounded-2xl border transition-all duration-200 flex items-start gap-3 text-xs sm:text-sm font-medium ${
+                  className={`w-full text-left p-4 rounded-2xl border transition-all duration-200 flex items-start gap-3 text-xs sm:text-sm font-medium min-h-[52px] ${
                     isSelected
                       ? 'bg-warm-slate dark:bg-slate-800 text-white border-warm-slate dark:border-slate-700 shadow-xs'
                       : 'bg-white dark:bg-slate-900 border-warm-border dark:border-slate-800 text-warm-text dark:text-slate-100 hover:bg-warm-hover dark:hover:bg-slate-800'
@@ -540,23 +540,49 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
             <span><code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">G / Tab</code> Bảng câu • <code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">?</code> Trợ giúp</span>
           </div>
 
-          {/* Previous / Next buttons */}
-          <div className="flex items-center justify-between pt-4 border-t border-warm-border/40 dark:border-slate-800">
+          {/* Previous / Next buttons (Desktop) */}
+          <div className="hidden sm:flex items-center justify-between pt-4 border-t border-warm-border/40 dark:border-slate-800">
             <button
               disabled={currentIndex === 0}
               onClick={() => setCurrentIndex(prev => prev - 1)}
-              className="px-4 py-2 rounded-full border border-warm-border dark:border-slate-800 text-xs font-semibold text-warm-text dark:text-slate-200 hover:bg-warm-hover dark:hover:bg-slate-800 disabled:opacity-40"
+              className="px-4 py-2 rounded-full border border-warm-border dark:border-slate-800 text-xs font-semibold text-warm-text dark:text-slate-200 hover:bg-warm-hover dark:hover:bg-slate-800 disabled:opacity-40 min-h-[44px]"
             >
               Câu trước
             </button>
             <button
               disabled={currentIndex === questions.length - 1}
               onClick={() => setCurrentIndex(prev => prev + 1)}
-              className="px-4 py-2 rounded-full bg-warm-slate dark:bg-slate-800 text-white text-xs font-semibold hover:bg-slate-700 dark:hover:bg-slate-700 disabled:opacity-40"
+              className="px-4 py-2 rounded-full bg-warm-slate dark:bg-slate-800 text-white text-xs font-semibold hover:bg-slate-700 dark:hover:bg-slate-700 disabled:opacity-40 min-h-[44px]"
             >
               Câu tiếp theo
             </button>
           </div>
+        </div>
+
+        {/* Mobile Ergonomic Sticky Bottom Bar (< 640px) */}
+        <div className="sm:hidden fixed bottom-0 left-0 right-0 z-30 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-warm-border dark:border-slate-800 p-3 flex items-center justify-between gap-2 shadow-lg">
+          <button
+            disabled={currentIndex === 0}
+            onClick={() => setCurrentIndex(prev => prev - 1)}
+            className="px-3 py-2 rounded-xl border border-warm-border dark:border-slate-800 text-xs font-bold disabled:opacity-40 min-h-[44px] flex items-center gap-1"
+          >
+            ← Câu trước
+          </button>
+
+          <button
+            onClick={() => setShowGridModal(true)}
+            className="px-3 py-2 rounded-xl bg-warm-bg dark:bg-slate-800 border border-warm-border dark:border-slate-700 text-xs font-bold min-h-[44px]"
+          >
+            {currentIndex + 1} / {questions.length} 📊
+          </button>
+
+          <button
+            disabled={currentIndex === questions.length - 1}
+            onClick={() => setCurrentIndex(prev => prev + 1)}
+            className="px-3 py-2 rounded-xl bg-warm-slate dark:bg-slate-800 text-white text-xs font-bold disabled:opacity-40 min-h-[44px] flex items-center gap-1"
+          >
+            Câu tiếp →
+          </button>
         </div>
 
         {/* Question Grid Navigator Sidebar */}

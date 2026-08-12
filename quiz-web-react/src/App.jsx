@@ -39,6 +39,96 @@ export default function App() {
     }
   }, [isDarkMode]);
 
+  // Global Exit Guard state for browser back button during Exam / Practice
+  const [showGlobalExitGuard, setShowGlobalExitGuard] = useState(false);
+  const [targetHashState, setTargetHashState] = useState(null);
+
+  // Hash Router Helper Functions
+  const parseHashState = useCallback(() => {
+    const rawHash = window.location.hash.replace(/^#\/?/, '');
+    if (!rawHash) return { mode: null, quizId: null };
+    const parts = rawHash.split('/');
+    if (parts[0] === 'quiz' && parts[1]) return { mode: 'DETAIL', quizId: parts[1] };
+    if (parts[0] === 'flashcard' && parts[1]) return { mode: 'FLASHCARD', quizId: parts[1] };
+    if (parts[0] === 'practice' && parts[1]) return { mode: 'PRACTICE', quizId: parts[1] };
+    if (parts[0] === 'exam' && parts[1]) return { mode: 'EXAM', quizId: parts[1] };
+    if (parts[0] === 'create') return { mode: 'CREATE_SET', quizId: null };
+    return { mode: null, quizId: null };
+  }, []);
+
+  const setHashState = useCallback((mode, quizId = null, replace = false) => {
+    let hashStr = '#/';
+    if (mode === 'DETAIL' && quizId) hashStr = `#/quiz/${quizId}`;
+    else if (mode === 'FLASHCARD' && quizId) hashStr = `#/flashcard/${quizId}`;
+    else if (mode === 'PRACTICE' && quizId) hashStr = `#/practice/${quizId}`;
+    else if (mode === 'EXAM' && quizId) hashStr = `#/exam/${quizId}`;
+    else if (mode === 'CREATE_SET') hashStr = `#/create`;
+
+    if (window.location.hash !== hashStr) {
+      if (replace) {
+        window.history.replaceState(null, '', hashStr);
+      } else {
+        window.location.hash = hashStr;
+      }
+    }
+  }, []);
+
+  // Listen to hashchange / popstate to synchronize view with browser history
+  useEffect(() => {
+    const handleHashChange = () => {
+      const { mode, quizId } = parseHashState();
+
+      // Guard back navigation if user is in an active test/practice session
+      if ((studyMode === 'PRACTICE' || studyMode === 'EXAM') && (mode !== studyMode || quizId !== activeQuizId)) {
+        setShowGlobalExitGuard(true);
+        setTargetHashState({ mode, quizId });
+        // Temporarily revert hash so URL stays on current exam/practice until user confirms
+        setHashState(studyMode, activeQuizId, true);
+        return;
+      }
+
+      // Apply route change smoothly
+      if (mode === 'CREATE_SET') {
+        setStudyMode('CREATE_SET');
+        setEditingQuizData(null);
+      } else if (quizId) {
+        try {
+          const quizData = fetchQuizById(quizId);
+          setActiveQuizId(quizId);
+          setLoadedQuiz(quizData);
+          setStudyMode(mode || 'DETAIL');
+        } catch (e) {
+          console.error('Failed to load quiz from URL hash', e);
+          setStudyMode(null);
+          setActiveQuizId(null);
+        }
+      } else {
+        setActiveQuizId(null);
+        setStudyMode(null);
+        setLoadedQuiz(null);
+        setEditingQuizData(null);
+      }
+    };
+
+    // Initial load from hash
+    const initialRoute = parseHashState();
+    if (initialRoute.quizId) {
+      try {
+        const quizData = fetchQuizById(initialRoute.quizId);
+        setActiveQuizId(initialRoute.quizId);
+        setLoadedQuiz(quizData);
+        setStudyMode(initialRoute.mode || 'DETAIL');
+      } catch (e) {
+        console.error('Error loading initial hash route', e);
+      }
+    } else if (initialRoute.mode === 'CREATE_SET') {
+      setStudyMode('CREATE_SET');
+    }
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, [studyMode, activeQuizId, parseHashState, setHashState]);
+
   // Synchronize progress, community custom quizzes, deleted quiz IDs, and starred questions
   useEffect(() => {
     const refreshData = () => {
@@ -108,11 +198,12 @@ export default function App() {
     setStudyMode(null);
     setLoadedQuiz(null);
     setEditingQuizData(null);
+    setHashState(null);
     syncCommunityQuizzes().then(sets => {
       setCustomQuizList(sets);
       setDeletedQuizIds(getDeletedQuizIds());
     });
-  }, []);
+  }, [setHashState]);
 
   // Instant zero-latency navigation handlers (RAM Cached < 0.1ms)
   const handleOpenQuizDetail = useCallback((quizId) => {
@@ -121,7 +212,8 @@ export default function App() {
     setLoadedQuiz(quizData);
     setInitialQuestionIndex(0);
     setStudyMode('DETAIL');
-  }, []);
+    setHashState('DETAIL', quizId);
+  }, [setHashState]);
 
   const handleSelectModeDirect = useCallback((quizId, mode) => {
     const quizData = fetchQuizById(quizId);
@@ -133,8 +225,9 @@ export default function App() {
       setIsTestSetupOpen(true);
     } else {
       setStudyMode(mode);
+      setHashState(mode, quizId);
     }
-  }, []);
+  }, [setHashState]);
 
   // Handle Set Created or Updated
   const handleSetCreated = useCallback((newSet) => {
@@ -143,17 +236,19 @@ export default function App() {
     setInitialQuestionIndex(0);
     setStudyMode('DETAIL');
     setEditingQuizData(null);
+    setHashState('DETAIL', newSet.id);
     syncCommunityQuizzes().then(sets => {
       setCustomQuizList(sets);
       setDeletedQuizIds(getDeletedQuizIds());
     });
-  }, []);
+  }, [setHashState]);
 
   // Edit Quiz Handler
   const handleEditQuizRequest = useCallback((quiz) => {
     setEditingQuizData(quiz);
     setStudyMode('CREATE_SET');
-  }, []);
+    setHashState('CREATE_SET');
+  }, [setHashState]);
 
   // Delete Quiz Handler
   const handleDeleteQuizRequest = useCallback((quizId) => {
@@ -161,26 +256,32 @@ export default function App() {
     setStudyMode(null);
     setLoadedQuiz(null);
     setEditingQuizData(null);
+    setHashState(null);
     syncCommunityQuizzes().then(sets => {
       setCustomQuizList(sets);
       setDeletedQuizIds(getDeletedQuizIds());
     });
-  }, []);
+  }, [setHashState]);
 
   // Start Test from Setup Modal
   const handleStartConfiguredTest = useCallback((config) => {
     setTestConfig(config);
     setStudyMode('EXAM');
-  }, []);
+    if (activeQuizId) {
+      setHashState('EXAM', activeQuizId);
+    }
+  }, [activeQuizId, setHashState]);
 
   const handleBackToDetailOrDashboard = useCallback(() => {
     if (studyMode === 'FLASHCARD' || studyMode === 'PRACTICE' || studyMode === 'EXAM') {
       setStudyMode('DETAIL');
+      if (activeQuizId) setHashState('DETAIL', activeQuizId);
     } else {
       setActiveQuizId(null);
       setStudyMode(null);
       setLoadedQuiz(null);
       setEditingQuizData(null);
+      setHashState(null);
       syncCommunityQuizzes().then(sets => {
         setCustomQuizList(sets);
         setDeletedQuizIds(getDeletedQuizIds());
@@ -188,7 +289,7 @@ export default function App() {
     }
     setProgress(getUserProgress());
     setStarredQuestions(getStarredQuestions());
-  }, [studyMode]);
+  }, [studyMode, activeQuizId, setHashState]);
 
   const handleRemoveStar = useCallback((questionId) => {
     toggleStarQuestion(questionId, '', null);
@@ -459,6 +560,66 @@ export default function App() {
           </div>
         )}
       </CustomModal>
+
+      {/* Global Browser Back Navigation Guard Modal */}
+      {showGlobalExitGuard && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
+          <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-warm-border dark:border-slate-800 shadow-soft-lg max-w-sm w-[92vw] text-center space-y-4">
+            <div className="w-12 h-12 rounded-full bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400 mx-auto flex items-center justify-center font-bold text-xl">
+              ⚠️
+            </div>
+            <div>
+              <h4 className="text-base font-bold text-slate-900 dark:text-slate-100">Xác nhận thoát bài làm?</h4>
+              <p className="text-xs text-warm-muted dark:text-slate-400 mt-1 leading-relaxed">
+                Bạn đang trong bài làm. Nếu lùi trang, tiến trình hiện tại <span className="font-bold text-rose-600 dark:text-rose-400">sẽ KHÔNG được lưu</span>.
+              </p>
+            </div>
+            <div className="flex items-center gap-2 pt-2">
+              <button
+                onClick={() => {
+                  setShowGlobalExitGuard(false);
+                  setTargetHashState(null);
+                }}
+                className="flex-1 py-2.5 rounded-full border border-warm-border dark:border-slate-700 text-xs font-bold text-warm-text dark:text-slate-200 hover:bg-warm-hover dark:hover:bg-slate-800"
+              >
+                Tiếp tục làm bài
+              </button>
+              <button
+                onClick={() => {
+                  setShowGlobalExitGuard(false);
+                  if (targetHashState) {
+                    if (targetHashState.quizId) {
+                      try {
+                        const quizData = fetchQuizById(targetHashState.quizId);
+                        setActiveQuizId(targetHashState.quizId);
+                        setLoadedQuiz(quizData);
+                        setStudyMode(targetHashState.mode || 'DETAIL');
+                        setHashState(targetHashState.mode || 'DETAIL', targetHashState.quizId, true);
+                      } catch (e) {
+                        setStudyMode(null);
+                        setActiveQuizId(null);
+                        setHashState(null, null, true);
+                      }
+                    } else {
+                      setStudyMode(targetHashState.mode || null);
+                      setActiveQuizId(null);
+                      setLoadedQuiz(null);
+                      setHashState(targetHashState.mode, null, true);
+                    }
+                  } else {
+                    setStudyMode('DETAIL');
+                    if (activeQuizId) setHashState('DETAIL', activeQuizId, true);
+                  }
+                  setTargetHashState(null);
+                }}
+                className="px-4 py-2.5 rounded-full bg-rose-600 text-white text-xs font-bold hover:bg-rose-700 shadow-xs"
+              >
+                Xác nhận thoát
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Chill Space - Independent Floating Widgets (LifeAt Style) */}
       <ChillDock />

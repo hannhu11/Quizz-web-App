@@ -298,6 +298,20 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Chạy script Python rà soát lại: Trả về **0 kết quả trùng lặp**, đảm bảo toàn bộ HTML, Flashcard, Đề thi, Lời giải thích trên web KHÔNG HỀ chứa tên người khác hay các từ cấm.
 - **Trạng Thái Build & Deploy:** Build Vite production thành công (`1.98s`) và deploy sạch bóng lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 499384).
 
+### 📱⚡ Cập Nhật Đợt 17: Tích Hợp Hash Router Sync, Browser Back Guard Modal, Mobile Ergonomics & HTTP Compression/Security Hardening:
+- **Xử Lý Nút Back Trình Duyệt & Hash Router Sync (`App.jsx`):**
+  - Tích hợp Hash Router chuẩn cho toàn bộ ứng dụng: `/#/` (Trang chủ), `/#/quiz/:id` (Chi tiết bộ đề), `/#/practice/:id` (Luyện tập), `/#/exam/:id` (Thi thử), `/#/flashcard/:id` (Flashcards), `/#/create` (Tạo bộ đề).
+  - Tích hợp `GlobalExitGuardModal`: Khi người dùng đang làm bài Thi thử hoặc Luyện tập mà nhấn nút Back (`⬅️`) hoặc vuốt Back trên điện thoại, hệ thống chặn thoát văng domain và hiển thị Modal xác nhận cảnh báo: *"Xác nhận thoát bài làm? Tiến trình hiện tại sẽ KHÔNG được lưu."*. Chỉ cho phép lùi trang khi bấm nút "Xác nhận thoát".
+- **Tối Ưu Giao Diện Ergonomics Trên Mobile & Tablet (`PracticeMode.jsx`, `ExamMode.jsx`):**
+  - Thiết kế **Mobile Sticky Bottom Bar (`< 640px`)** cố định ở đáy màn hình giúp thao tác 1 tay cực tiện (Thanh điều hướng *Câu trước*, *Câu tiếp*, *Xác nhận chọn*, *Bảng câu hỏi*).
+  - Nâng chiều cao touch target của các nút bấm đáp án lên **tối thiểu 44px - 52px**, chống bấm nhầm trên màn hình nhỏ.
+- **Tối Ưu Server & Bảo Mật Nginx/Express HTTP Compression:**
+  - Cài đặt module `compression` cho Express server trên VPS Oracle (`140.245.119.189`).
+  - Cấu hình Cache-Control tĩnh **1 năm (`max-age=31536000, immutable`)** cho toàn bộ tệp tĩnh CSS, JS, JSON, và `no-cache` cho `index.html`.
+  - Thêm các Security Headers chống clickjacking & MIME-sniffing: `X-Frame-Options: SAMEORIGIN`, `X-Content-Type-Options: nosniff`, `X-XSS-Protection: 1; mode=block`, ẩn `x-powered-by`.
+- **Trạng Thái Deploy:** Build Vite production thành công (`1.75s`) và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 530457).
+
+
 
 
 

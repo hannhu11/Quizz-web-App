@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, ArrowRight, RotateCw, Star, CheckCircle, XCircle, Volume2, Award, Sparkles, HelpCircle } from 'lucide-react';
+import { ArrowLeft, ArrowRight, RotateCw, Star, CheckCircle, XCircle, Volume2, Award, Sparkles, HelpCircle, CheckCircle2 } from 'lucide-react';
 import { toggleStarQuestion, getStarredQuestions, saveQuizProgress, setQuizCardState } from '../data/quizDataLoader';
 
 export default function PracticeMode({ quiz, onBack }) {
@@ -10,6 +10,7 @@ export default function PracticeMode({ quiz, onBack }) {
   const [isAnswered, setIsAnswered] = useState(false);
   const [score, setScore] = useState(0);
   const [isCompleted, setIsCompleted] = useState(false);
+  const [showHotkeyModal, setShowHotkeyModal] = useState(false);
 
   const [starredIds, setStarredIds] = useState(() => {
     return new Set(getStarredQuestions(quiz.id).map(s => s.questionId));
@@ -37,7 +38,6 @@ export default function PracticeMode({ quiz, onBack }) {
         prev.includes(answerId) ? prev.filter(id => id !== answerId) : [...prev, answerId]
       );
     } else {
-      // Single selection: evaluate immediately
       setSelectedAnswerIds([answerId]);
       evaluateAnswer([answerId]);
     }
@@ -77,6 +77,14 @@ export default function PracticeMode({ quiz, onBack }) {
     }
   };
 
+  const handlePrevQuestion = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(prev => prev - 1);
+      setSelectedAnswerIds([]);
+      setIsAnswered(false);
+    }
+  };
+
   const handleRestart = () => {
     setCurrentIndex(0);
     setSelectedAnswerIds([]);
@@ -90,12 +98,9 @@ export default function PracticeMode({ quiz, onBack }) {
     toggleStarQuestion(currentQ.id, quiz.id, currentQ, currentIndex);
   };
 
-  const [showHotkeyModal, setShowHotkeyModal] = useState(false);
-
   // Keyboard Shortcuts Navigation & Selection (Knowt / Quizlet Style)
   useEffect(() => {
     const handleKeyDown = (e) => {
-      // Input Safety Guard
       const activeEl = document.activeElement;
       const isInput = activeEl && (
         activeEl.tagName === 'INPUT' ||
@@ -106,21 +111,18 @@ export default function PracticeMode({ quiz, onBack }) {
 
       const key = e.key;
 
-      // Hotkey Help Modal Toggle (?)
       if (key === '?' || (key === '/' && e.shiftKey)) {
         e.preventDefault();
         setShowHotkeyModal(prev => !prev);
         return;
       }
 
-      // Star Toggle Shortcut (S or *)
       if (key === 's' || key === 'S' || key === '*') {
         e.preventDefault();
         handleToggleStar();
         return;
       }
 
-      // 1. Navigation Shortcuts
       if (key === 'ArrowRight' || key === 'Enter') {
         if (isAnswered) {
           e.preventDefault();
@@ -132,13 +134,10 @@ export default function PracticeMode({ quiz, onBack }) {
       } else if (key === 'ArrowLeft') {
         if (currentIndex > 0) {
           e.preventDefault();
-          setCurrentIndex(prev => prev - 1);
-          setSelectedAnswerIds([]);
-          setIsAnswered(false);
+          handlePrevQuestion();
         }
       }
 
-      // 2. Number / Letter Key Selection (1-5 or A-E)
       if (!isAnswered) {
         const options = currentQ.answers || [];
         let optionIdx = -1;
@@ -226,137 +225,135 @@ export default function PracticeMode({ quiz, onBack }) {
     );
   }
 
-  const correctAnswer = (currentQ.answers || []).find(a => a.isCorrect);
-
   return (
-    <div className="max-w-4xl mx-auto px-4 py-6 space-y-6 text-warm-text dark:text-slate-100">
+    <div className="max-w-4xl mx-auto px-4 py-6 space-y-6 text-warm-text dark:text-slate-100 pb-20 sm:pb-6">
       {/* Top Header */}
       <div className="flex items-center justify-between gap-3">
         <button
           onClick={onBack}
-          className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-warm-slate dark:text-slate-300 hover:text-warm-text bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 px-4 py-2 rounded-full shadow-xs hover:shadow transition-all active:scale-95"
+          className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-warm-slate dark:text-slate-300 hover:text-warm-text bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 px-4 py-2 rounded-full shadow-xs hover:shadow transition-all active:scale-95 min-h-[44px]"
         >
           <ArrowLeft className="w-4 h-4" /> Quay lại
         </button>
 
-        <div className="text-center">
-          <div className="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200">
-            Câu {currentIndex + 1} / {questions.length}
-          </div>
-          <div className="text-[11px] font-semibold text-warm-muted dark:text-slate-400">
-            Đúng: {score} câu
-          </div>
-        </div>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setShowHotkeyModal(true)}
+            className="p-2.5 rounded-full bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 hover:bg-amber-50 dark:hover:bg-slate-800 text-amber-600 dark:text-amber-400 transition-colors shadow-xs"
+            title="Bảng phím tắt (?)"
+          >
+            <HelpCircle className="w-4 h-4" />
+          </button>
 
-        <button
-          onClick={handleToggleStar}
-          className="p-2 rounded-full bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 hover:bg-warm-hover dark:hover:bg-slate-800 text-warm-slate dark:text-slate-300 transition-transform active:scale-125"
-          title="Lưu câu hỏi ⭐"
-        >
-          <Star className={`w-5 h-5 ${isStarred ? 'fill-amber-400 text-amber-500' : 'text-warm-muted dark:text-slate-500'}`} />
-        </button>
-      </div>
-
-      {/* Progress Bar */}
-      <div className="w-full h-1.5 bg-warm-border/40 dark:bg-slate-800 rounded-full overflow-hidden">
-        <div
-          className="h-full bg-gradient-to-r from-amber-400 to-indigo-500 transition-all duration-300 rounded-full"
-          style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
-        />
-      </div>
-
-      {/* Question Card */}
-      <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-warm-border dark:border-slate-800 shadow-soft space-y-6">
-        <div className="flex items-start justify-between gap-4">
-          <div className="space-y-1">
-            <div className="flex items-center gap-2 flex-wrap">
-              <span className="text-xs font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-2.5 py-0.5 rounded-md border border-amber-200/80 dark:border-amber-800 inline-block">
-                Câu hỏi #{currentQ.questionIndex !== undefined ? currentQ.questionIndex + 1 : currentIndex + 1}
-              </span>
-              {isMultiSelect && (
-                <span className="text-xs font-bold text-purple-800 dark:text-purple-300 bg-purple-50 dark:bg-purple-950/60 px-2.5 py-0.5 rounded-md border border-purple-200 dark:border-purple-800 inline-block">
-                  Multiple Choice (Chọn tất cả đáp án đúng)
-                </span>
-              )}
-            </div>
-            <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-slate-100 leading-relaxed pt-2">
-              {currentQ.content}
-            </h3>
-          </div>
+          <button
+            onClick={handleToggleStar}
+            className={`p-2.5 rounded-full border transition-all ${
+              isStarred
+                ? 'bg-amber-100 dark:bg-amber-950/80 border-amber-300 dark:border-amber-700 text-amber-600 dark:text-amber-400'
+                : 'bg-white dark:bg-slate-900 border-warm-border dark:border-slate-800 text-warm-muted dark:text-slate-400 hover:text-amber-500'
+            }`}
+            title={isStarred ? 'Đã gắn sao câu này' : 'Gắn sao câu hỏi'}
+          >
+            <Star className={`w-4 h-4 ${isStarred ? 'fill-amber-500' : ''}`} />
+          </button>
 
           <button
             onClick={() => handleSpeak(currentQ.content)}
-            className="p-2 rounded-full hover:bg-warm-hover dark:hover:bg-slate-800 text-warm-muted dark:text-slate-400 hover:text-warm-text transition-colors shrink-0"
-            title="Đọc phát âm"
+            className="p-2.5 rounded-full bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 text-warm-muted dark:text-slate-400 hover:text-warm-text transition-colors shadow-xs"
+            title="Đọc câu hỏi"
           >
             <Volume2 className="w-4 h-4" />
           </button>
         </div>
+      </div>
+
+      {/* Progress Bar */}
+      <div className="space-y-2">
+        <div className="flex justify-between items-center text-xs font-bold text-warm-muted dark:text-slate-400">
+          <span>Câu hỏi {currentIndex + 1} / {questions.length}</span>
+          <span>Đúng: {score} câu</span>
+        </div>
+        <div className="w-full h-2 rounded-full bg-warm-border/50 dark:bg-slate-800 overflow-hidden">
+          <div
+            className="h-full bg-gradient-to-r from-amber-500 to-rose-500 transition-all duration-300 rounded-full"
+            style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
+          />
+        </div>
+      </div>
+
+      {/* Main Question Box */}
+      <div className="bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-soft space-y-6">
+        <div className="space-y-2">
+          {isMultiSelect && (
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 text-xs font-extrabold border border-amber-200 dark:border-amber-800">
+              <Sparkles className="w-3.5 h-3.5" /> Chọn nhiều đáp án (Multiple Choice)
+            </span>
+          )}
+
+          <h3 className="text-base sm:text-lg md:text-xl font-bold text-slate-900 dark:text-slate-100 leading-snug">
+            {currentQ.content}
+          </h3>
+        </div>
 
         {/* Options List */}
-        <div className="space-y-3 pt-2">
-          {(currentQ.answers || []).map((answer, aIdx) => {
-            const isSelected = selectedAnswerIds.includes(answer.id);
-            let btnStyle = 'bg-warm-bg/70 dark:bg-slate-800/60 border-warm-border dark:border-slate-700 text-slate-900 dark:text-slate-100 hover:border-amber-400';
+        <div className="space-y-3">
+          {(currentQ.answers || []).map((ans, idx) => {
+            const letter = String.fromCharCode(65 + idx);
+            const isSelected = selectedAnswerIds.includes(ans.id);
+            const isCorrectOption = ans.isCorrect;
+
+            let borderStyle = 'border-warm-border/80 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 hover:border-amber-400 dark:hover:border-slate-700';
 
             if (isAnswered) {
-              if (answer.isCorrect) {
-                btnStyle = 'bg-emerald-50 dark:bg-emerald-950/80 border-emerald-300 dark:border-emerald-700 text-emerald-950 dark:text-emerald-200 font-bold';
-              } else if (isSelected && !answer.isCorrect) {
-                btnStyle = 'bg-rose-50 dark:bg-rose-950/80 border-rose-300 dark:border-rose-700 text-rose-950 dark:text-rose-200 font-bold';
+              if (isCorrectOption) {
+                borderStyle = 'border-emerald-500 bg-emerald-50/80 dark:bg-emerald-950/60 text-emerald-950 dark:text-emerald-100 font-bold';
+              } else if (isSelected) {
+                borderStyle = 'border-rose-500 bg-rose-50/80 dark:bg-rose-950/60 text-rose-950 dark:text-rose-100 font-bold';
               } else {
-                btnStyle = 'bg-warm-bg/40 dark:bg-slate-800/30 border-warm-border/40 dark:border-slate-800 opacity-60';
+                borderStyle = 'border-warm-border/40 dark:border-slate-800/60 opacity-50 bg-white dark:bg-slate-900';
               }
             } else if (isSelected) {
-              btnStyle = 'bg-amber-100 dark:bg-amber-950/80 border-amber-400 dark:border-amber-700 text-amber-950 dark:text-amber-200 font-bold shadow-xs';
+              borderStyle = 'border-amber-500 bg-amber-50/80 dark:bg-amber-950/60 text-amber-950 dark:text-amber-100 font-bold shadow-xs';
             }
 
             return (
               <button
-                key={answer.id || aIdx}
+                key={ans.id || idx}
+                onClick={() => handleToggleOptionSelect(ans.id)}
                 disabled={isAnswered}
-                onClick={() => handleToggleOptionSelect(answer.id)}
-                className={`w-full p-4 rounded-2xl border text-left text-xs sm:text-sm transition-all duration-200 flex items-start gap-3 leading-relaxed break-words whitespace-pre-wrap ${btnStyle}`}
+                className={`w-full text-left p-4 rounded-2xl border transition-all flex items-start gap-3 min-h-[52px] ${borderStyle}`}
               >
-                <span className={`w-6 h-6 ${isMultiSelect ? 'rounded-md' : 'rounded-full'} flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 border ${
-                  isSelected ? 'bg-amber-500 text-white border-amber-600' : 'bg-warm-hover dark:bg-slate-800 text-warm-slate dark:text-slate-300 border-warm-border/60 dark:border-slate-700'
-                }`}>
-                  {isMultiSelect ? (isSelected ? '✓' : String.fromCharCode(65 + aIdx)) : String.fromCharCode(65 + aIdx)}
+                <span className="w-7 h-7 rounded-xl bg-warm-bg dark:bg-slate-800 text-warm-text dark:text-slate-300 font-bold text-xs flex items-center justify-center shrink-0 border border-warm-border/60 dark:border-slate-700 mt-0.5">
+                  {letter}
                 </span>
-                <span className="flex-1">{answer.content}</span>
 
-                {!isAnswered && (
-                  <span className="hidden sm:inline-block text-[10px] font-mono text-warm-muted dark:text-slate-500 bg-warm-bg dark:bg-slate-800 px-1.5 py-0.5 rounded border border-warm-border dark:border-slate-700 shrink-0">
-                    Phím {aIdx + 1} / {String.fromCharCode(65 + aIdx)}
-                  </span>
-                )}
+                <div className="flex-1 text-xs sm:text-sm font-medium pt-1 leading-relaxed">
+                  {ans.content}
+                </div>
 
-                {isAnswered && answer.isCorrect && (
-                  <CheckCircle className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                )}
-                {isAnswered && isSelected && !answer.isCorrect && (
-                  <XCircle className="w-5 h-5 text-rose-600 dark:text-rose-400 shrink-0" />
+                {isAnswered && (
+                  <div className="shrink-0 mt-0.5">
+                    {isCorrectOption ? (
+                      <CheckCircle className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+                    ) : isSelected ? (
+                      <XCircle className="w-5 h-5 text-rose-600 dark:text-rose-400" />
+                    ) : null}
+                  </div>
                 )}
               </button>
             );
           })}
         </div>
 
-        {/* Keyboard Helper Hint Bar (Knowt & Quizlet Style) */}
-        <div className="flex items-center justify-between text-[11px] font-medium text-warm-muted dark:text-slate-400 pt-2 border-t border-warm-border/40 dark:border-slate-800/60 flex-wrap gap-2">
-          <span>⌨️ <b>Bàn phím:</b> Bấm <code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">1-{Math.min((currentQ.answers || []).length, 5)}</code> hoặc <code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">A-E</code> để chọn đáp án</span>
-          <span>Bấm <code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">→</code> / <code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">Enter</code> câu tiếp • <code className="bg-warm-bg dark:bg-slate-800 px-1 py-0.5 rounded border border-warm-border dark:border-slate-700 font-mono font-bold">←</code> câu trước</span>
-        </div>
-
-        {/* Multi-Select Confirm Button */}
+        {/* Multi-select Submit Button */}
         {isMultiSelect && !isAnswered && (
-          <div className="text-right pt-2">
+          <div className="pt-2 flex justify-end">
             <button
-              disabled={selectedAnswerIds.length === 0}
               onClick={handleConfirmMultiSubmit}
-              className="px-6 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 text-white font-bold text-xs sm:text-sm shadow-xs transition-all active:scale-95 inline-flex items-center gap-2"
+              disabled={selectedAnswerIds.length === 0}
+              className="px-6 py-3 rounded-full bg-amber-500 hover:bg-amber-600 disabled:opacity-40 text-white font-extrabold text-xs sm:text-sm shadow-soft transition-all active:scale-95 flex items-center gap-2 min-h-[44px]"
             >
-              Xác nhận đáp án ({selectedAnswerIds.length}) <CheckCircle className="w-4 h-4" />
+              <CheckCircle2 className="w-4 h-4" /> Xác nhận đáp án ({selectedAnswerIds.length})
             </button>
           </div>
         )}
@@ -392,11 +389,11 @@ export default function PracticeMode({ quiz, onBack }) {
                 </div>
               )}
 
-              {/* Next Question Trigger */}
-              <div className="text-right pt-2">
+              {/* Next Question Trigger (Desktop) */}
+              <div className="text-right pt-2 hidden sm:block">
                 <button
                   onClick={handleNextQuestion}
-                  className="px-6 py-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm shadow-xs transition-all active:scale-95 inline-flex items-center gap-2"
+                  className="px-6 py-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm shadow-xs transition-all active:scale-95 inline-flex items-center gap-2 min-h-[44px]"
                 >
                   Câu tiếp theo <ArrowRight className="w-4 h-4" />
                 </button>
@@ -404,6 +401,38 @@ export default function PracticeMode({ quiz, onBack }) {
             </motion.div>
           )}
         </AnimatePresence>
+      </div>
+
+      {/* Mobile Ergonomic Sticky Bottom Bar (< 640px) */}
+      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-30 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-warm-border dark:border-slate-800 p-3 flex items-center justify-between gap-3 shadow-lg">
+        <button
+          onClick={handlePrevQuestion}
+          disabled={currentIndex === 0}
+          className="px-3 py-2 rounded-xl border border-warm-border dark:border-slate-800 disabled:opacity-40 text-xs font-bold min-h-[44px] flex items-center gap-1"
+        >
+          <ArrowLeft className="w-4 h-4" /> Câu trước
+        </button>
+
+        {isAnswered ? (
+          <button
+            onClick={handleNextQuestion}
+            className="flex-1 py-2.5 rounded-xl bg-blue-600 text-white font-extrabold text-xs min-h-[44px] shadow-xs active:scale-95 flex items-center justify-center gap-1.5"
+          >
+            Câu tiếp theo <ArrowRight className="w-4 h-4" />
+          </button>
+        ) : isMultiSelect ? (
+          <button
+            onClick={handleConfirmMultiSubmit}
+            disabled={selectedAnswerIds.length === 0}
+            className="flex-1 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 disabled:opacity-40 text-white font-extrabold text-xs min-h-[44px] shadow-xs active:scale-95 flex items-center justify-center gap-1.5"
+          >
+            <CheckCircle2 className="w-4 h-4" /> Xác nhận chọn ({selectedAnswerIds.length})
+          </button>
+        ) : (
+          <span className="text-xs font-bold text-warm-muted dark:text-slate-400">
+            Chạm đáp án để trả lời
+          </span>
+        )}
       </div>
 
       {/* Knowt Style Hotkey Overlay Modal */}
