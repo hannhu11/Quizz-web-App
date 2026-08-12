@@ -368,6 +368,18 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Trả về đối tượng quiz fallback an toàn thay vì ném ngoại lệ `throw Error` (nguyên nhân khiến `App.jsx` catch lỗi và reset state về Trang Chủ).
 - **Trạng Thái Deploy:** Build Vite production thành công (`0.97s`) và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 610410).
 
+### 🚀📱 Cập Nhật Đợt 22: Rebranding Sang QuizzFlow Space - STUDY HUB, Dịch Chuyển Lofi Widget & Chuẩn Hóa Ergonomics Mobile UX:
+- **Rebranding & Header Single-Row Mobile (`Navbar.jsx`):**
+  - Đổi tên thương hiệu từ *"Hàn Như Space - Góc Học Tập"* thành chính thức: **`QuizzFlow Space`** với Badge **`STUDY HUB`** (loại bỏ hoàn toàn tên riêng cá nhân).
+  - Tái cấu trúc Header trên Mobile (`< 640px`) thành Single-Row Compact Bar, bổ sung `whitespace-nowrap` giúp 0% bị rớt dòng đè chữ hay tràn viền.
+- **Dịch Chuyển Lofi Music Widget Khỏi Nút "Câu Tiếp Theo" (`ChillDock.jsx`):**
+  - Cập nhật vị trí container Lofi Music từ `bottom-4 right-4` sang `bottom-20 sm:bottom-6 right-4`.
+  - Nhấc nút nhạc lên 80px trên Mobile, giải phóng 100% không gian cho thanh Sticky Bottom Bar (`← Câu trước`, `1/20`, `Câu tiếp →`) thao tác bằng ngón tay cái siêu mượt không bị đè.
+- **Chống Ngắt Dòng Nút Bấm Header Bài Thi (`ExamMode.jsx`):**
+  - Bổ sung `whitespace-nowrap` và responsive labels gọn nhẹ trên Mobile: `<ArrowLeft /> Thoát`, `<Clock /> Không đếm`, `<CheckCircle2 /> Nộp bài` (triệt tiêu hiện tượng rớt chữ thành 2 hàng dọc).
+- **Trạng Thái Deploy:** Build Vite production thành công (`1.25s`) và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 618671).
+
+
 
 
 

@@ -459,29 +459,33 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
       <div className="flex items-center justify-between mb-6">
         <button
           onClick={handleExitRequest}
-          className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-warm-slate dark:text-slate-300 hover:text-warm-text bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 px-4 py-2 rounded-full shadow-xs hover:shadow transition-all active:scale-95"
+          className="flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-warm-slate dark:text-slate-300 hover:text-warm-text bg-white dark:bg-slate-900 border border-warm-border dark:border-slate-800 px-3.5 sm:px-4 py-2 rounded-full shadow-xs hover:shadow transition-all active:scale-95 whitespace-nowrap shrink-0"
         >
-          <ArrowLeft className="w-4 h-4" /> Thoát bài thi
+          <ArrowLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+          <span className="hidden sm:inline">Thoát bài thi</span>
+          <span className="sm:hidden">Thoát</span>
         </button>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           {/* Timer Display if enabled */}
           {timerConfig.enabled ? (
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 dark:bg-amber-950/80 border border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-300 font-mono font-bold text-xs sm:text-sm shadow-xs">
-              <Clock className="w-4 h-4 text-amber-600 dark:text-amber-400 animate-pulse" />
+            <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-full bg-amber-50 dark:bg-amber-950/80 border border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-300 font-mono font-bold text-xs sm:text-sm shadow-xs whitespace-nowrap shrink-0">
+              <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-600 dark:text-amber-400 animate-pulse shrink-0" />
               <span>{timerConfig.mode === 'countdown' ? formatTime(secondsRemaining) : formatTime(secondsElapsed)}</span>
             </div>
           ) : (
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-warm-bg dark:bg-slate-800 border border-warm-border dark:border-slate-700 text-warm-muted dark:text-slate-400 font-mono text-xs font-bold">
-              <span>Không đếm giờ</span>
+            <div className="flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-full bg-warm-bg dark:bg-slate-800 border border-warm-border dark:border-slate-700 text-warm-muted dark:text-slate-400 font-mono text-xs font-bold whitespace-nowrap shrink-0">
+              <span className="hidden sm:inline">Không đếm giờ</span>
+              <span className="sm:hidden">Không đếm</span>
             </div>
           )}
 
           <button
             onClick={handleAttemptSubmit}
-            className="px-5 py-2 rounded-full bg-emerald-600 dark:bg-emerald-700 hover:bg-emerald-700 text-white font-bold text-xs shadow-xs transition-all active:scale-95"
+            className="px-3.5 sm:px-5 py-2 rounded-full bg-emerald-600 dark:bg-emerald-700 hover:bg-emerald-700 text-white font-extrabold text-xs shadow-xs transition-all active:scale-95 whitespace-nowrap shrink-0"
           >
-            Nộp Bài Thi
+            <span className="hidden sm:inline">Nộp Bài Thi</span>
+            <span className="sm:hidden">Nộp bài</span>
           </button>
         </div>
       </div>

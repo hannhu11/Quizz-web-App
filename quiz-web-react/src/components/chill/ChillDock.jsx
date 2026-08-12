@@ -121,7 +121,7 @@ export default function ChillDock() {
       )}
 
       {/* Main Dock Container */}
-      <div className="fixed bottom-4 right-4 sm:right-6 z-50 flex flex-col items-end gap-3 max-w-[calc(100vw-2rem)]">
+      <div className="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-40 flex flex-col items-end gap-3 max-w-[calc(100vw-2rem)]">
         {/* Mini Status Bars */}
         <AnimatePresence>
           {widgets.pomodoro.isOpen && !widgets.pomodoro.isExpanded && status.pomodoro.isActive && (

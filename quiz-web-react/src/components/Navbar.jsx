@@ -43,10 +43,10 @@ export default function Navbar({
           </a>
 
           <div>
-            <h1 className="text-base sm:text-lg font-bold tracking-tight text-warm-text dark:text-slate-100 flex items-center gap-2">
-              Hàn Như Space <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-amber-100/90 dark:bg-amber-950/80 text-amber-900 dark:text-amber-300 border border-amber-200 dark:border-amber-800">Góc Học Tập</span>
+            <h1 className="text-sm sm:text-lg font-extrabold tracking-tight text-warm-text dark:text-slate-100 flex items-center gap-1.5 whitespace-nowrap">
+              QuizzFlow <span className="text-[10px] sm:text-[11px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-indigo-100/90 dark:bg-indigo-950/80 text-indigo-900 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 whitespace-nowrap">STUDY HUB</span>
             </h1>
-            <p className="text-[11px] text-warm-muted dark:text-slate-400 hidden sm:block">Không gian học tập & ôn luyện tối giản</p>
+            <p className="text-[11px] text-warm-muted dark:text-slate-400 hidden sm:block">Không gian ôn luyện & học tập tối giản</p>
           </div>
         </div>
 
