@@ -468,6 +468,23 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Thêm quy tắc Nginx `location ~* \.json$ { deny all; return 403; }` trên Docker Nginx (`pethub-nginx`), cấm tải trực tiếp các file `.json` thô qua trình duyệt để chống cào dữ liệu.
 - **Trạng Thái Deploy:** Build Vite production thành công (`947ms`), Nginx Docker reload và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 690126).
 
+### 🛠️⚡ Cập Nhật Đợt 30: Sửa Lỗi Văng Trang Trắng Câu 20 Thi Thử, Gộp Nhóm Câu Đã Lưu Theo Bộ Đề Gốc & Tối Ưu Số Lượng Setup Starred:
+- **Khắc Phục Dứt Điểm Lỗi Văng Trang Trắng Ở Câu 20 Thi Thử (`ExamMode.jsx`):**
+  - Sửa lỗi `ReferenceError: handleFinishExam is not defined` bằng cách kết nối nút Nộp bài thi ở câu cuối cùng về `handleAttemptSubmit()`. Triệt tiêu 100% tình trạng làm đến câu 20 bị văng trang trắng.
+- **Tối Ưu Phân Nhóm & Navigation Câụ Hỏi Đã Lưu (`quizDataLoader.js` & `App.jsx`):**
+  - Cập nhật `toggleStarQuestion`: So sánh câu hỏi theo `questionId` chuẩn hóa, giải quyết tình trạng nhảy số lượng sao bất thường (1 câu -> 1, 2 câu -> 0, 3 câu -> 1).
+  - Cập nhật `groupedStarred` trong `App.jsx`: Gộp nhóm câu hỏi theo Tiêu Đề Bộ Đề Gốc (VD: *"Kinh Tế Vi Mô"*, *"Tiếng Anh AET102c"*) thay vì tạo hàng loạt thẻ phân mảnh `[THI] Bộ Đề Ôn Tập 1 câu`.
+  - Nút mũi tên `→` trong modal nhảy trực tiếp tới đúng câu hỏi đó trong bộ đề gốc.
+- **Đồng Bộ Số Lượng Câu Hỏi Trong Setup Test (`TestSetupModal.jsx`):**
+  - Tự động đếm `starredCount` thực tế của bộ đề. Khi người dùng tích chọn *"Chỉ tạo bài thi với những câu hỏi đã gắn sao"*, slider và ô nhập tự động giới hạn `max = starredCount` (VD: 6 câu).
+  - Cập nhật nhãn & icon ngôi sao ⭐:
+    - **Dòng 1:** `Câu hỏi đã lưu ⭐ (6)`
+    - **Dòng 2:** `Chỉ tạo bài thi với những câu hỏi đã gắn sao`
+- **Mở Rộng Khung Danh Sách Câu Hỏi Bài Thi (`ExamMode.jsx`):**
+  - Chuyển layout bảng câu hỏi bên phải sang `grid-cols-6`, kích thước nút `w-11 h-11 rounded-2xl font-extrabold`, chữ số thoáng mát dễ nhìn.
+- **Trạng Thái Deploy:** Build Vite production thành công (`1.12s`), deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 699370).
+
+
 
 
 

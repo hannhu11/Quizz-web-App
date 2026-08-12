@@ -587,7 +587,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
 
             {currentIndex === questions.length - 1 ? (
               <button
-                onClick={handleFinishExam}
+                onClick={handleAttemptSubmit}
                 className="px-6 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-extrabold shadow-sm active:scale-95 transition-all min-h-[44px] flex items-center gap-1.5"
               >
                 ✓ Nộp bài thi
@@ -619,7 +619,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
 
           {currentIndex === questions.length - 1 ? (
             <button
-              onClick={handleFinishExam}
+              onClick={handleAttemptSubmit}
               className="px-4 py-2 rounded-xl bg-emerald-600 text-white text-xs font-extrabold active:scale-95 min-h-[44px]"
             >
               ✓ Nộp bài thi
@@ -635,11 +635,11 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
         </div>
 
         {/* Expanded Spacious Question Grid Navigator Sidebar */}
-        <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-warm-border dark:border-slate-800 shadow-soft h-fit">
+        <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-7 border border-warm-border dark:border-slate-800 shadow-soft h-fit">
           <div className="flex items-center justify-between mb-4">
             <h4 className="text-xs font-extrabold text-slate-900 dark:text-slate-100 uppercase tracking-wider">DANH SÁCH CÂU HỎI ({questions.length})</h4>
           </div>
-          <div className="grid grid-cols-5 gap-2.5 max-h-[480px] overflow-y-auto pr-1">
+          <div className="grid grid-cols-6 sm:grid-cols-6 gap-2.5 max-h-[520px] overflow-y-auto pr-1">
             {questions.map((_, idx) => {
               const isAnswered = userAnswers[idx] !== undefined;
               const isCurrent = idx === currentIndex;
@@ -648,7 +648,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
                 <button
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
-                  className={`w-10 h-10 rounded-xl text-xs font-extrabold transition-all flex items-center justify-center border ${
+                  className={`w-11 h-11 rounded-2xl text-xs sm:text-sm font-extrabold transition-all flex items-center justify-center border ${
                     isCurrent
                       ? 'ring-2 ring-indigo-500 border-indigo-500 bg-indigo-600 text-white shadow-xs'
                       : isAnswered

@@ -1,15 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Clock, Sparkles, FileText } from 'lucide-react';
+import { X, Clock, Sparkles, FileText, Star } from 'lucide-react';
+import { getStarredQuestions } from '../data/quizDataLoader';
 
 export default function TestSetupModal({ isOpen, onClose, quiz, onStartTest }) {
   if (!isOpen || !quiz) return null;
 
   const totalQuestionsAvailable = (quiz.questions || []).length;
+  const starredQuestionsList = getStarredQuestions(quiz.id);
+  const starredCount = starredQuestionsList.length;
+
+  const [studyStarredOnly, setStudyStarredOnly] = useState(false);
+
+  // Dynamic max limit based on whether starred filter is active
+  const effectiveMax = studyStarredOnly
+    ? Math.max(1, starredCount)
+    : totalQuestionsAvailable;
 
   // Options State matching Quizlet Pro Test Setup
-  const [questionCount, setQuestionCount] = useState(Math.min(20, totalQuestionsAvailable));
-  const [studyStarredOnly, setStudyStarredOnly] = useState(false);
+  const [questionCount, setQuestionCount] = useState(() => Math.min(20, totalQuestionsAvailable));
+
+  // Auto-adjust question count when toggling studyStarredOnly
+  useEffect(() => {
+    if (studyStarredOnly) {
+      setQuestionCount(prev => Math.min(prev, starredCount > 0 ? starredCount : 1));
+    } else {
+      setQuestionCount(prev => Math.min(prev, totalQuestionsAvailable));
+    }
+  }, [studyStarredOnly, starredCount, totalQuestionsAvailable]);
 
   // Question Types Toggle
   const [enableTrueFalse, setEnableTrueFalse] = useState(true);
@@ -38,13 +56,13 @@ export default function TestSetupModal({ isOpen, onClose, quiz, onStartTest }) {
     let num = parseInt(val, 10);
     if (isNaN(num)) num = 1;
     if (num < 1) num = 1;
-    if (num > totalQuestionsAvailable) num = totalQuestionsAvailable;
+    if (num > effectiveMax) num = effectiveMax;
     setQuestionCount(num);
   };
 
   const handleStart = () => {
     onStartTest({
-      questionCount: Math.min(questionCount, totalQuestionsAvailable),
+      questionCount: Math.min(questionCount, effectiveMax),
       studyStarredOnly,
       questionTypes: {
         trueFalse: enableTrueFalse,
@@ -108,13 +126,13 @@ export default function TestSetupModal({ isOpen, onClose, quiz, onStartTest }) {
             {/* Questions count slider & bidirectional input sync */}
             <div className="space-y-3 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
               <div className="flex items-center justify-between text-xs font-extrabold text-slate-800 dark:text-slate-200">
-                <span>Số lượng câu hỏi (Tối đa {totalQuestionsAvailable})</span>
+                <span>Số lượng câu hỏi (Tối đa {effectiveMax})</span>
                 {/* Synchronized Editable Input Box */}
                 <div className="flex items-center gap-1.5">
                   <input
                     type="number"
                     min="1"
-                    max={totalQuestionsAvailable}
+                    max={effectiveMax}
                     value={questionCount}
                     onChange={(e) => handleQuestionCountInput(e.target.value)}
                     className="w-16 px-2 py-1 text-center font-mono font-extrabold rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/40"
@@ -126,7 +144,7 @@ export default function TestSetupModal({ isOpen, onClose, quiz, onStartTest }) {
               <input
                 type="range"
                 min="1"
-                max={totalQuestionsAvailable}
+                max={effectiveMax}
                 value={questionCount}
                 onChange={(e) => handleQuestionCountInput(e.target.value)}
                 className="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-600 dark:accent-indigo-400"
@@ -136,14 +154,19 @@ export default function TestSetupModal({ isOpen, onClose, quiz, onStartTest }) {
             {/* Study starred terms only toggle (Streamlined Notion / Linear style) */}
             <div className="flex items-center justify-between p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
               <div>
-                <label className="text-xs font-extrabold text-slate-900 dark:text-slate-100 block">Chỉ câu hỏi đã lưu</label>
-                <span className="text-[11px] text-slate-500 dark:text-slate-400 font-semibold">Chỉ tạo bài thi với những câu đã lưu</span>
+                <label className="text-xs font-extrabold text-slate-900 dark:text-slate-100 flex items-center gap-1.5">
+                  Câu hỏi đã lưu <Star className="w-4 h-4 text-amber-500 fill-amber-400" /> ({starredCount})
+                </label>
+                <span className="text-[11px] text-slate-500 dark:text-slate-400 font-semibold block mt-0.5">
+                  Chỉ tạo bài thi với những câu hỏi đã gắn sao
+                </span>
               </div>
               <input
                 type="checkbox"
                 checked={studyStarredOnly}
+                disabled={starredCount === 0}
                 onChange={(e) => setStudyStarredOnly(e.target.checked)}
-                className="w-5 h-5 accent-indigo-600 dark:accent-indigo-400 rounded cursor-pointer"
+                className="w-5 h-5 accent-indigo-600 dark:accent-indigo-400 rounded cursor-pointer disabled:opacity-40"
               />
             </div>
 

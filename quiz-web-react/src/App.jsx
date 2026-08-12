@@ -339,18 +339,22 @@ export default function App() {
     }
   }, [starredQuestions, setHashState]);
 
-  // Group Starred Questions by Quiz Set
+  // Group Starred Questions by Quiz Title / Subject Group
   const groupedStarred = starredQuestions.reduce((acc, q) => {
-    const qId = q.quizId || 'OTHER';
-    if (!acc[qId]) {
-      acc[qId] = {
-        quizId: qId,
-        quizTitle: q.quizTitle || 'Bộ Đề Ôn Tập',
-        subjectCode: q.subjectCode || 'THI',
+    const titleKey = q.quizTitle || q.question?.quizTitle || 'Bộ Đề Ôn Tập';
+    const groupKey = q.quizId && !q.quizId.startsWith('custom_') && !q.quizId.startsWith('exam_') 
+      ? q.quizId 
+      : titleKey;
+
+    if (!acc[groupKey]) {
+      acc[groupKey] = {
+        quizId: q.quizId || 'STARRED',
+        quizTitle: titleKey,
+        subjectCode: q.subjectCode || 'BỘ ĐỀ',
         items: []
       };
     }
-    acc[qId].items.push(q);
+    acc[groupKey].items.push(q);
     return acc;
   }, {});
 

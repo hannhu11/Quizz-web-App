@@ -519,19 +519,30 @@ export function getStarredQuestions(quizId) {
 export function toggleStarQuestion(questionId, quizId, questionData, questionIndex = 0) {
   try {
     const stars = getStarredQuestions();
-    const index = stars.findIndex(s => String(s.questionId) === String(questionId) && String(s.quizId) === String(quizId));
+    // Unique question matching by questionId or question content to prevent duplicates across exam modes
+    const index = stars.findIndex(s => 
+      String(s.questionId) === String(questionId) || 
+      (s.question && questionData && String(s.question.content).trim() === String(questionData.content).trim())
+    );
+
     let updated;
     if (index >= 0) {
       updated = stars.filter((_, idx) => idx !== index);
     } else {
-      const realQuizId = quizId || questionData?.quizId || 'STARRED';
+      let realQuizId = quizId || questionData?.quizId || 'STARRED';
       let quizTitle = questionData?.quizTitle;
-      let subjectCode = questionData?.subjectCode || 'THI';
+      let subjectCode = questionData?.subjectCode || 'BỘ ĐỀ';
       
+      // Resolve authentic quiz metadata from manifest or cache
+      const quizInfo = normalizedQuizCache.get(realQuizId) || 
+                       QUIZ_MANIFEST.find(q => String(q.id).trim().toLowerCase() === String(realQuizId).trim().toLowerCase()) || {};
+
+      if (quizInfo.title) quizTitle = quizInfo.title;
+      if (quizInfo.category) subjectCode = quizInfo.category;
+      if (quizInfo.id) realQuizId = quizInfo.id;
+
       if (!quizTitle || quizTitle === 'Bộ Đề Ôn Tập') {
-        const quizInfo = normalizedQuizCache.get(realQuizId) || QUIZ_MANIFEST.find(q => String(q.id).trim().toLowerCase() === String(realQuizId).trim().toLowerCase()) || {};
-        quizTitle = quizInfo.title || quizInfo.subject || 'Bộ Đề Ôn Tập';
-        if (quizInfo.category) subjectCode = quizInfo.category;
+        quizTitle = questionData?.quizTitle || quizInfo.subject || 'Bộ Đề Ôn Tập';
       }
       
       const formattedQuestion = {
