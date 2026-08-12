@@ -278,6 +278,18 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   4. **Quy Trình & Năng Suất Agent:** `grill-me`, `spec-driven-development`, `handoff`, `documentation-and-adrs`...
 - **Dọn Dẹp Thư Mục Phụ `NHOM_3_IGNORE`:** Giải phóng dung lượng và chống nhiễu bộ nhớ indexing của Agent.
 
+### 📚✨ Cập Nhật Đợt 15: Trích Xuất & Nạp Bộ Đề Chuẩn AET102c - Art & Aesthetics - Chuẩn Nhung Hoàng (211 Câu):
+- **Trích Xuất & Chuẩn Hóa Dữ Liệu 211 Câu Hỏi:**
+  - Bóc tách đầy đủ và chính xác 211 câu hỏi trắc nghiệm AET102c (Nghệ thuật & Mỹ học) từ 63 trang PDF/OCR.
+  - Làm sạch toàn bộ watermark `(NHUNG HOÀNG)`, `(073-356-8678)`, tiêu đề trang `AET102c - CHUẨN NHUNG HOÀNG`, `Học trực tuyến tại...` và số trang `1/63`.
+  - Khớp đáp án chuẩn từng câu và tạo lời giải thích học thuật bài bản.
+  - Lưu file JSON chuẩn V2 tại `quiz-app-main/quizzes/current/AET102c_NhungHoang_211.json`.
+- **Đăng Ký Manifest `QUIZ_MANIFEST` & Build Web Production:**
+  - Khai báo bộ đề mới vào `QUIZ_MANIFEST` trong `quizDataLoader.js` với category `AET102c`, gradient color `from-fuchsia-100 to-pink-100` và icon `Sparkles`.
+  - Build Vite production hoàn tất thành công (`1.89s`).
+- **Trạng Thái Deploy:** Đã deploy thành công lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 495858).
+
+
 
 
 

@@ -62,6 +62,7 @@ export const QUIZ_MANIFEST = [
   { id: 'VNR202_SP26_RE_879432', filename: 'VNR202_SP26_RE_879432.json', title: 'VNR202_SP26_RE_879432 - (60 câu có giải thích)', subject: 'Lịch Sử Đảng', category: 'VNR202', color: 'from-red-100 to-amber-100', icon: 'FileText' },
   { id: 'VNR202_SU26_FE', filename: 'VNR202_SU26_FE.json', title: 'VNR202_SU26_FE - (60 câu có giải thích)', subject: 'Lịch Sử Đảng', category: 'VNR202', color: 'from-red-100 to-amber-100', icon: 'FileText' },
   { id: 'VNR202_SU26_FE_C2_577432', filename: 'VNR202_SU26_FE_C2_577432.json', title: 'VNR202_SU26_FE_C2_577432 - (60 câu có giải thích)', subject: 'Lịch Sử Đảng', category: 'VNR202', color: 'from-red-100 to-amber-100', icon: 'FileText' },
+  { id: 'AET102c_NhungHoang_211', filename: 'AET102c_NhungHoang_211.json', title: 'AET102c - Art & Aesthetics - Chuẩn Nhung Hoàng (211 Câu)', subject: 'Nghệ Thuật & Mỹ Học', category: 'AET102c', color: 'from-fuchsia-100 to-pink-100', icon: 'Sparkles' },
 ];
 
 // PRE-COMPUTE AND MEMOIZE ALL QUIZZES ON INITIAL LOAD
