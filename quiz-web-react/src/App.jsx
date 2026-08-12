@@ -309,10 +309,24 @@ export default function App() {
       const targetQuizId = item.quizId || item.question?.quizId || 'STARRED';
       let quizData = fetchQuizById(targetQuizId);
       
-      // If quizData questions are empty or quiz is not found, construct a Virtual Starred Quiz Set
+      // If quizData is missing or has no questions, try looking up manifest by title or construct Virtual Starred Quiz Set
+      if (!quizData || !quizData.questions || quizData.questions.length === 0) {
+        const foundManifest = QUIZ_MANIFEST.find(m => 
+          String(m.id).toLowerCase() === String(targetQuizId).toLowerCase() ||
+          String(m.title).toLowerCase() === String(item.quizTitle || '').toLowerCase()
+        );
+        if (foundManifest) {
+          quizData = fetchQuizById(foundManifest.id);
+        }
+      }
+
       if (!quizData || !quizData.questions || quizData.questions.length === 0) {
         const setQuestions = starredQuestions
-          .filter(s => String(s.quizId) === String(targetQuizId) || targetQuizId === 'STARRED')
+          .filter(s => 
+            String(s.quizId) === String(targetQuizId) || 
+            String(s.quizTitle || '').toLowerCase() === String(item.quizTitle || '').toLowerCase() ||
+            targetQuizId === 'STARRED'
+          )
           .map(s => s.question)
           .filter(Boolean);
 
@@ -326,7 +340,10 @@ export default function App() {
       }
 
       // Find index of clicked item within questions array
-      const targetIdx = quizData.questions.findIndex(q => String(q.id) === String(item.questionId));
+      const targetIdx = quizData.questions.findIndex(q => 
+        String(q.id) === String(item.questionId) || 
+        (q.content && item.question?.content && String(q.content).trim() === String(item.question.content).trim())
+      );
 
       setActiveQuizId(quizData.id);
       setLoadedQuiz(quizData);

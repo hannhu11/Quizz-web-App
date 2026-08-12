@@ -87,7 +87,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
 
   const handleToggleStar = (q, idx) => {
     const isStarred = starredIds.has(q.id);
-    toggleStarQuestion(quiz.id, q.id, q, idx);
+    toggleStarQuestion(q.id, quiz.id, q, idx);
     const updated = new Set(starredIds);
     if (isStarred) {
       updated.delete(q.id);

@@ -492,6 +492,18 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Bọc ứng dụng trong `GlobalErrorBoundary` với cơ chế Self-Healing khôi phục giao diện tự động khi xảy ra lỗi bất ngờ tại client.
 - **Trạng Thái Deploy:** Build Vite production thành công (`822ms`), deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 700761).
 
+### 🛠️⚡ Cập Nhật Đợt 32: Sửa Lỗi Tráo Tham Số `toggleStarQuestion` (`QuizDetailView.jsx`), Chuẩn Hóa Phân Nhóm & Mở Khóa Checkbox Starred Test:
+- **Khắc Phục Lỗi Tráo Tham Số (`QuizDetailView.jsx:90`):**
+  - Sửa lời gọi hàm từ `toggleStarQuestion(quiz.id, q.id, q, idx)` thành `toggleStarQuestion(q.id, quiz.id, q, idx)`.
+  - Triệt tiêu 100% hiện tượng đếm sao nham nhở (1 -> 0 -> 1 -> 0) khi lưu câu hỏi ở trang chi tiết bộ đề.
+- **Tối Ưu Phân Nhóm & Navigation Câụ Hỏi Đã Lưu (`quizDataLoader.js` & `App.jsx`):**
+  - Cập nhật `getStarredQuestions`: So sánh `quizId` an toàn kiểu `String` không phân biệt hoa thường.
+  - Cập nhật `handleJumpToStarredQuestion`: Tra cứu đúng bộ đề gốc theo ID hoặc Tên Bộ Đề, đảm bảo bấm nút mũi tên `→` nhảy chính xác tới câu đó.
+- **Mở Khóa Checkbox "Câu hỏi đã lưu ⭐" (`TestSetupModal.jsx`):**
+  - Đã đếm chuẩn xác `starredCount` thực tế của môn học (VD: 6 câu), tự động mở khóa checkbox và giới hạn slider = 6 câu khi chọn.
+- **Trạng Thái Deploy:** Build Vite production thành công (`1.00s`), deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 705010).
+
+
 
 
 

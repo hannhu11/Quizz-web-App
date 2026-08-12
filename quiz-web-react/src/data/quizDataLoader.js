@@ -508,7 +508,11 @@ export function getStarredQuestions(quizId) {
     }
     const list = data ? JSON.parse(data) : [];
     if (quizId) {
-      return list.filter(s => s.quizId === quizId);
+      const targetStr = String(quizId).trim().toLowerCase();
+      return list.filter(s => 
+        String(s.quizId).trim().toLowerCase() === targetStr || 
+        (s.question && String(s.question.quizId).trim().toLowerCase() === targetStr)
+      );
     }
     return list;
   } catch (e) {
