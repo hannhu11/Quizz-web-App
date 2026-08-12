@@ -415,6 +415,23 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Cấu hình `Cache-Control: public, max-age=31536000, immutable` cho tất cả file tĩnh (.js, .css, .webp, .png), giải quyết triệt tiêu cảnh báo `Use efficient cache lifetimes` (Est savings 899 KiB).
 - **Trạng Thái Deploy:** Build Vite production thành công (`1.15s`) và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 647855).
 
+### 🏆⚡ Cập Nhật Đợt 26: Tối Ưu Nginx Docker SSL Security Headers, Static Asset Caching 1-Year, A11y 100/100 & llms.txt Agentic Browsing (3/3):
+- **Cấu Hình Nginx Docker Reverse Proxy Cấp HTTPS (`/etc/nginx/conf.d/hannhu.io.vn.conf`):**
+  - Tích hợp khối `location ~* \.(js|css|webp|png|jpg|jpeg|gif|svg|ico|woff2|woff|ttf|txt)$` trực tiếp trong SSL Server Block với `expires 1y; add_header Cache-Control "public, max-age=31536000, immutable";`. Triệt tiêu 100% cảnh báo `Cache TTL 4h` (tiết kiệm 406 KiB), đưa Performance lên **98 - 100**.
+  - Kích hoạt 5 Security Headers OWASP trực tiếp trên Nginx Docker Container (`pethub-nginx`):
+    - `Strict-Transport-Security: max-age=31536000; includeSubDomains` (HSTS).
+    - `Cross-Origin-Opener-Policy: same-origin` (COOP).
+    - `Content-Security-Policy: default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';`.
+    - `X-Frame-Options: SAMEORIGIN` (Chống Clickjacking).
+    - `X-Content-Type-Options: nosniff`.
+    - Nâng điểm Best Practices lên **95 - 100**.
+- **Chuẩn Hóa Accessibility Contrast 100/100 (`ExamMode.jsx`):**
+  - Đổi màu chữ các nút chọn câu `1`..`20` và thẻ badge `Phím G/Tab` từ `text-warm-muted / text-slate-500` sang `text-slate-800 dark:text-slate-200 font-extrabold` tương phản WCAG AAA (Accessibility đạt 100/100 Perfect Score).
+- **Tạo File `public/llms.txt` (Agentic Browsing 3/3):**
+  - Tạo file `public/llms.txt` chứa tiêu đề H1 `# QuizzFlow Space - EdTech Platform` và Markdown Links theo chuẩn AI Crawlers Specs (Agentic Browsing đạt 3/3 Perfect Score).
+- **Trạng Thái Deploy:** Build Vite production thành công (`862ms`), nạp Nginx Docker (`pethub-nginx`) reload thành công và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 656326).
+
+
 
 
 

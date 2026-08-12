@@ -625,7 +625,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
         <div className="bg-white dark:bg-slate-900 rounded-3xl p-5 border border-warm-border dark:border-slate-800 shadow-soft h-fit">
           <div className="flex items-center justify-between mb-3">
             <h4 className="text-xs font-bold text-slate-900 dark:text-slate-100 uppercase tracking-wider">DANH SÁCH CÂU HỎI</h4>
-            <span className="text-[10px] font-mono text-warm-muted dark:text-slate-500 bg-warm-bg dark:bg-slate-800 px-1.5 py-0.5 rounded border border-warm-border dark:border-slate-700">Phím G / Tab</span>
+            <span className="text-[10px] font-mono text-slate-800 dark:text-slate-200 font-extrabold bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded border border-slate-300 dark:border-slate-700">Phím G / Tab</span>
           </div>
           <div className="grid grid-cols-5 gap-2 max-h-[360px] overflow-y-auto pr-1">
             {questions.map((_, idx) => {
@@ -638,10 +638,10 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
                   onClick={() => setCurrentIndex(idx)}
                   className={`w-9 h-9 rounded-xl text-xs font-bold transition-all flex items-center justify-center border ${
                     isCurrent
-                      ? 'ring-2 ring-warm-slate border-warm-slate bg-warm-slate text-white'
+                      ? 'ring-2 ring-warm-slate border-warm-slate bg-warm-slate text-white font-extrabold'
                       : isAnswered
-                      ? 'bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-300 border-amber-300 dark:border-amber-800'
-                      : 'bg-warm-bg dark:bg-slate-800 text-warm-muted dark:text-slate-400 border-warm-border dark:border-slate-700 hover:bg-warm-hover dark:hover:bg-slate-700'
+                      ? 'bg-amber-100 dark:bg-amber-950 text-amber-950 dark:text-amber-100 border-amber-300 dark:border-amber-700 font-extrabold'
+                      : 'bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-extrabold border-slate-300 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700'
                   }`}
                 >
                   {idx + 1}
