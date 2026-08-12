@@ -188,48 +188,54 @@ export function calculateQuizProgressStats(quiz) {
 
   return { newCount, learningCount, almostCount, masteredCount, percentage };
 }
+// RAM Throttling Cooldown & In-flight Lock for Community Sync
+let lastSyncTime = 0;
+let inFlightSyncPromise = null;
+const SYNC_COOLDOWN_MS = 10000; // 10s cooldown
 
-// API-FIRST REAL-TIME COMMUNITY QUIZ & GLOBAL DELETION SYNC
-export async function syncCommunityQuizzes() {
-  try {
-    const cacheBusterUrl = `/api/quizzes?t=${Date.now()}`;
-    const res = await fetch(cacheBusterUrl, {
-      headers: {
-        'Cache-Control': 'no-cache, no-store, must-revalidate',
-        'Pragma': 'no-cache',
-        'Expires': '0'
-      }
-    });
-
-    if (res.ok) {
-      const data = await res.json();
-      const serverCommunitySets = data.customQuizzes || [];
-      const serverDeletedIds = data.deletedQuizIds || [];
-
-      // 1. Sync deleted IDs
-      localStorage.setItem(STORAGE_KEY_DELETED_QUIZZES, JSON.stringify(serverDeletedIds));
-      serverDeletedIds.forEach(delId => {
-        normalizedQuizCache.delete(delId);
-      });
-
-      // 2. Sync active community quizzes
-      const activeSets = serverCommunitySets.filter(s => !serverDeletedIds.includes(s.id));
-      activeSets.forEach(cSet => {
-        normalizedQuizCache.set(cSet.id, cSet);
-      });
-
-      localStorage.setItem(STORAGE_KEY_CUSTOM_QUIZZES, JSON.stringify(activeSets));
-
-      if (typeof window !== 'undefined') {
-        window.dispatchEvent(new CustomEvent('quizzlet_custom_created', { detail: activeSets }));
-      }
-      return activeSets;
-    }
-  } catch (e) {
-    console.warn('Community sync offline fallback to LocalStorage');
+export async function syncCommunityQuizzes(force = false) {
+  const now = Date.now();
+  if (!force && (now - lastSyncTime < SYNC_COOLDOWN_MS)) {
+    return getCustomQuizSets();
   }
-  const deletedIds = getDeletedQuizIds();
-  return getCustomQuizSets().filter(s => !deletedIds.includes(s.id));
+  if (inFlightSyncPromise) {
+    return inFlightSyncPromise;
+  }
+
+  inFlightSyncPromise = (async () => {
+    try {
+      lastSyncTime = Date.now();
+      const res = await fetch('/api/quizzes');
+
+      if (res.ok) {
+        const data = await res.json();
+        const serverCommunitySets = data.customQuizzes || [];
+        const serverDeletedIds = data.deletedQuizIds || [];
+
+        // 1. Sync deleted IDs
+        localStorage.setItem(STORAGE_KEY_DELETED_QUIZZES, JSON.stringify(serverDeletedIds));
+        serverDeletedIds.forEach(delId => {
+          normalizedQuizCache.delete(delId);
+        });
+
+        // 2. Sync active community quizzes
+        const activeSets = serverCommunitySets.filter(s => !serverDeletedIds.includes(s.id));
+        activeSets.forEach(cSet => {
+          normalizedQuizCache.set(cSet.id, cSet);
+        });
+
+        localStorage.setItem(STORAGE_KEY_CUSTOM_QUIZZES, JSON.stringify(activeSets));
+        return activeSets;
+      }
+    } catch (e) {
+      console.warn('Community sync offline fallback to LocalStorage');
+    } finally {
+      inFlightSyncPromise = null;
+    }
+    return getCustomQuizSets();
+  })();
+
+  return inFlightSyncPromise;
 }
 
 // Create Custom Quiz Set (Sync to Server VPS & Backup to GitHub)

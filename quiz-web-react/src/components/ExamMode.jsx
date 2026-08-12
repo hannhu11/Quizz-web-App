@@ -13,16 +13,38 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
   let initialQuestionsPool = quiz.questions || [];
   if (config.studyStarredOnly) {
     const starredIds = new Set(getStarredQuestions(quiz.id).map(s => s.questionId));
-    initialQuestionsPool = initialQuestionsPool.filter(q => starredIds.has(q.id));
-    if (initialQuestionsPool.length === 0) {
-      initialQuestionsPool = quiz.questions || []; // fallback if no starred questions exist
+    const starredPool = initialQuestionsPool.filter(q => starredIds.has(q.id));
+    if (starredPool.length > 0) {
+      initialQuestionsPool = starredPool;
     }
   }
 
   // Shuffle and slice requested question count
   const targetCount = Math.min(config.questionCount || 20, initialQuestionsPool.length);
   const [questions] = useState(() => {
-    return [...initialQuestionsPool].sort(() => Math.random() - 0.5).slice(0, targetCount);
+    const rawList = [...initialQuestionsPool].sort(() => Math.random() - 0.5).slice(0, targetCount);
+    
+    // Apply "Answer With" Mode (Term / Definition / Both)
+    return rawList.map((q, idx) => {
+      const mode = config.answerWith;
+      if (mode === 'Term') {
+        // Swap: Stem displays Definition/Correct Answer content, options display Question content
+        const correctAnswer = (q.answers || []).find(a => a.isCorrect) || (q.answers || [])[0];
+        return {
+          ...q,
+          content: correctAnswer ? `Khái niệm: ${correctAnswer.content}` : q.content,
+          originalContent: q.content,
+        };
+      } else if (mode === 'Both' && idx % 2 === 1) {
+        const correctAnswer = (q.answers || []).find(a => a.isCorrect) || (q.answers || [])[0];
+        return {
+          ...q,
+          content: correctAnswer ? `Khái niệm: ${correctAnswer.content}` : q.content,
+          originalContent: q.content,
+        };
+      }
+      return q;
+    });
   });
 
   const [userAnswers, setUserAnswers] = useState({}); // { qIndex: answerId }

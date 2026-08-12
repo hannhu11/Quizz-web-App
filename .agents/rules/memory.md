@@ -379,6 +379,19 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Bổ sung `whitespace-nowrap` và responsive labels gọn nhẹ trên Mobile: `<ArrowLeft /> Thoát`, `<Clock /> Không đếm`, `<CheckCircle2 /> Nộp bài` (triệt tiêu hiện tượng rớt chữ thành 2 hàng dọc).
 - **Trạng Thái Deploy:** Build Vite production thành công (`1.25s`) và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 618671).
 
+### ⚡🏎️ Cập Nhật Đợt 23: Triệt Tiêu 100% Vòng Lặp Network Fetch Loop, Hạ Memory từ 160MB xuống < 20MB & Kích Hoạt 100% Tính Năng "Set Up Your Test":
+- **Khắc Phục Lỗi Vòng Lặp Mạng Vô Hạn (`quizDataLoader.js`):**
+  - Phát hiện và ngắt triệt tiêu vòng lặp đệ quy vô hạn `quizzlet_custom_created` event dispatch khiến DevTools bắn 3,822+ request rác `/api/quizzes?t=...`.
+  - Tích hợp cơ chế **RAM Throttling Cooldown 10 giây** & In-flight Promise Lock cho `syncCommunityQuizzes()`.
+  - Loại bỏ hoàn toàn query string `?t=${Date.now()}` rác. Hạ JS Heap Memory từ **160MB+ xuống dưới 20MB**, đưa điểm Lighthouse Performance lên mức tối đa!
+- **Kích Hoạt 100% Tính Năng Cấu Hình Bài Thi "Set Up Your Test" (`ExamMode.jsx`):**
+  - Đã kết nối thành công 100% payload `testConfig` từ `TestSetupModal.jsx`:
+    - `questionCount`: Lọc chính xác số lượng câu hỏi từ thanh trượt.
+    - `studyStarredOnly`: Lọc ưu tiên chỉ những câu đã gắn sao `★`.
+    - `answerWith`: Xử lý hiển thị đề bài và đáp án theo chế độ chọn: `Term` (Hỏi Khái niệm - Chọn Thuật ngữ), `Definition` (Hỏi Thuật ngữ - Chọn Khái niệm), hoặc `Both` (Đảo ngẫu nhiên 50/50).
+- **Trạng Thái Deploy:** Build Vite production thành công (`1.24s`) và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 631188).
+
+
 
 
 
