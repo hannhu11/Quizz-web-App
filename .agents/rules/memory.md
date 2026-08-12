@@ -289,6 +289,16 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Build Vite production hoàn tất thành công (`1.89s`).
 - **Trạng Thái Deploy:** Đã deploy thành công lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 495858).
 
+### 🧼🛡️ Cập Nhật Đợt 16: Thực Thi Quy Trình Làm Sạch Triệt Để Tất Cả Watermarks/Signature Tên Người Khác (`NhungHoang`, `fustation`, `fbox`, `fboxedu`):
+- **Quét & Làm Sạch Toàn Bộ Codebase & 43 Tập Tin JSON Bộ Đề:**
+  - Rà soát tự động 43 file JSON bộ đề trong `quiz-app-main/quizzes/current/` và toàn bộ mã nguồn `quiz-web-react/src/`.
+  - Loại bỏ hoàn toàn các chuỗi ký tự nhạy cảm / watermark của người khác: `NhungHoang`, `Nhung Hoang`, `Nhung Hoàng`, `NHUNG HOÀNG`, `Chuẩn Nhung Hoàng`, `fustation`, `fbox`, `fboxedu`.
+  - Đổi tên tệp `AET102c_NhungHoang_211.json` $\rightarrow$ [`AET102c_211.json`](file:///c:/Users/ADMIN/Downloads/Quizzlet%20app/quiz-app-main/quizzes/current/AET102c_211.json) và cập nhật `id: "AET102c_211"`, `title: "AET102c - Art & Aesthetics (211 Câu)"`.
+- **Kiểm Trả Đảm Bảo 0 Watermark Trùng Lặp (Zero-Match Audit):**
+  - Chạy script Python rà soát lại: Trả về **0 kết quả trùng lặp**, đảm bảo toàn bộ HTML, Flashcard, Đề thi, Lời giải thích trên web KHÔNG HỀ chứa tên người khác hay các từ cấm.
+- **Trạng Thái Build & Deploy:** Build Vite production thành công (`1.98s`) và deploy sạch bóng lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 499384).
+
+
 
 
 

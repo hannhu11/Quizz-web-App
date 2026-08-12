@@ -1154,7 +1154,7 @@
       "id": 40,
       "questionIndex": 39,
       "content": "Sparse matrices can be useful as a target destination for ETL, but what are the main caveats (choose one or more)?",
-      "explanation": "B. NumPy linear algebra functions generally cannot be called directly | E. It is difficult to print to screen scipy.sparse matrices directly.\n\nMa trận thưa (sparse matrices) giúp tiết kiệm bộ nhớ nhưng có hạn chế: chúng không hỗ trợ gọi trực tiếp nhiều hàm đại số tuyến tính có sẵn của NumPy (B), và rất khó để in ra màn hình để con người có thể quan sát dễ dàng như ma trận thường (E).",
+      "explanation": "B. NumPy linear algebra functions generally cannot be called directly | E. It is difficult to print to screen scipy.sparse matrices directly. Ma trận thưa (sparse matrices) giúp tiết kiệm bộ nhớ nhưng có hạn chế: chúng không hỗ trợ gọi trực tiếp nhiều hàm đại số tuyến tính có sẵn của NumPy (B), và rất khó để in ra màn hình để con người có thể quan sát dễ dàng như ma trận thường (E).",
       "answers": [
         {
           "id": 1,

@@ -539,27 +539,27 @@
     {
       "id": 20,
       "questionIndex": 19,
-      "content": "For given input lists: a,b,c and 1,2,3\nCreate a dictionary from two input lists",
-      "explanation": "Đáp án chính xác là A (A: def make_dict(lst1,lst2):\n    res = {}\n    for key,value in zip(lst1,lst2):\n        res[key] = value\n    return res).",
+      "content": "For given input lists: a,b,c and 1,2,3 Create a dictionary from two input lists",
+      "explanation": "Đáp án chính xác là A (A: def make_dict(lst1,lst2): res = {} for key,value in zip(lst1,lst2): res[key] = value return res).",
       "answers": [
         {
           "id": 1,
-          "content": "def make_dict(lst1,lst2):\n    res = {}\n    for key,value in zip(lst1,lst2):\n        res[key] = value\n    return res",
+          "content": "def make_dict(lst1,lst2): res = {} for key,value in zip(lst1,lst2): res[key] = value return res",
           "isCorrect": true
         },
         {
           "id": 2,
-          "content": "def make_dict(lst1,lst2):\n    res = {}\n    res[lst1] = lst2\n    return res",
+          "content": "def make_dict(lst1,lst2): res = {} res[lst1] = lst2 return res",
           "isCorrect": false
         },
         {
           "id": 3,
-          "content": "def make_dict(lst1,lst2):\n    res = []\n    for key,value in (lst1,lst2):\n        res[key] = value\n    return res",
+          "content": "def make_dict(lst1,lst2): res = [] for key,value in (lst1,lst2): res[key] = value return res",
           "isCorrect": false
         },
         {
           "id": 4,
-          "content": "def make_dict(lst1,lst2):\n    res = []\n    for key,value in zip(lst1,lst2):\n        res[key] = value\n    return res",
+          "content": "def make_dict(lst1,lst2): res = [] for key,value in zip(lst1,lst2): res[key] = value return res",
           "isCorrect": false
         }
       ]

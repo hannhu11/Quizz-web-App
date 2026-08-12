@@ -967,7 +967,7 @@
     },
     {
       "id": 12685,
-      "content": "What is the output of the following Dart code snippet?\n\\n\\n\\nvoid main() {\n\\n List numbers = [1, 2, 3];\n\\n print(numbers[1]);\n\\n}\\n",
+      "content": "What is the output of the following Dart code snippet? \\n\\n\\nvoid main() { \\n List numbers = [1, 2, 3]; \\n print(numbers[1]); \\n}\\n",
       "explanation": "The code accesses the second element of the list numbers, which is 2.",
       "quizTargetId": 33,
       "answersList": [
@@ -1041,7 +1041,7 @@
     },
     {
       "id": 12687,
-      "content": "What is the correct way to handle a potential null value using null-aware operators in Dart?\n\\n\\n\\nint? a = null;\n\\nint b = a ?? 0;\n\\nprint(b);\\n",
+      "content": "What is the correct way to handle a potential null value using null-aware operators in Dart? \\n\\n\\nint? a = null; \\nint b = a ?? 0; \\nprint(b);\\n",
       "explanation": "The null-aware operator ?? provides a fallback value if a is null, so b is assigned 0.",
       "quizTargetId": 33,
       "answersList": [
@@ -1411,7 +1411,7 @@
     },
     {
       "id": 12697,
-      "content": "What does the following code snippet do?\n\\n\\n\\nContainer(\n\\n padding: EdgeInsets.all(16.0),\n\\n child: Text(\"Hello World\"),\n\\n)\\n",
+      "content": "What does the following code snippet do? \\n\\n\\nContainer( \\n padding: EdgeInsets.all(16.0), \\n child: Text(\"Hello World\"), \\n)\\n",
       "explanation": "The Container widget adds padding around its child widget, in this case, the Text widget.",
       "quizTargetId": 33,
       "answersList": [
@@ -1448,7 +1448,7 @@
     },
     {
       "id": 12698,
-      "content": "How would you create a circular avatar in Flutter?\n\\n\\n\\nCircleAvatar(\n\\n radius: 50,\n\\n backgroundImage: NetworkImage('https://example.com/avatar.jpg'),\\n)\\n",
+      "content": "How would you create a circular avatar in Flutter? \\n\\n\\nCircleAvatar( \\n radius: 50, \\n backgroundImage: NetworkImage('https://example.com/avatar.jpg'),\\n)\\n",
       "explanation": "The CircleAvatar widget is specifically used to create circular avatars in Flutter.",
       "quizTargetId": 33,
       "answersList": [
@@ -1485,7 +1485,7 @@
     },
     {
       "id": 12699,
-      "content": "What is the result of the following Flutter code?\n\\n\\n\\nColumn(\n\\n children: [\n\\n Text(\"Hello\"),\n\\n Text(\"World\"),\n\\n ],\n\\n)\\n",
+      "content": "What is the result of the following Flutter code? \\n\\n\\nColumn( \\n children: [ \\n Text(\"Hello\"), \\n Text(\"World\"), \\n ], \\n)\\n",
       "explanation": "The Column widget arranges its children vertically, so \"Hello\" and \"World\" will be displayed in a column.",
       "quizTargetId": 33,
       "answersList": [
@@ -1522,7 +1522,7 @@
     },
     {
       "id": 12700,
-      "content": "What does the InkWell widget do in Flutter?\n\\n\\n\\nInkWell(\n\\n onTap: () {\n\\n print(\"Tapped\");\n\\n },\n\\n child: Container(\n\\n padding: EdgeInsets.all(16.0),\\n child: Text(\"Tap Me\"),\\n ),\\n)\\n",
+      "content": "What does the InkWell widget do in Flutter? \\n\\n\\nInkWell( \\n onTap: () { \\n print(\"Tapped\"); \\n }, \\n child: Container( \\n padding: EdgeInsets.all(16.0),\\n child: Text(\"Tap Me\"),\\n ),\\n)\\n",
       "explanation": "The InkWell widget in Flutter is used to create a clickable area, similar to a button, and it handles touch events.",
       "quizTargetId": 33,
       "answersList": [
@@ -1855,7 +1855,7 @@
     },
     {
       "id": 12709,
-      "content": "What is the result of the following Flutter code?\n\\n\\n\\nRow(\n\\n children: [\n\\n Text(\"Hello\"),\n\\n Text(\"World\"),\n\\n ],\n\\n)\\n",
+      "content": "What is the result of the following Flutter code? \\n\\n\\nRow( \\n children: [ \\n Text(\"Hello\"), \\n Text(\"World\"), \\n ], \\n)\\n",
       "explanation": "The Row widget arranges its children horizontally in a row.",
       "quizTargetId": 33,
       "answersList": [
@@ -1892,7 +1892,7 @@
     },
     {
       "id": 12710,
-      "content": "What does the Expanded widget do in the following code?\n\\n\\n\\nRow(\n\\n children: [\n\\n Expanded(child: Text(\"Hello\")), \\n Text(\"World\"),\\n ],\\n)\\n",
+      "content": "What does the Expanded widget do in the following code? \\n\\n\\nRow( \\n children: [ \\n Expanded(child: Text(\"Hello\")), \\n Text(\"World\"),\\n ],\\n)\\n",
       "explanation": "The Expanded widget expands its child to fill the available space within the Row or Column.",
       "quizTargetId": 33,
       "answersList": [
@@ -1929,7 +1929,7 @@
     },
     {
       "id": 12711,
-      "content": "What is the purpose of the Align widget in Flutter?\n\\n\\n\\nAlign(\n\\n alignment: Alignment.topRight,\n\\n child: Text(\"Hello\"),\n\\n)\\n",
+      "content": "What is the purpose of the Align widget in Flutter? \\n\\n\\nAlign( \\n alignment: Alignment.topRight, \\n child: Text(\"Hello\"), \\n)\\n",
       "explanation": "The Align widget aligns its child widget within its parent according to the specified alignment.",
       "quizTargetId": 33,
       "answersList": [
@@ -2299,7 +2299,7 @@
     },
     {
       "id": 12721,
-      "content": "What is the output of the following code?\n\\n\\n\\nclass MyWidget extends StatefulWidget {\n\\n @override\\n _MyWidgetState createState() => _MyWidgetState();\\n}\\n\\nclass _MyWidgetState extends State {\\n int counter = 0;\\n @override\\n Widget build(BuildContext context) {\\n return Column(\\n children: [\\n Text('$counter'),\\n ElevatedButton(\\n onPressed: () {\\n setState(() {\\n counter++;\\n });\\n },\\n child: Text('Increment'),\\n ),\\n ],\\n );\\n }\\n}\\n",
+      "content": "What is the output of the following code? \\n\\n\\nclass MyWidget extends StatefulWidget { \\n @override\\n _MyWidgetState createState() => _MyWidgetState();\\n}\\n\\nclass _MyWidgetState extends State {\\n int counter = 0;\\n @override\\n Widget build(BuildContext context) {\\n return Column(\\n children: [\\n Text('$counter'),\\n ElevatedButton(\\n onPressed: () {\\n setState(() {\\n counter++;\\n });\\n },\\n child: Text('Increment'),\\n ),\\n ],\\n );\\n }\\n}\\n",
       "explanation": "The setState method increments the counter by 1 each time the button is pressed, updating the UI with the new value.",
       "quizTargetId": 33,
       "answersList": [
@@ -2373,7 +2373,7 @@
     },
     {
       "id": 12723,
-      "content": "What does the following code snippet demonstrate?\n\\n\\n\\nclass Counter with ChangeNotifier {\n\\n int _count = 0;\n\\n int get count => _count;\\n void increment() {\n\\n _count++;\\n notifyListeners();\n\\n }\n\\n}\\n",
+      "content": "What does the following code snippet demonstrate? \\n\\n\\nclass Counter with ChangeNotifier { \\n int _count = 0; \\n int get count => _count;\\n void increment() { \\n _count++;\\n notifyListeners(); \\n } \\n}\\n",
       "explanation": "The code snippet demonstrates state management using ChangeNotifier, where notifyListeners is called to update listeners when the state changes.",
       "quizTargetId": 33,
       "answersList": [
@@ -2706,7 +2706,7 @@
     },
     {
       "id": 12732,
-      "content": "What is the result of the following code?\n\\n\\n\\nNavigator.push(\n\\n context,\\n MaterialPageRoute(builder: (context) => NewScreen()),\n\\n);\\n",
+      "content": "What is the result of the following code? \\n\\n\\nNavigator.push( \\n context,\\n MaterialPageRoute(builder: (context) => NewScreen()), \\n);\\n",
       "explanation": "The code navigates to NewScreen by pushing a new route onto the navigation stack.",
       "quizTargetId": 33,
       "answersList": [
@@ -2743,7 +2743,7 @@
     },
     {
       "id": 12733,
-      "content": "How would you navigate back to the previous screen in Flutter?\n\\n\\n\\nNavigator.of(context).???;\\n",
+      "content": "How would you navigate back to the previous screen in Flutter? \\n\\n\\nNavigator.of(context).???;\\n",
       "explanation": "The Navigator.of(context).pop method is used to navigate back to the previous screen by popping the current route off the stack.",
       "quizTargetId": 33,
       "answersList": [
@@ -2780,7 +2780,7 @@
     },
     {
       "id": 12734,
-      "content": "What does the following code do?\n\\n\\n\\nNavigator.pushAndRemoveUntil(\n\\n context,\n\\n MaterialPageRoute(builder: (context) => HomeScreen()),\\n (Route route) => false,\\n);\\n",
+      "content": "What does the following code do? \\n\\n\\nNavigator.pushAndRemoveUntil( \\n context, \\n MaterialPageRoute(builder: (context) => HomeScreen()),\\n (Route route) => false,\\n);\\n",
       "explanation": "The Navigator.pushAndRemoveUntil method removes all previous routes from the stack and navigates to HomeScreen.",
       "quizTargetId": 33,
       "answersList": [
@@ -3076,7 +3076,7 @@
     },
     {
       "id": 12742,
-      "content": "What is the output of the following code?\n\\n\\n\\nTextField(\n\\n controller: TextEditingController(text: 'Hello'),\n\\n)\\n",
+      "content": "What is the output of the following code? \\n\\n\\nTextField( \\n controller: TextEditingController(text: 'Hello'), \\n)\\n",
       "explanation": "The TextEditingController with initial text 'Hello' will display 'Hello' in the text field.",
       "quizTargetId": 33,
       "answersList": [
@@ -3113,7 +3113,7 @@
     },
     {
       "id": 12743,
-      "content": "How do you capture user input from a TextField in Flutter?\n\\n\\n\\nTextField(\n\\n onChanged: (text) {\n\\n // Capture input here\\n },\n\\n)\\n",
+      "content": "How do you capture user input from a TextField in Flutter? \\n\\n\\nTextField( \\n onChanged: (text) { \\n // Capture input here\\n }, \\n)\\n",
       "explanation": "The onChanged callback is used to capture user input from a TextField as the user types.",
       "quizTargetId": 33,
       "answersList": [
@@ -3150,7 +3150,7 @@
     },
     {
       "id": 12744,
-      "content": "How would you create a form with multiple fields and a submit button in Flutter?\n\\n\\n\\nForm(\n\\n key: _formKey,\n\\n child: Column(\n\\n children: [\\n TextFormField(),\\n TextFormField(),\\n ElevatedButton(\\n onPressed: () {\\n if (_formKey.currentState.validate()) {\\n // Process data.\n\\n }\n\\n },\n\\n child: Text('Submit'),\n\\n ),\\n\n],\\n ),\n\\n)\\n",
+      "content": "How would you create a form with multiple fields and a submit button in Flutter? \\n\\n\\nForm( \\n key: _formKey, \\n child: Column( \\n children: [\\n TextFormField(),\\n TextFormField(),\\n ElevatedButton(\\n onPressed: () {\\n if (_formKey.currentState.validate()) {\\n // Process data. \\n } \\n }, \\n child: Text('Submit'), \\n ),\\n ],\\n ), \\n)\\n",
       "explanation": "The Column widget is used to arrange multiple form fields and a submit button vertically in a Form.",
       "quizTargetId": 33,
       "answersList": [
@@ -3187,7 +3187,7 @@
     },
     {
       "id": 12745,
-      "content": "What does the following code snippet demonstrate?\n\\n\\n\\nFormField(\n\\n builder: (FormFieldState state) {\n\\n return Column(\n\\n children: [\n\\n TextField(\n\\n onChanged: (text) {\n\\n state.didChange(text);\n\\n },\\n ),\n\\n Text(\n\\n state.errorText ?? '',\n\\n style: TextStyle(color: Colors.red),\n\\n ),\n\\n ],\n\\n );\n\\n },\n\\n)\\n",
+      "content": "What does the following code snippet demonstrate? \\n\\n\\nFormField( \\n builder: (FormFieldState state) { \\n return Column( \\n children: [ \\n TextField( \\n onChanged: (text) { \\n state.didChange(text); \\n },\\n ), \\n Text( \\n state.errorText ?? '', \\n style: TextStyle(color: Colors.red), \\n ), \\n ], \\n ); \\n }, \\n)\\n",
       "explanation": "The code snippet demonstrates creating a custom form field with validation by using FormField and managing its state.",
       "quizTargetId": 33,
       "answersList": [
@@ -3446,7 +3446,7 @@
     },
     {
       "id": 12752,
-      "content": "What is the output of the following code?\n\\n\\n\\nvar url = 'https://api.example.com/data';\n\\nvar response = await http.get(url);\n\\nprint(response.body);\\n",
+      "content": "What is the output of the following code? \\n\\n\\nvar url = 'https://api.example.com/data'; \\nvar response = await http.get(url); \\nprint(response.body);\\n",
       "explanation": "The code sends a GET request to the specified URL and prints the response body.",
       "quizTargetId": 33,
       "answersList": [
@@ -3483,7 +3483,7 @@
     },
     {
       "id": 12753,
-      "content": "How would you handle an HTTP POST request in Flutter?\n\\n\\n\\nvar url = 'https://api.example.com/data';\n\\nvar response = await http.post(url, body: {'key': 'value'});\\n",
+      "content": "How would you handle an HTTP POST request in Flutter? \\n\\n\\nvar url = 'https://api.example.com/data'; \\nvar response = await http.post(url, body: {'key': 'value'});\\n",
       "explanation": "The http.post method is used to send an HTTP POST request in Flutter.",
       "quizTargetId": 33,
       "answersList": [
@@ -3520,7 +3520,7 @@
     },
     {
       "id": 12754,
-      "content": "How do you handle errors when making an HTTP request in Flutter?\n\\n\\n\\ntry {\n\\n var response = await http.get(url);\n\\n if (response.statusCode == 200) {\n\\n print('Success');\n\\n } else {\n\\n print('Error: ${response.statusCode}');\n\\n }\n\\n} catch (e) {\n\\n print('Exception: $e');\n\\n}\\n",
+      "content": "How do you handle errors when making an HTTP request in Flutter? \\n\\n\\ntry { \\n var response = await http.get(url); \\n if (response.statusCode == 200) { \\n print('Success'); \\n } else { \\n print('Error: ${response.statusCode}'); \\n } \\n} catch (e) { \\n print('Exception: $e'); \\n}\\n",
       "explanation": "The code demonstrates how to handle errors by checking the response status code and catching exceptions using a try-catch block.",
       "quizTargetId": 33,
       "answersList": [
@@ -3779,7 +3779,7 @@
     },
     {
       "id": 12761,
-      "content": "What is the output of the following code?\n\\n\\n\\nDatabase db = await openDatabase('my_db.db');\n\\nawait db.insert('my_table', {'name': 'John', 'age': 30});\\n",
+      "content": "What is the output of the following code? \\n\\n\\nDatabase db = await openDatabase('my_db.db'); \\nawait db.insert('my_table', {'name': 'John', 'age': 30});\\n",
       "explanation": "The code opens a database and inserts data into the table 'my_table'.",
       "quizTargetId": 33,
       "answersList": [
@@ -3816,7 +3816,7 @@
     },
     {
       "id": 12762,
-      "content": "How would you query all rows from a table named 'users' in SQLite using sqflite?\n\\n\\n\\nDatabase db = await openDatabase('my_db.db');\n\\nList",
+      "content": "How would you query all rows from a table named 'users' in SQLite using sqflite? \\n\\n\\nDatabase db = await openDatabase('my_db.db'); \\nList",
       "explanation": "The db.query method is used to query all rows from a table named 'users' in SQLite using sqflite.",
       "quizTargetId": 33,
       "answersList": [
@@ -3853,7 +3853,7 @@
     },
     {
       "id": 12763,
-      "content": "How do you update a specific row in a table using sqflite?\n\\n\\n\\nawait db.update(\n'users',\n{'name': 'John'},\nwhere: 'id = ?',\nwhereArgs: [1]\n);\\n",
+      "content": "How do you update a specific row in a table using sqflite? \\n\\n\\nawait db.update( 'users', {'name': 'John'}, where: 'id = ?', whereArgs: [1] );\\n",
       "explanation": "The db.update method is used to update a specific row in a table using sqflite, with the where clause specifying the row to update.",
       "quizTargetId": 33,
       "answersList": [
@@ -4149,7 +4149,7 @@
     },
     {
       "id": 12771,
-      "content": "What is the purpose of the following code snippet?\n\\n\\n\\nAnimationController controller = AnimationController(\nduration: const Duration(seconds: 2),\nvsync: this\n);\n\\nAnimation animation = Tween(\nbegin: 0.0,\nend: 1.0\n).\nanimate(controller);\\n",
+      "content": "What is the purpose of the following code snippet? \\n\\n\\nAnimationController controller = AnimationController( duration: const Duration(seconds: 2), vsync: this ); \\nAnimation animation = Tween( begin: 0.0, end: 1.0 ). animate(controller);\\n",
       "explanation": "The code snippet creates an AnimationController with a duration of 2 seconds and a Tween animation that interpolates between 0.0 and 1.0.",
       "quizTargetId": 33,
       "answersList": [
@@ -4186,7 +4186,7 @@
     },
     {
       "id": 12772,
-      "content": "What does the AnimatedBuilder widget do in the following code?\n\\n\\n\\nAnimatedBuilder(\n\\n animation: animation,\n\\n builder: (context, child) {\n\\n return Transform.scale(\n\\n scale: animation.value,\n\\n child: child,\n\\n );\n\\n },\n\\n child: FlutterLogo(),\n\\n);\\n",
+      "content": "What does the AnimatedBuilder widget do in the following code? \\n\\n\\nAnimatedBuilder( \\n animation: animation, \\n builder: (context, child) { \\n return Transform.scale( \\n scale: animation.value, \\n child: child, \\n ); \\n }, \\n child: FlutterLogo(), \\n);\\n",
       "explanation": "The AnimatedBuilder widget creates a scaling animation using the Transform.scale widget and the animation's value.",
       "quizTargetId": 33,
       "answersList": [
@@ -4482,7 +4482,7 @@
     },
     {
       "id": 12780,
-      "content": "What does the following code test?\n\\n\\n\\ntestWidgets('MyWidget has a title and message', (WidgetTester tester) async {\n\\n await tester.pumpWidget(MyWidget());\n\\n final titleFinder = find.text('Title');\n\\n final messageFinder = find.text('Message');\n\\n expect(titleFinder, findsOneWidget);\n\\n expect(messageFinder, findsOneWidget);\n\\n});\\n",
+      "content": "What does the following code test? \\n\\n\\ntestWidgets('MyWidget has a title and message', (WidgetTester tester) async { \\n await tester.pumpWidget(MyWidget()); \\n final titleFinder = find.text('Title'); \\n final messageFinder = find.text('Message'); \\n expect(titleFinder, findsOneWidget); \\n expect(messageFinder, findsOneWidget); \\n});\\n",
       "explanation": "The code tests for the presence of text widgets with the specified titles and messages.",
       "quizTargetId": 33,
       "answersList": [
@@ -4519,7 +4519,7 @@
     },
     {
       "id": 12781,
-      "content": "How would you test a button tap that triggers a state change?\n\\n\\n\\ntestWidgets('Button tap increments counter', (WidgetTester tester) async {\n\\n await tester.pumpWidget(MyApp());\n\\n await tester.tap(find.byType(ElevatedButton));\n\\n await tester.pump();\n\\n expect(find.text('1'), findsOneWidget);\n\\n});\\n",
+      "content": "How would you test a button tap that triggers a state change? \\n\\n\\ntestWidgets('Button tap increments counter', (WidgetTester tester) async { \\n await tester.pumpWidget(MyApp()); \\n await tester.tap(find.byType(ElevatedButton)); \\n await tester.pump(); \\n expect(find.text('1'), findsOneWidget); \\n});\\n",
       "explanation": "The code tests the state change that occurs after the button tap by checking the updated text value.",
       "quizTargetId": 33,
       "answersList": [
@@ -4778,7 +4778,7 @@
     },
     {
       "id": 12788,
-      "content": "What is the output of the following code if an exception is thrown?\n\\n\\n\\ntry {\n\\n throw Exception('Error');\n\\n} catch (e) {\n\\n print('Caught: $e');\n\\n}\\n",
+      "content": "What is the output of the following code if an exception is thrown? \\n\\n\\ntry { \\n throw Exception('Error'); \\n} catch (e) { \\n print('Caught: $e'); \\n}\\n",
       "explanation": "The code catches the exception and prints \"Caught: Exception: Error\".",
       "quizTargetId": 33,
       "answersList": [
@@ -4815,7 +4815,7 @@
     },
     {
       "id": 12789,
-      "content": "How would you handle an asynchronous error in Flutter?\n\\n\\n\\nFuture fetchData() async {\n\\n try {\\n var data = await fetchFromApi();\n\\n } catch (e) {\n\\n print('Error: $e');\n\\n }\n\\n}\\n",
+      "content": "How would you handle an asynchronous error in Flutter? \\n\\n\\nFuture fetchData() async { \\n try {\\n var data = await fetchFromApi(); \\n } catch (e) { \\n print('Error: $e'); \\n } \\n}\\n",
       "explanation": "The try-catch block is used to handle asynchronous errors in Flutter by catching exceptions thrown during the execution of the Future.",
       "quizTargetId": 33,
       "answersList": [
@@ -5074,7 +5074,7 @@
     },
     {
       "id": 12796,
-      "content": "How can you optimize a list with a large number of items in Flutter?\n\\n\\n\\nListView.builder(\n\\n itemCount: 1000,\n\\n itemBuilder: (context, index) {\n\\n return ListTile(\n\\n title: Text('Item $index'),\n\\n );\\n\n},\n\\n);\\n",
+      "content": "How can you optimize a list with a large number of items in Flutter? \\n\\n\\nListView.builder( \\n itemCount: 1000, \\n itemBuilder: (context, index) { \\n return ListTile( \\n title: Text('Item $index'), \\n );\\n }, \\n);\\n",
       "explanation": "ListView.builder is optimized for lists with a large number of items because it builds items on demand, improving performance.",
       "quizTargetId": 33,
       "answersList": [
@@ -5111,7 +5111,7 @@
     },
     {
       "id": 12797,
-      "content": "How would you optimize a widget that builds complex layouts frequently?\n\\n\\n\\nclass MyWidget extends StatelessWidget {\n\\n @override\n\\n Widget build(BuildContext context) {\n\\n return ComplexLayoutWidget();\n\\n }\n\\n}\\n",
+      "content": "How would you optimize a widget that builds complex layouts frequently? \\n\\n\\nclass MyWidget extends StatelessWidget { \\n @override \\n Widget build(BuildContext context) { \\n return ComplexLayoutWidget(); \\n } \\n}\\n",
       "explanation": "Wrapping ComplexLayoutWidget in a RepaintBoundary helps optimize performance by isolating the widget and preventing unnecessary repaints.",
       "quizTargetId": 33,
       "answersList": [
@@ -5370,7 +5370,7 @@
     },
     {
       "id": 12804,
-      "content": "How do you create a signed APK for Android in Flutter?\n\\n\\n\\nflutter build apk --release --split-per-abi\\n",
+      "content": "How do you create a signed APK for Android in Flutter? \\n\\n\\nflutter build apk --release --split-per-abi\\n",
       "explanation": "The flutter build apk --release --split-per-abi command is used to create a signed APK for Android in Flutter.",
       "quizTargetId": 33,
       "answersList": [
@@ -5407,7 +5407,7 @@
     },
     {
       "id": 12805,
-      "content": "What is the purpose of the following code in the build.gradle file?\n\\n\\n\\nsigningConfigs {\n\\n release {\n\\n keyAlias 'my-key-alias'\n\\n keyPassword 'my-key-password'\n\\n storeFile file('my-key.jks')\n\\n storePassword 'my-store-password'\n\\n }\n\\n}\\n",
+      "content": "What is the purpose of the following code in the build.gradle file? \\n\\n\\nsigningConfigs { \\n release { \\n keyAlias 'my-key-alias' \\n keyPassword 'my-key-password' \\n storeFile file('my-key.jks') \\n storePassword 'my-store-password' \\n } \\n}\\n",
       "explanation": "This code configures app signing by providing the necessary information for the key alias, key password, store file, and store password in the build.gradle file.",
       "quizTargetId": 33,
       "answersList": [

@@ -37,7 +37,7 @@
       "id": 2,
       "questionIndex": 1,
       "content": "Which of the following statements correctly describe soundness and completeness of a theory? (choose two answers)",
-      "explanation": "A. Ideally, a theory should be both sound and complete. | C. A theory for a given phenomenon is sound if all its predictions are possible manifestations of the phenomenon..\n\nC (A: Ideally, a theory should be both sound and complete. | C: A theory for a given phenomenon is sound if all its predictions are possible manifestations of the phenomenon.). .",
+      "explanation": "A. Ideally, a theory should be both sound and complete. | C. A theory for a given phenomenon is sound if all its predictions are possible manifestations of the phenomenon.. C (A: Ideally, a theory should be both sound and complete. | C: A theory for a given phenomenon is sound if all its predictions are possible manifestations of the phenomenon.). .",
       "answers": [
         {
           "id": 1,
@@ -66,7 +66,7 @@
       "id": 3,
       "questionIndex": 2,
       "content": "Consider the following statements about precision and recall of an algorithm. Which are correct? (Select all that apply)",
-      "explanation": "B. Precision and recall are equal to one for algorithms computing exact solutions. | C. Precision is less than one for algorithms that compute false positives. | D. If we are given two approximate algorithms for the same problem, they can differ in precision and recall. E. Recall is less than one for algorithms that produce false negatives..\n\nC, D (B: Precision and recall are equal to one for algorithms computing exact solutions. | C: Precision is less than one for algorithms that compute false positives. | D: If we are given two approximate algorithms for the same problem, they can differ in precision and recall. E. Recall is less than one for algorithms that produce false negatives.). .",
+      "explanation": "B. Precision and recall are equal to one for algorithms computing exact solutions. | C. Precision is less than one for algorithms that compute false positives. | D. If we are given two approximate algorithms for the same problem, they can differ in precision and recall. E. Recall is less than one for algorithms that produce false negatives.. C, D (B: Precision and recall are equal to one for algorithms computing exact solutions. | C: Precision is less than one for algorithms that compute false positives. | D: If we are given two approximate algorithms for the same problem, they can differ in precision and recall. E. Recall is less than one for algorithms that produce false negatives.). .",
       "answers": [
         {
           "id": 1,
@@ -356,7 +356,7 @@
       "id": 13,
       "questionIndex": 12,
       "content": "What is an annotated bibliography?",
-      "explanation": "A. It is a list of articles related to your topic, and it summarizes and evaluates these. | C. It is a list of articles by one author who is an expert on your topic..\n\nA (A: It is a list of articles related to your topic, and it summarizes and evaluates these. | C: It is a list of articles by one author who is an expert on your topic.). .",
+      "explanation": "A. It is a list of articles related to your topic, and it summarizes and evaluates these. | C. It is a list of articles by one author who is an expert on your topic.. A (A: It is a list of articles related to your topic, and it summarizes and evaluates these. | C: It is a list of articles by one author who is an expert on your topic.). .",
       "answers": [
         {
           "id": 1,
@@ -631,7 +631,7 @@
       "id": 23,
       "questionIndex": 22,
       "content": "Deduction vs. induction. Select 3 correct statements:",
-      "explanation": "B. Modus ponens is a typical deductive inference rule. | C. In deductive inference, the consequences are guaranteed to be true if premises are true. | D. Deductive inferences can be used to generate predictions from a given theory. E. Inductive inferences always lead to necessary conclusions..\n\nC, D (B: Modus ponens is a typical deductive inference rule. | C: In deductive inference, the consequences are guaranteed to be true if premises are true. | D: Deductive inferences can be used to generate predictions from a given theory. E. Inductive inferences always lead to necessary conclusions.). .",
+      "explanation": "B. Modus ponens is a typical deductive inference rule. | C. In deductive inference, the consequences are guaranteed to be true if premises are true. | D. Deductive inferences can be used to generate predictions from a given theory. E. Inductive inferences always lead to necessary conclusions.. C, D (B: Modus ponens is a typical deductive inference rule. | C: In deductive inference, the consequences are guaranteed to be true if premises are true. | D: Deductive inferences can be used to generate predictions from a given theory. E. Inductive inferences always lead to necessary conclusions.). .",
       "answers": [
         {
           "id": 1,

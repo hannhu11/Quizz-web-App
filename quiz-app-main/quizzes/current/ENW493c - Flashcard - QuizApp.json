@@ -8,7 +8,7 @@
       "id": 1,
       "questionIndex": 0,
       "content": "What is an annotated bibliography?",
-      "explanation": "A. It is a list of articles related to your topic, and it summarizes and evaluates these. | C. It is a list of articles by one author who is an expert on your topic..\n\nĐáp án đúng là 'It is a list of articles related to your topic, and it summarizes and evaluates these.'.",
+      "explanation": "A. It is a list of articles related to your topic, and it summarizes and evaluates these. | C. It is a list of articles by one author who is an expert on your topic.. Đáp án đúng là 'It is a list of articles related to your topic, and it summarizes and evaluates these.'.",
       "answers": [
         {
           "id": 1,
@@ -254,7 +254,7 @@
       "id": 10,
       "questionIndex": 9,
       "content": "Which of the following statements correctly describe soundness and completeness of a theory? (choose two answers)",
-      "explanation": "A. Ideally, a theory should be both sound and complete. | C. A theory for a given phenomenon is sound if all its predictions are possible manifestations of the phenomenon..\n\nĐáp án đúng là 'Ideally, a theory should be both sound and complete.'.",
+      "explanation": "A. Ideally, a theory should be both sound and complete. | C. A theory for a given phenomenon is sound if all its predictions are possible manifestations of the phenomenon.. Đáp án đúng là 'Ideally, a theory should be both sound and complete.'.",
       "answers": [
         {
           "id": 1,
@@ -452,7 +452,7 @@
       "id": 17,
       "questionIndex": 16,
       "content": "Deduction vs. induction. Select 3 correct statements:",
-      "explanation": "B. Modus ponens is a typical deductive inference rule. | C. In deductive inference, the consequences are guaranteed to be true if premises are true. | D. Deductive inferences can be used to generate predictions from a given theory. E. Inductive inferences always lead to necessary conclusions..\n\nĐáp án đúng là 'Modus ponens is a typical deductive inference rule.'.",
+      "explanation": "B. Modus ponens is a typical deductive inference rule. | C. In deductive inference, the consequences are guaranteed to be true if premises are true. | D. Deductive inferences can be used to generate predictions from a given theory. E. Inductive inferences always lead to necessary conclusions.. Đáp án đúng là 'Modus ponens is a typical deductive inference rule.'.",
       "answers": [
         {
           "id": 1,
@@ -684,7 +684,7 @@
       "id": 25,
       "questionIndex": 24,
       "content": "Which of the following statements correctly describe soundness and completeness of a theory? (Choose 2 answers)",
-      "explanation": "C. A theory is sound if all its predictions are possible manifestations. | E. A theory is complete if it predicts all possible manifestations..\n\nĐáp án đúng là 'A theory is sound if all its predictions are possible manifestations.'.",
+      "explanation": "C. A theory is sound if all its predictions are possible manifestations. | E. A theory is complete if it predicts all possible manifestations.. Đáp án đúng là 'A theory is sound if all its predictions are possible manifestations.'.",
       "answers": [
         {
           "id": 1,
@@ -805,7 +805,7 @@
       "id": 29,
       "questionIndex": 28,
       "content": "Deduction vs. induction. Select 3 correct statements:",
-      "explanation": "B. Modus ponens is a typical deductive inference rule. | C. In deductive inference, the consequences are guaranteed to be true if premises are true. | D. Deductive inferences can be used to generate predictions from a given theory..\n\nĐáp án đúng là 'Modus ponens is a typical deductive inference rule.'.",
+      "explanation": "B. Modus ponens is a typical deductive inference rule. | C. In deductive inference, the consequences are guaranteed to be true if premises are true. | D. Deductive inferences can be used to generate predictions from a given theory.. Đáp án đúng là 'Modus ponens is a typical deductive inference rule.'.",
       "answers": [
         {
           "id": 1,
@@ -916,7 +916,7 @@
       "id": 33,
       "questionIndex": 32,
       "content": "Consider an algorithm that is supposed to find all possible occurrences in a text of person's names. (Select 2 correct answers)",
-      "explanation": "D. The algorithm may find a name that is not a person's name and may fail to find certain person's names. In this case the algorithm can generate both false positives and false negatives. | E. The algorithm finds a name that is not a person's name. This is a false positive..\n\nĐáp án đúng là 'The algorithm may find a name that is not a person's name and may fail to find certain person's names. In this case the algorithm can generate both false positives and false negatives.'.",
+      "explanation": "D. The algorithm may find a name that is not a person's name and may fail to find certain person's names. In this case the algorithm can generate both false positives and false negatives. | E. The algorithm finds a name that is not a person's name. This is a false positive.. Đáp án đúng là 'The algorithm may find a name that is not a person's name and may fail to find certain person's names. In this case the algorithm can generate both false positives and false negatives.'.",
       "answers": [
         {
           "id": 1,
@@ -1731,7 +1731,7 @@
       "id": 63,
       "questionIndex": 62,
       "content": "Consider the following statements about precision and recall of an algorithm. Which are correct?",
-      "explanation": "B. Precision and recall are equal to one for algorithms computing exact solutions. | C. Precision is less than one for algorithms that compute false positives. | E. Recall is less than one for algorithms that produce false negatives..\n\nĐáp án đúng là 'Precision and recall are equal to one for algorithms computing exact solutions.'.",
+      "explanation": "B. Precision and recall are equal to one for algorithms computing exact solutions. | C. Precision is less than one for algorithms that compute false positives. | E. Recall is less than one for algorithms that produce false negatives.. Đáp án đúng là 'Precision and recall are equal to one for algorithms computing exact solutions.'.",
       "answers": [
         {
           "id": 1,
@@ -1788,7 +1788,7 @@
     {
       "id": 65,
       "questionIndex": 64,
-      "content": "The budget scheduled for research should be considered and, in this vein, if there are limited research resources, more cost-efficient ways of collecting data should be considered, including ______ data collection approaches. Right market research data assist companies in better connecting with their customers and attracting new customers. ",
+      "content": "The budget scheduled for research should be considered and, in this vein, if there are limited research resources, more cost-efficient ways of collecting data should be considered, including ______ data collection approaches. Right market research data assist companies in better connecting with their customers and attracting new customers.",
       "explanation": "The correct option is 'Automated'. This choice aligns with academic writing standards, formal register, proper grammatical structure, and logical argumentation.",
       "answers": [
         {
@@ -2074,7 +2074,7 @@
       "id": 75,
       "questionIndex": 74,
       "content": "Consider the following statements about precision and recall of an algorithm. Which are correct? (Select all that apply)",
-      "explanation": "B. Precision and recall are equal to one for algorithms computing exact solutions. | C. Precision is less than one for algorithms that compute false positives. | D. If we are given two approximate algorithms for the same problem, they can differ in precision and recall. E. Recall is less than one for algorithms that produce false negatives..\n\nĐáp án đúng là 'Precision and recall are equal to one for algorithms computing exact solutions.'.",
+      "explanation": "B. Precision and recall are equal to one for algorithms computing exact solutions. | C. Precision is less than one for algorithms that compute false positives. | D. If we are given two approximate algorithms for the same problem, they can differ in precision and recall. E. Recall is less than one for algorithms that produce false negatives.. Đáp án đúng là 'Precision and recall are equal to one for algorithms computing exact solutions.'.",
       "answers": [
         {
           "id": 1,
@@ -2320,7 +2320,7 @@
       "id": 84,
       "questionIndex": 83,
       "content": "Which of the following statements about funded research programs are appropriate? (Select 2 correct answers)",
-      "explanation": "C. A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor. | D. A top-down research program defines precisely the research topics that can be funded and should be addressed by applicants..\n\nĐáp án đúng là 'A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor.'.",
+      "explanation": "C. A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor. | D. A top-down research program defines precisely the research topics that can be funded and should be addressed by applicants.. Đáp án đúng là 'A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor.'.",
       "answers": [
         {
           "id": 1,

@@ -71,7 +71,7 @@
       "id": 3,
       "questionIndex": 2,
       "content": "Sparse matrices can be useful as a target destination for ETL, but what are the main caveats?",
-      "explanation": "B. NumPy linear algebra functions generally cannot be called directly. | E. E. It is difficult to print to screen scipy.sparse matrices directly..\n\nĐáp án đúng là 'NumPy linear algebra functions generally cannot be called directly.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "B. NumPy linear algebra functions generally cannot be called directly. | E. E. It is difficult to print to screen scipy.sparse matrices directly.. Đáp án đúng là 'NumPy linear algebra functions generally cannot be called directly.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -318,7 +318,7 @@
       "id": 11,
       "questionIndex": 10,
       "content": "Thinking with the lens of the scientific process, what would your next steps be if you wanted to decide where to open the next store for your sled business?",
-      "explanation": "B. Gather more data and repeat the snowfall experiment. | C. Gather different data say snowfall by county and repeat the experiment. | D. Start a business viability assessment for all three states..\n\nĐáp án đúng là 'Gather more data and repeat the snowfall experiment.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "B. Gather more data and repeat the snowfall experiment. | C. Gather different data say snowfall by county and repeat the experiment. | D. Start a business viability assessment for all three states.. Đáp án đúng là 'Gather more data and repeat the snowfall experiment.'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
@@ -594,7 +594,7 @@
       "id": 20,
       "questionIndex": 19,
       "content": "Sparse matrices can be useful as a target destination for ETL, but what are the main caveats (choose one or more)?",
-      "explanation": "B. NumPy linear algebra functions generally cannot be called directly | E. E. It is difficult to print to screen scipy.sparse matrices directly.\n\nĐáp án đúng là 'NumPy linear algebra functions generally cannot be called directly'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
+      "explanation": "B. NumPy linear algebra functions generally cannot be called directly | E. E. It is difficult to print to screen scipy.sparse matrices directly. Đáp án đúng là 'NumPy linear algebra functions generally cannot be called directly'. Đây là nguyên lý kỹ thuật chuẩn xác trong khoa học Trí tuệ nhân tạo (AI) và Học máy (Machine Learning).",
       "answers": [
         {
           "id": 1,
