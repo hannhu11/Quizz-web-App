@@ -33,8 +33,8 @@ export default function SubjectCard({ quiz, progress, onSelectMode }) {
         <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-slate-100 leading-snug group-hover:text-amber-800 dark:group-hover:text-amber-300 transition-colors">
           {quiz.title}
         </h3>
-        <p className="text-xs text-warm-muted dark:text-slate-400 mt-1 flex items-center gap-1">
-          <IconComponent className="w-3.5 h-3.5 text-warm-slate dark:text-slate-400" />
+        <p className="text-xs text-slate-700 dark:text-slate-300 font-semibold mt-1 flex items-center gap-1">
+          <IconComponent className="w-3.5 h-3.5 text-slate-600 dark:text-slate-300" />
           {quiz.subject}
         </p>
       </div>

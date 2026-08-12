@@ -436,7 +436,7 @@ export default function App() {
                 <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
                   <Layers className="w-5 h-5 text-warm-slate dark:text-slate-300" /> Danh Sách Bộ Đề ({filteredQuizzes.length})
                 </h3>
-                <p className="text-xs text-warm-muted dark:text-slate-400">Bấm vào bộ đề để xem danh sách câu hỏi hoặc chọn chế độ học</p>
+                <p className="text-xs text-slate-700 dark:text-slate-300 font-semibold">Bấm vào bộ đề để xem danh sách câu hỏi hoặc chọn chế độ học</p>
               </div>
             </div>
 

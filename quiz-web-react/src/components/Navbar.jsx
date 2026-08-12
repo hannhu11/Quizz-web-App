@@ -60,6 +60,8 @@ export default function Navbar({
           <div className="relative">
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-warm-muted dark:text-slate-400" />
             <input
+              id="navbar-search-input"
+              name="navbarSearch"
               type="text"
               placeholder="Tìm môn học, bài thi..."
               value={searchTerm}

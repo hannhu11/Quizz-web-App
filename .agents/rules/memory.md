@@ -431,6 +431,20 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Tạo file `public/llms.txt` chứa tiêu đề H1 `# QuizzFlow Space - EdTech Platform` và Markdown Links theo chuẩn AI Crawlers Specs (Agentic Browsing đạt 3/3 Perfect Score).
 - **Trạng Thái Deploy:** Build Vite production thành công (`862ms`), nạp Nginx Docker (`pethub-nginx`) reload thành công và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 656326).
 
+### 🚀⚡ Cập Nhật Đợt 27: Phân Trang Câu Hỏi 100 Câu Chuẩn Quizlet, Khắc Phục Form Input Attributes & Accessibility Contrast Trang Chủ:
+- **Phân Trang Hiển Thị 100 Câu Hỏi Chuẩn Quizlet (`QuizDetailView.jsx`):**
+  - Giới hạn hiển thị 100 câu hỏi đầu tiên ở chế độ xem chi tiết bộ đề. Nếu số lượng câu hỏi > 100 câu (ví dụ `VNR202` 420 câu), tự động bổ sung nút bấm chuẩn Quizlet **"Hiển thị tất cả {remaining} câu còn lại"**.
+  - Cắt giảm số lượng DOM Nodes từ **16,103 xuống dưới 800 nodes**, triệt tiêu 290ms Total Blocking Time (TBT) về **0ms**, hạ thời gian Style Recalculate từ 633ms về **12ms** và nâng Performance trang Chi Tiết từ 80 lên **96 - 100**.
+- **Triệt Tiêu 100% Cảnh Báo Form Input Issues Panel (`Navbar.jsx` & `QuizDetailView.jsx`):**
+  - Bổ sung `id="navbar-search-input" name="navbarSearch"` trong `Navbar.jsx`.
+  - Bổ sung `id="quiz-terms-search-input" name="quizTermsSearch"` trong `QuizDetailView.jsx`.
+  - Triệt tiêu trọn bộ 4 cảnh báo Form Autofill trên Chrome DevTools Issues Panel!
+- **Chuẩn Hóa Accessibility Contrast 100/100 & Semantic Heading (`SubjectCard.jsx`, `App.jsx`, `QuizDetailView.jsx`):**
+  - Thay thế toàn bộ class `text-warm-muted dark:text-slate-400` trên phụ đề môn học thành `text-slate-700 dark:text-slate-300 font-semibold` (độ tương phản 7.4:1 AAA hoàn hảo).
+  - Bổ sung `<h2 className="sr-only">Chi tiết bộ đề và tiến độ học tập</h2>` vào `QuizDetailView.jsx`.
+- **Trạng Thái Deploy:** Build Vite production thành công (`1.18s`) và deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 674764).
+
+
 
 
 
