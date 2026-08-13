@@ -1,0 +1,70 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// 1. User Model
+model User {
+  id           String    @id @default(uuid())
+  fullName     String
+  email        String    @unique
+  passwordHash String?   // Null for Google OAuth users
+  dob          String?   // YYYY-MM-DD
+  avatarUrl    String?
+  reputation   Int       @default(10) // Initial 10 reputation points
+  role         String    @default("USER") // USER | ADMIN
+  comments     Comment[]
+  votes        Vote[]
+  reports      Report[]
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+}
+
+// 2. Comment Model
+model Comment {
+  id          String   @id @default(uuid())
+  quizId      String
+  questionId  String
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  content     String
+  score       Int      @default(0) // Upvotes - Downvotes
+  isHidden    Boolean  @default(false)
+  reportCount Int      @default(0)
+  votes       Vote[]
+  reports     Report[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([quizId, questionId])
+}
+
+// 3. Vote Model (Unique per comment and user)
+model Vote {
+  id        String   @id @default(uuid())
+  commentId String
+  comment   Comment  @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type      Int      // +1 (Upvote) or -1 (Downvote)
+  createdAt DateTime @default(now())
+
+  @@unique([commentId, userId])
+}
+
+// 4. Report Model (Unique report per user)
+model Report {
+  id        String   @id @default(uuid())
+  commentId String
+  comment   Comment  @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  reason    String?
+  createdAt DateTime @default(now())
+
+  @@unique([commentId, userId])
+}
