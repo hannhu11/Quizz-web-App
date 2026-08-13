@@ -572,6 +572,14 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Styling: `w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 object-contain filter drop-shadow-md hover:scale-105 transition-transform duration-300`.
 - **Trạng Thái Deploy:** Build Vite production thành công (`1.22s`), deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 883428).
 
+### 💎✨ Cập Nhật Đợt 39 (ĐÁNH DẤU CỘT MỐC HOÀN THIỆN 99.25% HỆ THỐNG):
+- **Cập Nhật Tệp Ảnh Tách Nền Trong Suốt 100% (`App.jsx`):**
+  - Ghi đè tệp `capybara_suit_bouquet_transparent2.png` mới vào `quiz-web-react/public/capybara_suit_bouquet_transparent.png`.
+  - Triệt tiêu 100% các ô vuông caro giả tách nền nham nhở ở phiên bản cũ.
+  - Linh vật Capybara mặc vest xanh học thuật hòa trộn tự nhiên, mịn đẹp 100% trên nền Kem ấm / Slate-50 của Hero Banner với hiệu ứng `drop-shadow-md` và `hover:scale-105` sang trọng.
+- **Trạng Thái Deploy:** Build Vite production thành công (`1.22s`), deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 886840).
+
+
 
 
 
