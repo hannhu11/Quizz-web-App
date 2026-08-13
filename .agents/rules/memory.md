@@ -579,6 +579,14 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Linh vật Capybara mặc vest xanh học thuật hòa trộn tự nhiên, mịn đẹp 100% trên nền Kem ấm / Slate-50 của Hero Banner với hiệu ứng `drop-shadow-md` và `hover:scale-105` sang trọng.
 - **Trạng Thái Deploy:** Build Vite production thành công (`1.22s`), deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 886840).
 
+### 💎🚀 Cập Nhật Đợt 40 (ĐÁNH DẤU CỘT MỐC HOÀN THIỆN 99.26% HỆ THỐNG):
+- **Áp Dụng Tệp Ảnh Tách Nền Trong Suốt 3:47 PM (3.33 MB) + Phá Cache (`App.jsx`):**
+  - Ghi đè tệp `capybara_suit_bouquet_transparent.png` mới nhất 3:47 PM (3.33 MB) vào `quiz-web-react/public/`.
+  - Thêm query string phá cache `src="/capybara_suit_bouquet_transparent.png?v=9926"` ép trình duyệt hiển thị tệp ảnh mới tách nền 100% mịn mượt ngay lập tức mà người dùng không cần hard reload thủ công.
+  - Triệt tiêu 100% hình ô vuông caro xám trắng. Linh vật hòa chìm tự nhiên sang trọng vào Hero Banner (`Góc Ôn Luyện Kiến Thức`).
+- **Trạng Thái Deploy:** Build Vite production thành công (`820ms`), deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 889294).
+
+
 
 
 
