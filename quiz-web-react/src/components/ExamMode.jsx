@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Clock, ArrowLeft, CheckCircle2, XCircle, AlertCircle, Trophy, RotateCcw, ShieldCheck, Star, Check, X, Sparkles, Keyboard, BarChart2, Target } from 'lucide-react';
+import { Clock, ArrowLeft, CheckCircle2, XCircle, AlertCircle, Trophy, RotateCcw, ShieldCheck, Star, Check, X, Sparkles, Keyboard, BarChart2, Target, Compass } from 'lucide-react';
 import { saveQuizProgress, getStarredQuestions, toggleStarQuestion } from '../data/quizDataLoader';
 import confetti from 'canvas-confetti';
 
@@ -455,18 +455,20 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
           </div>
         </motion.div>
 
-        {/* CARD 3: EncouragementBanner (Only when Fail < 4.0) */}
+        {/* CARD 3: Academic Coaching Card (Only when Fail < 4.0) */}
         {!isPassed && (
           <motion.div
             initial={{ scale: 0.97, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="p-5 rounded-3xl bg-amber-50/90 dark:bg-amber-950/40 border border-amber-200/80 dark:border-amber-900/60 text-amber-900 dark:text-amber-200 text-xs sm:text-sm font-semibold flex items-center gap-3.5 text-left shadow-2xs"
+            className="rounded-2xl border border-slate-200/80 bg-slate-50/90 dark:bg-slate-900/60 dark:border-slate-800 p-4 sm:p-5 border-l-4 border-l-amber-500 dark:border-l-amber-400 shadow-xs max-w-2xl mx-auto text-left space-y-1.5"
           >
-            <Sparkles className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0" />
-            <span className="leading-relaxed">
+            <div className="flex items-center gap-1.5 text-amber-700 dark:text-amber-300 font-extrabold text-[11px] uppercase tracking-wider">
+              <Compass className="w-4 h-4 stroke-[1.75]" /> LỜI KHUYÊN HỌC TẬP
+            </div>
+            <p className="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300 leading-relaxed">
               Đừng nản lòng nhé! Thi thử là để tìm ra lỗ hổng kiến thức. Hãy xem lại danh sách câu sai bên dưới và thử lại ngay!
-            </span>
+            </p>
           </motion.div>
         )}
 
@@ -767,11 +769,11 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
         </div>
 
         {/* Expanded Spacious Question Grid Navigator Sidebar */}
-        <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-7 border border-warm-border dark:border-slate-800 shadow-soft h-fit">
+        <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-7 border border-slate-200/80 dark:border-slate-800 shadow-soft h-fit overflow-x-hidden">
           <div className="flex items-center justify-between mb-4">
             <h4 className="text-xs font-extrabold text-slate-900 dark:text-slate-100 uppercase tracking-wider">DANH SÁCH CÂU HỎI ({questions.length})</h4>
           </div>
-          <div className="grid grid-cols-6 sm:grid-cols-6 gap-2.5 max-h-[520px] overflow-y-auto pr-1">
+          <div className="grid grid-cols-5 sm:grid-cols-5 gap-2 max-h-[520px] overflow-y-auto pr-1 overflow-x-hidden">
             {questions.map((_, idx) => {
               const isAnswered = userAnswers[idx] !== undefined;
               const isCurrent = idx === currentIndex;
@@ -780,7 +782,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
                 <button
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
-                  className={`w-11 h-11 rounded-2xl text-xs sm:text-sm font-extrabold transition-all flex items-center justify-center border ${
+                  className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl text-xs sm:text-sm font-extrabold transition-all flex items-center justify-center border shrink-0 ${
                     isCurrent
                       ? 'ring-2 ring-indigo-500 border-indigo-500 bg-indigo-600 text-white shadow-xs'
                       : isAnswered

@@ -452,8 +452,8 @@ export default function App() {
             {/* Hero Banner (Warm Minimalist / Lofi Study - Clean Flat Design) */}
             <div className="relative overflow-hidden rounded-3xl bg-slate-50 dark:bg-slate-900/90 p-6 sm:p-8 border border-slate-200/80 dark:border-slate-800 shadow-sm flex items-center justify-between flex-wrap gap-6 transition-all">
               <div className="max-w-2xl relative z-10 space-y-3">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100/80 dark:bg-amber-950/80 border border-amber-300/60 dark:border-amber-800 text-amber-900 dark:text-amber-200 text-xs font-extrabold shadow-2xs">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" /> Góc Ôn Luyện Kiến Thức
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-bold shadow-2xs">
+                  <BookOpen className="w-3.5 h-3.5 text-slate-600 dark:text-slate-400 stroke-[1.75]" /> Góc Ôn Luyện Kiến Thức
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight leading-snug">
                   Thư Thái Ghi Nhớ • Bứt Phá Điểm Số

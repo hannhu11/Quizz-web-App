@@ -527,6 +527,20 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
     3. `EncouragementBanner`: Card màu kem/hổ phách nhạt nhẹ nhàng (`bg-amber-50/90 border-amber-200/80`), icon Lucide `<Sparkles className="w-5 h-5 text-amber-600" />` (Xóa bỏ icon ngôi sao nhựa nham nhở!), lời nhắn động viên ấm áp khi $< 4.0$.
 - **Trạng Thái Deploy:** Build Vite production thành công (`974ms`), deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 847367).
 
+### 🎨⚡ Cập Nhật Đợt 35: Fix Tràn H-Scroll Navigator (`grid-cols-5`), Xóa 100% Icon Sparkles "Nhựa AI" & Redesign Academic Coaching Card:
+- **Fix Lỗi Tràn Khung Danh Sách Câu Hỏi (`ExamMode.jsx`):**
+  - Chuyển layout từ `grid-cols-6` sang **`grid-cols-5`** (chia 20 câu thành 4 hàng x 5 cột vừa khít).
+  - Nút bấm `w-9 h-9 sm:w-10 sm:h-10 rounded-xl font-extrabold text-xs sm:text-sm`.
+  - Khóa cờ `overflow-x-hidden` trên Card cha, triệt tiêu 100% lỗi tràn cuộn ngang.
+- **Loại Bỏ 100% Icon Sparkles `✨` ("Nhựa AI"):**
+  - **Badge Hero Banner (`App.jsx`):** Thay `<Sparkles />` bằng `<BookOpen className="w-3.5 h-3.5 stroke-[1.75]" />` chuẩn Notion/Linear style (`bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 font-bold px-3 py-1 rounded-full text-xs`).
+- **Redesign Khung Động Viên Thành Academic Coaching Card (`ExamMode.jsx`):**
+  - Styling: `rounded-2xl border border-slate-200/80 bg-slate-50/90 dark:bg-slate-900/60 p-4 sm:p-5 border-l-4 border-l-amber-500 shadow-xs max-w-2xl mx-auto text-left`.
+  - Eyebrow Header: `<Compass className="w-4 h-4 stroke-[1.75]" /> LỜI KHUYÊN HỌC TẬP`.
+  - Content: *"Đừng nản lòng nhé! Thi thử là để tìm ra lỗ hổng kiến thức. Hãy xem lại danh sách câu sai bên dưới và thử lại ngay!"*
+- **Trạng Thái Deploy:** Build Vite production thành công (`1.47s`), deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 856993).
+
+
 
 
 
