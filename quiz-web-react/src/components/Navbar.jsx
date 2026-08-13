@@ -18,8 +18,7 @@ export default function Navbar({
   onOpenProfile,
   onOpenAdmin
 }) {
-  const { user, logout } = useAuth();
-  const isAdmin = user && (user.role === 'ADMIN' || user.email === 'hannhu4002@gmail.com');
+  const isAdmin = user && (user.role === 'ADMIN' || user.email === 'hannhu4002@gmail.com' || user.email === 'hannhu3003@gmail.com');
 
   return (
     <header className="sticky top-0 z-30 w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-warm-border/60 dark:border-slate-800 transition-all duration-300">

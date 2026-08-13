@@ -199,18 +199,25 @@ router.post('/google', async (req, res) => {
       });
     }
 
+    const cleanEmail = email.trim().toLowerCase();
     let user = await prisma.user.findUnique({
-      where: { email: email.trim().toLowerCase() }
+      where: { email: cleanEmail }
     });
 
     if (!user) {
       user = await prisma.user.create({
         data: {
           fullName: fullName.trim(),
-          email: email.trim().toLowerCase(),
+          email: cleanEmail,
           avatarUrl: avatarUrl || null,
-          reputation: 10
+          reputation: 10,
+          role: cleanEmail === 'hannhu4002@gmail.com' ? 'ADMIN' : 'USER'
         }
+      });
+    } else if (cleanEmail === 'hannhu4002@gmail.com' && user.role !== 'ADMIN') {
+      user = await prisma.user.update({
+        where: { id: user.id },
+        data: { role: 'ADMIN' }
       });
     }
 
