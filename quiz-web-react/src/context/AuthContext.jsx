@@ -7,43 +7,47 @@ const API_BASE_URL = typeof window !== 'undefined' && window.location.hostname !
   : 'http://localhost:8701/api';
 
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState(null);
-  const [token, setToken] = useState(null);
+  // Synchronous state initialization from localStorage to prevent Ctrl+F5 logout flicker
+  const [user, setUser] = useState(() => {
+    try {
+      const savedUser = localStorage.getItem('quizzflow_user');
+      return savedUser ? JSON.parse(savedUser) : null;
+    } catch (e) {
+      return null;
+    }
+  });
+
+  const [token, setToken] = useState(() => {
+    return localStorage.getItem('quizzflow_token') || null;
+  });
+
   const [isLoading, setIsLoading] = useState(true);
 
-  // Restore session from localStorage on app start
+  // Background verification of session from localStorage on app mount
   useEffect(() => {
     async function restoreSession() {
       const savedToken = localStorage.getItem('quizzflow_token');
-      const savedUser = localStorage.getItem('quizzflow_user');
 
       if (savedToken) {
-        setToken(savedToken);
-        if (savedUser) {
-          try {
-            setUser(JSON.parse(savedUser));
-          } catch (e) {
-            console.error('Failed to parse saved user:', e);
-          }
-        }
-
-        // Verify token with backend
         try {
           const res = await fetch(`${API_BASE_URL}/auth/me`, {
             headers: {
               Authorization: `Bearer ${savedToken}`
             }
           });
-          const data = await res.json();
-          if (data.success && data.user) {
-            setUser(data.user);
-            localStorage.setItem('quizzflow_user', JSON.stringify(data.user));
-          } else {
-            // Token expired or invalid
+
+          if (res.status === 401) {
+            // Token expired or invalid -> logout
             logout();
+          } else if (res.ok) {
+            const data = await res.json();
+            if (data.success && data.user) {
+              setUser(data.user);
+              localStorage.setItem('quizzflow_user', JSON.stringify(data.user));
+            }
           }
         } catch (err) {
-          console.warn('Backend server offline or unreachable during session restore:', err);
+          console.warn('Backend server offline or unreachable during background session verify:', err);
         }
       }
       setIsLoading(false);
@@ -161,7 +165,7 @@ export function AuthProvider({ children }) {
       };
       const demoToken = 'google-token-' + Date.now();
       saveSession(demoToken, demoUser);
-      return { success: true, message: 'Đăng nhập Google 1-Click thành công!' };
+      return { success: true, message: 'Đăng nhập bằng Google thành công!' };
     }
   };
 

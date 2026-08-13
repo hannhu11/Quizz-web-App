@@ -10,6 +10,7 @@ const { exec } = require('child_process');
 const authRoutes = require('./src/routes/authRoutes');
 const commentRoutes = require('./src/routes/commentRoutes');
 const savedRoutes = require('./src/routes/savedRoutes');
+const adminRoutes = require('./src/routes/adminRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 8701;
@@ -55,11 +56,12 @@ const apiLimiter = rateLimit({
 app.use('/api/', apiLimiter);
 
 // ----------------------------------------------------
-// 1. QuizzFlow v2.0 Routes (Auth, Discussions & Saved Questions)
+// 1. QuizzFlow v2.0 Routes (Auth, Discussions, Saved & Admin)
 // ----------------------------------------------------
 app.use('/api/auth', authRoutes);
 app.use('/api/comments', commentRoutes);
 app.use('/api/saved-questions', savedRoutes);
+app.use('/api/admin', adminRoutes);
 
 // Health Check Endpoint
 app.get('/api/health', (req, res) => {

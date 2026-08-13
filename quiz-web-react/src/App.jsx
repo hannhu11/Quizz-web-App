@@ -10,6 +10,8 @@ import TestSetupModal from './components/TestSetupModal';
 import ChillDock from './components/chill/ChillDock';
 import CustomModal from './components/CustomModal';
 import AuthModal from './components/auth/AuthModal';
+import ProfileModal from './components/auth/ProfileModal';
+import AdminView from './components/admin/AdminView';
 import { QUIZ_MANIFEST, fetchQuizById, getUserProgress, getStarredQuestions, toggleStarQuestion, unstarQuizSet, clearAllStarredQuestions, getCustomQuizSets, getDeletedQuizIds, syncCommunityQuizzes } from './data/quizDataLoader';
 import { Sparkles, BookOpen, Layers, Star, Trash2, ArrowRight, BookMarked, Plus } from 'lucide-react';
 
@@ -30,6 +32,7 @@ export default function App() {
   const [isStarredModalOpen, setIsStarredModalOpen] = useState(false);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [authModalMode, setAuthModalMode] = useState('LOGIN');
+  const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
 
   const [progress, setProgress] = useState({});
   const [starredQuestions, setStarredQuestions] = useState([]);
@@ -411,6 +414,8 @@ export default function App() {
           setAuthModalMode(mode || 'LOGIN');
           setIsAuthModalOpen(true);
         }}
+        onOpenProfile={() => setIsProfileModalOpen(true)}
+        onOpenAdmin={() => setStudyMode('ADMIN')}
       />
 
       {/* Main Content Area */}
@@ -424,8 +429,13 @@ export default function App() {
           />
         )}
 
+        {/* Admin Portal Management View */}
+        {studyMode === 'ADMIN' && (
+          <AdminView onBack={() => setStudyMode(null)} />
+        )}
+
         {/* Active Study Views */}
-        {studyMode && studyMode !== 'CREATE_SET' && loadedQuiz && (
+        {studyMode && studyMode !== 'CREATE_SET' && studyMode !== 'ADMIN' && loadedQuiz && (
           <>
             {studyMode === 'DETAIL' && (
               <QuizDetailView
@@ -704,6 +714,12 @@ export default function App() {
         isOpen={isAuthModalOpen}
         onClose={() => setIsAuthModalOpen(false)}
         initialMode={authModalMode}
+      />
+
+      {/* Student Profile Modal */}
+      <ProfileModal
+        isOpen={isProfileModalOpen}
+        onClose={() => setIsProfileModalOpen(false)}
       />
 
       {/* Chill Space - Independent Floating Widgets (LifeAt Style) */}

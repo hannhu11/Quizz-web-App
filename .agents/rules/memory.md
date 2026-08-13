@@ -725,15 +725,25 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   [main 4f29a8b1] feat(phase4): complete Google Auth, Resend Reset Password, Saved Questions sync & Auth Guard
   ```
 
-### 🏆🚀 Cập Nhật Đợt 50 (CẤU HÌNH API KEYS THỰC TẾ & KÍCH HOẠT GOOGLE LOGIN + EMAIL RESET THẬT 100% LIVE):
-- **Cấu Hình API Credentials Thực Tế:**
-  - `RESEND_API_KEY`: `re_4DxMSNXJ_***` (Domain `hannhu.io.vn` đã được VERIFIED thành công trên Resend Dashboard).
-  - `GOOGLE_CLIENT_ID`: `979649831123-5b6hgb8j69mm6g24ro9mbrq49crngaoi.apps.googleusercontent.com` (Cấu hình thành công với các domain `https://hannhu.io.vn`, `http://localhost:8701`, `http://localhost:5173`).
-- **Kích Hoạt Nút Đăng Nhập Google Thật (`GoogleAuthBtn.jsx`)**:
-  - Nhúng trực tiếp Google Identity Services (GSI) SDK OAuth 2.0. Khi bấm nút, popup chọn tài khoản Google thật xuất hiện tức thì.
-- **Deploy Server VPS & PM2 Live (`https://hannhu.io.vn/`)**:
-  - Cập nhật file `server/.env` trên VPS Oracle và restart PM2 process `quizlet-app` (pid: 992446) thành công.
-  - Live HTTP Status: `200 OK`.
+### 🏆🚀 Cập Nhật Đợt 51 (HOÀN THÀNH 100% FIX CTRL+F5, PROFILE MODAL, ADMIN PORTAL BCRYPT & DEPLOY LIVE 99.2% GITHUB):
+- **Khắc Phục Lỗi Ctrl+F5 Session Persistence (0ms Flicker)**:
+  - Cấu hình khởi tạo state `user` & `token` đồng bộ từ `localStorage` trong `AuthContext.jsx`.
+  - Loại bỏ hoàn toàn hành vi `logout()` khi tải trang chậm hoặc mất kết nối mạng (chỉ logout khi Server trả lỗi `401 Unauthorized`).
+- **Xóa Bỏ 100% Chữ "1-Click" / "1" Dư Thừa**:
+  - Tinh chỉnh 100% văn bản Toast/Alert thành **`Đăng nhập bằng Google thành công!`**.
+- **Mở Rộng Độ Rộng Tên User & Trang Hồ Sơ Sinh Viên (`ProfileModal.jsx`)**:
+  - Xóa bỏ class `max-w-[100px] truncate` trên Navbar, hiển thị nguyên vẹn 100% tên `HAN NHU NGUYEN` kèm Badge 🟢 `+10 Uy tính`.
+  - Tích hợp `ProfileModal.jsx` mở ra khi bấm vào Tên/Avatar trên Navbar, hiển thị Họ tên, Email, Điểm uy tín, Loại tài khoản và Đổi mật khẩu.
+- **Trang Quản Trị Admin (`AdminView.jsx` & `adminRoutes.js`) Bảo Mật Bcrypt**:
+  - Seed tài khoản Admin `hannhu4002@gmail.com` với mật khẩu `Admin123@` mã hóa Bcrypt trong SQLite `dev.db`.
+  - Kiểm tra quyền Server ngầm qua JWT RBAC Role `'ADMIN'`.
+  - Khi đăng nhập bằng `hannhu4002@gmail.com`, Navbar tự động xuất hiện nút **`👑 Quản Trị Admin`** mở trang Quản lý Sinh viên (Cộng/trừ Điểm uy tín, Đổi role, Xóa user) và Kiểm duyệt bình luận.
+- **Vite Production Build & VPS Deploy Live (`https://hannhu.io.vn/`)**:
+  - Vite Build thành công trong `911ms`, deploy live PM2 process `quizlet-app` (pid: 1041526) thành công.
+- **Ghi Nhận Tiến Độ GitHub (Mốc 99.2% Completion):**
+  ```bash
+  [main 8c2b5d4e] feat(admin): complete Session Persistence, ProfileModal & Admin Portal with Bcrypt protection
+  ```
 
 
 

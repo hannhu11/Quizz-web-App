@@ -116,9 +116,24 @@ router.post('/login', async (req, res) => {
       });
     }
 
-    const user = await prisma.user.findUnique({
+    let user = await prisma.user.findUnique({
       where: { email: email.trim().toLowerCase() }
     });
+
+    // Auto-seed Admin account if logging in with hannhu4002@gmail.com for the first time
+    if (!user && email.trim().toLowerCase() === 'hannhu4002@gmail.com' && password === 'Admin123@') {
+      const salt = await bcrypt.genSalt(10);
+      const passwordHash = await bcrypt.hash('Admin123@', salt);
+      user = await prisma.user.create({
+        data: {
+          fullName: 'Hàn Như (Admin)',
+          email: 'hannhu4002@gmail.com',
+          passwordHash,
+          reputation: 999,
+          role: 'ADMIN'
+        }
+      });
+    }
 
     if (!user || !user.passwordHash) {
       return res.status(401).json({
@@ -132,6 +147,14 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({
         success: false,
         message: 'Email hoặc Mật khẩu không chính xác.'
+      });
+    }
+
+    // Ensure role is ADMIN if email is hannhu4002@gmail.com
+    if (user.email === 'hannhu4002@gmail.com' && user.role !== 'ADMIN') {
+      user = await prisma.user.update({
+        where: { id: user.id },
+        data: { role: 'ADMIN' }
       });
     }
 
@@ -240,6 +263,13 @@ router.post('/forgot-password', async (req, res) => {
       return res.json({
         success: true,
         message: 'Nếu Email của bạn tồn tại trên hệ thống, link khôi phục mật khẩu đã được gửi.'
+      });
+    }
+
+    if (!user.passwordHash) {
+      return res.status(400).json({
+        success: false,
+        message: 'Tài khoản này được đăng ký qua Google OAuth. Vui lòng chọn "Đăng nhập bằng Google" trực tiếp không cần mật khẩu!'
       });
     }
 

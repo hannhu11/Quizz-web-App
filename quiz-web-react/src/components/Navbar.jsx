@@ -51,62 +51,84 @@ export default function Navbar({
             </span>
           </a>
 
-          <div>
-            <h1 className="text-sm sm:text-lg font-extrabold tracking-tight text-warm-text dark:text-slate-100 flex items-center gap-1.5 whitespace-nowrap">
-              QuizzFlow <span className="text-[10px] sm:text-[11px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-indigo-100/90 dark:bg-indigo-950/80 text-indigo-900 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 whitespace-nowrap">STUDY HUB</span>
-            </h1>
-            <p className="text-[11px] text-slate-600 dark:text-slate-300 font-semibold hidden sm:block">Nền tảng ôn luyện và ghi nhớ tối ưu</p>
+          <div className="flex flex-col">
+            <div className="flex items-center gap-1.5">
+              <span className="font-extrabold text-base tracking-tight text-slate-900 dark:text-slate-100 font-sans">
+                QuizzFlow
+              </span>
+              <span className="text-[10px] font-extrabold px-1.5 py-0.2 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20 tracking-wider">
+                STUDY HUB
+              </span>
+            </div>
+            <a
+              href="https://hannhu.io.vn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[11px] font-semibold text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors flex items-center gap-1"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <span>Nền tảng ôn luyện và ghi nhớ tối ưu</span>
+            </a>
           </div>
         </div>
 
-        {/* Search Bar */}
-        <div className="flex-1 max-w-md mx-2 sm:mx-4">
+        {/* Search Bar Input */}
+        <div className="flex-1 max-w-md hidden md:block">
           <div className="relative">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-warm-muted dark:text-slate-400" />
+            <Search className="w-4 h-4 text-warm-muted dark:text-slate-400 absolute left-3.5 top-2.5 stroke-[1.75]" />
             <input
-              id="navbar-search-input"
-              name="navbarSearch"
               type="text"
-              placeholder="Tìm môn học, bài thi..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 text-sm rounded-full bg-white/90 dark:bg-slate-800 border border-warm-border/80 dark:border-slate-700 text-warm-text dark:text-slate-100 placeholder:text-warm-muted dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-warm-slate/30 dark:focus:ring-slate-600 transition-all shadow-xs"
+              placeholder="Tìm môn học, bài thi..."
+              className="w-full pl-9 pr-4 py-1.5 rounded-full bg-warm-bg dark:bg-slate-800 border border-warm-border dark:border-slate-700 text-xs font-medium text-warm-text dark:text-slate-200 placeholder-warm-muted dark:placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-400 dark:focus:ring-slate-500 transition-all shadow-2xs"
             />
           </div>
         </div>
 
-        {/* Action Controls */}
-        <div className="flex items-center gap-2">
-          {/* Create New Set Button */}
+        {/* Right Actions & Utilities */}
+        <div className="flex items-center gap-2 sm:gap-3">
+          {/* Create Set Button */}
           <button
             onClick={onOpenCreateSet}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition-all shadow-xs active:scale-95"
-            title="Tạo bộ đề Flashcard mới"
+            className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold transition-all shadow-2xs cursor-pointer active:scale-95"
+            title="Tạo bộ đề học tập mới"
           >
-            <Plus className="w-4 h-4" />
-            <span className="hidden md:inline">Tạo bộ đề</span>
+            <Plus className="w-3.5 h-3.5 stroke-[2.5]" />
+            <span>Tạo bộ đề</span>
           </button>
 
-          {/* Starred Questions Button */}
+          {/* Categorized Starred Questions Trigger */}
           <button
             onClick={onOpenStarred}
-            className="relative flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-50 dark:bg-amber-950/60 hover:bg-amber-100 dark:hover:bg-amber-900/60 text-amber-900 dark:text-amber-300 border border-amber-200/80 dark:border-amber-800/80 text-xs font-semibold transition-all shadow-xs active:scale-95"
-            title="Danh sách câu hỏi đã lưu"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-50 dark:bg-amber-950/60 hover:bg-amber-100 dark:hover:bg-amber-900/60 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800 text-xs font-bold transition-all shadow-2xs cursor-pointer"
+            title="Xem danh sách câu hỏi đã lưu theo từng môn"
           >
-            <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-500" />
-            <span className="hidden md:inline">Đã lưu</span>
+            <Star className="w-3.5 h-3.5 text-amber-500 fill-amber-500 stroke-[1.5]" />
+            <span className="hidden xs:inline">Đã lưu</span>
             {starredCount > 0 && (
-              <span className="px-1.5 py-0.2 bg-amber-100 text-amber-950 dark:bg-amber-900/90 dark:text-amber-100 border border-amber-300 dark:border-amber-700 rounded-full text-[10px] font-extrabold">
+              <span className="ml-0.5 px-1.5 py-0.2 rounded-full bg-amber-200 dark:bg-amber-800 text-amber-900 dark:text-amber-100 text-[10px] font-extrabold">
                 {starredCount}
               </span>
             )}
           </button>
 
+          {/* Admin Button (Only visible for ADMIN role or hannhu4002@gmail.com) */}
+          {isAdmin && (
+            <button
+              onClick={onOpenAdmin}
+              className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-amber-500/10 hover:bg-amber-500/20 text-amber-700 dark:text-amber-300 border border-amber-500/30 text-xs font-extrabold transition-all cursor-pointer"
+              title="Mở Trang Quản Trị Admin QuizzFlow"
+            >
+              <span>👑 Quản Trị Admin</span>
+            </button>
+          )}
+
           {/* Dark Mode Toggle */}
           <button
             onClick={() => setIsDarkMode(!isDarkMode)}
-            className="p-2 rounded-full hover:bg-warm-hover dark:hover:bg-slate-800 text-warm-muted dark:text-slate-300 hover:text-warm-text transition-all active:scale-95 cursor-pointer"
-            title="Đổi giao diện Sáng / Tối"
+            className="p-2 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
+            title={isDarkMode ? 'Chuyển giao diện Sáng' : 'Chuyển giao diện Tối'}
           >
             {isDarkMode ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4" />}
           </button>
@@ -114,8 +136,12 @@ export default function Navbar({
           {/* Auth Controls & Reputation Badge */}
           {user ? (
             <div className="flex items-center gap-2 pl-1 border-l border-slate-200 dark:border-slate-800">
-              <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-bold">
-                <span className="text-slate-800 dark:text-slate-200 max-w-[100px] truncate">{user.fullName || user.email}</span>
+              <div
+                onClick={() => onOpenProfile && onOpenProfile()}
+                className="flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-bold cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 transition-all"
+                title="Bấm để xem Hồ Sơ Sinh Viên"
+              >
+                <span className="text-slate-800 dark:text-slate-200 font-extrabold whitespace-nowrap">{user.fullName || user.email}</span>
                 {/* Reputation Badge */}
                 <span
                   className={`px-2 py-0.5 rounded-full text-[10px] font-bold tracking-tight inline-flex items-center gap-1 ${
