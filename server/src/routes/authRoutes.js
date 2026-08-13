@@ -217,42 +217,137 @@ router.post('/google', async (req, res) => {
 });
 
 /**
- * GET /api/auth/me
- * Lấy thông tin tài khoản hiện tại qua JWT Bearer Token
+ * POST /api/auth/forgot-password
+ * Yêu cầu gửi email khôi phục mật khẩu qua Resend API + JWT Reset Token
  */
-router.get('/me', authenticateToken, async (req, res) => {
+router.post('/forgot-password', async (req, res) => {
   try {
+    const { email } = req.body;
+
+    if (!email || !email.trim()) {
+      return res.status(400).json({
+        success: false,
+        message: 'Vui lòng nhập Email để khôi phục mật khẩu.'
+      });
+    }
+
     const user = await prisma.user.findUnique({
-      where: { id: req.user.id },
-      select: {
-        id: true,
-        fullName: true,
-        email: true,
-        dob: true,
-        avatarUrl: true,
-        reputation: true,
-        role: true,
-        createdAt: true
-      }
+      where: { email: email.trim().toLowerCase() }
     });
 
     if (!user) {
-      return res.status(404).json({
-        success: false,
-        message: 'Không tìm thấy thông tin tài khoản.'
+      // Return success to prevent email enumeration
+      return res.json({
+        success: true,
+        message: 'Nếu Email của bạn tồn tại trên hệ thống, link khôi phục mật khẩu đã được gửi.'
       });
+    }
+
+    // Generate 15-minute JWT Reset Token
+    const jwt = require('jsonwebtoken');
+    const resetToken = jwt.sign(
+      { id: user.id, email: user.email, type: 'RESET_PASSWORD' },
+      process.env.JWT_SECRET || 'quizzflow_super_secret_jwt_key_2026_v20',
+      { expiresIn: '15m' }
+    );
+
+    const resetLink = `https://hannhu.io.vn/#/reset-password?token=${resetToken}`;
+
+    // Send email via Resend API if RESEND_API_KEY exists, else fallback to console.log
+    if (process.env.RESEND_API_KEY) {
+      try {
+        const { Resend } = require('resend');
+        const resend = new Resend(process.env.RESEND_API_KEY);
+        await resend.emails.send({
+          from: 'QuizzFlow <auth@hannhu.io.vn>',
+          to: [user.email],
+          subject: '🔑 Khôi phục mật khẩu tài khoản QuizzFlow',
+          html: `
+            <div style="font-family: sans-serif; max-width: 500px; margin: 0 auto; padding: 20px; border: 1px solid #e2e8f0; rounded: 16px;">
+              <h2 style="color: #4f46e5;">QuizzFlow Password Reset</h2>
+              <p>Chào <strong>${user.fullName}</strong>,</p>
+              <p>Bạn vừa yêu cầu khôi phục mật khẩu tài khoản QuizzFlow. Vui lòng bấm vào nút bên dưới để đổi mật khẩu (Link có hiệu lực trong 15 phút):</p>
+              <a href="${resetLink}" style="display: inline-block; background: #4f46e5; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; margin: 16px 0;">Đổi Mật Khẩu Ngay</a>
+              <p style="font-size: 12px; color: #64748b;">Nếu bạn không yêu cầu thao tác này, xin vui lòng bỏ qua email này.</p>
+            </div>
+          `
+        });
+      } catch (emailErr) {
+        console.error('Resend Email Error:', emailErr);
+      }
+    } else {
+      console.log('------------------------------------------------------');
+      console.log('🔑 [DEV FALLBACK] PASSWORD RESET LINK FOR:', user.email);
+      console.log(resetLink);
+      console.log('------------------------------------------------------');
     }
 
     return res.json({
       success: true,
-      user
+      message: 'Link khôi phục mật khẩu đã được gửi đến email của bạn!',
+      resetToken // Return token for dev testing preview
     });
 
   } catch (error) {
-    console.error('Get Me Error:', error);
+    console.error('Forgot Password Error:', error);
     return res.status(500).json({
       success: false,
-      message: 'Lỗi máy chủ khi lấy thông tin tài khoản.'
+      message: 'Lỗi máy chủ khi gửi yêu cầu khôi phục mật khẩu.'
+    });
+  }
+});
+
+/**
+ * POST /api/auth/reset-password
+ * Đổi mật khẩu mới bằng JWT Reset Token
+ */
+router.post('/reset-password', async (req, res) => {
+  try {
+    const { token, newPassword } = req.body;
+
+    if (!token || !newPassword || newPassword.length < 8) {
+      return res.status(400).json({
+        success: false,
+        message: 'Mật khẩu mới phải có độ dài tối thiểu 8 ký tự.'
+      });
+    }
+
+    const jwt = require('jsonwebtoken');
+    let decoded;
+    try {
+      decoded = jwt.verify(token, process.env.JWT_SECRET || 'quizzflow_super_secret_jwt_key_2026_v20');
+    } catch (err) {
+      return res.status(400).json({
+        success: false,
+        message: 'Link khôi phục mật khẩu đã hết hạn hoặc không hợp lệ.'
+      });
+    }
+
+    if (decoded.type !== 'RESET_PASSWORD') {
+      return res.status(400).json({
+        success: false,
+        message: 'Token không đúng định dạng khôi phục mật khẩu.'
+      });
+    }
+
+    const salt = await bcrypt.genSalt(10);
+    const passwordHash = await bcrypt.hash(newPassword, salt);
+
+    await prisma.user.update({
+      where: { id: decoded.id },
+      data: { passwordHash }
+    });
+
+    return res.json({
+      success: true,
+      message: 'Đổi mật khẩu mới thành công! Vui lòng đăng nhập lại.'
+    });
+
+  } catch (error) {
+    console.error('Reset Password Error:', error);
+    return res.status(500).json({
+      success: false,
+      message: 'Lỗi máy chủ khi đặt lại mật khẩu.'
     });
   }
 });

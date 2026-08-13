@@ -13,7 +13,10 @@ import AuthModal from './components/auth/AuthModal';
 import { QUIZ_MANIFEST, fetchQuizById, getUserProgress, getStarredQuestions, toggleStarQuestion, unstarQuizSet, clearAllStarredQuestions, getCustomQuizSets, getDeletedQuizIds, syncCommunityQuizzes } from './data/quizDataLoader';
 import { Sparkles, BookOpen, Layers, Star, Trash2, ArrowRight, BookMarked, Plus } from 'lucide-react';
 
+import { useAuth } from './context/AuthContext';
+
 export default function App() {
+  const { user, isAuthenticated } = useAuth();
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('ALL');
   const [activeQuizId, setActiveQuizId] = useState(null);
@@ -219,6 +222,13 @@ export default function App() {
   }, [setHashState]);
 
   const handleSelectModeDirect = useCallback((quizId, mode) => {
+    // Auth Guard Enforcement: Must be logged in to access learning modes
+    if (!user) {
+      setAuthModalMode('LOGIN');
+      setIsAuthModalOpen(true);
+      return;
+    }
+
     const quizData = fetchQuizById(quizId);
     setActiveQuizId(quizId);
     setLoadedQuiz(quizData);
@@ -230,7 +240,7 @@ export default function App() {
       setStudyMode(mode);
       setHashState(mode, quizId);
     }
-  }, [setHashState]);
+  }, [user, setHashState]);
 
   // Handle Set Created or Updated
   const handleSetCreated = useCallback((newSet) => {

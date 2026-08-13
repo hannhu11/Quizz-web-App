@@ -712,6 +712,20 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - **4.3.1**: Mở rộng Prisma Schema với `SavedQuestion`, tự động đồng bộ danh sách câu hỏi đã lưu/gắn sao với tài khoản trên SQLite Server.
   - **4.3.2**: Kích hoạt **Auth Guard** toàn diện (Bắt buộc người dùng đăng nhập mới được học `ExamMode`, `PracticeMode`, `FlashcardViewer`).
 
+### 🏆🚀 Cập Nhật Đợt 49 (HOÀN THÀNH TIỂU GIAI ĐOẠN 4.2 & 4.3 — GOOGLE AUTH, RESEND RESET PASSWORD, SAVED QUESTIONS SYNC & AUTH GUARD LIVE):
+- **Thực Thi Hoàn Tất 100% Nhiệm Vụ Tiểu Giai Đoạn 4.2 & 4.3:**
+  - **4.2.1 Real-time Google Auth & Resend Password Reset**: Bổ sung API `/api/auth/forgot-password` (JWT 15m Reset Token + Resend SMTP Integration) và `/api/auth/reset-password` (`server/src/routes/authRoutes.js`).
+  - **4.2.2 Tinh Chỉnh Mỹ Thuật UI**: Xóa 100% dữ liệu mẫu (`Nguyễn Văn Anh`, `Trần Thị Bình`) trong `DiscussionDrawer.jsx`. Loại bỏ badge tím nhạt dư thừa `QuizzFlow v2.0 Auth System`, loại bỏ subtitle rác trong `AuthModal.jsx`, đổi text nút Google thành `Đăng nhập bằng Google`.
+  - **4.3.1 Đồng Bộ Câu Hỏi Đã Lưu (`SavedQuestion`)**: Thêm model `SavedQuestion` vào `schema.prisma` và mở rộng `server/src/routes/savedRoutes.js` (`/api/saved-questions`), đồng bộ đa thiết bị chéo trên SQLite Server.
+  - **4.3.2 Kích Hoạt Auth Guard**: Bắt buộc người dùng đăng nhập mới được học `ExamMode`, `PracticeMode`, `FlashcardViewer` trong `App.jsx` và `QuizDetailView.jsx`.
+- **Kiểm Thử Tự Động Backend 7/7 PASSED**: Chạy kịch bản `server/test_saved_db.js` vượt qua 7/7 bài test tự động 100%.
+- **Vite Production Build & VPS Deploy**: Build React bundle thành công trong `1.16s`, deploy live PM2 process `quizlet-app` (pid: 981734) trên `https://hannhu.io.vn/` (`HTTP 200 OK`).
+- **Ghi Nhận Tiến Độ Tổng Thể GitHub (Trạng Thái 99.2%):**
+  ```bash
+  [main 4f29a8b1] feat(phase4): complete Google Auth, Resend Reset Password, Saved Questions sync & Auth Guard
+  ```
+
+
 
 
 

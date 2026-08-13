@@ -15,7 +15,9 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = typeof window !== 'undefined' && window.location.hostname !== 'localhost'
+  ? `${window.location.origin}/api`
+  : 'http://localhost:8701/api';
 
 export default function DiscussionDrawer({ quizId, questionId, onOpenAuthModal }) {
   const { user, token } = useAuth();
@@ -45,40 +47,8 @@ export default function DiscussionDrawer({ quizId, questionId, onOpenAuthModal }
           setComments([]);
         }
       } catch (err) {
-        console.warn('Backend server offline during comments fetch, running local mock:', err);
-        // Local Fallback mock comments for preview
-        setComments([
-          {
-            id: 'mock-1',
-            quizId,
-            questionId,
-            content: 'Theo giáo trình chuẩn Lịch sử Đảng trang 45 thì phương án B mới chuẩn mốc 1930!',
-            score: 8,
-            createdAt: new Date(Date.now() - 3600000).toISOString(),
-            isAutoCollapsed: false,
-            userVote: 0,
-            user: {
-              fullName: 'Nguyễn Văn Anh',
-              reputation: 42, // Green Badge
-              avatarUrl: null
-            }
-          },
-          {
-            id: 'mock-2',
-            quizId,
-            questionId,
-            content: 'Câu này cần đọc kỹ từ khóa "vai trò lãnh đạo" nhé các bạn.',
-            score: 2,
-            createdAt: new Date(Date.now() - 7200000).toISOString(),
-            isAutoCollapsed: false,
-            userVote: 0,
-            user: {
-              fullName: 'Trần Thị Bình',
-              reputation: 5, // Slate Badge
-              avatarUrl: null
-            }
-          }
-        ]);
+        console.warn('Backend server offline during comments fetch:', err);
+        setComments([]);
       }
       setIsLoading(false);
     }

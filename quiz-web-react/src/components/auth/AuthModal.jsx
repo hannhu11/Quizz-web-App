@@ -142,9 +142,6 @@ export default function AuthModal({ isOpen, onClose, initialMode = 'LOGIN' }) {
 
           {/* Header Title */}
           <div className="text-center mb-6">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-bold mb-2">
-              <ShieldCheck className="w-3.5 h-3.5 stroke-[1.75]" /> QuizzFlow v2.0 Auth System
-            </div>
             <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">
               {mode === 'LOGIN' && 'Đăng Nhập QuizzFlow'}
               {mode === 'REGISTER' && 'Tạo Tài Khoản Sinh Viên'}
@@ -152,7 +149,7 @@ export default function AuthModal({ isOpen, onClose, initialMode = 'LOGIN' }) {
             </h3>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
               {mode === 'LOGIN' && 'Đăng nhập để tích lũy Điểm Uy Tín & Thảo luận đáp án'}
-              {mode === 'REGISTER' && 'Tạo tài khoản FPT/Gmail và nhận ngay 🟢 +10 Điểm Uy Tín'}
+              {mode === 'REGISTER' && 'Tạo tài khoản bằng email FPT hoặc Gmail'}
               {mode === 'FORGOT_PASSWORD' && 'Nhập email sinh viên để nhận lại mật khẩu'}
             </p>
           </div>

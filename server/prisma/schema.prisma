@@ -9,19 +9,20 @@ generator client {
 
 // 1. User Model
 model User {
-  id           String    @id @default(uuid())
-  fullName     String
-  email        String    @unique
-  passwordHash String?   // Null for Google OAuth users
-  dob          String?   // YYYY-MM-DD
-  avatarUrl    String?
-  reputation   Int       @default(10) // Initial 10 reputation points
-  role         String    @default("USER") // USER | ADMIN
-  comments     Comment[]
-  votes        Vote[]
-  reports      Report[]
-  createdAt    DateTime  @default(now())
-  updatedAt    DateTime  @updatedAt
+  id             String          @id @default(uuid())
+  fullName       String
+  email          String          @unique
+  passwordHash   String?         // Null for Google OAuth users
+  dob            String?         // YYYY-MM-DD
+  avatarUrl      String?
+  reputation     Int             @default(10) // Initial 10 reputation points
+  role           String          @default("USER") // USER | ADMIN
+  comments       Comment[]
+  votes          Vote[]
+  reports        Report[]
+  savedQuestions SavedQuestion[]
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
 }
 
 // 2. Comment Model
@@ -67,4 +68,19 @@ model Report {
   createdAt DateTime @default(now())
 
   @@unique([commentId, userId])
+}
+
+// 5. SavedQuestion Model (Cross-device synced Starred Questions)
+model SavedQuestion {
+  id           String   @id @default(uuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  quizId       String
+  questionId   String
+  quizTitle    String?
+  subjectCode  String?
+  questionData String   // JSON representation of Question
+  createdAt    DateTime @default(now())
+
+  @@unique([userId, quizId, questionId])
 }

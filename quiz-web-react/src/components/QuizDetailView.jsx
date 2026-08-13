@@ -4,6 +4,7 @@ import { ArrowLeft, Layers, Play, CheckCircle2, Star, Volume2, BookOpen, MoreHor
 import { toggleStarQuestion, getStarredQuestions, unstarQuizSet, verifyQuizPassword, deleteCustomQuizSet, calculateQuizProgressStats } from '../data/quizDataLoader';
 import PasswordModal from './PasswordModal';
 import DiscussionDrawer from './discussion/DiscussionDrawer';
+import { useAuth } from '../context/AuthContext';
 
 function removeAccents(str) {
   if (!str) return '';
@@ -15,6 +16,7 @@ function removeAccents(str) {
 }
 
 export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSetup, onEditQuiz, onDeleteQuiz, onOpenAuthModal }) {
+  const { user } = useAuth();
   const [filterMode, setFilterMode] = useState('ALL'); // 'ALL' | 'STARRED'
   const [searchQuery, setSearchQuery] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -195,7 +197,10 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
           {/* Flashcard Button */}
           <button
-            onClick={() => onStartMode('FLASHCARD')}
+            onClick={() => {
+              if (!user) { onOpenAuthModal('LOGIN'); return; }
+              onStartMode('FLASHCARD');
+            }}
             className="flex items-center justify-center gap-3 p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/60 hover:bg-amber-100 dark:hover:bg-amber-900/60 text-amber-900 dark:text-amber-300 border border-amber-200/80 dark:border-amber-800 font-bold text-sm shadow-xs transition-all active:scale-98 group"
           >
             <Layers className="w-5 h-5 text-amber-600 dark:text-amber-400 group-hover:scale-110 transition-transform" />
@@ -204,7 +209,10 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
 
           {/* Practice Button */}
           <button
-            onClick={() => onStartMode('PRACTICE')}
+            onClick={() => {
+              if (!user) { onOpenAuthModal('LOGIN'); return; }
+              onStartMode('PRACTICE');
+            }}
             className="flex items-center justify-center gap-3 p-4 rounded-2xl bg-indigo-50 dark:bg-indigo-950/60 hover:bg-indigo-100 dark:hover:bg-indigo-900/60 text-indigo-900 dark:text-indigo-300 border border-indigo-200/80 dark:border-indigo-800 font-bold text-sm shadow-xs transition-all active:scale-98 group"
           >
             <Play className="w-5 h-5 text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform" />
@@ -213,7 +221,10 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
 
           {/* Setup Test Button */}
           <button
-            onClick={onOpenTestSetup}
+            onClick={() => {
+              if (!user) { onOpenAuthModal('LOGIN'); return; }
+              onOpenTestSetup();
+            }}
             className="flex items-center justify-center gap-3 p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 text-emerald-900 dark:text-emerald-300 border border-emerald-200/80 dark:border-emerald-800 font-bold text-sm shadow-xs transition-all active:scale-98 group"
           >
             <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform" />
