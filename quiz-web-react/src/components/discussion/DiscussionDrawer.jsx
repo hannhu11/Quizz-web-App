@@ -29,32 +29,40 @@ export default function DiscussionDrawer({ quizId, questionId, onOpenAuthModal }
   const [errorMsg, setErrorMsg] = useState('');
   const [expandedComments, setExpandedComments] = useState({}); // Track expanded auto-collapsed comments
 
-  // Load comments when drawer is opened
-  useEffect(() => {
-    if (!isOpen) return;
-
-    async function fetchComments() {
-      setIsLoading(true);
-      setErrorMsg('');
-      try {
-        const res = await fetch(`${API_BASE_URL}/comments/${quizId}/${questionId}`, {
-          headers: token ? { Authorization: `Bearer ${token}` } : {}
-        });
-        const data = await res.json();
-        if (data.success) {
-          setComments(data.comments || []);
-        } else {
-          setComments([]);
-        }
-      } catch (err) {
-        console.warn('Backend server offline during comments fetch:', err);
+  // Instant fetch on mount (regardless of isOpen) + Auto-Polling 10s & Tab Focus Event Listeners
+  const fetchComments = async () => {
+    try {
+      const res = await fetch(`${API_BASE_URL}/comments/${quizId}/${questionId}`, {
+        headers: token ? { Authorization: `Bearer ${token}` } : {}
+      });
+      const data = await res.json();
+      if (data.success) {
+        setComments(data.comments || []);
+      } else {
         setComments([]);
       }
-      setIsLoading(false);
+    } catch (err) {
+      console.warn('Backend server offline during comments fetch:', err);
     }
+  };
 
+  useEffect(() => {
     fetchComments();
-  }, [isOpen, quizId, questionId, token]);
+
+    // 10s Auto Polling
+    const interval = setInterval(fetchComments, 10000);
+
+    // Sync on tab focus / visibility change
+    const handleFocus = () => fetchComments();
+    window.addEventListener('focus', handleFocus);
+    document.addEventListener('visibilitychange', handleFocus);
+
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('focus', handleFocus);
+      document.removeEventListener('visibilitychange', handleFocus);
+    };
+  }, [quizId, questionId, token]);
 
   // Handle Post Comment
   const handlePostComment = async (e) => {

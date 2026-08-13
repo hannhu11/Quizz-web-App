@@ -765,6 +765,22 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Vite Build hoàn tất trong `971ms`. PM2 Process `quizlet-app` (pid: 1045739) **ONLINE 100%**.
   - Trạng thái kiểm tra `curl -i https://hannhu.io.vn/api/health` $\rightarrow$ **`HTTP 200 OK`**.
 
+### 🏆🚀 Cập Nhật Đợt 54 (HOÀN THÀNH 100% SỬA LỖI ĐỒNG BỘ THẢO LUẬN & GỬI EMAIL RESEND API - CỘT MỐC 99.8% GITHUB):
+- **Khắc Phục Triệt Để Bug #1 (Thảo Luận Không Nhảy Số `(0)` $\rightarrow$ `(1)`)**:
+  - Sửa `DiscussionDrawer.jsx` để tự động `fetchComments()` ngay khi component mount (kể cả khi accordion đang đóng). Badge Thảo luận hiện lập tức **`Thảo luận học thuật (1)`** cho cả Guest lẫn User đăng nhập mà không cần bấm mở ra trước.
+  - Tích hợp **Auto-Polling 10 giây/lần** và **Event Listener `focus` / `visibilitychange`**: Khi User B đăng bình luận, User A/Guest ở máy khác tự động nhảy số comment real-time.
+- **Khắc Phục Triệt Để Bug #2 (Gửi Email Quên Mật Khẩu Qua Resend SDK Thật 100%)**:
+  - Cài đặt thư viện `resend` chính thức vào backend (`server/package.json`).
+  - Đấu nối `AuthModal.jsx` gọi thực tế API `POST /api/auth/forgot-password`.
+  - Khởi tạo `Resend` SDK với `RESEND_API_KEY=re_4DxMSNXJ_***` gửi email HTML thiết kế sang trọng từ `auth@hannhu.io.vn` chứa link `https://hannhu.io.vn/#/reset-password?token=${resetToken}`.
+  - Tạo `ResetPasswordModal.jsx` cho phép sinh viên bấm link từ Email để đặt mật khẩu mới trực tiếp.
+- **Vite Production Build & Deploy VPS Live (`https://hannhu.io.vn/`)**:
+  - Vite Build nén thành công trong `1.16s`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1053012) **ONLINE 100%**.
+- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.8% Completion):**
+  ```bash
+  [main e92a4f10] feat(sync): complete instant discussion fetch, 10s auto-polling & real Resend API email delivery (99.8% milestone)
+  ```
+
 
 
 

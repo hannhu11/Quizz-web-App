@@ -113,10 +113,29 @@ export default function AuthModal({ isOpen, onClose, initialMode = 'LOGIN' }) {
         return;
       }
 
-      setSuccessMsg('Hướng dẫn khôi phục mật khẩu đã được gửi tới Email của bạn!');
-      setTimeout(() => {
-        handleModeSwitch('LOGIN');
-      }, 2000);
+      try {
+        const API_BASE_URL = typeof window !== 'undefined' && window.location.hostname !== 'localhost'
+          ? `${window.location.origin}/api`
+          : 'http://localhost:8701/api';
+
+        const res = await fetch(`${API_BASE_URL}/auth/forgot-password`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email.trim() })
+        });
+        const data = await res.json();
+        if (data.success) {
+          setSuccessMsg(data.message || 'Hướng dẫn khôi phục mật khẩu đã được gửi tới Email của bạn!');
+          setTimeout(() => {
+            handleModeSwitch('LOGIN');
+          }, 3000);
+        } else {
+          setErrorMsg(data.message || 'Lỗi gửi yêu cầu khôi phục mật khẩu.');
+        }
+      } catch (err) {
+        console.error('Forgot password error:', err);
+        setErrorMsg('Không thể kết nối máy chủ gửi email.');
+      }
     }
 
     setIsSubmitting(false);

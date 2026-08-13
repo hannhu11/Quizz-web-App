@@ -11,6 +11,7 @@ import ChillDock from './components/chill/ChillDock';
 import CustomModal from './components/CustomModal';
 import AuthModal from './components/auth/AuthModal';
 import ProfileModal from './components/auth/ProfileModal';
+import ResetPasswordModal from './components/auth/ResetPasswordModal';
 import AdminView from './components/admin/AdminView';
 import { QUIZ_MANIFEST, fetchQuizById, getUserProgress, getStarredQuestions, toggleStarQuestion, unstarQuizSet, clearAllStarredQuestions, getCustomQuizSets, getDeletedQuizIds, syncCommunityQuizzes } from './data/quizDataLoader';
 import { Sparkles, BookOpen, Layers, Star, Trash2, ArrowRight, BookMarked, Plus } from 'lucide-react';
@@ -33,6 +34,7 @@ export default function App() {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [authModalMode, setAuthModalMode] = useState('LOGIN');
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
+  const [resetToken, setResetToken] = useState(null);
 
   const [progress, setProgress] = useState({});
   const [starredQuestions, setStarredQuestions] = useState([]);
@@ -56,6 +58,13 @@ export default function App() {
   const parseHashState = useCallback(() => {
     const rawHash = window.location.hash.replace(/^#\/?/, '');
     if (!rawHash) return { mode: null, quizId: null };
+    if (rawHash.startsWith('reset-password')) {
+      const match = rawHash.match(/token=([^&]+)/);
+      if (match) {
+        setResetToken(match[1]);
+      }
+      return { mode: null, quizId: null };
+    }
     const parts = rawHash.split('/');
     if (parts[0] === 'quiz' && parts[1]) return { mode: 'DETAIL', quizId: parts[1] };
     if (parts[0] === 'flashcard' && parts[1]) return { mode: 'FLASHCARD', quizId: parts[1] };
@@ -720,6 +729,16 @@ export default function App() {
       <ProfileModal
         isOpen={isProfileModalOpen}
         onClose={() => setIsProfileModalOpen(false)}
+      />
+
+      {/* Reset Password Modal */}
+      <ResetPasswordModal
+        isOpen={Boolean(resetToken)}
+        onClose={() => {
+          setResetToken(null);
+          window.location.hash = '#/';
+        }}
+        resetToken={resetToken}
       />
 
       {/* Chill Space - Independent Floating Widgets (LifeAt Style) */}
