@@ -35,11 +35,10 @@ export default function DiscussionDrawer({ quizId, questionId, onOpenAuthModal }
       const res = await fetch(`${API_BASE_URL}/comments/${quizId}/${questionId}`, {
         headers: token ? { Authorization: `Bearer ${token}` } : {}
       });
+      if (!res.ok) return;
       const data = await res.json();
-      if (data.success) {
-        setComments(data.comments || []);
-      } else {
-        setComments([]);
+      if (data.success && Array.isArray(data.comments)) {
+        setComments(data.comments);
       }
     } catch (err) {
       console.warn('Backend server offline during comments fetch:', err);

@@ -37,10 +37,18 @@ router.get('/:quizId/:questionId', async (req, res) => {
       } catch (e) {}
     }
 
+    const cleanQuizId = String(quizId).trim();
+    const cleanQId = String(questionId).trim();
+    const shortQId = cleanQId.includes('_q') ? cleanQId.split('_q').pop() : cleanQId;
+
     const comments = await prisma.comment.findMany({
       where: {
-        quizId,
-        questionId
+        quizId: cleanQuizId,
+        OR: [
+          { questionId: cleanQId },
+          { questionId: shortQId },
+          { questionId: `${cleanQuizId}_q${shortQId}` }
+        ]
       },
       include: {
         user: {

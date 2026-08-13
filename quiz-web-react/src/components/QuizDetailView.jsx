@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, Layers, Play, CheckCircle2, Star, Volume2, BookOpen, MoreHorizontal, Edit, Trash2, Search, Sparkles } from 'lucide-react';
-import { toggleStarQuestion, getStarredQuestions, unstarQuizSet, verifyQuizPassword, deleteCustomQuizSet, calculateQuizProgressStats } from '../data/quizDataLoader';
+import { toggleStarQuestion, getStarredQuestions, unstarQuizSet, verifyQuizPassword, deleteCustomQuizSet, calculateQuizProgressStats, getCanonicalQuestionId } from '../data/quizDataLoader';
 import PasswordModal from './PasswordModal';
 import DiscussionDrawer from './discussion/DiscussionDrawer';
 import { useAuth } from '../context/AuthContext';
@@ -493,7 +493,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
                   {/* Accordion Academic Discussion Drawer */}
                   <DiscussionDrawer
                     quizId={quiz.id}
-                    questionId={q.id || `q-${originalIndexDisplay}`}
+                    questionId={getCanonicalQuestionId(quiz.id, q, originalIndexDisplay - 1)}
                     onOpenAuthModal={onOpenAuthModal}
                   />
                 </motion.div>

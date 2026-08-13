@@ -496,6 +496,15 @@ export function saveQuizProgress(quizId, score, total, mode) {
 export const STORAGE_KEY_STARS = 'quiz_starred_questions_v2';
 const STORAGE_KEY_STARS_V1 = 'quizzlet_starred_questions_v1';
 
+/**
+ * Universal Canonical Question ID Generator (100% Invariant across Users/Guests)
+ */
+export function getCanonicalQuestionId(quizId, question, index = 0) {
+  const cleanQuizId = quizId ? String(quizId).trim() : 'GLOBAL';
+  const rawQId = (question && question.id !== undefined && question.id !== null) ? question.id : (index + 1);
+  return `${cleanQuizId}_q${rawQId}`;
+}
+
 export function getStarredQuestions(quizId) {
   try {
     let data = localStorage.getItem(STORAGE_KEY_STARS);
