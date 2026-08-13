@@ -660,6 +660,33 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   [main c78058d1] feat(phase2): complete Phase 2 Auth System with Glassmorphic AuthModal, Eye Password Toggle, FPT Email Validation, Google Auth & Reputation Badge
   ```
 
+### 🟢💬 Cập Nhật Đợt 46 (HOÀN THÀNH 100% GIAI ĐOẠN 3 - COMMENT DRAWER UI & REPUTATION ENGINE):
+- **Cấu Hình Comment & Vote API Endpoints (`server/src/routes/commentRoutes.js`):**
+  - `GET /api/comments/:quizId/:questionId`: Lấy danh sách bình luận thảo luận theo câu hỏi, join dữ liệu User (`fullName`, `reputation`, `avatarUrl`), tự động đẩy bình luận của người có điểm Uy tín cao ($\ge 10$) lên đầu, thiết lập cờ `isAutoCollapsed` cho người dùng bị điểm âm ($\le -5$).
+  - `POST /api/comments`: Đăng bình luận mới với Rate Limit (tối đa 2 comment / 1 phút / user) và chạy bộ lọc che từ cấm tiếng Việt.
+  - `POST /api/comments/:id/vote`: Upvote (+1) / Downvote (-1), tự động cộng/trừ $+1 / -1$ điểm Uy tín tác giả bài viết (`reputation`), hỗ trợ hủy vote khi bấm lặp lại.
+  - `POST /api/comments/:id/report`: Báo cáo bình luận vi phạm. Khi đạt 3 lượt báo cáo, tự động ẩn bình luận và trừ 5 điểm Uy tín tác giả.
+- **Kiểm Thử Tự Động Backend (`server/test_comment_db.js`):**
+  - Đã chạy thực tế và **PASSED 100%** (Tạo comment, Upvote tăng điểm score từ 0 lên 1 và tăng reputation tác giả từ 15 lên 16, Hủy vote trả điểm về 0 và 15, Lấy danh sách comment kèm Badge Uy Tín).
+- **Phát Triển Component Accordion Thảo Luận (`src/components/discussion/DiscussionDrawer.jsx`):**
+  - Thiết kế nút bấm kích hoạt Accordion chuẩn Notion/Linear: `<MessageSquare />` + `Thảo luận học thuật (X)`.
+  - Khung Accordion gập/mở mượt mà bên dưới câu hỏi.
+  - Gắn Badge Điểm Uy Tín Notion Style bên cạnh tên tác giả:
+    - 🟢 **Xanh lá (`🟢 +42 Uy tín`)**: `<ShieldCheck />` cho điểm $\ge 10$.
+    - ⚪ **Xám xanh (`⚪ +5 Uy tín`)**: `<User />` cho điểm $0..9$.
+    - 🔴 **Đỏ (`🔴 -4 Uy tín kém`)**: `<AlertTriangle />` cho điểm $< 0$.
+  - Cập nhật **Optimistic UI Updates ($0\text{ms}$ delay)** cho nút Upvote / Downvote.
+  - Tự động thu gọn (Auto-collapse) bình luận bị âm điểm ($\le -5$) với cảnh báo: *"Bình luận này bị cộng đồng đánh giá không uy tín [Xem nội dung]"*.
+- **Nhúng Vào `QuizDetailView.jsx`:**
+  - Nhúng trực tiếp bên dưới từng thẻ câu hỏi trong danh sách Preview ("Danh sách thuật ngữ & câu hỏi").
+- **Kiểm Thử Build Vite Production:** Thành công siêu tốc trong `799ms` với 0 lỗi syntax/import.
+- **Bảo Vệ Khóa Bất Biến v1.0:** Touched ZERO lines of `ExamMode.jsx`, `PracticeMode.jsx`, `FlashcardViewer.jsx`, hay 73 bộ đề JSON!
+- **Commit & Push GitHub (`https://github.com/hannhu11/Quizz-web-App.git`):**
+  ```bash
+  [main e89544f4] feat(phase3): complete Phase 3 Comment Accordion Drawer, Reputation Engine & Optimistic Upvote/Downvote
+  ```
+
+
 
 
 
