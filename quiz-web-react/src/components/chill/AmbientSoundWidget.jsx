@@ -5,14 +5,14 @@ import { Volume2, VolumeX, CloudRain, Coffee, Waves, Flame, Wind, TreePine, Bird
 const ICONS = { CloudRain, Coffee, Waves, Flame, Wind, TreePine, Bird, Music };
 
 const AMBIENT_SOUNDS = [
-  { id: 'rain', title: 'Mưa Rơi', subtitle: 'Tiếng mưa thanh tịnh', icon: 'CloudRain', src: 'https://cdn.pixabay.com/download/audio/2021/09/06/audio_403c94511d.mp3' },
-  { id: 'cafe', title: 'Quán Cà Phê', subtitle: 'Không gian góc quán quen', icon: 'Coffee', src: 'https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3' },
-  { id: 'ocean', title: 'Sóng Biển', subtitle: 'Sóng vỗ du dương bờ cát', icon: 'Waves', src: 'https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a2b5ef.mp3' },
-  { id: 'fire', title: 'Lửa Trại', subtitle: 'Tiếng lửa bập bùng', icon: 'Flame', src: 'https://cdn.pixabay.com/download/audio/2024/11/04/audio_5a30a7e498.mp3' },
-  { id: 'wind', title: 'Tiếng Gió', subtitle: 'Gió vi vu qua khe cửa', icon: 'Wind', src: 'https://cdn.pixabay.com/download/audio/2022/03/24/audio_5765de03a5.mp3' },
-  { id: 'forest', title: 'Rừng Rậm', subtitle: 'Tiếng côn trùng đêm khuya', icon: 'TreePine', src: 'https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0c6ff1bab.mp3' },
-  { id: 'birds', title: 'Tiếng Chim', subtitle: 'Chim hót ban mai', icon: 'Bird', src: 'https://cdn.pixabay.com/download/audio/2022/08/04/audio_2bdb7ae009.mp3' },
-  { id: 'piano', title: 'Piano Nhẹ Nhàng', subtitle: 'Giai điệu piano tập trung', icon: 'Music', src: 'https://stream.zeno.fm/f3wvbbqmdg8uv' },
+  { id: 'rain', title: 'Mưa Rơi', subtitle: 'Tiếng mưa thanh tịnh', icon: 'CloudRain', src: 'https://actions.google.com/sounds/v1/weather/rain_heavy_loud.ogg' },
+  { id: 'cafe', title: 'Quán Cà Phê', subtitle: 'Không gian góc quán quen', icon: 'Coffee', src: 'https://actions.google.com/sounds/v1/ambiences/coffee_shop.ogg' },
+  { id: 'ocean', title: 'Sóng Biển', subtitle: 'Sóng vỗ du dương bờ cát', icon: 'Waves', src: 'https://actions.google.com/sounds/v1/water/waves_crashing_on_rock_beach.ogg' },
+  { id: 'fire', title: 'Lửa Trại', subtitle: 'Tiếng lửa bập bùng', icon: 'Flame', src: 'https://actions.google.com/sounds/v1/ambiences/fire.ogg' },
+  { id: 'wind', title: 'Tiếng Gió', subtitle: 'Gió vi vu qua khe cửa', icon: 'Wind', src: 'https://actions.google.com/sounds/v1/weather/wind.ogg' },
+  { id: 'light_rain', title: 'Mưa Rào', subtitle: 'Mưa phùn rải rác', icon: 'CloudRain', src: 'https://actions.google.com/sounds/v1/weather/light_rain.ogg' },
+  { id: 'thunder', title: 'Sấm Sét', subtitle: 'Tiếng sấm mưa đêm', icon: 'TreePine', src: 'https://actions.google.com/sounds/v1/weather/thunderstorm.ogg' },
+  { id: 'clock', title: 'Đồng Hồ Focus', subtitle: 'Tiếng gõ nhịp tập trung', icon: 'Music', src: 'https://actions.google.com/sounds/v1/household/clock_ticking.ogg' },
 ];
 
 export default function AmbientSoundWidget({ isExpanded, onClose, onToggleExpand, onStatusChange, constraintsRef }) {

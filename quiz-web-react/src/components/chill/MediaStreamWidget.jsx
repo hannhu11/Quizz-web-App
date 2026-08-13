@@ -29,8 +29,10 @@ const SPOTIFY_PRESETS = [
 ];
 
 const YOUTUBE_PRESETS = [
-  { name: 'Chillhop Radio', id: '5yx6BWlEVcY' },
+  { name: 'Chillhop Radio 24/7', id: '5yx6BWlEVcY' },
+  { name: 'Lofi Girl Study', id: 'jfKfPfyJRdk' },
   { name: 'Synthwave Chill', id: '4xDzrJKXOOY' },
+  { name: 'Zelda Lofi Beats', id: 'WBFAgT3aN20' },
 ];
 
 export default function MediaStreamWidget({ isExpanded, onClose, onToggleExpand, onStatusChange, constraintsRef }) {

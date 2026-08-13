@@ -551,6 +551,18 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
 - **Bảo Vệ File Khóa:** Khóa 100% các file đã chốt (`App.jsx`, `ExamMode.jsx`, `PracticeMode.jsx`, `QuizDetailView.jsx`, `FlashcardViewer.jsx`). CHỈ tác động đúng 2 file trong `src/components/chill/`.
 - **Trạng Thái Deploy:** Build Vite production thành công (`1.12s`), deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 862783).
 
+### 🎶⚡ Cập Nhật Đợt 37: Sửa 100% Âm Thanh Thư Giãn (Google Actions CDN), Tối Ưu Stream Lofi HD YouTube 24/7 & Redesign ChillDock Glassmorphism:
+- **Khắc Phục 100% Âm Thanh Thư Giãn Hỏng (`AmbientSoundWidget.jsx`):**
+  - Thay thế 100% link Pixabay lỗi 403 bằng bộ **Google Actions Sound Library CDN** (8/8 âm thanh sống 100%, load siêu nhanh): Mưa Rơi, Cà Phê, Sóng Biển, Lửa Trại, Tiếng Gió, Mưa Rào, Sấm Sét, Đồng Hồ Focus.
+- **Tối Ưu Trải Nghiệm Nhạc Cả Bài (`MediaStreamWidget.jsx`):**
+  - **Tab YouTube:** Bổ sung bộ stream Lofi HD 24/7 phát 100% cả bài continuous (`Chillhop Radio 24/7`, `Lofi Girl Study`, `Synthwave Chill`, `Zelda Lofi Beats`). Phát cả bài mượt mà ngầm khi thu nhỏ.
+  - **Tab Spotify:** Giữ nguyên tính năng cho phép dán Spotify URL cá nhân + bổ sung hướng dẫn thông tin rõ ràng về chính sách phát preview iframe của Spotify.
+- **Redesign ChillDock & Widget chuẩn Notion/Linear Glassmorphism (`ChillDock.jsx`):**
+  - Xóa bỏ nút màu loè loẹt `from-amber-400 via-pink-500 to-purple-600` cũ.
+  - Chuyển sang phong cách Kính Mờ (Glassmorphism) sang trọng với nút Dark Slate `bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 border border-slate-800/80` và chỉ báo xanh nhấp nháy `animate-pulse`.
+- **Trạng Thái Deploy:** Build Vite production thành công (`1.20s`), deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 874857).
+
+
 
 
 

@@ -203,20 +203,20 @@ export default function ChillDock() {
         </AnimatePresence>
 
         {/* Main Bar */}
-        <div className="flex items-center gap-1.5 p-1.5 rounded-2xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border border-slate-200/80 dark:border-slate-700/80 shadow-xl max-w-full">
+        <div className="flex items-center gap-1.5 p-1.5 rounded-2xl bg-white/85 dark:bg-slate-900/85 backdrop-blur-2xl border border-slate-200/80 dark:border-slate-800 shadow-xl max-w-full">
           <button
             onClick={() => setIsDockExpanded(!isDockExpanded)}
-            className="w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-400 via-rose-400 to-indigo-500 flex items-center justify-center shrink-0 shadow-md cursor-pointer group relative"
-            title="Chill Space"
+            className="w-11 h-11 rounded-2xl bg-slate-900 dark:bg-slate-100 hover:bg-slate-800 dark:hover:bg-white text-white dark:text-slate-900 border border-slate-800/80 dark:border-slate-200/80 flex items-center justify-center shrink-0 shadow-md transition-all active:scale-95 cursor-pointer group relative"
+            title="Góc Nhạc Chill & Tập Trung"
           >
             {anyActive ? (
               <div className="flex items-end justify-center gap-[3px] h-4">
-                <span className="w-[3px] bg-white rounded-full animate-[bounce_1s_infinite_100ms]" style={{height: '12px'}} />
-                <span className="w-[3px] bg-white rounded-full animate-[bounce_1s_infinite_300ms]" style={{height: '16px'}} />
-                <span className="w-[3px] bg-white rounded-full animate-[bounce_1s_infinite_200ms]" style={{height: '8px'}} />
+                <span className="w-[3px] bg-emerald-400 dark:bg-emerald-600 rounded-full animate-[bounce_1s_infinite_100ms]" style={{height: '12px'}} />
+                <span className="w-[3px] bg-emerald-400 dark:bg-emerald-600 rounded-full animate-[bounce_1s_infinite_300ms]" style={{height: '16px'}} />
+                <span className="w-[3px] bg-emerald-400 dark:bg-emerald-600 rounded-full animate-[bounce_1s_infinite_200ms]" style={{height: '8px'}} />
               </div>
             ) : (
-              <Music className="w-5 h-5 text-white group-hover:scale-110 transition-transform" />
+              <Music className="w-5 h-5 text-white dark:text-slate-900 group-hover:scale-110 transition-transform stroke-[1.75]" />
             )}
           </button>
 
