@@ -16,7 +16,7 @@ export default function ProfileModal({ isOpen, onClose }) {
   if (!isOpen || !user) return null;
 
   const starredCount = getStarredQuestions().length;
-  const isGoogleAccount = !user.passwordHash || user.avatarUrl?.includes('googleusercontent.com') || user.avatarUrl?.includes('dicebear');
+  const isGoogleAccount = user.authProvider === 'GOOGLE' || (Boolean(user.googleId) && !user.hasPassword);
 
   const handlePasswordChange = async (e) => {
     e.preventDefault();

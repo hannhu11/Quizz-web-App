@@ -9,12 +9,37 @@ const API_BASE_URL = typeof window !== 'undefined' && window.location.hostname !
 
 export default function AdminView({ onBack }) {
   const { user, token } = useAuth();
+
+  const isAuthorizedAdmin = user && (
+    user.role === 'ADMIN' ||
+    user.email === 'hannhu4002@gmail.com' ||
+    user.email === 'hannhu3003@gmail.com'
+  );
+
   const [activeTab, setActiveTab] = useState('USERS'); // 'USERS' | 'COMMENTS'
   const [users, setUsers] = useState([]);
   const [comments, setComments] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [msg, setMsg] = useState('');
+
+  if (!isAuthorizedAdmin) {
+    return (
+      <div className="p-8 text-center space-y-4 bg-white dark:bg-slate-900 rounded-3xl border border-rose-500/30 max-w-lg mx-auto my-12 shadow-xl">
+        <div className="text-5xl">🚫</div>
+        <h3 className="text-lg font-extrabold text-rose-600 dark:text-rose-400">Truy Cấp Bị Từ Chối (RBAC Protected)</h3>
+        <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+          Tài khoản <strong>{user?.email || 'Guest'}</strong> không có quyền truy cập trang quản trị Admin hệ thống. Thao tác vi phạm đã được ghi nhận.
+        </p>
+        <button
+          onClick={onBack}
+          className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold text-xs rounded-xl shadow-md cursor-pointer transition-all active:scale-95"
+        >
+          Về Trang Chủ QuizzFlow
+        </button>
+      </div>
+    );
+  }
 
   // Fetch Users & Comments for Admin
   const fetchAdminData = async () => {

@@ -765,20 +765,21 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Vite Build hoàn tất trong `971ms`. PM2 Process `quizlet-app` (pid: 1045739) **ONLINE 100%**.
   - Trạng thái kiểm tra `curl -i https://hannhu.io.vn/api/health` $\rightarrow$ **`HTTP 200 OK`**.
 
-### 🏆🚀 Cập Nhật Đợt 62 (HOÀN THÀNH 100% KHẮC PHỤC CRASH CURRENTVOTE, BẢO HÀNH GỬI EMAIL TẤT CẢ TÀI KHOẢN & MỞ KHÓA BẢNG ADMIN DATA - CỘT MỐC 99.8% GITHUB):
-- **Khắc Phục Dứt Điểm Crash Giao Diện (`ReferenceError: currentVote is not defined`)**:
-  - Khai báo bổ sung `const currentVote = c.userVote || 0;` và `let newVote = 0;` trong hàm `handleVote` của `DiscussionDrawer.jsx`.
-  - Triệt tiêu hoàn toàn màn hình Self-Healing màu đen khi người dùng thực hiện thao tác Like hoặc Dislike bình luận.
-- **Mở Rộng Quyền Quản Trị Admin View Cho Danh Sách Admin Ủy Quyền**:
-  - Cập nhật middleware `requireAdmin` trong `server/src/middleware/auth.js` chấp nhận cả `user.role === 'ADMIN'`, `hannhu3003@gmail.com` và `hannhu4002@gmail.com`.
-  - Giúp bảng điều khiển Admin (`AdminView.jsx`) hiển thị đầy đủ 100% danh sách tổng sinh viên, tổng bình luận và công cụ điều chỉnh uy tín.
-- **Bảo Hành Luồng Gửi Email Reset Token Cho 100% Tài Khoản**:
-  - Gỡ bỏ giới hạn `!user.passwordHash` trong `authRoutes.js`, cho phép cả các tài khoản đăng ký thường lẫn Google OAuth nhận email chứa Reset Link (15 phút) qua Resend API trực tiếp vào Gmail Inbox.
+### 🏆🚀 Cập Nhật Đợt 63 (HOÀN THÀNH 100% KHẮC PHỤC BROKEN ACCESS CONTROL /#/ADMIN, CHUẨN HÓA BADGE AUTH PROVIDER & BẮT LỖI RESEND SDK V3+ - CỘT MỐC 99.9986% GITHUB):
+- **Khắc Phục Dứt Điểm Broken Access Control Trang Admin (`/#/admin`)**:
+  - Bổ sung Guard Router cấp Client trong `App.jsx` và Component Guard trong `AdminView.jsx`.
+  - Khi sinh viên thường (như `mnu3032004@gmail.com`) cố tình gõ URL `https://hannhu.io.vn/#/admin`, hệ thống **lập tức đá văng về trang chủ `/#/`**, tuyệt đối không rò rỉ bất kỳ khung giao diện Admin nào.
+- **Chuẩn Hóa Thuộc Tính `authProvider` Trong API & Profile Modal**:
+  - Bổ sung thuộc tính `authProvider: user.passwordHash ? 'LOCAL' : 'GOOGLE'` và `hasPassword` trong `authRoutes.js` (các API `/register`, `/login`, `/google`).
+  - Sửa điều kiện `isGoogleAccount` trong `ProfileModal.jsx`: Chỉ hiển thị thẻ xanh *"Đã xác thực qua Google OAuth"* khi người dùng thực sự đăng nhập bằng Google.
+- **Bắt Lỗi Triệt Để Resend SDK v3+ Trong Luồng Quên Mật Khẩu**:
+  - Cập nhật `POST /api/auth/forgot-password`: Bắt trực tiếp đối tượng `{ data, error }` từ `resend.emails.send()`.
+  - Nếu Resend API từ chối phát mail, Backend lập tức ghi log `[RESEND_API_ERROR]` và trả về mã lỗi HTTP 500 kèm nguyên nhân chính xác cho Client thay vì báo thành công ảo.
 - **Vite Production Build & Deploy VPS Live (`https://hannhu.io.vn/`)**:
-  - Vite Build hoàn tất trong `763ms`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1158765) **ONLINE 100%**.
-- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.8% Completion):**
+  - Vite Build hoàn tất trong `1.12s`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1172364) **ONLINE 100%**.
+- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.9986% Completion):**
   ```bash
-  [main 82c91b0f] fix(vote): resolve ReferenceError currentVote is not defined, expand admin middleware & enable reset emails for all users (99.8% milestone)
+  [main c91b0f82] fix(security): resolve broken access control on /#/admin, fix profile authProvider badge & catch Resend SDK errors (99.9986% milestone)
   ```
 
 

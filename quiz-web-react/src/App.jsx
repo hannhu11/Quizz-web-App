@@ -107,12 +107,26 @@ export default function App() {
         return;
       }
 
-      // Apply route change smoothly
+      // Apply route change smoothly with Admin Access Control Guard
+      const isAuthorizedAdmin = user && (
+        user.role === 'ADMIN' ||
+        user.email === 'hannhu4002@gmail.com' ||
+        user.email === 'hannhu3003@gmail.com'
+      );
+
       if (mode === 'ADMIN') {
-        setStudyMode('ADMIN');
-        setActiveQuizId(null);
-        setLoadedQuiz(null);
-        setEditingQuizData(null);
+        if (isAuthorizedAdmin) {
+          setStudyMode('ADMIN');
+          setActiveQuizId(null);
+          setLoadedQuiz(null);
+          setEditingQuizData(null);
+        } else {
+          // Redirect non-admin user back to home /#/
+          setStudyMode(null);
+          setActiveQuizId(null);
+          setLoadedQuiz(null);
+          setHashState(null, null, true);
+        }
       } else if (mode === 'CREATE_SET') {
         setStudyMode('CREATE_SET');
         setEditingQuizData(null);

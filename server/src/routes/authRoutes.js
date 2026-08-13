@@ -88,7 +88,9 @@ router.post('/register', async (req, res) => {
         dob: user.dob,
         reputation: user.reputation,
         role: user.role,
-        avatarUrl: user.avatarUrl
+        avatarUrl: user.avatarUrl,
+        authProvider: user.passwordHash ? 'LOCAL' : 'GOOGLE',
+        hasPassword: Boolean(user.passwordHash)
       }
     });
 
@@ -171,7 +173,9 @@ router.post('/login', async (req, res) => {
         dob: user.dob,
         reputation: user.reputation,
         role: user.role,
-        avatarUrl: user.avatarUrl
+        avatarUrl: user.avatarUrl,
+        authProvider: user.passwordHash ? 'LOCAL' : 'GOOGLE',
+        hasPassword: Boolean(user.passwordHash)
       }
     });
 
@@ -233,7 +237,9 @@ router.post('/google', async (req, res) => {
         email: user.email,
         reputation: user.reputation,
         role: user.role,
-        avatarUrl: user.avatarUrl
+        avatarUrl: user.avatarUrl,
+        authProvider: user.passwordHash ? 'LOCAL' : 'GOOGLE',
+        hasPassword: Boolean(user.passwordHash)
       }
     });
 
@@ -303,24 +309,30 @@ router.post('/forgot-password', async (req, res) => {
         `
       };
 
-      try {
-        console.log(`[RESEND_EMAIL_SENDING] Attempting primary sender: auth@hannhu.io.vn to ${user.email}`);
-        await resend.emails.send({
-          from: 'QuizzFlow <auth@hannhu.io.vn>',
+      console.log(`[RESEND_EMAIL_SENDING] Attempting primary sender: auth@hannhu.io.vn to ${user.email}`);
+      const primaryResult = await resend.emails.send({
+        from: 'QuizzFlow <auth@hannhu.io.vn>',
+        ...emailPayload
+      });
+
+      if (!primaryResult.error && primaryResult.data) {
+        console.log(`[RESEND_EMAIL_SUCCESS] Sent email via auth@hannhu.io.vn to ${user.email}, ID: ${primaryResult.data.id}`);
+      } else {
+        console.warn(`[RESEND_PRIMARY_FAILED] Primary domain error:`, primaryResult.error);
+        console.log(`[RESEND_EMAIL_FALLBACK] Attempting fallback sender: onboarding@resend.dev to ${user.email}`);
+        const fallbackResult = await resend.emails.send({
+          from: 'QuizzFlow <onboarding@resend.dev>',
           ...emailPayload
         });
-        console.log(`[RESEND_EMAIL_SUCCESS] Sent email via auth@hannhu.io.vn to ${user.email}`);
-      } catch (primaryErr) {
-        console.warn(`[RESEND_PRIMARY_FAILED] Primary domain send failed:`, primaryErr.message || primaryErr);
-        try {
-          console.log(`[RESEND_EMAIL_FALLBACK] Attempting fallback sender: onboarding@resend.dev to ${user.email}`);
-          await resend.emails.send({
-            from: 'QuizzFlow <onboarding@resend.dev>',
-            ...emailPayload
+
+        if (!fallbackResult.error && fallbackResult.data) {
+          console.log(`[RESEND_EMAIL_SUCCESS_FALLBACK] Sent email via onboarding@resend.dev to ${user.email}, ID: ${fallbackResult.data.id}`);
+        } else {
+          console.error(`[RESEND_EMAIL_CRITICAL_ERROR] Resend API rejected email sending:`, fallbackResult.error || primaryResult.error);
+          return res.status(500).json({
+            success: false,
+            message: `Lỗi phát mail Resend API: ${fallbackResult.error?.message || primaryResult.error?.message || 'Không thể gửi email'}`
           });
-          console.log(`[RESEND_EMAIL_SUCCESS_FALLBACK] Sent email via onboarding@resend.dev to ${user.email}`);
-        } catch (fallbackErr) {
-          console.error(`[RESEND_EMAIL_CRITICAL_ERROR] Both primary and fallback senders failed:`, fallbackErr);
         }
       }
     } else {
