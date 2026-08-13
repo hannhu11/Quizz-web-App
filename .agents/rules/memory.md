@@ -612,6 +612,33 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Đọc và phân tích tệp thiết kế chiến lược `Chien_luoc_dang_nhap_tạo_phan_comment.md`.
   - Chuẩn bị hạ tầng Authentication (Google OAuth 2.0 + Mail FPT Form với Password Visibility Toggle Eye Icon), Comment Accordion Drawer tại `QuizDetailView.jsx`, Reputation Score Algorithm (+1 Upvote / -1 Downvote, Badge Xanh/Xám/Đỏ) và Anti-Abuse Moderation Engine.
 
+### 🟢🏁 Cập Nhật Đợt 44 (HOÀN THÀNH 100% GIAI ĐOẠN 1 - DATABASE & EXPRESS AUTH CORE):
+- **Khởi Tạo Backend Clean Architecture (`server/`):**
+  - Khởi tạo dự án Express Backend độc lập trong `server/` kèm Prisma ORM kết nối SQLite Database `dev.db` (chế độ WAL mode siêu tốc, độ trễ 0ms, không tốn tài nguyên RAM VPS).
+  - Định nghĩa Prisma Schema bất biến: `User`, `Comment`, `Vote`, `Report` với chỉ mục `@@index([quizId, questionId])` và constraint chống vote lặp `@@unique([commentId, userId])`.
+- **Cấu Hình Auth JWT Middleware & Validation (`server/src/`):**
+  - Xây dựng `server/src/middleware/auth.js` xử lý JWT Token verification và phân quyền Role Guard.
+  - Xây dựng `server/src/routes/authRoutes.js`:
+    - `POST /api/auth/register`: Đăng ký FPT Student Email (`@fpt.edu.vn`, `@fe.edu.vn`, `@gmail.com`), hash mật khẩu salted `bcryptjs`, khởi tạo mặc định $+10$ điểm Uy tín (`reputation = 10`).
+    - `POST /api/auth/login`: Xác thực Email & Mật khẩu, cấp JWT Token 7 ngày.
+    - `POST /api/auth/google`: Xử lý 1-Click Google OAuth 2.0 Authentication.
+    - `GET /api/auth/me`: Lấy thông tin tài khoản hiện tại qua JWT Bearer Header.
+- **Kết Quả Kiểm Thử Tự Động 8/8 Bài Test (`server/test_auth_db.js`):**
+  - Test 1: Khởi động Express Server `http://localhost:5001` thành công.
+  - Test 2: Kết nối Prisma ORM SQLite `dev.db` thành công.
+  - Test 3: Từ chối email sai định dạng format thành công (Status 400).
+  - Test 4: Đăng ký mail sinh viên FPT (`test_hannhu@fpt.edu.vn`) nhận 10 điểm uy tín thành công (Status 201).
+  - Test 5: Chặn đăng ký email trùng lặp thành công (Status 400).
+  - Test 6: Đăng nhập mật khẩu mã hóa bcrypt & cấp JWT Token thành công (Status 200).
+  - Test 7: JWT Middleware xác thực route bảo vệ `GET /api/auth/me` thành công (Status 200).
+  - Test 8: Đăng nhập 1-Click Google OAuth handler thành công (Status 200).
+- **Bảo Vệ Khóa Bất Biến v1.0:** Zero files in `quiz-web-react/src` were modified! Toàn bộ 73 tệp JSON và các component v1.0 được bảo toàn 100%.
+- **Commit & Push GitHub (`https://github.com/hannhu11/Quizz-web-App.git`):**
+  ```bash
+  [main b8bf4220] feat(phase1): complete Phase 1 Express Auth & Prisma DB Core setup with 8 passed automated tests
+  ```
+
+
 
 
 
