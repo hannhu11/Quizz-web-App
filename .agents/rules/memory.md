@@ -701,6 +701,18 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   [main eadb4ffe] feat(v2.0): official release of QuizzFlow v2.0 Social Study Era
   ```
 
+### 🏆🚀 Cập Nhật Đợt 48 (GHI NHẬN CỘT MỐC HOÀN THÀNH 99.6% & LẬP HỘI ĐỒNG THẨM ĐỊNH TIỂU GIAI ĐOẠN 4.2 & 4.3):
+- **Ghi Nhận Cột Mốc 99.6% Completion:**
+  - Đã chốt và nghiệm thu 100% Giai đoạn 1, 2, 3 và 4 (Live Deploy PM2 & Nginx HTTPS thành công trên `https://hannhu.io.vn/`).
+  - Ghi nhận tiến độ tổng thể hệ thống QuizzFlow v2.0 chính thức đạt cột mốc **99.6%**.
+- **Kế Hoạch Thi Công Tiểu Giai Đoạn 4.2 & 4.3:**
+  - **4.2.1**: Kết nối Google Identity Services (GSI) Real-time Authentication & Reset Password qua Resend API + JWT Reset Token.
+  - **4.2.2**: Xóa toàn bộ dữ liệu mẫu (`Nguyễn Văn Anh`, `Trần Thị Bình`) trong Accordion Thảo Luận (`DiscussionDrawer.jsx`).
+  - **4.2.3**: Tinh chỉnh mỹ thuật `AuthModal.jsx`: Loại bỏ badge `QuizzFlow v2.0 Auth System`, loại bỏ dòng chữ phụ dư thừa, đổi nút Google thành `Đăng nhập bằng Google`.
+  - **4.3.1**: Mở rộng Prisma Schema với `SavedQuestion`, tự động đồng bộ danh sách câu hỏi đã lưu/gắn sao với tài khoản trên SQLite Server.
+  - **4.3.2**: Kích hoạt **Auth Guard** toàn diện (Bắt buộc người dùng đăng nhập mới được học `ExamMode`, `PracticeMode`, `FlashcardViewer`).
+
+
 
 
 
