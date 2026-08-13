@@ -202,57 +202,43 @@ export default function DiscussionDrawer({ quizId, questionId, onOpenAuthModal }
             transition={{ duration: 0.2 }}
             className="mt-3 p-4 bg-slate-50/70 dark:bg-slate-900/60 rounded-2xl border border-slate-200/80 dark:border-slate-800 space-y-4 overflow-hidden"
           >
-            {/* Input Comment Box or Login Prompt */}
+            {/* Input Comment Box or Login Requirement Prompt */}
             {user ? (
-              <form onSubmit={handlePostComment} className="space-y-2">
-                <div className="relative flex items-center">
-                  <input
-                    type="text"
-                    value={newCommentText}
-                    onChange={(e) => setNewCommentText(e.target.value)}
-                    placeholder="Viết lời giải thích hoặc đóng góp đáp án cho câu hỏi này..."
-                    className="w-full pl-3.5 pr-11 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs sm:text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/40 transition-all shadow-xs"
-                  />
-                  <button
-                    type="submit"
-                    disabled={isSending || !newCommentText.trim()}
-                    className="absolute right-1.5 p-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs disabled:opacity-40 transition-all cursor-pointer"
-                    title="Gửi bình luận"
-                  >
-                    <Send className="w-3.5 h-3.5 stroke-[1.75]" />
-                  </button>
-                </div>
-                {errorMsg && (
-                  <p className="text-[11px] font-medium text-rose-500 px-1">{errorMsg}</p>
-                )}
-              </form>
-            ) : (
-              <div className="p-3 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-700 dark:text-indigo-300 text-xs font-semibold flex items-center justify-between gap-2">
-                <span className="flex items-center gap-1.5">
-                  <LogIn className="w-4 h-4 shrink-0 text-indigo-500" />
-                  Đăng nhập để tham gia thảo luận & đóng góp đáp án cho sinh viên FPT.
-                </span>
-                <button
-                  type="button"
-                  onClick={() => onOpenAuthModal && onOpenAuthModal('LOGIN')}
-                  className="px-3 py-1 rounded-lg bg-indigo-600 text-white font-bold text-xs hover:bg-indigo-700 transition-all shadow-2xs shrink-0 cursor-pointer"
-                >
-                  Đăng nhập
-                </button>
-              </div>
-            )}
+              <>
+                <form onSubmit={handlePostComment} className="space-y-2">
+                  <div className="relative flex items-center">
+                    <input
+                      type="text"
+                      value={newCommentText}
+                      onChange={(e) => setNewCommentText(e.target.value)}
+                      placeholder="Viết lời giải thích hoặc đóng góp đáp án cho câu hỏi này..."
+                      className="w-full pl-3.5 pr-11 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs sm:text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/40 transition-all shadow-xs"
+                    />
+                    <button
+                      type="submit"
+                      disabled={isSending || !newCommentText.trim()}
+                      className="absolute right-1.5 p-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs disabled:opacity-40 transition-all cursor-pointer"
+                      title="Gửi bình luận"
+                    >
+                      <Send className="w-3.5 h-3.5 stroke-[1.75]" />
+                    </button>
+                  </div>
+                  {errorMsg && (
+                    <p className="text-[11px] font-medium text-rose-500 px-1">{errorMsg}</p>
+                  )}
+                </form>
 
-            {/* Comments List */}
-            {isLoading ? (
-              <div className="py-4 text-center text-xs text-slate-400 animate-pulse">
-                Đang tải thảo luận học thuật...
-              </div>
-            ) : comments.length === 0 ? (
-              <div className="py-4 text-center text-xs text-slate-400 font-medium">
-                Chưa có bình luận nào. Hãy là người đầu tiên thảo luận đáp án câu này!
-              </div>
-            ) : (
-              <div className="space-y-3 pt-1">
+                {/* Comments List for Logged In User */}
+                {isLoading ? (
+                  <div className="py-4 text-center text-xs text-slate-400 animate-pulse">
+                    Đang tải thảo luận học thuật...
+                  </div>
+                ) : comments.length === 0 ? (
+                  <div className="py-4 text-center text-xs text-slate-400 font-medium">
+                    Chưa có bình luận nào. Hãy là người đầu tiên thảo luận đáp án câu này!
+                  </div>
+                ) : (
+                  <div className="space-y-3 pt-1">
                 {comments.map((comment) => {
                   const author = comment.user || {};
                   const isCollapsed = comment.isAutoCollapsed && !expandedComments[comment.id];
@@ -349,6 +335,27 @@ export default function DiscussionDrawer({ quizId, questionId, onOpenAuthModal }
                     </div>
                   );
                 })}
+              </div>
+            )}
+              </>
+            ) : (
+              <div className="p-4 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-700 dark:text-indigo-300 text-xs font-semibold space-y-2 text-center">
+                <div className="flex items-center justify-center gap-1.5 font-extrabold text-sm">
+                  <LogIn className="w-4 h-4 text-indigo-500" />
+                  <span>🔒 Đề thi này có {comments.length} thảo luận học thuật</span>
+                </div>
+                <p className="text-slate-600 dark:text-slate-400 text-xs font-normal">
+                  Vui lòng Đăng nhập tài khoản QuizzFlow để xem nội dung bình luận chi tiết và tham gia đóng góp đáp án cho sinh viên.
+                </p>
+                <div className="pt-1">
+                  <button
+                    type="button"
+                    onClick={() => onOpenAuthModal && onOpenAuthModal('LOGIN')}
+                    className="px-4 py-2 rounded-xl bg-indigo-600 text-white font-extrabold text-xs hover:bg-indigo-700 transition-all shadow-md active:scale-95 cursor-pointer"
+                  >
+                    Đăng Nhập Ngay
+                  </button>
+                </div>
               </div>
             )}
           </motion.div>

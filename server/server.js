@@ -13,6 +13,7 @@ const savedRoutes = require('./src/routes/savedRoutes');
 const adminRoutes = require('./src/routes/adminRoutes');
 
 const app = express();
+app.set('trust proxy', 1);
 const PORT = process.env.PORT || 8701;
 const CUSTOM_QUIZZES_PATH = path.join(__dirname, 'custom_quizzes.json');
 const DELETED_QUIZZES_PATH = path.join(__dirname, 'deleted_quiz_ids.json');
