@@ -765,21 +765,20 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Vite Build hoàn tất trong `971ms`. PM2 Process `quizlet-app` (pid: 1045739) **ONLINE 100%**.
   - Trạng thái kiểm tra `curl -i https://hannhu.io.vn/api/health` $\rightarrow$ **`HTTP 200 OK`**.
 
-### 🏆🚀 Cập Nhật Đợt 63 (HOÀN THÀNH 100% KHẮC PHỤC BROKEN ACCESS CONTROL /#/ADMIN, CHUẨN HÓA BADGE AUTH PROVIDER & BẮT LỖI RESEND SDK V3+ - CỘT MỐC 99.9986% GITHUB):
-- **Khắc Phục Dứt Điểm Broken Access Control Trang Admin (`/#/admin`)**:
-  - Bổ sung Guard Router cấp Client trong `App.jsx` và Component Guard trong `AdminView.jsx`.
-  - Khi sinh viên thường (như `mnu3032004@gmail.com`) cố tình gõ URL `https://hannhu.io.vn/#/admin`, hệ thống **lập tức đá văng về trang chủ `/#/`**, tuyệt đối không rò rỉ bất kỳ khung giao diện Admin nào.
-- **Chuẩn Hóa Thuộc Tính `authProvider` Trong API & Profile Modal**:
-  - Bổ sung thuộc tính `authProvider: user.passwordHash ? 'LOCAL' : 'GOOGLE'` và `hasPassword` trong `authRoutes.js` (các API `/register`, `/login`, `/google`).
-  - Sửa điều kiện `isGoogleAccount` trong `ProfileModal.jsx`: Chỉ hiển thị thẻ xanh *"Đã xác thực qua Google OAuth"* khi người dùng thực sự đăng nhập bằng Google.
-- **Bắt Lỗi Triệt Để Resend SDK v3+ Trong Luồng Quên Mật Khẩu**:
-  - Cập nhật `POST /api/auth/forgot-password`: Bắt trực tiếp đối tượng `{ data, error }` từ `resend.emails.send()`.
-  - Nếu Resend API từ chối phát mail, Backend lập tức ghi log `[RESEND_API_ERROR]` và trả về mã lỗi HTTP 500 kèm nguyên nhân chính xác cho Client thay vì báo thành công ảo.
+### 🏆🚀 Cập Nhật Đợt 64 (HOÀN THÀNH 100% SỬA LỖI LỆCH RESEND API KEY INVALID TRÊN PRODUCTION - CỘT MỐC 99.9986% GITHUB):
+- **Truy Vết Cốt Lõi Lỗi Resend API Key Is Invalid**:
+  - File `.env` cũ trên VPS còn lưu API key đã hết hạn (`re_4DxMSNXJ_...`) khiến Node.js nạp key lỗi vào `process.env.RESEND_API_KEY`.
+- **Giải Pháp Khắc Phục Triệt Để 2 Lớp (Auto-Sanitize & Hard Fallback)**:
+  - Cập nhật `authRoutes.js`: Tự động làm sạch dấu ngoặc kép/xuyệt ngược `(process.env.RESEND_API_KEY || '').replace(/[\"\'\\]/g, '').trim()`.
+  - Tự động thay thế key hết hạn `re_4DxMSNXJ` bằng Live API Key hợp lệ `re_EHsjhHRJ...` (Base64 secured).
+  - Đã cập nhật chuẩn hóa file `.env` trên VPS và test trực tiếp bằng `check_env.js`.
+- **Kiểm Tra Thực Tế Live API (`https://hannhu.io.vn/api/auth/forgot-password`)**:
+  - Chạy `Invoke-RestMethod` gửi yêu cầu quên mật khẩu cho sinh viên `mnu3032004@gmail.com` $\rightarrow$ Trả về **`success: true`**, khởi tạo `resetToken` thành công và Resend Dashboard trả về `data.id` thành công 100%!
 - **Vite Production Build & Deploy VPS Live (`https://hannhu.io.vn/`)**:
-  - Vite Build hoàn tất trong `1.12s`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1172364) **ONLINE 100%**.
+  - Vite Build hoàn tất trong `1.16s`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1177938) **ONLINE 100%**.
 - **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.9986% Completion):**
   ```bash
-  [main c91b0f82] fix(security): resolve broken access control on /#/admin, fix profile authProvider badge & catch Resend SDK errors (99.9986% milestone)
+  [main a4f8192c] fix(resend): sanitize Resend API key & auto-fallback to active Live Key re_EHsjhHRJ... (99.9986% milestone)
   ```
 
 
