@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, Layers, Play, CheckCircle2, Star, Volume2, BookOpen, MoreHorizontal, Edit, Trash2, Search, Sparkles } from 'lucide-react';
 import { toggleStarQuestion, getStarredQuestions, unstarQuizSet, verifyQuizPassword, deleteCustomQuizSet, calculateQuizProgressStats } from '../data/quizDataLoader';
 import PasswordModal from './PasswordModal';
+import DiscussionDrawer from './discussion/DiscussionDrawer';
 
 function removeAccents(str) {
   if (!str) return '';
@@ -13,7 +14,7 @@ function removeAccents(str) {
     .replace(/Đ/g, 'D');
 }
 
-export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSetup, onEditQuiz, onDeleteQuiz }) {
+export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSetup, onEditQuiz, onDeleteQuiz, onOpenAuthModal }) {
   const [filterMode, setFilterMode] = useState('ALL'); // 'ALL' | 'STARRED'
   const [searchQuery, setSearchQuery] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -469,7 +470,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
 
                         <button
                           onClick={() => handleToggleStar(q, originalIndexDisplay - 1)}
-                          className="p-2 rounded-full hover:bg-warm-hover dark:hover:bg-slate-800 transition-transform active:scale-125"
+                          className="p-2 rounded-full hover:bg-warm-hover dark:hover:bg-slate-800 transition-transform active:scale-125 cursor-pointer"
                           title="Lưu câu hỏi ⭐"
                         >
                           <Star className={`w-5 h-5 ${isStarred ? 'fill-amber-400 text-amber-500' : 'text-slate-400 dark:text-slate-500'}`} />
@@ -477,6 +478,13 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
                       </div>
                     </div>
                   </div>
+
+                  {/* Accordion Academic Discussion Drawer */}
+                  <DiscussionDrawer
+                    quizId={quiz.id}
+                    questionId={q.id || `q-${originalIndexDisplay}`}
+                    onOpenAuthModal={onOpenAuthModal}
+                  />
                 </motion.div>
               );
             })}

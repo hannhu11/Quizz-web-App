@@ -428,6 +428,10 @@ export default function App() {
                 onOpenTestSetup={() => setIsTestSetupOpen(true)}
                 onEditQuiz={handleEditQuizRequest}
                 onDeleteQuiz={handleDeleteQuizRequest}
+                onOpenAuthModal={(mode) => {
+                  setAuthModalMode(mode || 'LOGIN');
+                  setIsAuthModalOpen(true);
+                }}
               />
             )}
             {studyMode === 'FLASHCARD' && (

@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
 const authRoutes = require('./routes/authRoutes');
+const commentRoutes = require('./routes/commentRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -32,6 +33,7 @@ app.use('/api/', apiLimiter);
 
 // 4. API Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/comments', commentRoutes);
 
 // 5. Health Check Endpoint
 app.get('/api/health', (req, res) => {
