@@ -586,6 +586,15 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Triệt tiêu 100% hình ô vuông caro xám trắng. Linh vật hòa chìm tự nhiên sang trọng vào Hero Banner (`Góc Ôn Luyện Kiến Thức`).
 - **Trạng Thái Deploy:** Build Vite production thành công (`820ms`), deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 889294).
 
+### 🔬💎 Cập Nhật Đợt 41 (KHẮC PHỤC TRIỆT ĐỂ CLOUDFLARE CDN CACHE HIT & ĐÁNH DẤU CỘT MỐC 99.26%):
+- **Asset Fingerprinting / Cache Busting (`App.jsx`):**
+  - Sao chép tệp ảnh linh vật Capybara mặc vest xanh học thuật tách nền 100% trong suốt mới nhất (3.33 MB) sang tên asset độc bản mới: `quiz-web-react/public/capybara_mascot_clean_v8.png`.
+  - Cập nhật mã nguồn `App.jsx` gọi đường dẫn `/capybara_mascot_clean_v8.png`.
+  - Ép Cloudflare CDN hủy bỏ bản đệm cũ 1 năm (`cf-cache-status: HIT` từ `07:30:42 GMT`), lấy ngay bản asset mới (`cf-cache-status: MISS` -> `HTTP 200 OK`).
+  - Triệt tiêu 100% các ô caro xám trắng trên môi trường Live production. Linh vật hòa chìm tự nhiên, nét mịn 100% tuyệt đối.
+- **Trạng Thái Deploy:** Build Vite production thành công (`1.41s`), deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 898983).
+
+
 
 
 

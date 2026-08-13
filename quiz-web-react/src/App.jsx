@@ -474,7 +474,7 @@ export default function App() {
               {/* Capybara Mascot (Academic Suit & Flower Bouquet) */}
               <div className="relative z-10 shrink-0 self-center hidden sm:block">
                 <img
-                  src="/capybara_suit_bouquet_transparent.png?v=9926"
+                  src="/capybara_mascot_clean_v8.png"
                   alt="Linh vật Capybara QuizzFlow"
                   className="w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 object-contain filter drop-shadow-md hover:scale-105 transition-transform duration-300"
                 />
