@@ -9,7 +9,8 @@ export default defineConfig({
     tailwindcss()
   ],
   build: {
-    chunkSizeWarningLimit: 1200,
+    modulePreload: false,
+    chunkSizeWarningLimit: 3500,
     rollupOptions: {
       output: {
         manualChunks(id) {
@@ -26,10 +27,7 @@ export default defineConfig({
             return 'vendor-libs';
           }
           if (id.includes('quiz-app-main/quizzes/current') || id.includes('quiz-app-main\\quizzes\\current')) {
-            const parts = id.replace(/\\/g, '/').split('/');
-            const filename = parts[parts.length - 1] || 'quiz';
-            const cleanName = filename.replace('.json', '').replace(/[^a-zA-Z0-9]/g, '_').toLowerCase().slice(0, 20);
-            return `quiz-pkg-${cleanName}`;
+            return 'quiz-data-vault';
           }
         }
       }
