@@ -157,115 +157,119 @@ export default function MediaStreamWidget({ isExpanded, onClose, onToggleExpand,
           </button>
         </div>
 
-        {/* Spotify Section */}
-        <div className={streamSubTab === 'SPOTIFY' ? 'flex flex-col gap-3' : 'hidden'}>
-          <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
-            {SPOTIFY_PRESETS.map((preset) => (
-              <button
-                key={preset.name}
-                onClick={() => {
-                  setActiveSpotifyEmbedUrl(preset.uri);
-                  setActiveSpotifyPresetName(preset.name);
-                }}
-                className={`whitespace-nowrap px-3 py-1.5 rounded-xl text-xs border cursor-pointer transition-all duration-200 ${
-                  activeSpotifyEmbedUrl === preset.uri
-                    ? 'bg-[#1DB954]/15 text-[#1DB954] border-[#1DB954]/30 font-bold'
-                    : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700'
-                }`}
-              >
-                {preset.name}
-              </button>
-            ))}
-          </div>
-
-          <iframe
-            data-testid="embed-iframe"
-            style={{ borderRadius: '12px' }}
-            src={activeSpotifyEmbedUrl}
-            width="100%"
-            height="352"
-            frameBorder="0"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-          />
-
-          <form onSubmit={handleSpotifySubmit} className="flex gap-2">
-            <div className="relative flex-1">
-              <Link2 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-              <input
-                type="text"
-                value={spotifyInput}
-                onChange={(e) => setSpotifyInput(e.target.value)}
-                placeholder="Spotify URL..."
-                className="w-full pl-9 pr-3 py-2 bg-slate-100/80 dark:bg-slate-800/80 border border-slate-200/60 dark:border-slate-700/60 rounded-xl text-xs placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1DB954]/50"
-              />
+        {/* Spotify Section - Only mount iframe when active tab is SPOTIFY */}
+        {streamSubTab === 'SPOTIFY' && (
+          <div className="flex flex-col gap-3">
+            <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+              {SPOTIFY_PRESETS.map((preset) => (
+                <button
+                  key={preset.name}
+                  onClick={() => {
+                    setActiveSpotifyEmbedUrl(preset.uri);
+                    setActiveSpotifyPresetName(preset.name);
+                  }}
+                  className={`whitespace-nowrap px-3 py-1.5 rounded-xl text-xs border cursor-pointer transition-all duration-200 ${
+                    activeSpotifyEmbedUrl === preset.uri
+                      ? 'bg-[#1DB954]/15 text-[#1DB954] border-[#1DB954]/30 font-bold'
+                      : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700'
+                  }`}
+                >
+                  {preset.name}
+                </button>
+              ))}
             </div>
-            <button
-              type="submit"
-              className="px-4 py-2 bg-[#1DB954] hover:bg-[#1ed760] text-white rounded-xl font-bold text-xs cursor-pointer transition-all duration-200"
-            >
-              Phát
-            </button>
-          </form>
 
-          <a
-            href="https://open.spotify.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 w-full py-2 bg-slate-100/80 dark:bg-slate-800/80 border border-slate-200/60 dark:border-slate-700/60 text-[#1DB954] hover:bg-[#1DB954]/10 rounded-xl text-xs font-semibold cursor-pointer transition-all duration-200"
-          >
-            Mở Spotify
-            <ExternalLink className="w-4 h-4" />
-          </a>
-        </div>
+            <iframe
+              data-testid="embed-iframe"
+              style={{ borderRadius: '12px' }}
+              src={activeSpotifyEmbedUrl}
+              width="100%"
+              height="352"
+              frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            />
 
-        {/* YouTube Section */}
-        <div className={streamSubTab === 'YOUTUBE' ? 'flex flex-col gap-3' : 'hidden'}>
-          <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
-            {YOUTUBE_PRESETS.map((preset) => (
+            <form onSubmit={handleSpotifySubmit} className="flex gap-2">
+              <div className="relative flex-1">
+                <Link2 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+                <input
+                  type="text"
+                  value={spotifyInput}
+                  onChange={(e) => setSpotifyInput(e.target.value)}
+                  placeholder="Spotify URL..."
+                  className="w-full pl-9 pr-3 py-2 bg-slate-100/80 dark:bg-slate-800/80 border border-slate-200/60 dark:border-slate-700/60 rounded-xl text-xs placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1DB954]/50"
+                />
+              </div>
               <button
-                key={preset.id}
-                onClick={() => setActiveYoutubeId(preset.id)}
-                className={`whitespace-nowrap px-3 py-1.5 rounded-xl text-xs border cursor-pointer transition-all duration-200 ${
-                  activeYoutubeId === preset.id
-                    ? 'bg-red-600/15 text-red-600 border-red-600/30 font-bold'
-                    : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700'
-                }`}
+                type="submit"
+                className="px-4 py-2 bg-[#1DB954] hover:bg-[#1ed760] text-white rounded-xl font-bold text-xs cursor-pointer transition-all duration-200"
               >
-                {preset.name}
+                Phát
               </button>
-            ))}
-          </div>
+            </form>
 
-          <iframe
-            className="w-full"
-            style={{ aspectRatio: '16/9', borderRadius: '12px' }}
-            src={`https://www.youtube-nocookie.com/embed/${activeYoutubeId}?autoplay=0`}
-            title="YouTube Stream"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            loading="lazy"
-          />
-
-          <form onSubmit={handleYoutubeSubmit} className="flex gap-2">
-            <div className="relative flex-1">
-              <Link2 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-              <input
-                type="text"
-                value={youtubeInput}
-                onChange={(e) => setYoutubeInput(e.target.value)}
-                placeholder="YouTube URL..."
-                className="w-full pl-9 pr-3 py-2 bg-slate-100/80 dark:bg-slate-800/80 border border-slate-200/60 dark:border-slate-700/60 rounded-xl text-xs placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500/50"
-              />
-            </div>
-            <button
-              type="submit"
-              className="px-4 py-2 bg-red-600 hover:bg-red-500 text-white rounded-xl font-bold text-xs cursor-pointer transition-all duration-200"
+            <a
+              href="https://open.spotify.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full py-2 bg-slate-100/80 dark:bg-slate-800/80 border border-slate-200/60 dark:border-slate-700/60 text-[#1DB954] hover:bg-[#1DB954]/10 rounded-xl text-xs font-semibold cursor-pointer transition-all duration-200"
             >
-              Phát
-            </button>
-          </form>
-        </div>
+              Mở Spotify
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          </div>
+        )}
+
+        {/* YouTube Section - Only mount iframe when active tab is YOUTUBE */}
+        {streamSubTab === 'YOUTUBE' && (
+          <div className="flex flex-col gap-3">
+            <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+              {YOUTUBE_PRESETS.map((preset) => (
+                <button
+                  key={preset.id}
+                  onClick={() => setActiveYoutubeId(preset.id)}
+                  className={`whitespace-nowrap px-3 py-1.5 rounded-xl text-xs border cursor-pointer transition-all duration-200 ${
+                    activeYoutubeId === preset.id
+                      ? 'bg-red-600/15 text-red-600 border-red-600/30 font-bold'
+                      : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700'
+                  }`}
+                >
+                  {preset.name}
+                </button>
+              ))}
+            </div>
+
+            <iframe
+              className="w-full"
+              style={{ aspectRatio: '16/9', borderRadius: '12px' }}
+              src={`https://www.youtube-nocookie.com/embed/${activeYoutubeId}?autoplay=0`}
+              title="YouTube Stream"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+            />
+
+            <form onSubmit={handleYoutubeSubmit} className="flex gap-2">
+              <div className="relative flex-1">
+                <Link2 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+                <input
+                  type="text"
+                  value={youtubeInput}
+                  onChange={(e) => setYoutubeInput(e.target.value)}
+                  placeholder="YouTube URL..."
+                  className="w-full pl-9 pr-3 py-2 bg-slate-100/80 dark:bg-slate-800/80 border border-slate-200/60 dark:border-slate-700/60 rounded-xl text-xs placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500/50"
+                />
+              </div>
+              <button
+                type="submit"
+                className="px-4 py-2 bg-red-600 hover:bg-red-500 text-white rounded-xl font-bold text-xs cursor-pointer transition-all duration-200"
+              >
+                Phát
+              </button>
+            </form>
+          </div>
+        )}
       </div>
     </motion.div>
   );

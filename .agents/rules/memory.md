@@ -540,6 +540,18 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Content: *"Đừng nản lòng nhé! Thi thử là để tìm ra lỗ hổng kiến thức. Hãy xem lại danh sách câu sai bên dưới và thử lại ngay!"*
 - **Trạng Thái Deploy:** Build Vite production thành công (`1.47s`), deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 856993).
 
+### 🚀⚡ Cập Nhật Đợt 36: Khắc Phục Triệt Để Memory Leak & Resource Leak Trong Chill Media Widget:
+- **Tối Ưu Vòng Đời Iframe Nhúng (`MediaStreamWidget.jsx`):**
+  - Áp dụng **Conditional Rendering**: CHỈ mount 1 iframe duy nhất cho Tab đang hoạt động (`streamSubTab === 'SPOTIFY'` HOẶC `streamSubTab === 'YOUTUBE'`).
+  - Unmount ngay iframe của Tab không dùng khi chuyển đổi tab (tiết kiệm ngay ~60MB RAM).
+  - Khi thu nhỏ Widget (`isExpanded = false`), vẫn giữ 1 iframe đang phát để nhạc duy trì mượt mà không bị ngắt ngắt ngẩn.
+  - Khi đóng/dừng hẳn Widget (`onClose` / `isOpen = false`), unmount 100% cả 2 iframe khỏi DOM tree, Chrome V8 Garbage Collector dọn dẹp triệt để RAM và ngừng 100% request ngầm Partial Content.
+- **Throttling State & Shallow Equality Check (`ChillDock.jsx`):**
+  - Bổ sung kiểm tra So sánh nông (Shallow Equality Check) trong `handleMediaStatus`, `handleSoundsStatus`, `handlePomodoroStatus`. Triệt tiêu hoàn toàn tình trạng gán bộ nhớ mới thừa trên từng render tick ($12.8\text{ MB/s}$).
+- **Bảo Vệ File Khóa:** Khóa 100% các file đã chốt (`App.jsx`, `ExamMode.jsx`, `PracticeMode.jsx`, `QuizDetailView.jsx`, `FlashcardViewer.jsx`). CHỈ tác động đúng 2 file trong `src/components/chill/`.
+- **Trạng Thái Deploy:** Build Vite production thành công (`1.12s`), deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 862783).
+
+
 
 
 

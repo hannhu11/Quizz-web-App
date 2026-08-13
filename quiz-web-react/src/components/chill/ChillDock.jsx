@@ -78,9 +78,32 @@ export default function ChillDock() {
     if (key === 'pomodoro') setStatus(prev => ({ ...prev, pomodoro: { isActive: false, timeDisplay: '25:00', mode: 'WORK' } }));
   };
 
-  const handleSoundsStatus = useCallback((s) => setStatus(prev => ({ ...prev, sounds: s })), []);
-  const handleMediaStatus = useCallback((s) => setStatus(prev => ({ ...prev, media: s })), []);
-  const handlePomodoroStatus = useCallback((s) => setStatus(prev => ({ ...prev, pomodoro: s })), []);
+  const handleSoundsStatus = useCallback((s) => {
+    setStatus(prev => {
+      if (prev.sounds.isActive === s.isActive && JSON.stringify(prev.sounds.activeSoundNames) === JSON.stringify(s.activeSoundNames)) {
+        return prev;
+      }
+      return { ...prev, sounds: s };
+    });
+  }, []);
+
+  const handleMediaStatus = useCallback((s) => {
+    setStatus(prev => {
+      if (prev.media.isActive === s.isActive && prev.media.source === s.source && prev.media.label === s.label) {
+        return prev;
+      }
+      return { ...prev, media: s };
+    });
+  }, []);
+
+  const handlePomodoroStatus = useCallback((s) => {
+    setStatus(prev => {
+      if (prev.pomodoro.isActive === s.isActive && prev.pomodoro.timeDisplay === s.timeDisplay && prev.pomodoro.mode === s.mode) {
+        return prev;
+      }
+      return { ...prev, pomodoro: s };
+    });
+  }, []);
 
   const anyActive = status.sounds.isActive || status.media.isActive || status.pomodoro.isActive;
 
