@@ -686,6 +686,22 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   [main e89544f4] feat(phase3): complete Phase 3 Comment Accordion Drawer, Reputation Engine & Optimistic Upvote/Downvote
   ```
 
+### 🏆🚀 Cập Nhật Đợt 47 (PHÁT HÀNH CHÍNH THỨC QUIZZFLOW V2.0 - SOCIAL STUDY ERA & DEPLOY LIVE SUCCESS):
+- **Triển Khai Hoàn Tất 4 Giai Đoạn QuizzFlow v2.0:**
+  - **Giai đoạn 1**: Hạ tầng Database Core SQLite Prisma ORM (WAL mode 0ms latency) & Auth JWT Middleware (`server/src/middleware/auth.js`). Passtest 8/8 bài test tự động.
+  - **Giai đoạn 2**: Authentication System (`AuthModal.jsx`, `GoogleAuthBtn.jsx`, `AuthContext.jsx`), Nút Con Mắt Toggle Mật Khẩu (`<Eye />` / `<EyeOff />`), Form Đăng ký Mail Sinh Viên FPT (`@fpt.edu.vn`, `@fe.edu.vn`) & Gmail (`@gmail.com`), Badge Điểm Uy Tín trên Header Navbar (`🟢 +10 Uy tính`).
+  - **Giai đoạn 3**: Accordion Thảo Luận (`DiscussionDrawer.jsx`), Thuật toán Sắp xếp Uy tín ($\ge +10$), Auto-collapse bình luận rác ($\le -5$), Optimistic Upvote/Downvote ($0\text{ms}$ delay), nhúng dưới từng câu hỏi trong `QuizDetailView.jsx`. Passtest backend 100%.
+  - **Giai đoạn 4**: Hợp nhất Server API (`server/server.js`), Deploy Production bundle (`quiz-web-react/dist`) và Express Backend lên VPS Oracle `140.245.119.189` chạy PM2 service `quizlet-app` (pid: 956705).
+- **Xác Minh HTTP Live Production (`https://hannhu.io.vn/`):**
+  - Live Health Check `GET /api/health` -> `HTTP 200 OK` (`{"status":"ok","app":"Quizlet App Server"}`).
+  - Live Web Interface `GET /` -> `HTTP 200 OK` (Vite Production Assets `index-BURa65FW.js` & `index-BdqgVhvo.css`).
+- **Bảo Vệ Khóa Bất Biến v1.0:** Zero damage to core v1.0 exam & study systems. Toàn bộ 73 tệp JSON bộ đề được bảo toàn 100%.
+- **Commit & Push GitHub Repository (`https://github.com/hannhu11/Quizz-web-App.git`):**
+  ```bash
+  [main eadb4ffe] feat(v2.0): official release of QuizzFlow v2.0 Social Study Era
+  ```
+
+
 
 
 
