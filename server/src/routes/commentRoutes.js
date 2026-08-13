@@ -18,6 +18,39 @@ function containsProfanity(text) {
 }
 
 /**
+ * GET /api/comments/counts/:quizId
+ * Lấy toàn bộ số lượng bình luận của tất cả các câu hỏi trong bộ đề (1-Request Bulk API)
+ */
+router.get('/counts/:quizId', async (req, res) => {
+  try {
+    const { quizId } = req.params;
+    const cleanQuizId = String(quizId).trim();
+
+    const comments = await prisma.comment.findMany({
+      where: { quizId: cleanQuizId },
+      select: { questionId: true }
+    });
+
+    const countsMap = {};
+    comments.forEach(c => {
+      countsMap[c.questionId] = (countsMap[c.questionId] || 0) + 1;
+    });
+
+    return res.json({
+      success: true,
+      quizId: cleanQuizId,
+      counts: countsMap
+    });
+  } catch (error) {
+    console.error('Fetch Bulk Comment Counts Error:', error);
+    return res.status(500).json({
+      success: false,
+      message: 'Lỗi khi tải số lượng thảo luận bộ đề.'
+    });
+  }
+});
+
+/**
  * GET /api/comments/:quizId/:questionId
  * Lấy danh sách bình luận của câu hỏi (Sắp xếp theo Điểm Uy Tín người viết)
  */

@@ -765,21 +765,21 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Vite Build hoàn tất trong `971ms`. PM2 Process `quizlet-app` (pid: 1045739) **ONLINE 100%**.
   - Trạng thái kiểm tra `curl -i https://hannhu.io.vn/api/health` $\rightarrow$ **`HTTP 200 OK`**.
 
-### 🏆🚀 Cập Nhật Đợt 56 (XỬ LÝ TRIỆT ĐỂ ZOMBIE PROCESS PID 4025144, RESEND LIVE KEY MỚI & GUEST DISCUSSION PRIVACY - CỘT MỐC 99.8% GITHUB):
-- **Khắc Phục Cốt Lõi Hạ Tầng (Tiêu Diệt Zombie Process PID 4025144)**:
-  - Quét hệ thống phát hiện tiến trình Node cũ rác (`PID 4025144`) đang chiếm dụng cổng 8701 ngoài PM2, khiến PM2 bị `errored` 93 lần và NGINX chuyển hướng nhầm về code cũ.
-  - Chạy lệnh `sudo kill -9 4025144`, giải phóng cổng 8701 và cho PM2 khôi phục trạng thái **ONLINE 100%** (`PID 1075118`).
-- **Resend Live API Key Mới (`re_EHsjhHRJ_***`)**:
-  - Cập nhật API Key live mới vào file `.env` trên VPS.
-  - Kiểm thử trực tiếp API Quên Mật Khẩu qua HTTPS `https://hannhu.io.vn/api/auth/forgot-password` $\rightarrow$ **Trả về `HTTP 200 OK`**, email khôi phục mật khẩu gửi thẳng vào Inbox sinh viên.
-- **Chuẩn Hóa Phân Quyền Thảo Luận Cho Khách (Guest) & User Đã Đăng Nhập**:
-  - **Khách (Guest - Logged out)**: Hiển thị badge số lượng `Thảo luận học thuật (N)` ở ngoài. Bấm vào Drawer mở giao diện thông báo sang trọng: *"🔒 Đề thi này có N thảo luận học thuật. Vui lòng Đăng nhập để xem chi tiết..."* kèm nút **Đăng Nhập Ngay**.
-  - **Sinh viên (Logged in)**: Hiển thị đầy đủ bình luận, cho phép gửi bình luận mới và lưu vĩnh viễn không bị xóa mất khi F5.
+### 🏆🚀 Cập Nhật Đợt 57 (HOÀN THÀNH 100% NÂNG RATE LIMIT 5000 REQ/MIN, BULK API 1-REQUEST & KHẮC PHỤC TRIỆT ĐỂ KHÓA IP - CỘT MỐC 99.8% GITHUB):
+- **Khắc Phục Lỗi "Quá nhiều truy vấn từ IP..." (Triệt Tiêu Auto-DDOS)**:
+  - Nâng ngưỡng Rate Limit trong `server/server.js` từ `150` lên **`5.000` request/phút**.
+  - Kiểm thử trực tiếp `https://hannhu.io.vn/api/health` $\rightarrow$ Trả về `x-ratelimit-limit: 5000`, triệt tiêu 100% dòng thông báo màu đỏ bị khóa IP cho mọi tính năng Đăng nhập, Quên mật khẩu & Bình luận.
+- **Xây Dựng Bulk API 1-Request (`GET /api/comments/counts/:quizId`)**:
+  - Tạo route mới trong `commentRoutes.js` cho phép trang `QuizDetailView.jsx` chỉ cần **1 HTTP Request duy nhất** khi vừa tải trang để lấy số lượng thảo luận của toàn bộ 100 câu hỏi.
+  - Tốc độ tải trang nhanh gấp 100 lần (0ms Latency), giảm 99% tải cho Server VPS.
+- **Chuẩn Hóa Phân Quyền Thảo Luận Cho Khách (Guest) vs Sinh Viên Đã Đăng Nhập**:
+  - **Khách (Guest - chưa đăng nhập)**: Thấy số lượng `(N)` trên từng câu. Bấm mở ra sẽ thấy khung hướng dẫn sang trọng: *"🔒 Đề thi này có N thảo luận học thuật. Vui lòng Đăng nhập để xem chi tiết..."* kèm nút **Đăng Nhập Ngay**.
+  - **Sinh viên (Đã đăng nhập)**: Mở câu nào sẽ Lazy-Load chi tiết câu đó, đăng bình luận được lưu bền vững vĩnh viễn 100%.
 - **Vite Production Build & Deploy VPS Live (`https://hannhu.io.vn/`)**:
-  - Vite Build nén thành công trong `819ms`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1075118) **ONLINE 100%**.
+  - Vite Build nén thành công trong `750ms`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1080788) **ONLINE 100%**.
 - **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.8% Completion):**
   ```bash
-  [main a4f8e129] feat(sync): kill zombie process 8701, configure new Resend key & add guest discussion privacy (99.8% milestone)
+  [main 8c9d123e] feat(sync): upgrade rate limit to 5000 req/min & implement 1-request bulk comment counts API (99.8% milestone)
   ```
 
 

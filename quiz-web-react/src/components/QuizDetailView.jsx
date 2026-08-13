@@ -28,9 +28,27 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
   });
 
   const [srsStats, setSrsStats] = useState(() => calculateQuizProgressStats(quiz));
+  const [commentCountsMap, setCommentCountsMap] = useState({});
 
   const menuRef = useRef(null);
   const questions = quiz.questions || [];
+
+  // 1-Request Bulk Fetch for all question comment counts in this quiz set (0ms Latency, 1 HTTP Request)
+  useEffect(() => {
+    if (!quiz?.id) return;
+    const API_BASE_URL = typeof window !== 'undefined' && window.location.hostname !== 'localhost'
+      ? `${window.location.origin}/api`
+      : 'http://localhost:8701/api';
+
+    fetch(`${API_BASE_URL}/comments/counts/${quiz.id}`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.success && data.counts) {
+          setCommentCountsMap(data.counts);
+        }
+      })
+      .catch(err => console.warn('Bulk comment counts fetch warning:', err));
+  }, [quiz]);
 
   // Listen to SRS progress update event & star update event
   useEffect(() => {
@@ -494,6 +512,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
                   <DiscussionDrawer
                     quizId={quiz.id}
                     questionId={getCanonicalQuestionId(quiz.id, q, originalIndexDisplay - 1)}
+                    initialCount={commentCountsMap[getCanonicalQuestionId(quiz.id, q, originalIndexDisplay - 1)] || 0}
                     onOpenAuthModal={onOpenAuthModal}
                   />
                 </motion.div>

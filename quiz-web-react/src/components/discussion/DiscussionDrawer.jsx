@@ -19,7 +19,7 @@ const API_BASE_URL = typeof window !== 'undefined' && window.location.hostname !
   ? `${window.location.origin}/api`
   : 'http://localhost:8701/api';
 
-export default function DiscussionDrawer({ quizId, questionId, onOpenAuthModal }) {
+export default function DiscussionDrawer({ quizId, questionId, initialCount = 0, onOpenAuthModal }) {
   const { user, token } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
   const [comments, setComments] = useState([]);
@@ -29,8 +29,9 @@ export default function DiscussionDrawer({ quizId, questionId, onOpenAuthModal }
   const [errorMsg, setErrorMsg] = useState('');
   const [expandedComments, setExpandedComments] = useState({}); // Track expanded auto-collapsed comments
 
-  // Instant fetch on mount (regardless of isOpen) + Auto-Polling 10s & Tab Focus Event Listeners
+  // Lazy Fetch comments ONLY when drawer is opened and user is logged in
   const fetchComments = async () => {
+    if (!isOpen || !user) return;
     try {
       const res = await fetch(`${API_BASE_URL}/comments/${quizId}/${questionId}`, {
         headers: token ? { Authorization: `Bearer ${token}` } : {}
@@ -46,12 +47,13 @@ export default function DiscussionDrawer({ quizId, questionId, onOpenAuthModal }
   };
 
   useEffect(() => {
+    if (!isOpen || !user) return;
+
     fetchComments();
 
-    // 10s Auto Polling
-    const interval = setInterval(fetchComments, 10000);
+    // 15s Auto Polling only for open drawers
+    const interval = setInterval(fetchComments, 15000);
 
-    // Sync on tab focus / visibility change
     const handleFocus = () => fetchComments();
     window.addEventListener('focus', handleFocus);
     document.addEventListener('visibilitychange', handleFocus);
@@ -61,7 +63,7 @@ export default function DiscussionDrawer({ quizId, questionId, onOpenAuthModal }
       window.removeEventListener('focus', handleFocus);
       document.removeEventListener('visibilitychange', handleFocus);
     };
-  }, [quizId, questionId, token]);
+  }, [isOpen, user, quizId, questionId, token]);
 
   // Handle Post Comment
   const handlePostComment = async (e) => {
@@ -176,6 +178,8 @@ export default function DiscussionDrawer({ quizId, questionId, onOpenAuthModal }
     setExpandedComments(prev => ({ ...prev, [commentId]: !prev[commentId] }));
   };
 
+  const displayCount = Math.max(initialCount, comments.length);
+
   return (
     <div className="mt-3 pt-2 border-t border-slate-100 dark:border-slate-800/80">
       {/* Accordion Trigger Button */}
@@ -184,7 +188,7 @@ export default function DiscussionDrawer({ quizId, questionId, onOpenAuthModal }
         className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors border border-slate-200/60 dark:border-slate-800/60 cursor-pointer group active:scale-[0.99]"
       >
         <MessageSquare className="w-4 h-4 stroke-[1.75] text-slate-500 group-hover:text-indigo-600 transition-colors" />
-        <span>Thảo luận học thuật ({comments.length})</span>
+        <span>Thảo luận học thuật ({displayCount})</span>
         {isOpen ? (
           <ChevronUp className="w-3.5 h-3.5 text-slate-400" />
         ) : (
@@ -342,7 +346,7 @@ export default function DiscussionDrawer({ quizId, questionId, onOpenAuthModal }
               <div className="p-4 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-700 dark:text-indigo-300 text-xs font-semibold space-y-2 text-center">
                 <div className="flex items-center justify-center gap-1.5 font-extrabold text-sm">
                   <LogIn className="w-4 h-4 text-indigo-500" />
-                  <span>🔒 Đề thi này có {comments.length} thảo luận học thuật</span>
+                  <span>🔒 Đề thi này có {displayCount} thảo luận học thuật</span>
                 </div>
                 <p className="text-slate-600 dark:text-slate-400 text-xs font-normal">
                   Vui lòng Đăng nhập tài khoản QuizzFlow để xem nội dung bình luận chi tiết và tham gia đóng góp đáp án cho sinh viên.
