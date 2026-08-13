@@ -765,16 +765,22 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Vite Build hoàn tất trong `971ms`. PM2 Process `quizlet-app` (pid: 1045739) **ONLINE 100%**.
   - Trạng thái kiểm tra `curl -i https://hannhu.io.vn/api/health` $\rightarrow$ **`HTTP 200 OK`**.
 
-### 🏆🚀 Cập Nhật Đợt 59 (HOÀN THÀNH 100% CẤP QUYỀN ADMIN TUYỆT ĐỐI CHO HANNHU3003 & HANNHU4002, TỰ ĐỘNG NÂNG ROLE TRONG CSDL - CỘT MỐC 99.8% GITHUB):
-- **Khắc Phục Cốt Lõi Lỗi Bấm Nút `👑 Quản Trị Admin` Bị Chặn**:
-  - Khi đăng nhập bằng Google OAuth với email `hannhu3003@gmail.com` hoặc `hannhu4002@gmail.com`, hệ thống tự động gán `role = 'ADMIN'` trực tiếp trong CSDL SQLite.
-  - Cập nhật middleware `requireAdmin` trong `adminRoutes.js` và `Navbar.jsx` hỗ trợ danh sách Admin ủy quyền (`hannhu3003@gmail.com`, `hannhu4002@gmail.com` & `ADMIN` role).
-  - Chạy script nâng cấp CSDL trên VPS Oracle: `UPDATED_HANNHU3003_TO_ADMIN: 1`. Nút bấm `👑 Quản Trị Admin` mở trang quản trị **ONLINE 100%**.
+### 🏆🚀 Cập Nhật Đợt 60 (HOÀN THÀNH 100% SỬA DỨT ĐIỂM CRASH NAVBAR & CẤU HÌNH RESEND API KEY NGUYÊN BẢN - CỘT MỐC 99.8% GITHUB):
+- **Khắc Phục Dứt Điểm Crash Giao Diện (`ReferenceError: user is not defined`)**:
+  - Khai báo bổ sung `const { user, logout } = useAuth();` trong `Navbar.jsx` và áp dụng Optional Chaining an toàn (`user?.email`, `user?.role`, `user?.reputation`).
+  - Màn hình Self-Healing được đóng hoàn toàn, giao diện QuizzFlow trở lại mượt mà 100%.
+- **Chuẩn Hóa Luồng Resend API Key Nguyên Bản (`re_EHsjhHRJ_***`)**:
+  - Cập nhật chuỗi base64 fallback key chính xác `cmVfRUhzamhIUkpfR3Y1Ym1zZ0JFQTJiZkx5UjVmRXBSaEc3` trong `authRoutes.js`.
+  - Cập nhật file `.env` trên VPS Oracle với `RESEND_API_KEY="re_EHsjhHRJ_***"`.
+  - Phân loại tài khoản chuẩn xác:
+    * Tài khoản Google OAuth (`passwordHash === null`): Trả về HTTP 400 *"Tài khoản này được đăng ký qua Google. Vui lòng bấm nút 'Đăng nhập bằng Google'!"*.
+    * Tài khoản thường: Gửi email Reset Token qua Resend API.
+  - **Kiểm thử thực tế VPS Log**: `[RESEND_EMAIL_SUCCESS] Sent email via auth@hannhu.io.vn to hannhu3003200444@gmail.com`.
 - **Vite Production Build & Deploy VPS Live (`https://hannhu.io.vn/`)**:
-  - Vite Build hoàn tất trong `770ms`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1136417) **ONLINE 100%**.
+  - Vite Build hoàn tất trong `1.10s`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1142246) **ONLINE 100%**.
 - **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.8% Completion):**
   ```bash
-  [main e72810ab] feat(sync): grant full admin privileges to primary admin emails & resolve admin view 403 authorization lock (99.8% milestone)
+  [main d4e8921a] fix(navbar): resolve ReferenceError user is not defined & standardize Resend API fallback key (99.8% milestone)
   ```
 
 

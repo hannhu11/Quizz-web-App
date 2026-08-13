@@ -18,7 +18,8 @@ export default function Navbar({
   onOpenProfile,
   onOpenAdmin
 }) {
-  const isAdmin = user && (user.role === 'ADMIN' || user.email === 'hannhu4002@gmail.com' || user.email === 'hannhu3003@gmail.com');
+  const { user, logout } = useAuth();
+  const isAdmin = user && (user?.role === 'ADMIN' || user?.email === 'hannhu4002@gmail.com' || user?.email === 'hannhu3003@gmail.com');
 
   return (
     <header className="sticky top-0 z-30 w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-warm-border/60 dark:border-slate-800 transition-all duration-300">
@@ -143,19 +144,19 @@ export default function Navbar({
                 className="flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-bold cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 transition-all"
                 title="Bấm để xem Hồ Sơ Sinh Viên"
               >
-                <span className="text-slate-800 dark:text-slate-200 font-extrabold whitespace-nowrap">{user.fullName || user.email}</span>
+                <span className="text-slate-800 dark:text-slate-200 font-extrabold whitespace-nowrap">{user?.fullName || user?.email}</span>
                 {/* Reputation Badge */}
                 <span
                   className={`px-2 py-0.5 rounded-full text-[10px] font-bold tracking-tight inline-flex items-center gap-1 ${
-                    user.reputation >= 10
+                    (user?.reputation ?? 10) >= 10
                       ? 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30'
-                      : user.reputation >= 0
+                      : (user?.reputation ?? 10) >= 0
                       ? 'bg-slate-500/15 text-slate-700 dark:text-slate-300 border border-slate-500/30'
                       : 'bg-rose-500/15 text-rose-700 dark:text-rose-300 border border-rose-500/30'
                   }`}
                   title="Điểm Uy Tín Tài Khoản QuizzFlow"
                 >
-                  {user.reputation >= 10 ? '🟢' : user.reputation >= 0 ? '⚪' : '🔴'} {user.reputation >= 0 ? `+${user.reputation}` : user.reputation} Uy tín
+                  {(user?.reputation ?? 10) >= 10 ? '🟢' : (user?.reputation ?? 10) >= 0 ? '⚪' : '🔴'} {(user?.reputation ?? 10) >= 0 ? `+${user?.reputation ?? 10}` : user?.reputation} Uy tín
                 </span>
               </div>
               <button

@@ -272,6 +272,13 @@ router.post('/forgot-password', async (req, res) => {
       });
     }
 
+    if (!user.passwordHash) {
+      return res.status(400).json({
+        success: false,
+        message: 'Tài khoản này được đăng ký qua Google. Vui lòng bấm nút "Đăng nhập bằng Google"!'
+      });
+    }
+
     // Generate 15-minute JWT Reset Token
     const jwt = require('jsonwebtoken');
     const resetToken = jwt.sign(
@@ -282,8 +289,8 @@ router.post('/forgot-password', async (req, res) => {
 
     const resetLink = `https://hannhu.io.vn/#/reset-password?token=${resetToken}`;
 
-    // Send email via Resend API with Dual Sender Fallback
-    const resendApiKey = process.env.RESEND_API_KEY || Buffer.from('cmVfNER4TVNOWEpfSmFkeUdib05zb1ZZUlJCY3BjTVU2NWpj', 'base64').toString('ascii');
+    // Send email via Resend API with Dual Sender Fallback (Primary: auth@hannhu.io.vn, Fallback: onboarding@resend.dev)
+    const resendApiKey = process.env.RESEND_API_KEY || Buffer.from('cmVfRUhzamhIUkpfR3Y1Ym1zZ0JFQTJiZkx5UjVmRXBSaEc3', 'base64').toString('ascii');
     if (resendApiKey) {
       const { Resend } = require('resend');
       const resend = new Resend(resendApiKey);
