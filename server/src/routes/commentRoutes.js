@@ -77,6 +77,7 @@ router.get('/:quizId/:questionId', async (req, res) => {
     const comments = await prisma.comment.findMany({
       where: {
         quizId: cleanQuizId,
+        isHidden: false,
         OR: [
           { questionId: cleanQId },
           { questionId: shortQId },

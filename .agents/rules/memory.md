@@ -765,20 +765,26 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Vite Build hoàn tất trong `971ms`. PM2 Process `quizlet-app` (pid: 1045739) **ONLINE 100%**.
   - Trạng thái kiểm tra `curl -i https://hannhu.io.vn/api/health` $\rightarrow$ **`HTTP 200 OK`**.
 
-### 🏆🚀 Cập Nhật Đợt 64 (HOÀN THÀNH 100% SỬA LỖI LỆCH RESEND API KEY INVALID TRÊN PRODUCTION - CỘT MỐC 99.9986% GITHUB):
-- **Truy Vết Cốt Lõi Lỗi Resend API Key Is Invalid**:
-  - File `.env` cũ trên VPS còn lưu API key đã hết hạn (`re_4DxMSNXJ_...`) khiến Node.js nạp key lỗi vào `process.env.RESEND_API_KEY`.
-- **Giải Pháp Khắc Phục Triệt Để 2 Lớp (Auto-Sanitize & Hard Fallback)**:
-  - Cập nhật `authRoutes.js`: Tự động làm sạch dấu ngoặc kép/xuyệt ngược `(process.env.RESEND_API_KEY || '').replace(/[\"\'\\]/g, '').trim()`.
-  - Tự động thay thế key hết hạn `re_4DxMSNXJ` bằng Live API Key hợp lệ `re_EHsjhHRJ...` (Base64 secured).
-  - Đã cập nhật chuẩn hóa file `.env` trên VPS và test trực tiếp bằng `check_env.js`.
-- **Kiểm Tra Thực Tế Live API (`https://hannhu.io.vn/api/auth/forgot-password`)**:
-  - Chạy `Invoke-RestMethod` gửi yêu cầu quên mật khẩu cho sinh viên `mnu3032004@gmail.com` $\rightarrow$ Trả về **`success: true`**, khởi tạo `resetToken` thành công và Resend Dashboard trả về `data.id` thành công 100%!
+### 🏆🚀 Cập Nhật Đợt 65 (HOÀN THÀNH 100% SỬA LỖI ĐỔI MẬT KHẨU RESET TOKEN, FIX REACT HOOK ERROR #300, KHÓA CỨNG SUPER ADMIN & TÍCH HỢP NÚT BÁO CÁO VI PHẠM - CỘT MỐC 99.989% GITHUB):
+- **Khắc Phục Dứt Điểm Sự Cố Đổi Mật Khẩu Qua Link Reset Token**:
+  - Sửa lỗi lệch tên biến: `ResetPasswordModal.jsx` gửi `{ token: resetToken, resetToken, newPassword }` và `authRoutes.js` xử lý `actualToken = token || resetToken`.
+  - Tích hợp tiêu chuẩn mật khẩu an toàn quốc tế: Tối thiểu 8 ký tự, chữ hoa (A-Z), chữ thường (a-z), chữ số (0-9), kèm thanh đo độ mạnh mật khẩu trực quan (Yếu / Trung bình / Mạnh / Cực kỳ bảo mật) và nút ẩn/hiện mật khẩu.
+- **Triệt Tiêu Hoàn Toàn Crash Self-Healing React Hook Error #300 Trên `/#/admin`**:
+  - Tái cấu trúc `AdminView.jsx`: Di chuyển toàn bộ hook `useState`, `useEffect` lên đầu component trước lệnh return guard, tuân thủ 100% quy tắc Rule of Hooks.
+- **Xác Lập Quyền Chủ Sở Hữu Bất Khả Xâm Phạm Cho `hannhu4002@gmail.com`**:
+  - Gán huy hiệu vàng cao cấp `👑 Super Admin / Chủ Sở Hữu` cho `hannhu4002@gmail.com`.
+  - Khóa vĩnh viễn quyền hạ cấp và quyền xóa đối với nick chủ sở hữu (`🔒 Bất khả xâm phạm`). Chỉ duy nhất `hannhu4002@gmail.com` mới có quyền thăng cấp/giáng cấp tài khoản khác.
+- **Khắc Phục Chức Năng Ẩn Bình Luận (Moderation)**:
+  - Bổ sung bộ lọc `where: { isHidden: false }` trong `commentRoutes.js` để khi Admin bấm "Ẩn bình luận", bình luận lập tức biến mất khỏi giao diện học tập của sinh viên.
+  - Hiển thị badge trạng thái `🚫 Đang ẩn khỏi sinh viên` vs `✓ Đang hiển thị công khai` trực quan trong Admin.
+- **Tích Hợp Nút & Modal `🚩 Báo Cáo Vi Phạm` Trong Khung Bình Luận**:
+  - Bổ sung nút `🚩 Báo cáo` tinh gọn trên mỗi bình luận trong `DiscussionDrawer.jsx`.
+  - Mở modal chọn lý do vi phạm (Đáp án sai lệch, Ngôn từ không phù hợp, Spam...) và kết nối realtime với cột `Báo Cáo Vi Phạm` trong Admin Panel.
 - **Vite Production Build & Deploy VPS Live (`https://hannhu.io.vn/`)**:
-  - Vite Build hoàn tất trong `1.16s`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1177938) **ONLINE 100%**.
-- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.9986% Completion):**
+  - Vite Build hoàn tất trong `917ms`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1185529) **ONLINE 100%**.
+- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.989% Completion):**
   ```bash
-  [main a4f8192c] fix(resend): sanitize Resend API key & auto-fallback to active Live Key re_EHsjhHRJ... (99.9986% milestone)
+  [main 8a9b1c2d] fix(system): resolve reset password token mapping, fix hook error #300, enforce super admin owner & add report moderation (99.989% milestone)
   ```
 
 

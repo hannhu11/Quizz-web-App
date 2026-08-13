@@ -11,7 +11,9 @@ import {
   AlertTriangle,
   ChevronDown,
   ChevronUp,
-  LogIn
+  LogIn,
+  X,
+  CheckCircle2
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 
@@ -28,13 +30,18 @@ export default function DiscussionDrawer({ quizId, questionId, initialCount = 0,
   const [isSending, setIsSending] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
   const [expandedComments, setExpandedComments] = useState({}); // Track expanded auto-collapsed comments
+  const [reportingCommentId, setReportingCommentId] = useState(null);
+  const [reportReason, setReportReason] = useState('Nội dung sai lệch');
+  const [reportSuccessMsg, setReportSuccessMsg] = useState('');
+  const [isReporting, setIsReporting] = useState(false);
 
   // Lazy Fetch comments ONLY when drawer is opened and user is logged in
   const fetchComments = async () => {
     if (!isOpen || !user) return;
     try {
+      const authToken = token || localStorage.getItem('quizzflow_token');
       const res = await fetch(`${API_BASE_URL}/comments/${quizId}/${questionId}`, {
-        headers: token ? { Authorization: `Bearer ${token}` } : {}
+        headers: authToken ? { Authorization: `Bearer ${authToken}` } : {}
       });
       if (!res.ok) return;
       const data = await res.json();
@@ -48,22 +55,9 @@ export default function DiscussionDrawer({ quizId, questionId, initialCount = 0,
 
   useEffect(() => {
     if (!isOpen || !user) return;
-
-    fetchComments();
-
-    // 15s Auto Polling only for open drawers
-    const interval = setInterval(fetchComments, 15000);
-
-    const handleFocus = () => fetchComments();
-    window.addEventListener('focus', handleFocus);
-    document.addEventListener('visibilitychange', handleFocus);
-
-    return () => {
-      clearInterval(interval);
-      window.removeEventListener('focus', handleFocus);
-      document.removeEventListener('visibilitychange', handleFocus);
-    };
-  }, [isOpen, user, quizId, questionId, token]);
+    setIsLoading(true);
+    fetchComments().finally(() => setIsLoading(false));
+  }, [isOpen, user, quizId, questionId]);
 
   // Handle Post Comment
   const handlePostComment = async (e) => {
@@ -79,47 +73,36 @@ export default function DiscussionDrawer({ quizId, questionId, initialCount = 0,
     setErrorMsg('');
 
     try {
+      const authToken = token || localStorage.getItem('quizzflow_token');
       const res = await fetch(`${API_BASE_URL}/comments`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`
+          Authorization: `Bearer ${authToken}`
         },
         body: JSON.stringify({
-          quizId,
-          questionId,
+          quizId: String(quizId).trim(),
+          questionId: String(questionId).trim(),
           content: newCommentText.trim()
         })
       });
+
       const data = await res.json();
 
       if (data.success && data.comment) {
-        setComments([data.comment, ...comments]);
+        setComments(prev => [data.comment, ...prev]);
         setNewCommentText('');
+        if (refreshUserProfile) {
+          refreshUserProfile();
+        }
       } else {
-        setErrorMsg(data.message || 'Đăng bình luận thất bại.');
+        setErrorMsg(data.message || 'Không thể đăng bình luận.');
       }
     } catch (err) {
-      console.warn('Backend server offline during comment post, updating optimistic UI:', err);
-      const newMock = {
-        id: 'mock-' + Date.now(),
-        quizId,
-        questionId,
-        content: newCommentText.trim(),
-        score: 0,
-        createdAt: new Date().toISOString(),
-        isAutoCollapsed: false,
-        userVote: 0,
-        user: {
-          fullName: user.fullName || user.email.split('@')[0],
-          reputation: user.reputation || 10,
-          avatarUrl: user.avatarUrl
-        }
-      };
-      setComments([newMock, ...comments]);
-      setNewCommentText('');
+      setErrorMsg('Lỗi kết nối máy chủ.');
+    } finally {
+      setIsSending(false);
     }
-    setIsSending(false);
   };
 
   // Handle Vote (+1 / -1) with Optimistic UI (0ms instant response)
@@ -164,13 +147,14 @@ export default function DiscussionDrawer({ quizId, questionId, initialCount = 0,
       })
     );
 
-    // Call API ngầm
+    // Call API
     try {
+      const authToken = token || localStorage.getItem('quizzflow_token');
       const res = await fetch(`${API_BASE_URL}/comments/${commentId}/vote`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`
+          Authorization: `Bearer ${authToken}`
         },
         body: JSON.stringify({ type })
       });
@@ -207,6 +191,40 @@ export default function DiscussionDrawer({ quizId, questionId, initialCount = 0,
     }
   };
 
+  // Handle Report Comment
+  const handleReportSubmit = async (e) => {
+    e.preventDefault();
+    if (!reportingCommentId) return;
+
+    setIsReporting(true);
+    try {
+      const authToken = token || localStorage.getItem('quizzflow_token');
+      const res = await fetch(`${API_BASE_URL}/comments/${reportingCommentId}/report`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${authToken}`
+        },
+        body: JSON.stringify({ reason: reportReason })
+      });
+      const data = await res.json();
+      if (data.success) {
+        setReportSuccessMsg('Đã gửi báo cáo vi phạm đến ban quản trị!');
+        setTimeout(() => {
+          setReportingCommentId(null);
+          setReportSuccessMsg('');
+        }, 1500);
+      } else {
+        alert(data.message || 'Bạn đã báo cáo bình luận này trước đó.');
+        setReportingCommentId(null);
+      }
+    } catch (err) {
+      alert('Lỗi kết nối máy chủ khi gửi báo cáo.');
+    } finally {
+      setIsReporting(false);
+    }
+  };
+
   // Toggle Collapse for Bad Comments
   const toggleExpand = (commentId) => {
     setExpandedComments(prev => ({ ...prev, [commentId]: !prev[commentId] }));
@@ -218,6 +236,7 @@ export default function DiscussionDrawer({ quizId, questionId, initialCount = 0,
     <div className="mt-3 pt-2 border-t border-slate-100 dark:border-slate-800/80">
       {/* Accordion Trigger Button */}
       <button
+        type="button"
         onClick={() => setIsOpen(!isOpen)}
         className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors border border-slate-200/60 dark:border-slate-800/60 cursor-pointer group active:scale-[0.99]"
       >
@@ -277,105 +296,116 @@ export default function DiscussionDrawer({ quizId, questionId, initialCount = 0,
                   </div>
                 ) : (
                   <div className="space-y-3 pt-1">
-                {comments.map((comment) => {
-                  const author = comment.user || {};
-                  const isCollapsed = comment.isAutoCollapsed && !expandedComments[comment.id];
+                    {comments.map((comment) => {
+                      const author = comment.user || {};
+                      const isCollapsed = comment.isAutoCollapsed && !expandedComments[comment.id];
 
-                  return (
-                    <div
-                      key={comment.id}
-                      className="p-3 bg-white/90 dark:bg-slate-800/90 rounded-xl border border-slate-200/70 dark:border-slate-700/70 shadow-2xs text-xs space-y-1.5"
-                    >
-                      {/* Comment Author Header */}
-                      <div className="flex items-center justify-between gap-2">
-                        <div className="flex items-center gap-2 flex-wrap">
-                          <span className="font-bold text-slate-900 dark:text-slate-100">
-                            {author.fullName || author.email || 'Sinh Viên Anonymous'}
-                          </span>
+                      return (
+                        <div
+                          key={comment.id}
+                          className="p-3 bg-white/90 dark:bg-slate-800/90 rounded-xl border border-slate-200/70 dark:border-slate-700/70 shadow-2xs text-xs space-y-1.5"
+                        >
+                          {/* Comment Author Header */}
+                          <div className="flex items-center justify-between gap-2">
+                            <div className="flex items-center gap-2 flex-wrap">
+                              <span className="font-bold text-slate-900 dark:text-slate-100">
+                                {author.fullName || author.email || 'Sinh Viên Anonymous'}
+                              </span>
 
-                          {/* Notion Style Reputation Badge */}
-                          {author.reputation >= 10 ? (
-                            <span className="bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20 px-2 py-0.5 rounded-full text-[11px] font-bold tracking-tight inline-flex items-center gap-1">
-                              <ShieldCheck className="w-3 h-3 text-emerald-600 dark:text-emerald-400 stroke-[1.75]" />
-                              +{author.reputation} Uy tín
+                              {/* Notion Style Reputation Badge */}
+                              {author.reputation >= 10 ? (
+                                <span className="bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20 px-2 py-0.5 rounded-full text-[11px] font-bold tracking-tight inline-flex items-center gap-1">
+                                  <ShieldCheck className="w-3 h-3 text-emerald-600 dark:text-emerald-400 stroke-[1.75]" />
+                                  +{author.reputation} Uy tín
+                                </span>
+                              ) : author.reputation >= 0 ? (
+                                <span className="bg-slate-500/10 text-slate-700 dark:text-slate-300 border border-slate-500/20 px-2 py-0.5 rounded-full text-[11px] font-medium inline-flex items-center gap-1">
+                                  <User className="w-3 h-3 text-slate-500 stroke-[1.75]" />
+                                  +{author.reputation} Uy tín
+                                </span>
+                              ) : (
+                                <span className="bg-rose-500/10 text-rose-700 dark:text-rose-300 border border-rose-500/20 px-2 py-0.5 rounded-full text-[11px] font-medium inline-flex items-center gap-1">
+                                  <AlertTriangle className="w-3 h-3 text-rose-500 stroke-[1.75]" />
+                                  {author.reputation} Uy tín kém
+                                </span>
+                              )}
+                            </div>
+
+                            {/* Timestamp */}
+                            <span className="text-[10px] text-slate-400">
+                              {new Date(comment.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                             </span>
-                          ) : author.reputation >= 0 ? (
-                            <span className="bg-slate-500/10 text-slate-700 dark:text-slate-300 border border-slate-500/20 px-2 py-0.5 rounded-full text-[11px] font-medium inline-flex items-center gap-1">
-                              <User className="w-3 h-3 text-slate-500 stroke-[1.75]" />
-                              +{author.reputation} Uy tín
-                            </span>
+                          </div>
+
+                          {/* Comment Content / Auto-Collapsed Warning */}
+                          {isCollapsed ? (
+                            <div className="p-2 rounded-lg bg-rose-500/10 border border-rose-500/20 text-rose-600 dark:text-rose-400 text-[11px] font-medium flex items-center justify-between gap-2">
+                              <span className="flex items-center gap-1">
+                                <AlertTriangle className="w-3.5 h-3.5 shrink-0" />
+                                Bình luận này bị cộng đồng đánh giá không uy tín.
+                              </span>
+                              <button
+                                type="button"
+                                onClick={() => toggleExpand(comment.id)}
+                                className="font-bold underline text-rose-700 dark:text-rose-300 cursor-pointer"
+                              >
+                                Xem nội dung
+                              </button>
+                            </div>
                           ) : (
-                            <span className="bg-rose-500/10 text-rose-700 dark:text-rose-300 border border-rose-500/20 px-2 py-0.5 rounded-full text-[11px] font-medium inline-flex items-center gap-1">
-                              <AlertTriangle className="w-3 h-3 text-rose-500 stroke-[1.75]" />
-                              {author.reputation} Uy tín kém
-                            </span>
+                            <p className="text-slate-700 dark:text-slate-200 leading-relaxed font-sans">
+                              {comment.content}
+                            </p>
                           )}
+
+                          {/* Comment Actions (Upvote, Downvote, Score, Report) */}
+                          <div className="flex items-center gap-3 pt-1 text-slate-500 dark:text-slate-400 text-[11px]">
+                            {/* Upvote Button */}
+                            <button
+                              type="button"
+                              onClick={() => handleVote(comment.id, 1)}
+                              className={`flex items-center gap-1.5 px-2 py-0.5 rounded-md transition-colors cursor-pointer ${
+                                comment.userVote === 1
+                                  ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold'
+                                  : 'hover:bg-slate-100 dark:hover:bg-slate-700'
+                              }`}
+                              title="Hữu ích (+1 Uy tín tác giả)"
+                            >
+                              <ThumbsUp className="w-3.5 h-3.5 stroke-[1.75]" />
+                              <span>{comment.likeCount || 0}</span>
+                            </button>
+
+                            {/* Downvote Button */}
+                            <button
+                              type="button"
+                              onClick={() => handleVote(comment.id, -1)}
+                              className={`flex items-center gap-1.5 px-2 py-0.5 rounded-md transition-colors cursor-pointer ${
+                                comment.userVote === -1
+                                  ? 'bg-rose-500/20 text-rose-600 dark:text-rose-400 font-bold'
+                                  : 'hover:bg-slate-100 dark:hover:bg-slate-700'
+                              }`}
+                              title="Sai / Phá hoại (-1 Uy tín tác giả)"
+                            >
+                              <ThumbsDown className="w-3.5 h-3.5 stroke-[1.75]" />
+                              <span>{comment.dislikeCount || 0}</span>
+                            </button>
+
+                            {/* Report Violation Button */}
+                            <button
+                              type="button"
+                              onClick={() => setReportingCommentId(comment.id)}
+                              className="flex items-center gap-1 px-2 py-0.5 rounded-md text-slate-400 hover:text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/40 transition-colors ml-auto cursor-pointer"
+                              title="Báo cáo vi phạm"
+                            >
+                              <Flag className="w-3 h-3 stroke-[1.75]" />
+                              <span className="text-[10px] font-semibold">Báo cáo</span>
+                            </button>
+                          </div>
                         </div>
-
-                        {/* Timestamp */}
-                        <span className="text-[10px] text-slate-400">
-                          {new Date(comment.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                        </span>
-                      </div>
-
-                      {/* Comment Content / Auto-Collapsed Warning */}
-                      {isCollapsed ? (
-                        <div className="p-2 rounded-lg bg-rose-500/10 border border-rose-500/20 text-rose-600 dark:text-rose-400 text-[11px] font-medium flex items-center justify-between gap-2">
-                          <span className="flex items-center gap-1">
-                            <AlertTriangle className="w-3.5 h-3.5 shrink-0" />
-                            Bình luận này bị cộng đồng đánh giá không uy tín.
-                          </span>
-                          <button
-                            type="button"
-                            onClick={() => toggleExpand(comment.id)}
-                            className="font-bold underline text-rose-700 dark:text-rose-300 cursor-pointer"
-                          >
-                            Xem nội dung
-                          </button>
-                        </div>
-                      ) : (
-                        <p className="text-slate-700 dark:text-slate-200 leading-relaxed font-sans">
-                          {comment.content}
-                        </p>
-                      )}
-
-                      {/* Comment Actions (Upvote, Downvote, Score) */}
-                      <div className="flex items-center gap-3 pt-1 text-slate-500 dark:text-slate-400 text-[11px]">
-                        {/* Upvote Button */}
-                        <button
-                          type="button"
-                          onClick={() => handleVote(comment.id, 1)}
-                          className={`flex items-center gap-1.5 px-2 py-0.5 rounded-md transition-colors cursor-pointer ${
-                            comment.userVote === 1
-                              ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold'
-                              : 'hover:bg-slate-100 dark:hover:bg-slate-700'
-                          }`}
-                          title="Hữu ích (+1 Uy tín tác giả)"
-                        >
-                          <ThumbsUp className="w-3.5 h-3.5 stroke-[1.75]" />
-                          <span>{comment.likeCount || 0}</span>
-                        </button>
-
-                        {/* Downvote Button */}
-                        <button
-                          type="button"
-                          onClick={() => handleVote(comment.id, -1)}
-                          className={`flex items-center gap-1.5 px-2 py-0.5 rounded-md transition-colors cursor-pointer ${
-                            comment.userVote === -1
-                              ? 'bg-rose-500/20 text-rose-600 dark:text-rose-400 font-bold'
-                              : 'hover:bg-slate-100 dark:hover:bg-slate-700'
-                          }`}
-                          title="Sai / Phá hoại (-1 Uy tín tác giả)"
-                        >
-                          <ThumbsDown className="w-3.5 h-3.5 stroke-[1.75]" />
-                          <span>{comment.dislikeCount || 0}</span>
-                        </button>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            )}
+                      );
+                    })}
+                  </div>
+                )}
               </>
             ) : (
               <div className="p-4 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-700 dark:text-indigo-300 text-xs font-semibold space-y-2 text-center">
@@ -390,7 +420,7 @@ export default function DiscussionDrawer({ quizId, questionId, initialCount = 0,
                   <button
                     type="button"
                     onClick={() => onOpenAuthModal && onOpenAuthModal('LOGIN')}
-                    className="px-4 py-2 rounded-xl bg-indigo-600 text-white font-extrabold text-xs hover:bg-indigo-700 transition-all shadow-md active:scale-95 cursor-pointer"
+                    className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold shadow-sm transition-all active:scale-95 cursor-pointer"
                   >
                     Đăng Nhập Ngay
                   </button>
@@ -398,6 +428,76 @@ export default function DiscussionDrawer({ quizId, questionId, initialCount = 0,
               </div>
             )}
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Report Reason Modal */}
+      <AnimatePresence>
+        {reportingCommentId && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              className="relative w-full max-w-sm bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 shadow-2xl space-y-4"
+            >
+              <button
+                type="button"
+                onClick={() => setReportingCommentId(null)}
+                className="absolute top-4 right-4 p-1 text-slate-400 hover:text-slate-600 cursor-pointer"
+              >
+                <X className="w-4 h-4" />
+              </button>
+
+              <div className="text-center space-y-1">
+                <div className="w-10 h-10 rounded-2xl bg-rose-50 dark:bg-rose-950 text-rose-600 dark:text-rose-400 flex items-center justify-center mx-auto mb-2">
+                  <Flag className="w-5 h-5" />
+                </div>
+                <h4 className="text-base font-extrabold text-slate-900 dark:text-slate-100">Báo Cáo Vi Phạm</h4>
+                <p className="text-xs text-slate-500">Giúp cộng đồng QuizzFlow duy trì môi trường học tập chuẩn mực.</p>
+              </div>
+
+              {reportSuccessMsg ? (
+                <div className="p-3 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 rounded-2xl text-xs font-bold flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4" />
+                  <span>{reportSuccessMsg}</span>
+                </div>
+              ) : (
+                <form onSubmit={handleReportSubmit} className="space-y-3">
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">Lý do báo cáo:</label>
+                    <select
+                      value={reportReason}
+                      onChange={(e) => setReportReason(e.target.value)}
+                      className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-semibold text-slate-900 dark:text-slate-100 outline-none"
+                    >
+                      <option value="Nội dung sai lệch">Đáp án sai lệch / Gây hiểu lầm</option>
+                      <option value="Ngôn từ xúc phạm">Ngôn từ không phù hợp / Xúc phạm</option>
+                      <option value="Spam hoặc quảng cáo">Spam hoặc nội dung quảng cáo</option>
+                      <option value="Vi phạm bản quyền hoặc gian lận">Gian lận / Độc hại</option>
+                    </select>
+                  </div>
+
+                  <div className="flex items-center gap-2 pt-2">
+                    <button
+                      type="button"
+                      onClick={() => setReportingCommentId(null)}
+                      className="flex-1 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-xl text-xs font-bold cursor-pointer"
+                    >
+                      Hủy
+                    </button>
+                    <button
+                      type="submit"
+                      disabled={isReporting}
+                      className="flex-1 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-xl text-xs font-bold shadow-md cursor-pointer disabled:opacity-50"
+                    >
+                      {isReporting ? 'Đang gửi...' : 'Gửi Báo Cáo'}
+                    </button>
+                  </div>
+                </form>
+              )}
+            </motion.div>
+          </div>
         )}
       </AnimatePresence>
     </div>

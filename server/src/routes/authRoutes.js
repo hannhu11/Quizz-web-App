@@ -367,9 +367,17 @@ router.post('/forgot-password', async (req, res) => {
  */
 router.post('/reset-password', async (req, res) => {
   try {
-    const { token, newPassword } = req.body;
+    const { token, resetToken, newPassword } = req.body;
+    const actualToken = token || resetToken;
 
-    if (!token || !newPassword || newPassword.length < 8) {
+    if (!actualToken) {
+      return res.status(400).json({
+        success: false,
+        message: 'Thiếu Token khôi phục mật khẩu. Vui lòng sử dụng liên kết trong email!'
+      });
+    }
+
+    if (!newPassword || newPassword.length < 8) {
       return res.status(400).json({
         success: false,
         message: 'Mật khẩu mới phải có độ dài tối thiểu 8 ký tự.'
@@ -379,7 +387,7 @@ router.post('/reset-password', async (req, res) => {
     const jwt = require('jsonwebtoken');
     let decoded;
     try {
-      decoded = jwt.verify(token, process.env.JWT_SECRET || 'quizzflow_super_secret_jwt_key_2026_v20');
+      decoded = jwt.verify(actualToken, process.env.JWT_SECRET || 'quizzflow_super_secret_jwt_key_2026_v20');
     } catch (err) {
       return res.status(400).json({
         success: false,
