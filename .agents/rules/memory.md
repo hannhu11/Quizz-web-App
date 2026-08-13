@@ -516,6 +516,18 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Khung động viên `bg-amber-50/90` xuất hiện khi `Fail` kích vũ tinh thần người học.
 - **Trạng Thái Deploy:** Build Vite production thành công (`1.13s`), deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 837749).
 
+### 🎨⚡ Cập Nhật Đợt 34: Refactor UI/UX v2 Thành 3 Khung Card Độc Lập, Loại Bỏ 100% Emoji OS & Dùng Lucide SVG Icons:
+- **Banner Trang Chủ Phẳng (`App.jsx`):**
+  - Xóa bỏ ảnh Capybara ngồi học khỏi Hero Banner trang chủ (giữ Banner phẳng, sạch sẽ, tối giản).
+  - Cập nhật đúng slogan mới: *"Ghi nhớ Flashcard 3D, luyện tập trắc nghiệm thông minh, kết hợp nhạc Lofi thư giãn giúp tăng 200% độ tập trung."*
+- **Refactor Màn Hình Kết Quả Thi Thử (`ExamMode.jsx`):**
+  - Tách thành **3 Khung Card độc lập**:
+    1. `StatusHeaderCard`: Chứa ảnh Capybara v2 đã tách nền (`capybara_pass_mode_v2.png` khi ĐẠT hoặc `capybara_study_mode_v2_final.png` khi CHƯA ĐẠT), Tiêu đề *"Đã nộp bài!"*, Tên bộ đề đầy đủ và Badge trạng thái.
+    2. `MetricsDashboardCard`: Card độc lập chứa Điểm Thang 10 ($48px$), Progress Bar và Lưới 6 Chỉ Số dùng **Lucide SVG Icons** (`CheckCircle2`, `XCircle`, `AlertCircle`, `Target`, `Clock`, `Trophy`) với `strokeWidth={1.75}` (CẤM 100% emoji OS rẻ tiền).
+    3. `EncouragementBanner`: Card màu kem/hổ phách nhạt nhẹ nhàng (`bg-amber-50/90 border-amber-200/80`), icon Lucide `<Sparkles className="w-5 h-5 text-amber-600" />` (Xóa bỏ icon ngôi sao nhựa nham nhở!), lời nhắn động viên ấm áp khi $< 4.0$.
+- **Trạng Thái Deploy:** Build Vite production thành công (`974ms`), deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 847367).
+
+
 
 
 

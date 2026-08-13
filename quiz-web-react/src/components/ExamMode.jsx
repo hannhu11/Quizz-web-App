@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Clock, ArrowLeft, CheckCircle2, XCircle, AlertCircle, Trophy, RotateCcw, ShieldCheck, Star, Check, X, Sparkles, Keyboard, BarChart2 } from 'lucide-react';
+import { Clock, ArrowLeft, CheckCircle2, XCircle, AlertCircle, Trophy, RotateCcw, ShieldCheck, Star, Check, X, Sparkles, Keyboard, BarChart2, Target } from 'lucide-react';
 import { saveQuizProgress, getStarredQuestions, toggleStarQuestion } from '../data/quizDataLoader';
 import confetti from 'canvas-confetti';
 
@@ -285,7 +285,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
     });
   }
 
-  // EXAM RESULT SCREEN WITH WARM MINIMALIST DASHBOARD & CAPYBARA MASCOT
+  // EXAM RESULT SCREEN WITH 3 INDEPENDENT WARM MINIMALIST CARDS & CAPYBARA V2 MASCOT
   if (isSubmitted) {
     const totalQ = questions.length || 1;
     const percentage = Math.round((finalScore / totalQ) * 100);
@@ -316,41 +316,46 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
     const formattedTime = `${elapsedMinutes}:${elapsedSeconds < 10 ? '0' : ''}${elapsedSeconds}`;
 
     return (
-      <div className="max-w-4xl mx-auto px-4 py-8 space-y-8 text-slate-800 dark:text-slate-100">
-        {/* Unified Score Summary Dashboard Card */}
+      <div className="max-w-4xl mx-auto px-4 py-8 space-y-6 text-slate-800 dark:text-slate-100">
+        {/* CARD 1: StatusHeaderCard */}
         <motion.div
-          initial={{ scale: 0.96, opacity: 0 }}
+          initial={{ scale: 0.97, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          className="bg-slate-50 dark:bg-slate-900/90 rounded-3xl p-6 sm:p-8 border border-slate-200/80 dark:border-slate-800 shadow-sm text-center space-y-6"
+          className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/80 dark:border-slate-800 shadow-xs text-center space-y-4"
         >
-          {/* Header & Capybara Mascot */}
-          <div className="space-y-3">
-            <img
-              src={isPassed ? "/capybara_pass_mode.png" : "/capybara_study_mode.png"}
-              alt="Capybara Mascot Result"
-              className="w-28 h-28 sm:w-36 sm:h-36 object-contain mx-auto drop-shadow-md hover:scale-105 transition-transform duration-300"
-            />
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">
-                Đã nộp bài!
-              </h2>
-              <p className="text-xs sm:text-sm font-bold text-slate-500 dark:text-slate-400 mt-1">
-                {quiz.title || quiz.subject || 'Bộ Đề Ôn Tập'}
-              </p>
-              <div className="mt-2">
-                <span className={`inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-extrabold shadow-2xs border ${
-                  isPassed 
-                    ? 'bg-emerald-100/90 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800' 
-                    : 'bg-rose-100/90 dark:bg-rose-950/80 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-800'
-                }`}>
-                  {isPassed ? '✓ ĐẠT (PASSED)' : '✕ CHƯA ĐẠT (CỐ LÊN NHÉ)'}
-                </span>
-              </div>
+          <img
+            src={isPassed ? "/capybara_pass_mode_v2.png" : "/capybara_study_mode_v2_final.png"}
+            alt="Capybara Mascot Result"
+            className="w-32 h-32 sm:w-40 sm:h-40 object-contain mx-auto drop-shadow-md hover:scale-105 transition-transform duration-300"
+          />
+          <div className="space-y-1.5">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">
+              Đã nộp bài!
+            </h2>
+            <p className="text-xs sm:text-sm font-extrabold text-slate-500 dark:text-slate-400">
+              {quiz.title || quiz.subject || 'Bộ Đề Ôn Tập'}
+            </p>
+            <div className="pt-2">
+              <span className={`inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-extrabold shadow-2xs border ${
+                isPassed 
+                  ? 'bg-emerald-100/90 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800' 
+                  : 'bg-rose-100/90 dark:bg-rose-950/80 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-800'
+              }`}>
+                {isPassed ? '✓ ĐẠT (PASSED)' : '✕ CHƯA ĐẠT (CỐ LÊN NHÉ)'}
+              </span>
             </div>
           </div>
+        </motion.div>
 
-          {/* Score Overview Card (Thang 10 & Progress Bar) */}
-          <div className="bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 rounded-2xl p-6 shadow-2xs max-w-md mx-auto space-y-3">
+        {/* CARD 2: MetricsDashboardCard */}
+        <motion.div
+          initial={{ scale: 0.97, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.05 }}
+          className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/80 dark:border-slate-800 shadow-xs space-y-6 text-center"
+        >
+          {/* Score Overview Box (Thang 10 & Progress Bar) */}
+          <div className="bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 rounded-2xl p-5 shadow-2xs max-w-md mx-auto space-y-2.5">
             <span className="text-[11px] font-extrabold text-slate-400 dark:text-slate-400 uppercase tracking-wider block">
               ĐIỂM SỐ (THANG 10)
             </span>
@@ -359,7 +364,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
             </div>
             
             {/* Progress Bar */}
-            <div className="w-full bg-slate-100 dark:bg-slate-700 h-3 rounded-full overflow-hidden p-0.5 border border-slate-200/60 dark:border-slate-600/60">
+            <div className="w-full bg-slate-200/80 dark:bg-slate-700 h-3 rounded-full overflow-hidden p-0.5 border border-slate-200/60 dark:border-slate-600/60">
               <div
                 className={`h-full rounded-full transition-all duration-1000 ${
                   isPassed ? 'bg-emerald-500' : 'bg-rose-500'
@@ -368,7 +373,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
               />
             </div>
 
-            <div className="flex items-center justify-between text-xs font-bold pt-1">
+            <div className="flex items-center justify-between text-xs font-bold pt-0.5">
               <span className="text-slate-500 dark:text-slate-400">Điểm đạt: 4.0 / 10</span>
               <span className={isPassed ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'}>
                 {isPassed ? '✓ Passed' : '✕ Not Pass'}
@@ -376,77 +381,94 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
             </div>
           </div>
 
-          {/* 6-Grid Metrics */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-2xl mx-auto pt-2">
-            <div className="p-3.5 rounded-2xl bg-white dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 text-center shadow-2xs">
-              <span className="text-[11px] font-bold text-slate-400 block">🟢 Câu đúng</span>
-              <span className="text-base sm:text-lg font-black text-emerald-600 dark:text-emerald-400 mt-0.5 block">
+          {/* 6-Grid Metrics using Lucide Icons (Zero OS Emojis) */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-2xl mx-auto">
+            <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 text-center shadow-2xs flex flex-col items-center justify-center gap-1">
+              <span className="text-[11px] font-extrabold text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" /> Câu đúng
+              </span>
+              <span className="text-base sm:text-lg font-black text-emerald-600 dark:text-emerald-400">
                 {finalScore} <span className="text-xs font-semibold text-slate-400">/ {totalQ}</span>
               </span>
             </div>
 
-            <div className="p-3.5 rounded-2xl bg-white dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 text-center shadow-2xs">
-              <span className="text-[11px] font-bold text-slate-400 block">🔴 Câu sai</span>
-              <span className="text-base sm:text-lg font-black text-rose-600 dark:text-rose-400 mt-0.5 block">
+            <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 text-center shadow-2xs flex flex-col items-center justify-center gap-1">
+              <span className="text-[11px] font-extrabold text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                <XCircle className="w-4 h-4 text-rose-600 dark:text-rose-400 shrink-0" /> Câu sai
+              </span>
+              <span className="text-base sm:text-lg font-black text-rose-600 dark:text-rose-400">
                 {incorrectQ} <span className="text-xs font-semibold text-slate-400">câu</span>
               </span>
             </div>
 
-            <div className="p-3.5 rounded-2xl bg-white dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 text-center shadow-2xs">
-              <span className="text-[11px] font-bold text-slate-400 block">🟡 Bỏ qua</span>
-              <span className="text-base sm:text-lg font-black text-amber-600 dark:text-amber-400 mt-0.5 block">
+            <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 text-center shadow-2xs flex flex-col items-center justify-center gap-1">
+              <span className="text-[11px] font-extrabold text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                <AlertCircle className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" /> Bỏ qua
+              </span>
+              <span className="text-base sm:text-lg font-black text-amber-600 dark:text-amber-400">
                 {skippedQ} <span className="text-xs font-semibold text-slate-400">câu</span>
               </span>
             </div>
 
-            <div className="p-3.5 rounded-2xl bg-white dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 text-center shadow-2xs">
-              <span className="text-[11px] font-bold text-slate-400 block">🎯 Độ chính xác</span>
-              <span className="text-base sm:text-lg font-black text-slate-800 dark:text-slate-200 mt-0.5 block">
+            <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 text-center shadow-2xs flex flex-col items-center justify-center gap-1">
+              <span className="text-[11px] font-extrabold text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                <Target className="w-4 h-4 text-indigo-500 dark:text-indigo-400 shrink-0" /> Độ chính xác
+              </span>
+              <span className="text-base sm:text-lg font-black text-slate-800 dark:text-slate-200">
                 {percentage}%
               </span>
             </div>
 
-            <div className="p-3.5 rounded-2xl bg-white dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 text-center shadow-2xs">
-              <span className="text-[11px] font-bold text-slate-400 block">⏱️ Thời gian</span>
-              <span className="text-base sm:text-lg font-black text-slate-800 dark:text-slate-200 mt-0.5 block">
+            <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 text-center shadow-2xs flex flex-col items-center justify-center gap-1">
+              <span className="text-[11px] font-extrabold text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                <Clock className="w-4 h-4 text-indigo-500 dark:text-indigo-400 shrink-0" /> Thời gian
+              </span>
+              <span className="text-base sm:text-lg font-black text-slate-800 dark:text-slate-200">
                 {formattedTime}
               </span>
             </div>
 
-            <div className="p-3.5 rounded-2xl bg-white dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 text-center shadow-2xs">
-              <span className="text-[11px] font-bold text-slate-400 block">🏆 Kết quả</span>
-              <span className={`text-base sm:text-lg font-black mt-0.5 block ${isPassed ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'}`}>
+            <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 text-center shadow-2xs flex flex-col items-center justify-center gap-1">
+              <span className="text-[11px] font-extrabold text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                <Trophy className="w-4 h-4 text-indigo-500 dark:text-indigo-400 shrink-0" /> Kết quả
+              </span>
+              <span className={`text-base sm:text-lg font-black ${isPassed ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'}`}>
                 {isPassed ? 'Pass' : 'Fail'}
               </span>
             </div>
           </div>
 
-          {/* Encouragement Banner (Only when Fail) */}
-          {!isPassed && (
-            <div className="p-4 rounded-2xl bg-amber-50/90 dark:bg-amber-950/40 border border-amber-200/80 dark:border-amber-900/60 text-amber-900 dark:text-amber-200 text-xs sm:text-sm font-semibold flex items-center gap-3 text-left max-w-2xl mx-auto shadow-2xs">
-              <Sparkles className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0" />
-              <span>
-                Đừng nản lòng nhé! Thi thử là để tìm ra lỗ hổng kiến thức. Hãy xem lại danh sách câu sai bên dưới và thử lại ngay!
-              </span>
-            </div>
-          )}
-
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4 border-t border-slate-200/80 dark:border-slate-800 max-w-md mx-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2 max-w-md mx-auto">
             <button
               onClick={onBack}
-              className="w-full sm:w-1/2 py-2.5 px-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 font-extrabold text-xs sm:text-sm text-slate-700 dark:text-slate-200 shadow-2xs transition-all active:scale-95 flex items-center justify-center gap-2"
+              className="w-full sm:w-1/2 py-3 px-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 font-extrabold text-xs sm:text-sm text-slate-700 dark:text-slate-200 shadow-2xs transition-all active:scale-95 flex items-center justify-center gap-2"
             >
               <RotateCcw className="w-4 h-4 text-slate-400" /> Về trang thi
             </button>
             <button
               onClick={() => { setIsSubmitted(false); setUserAnswers({}); setCurrentIndex(0); setSecondsElapsed(0); setSecondsRemaining((timerConfig.minutes || 20) * 60); }}
-              className="w-full sm:w-1/2 py-2.5 px-5 rounded-2xl bg-slate-900 dark:bg-slate-100 hover:bg-slate-800 dark:hover:bg-white text-white dark:text-slate-900 font-extrabold text-xs sm:text-sm shadow-xs transition-all active:scale-95 flex items-center justify-center gap-2"
+              className="w-full sm:w-1/2 py-3 px-5 rounded-2xl bg-slate-900 dark:bg-slate-100 hover:bg-slate-800 dark:hover:bg-white text-white dark:text-slate-900 font-extrabold text-xs sm:text-sm shadow-xs transition-all active:scale-95 flex items-center justify-center gap-2"
             >
               Làm lại bài thi
             </button>
           </div>
         </motion.div>
+
+        {/* CARD 3: EncouragementBanner (Only when Fail < 4.0) */}
+        {!isPassed && (
+          <motion.div
+            initial={{ scale: 0.97, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.1 }}
+            className="p-5 rounded-3xl bg-amber-50/90 dark:bg-amber-950/40 border border-amber-200/80 dark:border-amber-900/60 text-amber-900 dark:text-amber-200 text-xs sm:text-sm font-semibold flex items-center gap-3.5 text-left shadow-2xs"
+          >
+            <Sparkles className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0" />
+            <span className="leading-relaxed">
+              Đừng nản lòng nhé! Thi thử là để tìm ra lỗ hổng kiến thức. Hãy xem lại danh sách câu sai bên dưới và thử lại ngay!
+            </span>
+          </motion.div>
+        )}
 
         {/* DETAILED QUESTION REVIEW BREAKDOWN */}
         <div className="space-y-6">

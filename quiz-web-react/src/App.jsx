@@ -449,10 +449,10 @@ export default function App() {
         {/* Dashboard Grid (When no quiz is selected) */}
         {!studyMode && (
           <div className="space-y-8">
-            {/* Hero Banner (Warm Minimalist / Lofi Study + Capybara Mascot) */}
-            <div className="relative overflow-hidden rounded-3xl bg-slate-50 dark:bg-slate-900/90 p-6 sm:p-8 border border-slate-200/80 dark:border-slate-800 shadow-sm flex items-center justify-between flex-wrap sm:flex-nowrap gap-6 transition-all">
+            {/* Hero Banner (Warm Minimalist / Lofi Study - Clean Flat Design) */}
+            <div className="relative overflow-hidden rounded-3xl bg-slate-50 dark:bg-slate-900/90 p-6 sm:p-8 border border-slate-200/80 dark:border-slate-800 shadow-sm flex items-center justify-between flex-wrap gap-6 transition-all">
               <div className="max-w-2xl relative z-10 space-y-3">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100/80 dark:bg-amber-950/80 border border-amber-300/60 dark:border-amber-800 text-amber-900 dark:text-amber-200 text-xs font-bold shadow-xs">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100/80 dark:bg-amber-950/80 border border-amber-300/60 dark:border-amber-800 text-amber-900 dark:text-amber-200 text-xs font-extrabold shadow-2xs">
                   <Sparkles className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" /> Góc Ôn Luyện Kiến Thức
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight leading-snug">
@@ -469,15 +469,6 @@ export default function App() {
                     <Plus className="w-4 h-4" /> + Tạo Bộ Đề Mới
                   </button>
                 </div>
-              </div>
-
-              {/* Capybara Mascot Image */}
-              <div className="relative z-10 shrink-0 mx-auto sm:mx-0">
-                <img
-                  src="/capybara_study_mode.png"
-                  alt="Capybara Study Mode Mascot"
-                  className="w-32 h-32 sm:w-44 sm:h-44 object-contain drop-shadow-md hover:scale-105 transition-transform duration-300"
-                />
               </div>
 
               <div className="absolute -right-8 -bottom-8 w-48 h-48 rounded-full bg-amber-100/30 dark:bg-indigo-900/10 blur-2xl pointer-events-none" />
