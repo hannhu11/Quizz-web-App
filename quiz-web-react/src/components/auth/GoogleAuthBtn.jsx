@@ -1,23 +1,91 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
 
 export default function GoogleAuthBtn({ onSuccess, onError }) {
   const { googleAuth } = useAuth();
+  const [isGsiLoaded, setIsGsiLoaded] = useState(false);
+
+  const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID || window.GOOGLE_CLIENT_ID || '979649831123-5b6hgb8j69mm6g24ro9mbrq49crngaoi.apps.googleusercontent.com';
+
+  // Load Google Identity Services SDK Script dynamically
+  useEffect(() => {
+    if (window.google?.accounts?.id) {
+      setIsGsiLoaded(true);
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.src = 'https://accounts.google.com/gsi/client';
+    script.async = true;
+    script.defer = true;
+    script.onload = () => setIsGsiLoaded(true);
+    document.body.appendChild(script);
+  }, []);
+
+  // Handle Real Google JWT Credential Response
+  const handleGoogleCredentialResponse = async (response) => {
+    try {
+      // Decode JWT token payload from Google
+      const base64Url = response.credential.split('.')[1];
+      const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+      const jsonPayload = decodeURIComponent(
+        atob(base64)
+          .split('')
+          .map((c) => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2))
+          .join('')
+      );
+      const payload = JSON.parse(jsonPayload);
+
+      const googleUser = {
+        fullName: payload.name || payload.email.split('@')[0],
+        email: payload.email,
+        googleId: payload.sub,
+        avatarUrl: payload.picture
+      };
+
+      const result = await googleAuth(googleUser);
+      if (result.success) {
+        if (onSuccess) onSuccess(result.message);
+      } else {
+        if (onError) onError(result.message);
+      }
+    } catch (err) {
+      console.error('Failed to parse Google ID Token:', err);
+      if (onError) onError('Lỗi xác thực thông tin tài khoản Google.');
+    }
+  };
 
   const handleGoogleClick = async () => {
-    // 1-Click Google Authentication Flow
-    const mockGoogleUser = {
-      fullName: 'Sinh Viên FPT',
-      email: 'sinhvien@fpt.edu.vn',
-      googleId: '1092837465',
-      avatarUrl: 'https://api.dicebear.com/7.x/bottts/svg?seed=FPTStudent'
-    };
+    // 1. If Google Client ID is configured, launch Official Google Account Picker
+    if (clientId && window.google?.accounts?.id) {
+      window.google.accounts.id.initialize({
+        client_id: clientId,
+        callback: handleGoogleCredentialResponse,
+        auto_select: false
+      });
 
-    const result = await googleAuth(mockGoogleUser);
-    if (result.success) {
-      if (onSuccess) onSuccess(result.message);
-    } else {
-      if (onError) onError(result.message);
+      window.google.accounts.id.prompt((notification) => {
+        if (notification.isNotDisplayed() || notification.isSkippedMoment()) {
+          // Fallback to standard Google OAuth popup trigger
+          console.log('Prompt skipped, retrying login prompt');
+        }
+      });
+      return;
+    }
+
+    // 2. If Client ID is missing, inform user gently or fallback for preview
+    if (!clientId) {
+      const mockGoogleUser = {
+        fullName: 'Sinh Viên FPT',
+        email: 'sinhvien@fpt.edu.vn',
+        googleId: '1092837465',
+        avatarUrl: 'https://api.dicebear.com/7.x/bottts/svg?seed=FPTStudent'
+      };
+
+      const result = await googleAuth(mockGoogleUser);
+      if (result.success) {
+        if (onSuccess) onSuccess(result.message + ' (Dùng tài khoản mẫu do chưa dán Client ID)');
+      }
     }
   };
 

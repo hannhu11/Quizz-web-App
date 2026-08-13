@@ -725,6 +725,17 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   [main 4f29a8b1] feat(phase4): complete Google Auth, Resend Reset Password, Saved Questions sync & Auth Guard
   ```
 
+### 🏆🚀 Cập Nhật Đợt 50 (CẤU HÌNH API KEYS THỰC TẾ & KÍCH HOẠT GOOGLE LOGIN + EMAIL RESET THẬT 100% LIVE):
+- **Cấu Hình API Credentials Thực Tế:**
+  - `RESEND_API_KEY`: `re_4DxMSNXJ_***` (Domain `hannhu.io.vn` đã được VERIFIED thành công trên Resend Dashboard).
+  - `GOOGLE_CLIENT_ID`: `979649831123-5b6hgb8j69mm6g24ro9mbrq49crngaoi.apps.googleusercontent.com` (Cấu hình thành công với các domain `https://hannhu.io.vn`, `http://localhost:8701`, `http://localhost:5173`).
+- **Kích Hoạt Nút Đăng Nhập Google Thật (`GoogleAuthBtn.jsx`)**:
+  - Nhúng trực tiếp Google Identity Services (GSI) SDK OAuth 2.0. Khi bấm nút, popup chọn tài khoản Google thật xuất hiện tức thì.
+- **Deploy Server VPS & PM2 Live (`https://hannhu.io.vn/`)**:
+  - Cập nhật file `server/.env` trên VPS Oracle và restart PM2 process `quizlet-app` (pid: 992446) thành công.
+  - Live HTTP Status: `200 OK`.
+
+
 
 
 
