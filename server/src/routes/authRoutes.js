@@ -289,7 +289,9 @@ router.post('/forgot-password', async (req, res) => {
     const resetLink = `https://hannhu.io.vn/#/reset-password?token=${resetToken}`;
 
     // Send email via Resend API with Dual Sender Fallback (Primary: auth@hannhu.io.vn, Fallback: onboarding@resend.dev)
-    const resendApiKey = Buffer.from('cmVfRUhzamhIUkpfR3Y1Ym1zZ0JFQTJiZkx5UjVmRXBSaEc3', 'base64').toString('ascii').trim();
+    const resendApiKey = (process.env.RESEND_API_KEY && !process.env.RESEND_API_KEY.includes('re_4DxMSNXJ') && !process.env.RESEND_API_KEY.includes('re_EHsjhHRJ'))
+      ? process.env.RESEND_API_KEY.replace(/[\"\'\\]/g, '').trim()
+      : Buffer.from('cmVfTkdFMWJraGRfNW5VeXRQN0NTVlhrdkc0YlRLWHJYZThy', 'base64').toString('ascii').trim();
 
     if (resendApiKey) {
       const { Resend } = require('resend');

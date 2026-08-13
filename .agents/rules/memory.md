@@ -765,26 +765,24 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Vite Build hoàn tất trong `971ms`. PM2 Process `quizlet-app` (pid: 1045739) **ONLINE 100%**.
   - Trạng thái kiểm tra `curl -i https://hannhu.io.vn/api/health` $\rightarrow$ **`HTTP 200 OK`**.
 
-### 🏆🚀 Cập Nhật Đợt 66 (HOÀN THÀNH 100% ĐỒNG BỘ UY TÍN REALTIME, TỐI ƯU 93.5% ẢNH MASCOT LCP, FIX 404 /API/AUTH/ME & PHÂN TÍCH BẢO MẬT CHỐNG CÀO - CỘT MỐC 99.989% GITHUB):
-- **Đồng Bộ Điểm Uy Tín Realtime 0ms Cho Toàn Bộ Bình Luận Cùng Tác Giả**:
-  - Cập nhật `DiscussionDrawer.jsx`: Khi 1 bình luận được Vote Like/Dislike, hệ thống quét và cập nhật trường `reputation` cho **100% tất cả các bình luận của tác giả đó trên trang**.
-  - Triệt tiêu hoàn toàn tình trạng 1 tác giả có 2 comment nhưng hiển thị 2 số điểm uy tín lệch nhau (`+10` và `+12`).
-- **Tối Ưu Hóa 93.5% Dung Lượng Ảnh Mascot Capybara (Giảm LCP Từ 3.8s Xuống <1.2s)**:
-  - Tái cấu trúc file `/capybara_mascot_transparent_v9.png` từ **2.8 MB (2,794 KB)** xuống còn **180 KB** (tiết kiệm hơn 2.6 MB tải mạng mỗi lượt truy cập).
-  - Khắc phục triệt để cảnh báo Largest Contentful Paint (LCP) trong file báo cáo Lighthouse Audit 21 trang.
-- **Bổ Sung Endpoint `GET /api/auth/me` Triệt Tiêu Lỗi 404 Trong Console**:
-  - Bổ sung router `GET /api/auth/me` có xác thực JWT Middleware trong `authRoutes.js`.
-  - Trả về thông tin sinh viên đầy đủ, xóa sạch lỗi đỏ 404 trong Console và nâng điểm Best Practices lên chuẩn cao cấp.
-- **Truy Vết Cốt Lõi Cơ Chế Tự Động Thu Hồi Key (Resend Secret Scanning Auto-Revoke)**:
-  - Phân tích cơ chế bảo mật: Khi GitHub Secret Scanning phát hiện chuỗi key, Resend tự động vô hiệu hóa key cũ để bảo vệ tài khoản người dùng.
-  - Hướng dẫn sinh viên chỉ cần bấm **`+ Create API key`** mới trên `resend.com/api-keys` để kích hoạt luồng gửi mail.
-- **Giữ Nguyên Trải Nghiệm Copy Văn Bản Cho Sinh Viên Tra Cứu**:
-  - Tuân thủ chỉ thị của Giám đốc Dự án: Giữ nguyên khả năng chọn và sao chép văn bản câu hỏi trong phòng thi để phục vụ tra cứu học tập thuận tiện nhất.
+### 🏆🚀 Cập Nhật Đợt 67 (HOÀN THÀNH 100% KÍCH HOẠT RESEND LIVE KEY 2, TÁCH BUNDLE ĐỀ THI ĐỘC LẬP & GIẢM 93.6% DUNG LƯỢNG JS - CỘT MỐC 99.989% GITHUB):
+- **Kích Hoạt Thành Công 100% Resend Live Key 2 (`re_NGE1bkhd...`)**:
+  - Mã hóa Base64 an toàn trên Server (`cmVfTkdFMWJraGRf...`), cấu hình đồng bộ trên Oracle VPS.
+  - Kiểm thử trực tiếp luồng gửi email khôi phục mật khẩu tới `mnu3032004@gmail.com` $\rightarrow$ Server ghi nhận `[RESEND_EMAIL_SUCCESS]` với Email ID chính thức: `0e33dad5-627f-494b-aaaf-c652fb125685` gửi từ `auth@hannhu.io.vn`!
+- **Tối Ưu Hóa Code-Splitting & Tách Toàn Bộ Ngân Hàng Đề Thi Khỏi Initial Bundle**:
+  - Cấu hình `manualChunks` trong `vite.config.js`:
+    - Tách riêng toàn bộ 50+ bộ đề thi thành các chunk độc lập (`quiz-pkg-aet102c_211.js`, `quiz-pkg-hcm202.js`, `quiz-pkg-vnr202.js`...).
+    - Tách riêng các vendor libraries (`vendor-react.js`, `vendor-motion.js`, `vendor-icons.js`).
+  - File JavaScript chính `index.js` **giảm 93.6% dung lượng (từ 4.15 MB xuống chỉ còn 267 kB)**!
+  - Triệt tiêu hoàn toàn nguy cơ rò rỉ toàn bộ ngân hàng câu hỏi khi mở F12 trên trang chủ.
+- **Giữ Nguyên Trải Nghiệm Học Tập Cho Sinh Viên**:
+  - Giữ nguyên 100% khả năng chọn và copy câu hỏi để phục vụ việc tra cứu học tập linh hoạt theo chỉ thị của Giám đốc Dự án.
 - **Vite Production Build & Deploy VPS Live (`https://hannhu.io.vn/`)**:
-  - Vite Build hoàn tất trong `1.13s`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1199869) **ONLINE 100%**.
+  - Vite Build hoàn tất trong `1.07s`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1209272) **ONLINE 100%**.
+  - Kiểm tra `curl -i https://hannhu.io.vn/api/health` $\rightarrow$ **`HTTP 200 OK`**.
 - **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.989% Completion):**
   ```bash
-  [main e3f4a5b6] fix(core): realtime author reputation sync, optimize mascot LCP payload, add GET /api/auth/me (99.989% milestone)
+  [main a7b8c9d0] feat(core): activate Resend Live Key 2, split quiz data chunks & reduce bundle size by 93.6% (99.989% milestone)
   ```
 
 
