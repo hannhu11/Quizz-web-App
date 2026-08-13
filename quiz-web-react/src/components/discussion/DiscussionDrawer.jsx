@@ -133,6 +133,8 @@ export default function DiscussionDrawer({ quizId, questionId, initialCount = 0,
     setComments(prevComments =>
       prevComments.map(c => {
         if (c.id === commentId) {
+          const currentVote = c.userVote || 0;
+          let newVote = 0;
           let newLikeDelta = 0;
           let newDislikeDelta = 0;
 

@@ -272,13 +272,6 @@ router.post('/forgot-password', async (req, res) => {
       });
     }
 
-    if (!user.passwordHash) {
-      return res.status(400).json({
-        success: false,
-        message: 'Tài khoản này được đăng ký qua Google. Vui lòng bấm nút "Đăng nhập bằng Google"!'
-      });
-    }
-
     // Generate 15-minute JWT Reset Token
     const jwt = require('jsonwebtoken');
     const resetToken = jwt.sign(

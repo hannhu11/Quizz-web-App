@@ -26,6 +26,8 @@ export default function AdminView({ onBack }) {
       const usersData = await usersRes.json();
       if (usersData.success) {
         setUsers(usersData.users || []);
+      } else {
+        setMsg(usersData.message || 'Bạn không có quyền xem danh sách người dùng.');
       }
 
       const commentsRes = await fetch(`${API_BASE_URL}/admin/comments`, { headers });
@@ -35,6 +37,7 @@ export default function AdminView({ onBack }) {
       }
     } catch (err) {
       console.error('Fetch Admin Data Error:', err);
+      setMsg('Lỗi kết nối máy chủ quản trị.');
     }
     setIsLoading(false);
   };

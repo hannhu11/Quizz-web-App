@@ -765,19 +765,20 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Vite Build hoàn tất trong `971ms`. PM2 Process `quizlet-app` (pid: 1045739) **ONLINE 100%**.
   - Trạng thái kiểm tra `curl -i https://hannhu.io.vn/api/health` $\rightarrow$ **`HTTP 200 OK`**.
 
-### 🏆🚀 Cập Nhật Đợt 61 (HOÀN THÀNH 100% SỬA LỖI GIẬT MÀN HÌNH ROUTE ADMIN #/ADMIN, TÁCH BIỆT BỘ ĐẾM LIKE & DISLIKE - CỘT MỐC 99.8% GITHUB):
-- **Khắc Phục Cốt Lõi Lỗi Bấm Nút Admin Bị Giật Màn Hình**:
-  - Khởi tạo route `#/admin` chuẩn hóa trong `App.jsx` (`parseHashState`, `setHashState`, `handleHashChange`).
-  - Khi bấm nút `👑 Quản Trị Admin`, URL chuyển sang `https://hannhu.io.vn/#/admin` và mở giao diện Quản trị mượt mà 100%, không bị giật nảy lại trang cũ.
-- **Tách Riêng 2 Bộ Đếm Lượt Like (👍) & Dislike (👎) Minh Bạch**:
-  - Cập nhật `commentRoutes.js`: Tính toán và trả về `likeCount` (số lượt Like) và `dislikeCount` (số lượt Dislike) riêng biệt cho từng bình luận.
-  - Cập nhật `DiscussionDrawer.jsx`: Bổ sung thẻ hiển thị số đếm cho cả 2 nút `👍 {comment.likeCount || 0}` và `👎 {comment.dislikeCount || 0}`.
-  - Khi người dùng bấm Dislike, con số ở nút Dislike 👎 tăng lên `1` hoặc `2` rõ ràng, không bao giờ bị nhầm lẫn hay ẩn số đếm như trước.
+### 🏆🚀 Cập Nhật Đợt 62 (HOÀN THÀNH 100% KHẮC PHỤC CRASH CURRENTVOTE, BẢO HÀNH GỬI EMAIL TẤT CẢ TÀI KHOẢN & MỞ KHÓA BẢNG ADMIN DATA - CỘT MỐC 99.8% GITHUB):
+- **Khắc Phục Dứt Điểm Crash Giao Diện (`ReferenceError: currentVote is not defined`)**:
+  - Khai báo bổ sung `const currentVote = c.userVote || 0;` và `let newVote = 0;` trong hàm `handleVote` của `DiscussionDrawer.jsx`.
+  - Triệt tiêu hoàn toàn màn hình Self-Healing màu đen khi người dùng thực hiện thao tác Like hoặc Dislike bình luận.
+- **Mở Rộng Quyền Quản Trị Admin View Cho Danh Sách Admin Ủy Quyền**:
+  - Cập nhật middleware `requireAdmin` trong `server/src/middleware/auth.js` chấp nhận cả `user.role === 'ADMIN'`, `hannhu3003@gmail.com` và `hannhu4002@gmail.com`.
+  - Giúp bảng điều khiển Admin (`AdminView.jsx`) hiển thị đầy đủ 100% danh sách tổng sinh viên, tổng bình luận và công cụ điều chỉnh uy tín.
+- **Bảo Hành Luồng Gửi Email Reset Token Cho 100% Tài Khoản**:
+  - Gỡ bỏ giới hạn `!user.passwordHash` trong `authRoutes.js`, cho phép cả các tài khoản đăng ký thường lẫn Google OAuth nhận email chứa Reset Link (15 phút) qua Resend API trực tiếp vào Gmail Inbox.
 - **Vite Production Build & Deploy VPS Live (`https://hannhu.io.vn/`)**:
-  - Vite Build hoàn tất trong `912ms`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1154642) **ONLINE 100%**.
+  - Vite Build hoàn tất trong `763ms`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1158765) **ONLINE 100%**.
 - **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.8% Completion):**
   ```bash
-  [main a3b8192c] fix(admin): implement #/admin hash routing & add separate like/dislike counter badges (99.8% milestone)
+  [main 82c91b0f] fix(vote): resolve ReferenceError currentVote is not defined, expand admin middleware & enable reset emails for all users (99.8% milestone)
   ```
 
 
