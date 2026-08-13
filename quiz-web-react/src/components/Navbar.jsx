@@ -3,18 +3,20 @@ import { Search, Star, Moon, Sun, Plus } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
 export default function Navbar({
-  searchTerm,
+  searchTerm = '',
   setSearchTerm,
-  activeCategory,
+  activeCategory = 'ALL',
   onSelectCategory,
-  categories,
-  starredCount,
+  categories = [],
+  starredCount = 0,
   onOpenStarred,
   onOpenCreateSet,
   isDarkMode,
   setIsDarkMode,
   onResetDashboard,
-  onOpenAuthModal
+  onOpenAuthModal,
+  onOpenProfile,
+  onOpenAdmin
 }) {
   const { user, logout } = useAuth();
 

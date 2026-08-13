@@ -742,8 +742,18 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Vite Build thành công trong `911ms`, deploy live PM2 process `quizlet-app` (pid: 1041526) thành công.
 - **Ghi Nhận Tiến Độ GitHub (Mốc 99.2% Completion):**
   ```bash
-  [main 8c2b5d4e] feat(admin): complete Session Persistence, ProfileModal & Admin Portal with Bcrypt protection
+  [main caf6d428] feat(admin): complete Session Persistence, ProfileModal & Admin Portal with Bcrypt protection
   ```
+
+### 🏆🚀 Cập Nhật Đợt 52 (KHẮC PHỤC TRIỆT ĐỂ LỖI SELF-HEAVY BOUNDARY & DỌN DẸP CACHE TRANG CHỦ LIVE):
+- **Nguyên Nhân Màn Hình Self-Healing ErrorBoundary**:
+  - Do `window.location.href = ... + '#/'` giữ lại đường dẫn Hash trang cũ không hợp lệ từ phiên trước, kết hợp với bộ nhớ LocalStorage chứa dữ liệu cũ gây ra xung đột render.
+- **Giải Pháp Khắc Phục Triệt Để (`main.jsx` & `Navbar.jsx`)**:
+  1. Nút **"Dọn Dẹp Bộ Nhớ & Tải Lại Trang Chủ QuizzFlow"** trên màn hình Self-Healing tự động thực hiện `localStorage.clear()` & `sessionStorage.clear()`.
+  2. Định tuyến trực tiếp về `window.location.origin + window.location.pathname` (bỏ hoàn toàn Hash rác `#/`).
+  3. Bổ sung giá trị mặc định an toàn (`categories = []`, `starredCount = 0`, `searchTerm = ''`) trong `Navbar.jsx` chống crash tuyệt đối.
+- **Vite Production Build & Deploy Live VPS (`https://hannhu.io.vn/`)**:
+  - Vite Build thành công trong `1.06s`. Service PM2 `quizlet-app` (pid: 1044156) ONLINE 100%. Live status `HTTP 200 OK`.
 
 
 
