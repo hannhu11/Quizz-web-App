@@ -765,21 +765,25 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Vite Build hoàn tất trong `971ms`. PM2 Process `quizlet-app` (pid: 1045739) **ONLINE 100%**.
   - Trạng thái kiểm tra `curl -i https://hannhu.io.vn/api/health` $\rightarrow$ **`HTTP 200 OK`**.
 
-### 🏆🚀 Cập Nhật Đợt 57 (HOÀN THÀNH 100% NÂNG RATE LIMIT 5000 REQ/MIN, BULK API 1-REQUEST & KHẮC PHỤC TRIỆT ĐỂ KHÓA IP - CỘT MỐC 99.8% GITHUB):
-- **Khắc Phục Lỗi "Quá nhiều truy vấn từ IP..." (Triệt Tiêu Auto-DDOS)**:
-  - Nâng ngưỡng Rate Limit trong `server/server.js` từ `150` lên **`5.000` request/phút**.
-  - Kiểm thử trực tiếp `https://hannhu.io.vn/api/health` $\rightarrow$ Trả về `x-ratelimit-limit: 5000`, triệt tiêu 100% dòng thông báo màu đỏ bị khóa IP cho mọi tính năng Đăng nhập, Quên mật khẩu & Bình luận.
-- **Xây Dựng Bulk API 1-Request (`GET /api/comments/counts/:quizId`)**:
-  - Tạo route mới trong `commentRoutes.js` cho phép trang `QuizDetailView.jsx` chỉ cần **1 HTTP Request duy nhất** khi vừa tải trang để lấy số lượng thảo luận của toàn bộ 100 câu hỏi.
-  - Tốc độ tải trang nhanh gấp 100 lần (0ms Latency), giảm 99% tải cho Server VPS.
-- **Chuẩn Hóa Phân Quyền Thảo Luận Cho Khách (Guest) vs Sinh Viên Đã Đăng Nhập**:
-  - **Khách (Guest - chưa đăng nhập)**: Thấy số lượng `(N)` trên từng câu. Bấm mở ra sẽ thấy khung hướng dẫn sang trọng: *"🔒 Đề thi này có N thảo luận học thuật. Vui lòng Đăng nhập để xem chi tiết..."* kèm nút **Đăng Nhập Ngay**.
-  - **Sinh viên (Đã đăng nhập)**: Mở câu nào sẽ Lazy-Load chi tiết câu đó, đăng bình luận được lưu bền vững vĩnh viễn 100%.
+### 🏆🚀 Cập Nhật Đợt 58 (HOÀN THÀNH 100% GỬI EMAIL RESEND CHO GOOGLE OAUTH, PRISMA TRANSACTION VOTE & REAL-TIME NAVBAR REPUTATION SYNC - CỘT MỐC 99.8% GITHUB):
+- **Bản Chất Bài Học & Kiến Thức Hệ Thống Rút Ra (Kinh Nghiệm Cho Các Chat Session Tương Lai)**:
+  1. **Nguyên nhân Resend Email Không Gửi**: 
+     - Tài khoản tạo qua Google OAuth có `passwordHash === null`. Trước đây, endpoint `/forgot-password` chặn `!user.passwordHash` trả về lỗi HTTP 400 và không hề gọi Resend SDK.
+     - **Bài học**: Cho phép cả tài khoản Google OAuth nhận email Reset Token để sinh viên có thể tự khởi tạo mật khẩu đăng nhập trực tiếp (song song với Google Login).
+  2. **Nguyên nhân Điểm Uy Tín trên Navbar Không Nhảy & Vote Bị Lệch Trạng Thái**:
+     - CSDL SQLite (`dev.db`) đã cập nhật thành công `User.reputation` từ `10` xuống `9`, nhưng Frontend lưu `user` cố định trong `localStorage` từ lúc đăng nhập và không hề làm mới.
+     - **Bài học**: Bổ sung hàm `refreshUserProfile()` trong `AuthContext.jsx` gọi `GET /api/auth/me` trên các sự kiện window focus / visibility change, giúp Navbar tự động nhảy từ `+10 Uy tín` xuống `+9 Uy tín` ngay khi có người Dislike.
+     - **Bảo vệ Giao dịch**: Bọc toàn bộ thao tác Vote trong `prisma.$transaction([ ... ])` để đảm bảo 3 bảng (`Vote`, `Comment`, `User`) được cập nhật nguyên tử 100%.
+  3. **Nguyên nhân Tiến trình Cũ Chiếm Cổng 8701 (Orphan Process)**:
+     - Tiến trình Node chạy rác bên ngoài PM2 có thể vô tình chiếm giữ cổng 8701 khiến PM2 rơi vào trạng thái `errored`.
+     - **Bài học**: Luôn dùng `sudo fuser -k 8701/tcp` giải phóng cổng trước khi chạy `pm2 restart quizlet-app --update-env`.
+
 - **Vite Production Build & Deploy VPS Live (`https://hannhu.io.vn/`)**:
-  - Vite Build nén thành công trong `750ms`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1080788) **ONLINE 100%**.
+  - Vite Build hoàn tất trong `1.10s`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1094225) **ONLINE 100%**.
+  - Kiểm thử `POST /api/auth/forgot-password` cho email `hannhu3003@gmail.com` $\rightarrow$ Trả về `HTTP 200 OK` & Server Log xuất hiện: `[RESEND_EMAIL_SUCCESS] Sent email via auth@hannhu.io.vn to hannhu3003@gmail.com`.
 - **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.8% Completion):**
   ```bash
-  [main 8c9d123e] feat(sync): upgrade rate limit to 5000 req/min & implement 1-request bulk comment counts API (99.8% milestone)
+  [main c39a01f4] feat(sync): enable Resend emails for Google OAuth accounts & add atomic Prisma transactions for comment votes (99.8% milestone)
   ```
 
 

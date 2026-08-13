@@ -23,7 +23,28 @@ export function AuthProvider({ children }) {
 
   const [isLoading, setIsLoading] = useState(true);
 
-  // Background verification of session from localStorage on app mount
+  // Refresh user profile helper (fetches latest reputation, avatar, role from /api/auth/me)
+  const refreshUserProfile = async () => {
+    const savedToken = localStorage.getItem('quizzflow_token') || token;
+    if (!savedToken) return;
+
+    try {
+      const res = await fetch(`${API_BASE_URL}/auth/me`, {
+        headers: { Authorization: `Bearer ${savedToken}` }
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (data.success && data.user) {
+          setUser(data.user);
+          localStorage.setItem('quizzflow_user', JSON.stringify(data.user));
+        }
+      }
+    } catch (err) {
+      console.warn('Failed to refresh user profile:', err);
+    }
+  };
+
+  // Background verification of session from localStorage on app mount & auto-refresh on window focus
   useEffect(() => {
     async function restoreSession() {
       const savedToken = localStorage.getItem('quizzflow_token');
@@ -54,6 +75,16 @@ export function AuthProvider({ children }) {
     }
 
     restoreSession();
+
+    // Auto refresh user profile on window focus or visibility change
+    const handleFocus = () => refreshUserProfile();
+    window.addEventListener('focus', handleFocus);
+    document.addEventListener('visibilitychange', handleFocus);
+
+    return () => {
+      window.removeEventListener('focus', handleFocus);
+      document.removeEventListener('visibilitychange', handleFocus);
+    };
   }, []);
 
   // Save session helper
@@ -180,7 +211,8 @@ export function AuthProvider({ children }) {
         register,
         googleAuth,
         logout,
-        setUser
+        setUser,
+        refreshUserProfile
       }}
     >
       {children}

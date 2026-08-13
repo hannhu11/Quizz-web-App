@@ -275,50 +275,58 @@ router.post('/:id/vote', authenticateToken, async (req, res) => {
 
     if (!existingVote) {
       // 1. New Vote
-      await prisma.vote.create({
-        data: { commentId, userId, type }
-      });
       scoreDelta = type;
       reputationDelta = type; // +1 or -1 for author
       newUserVote = type;
     } else if (existingVote.type === type) {
       // 2. Same vote clicked again -> Cancel vote
-      await prisma.vote.delete({
-        where: { id: existingVote.id }
-      });
       scoreDelta = -type;
       reputationDelta = -type; // Revert author reputation
       newUserVote = 0;
     } else {
       // 3. Changed vote (e.g. from +1 to -1)
-      await prisma.vote.update({
-        where: { id: existingVote.id },
-        data: { type }
-      });
       scoreDelta = type * 2; // Delta is +2 or -2
       reputationDelta = type * 2;
       newUserVote = type;
     }
 
-    // Update Comment score
-    const updatedComment = await prisma.comment.update({
-      where: { id: commentId },
-      data: { score: comment.score + scoreDelta }
-    });
+    // Atomic Prisma Transaction (Guarantees atomic updates across Vote, Comment, and User tables)
+    const operations = [];
 
-    // Update Author Reputation (If not voting on one's own comment)
-    if (comment.userId !== userId) {
-      await prisma.user.update({
-        where: { id: comment.userId },
-        data: { reputation: comment.user.reputation + reputationDelta }
-      });
+    if (!existingVote) {
+      operations.push(prisma.vote.create({ data: { commentId, userId, type } }));
+    } else if (existingVote.type === type) {
+      operations.push(prisma.vote.delete({ where: { id: existingVote.id } }));
+    } else {
+      operations.push(prisma.vote.update({ where: { id: existingVote.id }, data: { type } }));
     }
+
+    operations.push(
+      prisma.comment.update({
+        where: { id: commentId },
+        data: { score: { increment: scoreDelta } }
+      })
+    );
+
+    if (comment.userId !== userId) {
+      operations.push(
+        prisma.user.update({
+          where: { id: comment.userId },
+          data: { reputation: { increment: reputationDelta } }
+        })
+      );
+    }
+
+    const results = await prisma.$transaction(operations);
+    const updatedComment = results[1];
+    const updatedAuthor = comment.userId !== userId ? results[2] : null;
 
     return res.json({
       success: true,
       message: newUserVote !== 0 ? 'Đã ghi nhận vote của bạn!' : 'Đã hủy vote.',
       score: updatedComment.score,
-      userVote: newUserVote
+      userVote: newUserVote,
+      authorReputation: updatedAuthor ? updatedAuthor.reputation : comment.user.reputation
     });
 
   } catch (error) {

@@ -20,7 +20,7 @@ const API_BASE_URL = typeof window !== 'undefined' && window.location.hostname !
   : 'http://localhost:8701/api';
 
 export default function DiscussionDrawer({ quizId, questionId, initialCount = 0, onOpenAuthModal }) {
-  const { user, token } = useAuth();
+  const { user, token, refreshUserProfile } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
   const [comments, setComments] = useState([]);
   const [newCommentText, setNewCommentText] = useState('');
@@ -160,7 +160,7 @@ export default function DiscussionDrawer({ quizId, questionId, initialCount = 0,
 
     // Call API ngầm
     try {
-      await fetch(`${API_BASE_URL}/comments/${commentId}/vote`, {
+      const res = await fetch(`${API_BASE_URL}/comments/${commentId}/vote`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -168,6 +168,32 @@ export default function DiscussionDrawer({ quizId, questionId, initialCount = 0,
         },
         body: JSON.stringify({ type })
       });
+
+      if (res.ok) {
+        const data = await res.json();
+        if (data.success) {
+          setComments(prevComments =>
+            prevComments.map(c => {
+              if (c.id === commentId) {
+                return {
+                  ...c,
+                  score: typeof data.score === 'number' ? data.score : c.score,
+                  userVote: typeof data.userVote === 'number' ? data.userVote : c.userVote,
+                  user: {
+                    ...(c.user || {}),
+                    reputation: typeof data.authorReputation === 'number' ? data.authorReputation : c.user?.reputation
+                  }
+                };
+              }
+              return c;
+            })
+          );
+        }
+      }
+
+      if (refreshUserProfile) {
+        refreshUserProfile();
+      }
     } catch (err) {
       console.warn('Backend server offline during vote sync:', err);
     }

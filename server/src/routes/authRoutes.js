@@ -259,17 +259,9 @@ router.post('/forgot-password', async (req, res) => {
     });
 
     if (!user) {
-      // Return success to prevent email enumeration
-      return res.json({
-        success: true,
-        message: 'Nếu Email của bạn tồn tại trên hệ thống, link khôi phục mật khẩu đã được gửi.'
-      });
-    }
-
-    if (!user.passwordHash) {
-      return res.status(400).json({
+      return res.status(404).json({
         success: false,
-        message: 'Tài khoản này được đăng ký qua Google OAuth. Vui lòng chọn "Đăng nhập bằng Google" trực tiếp không cần mật khẩu!'
+        message: 'Email này chưa được đăng ký tài khoản QuizzFlow. Vui lòng tạo tài khoản mới hoặc Đăng nhập bằng Google!'
       });
     }
 
