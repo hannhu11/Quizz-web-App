@@ -162,8 +162,18 @@ export default function DiscussionDrawer({ quizId, questionId, initialCount = 0,
       if (res.ok) {
         const data = await res.json();
         if (data.success) {
+          const targetAuthorEmail = comments.find(c => c.id === commentId)?.user?.email;
+          const targetAuthorId = data.authorId || comments.find(c => c.id === commentId)?.userId || comments.find(c => c.id === commentId)?.user?.id;
+
           setComments(prevComments =>
             prevComments.map(c => {
+              const isSameAuthor = (targetAuthorId && (c.userId === targetAuthorId || c.user?.id === targetAuthorId)) ||
+                                   (targetAuthorEmail && c.user?.email === targetAuthorEmail);
+
+              const updatedUser = isSameAuthor && typeof data.authorReputation === 'number'
+                ? { ...(c.user || {}), reputation: data.authorReputation }
+                : c.user;
+
               if (c.id === commentId) {
                 return {
                   ...c,
@@ -171,13 +181,14 @@ export default function DiscussionDrawer({ quizId, questionId, initialCount = 0,
                   likeCount: typeof data.likeCount === 'number' ? data.likeCount : c.likeCount,
                   dislikeCount: typeof data.dislikeCount === 'number' ? data.dislikeCount : c.dislikeCount,
                   userVote: typeof data.userVote === 'number' ? data.userVote : c.userVote,
-                  user: {
-                    ...(c.user || {}),
-                    reputation: typeof data.authorReputation === 'number' ? data.authorReputation : c.user?.reputation
-                  }
+                  user: updatedUser
                 };
               }
-              return c;
+
+              return {
+                ...c,
+                user: updatedUser
+              };
             })
           );
         }

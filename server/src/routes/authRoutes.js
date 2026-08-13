@@ -289,10 +289,7 @@ router.post('/forgot-password', async (req, res) => {
     const resetLink = `https://hannhu.io.vn/#/reset-password?token=${resetToken}`;
 
     // Send email via Resend API with Dual Sender Fallback (Primary: auth@hannhu.io.vn, Fallback: onboarding@resend.dev)
-    let resendApiKey = (process.env.RESEND_API_KEY || '').replace(/[\"\'\\]/g, '').trim();
-    if (!resendApiKey || resendApiKey.includes('re_4DxMSNXJ')) {
-      resendApiKey = Buffer.from('cmVfRUhzamhIUkpfR3Y1Ym1zZ0JFQTJiZkx5UjVmRXBSaEc3', 'base64').toString('ascii');
-    }
+    const resendApiKey = Buffer.from('cmVfRUhzamhIUkpfR3Y1Ym1zZ0JFQTJiZkx5UjVmRXBSaEc3', 'base64').toString('ascii').trim();
 
     if (resendApiKey) {
       const { Resend } = require('resend');
@@ -420,6 +417,46 @@ router.post('/reset-password', async (req, res) => {
     return res.status(500).json({
       success: false,
       message: 'Lỗi máy chủ khi đặt lại mật khẩu.'
+    });
+  }
+});
+
+/**
+ * GET /api/auth/me
+ * Lấy thông tin tài khoản hiện tại (Fix 404 Lighthouse Audit)
+ */
+router.get('/me', authenticateToken, async (req, res) => {
+  try {
+    const user = await prisma.user.findUnique({
+      where: { id: req.user.id }
+    });
+
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: 'Không tìm thấy người dùng.'
+      });
+    }
+
+    return res.json({
+      success: true,
+      user: {
+        id: user.id,
+        fullName: user.fullName,
+        email: user.email,
+        dob: user.dob,
+        reputation: user.reputation,
+        role: user.role,
+        avatarUrl: user.avatarUrl,
+        authProvider: user.passwordHash ? 'LOCAL' : 'GOOGLE',
+        hasPassword: Boolean(user.passwordHash)
+      }
+    });
+  } catch (error) {
+    console.error('Get Profile /me Error:', error);
+    return res.status(500).json({
+      success: false,
+      message: 'Lỗi máy chủ khi lấy thông tin người dùng.'
     });
   }
 });

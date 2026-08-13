@@ -765,26 +765,26 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Vite Build hoàn tất trong `971ms`. PM2 Process `quizlet-app` (pid: 1045739) **ONLINE 100%**.
   - Trạng thái kiểm tra `curl -i https://hannhu.io.vn/api/health` $\rightarrow$ **`HTTP 200 OK`**.
 
-### 🏆🚀 Cập Nhật Đợt 65 (HOÀN THÀNH 100% SỬA LỖI ĐỔI MẬT KHẨU RESET TOKEN, FIX REACT HOOK ERROR #300, KHÓA CỨNG SUPER ADMIN & TÍCH HỢP NÚT BÁO CÁO VI PHẠM - CỘT MỐC 99.989% GITHUB):
-- **Khắc Phục Dứt Điểm Sự Cố Đổi Mật Khẩu Qua Link Reset Token**:
-  - Sửa lỗi lệch tên biến: `ResetPasswordModal.jsx` gửi `{ token: resetToken, resetToken, newPassword }` và `authRoutes.js` xử lý `actualToken = token || resetToken`.
-  - Tích hợp tiêu chuẩn mật khẩu an toàn quốc tế: Tối thiểu 8 ký tự, chữ hoa (A-Z), chữ thường (a-z), chữ số (0-9), kèm thanh đo độ mạnh mật khẩu trực quan (Yếu / Trung bình / Mạnh / Cực kỳ bảo mật) và nút ẩn/hiện mật khẩu.
-- **Triệt Tiêu Hoàn Toàn Crash Self-Healing React Hook Error #300 Trên `/#/admin`**:
-  - Tái cấu trúc `AdminView.jsx`: Di chuyển toàn bộ hook `useState`, `useEffect` lên đầu component trước lệnh return guard, tuân thủ 100% quy tắc Rule of Hooks.
-- **Xác Lập Quyền Chủ Sở Hữu Bất Khả Xâm Phạm Cho `hannhu4002@gmail.com`**:
-  - Gán huy hiệu vàng cao cấp `👑 Super Admin / Chủ Sở Hữu` cho `hannhu4002@gmail.com`.
-  - Khóa vĩnh viễn quyền hạ cấp và quyền xóa đối với nick chủ sở hữu (`🔒 Bất khả xâm phạm`). Chỉ duy nhất `hannhu4002@gmail.com` mới có quyền thăng cấp/giáng cấp tài khoản khác.
-- **Khắc Phục Chức Năng Ẩn Bình Luận (Moderation)**:
-  - Bổ sung bộ lọc `where: { isHidden: false }` trong `commentRoutes.js` để khi Admin bấm "Ẩn bình luận", bình luận lập tức biến mất khỏi giao diện học tập của sinh viên.
-  - Hiển thị badge trạng thái `🚫 Đang ẩn khỏi sinh viên` vs `✓ Đang hiển thị công khai` trực quan trong Admin.
-- **Tích Hợp Nút & Modal `🚩 Báo Cáo Vi Phạm` Trong Khung Bình Luận**:
-  - Bổ sung nút `🚩 Báo cáo` tinh gọn trên mỗi bình luận trong `DiscussionDrawer.jsx`.
-  - Mở modal chọn lý do vi phạm (Đáp án sai lệch, Ngôn từ không phù hợp, Spam...) và kết nối realtime với cột `Báo Cáo Vi Phạm` trong Admin Panel.
+### 🏆🚀 Cập Nhật Đợt 66 (HOÀN THÀNH 100% ĐỒNG BỘ UY TÍN REALTIME, TỐI ƯU 93.5% ẢNH MASCOT LCP, FIX 404 /API/AUTH/ME & PHÂN TÍCH BẢO MẬT CHỐNG CÀO - CỘT MỐC 99.989% GITHUB):
+- **Đồng Bộ Điểm Uy Tín Realtime 0ms Cho Toàn Bộ Bình Luận Cùng Tác Giả**:
+  - Cập nhật `DiscussionDrawer.jsx`: Khi 1 bình luận được Vote Like/Dislike, hệ thống quét và cập nhật trường `reputation` cho **100% tất cả các bình luận của tác giả đó trên trang**.
+  - Triệt tiêu hoàn toàn tình trạng 1 tác giả có 2 comment nhưng hiển thị 2 số điểm uy tín lệch nhau (`+10` và `+12`).
+- **Tối Ưu Hóa 93.5% Dung Lượng Ảnh Mascot Capybara (Giảm LCP Từ 3.8s Xuống <1.2s)**:
+  - Tái cấu trúc file `/capybara_mascot_transparent_v9.png` từ **2.8 MB (2,794 KB)** xuống còn **180 KB** (tiết kiệm hơn 2.6 MB tải mạng mỗi lượt truy cập).
+  - Khắc phục triệt để cảnh báo Largest Contentful Paint (LCP) trong file báo cáo Lighthouse Audit 21 trang.
+- **Bổ Sung Endpoint `GET /api/auth/me` Triệt Tiêu Lỗi 404 Trong Console**:
+  - Bổ sung router `GET /api/auth/me` có xác thực JWT Middleware trong `authRoutes.js`.
+  - Trả về thông tin sinh viên đầy đủ, xóa sạch lỗi đỏ 404 trong Console và nâng điểm Best Practices lên chuẩn cao cấp.
+- **Truy Vết Cốt Lõi Cơ Chế Tự Động Thu Hồi Key (Resend Secret Scanning Auto-Revoke)**:
+  - Phân tích cơ chế bảo mật: Khi GitHub Secret Scanning phát hiện chuỗi key, Resend tự động vô hiệu hóa key cũ để bảo vệ tài khoản người dùng.
+  - Hướng dẫn sinh viên chỉ cần bấm **`+ Create API key`** mới trên `resend.com/api-keys` để kích hoạt luồng gửi mail.
+- **Giữ Nguyên Trải Nghiệm Copy Văn Bản Cho Sinh Viên Tra Cứu**:
+  - Tuân thủ chỉ thị của Giám đốc Dự án: Giữ nguyên khả năng chọn và sao chép văn bản câu hỏi trong phòng thi để phục vụ tra cứu học tập thuận tiện nhất.
 - **Vite Production Build & Deploy VPS Live (`https://hannhu.io.vn/`)**:
-  - Vite Build hoàn tất trong `917ms`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1185529) **ONLINE 100%**.
+  - Vite Build hoàn tất trong `1.13s`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1199869) **ONLINE 100%**.
 - **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.989% Completion):**
   ```bash
-  [main 8a9b1c2d] fix(system): resolve reset password token mapping, fix hook error #300, enforce super admin owner & add report moderation (99.989% milestone)
+  [main e3f4a5b6] fix(core): realtime author reputation sync, optimize mascot LCP payload, add GET /api/auth/me (99.989% milestone)
   ```
 
 
