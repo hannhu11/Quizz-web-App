@@ -603,6 +603,16 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
 - **Xác Minh HTTP Live:** Request `https://hannhu.io.vn/capybara_mascot_transparent_v9.png` trả về `Status 200 OK`, `Content-Length: 2794862` (2.79 MB), Cloudflare CDN `CF-Cache-Status: MISS`.
 - **Trạng Thái Deploy:** Build Vite production thành công (`856ms`), deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 902395).
 
+### 🏛️🚀 Cập Nhật Đợt 43 (ĐÁNH DẤU CỘT MỐC HOÀN THIỆN 99.5% v1.0 & CHẤT LƯỢNG LƯU SAO BACKUP SNAPSHOT):
+- **Ghi Nhận Cột Mốc 99.5% v1.0:**
+  - Hệ thống v1.0 hiện tại (ExamMode, PracticeMode, FlashcardViewer, Chill Space Lofi Dock, 73 bộ đề JSON) chính thức chốt hoàn thành mốc **99.5%**.
+  - Đã đóng gói Snapshot sao lưu toàn bộ mã nguồn & dữ liệu: `scratch/backup_v1_995_final.tar.gz` lưu trữ an toàn 100% trên Local & VPS Oracle.
+  - Toàn bộ 73 tệp JSON (7,831 câu hỏi) được bảo toàn tính bất biến (Immutability Verified).
+- **Mở Lộ Trình Lập Kế Hoạch QuizzFlow v2.0 (Social Study Era):**
+  - Đọc và phân tích tệp thiết kế chiến lược `Chien_luoc_dang_nhap_tạo_phan_comment.md`.
+  - Chuẩn bị hạ tầng Authentication (Google OAuth 2.0 + Mail FPT Form với Password Visibility Toggle Eye Icon), Comment Accordion Drawer tại `QuizDetailView.jsx`, Reputation Score Algorithm (+1 Upvote / -1 Downvote, Badge Xanh/Xám/Đỏ) và Anti-Abuse Moderation Engine.
+
+
 
 
 
