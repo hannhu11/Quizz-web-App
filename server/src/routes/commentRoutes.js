@@ -94,7 +94,7 @@ router.get('/:quizId/:questionId', async (req, res) => {
             role: true
           }
         },
-        votes: currentUserId ? { where: { userId: currentUserId } } : false
+        votes: { select: { type: true, userId: true } }
       },
       orderBy: [
         { score: 'desc' },
@@ -104,7 +104,10 @@ router.get('/:quizId/:questionId', async (req, res) => {
 
     // Format response & sort high-reputation users first
     const formatted = comments.map(c => {
-      const userVote = c.votes && c.votes.length > 0 ? c.votes[0].type : 0;
+      const userVoteObj = currentUserId ? c.votes.find(v => v.userId === currentUserId) : null;
+      const userVote = userVoteObj ? userVoteObj.type : 0;
+      const likeCount = c.votes.filter(v => v.type === 1).length;
+      const dislikeCount = c.votes.filter(v => v.type === -1).length;
       const isAutoCollapsed = c.user.reputation <= -5 || c.score <= -5;
       return {
         id: c.id,
@@ -112,6 +115,8 @@ router.get('/:quizId/:questionId', async (req, res) => {
         questionId: c.questionId,
         content: c.content,
         score: c.score,
+        likeCount,
+        dislikeCount,
         reportCount: c.reportCount,
         isHidden: c.isHidden,
         isAutoCollapsed,
@@ -321,10 +326,15 @@ router.post('/:id/vote', authenticateToken, async (req, res) => {
     const updatedComment = results[1];
     const updatedAuthor = comment.userId !== userId ? results[2] : null;
 
+    const likeCount = await prisma.vote.count({ where: { commentId, type: 1 } });
+    const dislikeCount = await prisma.vote.count({ where: { commentId, type: -1 } });
+
     return res.json({
       success: true,
       message: newUserVote !== 0 ? 'Đã ghi nhận vote của bạn!' : 'Đã hủy vote.',
       score: updatedComment.score,
+      likeCount,
+      dislikeCount,
       userVote: newUserVote,
       authorReputation: updatedAuthor ? updatedAuthor.reputation : comment.user.reputation
     });

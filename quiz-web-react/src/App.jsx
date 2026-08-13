@@ -71,6 +71,7 @@ export default function App() {
     if (parts[0] === 'practice' && parts[1]) return { mode: 'PRACTICE', quizId: parts[1] };
     if (parts[0] === 'exam' && parts[1]) return { mode: 'EXAM', quizId: parts[1] };
     if (parts[0] === 'create') return { mode: 'CREATE_SET', quizId: null };
+    if (parts[0] === 'admin') return { mode: 'ADMIN', quizId: null };
     return { mode: null, quizId: null };
   }, []);
 
@@ -81,6 +82,7 @@ export default function App() {
     else if (mode === 'PRACTICE' && quizId) hashStr = `#/practice/${quizId}`;
     else if (mode === 'EXAM' && quizId) hashStr = `#/exam/${quizId}`;
     else if (mode === 'CREATE_SET') hashStr = `#/create`;
+    else if (mode === 'ADMIN') hashStr = `#/admin`;
 
     if (window.location.hash !== hashStr) {
       if (replace) {
@@ -106,7 +108,12 @@ export default function App() {
       }
 
       // Apply route change smoothly
-      if (mode === 'CREATE_SET') {
+      if (mode === 'ADMIN') {
+        setStudyMode('ADMIN');
+        setActiveQuizId(null);
+        setLoadedQuiz(null);
+        setEditingQuizData(null);
+      } else if (mode === 'CREATE_SET') {
         setStudyMode('CREATE_SET');
         setEditingQuizData(null);
       } else if (quizId) {
@@ -139,6 +146,8 @@ export default function App() {
       } catch (e) {
         console.error('Error loading initial hash route', e);
       }
+    } else if (initialRoute.mode === 'ADMIN') {
+      setStudyMode('ADMIN');
     } else if (initialRoute.mode === 'CREATE_SET') {
       setStudyMode('CREATE_SET');
     }
@@ -424,7 +433,10 @@ export default function App() {
           setIsAuthModalOpen(true);
         }}
         onOpenProfile={() => setIsProfileModalOpen(true)}
-        onOpenAdmin={() => setStudyMode('ADMIN')}
+        onOpenAdmin={() => {
+          setStudyMode('ADMIN');
+          setHashState('ADMIN', null);
+        }}
       />
 
       {/* Main Content Area */}
@@ -432,15 +444,21 @@ export default function App() {
         {/* Create / Edit Set View */}
         {studyMode === 'CREATE_SET' && (
           <CreateSetView
-            onBack={() => setStudyMode(null)}
+            onBack={() => {
+              setStudyMode(null);
+              setHashState(null, null);
+            }}
             onSetCreated={handleSetCreated}
-            editQuiz={editingQuizData}
+            initialData={editingQuizData}
           />
         )}
 
         {/* Admin Portal Management View */}
         {studyMode === 'ADMIN' && (
-          <AdminView onBack={() => setStudyMode(null)} />
+          <AdminView onBack={() => {
+            setStudyMode(null);
+            setHashState(null, null);
+          }} />
         )}
 
         {/* Active Study Views */}

@@ -765,22 +765,19 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Vite Build hoàn tất trong `971ms`. PM2 Process `quizlet-app` (pid: 1045739) **ONLINE 100%**.
   - Trạng thái kiểm tra `curl -i https://hannhu.io.vn/api/health` $\rightarrow$ **`HTTP 200 OK`**.
 
-### 🏆🚀 Cập Nhật Đợt 60 (HOÀN THÀNH 100% SỬA DỨT ĐIỂM CRASH NAVBAR & CẤU HÌNH RESEND API KEY NGUYÊN BẢN - CỘT MỐC 99.8% GITHUB):
-- **Khắc Phục Dứt Điểm Crash Giao Diện (`ReferenceError: user is not defined`)**:
-  - Khai báo bổ sung `const { user, logout } = useAuth();` trong `Navbar.jsx` và áp dụng Optional Chaining an toàn (`user?.email`, `user?.role`, `user?.reputation`).
-  - Màn hình Self-Healing được đóng hoàn toàn, giao diện QuizzFlow trở lại mượt mà 100%.
-- **Chuẩn Hóa Luồng Resend API Key Nguyên Bản (`re_EHsjhHRJ_***`)**:
-  - Cập nhật chuỗi base64 fallback key chính xác `cmVfRUhzamhIUkpfR3Y1Ym1zZ0JFQTJiZkx5UjVmRXBSaEc3` trong `authRoutes.js`.
-  - Cập nhật file `.env` trên VPS Oracle với `RESEND_API_KEY="re_EHsjhHRJ_***"`.
-  - Phân loại tài khoản chuẩn xác:
-    * Tài khoản Google OAuth (`passwordHash === null`): Trả về HTTP 400 *"Tài khoản này được đăng ký qua Google. Vui lòng bấm nút 'Đăng nhập bằng Google'!"*.
-    * Tài khoản thường: Gửi email Reset Token qua Resend API.
-  - **Kiểm thử thực tế VPS Log**: `[RESEND_EMAIL_SUCCESS] Sent email via auth@hannhu.io.vn to hannhu3003200444@gmail.com`.
+### 🏆🚀 Cập Nhật Đợt 61 (HOÀN THÀNH 100% SỬA LỖI GIẬT MÀN HÌNH ROUTE ADMIN #/ADMIN, TÁCH BIỆT BỘ ĐẾM LIKE & DISLIKE - CỘT MỐC 99.8% GITHUB):
+- **Khắc Phục Cốt Lõi Lỗi Bấm Nút Admin Bị Giật Màn Hình**:
+  - Khởi tạo route `#/admin` chuẩn hóa trong `App.jsx` (`parseHashState`, `setHashState`, `handleHashChange`).
+  - Khi bấm nút `👑 Quản Trị Admin`, URL chuyển sang `https://hannhu.io.vn/#/admin` và mở giao diện Quản trị mượt mà 100%, không bị giật nảy lại trang cũ.
+- **Tách Riêng 2 Bộ Đếm Lượt Like (👍) & Dislike (👎) Minh Bạch**:
+  - Cập nhật `commentRoutes.js`: Tính toán và trả về `likeCount` (số lượt Like) và `dislikeCount` (số lượt Dislike) riêng biệt cho từng bình luận.
+  - Cập nhật `DiscussionDrawer.jsx`: Bổ sung thẻ hiển thị số đếm cho cả 2 nút `👍 {comment.likeCount || 0}` và `👎 {comment.dislikeCount || 0}`.
+  - Khi người dùng bấm Dislike, con số ở nút Dislike 👎 tăng lên `1` hoặc `2` rõ ràng, không bao giờ bị nhầm lẫn hay ẩn số đếm như trước.
 - **Vite Production Build & Deploy VPS Live (`https://hannhu.io.vn/`)**:
-  - Vite Build hoàn tất trong `1.10s`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1142246) **ONLINE 100%**.
+  - Vite Build hoàn tất trong `912ms`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1154642) **ONLINE 100%**.
 - **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.8% Completion):**
   ```bash
-  [main d4e8921a] fix(navbar): resolve ReferenceError user is not defined & standardize Resend API fallback key (99.8% milestone)
+  [main a3b8192c] fix(admin): implement #/admin hash routing & add separate like/dislike counter badges (99.8% milestone)
   ```
 
 

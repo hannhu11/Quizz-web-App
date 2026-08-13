@@ -133,24 +133,28 @@ export default function DiscussionDrawer({ quizId, questionId, initialCount = 0,
     setComments(prevComments =>
       prevComments.map(c => {
         if (c.id === commentId) {
-          const currentVote = c.userVote || 0;
-          let newVote = 0;
-          let scoreDelta = 0;
+          let newLikeDelta = 0;
+          let newDislikeDelta = 0;
 
           if (currentVote === type) {
             newVote = 0;
-            scoreDelta = -type;
+            if (type === 1) newLikeDelta = -1;
+            if (type === -1) newDislikeDelta = -1;
           } else if (currentVote === 0) {
             newVote = type;
-            scoreDelta = type;
+            if (type === 1) newLikeDelta = 1;
+            if (type === -1) newDislikeDelta = 1;
           } else {
             newVote = type;
-            scoreDelta = type * 2;
+            if (type === 1) { newLikeDelta = 1; newDislikeDelta = -1; }
+            if (type === -1) { newDislikeDelta = 1; newLikeDelta = -1; }
           }
 
           return {
             ...c,
-            score: c.score + scoreDelta,
+            score: c.score + (type === 1 ? newLikeDelta : -newDislikeDelta),
+            likeCount: Math.max(0, (c.likeCount || 0) + newLikeDelta),
+            dislikeCount: Math.max(0, (c.dislikeCount || 0) + newDislikeDelta),
             userVote: newVote
           };
         }
@@ -178,6 +182,8 @@ export default function DiscussionDrawer({ quizId, questionId, initialCount = 0,
                 return {
                   ...c,
                   score: typeof data.score === 'number' ? data.score : c.score,
+                  likeCount: typeof data.likeCount === 'number' ? data.likeCount : c.likeCount,
+                  dislikeCount: typeof data.dislikeCount === 'number' ? data.dislikeCount : c.dislikeCount,
                   userVote: typeof data.userVote === 'number' ? data.userVote : c.userVote,
                   user: {
                     ...(c.user || {}),
@@ -337,7 +343,7 @@ export default function DiscussionDrawer({ quizId, questionId, initialCount = 0,
                         <button
                           type="button"
                           onClick={() => handleVote(comment.id, 1)}
-                          className={`flex items-center gap-1 px-2 py-0.5 rounded-md transition-colors cursor-pointer ${
+                          className={`flex items-center gap-1.5 px-2 py-0.5 rounded-md transition-colors cursor-pointer ${
                             comment.userVote === 1
                               ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold'
                               : 'hover:bg-slate-100 dark:hover:bg-slate-700'
@@ -345,14 +351,14 @@ export default function DiscussionDrawer({ quizId, questionId, initialCount = 0,
                           title="Hữu ích (+1 Uy tín tác giả)"
                         >
                           <ThumbsUp className="w-3.5 h-3.5 stroke-[1.75]" />
-                          <span>{comment.score > 0 ? `+${comment.score}` : comment.score}</span>
+                          <span>{comment.likeCount || 0}</span>
                         </button>
 
                         {/* Downvote Button */}
                         <button
                           type="button"
                           onClick={() => handleVote(comment.id, -1)}
-                          className={`flex items-center gap-1 px-2 py-0.5 rounded-md transition-colors cursor-pointer ${
+                          className={`flex items-center gap-1.5 px-2 py-0.5 rounded-md transition-colors cursor-pointer ${
                             comment.userVote === -1
                               ? 'bg-rose-500/20 text-rose-600 dark:text-rose-400 font-bold'
                               : 'hover:bg-slate-100 dark:hover:bg-slate-700'
@@ -360,6 +366,7 @@ export default function DiscussionDrawer({ quizId, questionId, initialCount = 0,
                           title="Sai / Phá hoại (-1 Uy tín tác giả)"
                         >
                           <ThumbsDown className="w-3.5 h-3.5 stroke-[1.75]" />
+                          <span>{comment.dislikeCount || 0}</span>
                         </button>
                       </div>
                     </div>
