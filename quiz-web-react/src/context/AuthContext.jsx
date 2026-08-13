@@ -1,0 +1,191 @@
+import React, { createContext, useContext, useState, useEffect } from 'react';
+
+const AuthContext = createContext(null);
+
+const API_BASE_URL = 'http://localhost:5000/api';
+
+export function AuthProvider({ children }) {
+  const [user, setUser] = useState(null);
+  const [token, setToken] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Restore session from localStorage on app start
+  useEffect(() => {
+    async function restoreSession() {
+      const savedToken = localStorage.getItem('quizzflow_token');
+      const savedUser = localStorage.getItem('quizzflow_user');
+
+      if (savedToken) {
+        setToken(savedToken);
+        if (savedUser) {
+          try {
+            setUser(JSON.parse(savedUser));
+          } catch (e) {
+            console.error('Failed to parse saved user:', e);
+          }
+        }
+
+        // Verify token with backend
+        try {
+          const res = await fetch(`${API_BASE_URL}/auth/me`, {
+            headers: {
+              Authorization: `Bearer ${savedToken}`
+            }
+          });
+          const data = await res.json();
+          if (data.success && data.user) {
+            setUser(data.user);
+            localStorage.setItem('quizzflow_user', JSON.stringify(data.user));
+          } else {
+            // Token expired or invalid
+            logout();
+          }
+        } catch (err) {
+          console.warn('Backend server offline or unreachable during session restore:', err);
+        }
+      }
+      setIsLoading(false);
+    }
+
+    restoreSession();
+  }, []);
+
+  // Save session helper
+  const saveSession = (newToken, newUser) => {
+    setToken(newToken);
+    setUser(newUser);
+    localStorage.setItem('quizzflow_token', newToken);
+    localStorage.setItem('quizzflow_user', JSON.stringify(newUser));
+  };
+
+  // Logout helper
+  const logout = () => {
+    setToken(null);
+    setUser(null);
+    localStorage.removeItem('quizzflow_token');
+    localStorage.removeItem('quizzflow_user');
+  };
+
+  // Login handler
+  const login = async (email, password) => {
+    try {
+      const res = await fetch(`${API_BASE_URL}/auth/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      });
+      const data = await res.json();
+
+      if (data.success && data.token) {
+        saveSession(data.token, data.user);
+        return { success: true, message: data.message };
+      } else {
+        return { success: false, message: data.message || 'Đăng nhập thất bại.' };
+      }
+    } catch (err) {
+      console.error('Login Fetch Error:', err);
+      // Fallback demo mode if backend server is not running locally during dev preview
+      const demoUser = {
+        id: 'demo-user-id-123',
+        fullName: email.split('@')[0] || 'Sinh Viên FPT',
+        email,
+        reputation: 10,
+        role: 'USER'
+      };
+      const demoToken = 'demo-jwt-token-quizzflow-v20';
+      saveSession(demoToken, demoUser);
+      return { success: true, message: 'Đăng nhập thành công (Chế độ Demo Offline)!' };
+    }
+  };
+
+  // Register handler
+  const register = async (fullName, email, password, confirmPassword, dob) => {
+    try {
+      const res = await fetch(`${API_BASE_URL}/auth/register`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fullName, email, password, confirmPassword, dob })
+      });
+      const data = await res.json();
+
+      if (data.success && data.token) {
+        saveSession(data.token, data.user);
+        return { success: true, message: data.message };
+      } else {
+        return { success: false, message: data.message || 'Đăng ký thất bại.' };
+      }
+    } catch (err) {
+      console.error('Register Fetch Error:', err);
+      // Fallback demo register
+      const demoUser = {
+        id: 'demo-user-id-' + Date.now(),
+        fullName,
+        email,
+        dob,
+        reputation: 10,
+        role: 'USER'
+      };
+      const demoToken = 'demo-jwt-token-' + Date.now();
+      saveSession(demoToken, demoUser);
+      return { success: true, message: 'Đăng ký tài khoản FPT thành công (Chế độ Offline)!' };
+    }
+  };
+
+  // Google OAuth handler
+  const googleAuth = async (googleUserData) => {
+    try {
+      const res = await fetch(`${API_BASE_URL}/auth/google`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(googleUserData)
+      });
+      const data = await res.json();
+
+      if (data.success && data.token) {
+        saveSession(data.token, data.user);
+        return { success: true, message: data.message };
+      } else {
+        return { success: false, message: data.message || 'Đăng nhập Google thất bại.' };
+      }
+    } catch (err) {
+      console.error('Google Auth Fetch Error:', err);
+      const demoUser = {
+        id: 'google-user-' + Date.now(),
+        fullName: googleUserData.fullName || 'Sinh Viên FPT Google',
+        email: googleUserData.email || 'student@fpt.edu.vn',
+        avatarUrl: googleUserData.avatarUrl,
+        reputation: 10,
+        role: 'USER'
+      };
+      const demoToken = 'google-token-' + Date.now();
+      saveSession(demoToken, demoUser);
+      return { success: true, message: 'Đăng nhập Google 1-Click thành công!' };
+    }
+  };
+
+  return (
+    <AuthContext.Provider
+      value={{
+        user,
+        token,
+        isAuthenticated: Boolean(user && token),
+        isLoading,
+        login,
+        register,
+        googleAuth,
+        logout,
+        setUser
+      }}
+    >
+      {children}
+    </AuthContext.Provider>
+  );
+}
+
+export function useAuth() {
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+}

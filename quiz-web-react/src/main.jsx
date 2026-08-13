@@ -48,10 +48,14 @@ class GlobalErrorBoundary extends Component {
   }
 }
 
+import { AuthProvider } from './context/AuthContext'
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <GlobalErrorBoundary>
-      <App />
+      <AuthProvider>
+        <App />
+      </AuthProvider>
     </GlobalErrorBoundary>
   </StrictMode>,
 )

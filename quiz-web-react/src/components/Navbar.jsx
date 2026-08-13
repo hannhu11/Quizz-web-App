@@ -1,5 +1,6 @@
 import React from 'react';
 import { Search, Star, Moon, Sun, Plus } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
 
 export default function Navbar({
   searchTerm,
@@ -12,8 +13,11 @@ export default function Navbar({
   onOpenCreateSet,
   isDarkMode,
   setIsDarkMode,
-  onResetDashboard
+  onResetDashboard,
+  onOpenAuthModal
 }) {
+  const { user, logout } = useAuth();
+
   return (
     <header className="sticky top-0 z-30 w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-warm-border/60 dark:border-slate-800 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3 sm:gap-4">
@@ -101,11 +105,55 @@ export default function Navbar({
           {/* Dark Mode Toggle */}
           <button
             onClick={() => setIsDarkMode(!isDarkMode)}
-            className="p-2 rounded-full hover:bg-warm-hover dark:hover:bg-slate-800 text-warm-muted dark:text-slate-300 hover:text-warm-text transition-all active:scale-95"
+            className="p-2 rounded-full hover:bg-warm-hover dark:hover:bg-slate-800 text-warm-muted dark:text-slate-300 hover:text-warm-text transition-all active:scale-95 cursor-pointer"
             title="Đổi giao diện Sáng / Tối"
           >
             {isDarkMode ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4" />}
           </button>
+
+          {/* Auth Controls & Reputation Badge */}
+          {user ? (
+            <div className="flex items-center gap-2 pl-1 border-l border-slate-200 dark:border-slate-800">
+              <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-bold">
+                <span className="text-slate-800 dark:text-slate-200 max-w-[100px] truncate">{user.fullName || user.email}</span>
+                {/* Reputation Badge */}
+                <span
+                  className={`px-2 py-0.5 rounded-full text-[10px] font-bold tracking-tight inline-flex items-center gap-1 ${
+                    user.reputation >= 10
+                      ? 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30'
+                      : user.reputation >= 0
+                      ? 'bg-slate-500/15 text-slate-700 dark:text-slate-300 border border-slate-500/30'
+                      : 'bg-rose-500/15 text-rose-700 dark:text-rose-300 border border-rose-500/30'
+                  }`}
+                  title="Điểm Uy Tín Tài Khoản QuizzFlow"
+                >
+                  {user.reputation >= 10 ? '🟢' : user.reputation >= 0 ? '⚪' : '🔴'} {user.reputation >= 0 ? `+${user.reputation}` : user.reputation} Uy tín
+                </span>
+              </div>
+              <button
+                onClick={logout}
+                className="px-2.5 py-1 rounded-full bg-rose-50 dark:bg-rose-950/60 hover:bg-rose-100 dark:hover:bg-rose-900/60 text-rose-600 dark:text-rose-400 text-xs font-bold transition-all cursor-pointer"
+                title="Đăng xuất tài khoản"
+              >
+                Đăng xuất
+              </button>
+            </div>
+          ) : (
+            <div className="flex items-center gap-1.5 pl-1 border-l border-slate-200 dark:border-slate-800">
+              <button
+                onClick={() => onOpenAuthModal && onOpenAuthModal('LOGIN')}
+                className="px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs font-bold transition-all cursor-pointer"
+              >
+                Đăng nhập
+              </button>
+              <button
+                onClick={() => onOpenAuthModal && onOpenAuthModal('REGISTER')}
+                className="px-3 py-1.5 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold transition-all shadow-2xs cursor-pointer"
+              >
+                Đăng ký
+              </button>
+            </div>
+          )}
         </div>
       </div>
 

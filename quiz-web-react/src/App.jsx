@@ -9,6 +9,7 @@ import CreateSetView from './components/CreateSetView';
 import TestSetupModal from './components/TestSetupModal';
 import ChillDock from './components/chill/ChillDock';
 import CustomModal from './components/CustomModal';
+import AuthModal from './components/auth/AuthModal';
 import { QUIZ_MANIFEST, fetchQuizById, getUserProgress, getStarredQuestions, toggleStarQuestion, unstarQuizSet, clearAllStarredQuestions, getCustomQuizSets, getDeletedQuizIds, syncCommunityQuizzes } from './data/quizDataLoader';
 import { Sparkles, BookOpen, Layers, Star, Trash2, ArrowRight, BookMarked, Plus } from 'lucide-react';
 
@@ -24,6 +25,8 @@ export default function App() {
   const [isTestSetupOpen, setIsTestSetupOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isStarredModalOpen, setIsStarredModalOpen] = useState(false);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const [authModalMode, setAuthModalMode] = useState('LOGIN');
 
   const [progress, setProgress] = useState({});
   const [starredQuestions, setStarredQuestions] = useState([]);
@@ -394,6 +397,10 @@ export default function App() {
         isDarkMode={isDarkMode}
         setIsDarkMode={setIsDarkMode}
         onResetDashboard={() => handleSelectCategory('ALL')}
+        onOpenAuthModal={(mode) => {
+          setAuthModalMode(mode || 'LOGIN');
+          setIsAuthModalOpen(true);
+        }}
       />
 
       {/* Main Content Area */}
@@ -677,6 +684,13 @@ export default function App() {
           </div>
         </div>
       )}
+
+      {/* Glassmorphic Auth Modal (Login / Register FPT / Google Auth) */}
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onClose={() => setIsAuthModalOpen(false)}
+        initialMode={authModalMode}
+      />
 
       {/* Chill Space - Independent Floating Widgets (LifeAt Style) */}
       <ChillDock />
