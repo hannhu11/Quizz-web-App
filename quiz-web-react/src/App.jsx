@@ -459,7 +459,7 @@ export default function App() {
                   Thư Thái Ghi Nhớ • Bứt Phá Điểm Số
                 </h2>
                 <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl">
-                  Ghi nhớ Flashcard 3D, luyện tập trắc nghiệm thông minh, kết hợp nhạc Lofi thư giãn giúp tăng 200% độ tập trung.
+                  Ghi nhớ Flashcard, luyện tập trắc nghiệm thông minh, kết hợp nhạc Lofi thư giãn giúp tăng 200% độ tập trung.
                 </p>
                 <div className="pt-1">
                   <button
@@ -469,6 +469,15 @@ export default function App() {
                     <Plus className="w-4 h-4" /> + Tạo Bộ Đề Mới
                   </button>
                 </div>
+              </div>
+
+              {/* Capybara Mascot (Academic Suit & Flower Bouquet) */}
+              <div className="relative z-10 shrink-0 self-center hidden sm:block">
+                <img
+                  src="/capybara_suit_bouquet_transparent.png"
+                  alt="Linh vật Capybara QuizzFlow"
+                  className="w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 object-contain filter drop-shadow-md hover:scale-105 transition-transform duration-300"
+                />
               </div>
 
               <div className="absolute -right-8 -bottom-8 w-48 h-48 rounded-full bg-amber-100/30 dark:bg-indigo-900/10 blur-2xl pointer-events-none" />
