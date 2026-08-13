@@ -449,28 +449,38 @@ export default function App() {
         {/* Dashboard Grid (When no quiz is selected) */}
         {!studyMode && (
           <div className="space-y-8">
-            {/* Hero Banner */}
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-50 via-rose-50 to-orange-50 dark:from-slate-900 dark:via-indigo-950/50 dark:to-slate-900 p-6 sm:p-8 border border-amber-200/80 dark:border-slate-800 shadow-soft flex items-center justify-between flex-wrap gap-4 transition-colors">
-              <div className="max-w-2xl relative z-10">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 dark:bg-slate-800/90 border border-amber-200/80 dark:border-indigo-900/80 text-amber-900 dark:text-amber-300 text-xs font-bold shadow-xs mb-3">
+            {/* Hero Banner (Warm Minimalist / Lofi Study + Capybara Mascot) */}
+            <div className="relative overflow-hidden rounded-3xl bg-slate-50 dark:bg-slate-900/90 p-6 sm:p-8 border border-slate-200/80 dark:border-slate-800 shadow-sm flex items-center justify-between flex-wrap sm:flex-nowrap gap-6 transition-all">
+              <div className="max-w-2xl relative z-10 space-y-3">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100/80 dark:bg-amber-950/80 border border-amber-300/60 dark:border-amber-800 text-amber-900 dark:text-amber-200 text-xs font-bold shadow-xs">
                   <Sparkles className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" /> Góc Ôn Luyện Kiến Thức
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight leading-snug">
                   Thư Thái Ghi Nhớ • Bứt Phá Điểm Số
                 </h2>
-                <p className="text-sm text-slate-700 dark:text-slate-300 mt-2 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl">
                   Ghi nhớ Flashcard 3D, luyện tập trắc nghiệm thông minh, kết hợp nhạc Lofi thư giãn giúp tăng 200% độ tập trung.
                 </p>
+                <div className="pt-1">
+                  <button
+                    onClick={() => { setEditingQuizData(null); setStudyMode('CREATE_SET'); }}
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-2xl bg-slate-900 hover:bg-slate-800 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white text-white font-extrabold text-xs sm:text-sm shadow-sm transition-all active:scale-95 shrink-0"
+                  >
+                    <Plus className="w-4 h-4" /> + Tạo Bộ Đề Mới
+                  </button>
+                </div>
               </div>
 
-              <button
-                onClick={() => { setEditingQuizData(null); setStudyMode('CREATE_SET'); }}
-                className="relative z-10 flex items-center gap-2 px-6 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs sm:text-sm shadow-soft transition-all active:scale-95 shrink-0"
-              >
-                <Plus className="w-5 h-5" /> + Tạo Bộ Đề Mới
-              </button>
+              {/* Capybara Mascot Image */}
+              <div className="relative z-10 shrink-0 mx-auto sm:mx-0">
+                <img
+                  src="/capybara_study_mode.png"
+                  alt="Capybara Study Mode Mascot"
+                  className="w-32 h-32 sm:w-44 sm:h-44 object-contain drop-shadow-md hover:scale-105 transition-transform duration-300"
+                />
+              </div>
 
-              <div className="absolute -right-8 -bottom-8 w-48 h-48 rounded-full bg-amber-200/40 dark:bg-indigo-900/20 blur-2xl pointer-events-none" />
+              <div className="absolute -right-8 -bottom-8 w-48 h-48 rounded-full bg-amber-100/30 dark:bg-indigo-900/10 blur-2xl pointer-events-none" />
             </div>
 
             {/* Quizzes List Grid Header */}

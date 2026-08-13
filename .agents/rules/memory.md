@@ -503,6 +503,20 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Đã đếm chuẩn xác `starredCount` thực tế của môn học (VD: 6 câu), tự động mở khóa checkbox và giới hạn slider = 6 câu khi chọn.
 - **Trạng Thái Deploy:** Build Vite production thành công (`1.00s`), deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 705010).
 
+### 🎨⚡ Cập Nhật Đợt 33: Refactor UI/UX Hero Banner & Dashboard Kết Quả Thi Thử Warm Minimalist + Tích Hợp Linh Vật Capybara:
+- **Refactor Hero Banner Trang Chủ (`App.jsx`):**
+  - Chuyển dải lụa nhựa cũ sang phong cách **Warm Minimalist / Lofi Study** (`bg-slate-50 dark:bg-slate-900/90 border border-slate-200/80 rounded-3xl`).
+  - Tiêu đề: *"Thư Thái Ghi Nhớ • Bứt Phá Điểm Số"*, badge `✨ Góc Ôn Luyện Kiến Thức`, nút `+ Tạo Bộ Đề Mới` màu Slate sẫm (`bg-slate-900`).
+  - Tích hợp linh vật Capybara đang ngồi học bài (`capybara_study_mode.png`) góc bên phải vô cùng thư giãn.
+- **Tối Ưu Dashboard Kết Quả Thi Thử (`ExamMode.jsx`):**
+  - Loại bỏ hoàn toàn khối đen tuyền u tối cũ, gom toàn bộ chỉ số về 1 **Unified Dashboard Card** phẳng màu kem/trắng.
+  - Tích hợp linh vật Capybara cử nhân (`capybara_pass_mode.png` cho lượt thi ĐẠT ≥ 4.0/10) và Capybara ôm học bài (`capybara_study_mode.png` cho lượt thi CHƯA ĐẠT).
+  - Quy đổi **Điểm số Thang 10** (VD: `4.0 / 10`) kèm thanh Progress Bar trực quan.
+  - Lưới thống kê **6 chỉ số**: 🟢 Câu đúng, 🔴 Câu sai, 🟡 Bỏ qua, 🎯 Độ chính xác %, ⏱️ Thời gian, 🏆 Kết quả Pass/Fail.
+  - Khung động viên `bg-amber-50/90` xuất hiện khi `Fail` kích vũ tinh thần người học.
+- **Trạng Thái Deploy:** Build Vite production thành công (`1.13s`), deploy hoàn tất lên VPS Oracle `140.245.119.189` (PM2 `quizlet-app` pid: 837749).
+
+
 
 
 
