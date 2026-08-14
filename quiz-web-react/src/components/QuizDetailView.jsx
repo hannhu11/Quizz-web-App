@@ -21,7 +21,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
   const [searchQuery, setSearchQuery] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [passwordModalConfig, setPasswordModalConfig] = useState(null);
-  const [showAllQuestions, setShowAllQuestions] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(25);
 
   const [starredIds, setStarredIds] = useState(() => {
     return new Set(getStarredQuestions(quiz.id).map(s => s.questionId));
@@ -98,13 +98,10 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
     return result;
   }, [questions, filterMode, searchQuery, starredIds]);
 
-  // Quizlet-style pagination: limit initial render to 100 questions for instant performance
+  // Progressive Lazy Loading: limit initial render to 25 questions for instant LCP & 60fps mobile scrolling
   const displayedQuestions = useMemo(() => {
-    if (showAllQuestions || filteredQuestions.length <= 100) {
-      return filteredQuestions;
-    }
-    return filteredQuestions.slice(0, 100);
-  }, [filteredQuestions, showAllQuestions]);
+    return filteredQuestions.slice(0, visibleCount);
+  }, [filteredQuestions, visibleCount]);
 
   const handleToggleStar = (q, idx) => {
     const isStarred = starredIds.has(q.id);
@@ -254,10 +251,10 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
       {/* KNOWT-STYLE STUDYING PROGRESS BOX */}
       <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-warm-border dark:border-slate-800 shadow-soft space-y-4">
         <div className="flex items-center justify-between">
-          <h3 className="text-base font-extrabold text-slate-900 dark:text-slate-100">
+          <h2 className="text-base font-extrabold text-slate-900 dark:text-slate-100">
             Tiến độ học tập (Studying Progress)
-          </h3>
-          <span className="px-3 py-1 rounded-full bg-rose-50 dark:bg-rose-950/80 text-rose-600 dark:text-rose-300 border border-rose-200 dark:border-rose-800 text-xs font-bold">
+          </h2>
+          <span className="px-3 py-1 rounded-full bg-rose-50 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800 text-xs font-bold">
             {srsStats.percentage}%
           </span>
         </div>
@@ -273,7 +270,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
             <span className="font-extrabold text-rose-900 dark:text-rose-200">{srsStats.newCount}</span>
             <button
               onClick={() => onStartMode('FLASHCARD')}
-              className="px-4 py-1.5 rounded-full bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-bold hover:bg-rose-100 dark:hover:bg-slate-700 transition-colors shadow-xs"
+              className="px-4 py-1.5 rounded-full bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-bold hover:bg-rose-100 dark:hover:bg-slate-700 transition-colors shadow-xs cursor-pointer"
             >
               Học
             </button>
@@ -288,7 +285,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
             <span className="font-extrabold text-purple-900 dark:text-purple-200">{srsStats.learningCount}</span>
             <button
               onClick={() => onStartMode('PRACTICE')}
-              className="px-4 py-1.5 rounded-full bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-bold hover:bg-purple-100 dark:hover:bg-slate-700 transition-colors shadow-xs"
+              className="px-4 py-1.5 rounded-full bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-bold hover:bg-purple-100 dark:hover:bg-slate-700 transition-colors shadow-xs cursor-pointer"
             >
               Học
             </button>
@@ -303,7 +300,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
             <span className="font-extrabold text-sky-900 dark:text-sky-200">{srsStats.almostCount}</span>
             <button
               onClick={() => onStartMode('PRACTICE')}
-              className="px-4 py-1.5 rounded-full bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-bold hover:bg-sky-100 dark:hover:bg-slate-700 transition-colors shadow-xs"
+              className="px-4 py-1.5 rounded-full bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-bold hover:bg-sky-100 dark:hover:bg-slate-700 transition-colors shadow-xs cursor-pointer"
             >
               Học
             </button>
@@ -318,7 +315,7 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
             <span className="font-extrabold text-emerald-900 dark:text-emerald-200">{srsStats.masteredCount}</span>
             <button
               onClick={() => onStartMode('FLASHCARD')}
-              className="px-4 py-1.5 rounded-full bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-bold hover:bg-emerald-100 dark:hover:bg-slate-700 transition-colors shadow-xs"
+              className="px-4 py-1.5 rounded-full bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-bold hover:bg-emerald-100 dark:hover:bg-slate-700 transition-colors shadow-xs cursor-pointer"
             >
               Học
             </button>
@@ -329,10 +326,10 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
       {/* Terms In This Set Section Header with Search Bar */}
       <div className="space-y-4">
         <div className="flex items-center justify-between border-b border-warm-border/60 dark:border-slate-800 pb-3 flex-wrap gap-3">
-          <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+          <h2 className="text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
             <BookOpen className="w-5 h-5 text-warm-slate dark:text-slate-300" />
             Danh sách thuật ngữ & câu hỏi ({questions.length})
-          </h3>
+          </h2>
 
           <div className="flex items-center gap-3 flex-wrap">
             {/* Search Bar for Terms & Definitions */}
@@ -519,14 +516,20 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
               );
             })}
 
-            {/* Quizlet-Style "Show All Remaining N Questions" Button */}
-            {!showAllQuestions && filteredQuestions.length > 100 && (
-              <div className="text-center pt-4 pb-2">
+            {/* Progressive Loading Controls for Mobile & Desktop Performance */}
+            {visibleCount < filteredQuestions.length && (
+              <div className="flex items-center justify-center gap-3 pt-6 pb-2 flex-wrap">
                 <button
-                  onClick={() => setShowAllQuestions(true)}
-                  className="px-8 py-3.5 rounded-full bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 font-extrabold text-sm hover:bg-slate-800 dark:hover:bg-white transition-all shadow-md active:scale-95"
+                  onClick={() => setVisibleCount(prev => Math.min(prev + 25, filteredQuestions.length))}
+                  className="px-6 py-3 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 font-extrabold text-xs transition-all shadow-xs active:scale-95 cursor-pointer"
                 >
-                  Hiển thị tất cả {filteredQuestions.length - 100} câu còn lại
+                  Tải thêm +25 câu (Đang xem {displayedQuestions.length}/{filteredQuestions.length})
+                </button>
+                <button
+                  onClick={() => setVisibleCount(filteredQuestions.length)}
+                  className="px-6 py-3 rounded-full bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-white font-extrabold text-xs transition-all shadow-md active:scale-95 cursor-pointer"
+                >
+                  Xem toàn bộ ({filteredQuestions.length} câu)
                 </button>
               </div>
             )}
