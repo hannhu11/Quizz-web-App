@@ -14,8 +14,7 @@ export default function AdminView({ onBack }) {
 
   const isAuthorizedAdmin = user && (
     user.role === 'ADMIN' ||
-    user.email === SUPER_ADMIN_EMAIL ||
-    user.email === 'hannhu3003@gmail.com'
+    user.email === SUPER_ADMIN_EMAIL
   );
 
   const isSuperAdmin = user && user.email === SUPER_ADMIN_EMAIL;

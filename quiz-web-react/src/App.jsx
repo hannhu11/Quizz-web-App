@@ -110,8 +110,7 @@ export default function App() {
       // Apply route change smoothly with Admin Access Control Guard
       const isAuthorizedAdmin = user && (
         user.role === 'ADMIN' ||
-        user.email === 'hannhu4002@gmail.com' ||
-        user.email === 'hannhu3003@gmail.com'
+        user.email === 'hannhu4002@gmail.com'
       );
 
       if (mode === 'ADMIN') {

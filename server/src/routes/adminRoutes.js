@@ -9,8 +9,7 @@ const prisma = new PrismaClient();
 const requireAdmin = (req, res, next) => {
   const isAuthorizedAdmin = req.user && (
     req.user.role === 'ADMIN' || 
-    req.user.email === 'hannhu4002@gmail.com' || 
-    req.user.email === 'hannhu3003@gmail.com'
+    req.user.email === 'hannhu4002@gmail.com'
   );
 
   if (!isAuthorizedAdmin) {
