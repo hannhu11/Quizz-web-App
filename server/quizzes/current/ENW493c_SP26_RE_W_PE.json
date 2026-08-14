@@ -8,30 +8,68 @@
       "id": 1,
       "questionIndex": 0,
       "content": "ENW493c PE Writing Prompt: Many people believe that good planning is the key factor to success in life, while hard work and supportive relationships are important. Discuss both views and give your opinion (450-500 words).",
-      "explanation": "📌 HƯỚNG DẪN BÀI VIẾT THI THỰC HÀNH (PE WRITING MASTER GUIDE & BAND 8.0 SAMPLE): 1. CẤU TRÚC BÀI LUẬN 4 ĐOẠN (ESSAY OUTLINE): - Introduction: Hook + Rephrase Prompt + Thesis Statement (Stating that while hard work and relationships build foundation, strategic planning optimizes resources for long-term success). - Body 1 (Hard Work & Supportive Relationships): Analyze how diligence creates momentum and social networks provide emotional/financial backing. - Body 2 (Good Planning as Key Factor): Explain how planning provides clear vision, risk mitigation, resource allocation, and milestone tracking. - Conclusion: Restate opinion & final synthesis. 2. TỪ VỰNG HỌC THUẬT NÂNG CAO (ACADEMIC VOCABULARY): - Strategic foresight (tầm nhìn chiến lược), Resource allocation (phân bổ nguồn lực), Risk mitigation (giảm thiểu rủi ro), Interpersonal synergy (sự cộng hưởng mối quan hệ).",
+      "explanation": "Đề yêu cầu một bài 450–500 từ thảo luận cả good planning và vai trò của hard work cùng supportive relationships, vì vậy lập luận cần giữ tính balanced thay vì chỉ phát triển một phía. Thesis statement nên nêu planning là primary driver, đồng thời thừa nhận diligence tạo momentum và relationships cung cấp support để kế hoạch có thể thực hiện. Bố cục bốn đoạn cho phép hai body paragraphs đối chiếu các yếu tố này, rồi conclusion tổng hợp opinion bằng lập luận nhất quán.",
       "answers": [
         {
           "id": 1,
           "content": "Option A: Discuss both views and provide a balanced argument with planning as primary driver",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 1
         },
         {
           "id": 2,
           "content": "Option B: Only write about hard work without mentioning planning",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 1
         },
         {
           "id": 3,
           "content": "Option C: Write less than 200 words without structure",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 1
         },
         {
           "id": 4,
           "content": "Option D: Copy the prompt word for word without thesis statement",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 1
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Option A: Discuss both views and provide a balanced argument with planning as primary driver",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 1
+        },
+        {
+          "id": 2,
+          "content": "Option B: Only write about hard work without mentioning planning",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 1
+        },
+        {
+          "id": 3,
+          "content": "Option C: Write less than 200 words without structure",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 1
+        },
+        {
+          "id": 4,
+          "content": "Option D: Copy the prompt word for word without thesis statement",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 1
+        }
+      ]
     }
   ]
 }

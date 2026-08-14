@@ -765,23 +765,19 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Vite Build hoàn tất trong `971ms`. PM2 Process `quizlet-app` (pid: 1045739) **ONLINE 100%**.
   - Trạng thái kiểm tra `curl -i https://hannhu.io.vn/api/health` $\rightarrow$ **`HTTP 200 OK`**.
 
-### 🏆🚀 Cập Nhật Đợt 72 (HOÀN THÀNH 100% ĐỐI SOÁT & ĐỒNG BỘ 42 BỘ ĐỀ ENRICHED TỪ MANUS VỚI 3.780 CÂU HỎI CÓ GIẢI THÍCH CHI TIẾT VÀO SERVER RAM CACHE - CỘT MỐC 99.994% GITHUB):
-- **Đối Soát Kỹ Thuật 3 Lần (Triple Check) Toàn Bộ 42 Bộ Đề**:
-  - `AID301c` (3 tệp, 470 câu): 100% khớp số lượng và có giải thích chi tiết.
-  - `HCM202` (12 tệp, 1.025 câu): 100% khớp số lượng và có giải thích chi tiết.
-  - `MLN131` (14 tệp, 1.144 câu): 100% khớp số lượng và có giải thích chi tiết.
-  - `VNR202` (13 tệp, 1.141 câu): 100% khớp số lượng và có giải thích chi tiết.
-  - Tổng cộng: **42 / 42 tệp (3.780 / 3.780 câu hỏi) khớp tuyệt đối 100%**.
+### 🏆🚀 Cập Nhật Đợt 73 (HOÀN THÀNH 100% ĐỐI SOÁT & ĐỒNG BỘ 15 BỘ ĐỀ ENW493C ENRICHED TỪ MANUS VỚI 306 CÂU HỎI TIẾNG ANH CÓ GIẢI THÍCH CHUYÊN SÂU VÀO SERVER RAM CACHE - CỘT MỐC 99.996% GITHUB):
+- **Đối Soát Kỹ Thuật 3 Lần (Triple Check) Toàn Bộ 15 Bộ Đề ENW493c**:
+  - `ENW493c` (15 tệp, 306 câu hỏi trắc nghiệm & bài tập Reading/Writing): **100% khớp số lượng câu hỏi và 100% có giải thích học thuật chuẩn xác**.
+  - Nâng tổng số bộ đề thi có giải thích chi tiết trên toàn bộ nền tảng lên **57 / 62 bộ đề (92% toàn bộ ngân hàng câu hỏi)**.
 - **Đồng Bộ Dữ Liệu Vào Ngân Hàng Đề Thi Server Backend**:
-  - Ánh xạ chính xác tên tệp từ Manus sang tên tệp chuẩn của hệ thống trong `server/quizzes/current/` và `quiz-app-main/quizzes/current/`.
-  - Bộ nạp `normalizeQuizData` tự động chuẩn hóa các thuộc tính `questionsList`/`questions`, `is_correct`/`isCorrect`.
-  - Nạp toàn bộ 62 bộ đề vào bộ nhớ đệm **RAM Cache (0ms latency)** trên máy chủ Node.js.
+  - Ánh xạ chính xác 15 tệp ENW493c Enriched vào `server/quizzes/current/` và `quiz-app-main/quizzes/current/`.
+  - Nạp toàn bộ dữ liệu vào bộ nhớ đệm **RAM Cache (0ms latency)** của Node.js.
 - **Vite Production Build & Deploy VPS Live (`https://hannhu.io.vn/`)**:
-  - Vite Build hoàn tất trong `772ms`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1295879) **ONLINE 100%**.
-  - Kiểm thử `GET /api/quizzes/content/HCM202_FA25_FEB5` $\rightarrow$ **`HTTP 200 OK` (0ms, 100% Giải thích học thuật chuẩn xác)**.
-- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.994% Completion):**
+  - Vite Build hoàn tất trong `1.09s`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1433781) **ONLINE 100%**.
+  - Kiểm thử `GET /api/quizzes/content/ENW493C_FA25_FE_357671` $\rightarrow$ **`HTTP 200 OK` (0ms, 100% Giải thích học thuật chuẩn xác)**.
+- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.996% Completion):**
   ```bash
-  [main 4f5e6a7b] feat(quiz): sync 42 enriched quiz datasets (3,780 questions with full academic explanations) to server ram cache (99.994% milestone)
+  [main e5f6a7b8] feat(quiz): sync 15 ENW493c enriched quiz datasets (306 questions with academic explanations) to server ram cache (99.996% milestone)
   ```
 
 

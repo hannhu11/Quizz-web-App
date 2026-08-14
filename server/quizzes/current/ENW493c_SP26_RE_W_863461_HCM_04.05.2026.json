@@ -8,30 +8,68 @@
       "id": 1,
       "questionIndex": 0,
       "content": "ENW493c PE Writing Prompt: Many people believe that good planning is the key factor to success in life, while hard work and supportive relationships are important. Discuss both views and give your opinion.",
-      "explanation": "📌 HƯỚNG DẪN BÀI VIẾT THI THỰC HÀNH PE (ENW493c_SP26_RE_W_863461_HCM_04.05.2026): 1. CẤU TRÚC BÀI LUẬN 4 ĐOẠN (ESSAY OUTLINE): - Introduction: Hook + Paraphrase Prompt + Thesis Statement (Nêu luận đề trung tâm rõ ràng). - Body Paragraph 1: Phân tích khía cạnh thứ nhất với câu chủ đề và dẫn chứng cụ thể. - Body Paragraph 2: Phân tích khía cạnh thứ hai và làm rõ quan điểm cá nhân. - Conclusion: Tóm tắt ý chính và khẳng định lại luận đề luận văn. 2. TỪ VỰNG HỌC THUẬT NÂNG CAO (ACADEMIC VOCABULARY): - Substantial impact (tác động đáng kể), Empirical evidence (bằng chứng thực nghiệm), Strategic vision (tầm nhìn chiến lược), Cohesive argument (lập luận chặt chẽ).",
+      "explanation": "Prompt yêu cầu thảo luận cả quan điểm coi good planning là yếu tố then chốt của success lẫn vai trò của hard work và supportive relationships, sau đó nêu opinion riêng. Một thesis statement trong introduction phải xác định rõ cách người viết cân nhắc ba yếu tố này, còn hai body paragraphs phát triển từng hướng bằng reasons và examples. Bố cục bốn đoạn giúp conclusion tổng hợp lập luận và khẳng định lập trường mà không bỏ sót bất kỳ vế nào của đề.",
       "answers": [
         {
           "id": 1,
           "content": "Option A: Write a well-structured 4-paragraph essay addressing all parts of the prompt with thesis statement",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 1
         },
         {
           "id": 2,
           "content": "Option B: Write an informal response without paragraph divisions",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 1
         },
         {
           "id": 3,
           "content": "Option C: Copy prompt sentences without original academic vocabulary",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 1
         },
         {
           "id": 4,
           "content": "Option D: Write under 200 words without supporting details",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 1
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Option A: Write a well-structured 4-paragraph essay addressing all parts of the prompt with thesis statement",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 1
+        },
+        {
+          "id": 2,
+          "content": "Option B: Write an informal response without paragraph divisions",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 1
+        },
+        {
+          "id": 3,
+          "content": "Option C: Copy prompt sentences without original academic vocabulary",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 1
+        },
+        {
+          "id": 4,
+          "content": "Option D: Write under 200 words without supporting details",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 1
+        }
+      ]
     }
   ]
 }

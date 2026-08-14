@@ -10,27 +10,65 @@
       "questionIndex": 0,
       "questionType": "Single Choice",
       "content": "Which of the following is NOT a very good search term for this topic? Topic: Gun Laws",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'guns'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Một search term hiệu quả cho Gun Laws cần gắn với một vấn đề pháp lý, jurisdiction hoặc quyền cụ thể để kết quả dẫn đến nguồn có thể dùng cho research paper. Guns quá rộng, dễ trả về nội dung về sản phẩm, văn hóa, bạo lực hay lịch sử ngoài phạm vi luật. Gun restrictions và gun laws in the U.S. thu hẹp chủ đề hơn, còn right to own a gun nêu một điểm tranh luận rõ.",
       "answers": [
         {
           "id": 1,
           "content": "gun restrictions",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 1
         },
         {
           "id": 2,
           "content": "guns",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 1
         },
         {
           "id": 3,
           "content": "gun laws in the U.S.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 1
         },
         {
           "id": 4,
           "content": "the right to own a gun",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 1
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "gun restrictions",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 1
+        },
+        {
+          "id": 2,
+          "content": "guns",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 1
+        },
+        {
+          "id": 3,
+          "content": "gun laws in the U.S.",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 1
+        },
+        {
+          "id": 4,
+          "content": "the right to own a gun",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 1
         }
       ]
     },
@@ -39,17 +77,37 @@
       "questionIndex": 1,
       "questionType": "Single Choice",
       "content": "Is this phrase appropriate for an academic essay? \"drunk as a skunk.\"",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'No'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Drunk as a skunk là một idiomatic expression thuộc informal spoken English, dùng phép so sánh hình ảnh để nhấn mạnh trạng thái say. Academic essay cần ưu tiên lexical choice chính xác và có giọng điệu trung lập, tránh lối nói giàu tính hội thoại như vậy. Một mô tả formal về mức độ alcohol impairment sẽ phù hợp register hơn.",
       "answers": [
         {
           "id": 1,
           "content": "No",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 2
         },
         {
           "id": 2,
           "content": "Yes",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 2
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "No",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 2
+        },
+        {
+          "id": 2,
+          "content": "Yes",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 2
         }
       ]
     },
@@ -58,22 +116,51 @@
       "questionIndex": 2,
       "questionType": "Single Choice",
       "content": "What is the first thing to do after you receive a research paper assignment?",
-      "explanation": "Think of a research question.).",
+      "explanation": "Ngay sau khi nhận assignment, người viết cần xác định research question vì nó quyết định phạm vi inquiry, keywords và loại evidence phải thu thập. Outline chỉ có ý nghĩa khi đã biết điểm nào cần được tổ chức, còn thesis thường hình thành sau khi câu hỏi được thu hẹp. Câu hỏi nghiên cứu rõ giúp toàn bộ các bước tiếp theo không bị dàn trải.",
       "answers": [
         {
           "id": 1,
           "content": "Think of a research question.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 3
         },
         {
           "id": 2,
           "content": "Make an outline.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 3
         },
         {
           "id": 3,
           "content": "Write the thesis statement.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 3
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Think of a research question.",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 3
+        },
+        {
+          "id": 2,
+          "content": "Make an outline.",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 3
+        },
+        {
+          "id": 3,
+          "content": "Write the thesis statement.",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 3
         }
       ]
     },
@@ -82,17 +169,37 @@
       "questionIndex": 3,
       "questionType": "Single Choice",
       "content": "Is this word appropriate for an academic essay? \"increase\"",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'Yes'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Increase là một verb có register trung tính–trang trọng, được dùng chuẩn trong báo cáo và academic writing để chỉ sự tăng lên. Nó có thể mô tả change trong quantity, rate hoặc level mà không mang màu sắc slang hay cảm tính. Vì vậy dùng increase trong essay không vi phạm yêu cầu formal language.",
       "answers": [
         {
           "id": 1,
           "content": "Yes",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 4
         },
         {
           "id": 2,
           "content": "No",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 4
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Yes",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 4
+        },
+        {
+          "id": 2,
+          "content": "No",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 4
         }
       ]
     },
@@ -101,22 +208,51 @@
       "questionIndex": 4,
       "questionType": "Single Choice",
       "content": "What is an annotated bibliography?",
-      "explanation": "It is a list of articles related to your topic, and it summarizes and evaluates these.).",
+      "explanation": "Annotated bibliography bao gồm danh sách tài liệu liên quan nhưng mỗi entry còn có phần annotation giải thích nội dung chính và đánh giá usefulness của source. Nhờ đó, người viết không chỉ biết tài liệu nói gì mà còn biết nó có đáng tin và phù hợp với topic hay không. Danh sách các bài sẽ đọc hoặc các bài của một author không đáp ứng đủ hai nhiệm vụ này.",
       "answers": [
         {
           "id": 1,
           "content": "It is a list of articles related to your topic, and it summarizes and evaluates these.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 5
         },
         {
           "id": 2,
           "content": "It is a list of articles that you plan to read for your research.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 5
         },
         {
           "id": 3,
           "content": "It is a list of articles by one author who is an expert on your topic.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 5
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "It is a list of articles related to your topic, and it summarizes and evaluates these.",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 5
+        },
+        {
+          "id": 2,
+          "content": "It is a list of articles that you plan to read for your research.",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 5
+        },
+        {
+          "id": 3,
+          "content": "It is a list of articles by one author who is an expert on your topic.",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 5
         }
       ]
     },
@@ -125,32 +261,79 @@
       "questionIndex": 5,
       "questionType": "Single Choice",
       "content": "All of the following are questions to ask when determining the reliability of a source EXCEPT which one?",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'How long is the source?'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Đánh giá reliability của source cần xem xét ai là author, thời điểm công bố, purpose và possible bias vì những thông tin đó tác động đến authority và objectivity. How long is the source chỉ phản ánh độ dài trình bày, không xác nhận evidence có chính xác hay lập luận có đáng tin. Một bài ngắn vẫn có thể chất lượng, trong khi tài liệu dài vẫn có thể thiếu cơ sở.",
       "answers": [
         {
           "id": 1,
           "content": "Who wrote the source?",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 6
         },
         {
           "id": 2,
           "content": "What is the date of the source?",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 6
         },
         {
           "id": 3,
           "content": "What is the purpose of the source?",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 6
         },
         {
           "id": 4,
           "content": "How long is the source?",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 6
         },
         {
           "id": 5,
           "content": "Is the source biased?",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 6
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Who wrote the source?",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 6
+        },
+        {
+          "id": 2,
+          "content": "What is the date of the source?",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 6
+        },
+        {
+          "id": 3,
+          "content": "What is the purpose of the source?",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 6
+        },
+        {
+          "id": 4,
+          "content": "How long is the source?",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 6
+        },
+        {
+          "id": 5,
+          "content": "Is the source biased?",
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 6
         }
       ]
     },
@@ -159,17 +342,37 @@
       "questionIndex": 6,
       "questionType": "Single Choice",
       "content": "Is this word appropriate for an academic essay? \"y'all\"",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'No'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Y’all là contraction gắn với regional speech và giao tiếp thân mật, nên có thể làm academic tone trở nên quá informal. Bài luận hướng đến audience rộng thường dùng words không phụ thuộc dialect để giữ sự rõ ràng và chuyên nghiệp. Tùy ngữ cảnh, people hoặc you viết đầy đủ sẽ phù hợp hơn với formal essay.",
       "answers": [
         {
           "id": 1,
           "content": "Yes",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 7
         },
         {
           "id": 2,
           "content": "No",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 7
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Yes",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 7
+        },
+        {
+          "id": 2,
+          "content": "No",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 7
         }
       ]
     },
@@ -178,22 +381,51 @@
       "questionIndex": 7,
       "questionType": "Single Choice",
       "content": "Which of the following is the most academic kind of source?",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'library databases'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Library databases được tổ chức để truy cập peer-reviewed articles, scholarly books và chuyên ngành publications kèm metadata hỗ trợ sàng lọc. Những nguồn này thường trải qua quy trình biên tập hoặc phản biện, tạo nền tảng tốt hơn cho academic argument. Popular và news sources có thể hữu ích cho bối cảnh đương thời nhưng không phải lựa chọn học thuật nhất.",
       "answers": [
         {
           "id": 1,
           "content": "popular sources",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 8
         },
         {
           "id": 2,
           "content": "news sources",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 8
         },
         {
           "id": 3,
           "content": "library databases",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 8
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "popular sources",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 8
+        },
+        {
+          "id": 2,
+          "content": "news sources",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 8
+        },
+        {
+          "id": 3,
+          "content": "library databases",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 8
         }
       ]
     },
@@ -202,27 +434,65 @@
       "questionIndex": 8,
       "questionType": "Single Choice",
       "content": "Response rates can be increased through the adoption of ______ to research participants.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'Incentives'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Incentives như khoản bồi dưỡng nhỏ hoặc quà tặng hợp lý giúp participants thấy thời gian bỏ ra được ghi nhận và có động lực hoàn thành survey. Nếu áp dụng minh bạch, chúng làm giảm nonresponse mà không thay thế informed consent. Questionnaires là phương tiện hỏi, còn suggestions hay promises không chỉ một biện pháp chuẩn để nâng response rate.",
       "answers": [
         {
           "id": 1,
           "content": "Questionnaires",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 9
         },
         {
           "id": 2,
           "content": "Incentives",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 9
         },
         {
           "id": 3,
           "content": "Promises",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 9
         },
         {
           "id": 4,
           "content": "Suggestions",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 9
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Questionnaires",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 9
+        },
+        {
+          "id": 2,
+          "content": "Incentives",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 9
+        },
+        {
+          "id": 3,
+          "content": "Promises",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 9
+        },
+        {
+          "id": 4,
+          "content": "Suggestions",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 9
         }
       ]
     },
@@ -231,17 +501,37 @@
       "questionIndex": 9,
       "questionType": "Single Choice",
       "content": "Qualitative research is popular in market research due to the fact that there is no better way to understand the in-depth motivations and feelings of consumers.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'True'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Qualitative market research khai thác cách consumers hiểu trải nghiệm, diễn tả needs và hình thành motivations qua dữ liệu mở. Các techniques như in-depth interview hoặc focus group cho phép researcher follow up để làm rõ feelings mà bảng số liệu khó nắm bắt. Chính chiều sâu diễn giải này làm phát biểu về giá trị của qualitative research là hợp lý.",
       "answers": [
         {
           "id": 1,
           "content": "True",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10
         },
         {
           "id": 2,
           "content": "False",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 10
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 10
         }
       ]
     },
@@ -250,27 +540,65 @@
       "questionIndex": 10,
       "questionType": "Single Choice",
       "content": "A well-developed research instrument can enhance the response rate and reduce ______ to participate in the research study.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'Refusals'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Một research instrument có wording rõ, layout dễ theo dõi và thời lượng hợp lý giảm cognitive burden cho người được mời. Khi participant hiểu nhanh nội dung và không cảm thấy phiền hà, họ ít từ chối tham gia hoặc bỏ dở. Vì thế well-developed questionnaire giúp giảm refusals đồng thời có thể cải thiện response rate.",
       "answers": [
         {
           "id": 1,
           "content": "Refusals",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 11
         },
         {
           "id": 2,
           "content": "Willingness",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 11
         },
         {
           "id": 3,
           "content": "Follow-ups",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 11
         },
         {
           "id": 4,
           "content": "Suggestions",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 11
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Refusals",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 11
+        },
+        {
+          "id": 2,
+          "content": "Willingness",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 11
+        },
+        {
+          "id": 3,
+          "content": "Follow-ups",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 11
+        },
+        {
+          "id": 4,
+          "content": "Suggestions",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 11
         }
       ]
     },
@@ -279,27 +607,65 @@
       "questionIndex": 11,
       "questionType": "Single Choice",
       "content": "Survey approaches are based upon the design and development of well ______ questionnaires. Key informants may be asked several questions with respect to their intentions, motivations, attitudes, demographic and lifestyle characteristics among others. The questions may be asked verbally in writing or through a remote device (e.g., laptop) and the responses may be collected through these ways.",
-      "explanation": "Trong Trí tuệ nhân tạo (AID301c), đáp án đúng là 'Structured'. Nguyên lý này thuộc kiến thức nền tảng về Học máy (Machine Learning) và toán học ứng dụng.",
+      "explanation": "Structured questionnaire sắp xếp wording, sequence và response formats theo khuôn mẫu nhất quán cho toàn bộ key informants. Điều này cho phép cùng câu hỏi được hỏi qua spoken, written hoặc remote device mà vẫn dễ coding và so sánh dữ liệu. Standardised nhấn vào tính thống nhất nói chung, nhưng structured mô tả trực tiếp đặc tính thiết kế được yêu cầu ở đây.",
       "answers": [
         {
           "id": 1,
           "content": "Standardised",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 12
         },
         {
           "id": 2,
           "content": "Structured",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 12
         },
         {
           "id": 3,
           "content": "Arranged",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 12
         },
         {
           "id": 4,
           "content": "Directed",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 12
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Standardised",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 12
+        },
+        {
+          "id": 2,
+          "content": "Structured",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 12
+        },
+        {
+          "id": 3,
+          "content": "Arranged",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 12
+        },
+        {
+          "id": 4,
+          "content": "Directed",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 12
         }
       ]
     },
@@ -308,27 +674,65 @@
       "questionIndex": 12,
       "questionType": "Single Choice",
       "content": "______ focus on electronic devices which automatically record behavior and are supplemented by a diary. Such data are used for creating media programs on air time and developing viewer profiles.",
-      "explanation": "Trong Trí tuệ nhân tạo (AID301c), đáp án đúng là 'Diary media panels'. Nguyên lý này thuộc kiến thức nền tảng về Học máy (Machine Learning) và toán học ứng dụng.",
+      "explanation": "Electronic media panels dựa vào electronic devices để tự động record viewing hoặc listening behavior, sau đó dùng diary để bổ sung chi tiết bối cảnh. Dữ liệu thu được có thể hỗ trợ phân tích audience, xây dựng viewer profiles và quyết định air time cho media programs. Focus groups hay interviews không có cơ chế đo hành vi tự động nên không khớp mô tả.",
       "answers": [
         {
           "id": 1,
-          "content": "Diary media panels",
-          "isCorrect": true
+          "content": "Electronic media panels",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 13
         },
         {
           "id": 2,
           "content": "Focus groups",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 13
         },
         {
           "id": 3,
           "content": "Interviews",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 13
         },
         {
           "id": 4,
           "content": "Discussions",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 13
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Electronic media panels",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 13
+        },
+        {
+          "id": 2,
+          "content": "Focus groups",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 13
+        },
+        {
+          "id": 3,
+          "content": "Interviews",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 13
+        },
+        {
+          "id": 4,
+          "content": "Discussions",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 13
         }
       ]
     },
@@ -337,27 +741,65 @@
       "questionIndex": 13,
       "questionType": "Single Choice",
       "content": "______ refer to organizations which gather and sell pools of data and information which are developed to address information requirements and needs.",
-      "explanation": "Theo tiêu chuẩn thiết kế Web & UI/UX (WDU202c), đáp án chuẩn xác là 'Syndicated sources'. Quy tắc này tuân thủ nguyên lý thiết kế giao diện hiện đại và tối ưu trải nghiệm người dùng.",
+      "explanation": "Syndicated sources là các organizations tạo ra pools of data có thể bán cho nhiều users thay vì thu thập độc quyền cho một client. Họ đáp ứng nhu cầu thông tin chung bằng cách chuẩn hóa và đóng gói dữ liệu nghiên cứu thành dịch vụ. Data, texts và analyses là sản phẩm hoặc thành phần, không phải tên gọi của các tổ chức bán information pools.",
       "answers": [
         {
           "id": 1,
           "content": "Data",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 14
         },
         {
           "id": 2,
           "content": "Texts",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 14
         },
         {
           "id": 3,
           "content": "Syndicated sources",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 14
         },
         {
           "id": 4,
           "content": "Analyses",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 14
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Data",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 14
+        },
+        {
+          "id": 2,
+          "content": "Texts",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 14
+        },
+        {
+          "id": 3,
+          "content": "Syndicated sources",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 14
+        },
+        {
+          "id": 4,
+          "content": "Analyses",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 14
         }
       ]
     },
@@ -366,27 +808,65 @@
       "questionIndex": 14,
       "questionType": "Single Choice",
       "content": "A/An ______ scale is a figurative labeling scheme in which numbers serve as labels or tags in order to identify and classify objects.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'Nominal'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Nominal scale gán numbers làm tags để nhận diện category, ví dụ mã khu vực hoặc nhóm đối tượng, mà không biểu thị thứ bậc. Không thể suy ra code 2 nhiều hơn hoặc tốt hơn code 1 chỉ từ nhãn này. Vai trò classification thuần túy giúp phân biệt nominal với ordinal ranking, interval distance và ratio zero.",
       "answers": [
         {
           "id": 1,
           "content": "Nominal",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 15
         },
         {
           "id": 2,
           "content": "Ordinal",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 15
         },
         {
           "id": 3,
           "content": "Ratio",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 15
         },
         {
           "id": 4,
           "content": "Interval",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 15
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Nominal",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 15
+        },
+        {
+          "id": 2,
+          "content": "Ordinal",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 15
+        },
+        {
+          "id": 3,
+          "content": "Ratio",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 15
+        },
+        {
+          "id": 4,
+          "content": "Interval",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 15
         }
       ]
     },
@@ -395,27 +875,65 @@
       "questionIndex": 15,
       "questionType": "Single Choice",
       "content": "In a survey questionnaire, the vast majority of questions are ______ responses that require the respondent to select the answer from a prearranged set of responses.",
-      "explanation": "Theo tiêu chuẩn thiết kế Web & UI/UX (WDU202c), đáp án chuẩn xác là 'Fixed'. Quy tắc này tuân thủ nguyên lý thiết kế giao diện hiện đại và tối ưu trải nghiệm người dùng.",
+      "explanation": "Fixed responses yêu cầu respondent chọn trong một tập alternatives đã được thiết kế trước, thay vì viết câu trả lời tự do. Cách làm này giúp survey xử lý số lượng lớn participants bằng coding và statistical comparison nhất quán. Easy, obvious và obscure chỉ mô tả cảm nhận về câu hỏi, không thể hiện việc response set đã được chuẩn bị sẵn.",
       "answers": [
         {
           "id": 1,
           "content": "Fixed",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 16
         },
         {
           "id": 2,
           "content": "Obscure",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 16
         },
         {
           "id": 3,
           "content": "Easy",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 16
         },
         {
           "id": 4,
           "content": "Obvious",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 16
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Fixed",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 16
+        },
+        {
+          "id": 2,
+          "content": "Obscure",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 16
+        },
+        {
+          "id": 3,
+          "content": "Easy",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 16
+        },
+        {
+          "id": 4,
+          "content": "Obvious",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 16
         }
       ]
     },
@@ -424,27 +942,65 @@
       "questionIndex": 16,
       "questionType": "Single Choice",
       "content": "Gathered market research data should be integrated with other research data coming from both ______ and external sources to make the most of their use and to make more confident strategic decision-making.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'Internal'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Internal sources như sales reports, customer records hoặc operational data cung cấp thông tin doanh nghiệp có sẵn để đặt cạnh market research findings. Khi kết hợp với external sources, organization có thể hiểu segments sâu hơn và ra quyết định strategic chắc chắn hơn. Vế sau đã nhắc external, nên từ đối ứng cần là internal chứ không phải mixed hay experimental.",
       "answers": [
         {
           "id": 1,
           "content": "Internal",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 17
         },
         {
           "id": 2,
           "content": "External",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 17
         },
         {
           "id": 3,
           "content": "Mixed",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 17
         },
         {
           "id": 4,
           "content": "Experimental",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 17
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Internal",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 17
+        },
+        {
+          "id": 2,
+          "content": "External",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 17
+        },
+        {
+          "id": 3,
+          "content": "Mixed",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 17
+        },
+        {
+          "id": 4,
+          "content": "Experimental",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 17
         }
       ]
     },
@@ -453,27 +1009,65 @@
       "questionIndex": 17,
       "questionType": "Single Choice",
       "content": "______ scale is a scale where the numbers used to rank objects, such as numerically equal distances on the scale, demonstrate equal distances in the attribute being measured.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'Interval'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Interval scale thể hiện equal distances giữa các points, nên chênh lệch từ 10 đến 20 mang ý nghĩa cùng loại với chênh lệch từ 30 đến 40. Tuy nhiên, zero trên interval scale không phải absence tuyệt đối của attribute, vì vậy phép ratio như “gấp đôi” không luôn hợp lệ. Đây là đặc tính tách interval khỏi ordinal và ratio measurement.",
       "answers": [
         {
           "id": 1,
           "content": "Interval",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 18
         },
         {
           "id": 2,
           "content": "Nominal",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 18
         },
         {
           "id": 3,
           "content": "Ordinal",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 18
         },
         {
           "id": 4,
           "content": "Ratio",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 18
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Interval",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 18
+        },
+        {
+          "id": 2,
+          "content": "Nominal",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 18
+        },
+        {
+          "id": 3,
+          "content": "Ordinal",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 18
+        },
+        {
+          "id": 4,
+          "content": "Ratio",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 18
         }
       ]
     },
@@ -482,17 +1076,37 @@
       "questionIndex": 18,
       "questionType": "Single Choice",
       "content": "The combination of survey data and databases helps the organization identify the nature and scope of different customer segments, understand the nature of the factors that influence the needs of customer groups, and reflect on best practices regarding target market decisions.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'True'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Survey data làm rõ attitudes, preferences và intentions do customers tự báo cáo, trong khi database có thể cung cấp history giao dịch hoặc contact patterns. Ghép hai loại information giúp organization xác định customer segments, yếu tố ảnh hưởng đến needs và lựa chọn target market có cơ sở hơn. Vì thế nhận định về tác dụng của combination là đúng.",
       "answers": [
         {
           "id": 1,
           "content": "True",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 19
         },
         {
           "id": 2,
           "content": "False",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 19
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 19
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 19
         }
       ]
     },
@@ -501,17 +1115,37 @@
       "questionIndex": 19,
       "questionType": "Single Choice",
       "content": "The individual one-to-one interaction offers the interviewee the opportunity to be the focus of attention and to feel that their feelings and point of view are important and they are really important for the research project.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'True'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Individual one-to-one interaction cho interviewee không gian tập trung để trình bày feelings và point of view mà ít bị cạnh tranh bởi ý kiến người khác. Interviewer có thể lắng nghe chủ động, hỏi tiếp và thể hiện rằng contribution của họ quan trọng với project. Sự chú ý cá nhân hóa này thường tạo trust và khuyến khích dữ liệu sâu hơn.",
       "answers": [
         {
           "id": 1,
           "content": "True",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 20
         },
         {
           "id": 2,
           "content": "False",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 20
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 20
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 20
         }
       ]
     },
@@ -520,27 +1154,65 @@
       "questionIndex": 20,
       "questionType": "Single Choice",
       "content": "Mail diary panels refer to information that comes from households, and such information is offered for an extended period of time. In this vein, the key informants are required to record behavior as it takes place.",
-      "explanation": "Theo tiêu chuẩn thiết kế Web & UI/UX (WDU202c), đáp án chuẩn xác là 'Mail diary panels'. Quy tắc này tuân thủ nguyên lý thiết kế giao diện hiện đại và tối ưu trải nghiệm người dùng.",
+      "explanation": "Mail diary panels thu thập records từ households trong một extended period và yêu cầu key informants ghi behavior khi nó xảy ra. Tính liên tục cho phép theo dõi thay đổi thói quen theo thời gian, thay vì chỉ lấy một câu trả lời hồi tưởng tại một thời điểm. Đây là đặc điểm của diary panel, không phải audit hay industrial service.",
       "answers": [
         {
           "id": 1,
           "content": "Syndicated services",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 21
         },
         {
           "id": 2,
           "content": "Mail diary panels",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 21
         },
         {
           "id": 3,
           "content": "Industrial services",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 21
         },
         {
           "id": 4,
           "content": "Audit services",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 21
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Syndicated services",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 21
+        },
+        {
+          "id": 2,
+          "content": "Mail diary panels",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 21
+        },
+        {
+          "id": 3,
+          "content": "Industrial services",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 21
+        },
+        {
+          "id": 4,
+          "content": "Audit services",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 21
         }
       ]
     },
@@ -549,27 +1221,65 @@
       "questionIndex": 21,
       "questionType": "Single Choice",
       "content": "The ______ scale consists of a number of statements that communicate a favorable or unfavorable attitude toward the concept under investigation.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'Likert'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Likert scale xây dựng một loạt statements về concept đang xét, mỗi statement thể hiện orientation favorable hoặc unfavorable. Respondent đánh dấu mức agree–disagree để cho biết strength của attitude, nhờ đó researcher có thể lượng hóa phản hồi. Semantic differential dùng bipolar adjectives, còn Stapel dùng single adjective với numeric scale nên khác cấu trúc này.",
       "answers": [
         {
           "id": 1,
           "content": "Stapel",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 22
         },
         {
           "id": 2,
           "content": "Semantic differential",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 22
         },
         {
           "id": 3,
           "content": "Ordinal",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 22
         },
         {
           "id": 4,
           "content": "Likert",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 22
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Stapel",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 22
+        },
+        {
+          "id": 2,
+          "content": "Semantic differential",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 22
+        },
+        {
+          "id": 3,
+          "content": "Ordinal",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 22
+        },
+        {
+          "id": 4,
+          "content": "Likert",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 22
         }
       ]
     },
@@ -578,27 +1288,65 @@
       "questionIndex": 22,
       "questionType": "Single Choice",
       "content": "The research can be classified as ______ or ______ based upon whether the objective of the research is known to the respondents.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'Direct or indirect'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Direct research cho respondents biết objective đang được nghiên cứu, còn indirect research không công khai đầy đủ mục tiêu nhằm tránh response bị điều chỉnh theo ý người tham gia. Sự phân biệt này đặt trọng tâm ở mức độ awareness về research objective, không phải fixed hoặc structured format. Vì thế direct–indirect trả lời chính xác tiêu chí phân loại của câu hỏi.",
       "answers": [
         {
           "id": 1,
           "content": "Fixed or changing",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 23
         },
         {
           "id": 2,
           "content": "Standardised or random",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 23
         },
         {
           "id": 3,
           "content": "Structured or unstructured",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 23
         },
         {
           "id": 4,
           "content": "Direct or indirect",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 23
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Fixed or changing",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 23
+        },
+        {
+          "id": 2,
+          "content": "Standardised or random",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 23
+        },
+        {
+          "id": 3,
+          "content": "Structured or unstructured",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 23
+        },
+        {
+          "id": 4,
+          "content": "Direct or indirect",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 23
         }
       ]
     },
@@ -607,32 +1355,79 @@
       "questionIndex": 23,
       "questionType": "Single Choice",
       "content": "Which of the following best describes the nature of a scientific theory? (Choose one)",
-      "explanation": "Is valid until further findings disprove it.).",
+      "explanation": "Scientific theory là explanation có căn cứ evidence và có khả năng được kiểm tra bằng observations hoặc experiments mới. Nó có giá trị trong phạm vi evidence hiện có nhưng có thể bị revised hoặc rejected khi further findings mâu thuẫn. Do đó theory không là absolute truth, không cần majority vote và không được bảo đảm unfalsifiable khi công bố.",
       "answers": [
         {
           "id": 1,
           "content": "Must always be described as a set of mathematical formulae.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 24
         },
         {
           "id": 2,
           "content": "Is valid if a majority vote of researchers approves it.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 24
         },
         {
           "id": 3,
           "content": "Must be stated as an absolute truth. It is guaranteed that it will never be falsified by further experiments.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 24
         },
         {
           "id": 4,
           "content": "Is guaranteed to be unfalsifiable when it is published.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 24
         },
         {
           "id": 5,
           "content": "Is valid until further findings disprove it.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 4,
+          "question_target_id": 24
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Must always be described as a set of mathematical formulae.",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 24
+        },
+        {
+          "id": 2,
+          "content": "Is valid if a majority vote of researchers approves it.",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 24
+        },
+        {
+          "id": 3,
+          "content": "Must be stated as an absolute truth. It is guaranteed that it will never be falsified by further experiments.",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 24
+        },
+        {
+          "id": 4,
+          "content": "Is guaranteed to be unfalsifiable when it is published.",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 24
+        },
+        {
+          "id": 5,
+          "content": "Is valid until further findings disprove it.",
+          "is_correct": true,
+          "index_order": 4,
+          "question_target_id": 24
         }
       ]
     },
@@ -641,32 +1436,79 @@
       "questionIndex": 24,
       "questionType": "Single Choice",
       "content": "Which of the following statements about the distinction between basic and applied research are acceptable?",
-      "explanation": "The spectrum between basic and applied research is continuous, and a researcher may engage in both kinds of research during his/her work.).",
+      "explanation": "Basic và applied research khác nhau về mức độ nhấn vào understanding cơ bản hay practical application, nhưng ranh giới giữa chúng không tuyệt đối. Một researcher có thể bắt đầu từ theoretical problem rồi tham gia project ứng dụng, hoặc ngược lại. Mô hình spectrum liên tục phản ánh đúng sự chuyển tiếp này, thay vì coi applied research kém giá trị hoặc buộc chuyên môn hóa vĩnh viễn.",
       "answers": [
         {
           "id": 1,
           "content": "The spectrum between basic and applied research is continuous, and a researcher may engage in both kinds of research during his/her work.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 25
         },
         {
           "id": 2,
           "content": "Applied research is a less valuable (and prestigious) kind of research than basic research.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 25
         },
         {
           "id": 3,
           "content": "Basic research inevitably leads to discoveries that can then be transformed by applied research into practical industrial innovations.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 25
         },
         {
           "id": 4,
           "content": "Basic research only requires \"paper and pencil.\" No special equipment is needed.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 25
         },
         {
           "id": 5,
           "content": "Basic research is so fundamentally different from applied research that a researcher has to specialize and choose between the two upfront.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 25
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "The spectrum between basic and applied research is continuous, and a researcher may engage in both kinds of research during his/her work.",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 25
+        },
+        {
+          "id": 2,
+          "content": "Applied research is a less valuable (and prestigious) kind of research than basic research.",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 25
+        },
+        {
+          "id": 3,
+          "content": "Basic research inevitably leads to discoveries that can then be transformed by applied research into practical industrial innovations.",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 25
+        },
+        {
+          "id": 4,
+          "content": "Basic research only requires \"paper and pencil.\" No special equipment is needed.",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 25
+        },
+        {
+          "id": 5,
+          "content": "Basic research is so fundamentally different from applied research that a researcher has to specialize and choose between the two upfront.",
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 25
         }
       ]
     },
@@ -675,32 +1517,79 @@
       "questionIndex": 25,
       "questionType": "Single Choice",
       "content": "Among the following statements, which properly describes the scientific method, originated in the 17th century by scientists like Galileo, Newton, and others.",
-      "explanation": "The method consists of observing a natural phenomenon under study, postulating a theory that explains it, and devising carefully chosen experiments to confirm or disprove the theory.).",
+      "explanation": "Scientific method quan sát phenomenon, postulate một theory để giải thích, rồi thiết kế carefully chosen experiments nhằm kiểm tra hoặc bác bỏ theory. Thử nghiệm phải gắn với prediction có thể đánh giá, không phải random experiments hay hoạt động thuần lý thuyết. Ngay cả khi evidence ủng hộ, kết luận vẫn mở cho phản biện và evidence mới thay vì thành undisputable truth.",
       "answers": [
         {
           "id": 1,
           "content": "The method requires explaining the natural phenomenon under study avoiding the use of mathematics.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 26
         },
         {
           "id": 2,
           "content": "The method consists of observing a natural phenomenon under study, postulating a theory that explains it, and devising carefully chosen experiments to confirm or disprove the theory.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 26
         },
         {
           "id": 3,
           "content": "The method is based on validation of a theory by randomly generated experiments.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 26
         },
         {
           "id": 4,
           "content": "The method is purely theoretical, and does not require any experiments.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 26
         },
         {
           "id": 5,
           "content": "The method assures that a certain theory explaining a natural phenomenon is valid (i.e., it is an undisputable truth) after carefully chosen experiments confirm it.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 26
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "The method requires explaining the natural phenomenon under study avoiding the use of mathematics.",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 26
+        },
+        {
+          "id": 2,
+          "content": "The method consists of observing a natural phenomenon under study, postulating a theory that explains it, and devising carefully chosen experiments to confirm or disprove the theory.",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 26
+        },
+        {
+          "id": 3,
+          "content": "The method is based on validation of a theory by randomly generated experiments.",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 26
+        },
+        {
+          "id": 4,
+          "content": "The method is purely theoretical, and does not require any experiments.",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 26
+        },
+        {
+          "id": 5,
+          "content": "The method assures that a certain theory explaining a natural phenomenon is valid (i.e., it is an undisputable truth) after carefully chosen experiments confirm it.",
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 26
         }
       ]
     },
@@ -709,32 +1598,79 @@
       "questionIndex": 26,
       "questionType": "Multiple Choice",
       "content": "Consider an algorithm that is supposed to find all possible occurrences in a text of person's names. (select 02 correct answers)",
-      "explanation": "The algorithm may find a name that is not a person's name and may fail to find the occurrence of certain person's names. In this case the algorithm can generate both false positives and false negatives; E: The algorithm finds a name that is not a person's name. This is a false positive.).",
+      "explanation": "Một false positive xuất hiện khi system nhận diện nhầm chuỗi không phải person’s name thành tên người; false negative là trường hợp bỏ sót một tên thật. Algorithm xấp xỉ có thể đồng thời mắc cả hai errors, nhưng điều đó không tự động làm nó unacceptable nếu hiệu năng vẫn đủ cho mục tiêu sử dụng. Hai mệnh đề được chọn mô tả đúng sự kết hợp errors và định nghĩa false positive.",
       "answers": [
         {
           "id": 1,
           "content": "The algorithm finds a name that is not a person's name. This is a false negative.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 27
         },
         {
           "id": 2,
           "content": "The algorithm does not find the occurrence of certain person's names. This is a false positive.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 27
         },
         {
           "id": 3,
           "content": "The algorithm may both find a name that is not a person's name and may fail to find the occurrence of certain person's names. In this case the algorithm is simply an unacceptable approximation.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 27
         },
         {
           "id": 4,
           "content": "The algorithm may find a name that is not a person's name and may fail to find the occurrence of certain person's names. In this case the algorithm can generate both false positives and false negatives.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 27
         },
         {
           "id": 5,
           "content": "The algorithm finds a name that is not a person's name. This is a false positive.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 4,
+          "question_target_id": 27
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "The algorithm finds a name that is not a person's name. This is a false negative.",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 27
+        },
+        {
+          "id": 2,
+          "content": "The algorithm does not find the occurrence of certain person's names. This is a false positive.",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 27
+        },
+        {
+          "id": 3,
+          "content": "The algorithm may both find a name that is not a person's name and may fail to find the occurrence of certain person's names. In this case the algorithm is simply an unacceptable approximation.",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 27
+        },
+        {
+          "id": 4,
+          "content": "The algorithm may find a name that is not a person's name and may fail to find the occurrence of certain person's names. In this case the algorithm can generate both false positives and false negatives.",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 27
+        },
+        {
+          "id": 5,
+          "content": "The algorithm finds a name that is not a person's name. This is a false positive.",
+          "is_correct": true,
+          "index_order": 4,
+          "question_target_id": 27
         }
       ]
     },
@@ -743,32 +1679,79 @@
       "questionIndex": 27,
       "questionType": "Single Choice",
       "content": "What is a null hypothesis? Tick the correct answer.",
-      "explanation": "Hypothesis framed in a negative form, which researchers try to reject to confirm a theory.).",
+      "explanation": "Null hypothesis H₀ thường phát biểu rằng không có effect, relationship hoặc difference đáng kể để làm baseline cho statistical test. Researcher cố gắng thu thập evidence đủ mạnh để reject H₀ nhằm ủng hộ explanation thay thế; không bác bỏ không đồng nghĩa H₀ đã được chứng minh đúng. Vì vậy negative framing trong phương án phản ánh đúng vai trò kiểm định của null hypothesis.",
       "answers": [
         {
           "id": 1,
           "content": "An obviously wrong hypothesis that does not explain a certain phenomenon.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 28
         },
         {
           "id": 2,
           "content": "Hypothesis made by an inexperienced scientist.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 28
         },
         {
           "id": 3,
           "content": "No hypothesis made.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 28
         },
         {
           "id": 4,
           "content": "Hypothesis that further experiments disprove.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 28
         },
         {
           "id": 5,
           "content": "Hypothesis framed in a negative form, which researchers try to reject to confirm a theory.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 4,
+          "question_target_id": 28
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "An obviously wrong hypothesis that does not explain a certain phenomenon.",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 28
+        },
+        {
+          "id": 2,
+          "content": "Hypothesis made by an inexperienced scientist.",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 28
+        },
+        {
+          "id": 3,
+          "content": "No hypothesis made.",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 28
+        },
+        {
+          "id": 4,
+          "content": "Hypothesis that further experiments disprove.",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 28
+        },
+        {
+          "id": 5,
+          "content": "Hypothesis framed in a negative form, which researchers try to reject to confirm a theory.",
+          "is_correct": true,
+          "index_order": 4,
+          "question_target_id": 28
         }
       ]
     },
@@ -777,22 +1760,51 @@
       "questionIndex": 28,
       "questionType": "Single Choice",
       "content": "You are asked to review a survey paper. In which of the following dimensions you are not expecting the paper to be particularly strong? select one.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'Originality'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Survey paper có nhiệm vụ review, organize và synthesize các studies đã công bố, nên strength thường nằm ở coverage, rigor hoặc ý nghĩa của synthesis. Vì không nhất thiết tạo data hoặc discovery chưa từng có, nó thường ít được kỳ vọng đặc biệt mạnh về originality. Điều này không phủ nhận paper vẫn có thể valuable cho người nghiên cứu khác.",
       "answers": [
         {
           "id": 1,
           "content": "Originality",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 29
         },
         {
           "id": 2,
           "content": "Significance",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 29
         },
         {
           "id": 3,
           "content": "Rigor",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 29
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Originality",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 29
+        },
+        {
+          "id": 2,
+          "content": "Significance",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 29
+        },
+        {
+          "id": 3,
+          "content": "Rigor",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 29
         }
       ]
     },
@@ -801,32 +1813,79 @@
       "questionIndex": 29,
       "questionType": "Multiple Choice",
       "content": "Which of the following statements correctly describe soundness and completeness of a theory? (choose two answers)",
-      "explanation": "A theory for a given phenomenon is sound if all its predictions are possible manifestations of the phenomenon; E: A theory for a given phenomenon is complete if it predicts all the possible manifestations.).",
+      "explanation": "Sound theory chỉ tạo ra predictions có thể là manifestations của phenomenon, nên không bao gồm những dự đoán bất khả; đây là soundness. Complete theory cần predict toàn bộ possible manifestations trong phạm vi phenomenon cần giải thích. Hai tiêu chí bổ sung nhau nhưng không thể thay thế định nghĩa của nhau, nên các mô tả tương ứng là hai lựa chọn cần giữ.",
       "answers": [
         {
           "id": 1,
           "content": "Ideally, a theory should be both sound and complete.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 30
         },
         {
           "id": 2,
           "content": "A theory for a given phenomenon is complete if all its predictions are possible manifestations of the phenomenon.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 30
         },
         {
           "id": 3,
           "content": "A theory for a given phenomenon is sound if all its predictions are possible manifestations of the phenomenon.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 30
         },
         {
           "id": 4,
           "content": "A complete theory for a given phenomenon can predict impossible manifestations.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 30
         },
         {
           "id": 5,
           "content": "A theory for a given phenomenon is complete if it predicts all the possible manifestations.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 4,
+          "question_target_id": 30
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Ideally, a theory should be both sound and complete.",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 30
+        },
+        {
+          "id": 2,
+          "content": "A theory for a given phenomenon is complete if all its predictions are possible manifestations of the phenomenon.",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 30
+        },
+        {
+          "id": 3,
+          "content": "A theory for a given phenomenon is sound if all its predictions are possible manifestations of the phenomenon.",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 30
+        },
+        {
+          "id": 4,
+          "content": "A complete theory for a given phenomenon can predict impossible manifestations.",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 30
+        },
+        {
+          "id": 5,
+          "content": "A theory for a given phenomenon is complete if it predicts all the possible manifestations.",
+          "is_correct": true,
+          "index_order": 4,
+          "question_target_id": 30
         }
       ]
     }

@@ -12,22 +12,51 @@
       "questionIndex": 0,
       "questionType": "Single Choice",
       "content": "Most research papers share all of the following characteristics EXCEPT which one?",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'They are worth 150 pts.'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Một research paper cần đủ độ dài để trình bày câu hỏi, phương pháp, evidence và cách suy luận; vì thế tính phức tạp cũng thường xuất hiện khi nghiên cứu được triển khai nghiêm túc. Trái lại, 150 points là mức chấm do giáo viên hoặc học phần quy định, không nói lên bản chất của một bài nghiên cứu. Thang điểm này không thể khái quát cho mọi research paper.",
       "answers": [
         {
           "id": 1,
           "content": "They have considerable length.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 1
         },
         {
           "id": 2,
           "content": "They are complex.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 1
         },
         {
           "id": 3,
           "content": "They are worth 150 pts.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 1
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "They have considerable length.",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 1
+        },
+        {
+          "id": 2,
+          "content": "They are complex.",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 1
+        },
+        {
+          "id": 3,
+          "content": "They are worth 150 pts.",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 1
         }
       ]
     },
@@ -36,27 +65,65 @@
       "questionIndex": 1,
       "questionType": "Single Choice",
       "content": "Which of the following groups of words is definitely not on the Academic Word List?",
-      "explanation": "trashy, know-it-all, grouchy).",
+      "explanation": "Academic Word List ưu tiên các lexical items có tính khái quát, trang trọng và xuất hiện trong nhiều văn bản đại học. Trashy, know-it-all và grouchy mang sắc thái khẩu ngữ, đánh giá hoặc thân mật nên không phù hợp với academic register. Các nhóm khác gồm những từ trung tính hơn, có thể dùng khi viết mô tả và lập luận học thuật.",
       "answers": [
         {
           "id": 1,
           "content": "error, alter, reject",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 2
         },
         {
           "id": 2,
           "content": "trashy, know-it-all, grouchy",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 2
         },
         {
           "id": 3,
           "content": "capable, display, incorporate",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 2
         },
         {
           "id": 4,
           "content": "locate, remove, specify",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 2
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "error, alter, reject",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 2
+        },
+        {
+          "id": 2,
+          "content": "trashy, know-it-all, grouchy",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 2
+        },
+        {
+          "id": 3,
+          "content": "capable, display, incorporate",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 2
+        },
+        {
+          "id": 4,
+          "content": "locate, remove, specify",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 2
         }
       ]
     },
@@ -65,22 +132,51 @@
       "questionIndex": 2,
       "questionType": "Single Choice",
       "content": "Which of the following is not a reason to use a statistic in your research paper?",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'to make your paper longer'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Một statistic cần làm rõ quy mô, xu hướng hoặc mức độ của hiện tượng để củng cố claim bằng evidence có thể kiểm tra. Thêm số liệu đơn thuần để tăng số trang không tạo thêm giá trị lập luận và dễ làm người đọc mất trọng tâm. Vì vậy độ dài bài viết không phải là mục đích chính đáng để sử dụng statistics.",
       "answers": [
         {
           "id": 1,
           "content": "to support your point",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 3
         },
         {
           "id": 2,
           "content": "some subjects depend on them",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 3
         },
         {
           "id": 3,
           "content": "to make your paper longer",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 3
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "to support your point",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 3
+        },
+        {
+          "id": 2,
+          "content": "some subjects depend on them",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 3
+        },
+        {
+          "id": 3,
+          "content": "to make your paper longer",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 3
         }
       ]
     },
@@ -89,27 +185,65 @@
       "questionIndex": 3,
       "questionType": "Single Choice",
       "content": "What is the purpose of an annotated bibliography?",
-      "explanation": "to help you summarize and evaluate your sources).",
+      "explanation": "Annotated bibliography yêu cầu người viết đọc từng nguồn, tóm tắt ý chính và nhận xét về chất lượng, tính phù hợp hay đóng góp của nguồn đó. Bước evaluation này giúp quyết định tài liệu nào đáng được tích hợp vào literature review hoặc argument sau này. Nó không phải danh mục cho có, cũng không phải công việc bổ sung không mục đích.",
       "answers": [
         {
           "id": 1,
           "content": "to help you develop your research paper",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 4
         },
         {
           "id": 2,
           "content": "to help you think of search terms for your research",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 4
         },
         {
           "id": 3,
           "content": "to give you more work to do when you have a research assignment",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 4
         },
         {
           "id": 4,
           "content": "to help you summarize and evaluate your sources",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 4
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "to help you develop your research paper",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 4
+        },
+        {
+          "id": 2,
+          "content": "to help you think of search terms for your research",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 4
+        },
+        {
+          "id": 3,
+          "content": "to give you more work to do when you have a research assignment",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 4
+        },
+        {
+          "id": 4,
+          "content": "to help you summarize and evaluate your sources",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 4
         }
       ]
     },
@@ -118,27 +252,65 @@
       "questionIndex": 4,
       "questionType": "Single Choice",
       "content": "Which of the following groups of words is definitely not on the Academic Word List?",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'crash, cop, messy'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "AWL hướng tới vốn từ có thể sử dụng trong discourse học thuật, do đó ưu tiên các từ trang trọng và có mức độ khái quát cao. Crash, cop và messy gắn với lời nói thường ngày hoặc informal writing, nên không cùng register với dynamic, prohibit hay identical. Nhận diện sự khác biệt này hỗ trợ người học lựa chọn diction phù hợp cho academic paper.",
       "answers": [
         {
           "id": 1,
           "content": "facilitate, prime, transit",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 5
         },
         {
           "id": 2,
           "content": "crash, cop, messy",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 5
         },
         {
           "id": 3,
           "content": "evolve, generate, alter",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 5
         },
         {
           "id": 4,
           "content": "dynamic, prohibit, identical",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 5
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "facilitate, prime, transit",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 5
+        },
+        {
+          "id": 2,
+          "content": "crash, cop, messy",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 5
+        },
+        {
+          "id": 3,
+          "content": "evolve, generate, alter",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 5
+        },
+        {
+          "id": 4,
+          "content": "dynamic, prohibit, identical",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 5
         }
       ]
     },
@@ -147,27 +319,65 @@
       "questionIndex": 5,
       "questionType": "Single Choice",
       "content": "Which of the following would be the most effective thesis statement for a research paper?",
-      "explanation": "The U.S. government should require that all companies pay men and women the same amount of money for equal work.).",
+      "explanation": "Một thesis statement mạnh cần thể hiện vị trường rõ ràng, xác định được đối tượng của chính sách và có thể được bảo vệ bằng lập luận lẫn nguồn chứng cứ. Đề xuất equal pay cho men và women khi thực hiện equal work đáp ứng các điều kiện đó vì nó nêu một claim cụ thể có thể tranh luận. Những lựa chọn còn lại thiên về nhận xét hiển nhiên hoặc lời kêu gọi quá mơ hồ.",
       "answers": [
         {
           "id": 1,
           "content": "The tooth fairy and Santa Claus are imaginary characters for children.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 6
         },
         {
           "id": 2,
           "content": "The U.S. government should require that all companies pay men and women the same amount of money for equal work.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 6
         },
         {
           "id": 3,
           "content": "It's hotter in the oceans now than it was a few years ago, so something should be done about climate change.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 6
         },
         {
           "id": 4,
           "content": "Terrorism is really awful, so governments should prevent it.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 6
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "The tooth fairy and Santa Claus are imaginary characters for children.",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 6
+        },
+        {
+          "id": 2,
+          "content": "The U.S. government should require that all companies pay men and women the same amount of money for equal work.",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 6
+        },
+        {
+          "id": 3,
+          "content": "It's hotter in the oceans now than it was a few years ago, so something should be done about climate change.",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 6
+        },
+        {
+          "id": 4,
+          "content": "Terrorism is really awful, so governments should prevent it.",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 6
         }
       ]
     },
@@ -176,22 +386,51 @@
       "questionIndex": 6,
       "questionType": "Single Choice",
       "content": "According to the lecture, where is the best place to look for sources for a research paper?",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'library databases'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Library databases tập hợp các journal articles, books và specialized sources đã được thư viện cấp quyền truy cập, thường kèm bộ lọc theo chủ đề, năm và loại tài liệu. Nhờ vậy, người viết dễ kiểm soát academic quality của nguồn hơn so với tìm web phổ thông. Google Scholar có thể hỗ trợ truy vết, nhưng database của library phù hợp hơn làm nơi khởi đầu.",
       "answers": [
         {
           "id": 1,
           "content": "library databases",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 7
         },
         {
           "id": 2,
           "content": "Google Scholar",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 7
         },
         {
           "id": 3,
           "content": "Google",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 7
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "library databases",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 7
+        },
+        {
+          "id": 2,
+          "content": "Google Scholar",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 7
+        },
+        {
+          "id": 3,
+          "content": "Google",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 7
         }
       ]
     },
@@ -200,27 +439,65 @@
       "questionIndex": 7,
       "questionType": "Single Choice",
       "content": "Which of the following is not an appropriate place to use a statistic in your research paper?",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'in the thesis statement'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Thesis statement nên giữ vai trò nêu luận đề bao quát và hướng triển khai, thay vì chứa một con số riêng lẻ chưa có nguồn hoặc interpretation. Statistic hữu ích hơn khi làm introductory hook, evidence cho một point, hoặc được phân tích cùng những dữ liệu liên quan. Đặt số liệu vào thesis khiến central claim dễ bị thu hẹp thành mô tả thiếu lập trường.",
       "answers": [
         {
           "id": 1,
           "content": "in the thesis statement",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 8
         },
         {
           "id": 2,
           "content": "as one of several statistics in a statistics paragraph",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 8
         },
         {
           "id": 3,
           "content": "as a detail to support your own point",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 8
         },
         {
           "id": 4,
           "content": "as a hook in the introduction",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 8
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "in the thesis statement",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 8
+        },
+        {
+          "id": 2,
+          "content": "as one of several statistics in a statistics paragraph",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 8
+        },
+        {
+          "id": 3,
+          "content": "as a detail to support your own point",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 8
+        },
+        {
+          "id": 4,
+          "content": "as a hook in the introduction",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 8
         }
       ]
     },
@@ -229,27 +506,65 @@
       "questionIndex": 8,
       "questionType": "Single Choice",
       "content": "The budget scheduled for research should be considered and, in this vein, if there are limited research resources, more cost-efficient ways of collecting data should be considered, including ______ data collection approaches. Right market research data assist companies in better connecting with their customers and attracting new customers.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'Automated'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Automated data collection dùng các công cụ và quy tắc lặp lại để thu thập dữ liệu nhanh hơn, đặc biệt khi market research phải xử lý nhiều tương tác khách hàng. Giảm thao tác thủ công giúp doanh nghiệp tiết kiệm chi phí trong điều kiện ngân sách hạn chế và cập nhật thông tin thường xuyên. Hiệu quả này phụ thuộc vào việc thiết kế quy trình tự động có kiểm soát chất lượng.",
       "answers": [
         {
           "id": 1,
           "content": "Internal",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 9
         },
         {
           "id": 2,
           "content": "External",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 9
         },
         {
           "id": 3,
           "content": "Automated",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 9
         },
         {
           "id": 4,
           "content": "Manual",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 9
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Internal",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 9
+        },
+        {
+          "id": 2,
+          "content": "External",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 9
+        },
+        {
+          "id": 3,
+          "content": "Automated",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 9
+        },
+        {
+          "id": 4,
+          "content": "Manual",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 9
         }
       ]
     },
@@ -258,27 +573,65 @@
       "questionIndex": 9,
       "questionType": "Single Choice",
       "content": "A ______ is defined as the process of identifying constructive associations, patterns, and trends emerging from accumulated amounts of collected data stored in repositories, through the adoption of pattern recognition and statistical and mathematical approaches.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'Data mining'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Data mining tìm ra correlations, associations, patterns và trends ẩn trong repository dữ liệu bằng các kỹ thuật nhận dạng mẫu, thống kê và toán học. Mục tiêu là rút ra tri thức phục vụ dự báo hoặc quyết định, không chỉ đọc dữ liệu hoặc loại bỏ lỗi dữ liệu. Do đó thuật ngữ này khớp chính xác với chuỗi đặc điểm được mô tả.",
       "answers": [
         {
           "id": 1,
           "content": "Data mining",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10
         },
         {
           "id": 2,
           "content": "Data reading",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 10
         },
         {
           "id": 3,
           "content": "Data analysis",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 10
         },
         {
           "id": 4,
           "content": "Data cleaning",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 10
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Data mining",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10
+        },
+        {
+          "id": 2,
+          "content": "Data reading",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 10
+        },
+        {
+          "id": 3,
+          "content": "Data analysis",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 10
+        },
+        {
+          "id": 4,
+          "content": "Data cleaning",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 10
         }
       ]
     },
@@ -287,27 +640,65 @@
       "questionIndex": 10,
       "questionType": "Single Choice",
       "content": "The development of a ______ scale commences with a concept that should be rated, such as the image of a brand or the quality of a service. The market researcher chooses opposite pairs of words or phrases (for instance, reliable (1) to unreliable (7)), which could be used to capture the concept. As a next step, respondents rate the concept on a scale, which is usually anchored from 1 to 7.",
-      "explanation": "Thuật toán tìm kiếm A* sử dụng hàm đánh giá f(n) = g(n) + h(n), trong đó g(n) là chi phí thực tế từ điểm bắt đầu và h(n) là hàm Heuristic ước tính chi phí đến mục tiêu. Heuristic chuẩn (admissible) không bao giờ ước tính cao hơn chi phí thực.",
+      "explanation": "Semantic differential scale chọn các cặp từ đối lập, ví dụ reliable–unreliable, để người trả lời định vị perception của họ trên continuum thường từ 1 đến 7. Hình thức bipolar này đo cả hướng lẫn cường độ của attitude đối với brand hay service. Nominal và ordinal scale không được xây dựng bằng các cặp adjective đối cực như vậy.",
       "answers": [
         {
           "id": 1,
           "content": "Nominal",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 11
         },
         {
           "id": 2,
           "content": "Semantic differential",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 11
         },
         {
           "id": 3,
           "content": "Ordinal",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 11
         },
         {
           "id": 4,
           "content": "Likert",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 11
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Nominal",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 11
+        },
+        {
+          "id": 2,
+          "content": "Semantic differential",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 11
+        },
+        {
+          "id": 3,
+          "content": "Ordinal",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 11
+        },
+        {
+          "id": 4,
+          "content": "Likert",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 11
         }
       ]
     },
@@ -316,17 +707,37 @@
       "questionIndex": 11,
       "questionType": "Single Choice",
       "content": "\"Non-respondents may be different from respondents in terms of certain demographics such as demographics, personality, and perceptions. In case that the non-respondents differ significantly from respondents, it means that the sample is significantly biased. Increased response rates usually imply lower rates of non-response bias.\" Is the above statement true or false?",
-      "explanation": "Trong Trí tuệ nhân tạo (AID301c), đáp án đúng là 'True'. Nguyên lý này thuộc kiến thức nền tảng về Học máy (Machine Learning) và toán học ứng dụng.",
+      "explanation": "Non-respondents có thể khác respondents về demographics, personality hoặc perceptions; nếu khác biệt đó mang tính hệ thống thì sample thu được bị lệch so với population. Tăng response rate thường làm giảm nguy cơ non-response bias vì có ít trường hợp bị bỏ sót hơn. Do đó mệnh đề nêu đúng mối quan hệ giữa phản hồi thấp và thiên lệch mẫu.",
       "answers": [
         {
           "id": 1,
           "content": "True",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 12
         },
         {
           "id": 2,
           "content": "False",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 12
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 12
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 12
         }
       ]
     },
@@ -335,27 +746,65 @@
       "questionIndex": 12,
       "questionType": "Single Choice",
       "content": "An ______ scale is a ranking scale in which numbers are allocated to objects to demonstrate the degree to which objects have some attributes. It permits identifying whether an object has more or less of an attribute than another object but not how much more or less. An example of such a scale is the ranking of service quality offered by a number of banks.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'Ordinal'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Ordinal scale cho phép xếp objects theo thứ tự nhiều–ít hoặc tốt–kém của một thuộc tính, chẳng hạn rank chất lượng dịch vụ giữa các ngân hàng. Tuy nhiên, thang này không cho biết chênh lệch từ hạng một sang hạng hai lớn bao nhiêu. Ý nghĩa thứ hạng nhưng không có khoảng cách bằng nhau là dấu hiệu phân biệt ordinal với interval và ratio.",
       "answers": [
         {
           "id": 1,
           "content": "Ordinal",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 13
         },
         {
           "id": 2,
           "content": "Ratio",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 13
         },
         {
           "id": 3,
           "content": "Interval",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 13
         },
         {
           "id": 4,
           "content": "Nominal",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 13
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Ordinal",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 13
+        },
+        {
+          "id": 2,
+          "content": "Ratio",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 13
+        },
+        {
+          "id": 3,
+          "content": "Interval",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 13
+        },
+        {
+          "id": 4,
+          "content": "Nominal",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 13
         }
       ]
     },
@@ -364,17 +813,37 @@
       "questionIndex": 13,
       "questionType": "Single Choice",
       "content": "\"Audit services focus on the verification of product movement by investigating physical records or performing inventory analysis. Such data are used to measure sales and assess market share and track the performance of new products or services.\" Is the above statement true or false?",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'True'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Audit services kiểm tra product movement qua physical records, inventory analysis hoặc các chứng từ liên quan đến hàng hóa. Dữ liệu được xác minh giúp đo sales, theo dõi market share và đánh giá hiệu quả của product hoặc service mới. Hoạt động đối chiếu thực tế này đúng với vai trò verification được mô tả trong phát biểu.",
       "answers": [
         {
           "id": 1,
           "content": "True",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 14
         },
         {
           "id": 2,
           "content": "False",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 14
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 14
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 14
         }
       ]
     },
@@ -383,32 +852,79 @@
       "questionIndex": 14,
       "questionType": "Single Choice",
       "content": "______ scale is a comparative scale in which key informants are requested to assign a constant sum of units such as points, euros, or dollars among a set of stimulus objects regarding some criterion.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'Constant sum'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Constant sum scale yêu cầu key informants chia một lượng đơn vị cố định, như 100 points hoặc một khoản tiền, cho nhiều stimulus objects theo một criterion chung. Việc phân bổ nhiều hơn cho một mục đồng thời làm giảm phần có thể cấp cho mục khác, nên thể hiện ưu tiên tương đối rõ ràng. Đây chính là cơ chế của comparative constant-sum measurement.",
       "answers": [
         {
           "id": 1,
           "content": "Ordinal",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 15
         },
         {
           "id": 2,
           "content": "Nominal",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 15
         },
         {
           "id": 3,
           "content": "Semantic differential",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 15
         },
         {
           "id": 4,
           "content": "Likert",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 15
         },
         {
           "id": 5,
           "content": "Constant sum",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 4,
+          "question_target_id": 15
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Ordinal",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 15
+        },
+        {
+          "id": 2,
+          "content": "Nominal",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 15
+        },
+        {
+          "id": 3,
+          "content": "Semantic differential",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 15
+        },
+        {
+          "id": 4,
+          "content": "Likert",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 15
+        },
+        {
+          "id": 5,
+          "content": "Constant sum",
+          "is_correct": true,
+          "index_order": 4,
+          "question_target_id": 15
         }
       ]
     },
@@ -417,27 +933,65 @@
       "questionIndex": 15,
       "questionType": "Single Choice",
       "content": "The success of an in-depth interview depends on the ______ of the interviewer.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'Skills'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "In-depth interviewer cần biết đặt câu hỏi mở, hỏi gợi sâu khi cần, lắng nghe không phán xét và điều chỉnh trình tự trao đổi theo câu trả lời của participant. Những skills này quyết định liệu hidden experiences và motives có được khai thác đầy đủ hay không. Accent, charisma hoặc chỉ có sẵn danh sách questions không thể thay thế năng lực thực hành phỏng vấn.",
       "answers": [
         {
           "id": 1,
           "content": "Skills",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 16
         },
         {
           "id": 2,
           "content": "Accent",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 16
         },
         {
           "id": 3,
           "content": "Questions",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 16
         },
         {
           "id": 4,
           "content": "Charisma",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 16
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Skills",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 16
+        },
+        {
+          "id": 2,
+          "content": "Accent",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 16
+        },
+        {
+          "id": 3,
+          "content": "Questions",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 16
+        },
+        {
+          "id": 4,
+          "content": "Charisma",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 16
         }
       ]
     },
@@ -446,27 +1000,65 @@
       "questionIndex": 16,
       "questionType": "Single Choice",
       "content": "Well-trained researchers can enhance ______ rates and increase conversion and persuasion of key informants.",
-      "explanation": "Thuật toán tìm kiếm A* sử dụng hàm đánh giá f(n) = g(n) + h(n), trong đó g(n) là chi phí thực tế từ điểm bắt đầu và h(n) là hàm Heuristic ước tính chi phí đến mục tiêu. Heuristic chuẩn (admissible) không bao giờ ước tính cao hơn chi phí thực.",
+      "explanation": "Đào tạo giúp researcher giới thiệu nghiên cứu minh bạch, giải đáp băn khoăn, liên hệ vào thời điểm thích hợp và thuyết phục key informants tham gia một cách đạo đức. Các thực hành đó làm tăng số lời mời chuyển thành phản hồi hợp lệ, tức response rates. Percentage hay questionnaire không phải kết quả trực tiếp mà kỹ năng người nghiên cứu được kỳ vọng nâng cao.",
       "answers": [
         {
           "id": 1,
           "content": "Response",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 17
         },
         {
           "id": 2,
           "content": "Percentage",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 17
         },
         {
           "id": 3,
           "content": "Question",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 17
         },
         {
           "id": 4,
           "content": "Questionnaire",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 17
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Response",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 17
+        },
+        {
+          "id": 2,
+          "content": "Percentage",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 17
+        },
+        {
+          "id": 3,
+          "content": "Question",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 17
+        },
+        {
+          "id": 4,
+          "content": "Questionnaire",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 17
         }
       ]
     },
@@ -475,27 +1067,65 @@
       "questionIndex": 17,
       "questionType": "Single Choice",
       "content": "In ______ scale, a single adjective (e.g., user-friendly, high quality) is located in the center of the scale, which usually is a 10-point scale that ranges from +5 to -5. The approach is designed to operationalize the direction and the intensity of the attitudes at the same time.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'Stapel'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Stapel scale đặt một adjective duy nhất, chẳng hạn user-friendly, ở trung tâm và dùng các giá trị từ âm đến dương để biểu thị direction lẫn intensity của attitude. Người trả lời không phải so sánh trực tiếp hai cực tính từ đối lập. Thiết kế single-adjective này làm nó khác semantic differential và các thang Likert hoặc ordinal.",
       "answers": [
         {
           "id": 1,
           "content": "Likert",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 18
         },
         {
           "id": 2,
           "content": "Stapel",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 18
         },
         {
           "id": 3,
           "content": "Ordinal",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 18
         },
         {
           "id": 4,
           "content": "Nominal",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 18
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Likert",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 18
+        },
+        {
+          "id": 2,
+          "content": "Stapel",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 18
+        },
+        {
+          "id": 3,
+          "content": "Ordinal",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 18
+        },
+        {
+          "id": 4,
+          "content": "Nominal",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 18
         }
       ]
     },
@@ -504,27 +1134,65 @@
       "questionIndex": 18,
       "questionType": "Single Choice",
       "content": "A ______ sampling is considered as a two-stage restricted judgemental sampling which is adopted extensively in street interviewing.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'Quota'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Quota sampling xác định trước số người cần thu thập ở từng subgroup rồi interviewer lựa chọn người tiếp cận cho đến khi quota đầy. Quy trình này có hai bước và dựa một phần vào judgement, nên được dùng phổ biến trong street interviewing nhưng không bảo đảm random selection. Nó vì vậy không thuộc probability sampling dù có kiểm soát cơ cấu mẫu.",
       "answers": [
         {
           "id": 1,
           "content": "Random",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 19
         },
         {
           "id": 2,
           "content": "Convenience",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 19
         },
         {
           "id": 3,
           "content": "Quota",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 19
         },
         {
           "id": 4,
           "content": "Probability",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 19
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Random",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 19
+        },
+        {
+          "id": 2,
+          "content": "Convenience",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 19
+        },
+        {
+          "id": 3,
+          "content": "Quota",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 19
+        },
+        {
+          "id": 4,
+          "content": "Probability",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 19
         }
       ]
     },
@@ -533,17 +1201,37 @@
       "questionIndex": 19,
       "questionType": "Single Choice",
       "content": "In-depth interviews can reveal hidden motivations and are considered one of the most popular data collection approaches in qualitative research.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'True'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "In-depth interviews khuyến khích participants diễn giải trải nghiệm bằng ngôn ngữ riêng và cho phép interviewer follow up những điểm quan trọng. Nhờ đó, hidden motivations, meanings và bối cảnh của hành vi có thể được làm rõ sâu hơn survey có cấu trúc. Khả năng đi sâu vào ý nghĩa khiến phương pháp này được dùng rộng rãi trong qualitative research.",
       "answers": [
         {
           "id": 1,
           "content": "True",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 20
         },
         {
           "id": 2,
           "content": "False",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 20
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 20
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 20
         }
       ]
     },
@@ -552,27 +1240,65 @@
       "questionIndex": 20,
       "questionType": "Single Choice",
       "content": "Under the spectrum of a/an ______ case study, the researcher concentrates on an issue or concern and as a next step chooses a bounded case study to depict the case.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'Single instrumental'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Single instrumental case study xuất phát từ một issue cần tìm hiểu, sau đó chọn một bounded case như công cụ để làm sáng tỏ issue đó. Case được quan tâm vì đóng góp cho câu hỏi rộng hơn, không chỉ vì bản thân case có tính độc đáo. Cách kết nối issue–bounded case này phân biệt single instrumental với các nhãn longitudinal, attitudinal hay random.",
       "answers": [
         {
           "id": 1,
           "content": "Longitudinal",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 21
         },
         {
           "id": 2,
           "content": "Attitudinal",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 21
         },
         {
           "id": 3,
           "content": "Single instrumental",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 21
         },
         {
           "id": 4,
           "content": "Random",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 21
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Longitudinal",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 21
+        },
+        {
+          "id": 2,
+          "content": "Attitudinal",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 21
+        },
+        {
+          "id": 3,
+          "content": "Single instrumental",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 21
+        },
+        {
+          "id": 4,
+          "content": "Random",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 21
         }
       ]
     },
@@ -581,27 +1307,65 @@
       "questionIndex": 21,
       "questionType": "Single Choice",
       "content": "The design of a qualitative study commences with broad ______ regarding the qualitative ______ and the theoretical lens which shape and direct the study.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'Assumptions, Inquiry'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Qualitative inquiry được định hình ngay từ những broad assumptions về cách con người tạo nghĩa, cách tri thức được hiểu và cách nghiên cứu viên tiếp cận hiện tượng. Những assumptions này kết hợp với theoretical lens để định hướng design, questions và diễn giải dữ liệu. Vì vậy cặp assumptions–inquiry diễn đạt đúng nền tảng phương pháp luận của qualitative study.",
       "answers": [
         {
           "id": 1,
           "content": "Assumptions, Inquiry",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 22
         },
         {
           "id": 2,
           "content": "Inspirations, Assumptions",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 22
         },
         {
           "id": 3,
           "content": "Dreams, Assumptions",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 22
         },
         {
           "id": 4,
           "content": "Details, Structure",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 22
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Assumptions, Inquiry",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 22
+        },
+        {
+          "id": 2,
+          "content": "Inspirations, Assumptions",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 22
+        },
+        {
+          "id": 3,
+          "content": "Dreams, Assumptions",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 22
+        },
+        {
+          "id": 4,
+          "content": "Details, Structure",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 22
         }
       ]
     },
@@ -610,61 +1374,146 @@
       "questionIndex": 22,
       "questionType": "Single Choice",
       "content": "Qualitative researchers are reluctant to generalise the cases from one context to another because the contexts of the various cases are different. If the intention is to generalise, the qualitative researcher should select ______ cases to be considered in the qualitative study.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'Representative'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Mỗi qualitative case chịu ảnh hưởng mạnh bởi bối cảnh, nên việc generalise tự động từ một setting sang setting khác thường không thuyết phục. Khi vẫn muốn suy rộng, researcher phải chọn representative cases phản ánh các đặc điểm quan trọng của nhóm rộng hơn. Tính representative tạo cơ sở hợp lý hơn cho lập luận về transferability của kết quả.",
       "answers": [
         {
           "id": 1,
           "content": "Internal",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 23
         },
         {
           "id": 2,
           "content": "Representative",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 23
         },
         {
           "id": 3,
           "content": "External",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 23
         },
         {
           "id": 4,
           "content": "Mixed",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 23
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Internal",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 23
+        },
+        {
+          "id": 2,
+          "content": "Representative",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 23
+        },
+        {
+          "id": 3,
+          "content": "External",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 23
+        },
+        {
+          "id": 4,
+          "content": "Mixed",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 23
         }
       ]
     },
     {
       "id": 24,
       "questionIndex": 23,
-      "questionType": "Single Choice",
+      "questionType": "Multiple Choice",
       "content": "This question is about significance. When can a research result be defined as significant?",
-      "explanation": "The research result may be used by other researchers to advance their research.).",
+      "explanation": "Research significance nằm ở ảnh hưởng của finding đối với tri thức hoặc thực hành, chứ không được quyết định bởi kinh phí lớn hay sự bất ngờ. Một kết quả có thể giúp các researchers khác mở rộng công việc tiếp theo, đồng thời có thể cải tiến practical process để giảm cost và tăng performance. Cả academic use lẫn practical improvement đều là biểu hiện của significance.",
       "answers": [
         {
           "id": 1,
           "content": "The research result was not known before.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 24
         },
         {
           "id": 2,
           "content": "The research that produced the result required very substantial funding.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 24
         },
         {
           "id": 3,
           "content": "The research result was unexpected.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 24
         },
         {
           "id": 4,
           "content": "The research result may be used by other researchers to advance their research.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 24
         },
         {
           "id": 5,
           "content": "The research result may lead to an improvement of a certain practical process, which reduces its cost and improves its performance.",
-          "isCorrect": false
+          "is_correct": true,
+          "index_order": 4,
+          "question_target_id": 24
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "The research result was not known before.",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 24
+        },
+        {
+          "id": 2,
+          "content": "The research that produced the result required very substantial funding.",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 24
+        },
+        {
+          "id": 3,
+          "content": "The research result was unexpected.",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 24
+        },
+        {
+          "id": 4,
+          "content": "The research result may be used by other researchers to advance their research.",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 24
+        },
+        {
+          "id": 5,
+          "content": "The research result may lead to an improvement of a certain practical process, which reduces its cost and improves its performance.",
+          "is_correct": true,
+          "index_order": 4,
+          "question_target_id": 24
         }
       ]
     },
@@ -673,32 +1522,79 @@
       "questionIndex": 24,
       "questionType": "Multiple Choice",
       "content": "Deduction vs. induction. Select 3 correct statements:",
-      "explanation": "Modus ponens is a typical deductive inference rule.; C: In deductive inference, the consequences are guaranteed to be true if premises are true.; D: Deductive inferences can be used to generate predictions from a given theory.).",
+      "explanation": "Modus ponens là một deductive rule chuẩn: từ “if P then Q” và P, ta suy ra Q. Với premises đúng và lập luận hợp lệ, conclusion được bảo đảm; cùng logic đó, deduction rút predictions từ theory để đưa đi kiểm tra. Induction khác ở chỗ kết luận của nó chỉ có mức độ hỗ trợ xác suất, không phải necessary conclusion.",
       "answers": [
         {
           "id": 1,
           "content": "In deductive inference, the consequences of true premises must be further validated by experiments before they can be accepted as a truth.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 25
         },
         {
           "id": 2,
           "content": "Modus ponens is a typical deductive inference rule.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 25
         },
         {
           "id": 3,
           "content": "In deductive inference, the consequences are guaranteed to be true if premises are true.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 25
         },
         {
           "id": 4,
           "content": "Deductive inferences can be used to generate predictions from a given theory.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 25
         },
         {
           "id": 5,
           "content": "Inductive inferences always lead to necessary conclusions.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 25
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "In deductive inference, the consequences of true premises must be further validated by experiments before they can be accepted as a truth.",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 25
+        },
+        {
+          "id": 2,
+          "content": "Modus ponens is a typical deductive inference rule.",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 25
+        },
+        {
+          "id": 3,
+          "content": "In deductive inference, the consequences are guaranteed to be true if premises are true.",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 25
+        },
+        {
+          "id": 4,
+          "content": "Deductive inferences can be used to generate predictions from a given theory.",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 25
+        },
+        {
+          "id": 5,
+          "content": "Inductive inferences always lead to necessary conclusions.",
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 25
         }
       ]
     },
@@ -707,32 +1603,79 @@
       "questionIndex": 25,
       "questionType": "Multiple Choice",
       "content": "Which of the following statements about funded research programs are appropriate? (Select 2 correct answers)",
-      "explanation": "A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor.; D: A top-down research program defines precisely the research topics that can be funded and should be addressed by applicants.).",
+      "explanation": "Bottom-up funding cho phép researchers đề xuất bất kỳ topic nào, rồi đánh giá proposal theo originality, significance và rigor. Top-down funding bắt đầu bằng priorities hoặc topics do nhà tài trợ xác định, vì vậy applicants phải giải quyết những nội dung đã giới hạn. Sự khác biệt này phản ánh mức tự do chọn đề tài và định hướng phân bổ research funds.",
       "answers": [
         {
           "id": 1,
           "content": "A bottom-up research program only supports research that is motivated by current, practical needs of industry.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 26
         },
         {
           "id": 2,
           "content": "A top-down research program gives researchers maximum freedom in selecting research topics.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 26
         },
         {
           "id": 3,
           "content": "A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 26
         },
         {
           "id": 4,
           "content": "A top-down research program defines precisely the research topics that can be funded and should be addressed by applicants.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 26
         },
         {
           "id": 5,
           "content": "A top-down research program only funds research that aims at an empirical evaluation in a practical setting of previously achieved theoretical results.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 26
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "A bottom-up research program only supports research that is motivated by current, practical needs of industry.",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 26
+        },
+        {
+          "id": 2,
+          "content": "A top-down research program gives researchers maximum freedom in selecting research topics.",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 26
+        },
+        {
+          "id": 3,
+          "content": "A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor.",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 26
+        },
+        {
+          "id": 4,
+          "content": "A top-down research program defines precisely the research topics that can be funded and should be addressed by applicants.",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 26
+        },
+        {
+          "id": 5,
+          "content": "A top-down research program only funds research that aims at an empirical evaluation in a practical setting of previously achieved theoretical results.",
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 26
         }
       ]
     },
@@ -741,32 +1684,79 @@
       "questionIndex": 26,
       "questionType": "Multiple Choice",
       "content": "Consider the following statements about precision and recall of an algorithm. Which are correct? (Select all that apply)",
-      "explanation": "Precision and recall are equal to one for algorithms computing exact solutions.; C: Precision is less than one for algorithms that compute false positives.; E: Recall is less than one for algorithms that produce false negatives.).",
+      "explanation": "Precision giảm khi thuật toán trả về false positives vì mẫu số gồm tất cả dự đoán dương tính; recall giảm khi có false negatives vì bỏ sót positive instances thực tế. Một exact algorithm không mắc hai loại sai lầm nên precision và recall đều bằng một. Hai approximate algorithms cho cùng problem hoàn toàn có thể phân bổ lỗi khác nhau, tạo ra các mức precision và recall khác nhau.",
       "answers": [
         {
           "id": 1,
           "content": "Either precision or recall must be equal to one for an approximate algorithm to be acceptable.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 27
         },
         {
           "id": 2,
           "content": "Precision and recall are equal to one for algorithms computing exact solutions.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 27
         },
         {
           "id": 3,
           "content": "Precision is less than one for algorithms that compute false positives.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 27
         },
         {
           "id": 4,
           "content": "If we are given two approximate algorithms for the same problem, they can differ in precision and recall.",
-          "isCorrect": false
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 27
         },
         {
           "id": 5,
           "content": "Recall is less than one for algorithms that produce false negatives.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 4,
+          "question_target_id": 27
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Either precision or recall must be equal to one for an approximate algorithm to be acceptable.",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 27
+        },
+        {
+          "id": 2,
+          "content": "Precision and recall are equal to one for algorithms computing exact solutions.",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 27
+        },
+        {
+          "id": 3,
+          "content": "Precision is less than one for algorithms that compute false positives.",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 27
+        },
+        {
+          "id": 4,
+          "content": "If we are given two approximate algorithms for the same problem, they can differ in precision and recall.",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 27
+        },
+        {
+          "id": 5,
+          "content": "Recall is less than one for algorithms that produce false negatives.",
+          "is_correct": true,
+          "index_order": 4,
+          "question_target_id": 27
         }
       ]
     },
@@ -775,32 +1765,79 @@
       "questionIndex": 27,
       "questionType": "Single Choice",
       "content": "Which of the following statement is about research are valid?",
-      "explanation": "Research may generate new knowledge. New knowledge may generate innovations that may favor progress of society.).",
+      "explanation": "Research có thể xuất phát từ practical problems, từ theoretical gaps hoặc từ những câu hỏi nảy sinh trong kết quả trước đó, nên không bị giới hạn vào một nguồn cảm hứng duy nhất. Khi tạo new knowledge, nghiên cứu có thể mở đường cho innovations và những thay đổi có lợi cho society. Chuỗi tác động từ knowledge đến innovation giải thích vai trò rộng hơn của research.",
       "answers": [
         {
           "id": 1,
           "content": "Research is only inspired by practical problems observed in the physical world.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 28
         },
         {
           "id": 2,
           "content": "Research has to be purely speculative, disconnected from practical concerns that would only be distractions.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 28
         },
         {
           "id": 3,
           "content": "Research may generate new knowledge. New knowledge may generate innovations that may favor progress of society.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 28
         },
         {
           "id": 4,
           "content": "Research does not require other investments than salaries for researchers.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 28
         },
         {
           "id": 5,
           "content": "Research is only a hobby of talented individuals, who can afford investing their time and effort in it.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 28
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Research is only inspired by practical problems observed in the physical world.",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 28
+        },
+        {
+          "id": 2,
+          "content": "Research has to be purely speculative, disconnected from practical concerns that would only be distractions.",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 28
+        },
+        {
+          "id": 3,
+          "content": "Research may generate new knowledge. New knowledge may generate innovations that may favor progress of society.",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 28
+        },
+        {
+          "id": 4,
+          "content": "Research does not require other investments than salaries for researchers.",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 28
+        },
+        {
+          "id": 5,
+          "content": "Research is only a hobby of talented individuals, who can afford investing their time and effort in it.",
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 28
         }
       ]
     },
@@ -809,32 +1846,79 @@
       "questionIndex": 28,
       "questionType": "Single Choice",
       "content": "This question is about originality. When can a research result be defined as original?",
-      "explanation": "The research result was not known before.).",
+      "explanation": "Originality của research result được xác định bằng việc finding đó chưa có trong existing body of knowledge trước thời điểm công bố. Một kết quả có thể bất ngờ, rất khó đạt hoặc dẫn đến useful product nhưng vẫn không mới nếu đã từng được biết đến. Tính novelty của result, không phải độ khó của process hay lợi ích thương mại, mới là tiêu chuẩn then chốt.",
       "answers": [
         {
           "id": 1,
           "content": "The research result was unexpected.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 29
         },
         {
           "id": 2,
           "content": "The research result was very hard to achieve.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 29
         },
         {
           "id": 3,
           "content": "The process through which the research led to the result is novel.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 29
         },
         {
           "id": 4,
           "content": "The research result was not known before.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 29
         },
         {
           "id": 5,
           "content": "The research result can lead to a useful product.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 29
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "The research result was unexpected.",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 29
+        },
+        {
+          "id": 2,
+          "content": "The research result was very hard to achieve.",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 29
+        },
+        {
+          "id": 3,
+          "content": "The process through which the research led to the result is novel.",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 29
+        },
+        {
+          "id": 4,
+          "content": "The research result was not known before.",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 29
+        },
+        {
+          "id": 5,
+          "content": "The research result can lead to a useful product.",
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 29
         }
       ]
     },
@@ -843,22 +1927,51 @@
       "questionIndex": 29,
       "questionType": "Single Choice",
       "content": "You are asked to review a theoretical research paper. In which of the following quality dimensions you expect the paper to be particularly strong? Select 01 correct answer.",
-      "explanation": "In Academic Writing (ENW493c), the correct option is 'Originality'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "explanation": "Theoretical paper chủ yếu đóng góp qua những concepts, models hoặc explanations mới cho literature, nên originality thường là dimension được kỳ vọng nổi bật. Rigor vẫn cần để lập luận chặt chẽ, còn significance thể hiện phạm vi ảnh hưởng sau đó. Nhưng tính mới của conceptual contribution là đặc điểm phân biệt rõ nhất của một công trình thuần lý thuyết.",
       "answers": [
         {
           "id": 1,
           "content": "Originality",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 30
         },
         {
           "id": 2,
           "content": "Rigor",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 30
         },
         {
           "id": 3,
           "content": "Significance",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 30
+        }
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Originality",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 30
+        },
+        {
+          "id": 2,
+          "content": "Rigor",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 30
+        },
+        {
+          "id": 3,
+          "content": "Significance",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 30
         }
       ]
     }
