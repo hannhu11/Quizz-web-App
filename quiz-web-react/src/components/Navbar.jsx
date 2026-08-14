@@ -36,7 +36,7 @@ export default function Navbar({
           >
             <div className="w-10 h-10 rounded-full p-0.5 bg-gradient-to-tr from-amber-300 via-rose-300 to-indigo-400 shadow-soft group-hover:scale-105 transition-transform duration-300 overflow-hidden">
               <picture>
-                <source srcset="/user-avatar.webp" type="image/webp" />
+                <source srcSet="/user-avatar.webp" type="image/webp" />
                 <img
                   src="/user-avatar.png"
                   alt="Hàn Như Avatar"
