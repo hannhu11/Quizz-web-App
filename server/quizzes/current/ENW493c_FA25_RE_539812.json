@@ -1,0 +1,896 @@
+{
+  "id": "ENW493c_FA25_RE_539812",
+  "title": "ENW493c_FA25_RE_539812 [FE] - HCM",
+  "subject": "Phương pháp nghiên cứu & Kỹ năng viết học thuật",
+  "category": "ENW493C",
+  "examType": "FE",
+  "rawSource": "XAVALO",
+  "location": "HCM",
+  "questionsList": [
+    {
+      "id": 1,
+      "questionIndex": 0,
+      "questionType": "Single Choice",
+      "content": "All of the following are questions to ask when determining the reliability of a source EXCEPT which one?",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'How long is the source?'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Who wrote the source?",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "What is the date of the source?",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "What is the purpose of the source?",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "How long is the source?",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "Is the source biased?",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "questionIndex": 1,
+      "questionType": "Single Choice",
+      "content": "Which of the following internet sites would be acceptable to use when searching for sources for a research paper?",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'scholar.google.com'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "www.google.com",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "www.yahoo.com",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "www.bing.com",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "scholar.google.com",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "questionIndex": 2,
+      "questionType": "Single Choice",
+      "content": "According to the lecture, where is the best place to look for sources for a research paper?",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'library databases'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "library databases",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Google Scholar",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Google",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "questionIndex": 3,
+      "questionType": "Single Choice",
+      "content": "What is the purpose of an annotated bibliography?",
+      "explanation": "to help you summarize and evaluate your sources).",
+      "answers": [
+        {
+          "id": 1,
+          "content": "to help you develop your research paper",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "to help you think of search terms for your research",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "to give you more work to do when you have a research assignment",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "to help you summarize and evaluate your sources",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "questionIndex": 4,
+      "questionType": "Single Choice",
+      "content": "Which of the following is not a reason to use a statistic in your research paper?",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'to make your paper longer'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "to support your point",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "some subjects depend on them",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "to make your paper longer",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "questionIndex": 5,
+      "questionType": "Single Choice",
+      "content": "What is an annotated bibliography?",
+      "explanation": "It is a list of articles related to your topic, and it summarizes and evaluates these.).",
+      "answers": [
+        {
+          "id": 1,
+          "content": "It is a list of articles related to your topic, and it summarizes and evaluates these.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "It is a list of articles that you plan to read for your research.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "It is a list of articles by one author who is an expert on your topic.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "questionIndex": 6,
+      "questionType": "Single Choice",
+      "content": "Which of the following groups of words is definitely not on the Academic Word List?",
+      "explanation": "trashy, know-it-all, grouchy).",
+      "answers": [
+        {
+          "id": 1,
+          "content": "error, alter, reject",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "trashy, know-it-all, grouchy",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "capable, display, incorporate",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "locate, remove, specify",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "questionIndex": 7,
+      "questionType": "Single Choice",
+      "content": "Which of the following groups of words is definitely not on the Academic Word List?",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'crash, cop, messy'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "facilitate, prime, transit",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "crash, cop, messy",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "evolve, generate, alter",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "dynamic, prohibit, identical",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "questionIndex": 8,
+      "questionType": "Single Choice",
+      "content": "The success of an in-depth interview depends on the _____ of the interviewer.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Skills'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Skills",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Accent",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Questions",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Charisma",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "questionIndex": 9,
+      "questionType": "Single Choice",
+      "content": "Response rates can be increased through the adoption of ______ to research participants.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Incentives'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Questionnaires",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Incentives",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Promises",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Suggestions",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "questionIndex": 10,
+      "questionType": "Single Choice",
+      "content": "Non-comparative scaling techniques include the semantic differential scale, the stapel scale, and the ______ scale.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Likert'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Q-sort",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Rank order",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Paired comparison",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Likert",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "Constant sum",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "questionIndex": 11,
+      "questionType": "Single Choice",
+      "content": "In structured data collection a formal research instrument is developed and the different questions are offered in a ______ order.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Pre-arranged'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Pre-arranged",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Random",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "questionIndex": 12,
+      "questionType": "Single Choice",
+      "content": "\"Survey questionnaires can be administered through the use of different modes. Those being, telephone interviews, personal interviews, mail interviews, and online interviews.\" Is the above statement true or false?",
+      "explanation": "Trong Trí tuệ nhân tạo (AID301c), đáp án đúng là 'True'. Nguyên lý này thuộc kiến thức nền tảng về Học máy (Machine Learning) và toán học ứng dụng.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "questionIndex": 13,
+      "questionType": "Single Choice",
+      "content": "In a collective case study or ______ case study the issue to be investigated is selected but the researcher chooses a number of case studies to depict the issue. Such an action helps to investigate different aspects of the issue under investigation.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Multiple'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Random",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Multiple",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Experimental",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Attitudinal",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "questionIndex": 14,
+      "questionType": "Single Choice",
+      "content": "______ focus on electronic devices which automatically record behavior and are supplemented by a diary. Such data are used for creating media programs on air time and developing viewer profiles.",
+      "explanation": "Trong Trí tuệ nhân tạo (AID301c), đáp án đúng là 'Diary media panels'. Nguyên lý này thuộc kiến thức nền tảng về Học máy (Machine Learning) và toán học ứng dụng.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Diary media panels",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Focus groups",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Interviews",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Discussions",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "questionIndex": 15,
+      "questionType": "Single Choice",
+      "content": "______ refer to organizations which gather and sell pools of data and information which are developed to address information requirements and needs.",
+      "explanation": "Theo tiêu chuẩn thiết kế Web & UI/UX (WDU202c), đáp án chuẩn xác là 'Syndicated sources'. Quy tắc này tuân thủ nguyên lý thiết kế giao diện hiện đại và tối ưu trải nghiệm người dùng.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Data",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Texts",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Syndicated sources",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Analyses",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "questionIndex": 16,
+      "questionType": "Single Choice",
+      "content": "Structured refers to the level of ______ that is used during the data collection procedure.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Standardisation'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Standardisation",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Variation",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Collaboration",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Creativity",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "questionIndex": 17,
+      "questionType": "Single Choice",
+      "content": "In an action research project during the ______ stage, the plans are implemented and interventions are made collaboratively between the researcher and the research participants.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Act'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Observe",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Reflect",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Plan",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Pre-step",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Act",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "questionIndex": 18,
+      "questionType": "Single Choice",
+      "content": "______ is defined as the procedure of placing key informants on a continuum regarding their attitude towards a certain product or product line.",
+      "explanation": "Trong Trí tuệ nhân tạo (AID301c), đáp án đúng là 'Scaling'. Nguyên lý này thuộc kiến thức nền tảng về Học máy (Machine Learning) và toán học ứng dụng.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Measuring",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Assessing",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Scaling",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Reconfiguring",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "questionIndex": 19,
+      "questionType": "Single Choice",
+      "content": "An ______ scale is a ranking scale in which numbers are allocated to objects to demonstrate the degree to which objects have some attributes. It permits identifying whether an object has more or less of an attribute than another object but not how much more or less. An example of such a scale is the ranking of service quality offered by a number of banks.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Ordinal'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Ordinal",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Ratio",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Interval",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Nominal",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "questionIndex": 20,
+      "questionType": "Single Choice",
+      "content": "In ______ scale, a single adjective (e.g., user-friendly, high quality) is located in the center of the scale, which usually is a 10-point scale that ranges from +5 to -5. The approach is designed to operationalize the direction and the intensity of the attitudes at the same time.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Stapel'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Likert",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Stapel",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Ordinal",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Nominal",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "questionIndex": 21,
+      "questionType": "Single Choice",
+      "content": "A ______ scale is a figurative labeling scheme in which numbers serve as labels or tags in order to identify and classify objects.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Nominal'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Nominal",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Ordinal",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Ratio",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Interval",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "questionIndex": 22,
+      "questionType": "Single Choice",
+      "content": "______ sampling is considered as a two-stage restricted judgemental sampling which is adopted extensively in street interviewing.",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Quota'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Random",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Convenience",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Quota",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Probability",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "questionIndex": 23,
+      "questionType": "Multiple Choice",
+      "content": "Deduction vs. induction. Select 3 correct statements:",
+      "explanation": "Modus ponens is a typical deductive inference rule.; C: In deductive inference, the consequences are guaranteed to be true if premises are true.; D: Deductive inferences can be used to generate predictions from a given theory.).",
+      "answers": [
+        {
+          "id": 1,
+          "content": "In deductive inference, the consequences of true premises must be further validated by experiments before they can be accepted as a truth.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Modus ponens is a typical deductive inference rule.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "In deductive inference, the consequences are guaranteed to be true if premises are true.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Deductive inferences can be used to generate predictions from a given theory.",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "Inductive inferences always lead to necessary conclusions.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "questionIndex": 24,
+      "questionType": "Multiple Choice",
+      "content": "Consider the following statements about precision and recall of an algorithm. Which are correct? (Select all that apply)",
+      "explanation": "Precision and recall are equal to one for algorithms computing exact solutions; C: Precision is less than one for algorithms that compute false positives; D: If we are given two approximate algorithms for the same problem, they can differ in precision and recall.).",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Either precision or recall must be equal to one for an approximate algorithm to be acceptable.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Precision and recall are equal to one for algorithms computing exact solutions.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Precision is less than one for algorithms that compute false positives.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "If we are given two approximate algorithms for the same problem, they can differ in precision and recall.",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "Recall is less than one for algorithms that produce false negatives.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "questionIndex": 25,
+      "questionType": "Multiple Choice",
+      "content": "Consider an algorithm that is supposed to find all possible occurrences in a text of person's names. (select 02 correct answers)",
+      "explanation": "The algorithm may find a name that is not a person's name and may fail to find the occurrence of certain person's names. In this case the algorithm can generate both false positives and false negatives.; E: The algorithm finds a name that is not a person's name. This is a false positive.).",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The algorithm finds a name that is not a person's name. This is a false negative.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The algorithm does not find the occurrence of certain person's names. This is a false positive.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "The algorithm may both find a name that is not a person's name and may fail to find the occurrence of certain person's names. In this case the algorithm is simply an unacceptable approximation.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The algorithm may find a name that is not a person's name and may fail to find the occurrence of certain person's names. In this case the algorithm can generate both false positives and false negatives.",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "The algorithm finds a name that is not a person's name. This is a false positive.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "questionIndex": 26,
+      "questionType": "Single Choice",
+      "content": "Which of the following best describes the nature of a scientific theory? (Choose one)",
+      "explanation": "Is valid until further findings disprove it.).",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Must always be described as a set of mathematical formulae.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Is valid if a majority vote of researchers approves it.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Must be stated as an absolute truth. It is guaranteed that it will never be falsified by further experiments.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Is guaranteed to be unfalsifiable when it is published.",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Is valid until further findings disprove it.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "questionIndex": 27,
+      "questionType": "Single Choice",
+      "content": "Among the following statements, which properly describes the scientific method, originated in the 17th century by scientists like Galileo, Newton, and others.",
+      "explanation": "The method consists of observing a natural phenomenon under study, postulating a theory that explains it, and devising carefully chosen experiments to confirm or disprove the theory.).",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The method requires explaining the natural phenomenon under study avoiding the use of mathematics.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The method consists of observing a natural phenomenon under study, postulating a theory that explains it, and devising carefully chosen experiments to confirm or disprove the theory.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "The method is based on validation of a theory by randomly generated experiments.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The method is purely theoretical, and does not require any experiments.",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "The method assures that a certain theory explaining a natural phenomenon is valid (i.e., it is an undisputable truth) after carefully chosen experiments confirm it.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "questionIndex": 28,
+      "questionType": "Multiple Choice",
+      "content": "Which of the following statements correctly describe soundness and completeness of a theory? (choose two answers)",
+      "explanation": "In Academic Writing (ENW493c), the correct option is 'Ideally, a theory should be both sound and complete.; A theory for a given phenomenon is complete if it predicts all the possible manifestations.'. This choice aligns with formal register, proper grammatical structure, and logical argumentation.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Ideally, a theory should be both sound and complete.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "A theory for a given phenomenon is complete if all its predictions are possible manifestations of the phenomenon.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "A theory for a given phenomenon is sound if all its predictions are possible manifestations of the phenomenon.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "A complete theory for a given phenomenon can predict impossible manifestations.",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "A theory for a given phenomenon is complete if it predicts all the possible manifestations.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "questionIndex": 29,
+      "questionType": "Single Choice",
+      "content": "This question is about significance. When can a research result be defined as significant?",
+      "explanation": "The research result may be used by other researchers to advance their research.).",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The research result was not known before.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The research that produced the result required very substantial funding.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "The research result was unexpected.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The research result may be used by other researchers to advance their research.",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "The research result may lead to an improvement of a certain practical process, which reduces its cost and improves its performance.",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

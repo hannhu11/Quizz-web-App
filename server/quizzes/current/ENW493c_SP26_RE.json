@@ -1,0 +1,833 @@
+{
+  "id": "ENW493c_SP26_RE",
+  "title": "ENW493c_SP26_RE - (30 câu có giải thích)",
+  "subject": "Tiếng Anh Chuyên Ngành",
+  "category": "ENW493c",
+  "questionsList": [
+    {
+      "id": 1,
+      "questionIndex": 0,
+      "content": "Which of the following is NOT a very good search term for this topic? Topic: Gun Laws",
+      "explanation": "\"guns\" quá rộng và chung chung. Từ khóa nghiên cứu nên cụ thể để tìm được nguồn phù hợp hơn.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "gun restrictions",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "guns",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "gun laws in the U.S.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "the right to own a gun",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 2,
+      "questionIndex": 1,
+      "content": "Is this phrase appropriate for an academic essay? \"drunk as a skunk.\"",
+      "explanation": "Đây là thành ngữ mang tính khẩu ngữ, không phù hợp với văn phong học thuật.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "No",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Yes",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 3,
+      "questionIndex": 2,
+      "content": "What is the first thing to do after you receive a research paper assignment?",
+      "explanation": "Câu hỏi nghiên cứu là nền tảng để xác định hướng tìm tài liệu và xây dựng luận điểm.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Think of a research question.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Make an outline.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Write the thesis statement.",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 4,
+      "questionIndex": 3,
+      "content": "Is this word appropriate for an academic essay? \"increase\"",
+      "explanation": "\"Increase\" là từ vựng học thuật phổ biến và phù hợp trong bài nghiên cứu.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Yes",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "No",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 5,
+      "questionIndex": 4,
+      "content": "What is an annotated bibliography?",
+      "explanation": "Annotated bibliography không chỉ liệt kê tài liệu mà còn tóm tắt và đánh giá từng nguồn.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "It is a list of articles related to your topic, and it summarizes and evaluates these.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "It is a list of articles that you plan to read for your research.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "It is a list of articles by one author who is an expert on your topic.",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 6,
+      "questionIndex": 5,
+      "content": "All of the following are questions to ask when determining the reliability of a source EXCEPT which one?",
+      "explanation": "Độ dài tài liệu không quyết định độ tin cậy của nguồn.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Who wrote the source?",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "What is the date of the source?",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "What is the purpose of the source?",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "How long is the source?",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "Is the source biased?",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 7,
+      "questionIndex": 6,
+      "content": "Is this word appropriate for an academic essay? \"y'all\"",
+      "explanation": "\"y'all\" là từ địa phương và khẩu ngữ trong tiếng Anh Mỹ.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Yes",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "No",
+          "isCorrect": true
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 8,
+      "questionIndex": 7,
+      "content": "Which of the following is the most academic kind of source?",
+      "explanation": "Library databases chứa các bài báo khoa học và tài liệu học thuật đã được kiểm duyệt.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "popular sources",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "news sources",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "library databases",
+          "isCorrect": true
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 9,
+      "questionIndex": 8,
+      "content": "Response rates can be increased through the adoption of ______ to research participants.",
+      "explanation": "Tặng quà, phiếu giảm giá hoặc phần thưởng giúp tăng tỷ lệ phản hồi khảo sát.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Questionnaires",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Incentives",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Promises",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Suggestions",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 10,
+      "questionIndex": 9,
+      "content": "Qualitative research is popular in market research due to the fact that there is no better way to understand the in-depth motivations and feelings of consumers.",
+      "explanation": "Nghiên cứu định tính giúp khám phá suy nghĩ, cảm xúc và động cơ của khách hàng.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 11,
+      "questionIndex": 10,
+      "content": "A well-developed research instrument can enhance the response rate and reduce ______ to participate in the research study.",
+      "explanation": "Bảng hỏi được thiết kế tốt sẽ làm giảm tỷ lệ từ chối tham gia khảo sát.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Refusals",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Willingness",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Follow-ups",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Suggestions",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 12,
+      "questionIndex": 11,
+      "content": "______ focus on electronic devices which automatically record behavior and are supplemented by a diary. Such data are used for creating media programs on air time and developing viewer profiles.",
+      "explanation": "Phương pháp này ghi lại hành vi sử dụng phương tiện truyền thông bằng thiết bị điện tử và nhật ký.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Diary media panels",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Focus groups",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Interviews",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Discussions",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 13,
+      "questionIndex": 12,
+      "content": "______ refer to organizations which gather and sell pools of data and information which are developed to address information requirements and needs.",
+      "explanation": "Syndicated sources là các tổ chức thu thập và bán dữ liệu nghiên cứu cho nhiều khách hàng.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Data",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Texts",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Syndicated sources",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Analyses",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 14,
+      "questionIndex": 13,
+      "content": "Survey approaches are based upon the design and development of well ______ questionnaires.Key informants may be asked several questions with respect to their intentions, motivations, attitudes, demographic and lifestyle characteristics among others. The questions may be asked verbally in writing or through a remote device (e.g., laptop) and the responses may be collected through these ways.",
+      "explanation": "Khảo sát thường sử dụng bảng câu hỏi có cấu trúc rõ ràng (structured questionnaire).",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Standardised",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Structured",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Arranged",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Directed",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 15,
+      "questionIndex": 14,
+      "content": "A/An ______ scale is a figurative labeling scheme in which numbers serve as labels or tags in order to identify and classify objects.",
+      "explanation": "Thang đo Nominal dùng để phân loại đối tượng, không có ý nghĩa về thứ tự hay khoảng cách. Ví dụ: 1 = Nam 2 = Nữ",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Nominal",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Ordinal",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Ratio",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Interval",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 16,
+      "questionIndex": 15,
+      "content": "In a survey questionnaire, the vast majority of questions are ______ responses that require the respondent to select the answer from a prearranged set of responses.",
+      "explanation": "Fixed-response questions là câu hỏi có sẵn các lựa chọn trả lời.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Fixed",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Obscure",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Easy",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Obvious",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 17,
+      "questionIndex": 16,
+      "content": "Gathered market research data should be integrated with other research data coming from both ______ and external sources to make the most of their use and to make more confident strategic decision-making.",
+      "explanation": "Doanh nghiệp cần kết hợp dữ liệu nội bộ và dữ liệu bên ngoài để ra quyết định tốt hơn.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Internal",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "External",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Mixed",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Experimental",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 18,
+      "questionIndex": 17,
+      "content": "______ scale is a scale where the numbers used to rank objects, such as numerically equal distances on the scale, demonstrate equal distances in the attribute being measured.",
+      "explanation": "Thang đo Interval có khoảng cách bằng nhau giữa các mức nhưng không có điểm 0 tuyệt đối. Ví dụ: Nhiệt độ °C.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Interval",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Nominal",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Ordinal",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Ratio",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 19,
+      "questionIndex": 18,
+      "content": "The combination of survey data and databases helps the organization identify the nature and scope of different customer segments.",
+      "explanation": "Việc kết hợp dữ liệu khảo sát và cơ sở dữ liệu giúp hiểu rõ các nhóm khách hàng mục tiêu.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 20,
+      "questionIndex": 19,
+      "content": "The individual one-to-one interaction offers the interviewee the opportunity to be the focus of attention and to feel that their feelings and point of view are important.",
+      "explanation": "hỏng vấn cá nhân tạo môi trường thoải mái giúp người tham gia chia sẻ sâu hơn về quan điểm và cảm xúc của họ.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 21,
+      "questionIndex": 20,
+      "content": "Mail diary panels refer to information that comes from households, and such information is offered for an extended period of time. In this vein, the key informants are required to record behavior as it takes place.",
+      "explanation": "Mail diary panels yêu cầu người tham gia ghi chép hành vi của họ trong một khoảng thời gian dài để phục vụ nghiên cứu thị trường.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Syndicated services",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Mail diary panels",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Industrial services",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Audit services",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 22,
+      "questionIndex": 21,
+      "content": "The ______ scale consists of a number of statements that communicate a favorable or unfavorable attitude toward the concept under investigation.",
+      "explanation": "Thang đo Likert sử dụng các phát biểu và yêu cầu người trả lời thể hiện mức độ đồng ý hoặc không đồng ý.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Stapel",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Semantic differential",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Ordinal",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Likert",
+          "isCorrect": true
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 23,
+      "questionIndex": 22,
+      "content": "The research can be classified as ______ or ______ based upon whether the objective of the research is known to the respondents.",
+      "explanation": "Direct research: Người tham gia biết rõ mục đích nghiên cứu. Indirect research: Người tham gia không biết chính xác mục tiêu nghiên cứu.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Fixed or changing",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Standardised or random",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Structured or unstructured",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Direct or indirect",
+          "isCorrect": true
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 24,
+      "questionIndex": 23,
+      "content": "Which of the following best describes the nature of a scientific theory?",
+      "explanation": "Một lý thuyết khoa học được chấp nhận cho đến khi có bằng chứng hoặc thí nghiệm mới chứng minh nó sai.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Must always be described as a set of mathematical formulae.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Is valid if a majority vote of researchers approves it.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Must be stated as an absolute truth.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Is guaranteed to be unfalsifiable when it is published.",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Is valid until further findings disprove it.",
+          "isCorrect": true
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 25,
+      "questionIndex": 24,
+      "content": "Which of the following statements about the distinction between basic and applied research are acceptable?",
+      "explanation": "Nghiên cứu cơ bản (basic) và nghiên cứu ứng dụng (applied) không hoàn toàn tách biệt; một nhà nghiên cứu có thể thực hiện cả hai.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The spectrum between basic and applied research is continuous, and a researcher may engage in both kinds of research during his/her work.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Applied research is a less valuable kind of research than basic research.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Basic research inevitably leads to discoveries that can then be transformed into innovations.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Basic research only requires paper and pencil.",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Basic research is so fundamentally different that researchers must choose one permanently.",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 26,
+      "questionIndex": 25,
+      "content": "Among the following statements, which properly describes the scientific method?",
+      "explanation": "Phương pháp khoa học gồm: Quan sát hiện tượng. Đề xuất giả thuyết/lý thuyết. Thiết kế thí nghiệm. Kiểm chứng hoặc bác bỏ giả thuyết.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Avoid mathematics.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Observe → propose theory → design experiments to verify or reject the theory.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Random experiments only.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Purely theoretical, no experiments.",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Guarantees absolute truth.",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 27,
+      "questionIndex": 26,
+      "content": "Consider an algorithm that is supposed to find all possible occurrences in a text of person's names. (Select 2 correct answers)",
+      "explanation": "D. The algorithm may find a name that is not a person's name and may fail to find certain person's names. In this case the algorithm can generate both false positives and false negatives. | E. The algorithm finds a name that is not a person's name. This is a false positive.. D Đúng Thuật toán có thể đồng thời: Phát hiện sai → False Positive Bỏ sót → False Negative E Đúng False Positive là trường hợp hệ thống nhận diện nhầm một đối tượng không đúng.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The algorithm finds a name that is not a person's name. This is a false negative.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The algorithm does not find the occurrence of certain person's names. This is a false positive.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "The algorithm may both find a wrong name and miss a correct name. In this case it is unacceptable.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The algorithm may find a name that is not a person's name and may fail to find certain person's names. In this case the algorithm can generate both false positives and false negatives.",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "The algorithm finds a name that is not a person's name. This is a false positive.",
+          "isCorrect": true
+        }
+      ],
+      "questionType": "Multiple Choice"
+    },
+    {
+      "id": 28,
+      "questionIndex": 27,
+      "content": "What is a null hypothesis?",
+      "explanation": "Giả thuyết không (Null Hypothesis - H₀) thường được phát biểu dưới dạng phủ định.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "An obviously wrong hypothesis.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Hypothesis made by an inexperienced scientist.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "No hypothesis made.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Hypothesis disproved later.",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Hypothesis framed in a negative form, which researchers try to reject to confirm a theory.",
+          "isCorrect": true
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 29,
+      "questionIndex": 28,
+      "content": "You are asked to review a survey paper. In which dimension are you not expecting the paper to be particularly strong?",
+      "explanation": "Survey paper chủ yếu tổng hợp các nghiên cứu đã có nên tính mới (originality) thường thấp hơn bài nghiên cứu gốc.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Originality",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Significance",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Rigor",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 30,
+      "questionIndex": 29,
+      "content": "Which of the following statements correctly describe soundness and completeness of a theory? (Choose 2 answers)",
+      "explanation": "C. A theory is sound if all its predictions are possible manifestations. | E. A theory is complete if it predicts all possible manifestations.. C. A theory is sound if all its predictions are possible manifestations. Đúng : Soundness nghĩa là mọi dự đoán của lý thuyết đều có thể xảy ra trong thực tế. E. A theory is complete if it predicts all possible manifestations. Đúng Giải thích: Completeness nghĩa là lý thuyết bao quát toàn bộ các trường hợp có thể xảy ra.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Ideally, a theory should be both sound and complete.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "A theory is complete if all its predictions are possible manifestations.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "A theory is sound if all its predictions are possible manifestations.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "A complete theory can predict impossible manifestations.",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "A theory is complete if it predicts all possible manifestations.",
+          "isCorrect": true
+        }
+      ],
+      "questionType": "Multiple Choice"
+    }
+  ]
+}

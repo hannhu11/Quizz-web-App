@@ -1,0 +1,858 @@
+{
+  "id": "ENW493c_SP26_FE",
+  "title": "ENW493c_SP26_FE - (30 câu có giải thích)",
+  "subject": "Tiếng Anh Chuyên Ngành",
+  "category": "ENW493c",
+  "questionsList": [
+    {
+      "id": 1,
+      "questionIndex": 0,
+      "content": "Most research papers share all of the following characteristics EXCEPT which one?",
+      "explanation": "Độ dài và tính phức tạp là đặc điểm chung của bài nghiên cứu. Tuy nhiên số điểm (150 pts) phụ thuộc vào từng môn học hoặc giảng viên.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "They have considerable length.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "They are complex.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "They are worth 150 pts.",
+          "isCorrect": true
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 2,
+      "questionIndex": 1,
+      "content": "Which of the following groups of words is definitely not on the Academic Word List?",
+      "explanation": "Đây là các từ mang tính khẩu ngữ, không phải từ học thuật thường xuất hiện trong Academic Word List.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "error, alter, reject",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "trashy, know-it-all, grouchy",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "capable, display, incorporate",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "locate, remove, specify",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 3,
+      "questionIndex": 2,
+      "content": "Which of the following is not a reason to use a statistic in your research paper?",
+      "explanation": "Số liệu thống kê được dùng để tăng độ tin cậy cho lập luận, không phải để kéo dài bài viết.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "to support your point",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "some subjects depend on them",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "to make your paper longer",
+          "isCorrect": true
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 4,
+      "questionIndex": 3,
+      "content": "What is the purpose of an annotated bibliography?",
+      "explanation": "Annotated bibliography giúp người nghiên cứu tóm tắt nội dung và đánh giá độ tin cậy của các tài liệu tham khảo.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "to help you develop your research paper",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "to help you think of search terms for your research",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "to give you more work to do when you have a research assignment",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "to help you summarize and evaluate your sources",
+          "isCorrect": true
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 5,
+      "questionIndex": 4,
+      "content": "Which of the following groups of words is definitely not on the Academic Word List?",
+      "explanation": "Đây là các từ phổ thông hoặc khẩu ngữ, không thuộc danh sách từ vựng học thuật.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "facilitate, prime, transit",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "crash, cop, messy",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "evolve, generate, alter",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "dynamic, prohibit, identical",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 6,
+      "questionIndex": 5,
+      "content": "Which of the following would be the most effective thesis statement for a research paper?",
+      "explanation": "Một thesis statement tốt phải rõ ràng, có quan điểm cụ thể và có thể tranh luận được.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The tooth fairy and Santa Claus are imaginary characters for children.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The U.S. government should require that all companies pay men and women the same amount of money for equal work.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "It's hotter in the oceans now than it was a few years ago, so something should be done about climate change.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Terrorism is really awful, so governments should prevent it.",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 7,
+      "questionIndex": 6,
+      "content": "According to the lecture, where is the best place to look for sources for a research paper?",
+      "explanation": "Thư viện điện tử cung cấp các nguồn học thuật đã được kiểm duyệt nên đáng tin cậy hơn Google.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "library databases",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Google Scholar",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Google",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 8,
+      "questionIndex": 7,
+      "content": "Which of the following is not an appropriate place to use a statistic in your research paper?",
+      "explanation": "Thesis statement trình bày luận điểm chính, không nên chứa số liệu chi tiết.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "in the thesis statement",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "as one of several statistics in a statistics paragraph",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "as a detail to support your own point",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "as a hook in the introduction",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 9,
+      "questionIndex": 8,
+      "content": "The budget scheduled for research should be considered and, in this vein, if there are limited research resources, more cost-efficient ways of collecting data should be considered, including ______ data collection approaches. Right market research data assist companies in better connecting with their customers and attracting new customers.",
+      "explanation": "Thu thập dữ liệu tự động giúp tiết kiệm thời gian và chi phí nghiên cứu.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Internal",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "External",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Automated",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Manual",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 10,
+      "questionIndex": 9,
+      "content": "A ______ is defined as the process of identifying constructive associations, patterns, and trends emerging from accumulated amounts of collected data stored in repositories, through the adoption of pattern recognition and statistical and mathematical approaches.",
+      "explanation": "Data mining là quá trình khai phá dữ liệu nhằm tìm ra quy luật, xu hướng và mối liên hệ trong dữ liệu lớn.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Data reading",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Data analysis",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Data cleaning",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 11,
+      "questionIndex": 10,
+      "content": "The development of a ______ scale commences with a concept that should be rated...",
+      "explanation": "Thang đo Semantic Differential sử dụng các cặp từ đối nghĩa như Good–Bad, Reliable–Unreliable để đánh giá đối tượng.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Nominal",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Semantic differential",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Ordinal",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Likert",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 12,
+      "questionIndex": 11,
+      "content": "Non-respondents may be different from respondents... Is the statement true or false?",
+      "explanation": "Nếu người không trả lời khảo sát khác biệt nhiều với người trả lời thì mẫu sẽ bị sai lệch (non-response bias).",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 13,
+      "questionIndex": 12,
+      "content": "An ______ scale is a ranking scale in which numbers are allocated to objects...",
+      "explanation": "Thang đo Ordinal dùng để xếp hạng, biết đối tượng nào cao hơn nhưng không biết chênh lệch bao nhiêu.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Ordinal",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Ratio",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Interval",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Nominal",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 14,
+      "questionIndex": 13,
+      "content": "Audit services focus on the verification of product movement... True or False?",
+      "explanation": "Audit services kiểm tra dữ liệu bán hàng và tồn kho để đánh giá doanh số, thị phần và hiệu quả sản phẩm.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 15,
+      "questionIndex": 14,
+      "content": "______ scale is a comparative scale in which key informants are requested to assign a constant sum of units...",
+      "explanation": "Người tham gia phân chia một tổng điểm cố định (ví dụ 100 điểm) cho các lựa chọn theo mức độ quan trọng.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Ordinal",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Nominal",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Semantic differential",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Likert",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Constant sum",
+          "isCorrect": true
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 16,
+      "questionIndex": 15,
+      "content": "The success of an in-depth interview depends on the ______ of the interviewer.",
+      "explanation": "Kỹ năng đặt câu hỏi, lắng nghe và khai thác thông tin quyết định chất lượng phỏng vấn sâu.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Skills",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Accent",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Questions",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Charisma",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 17,
+      "questionIndex": 16,
+      "content": "Well-trained researchers can enhance ______ rates and increase conversion and persuasion of key informants.",
+      "explanation": "Nhà nghiên cứu được đào tạo tốt thường làm tăng tỷ lệ phản hồi khảo sát.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Response",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Percentage",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Question",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Questionnaire",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 18,
+      "questionIndex": 17,
+      "content": "In ______ scale, a single adjective is located in the center of the scale...",
+      "explanation": "Thang đo Stapel dùng một tính từ duy nhất ở giữa và thang điểm từ +5 đến -5 để đo thái độ.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Likert",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Stapel",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Ordinal",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Nominal",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 19,
+      "questionIndex": 18,
+      "content": "A ______ sampling is considered as a two-stage restricted judgemental sampling...",
+      "explanation": "Quota sampling là lấy mẫu theo hạn ngạch, thường dùng trong khảo sát ngoài đường phố.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Random",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Convenience",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Quota",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Probability",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 20,
+      "questionIndex": 19,
+      "content": "In-depth interviews can reveal hidden motivations and are considered one of the most popular data collection approaches in qualitative research.",
+      "explanation": "Phỏng vấn sâu giúp khám phá suy nghĩ, động cơ và cảm xúc tiềm ẩn của người tham gia nên rất phổ biến trong nghiên cứu định tính.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 21,
+      "questionIndex": 20,
+      "content": "Under the spectrum of a/an ______ case study, the researcher concentrates on an issue or concern and as a next step chooses a bounded case study to depict the case.",
+      "explanation": "Trong nghiên cứu tình huống kiểu Single Instrumental, nhà nghiên cứu tập trung vào một vấn đề cụ thể rồi chọn một trường hợp (case) để minh họa vấn đề đó.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Longitudinal",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Attitudinal",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Single instrumental",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Random",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 22,
+      "questionIndex": 21,
+      "content": "The design of a qualitative study commences with broad ______ regarding the qualitative ______ and the theoretical lens which shape and direct the study.",
+      "explanation": "Nghiên cứu định tính bắt đầu từ các giả định (assumptions) về phương pháp điều tra (inquiry) và góc nhìn lý thuyết.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Assumptions, Inquiry",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Inspirations, Assumptions",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Dreams, Assumptions",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Details, Structure",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 23,
+      "questionIndex": 22,
+      "content": "Qualitative researchers are reluctant to generalise the cases from one context to another because the contexts of the various cases are different. If the intention is to generalise, the qualitative researcher should select ______ cases to be considered in the qualitative study.",
+      "explanation": "Nếu muốn khái quát hóa kết quả, cần chọn các trường hợp mang tính đại diện (representative cases).",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Internal",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Representative",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "External",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Mixed",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 24,
+      "questionIndex": 23,
+      "content": "This question is about significance. When can a research result be defined as significant?",
+      "explanation": "Trong nghiên cứu học thuật, significance là mức độ đóng góp của kết quả đối với sự phát triển tri thức và nghiên cứu tiếp theo.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The research result was not known before.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The research that produced the result required very substantial funding.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "The research result was unexpected.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The research result may be used by other researchers to advance their research.",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "The research result may lead to an improvement of a certain practical process, which reduces its cost and improves its performance.",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 25,
+      "questionIndex": 24,
+      "content": "Deduction vs. induction. Select 3 correct statements:",
+      "explanation": "B. Modus ponens is a typical deductive inference rule. | C. In deductive inference, the consequences are guaranteed to be true if premises are true. | D. Deductive inferences can be used to generate predictions from a given theory.. B. Modus ponens is a typical deductive inference rule. Đúng Ví dụ: If A → B A đúng ⇒ B đúng C. In deductive inference, the consequences are guaranteed to be true if premises are true. Đúng : Suy luận diễn dịch đảm bảo kết luận đúng nếu các tiền đề đúng. D. Deductive inferences can be used to generate predictions from a given theory. Đúng Giải thích: Từ lý thuyết có thể suy ra dự đoán để kiểm chứng bằng thực nghiệm.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "In deductive inference, the consequences of true premises must be further validated by experiments before they can be accepted as a truth.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Modus ponens is a typical deductive inference rule.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "In deductive inference, the consequences are guaranteed to be true if premises are true.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Deductive inferences can be used to generate predictions from a given theory.",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "Inductive inferences always lead to necessary conclusions.",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Multiple Choice"
+    },
+    {
+      "id": 26,
+      "questionIndex": 25,
+      "content": "Which of the following statements about funded research programs are appropriate? (Select 2 correct answers)",
+      "explanation": "C. A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor. | D. A top-down research program defines precisely the research topics that can be funded and should be addressed by applicants.. C Đúng Bottom-up cho phép nhà nghiên cứu tự chọn đề tài. D Đúng Top-down quy định sẵn các chủ đề được cấp kinh phí.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "A bottom-up research program only supports research that is motivated by current, practical needs of industry.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "A top-down research program gives researchers maximum freedom in selecting research topics.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "A bottom-up research program allows researchers to select any possible research topic, and proposals are selected for funding only based on their originality, significance, and rigor.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "A top-down research program defines precisely the research topics that can be funded and should be addressed by applicants.",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "A top-down research program only funds research that aims at an empirical evaluation in a practical setting of previously achieved theoretical results.",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Multiple Choice"
+    },
+    {
+      "id": 27,
+      "questionIndex": 26,
+      "content": "Consider the following statements about precision and recall of an algorithm. Which are correct?",
+      "explanation": "B. Precision and recall are equal to one for algorithms computing exact solutions. | C. Precision is less than one for algorithms that compute false positives. | E. Recall is less than one for algorithms that produce false negatives.. B Đúng Thuật toán chính xác hoàn toàn: Precision=Recall=1Precision = Recall = 1Precision=Recall=1 C Đúng False Positive làm giảm Precision. Precision=TPTP+FPPrecision=\\frac{TP}{TP+FP}Precision=TP+FPTP​ E Đúng False Negative làm giảm Recall. Recall=TPTP+FNRecall=\\frac{TP}{TP+FN}Recall=TP+FNTP​",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Either precision or recall must be equal to one for an approximate algorithm to be acceptable.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Precision and recall are equal to one for algorithms computing exact solutions.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Precision is less than one for algorithms that compute false positives.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "If we are given two approximate algorithms for the same problem, they can differ in precision and recall.",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Recall is less than one for algorithms that produce false negatives.",
+          "isCorrect": true
+        }
+      ],
+      "questionType": "Multiple Choice"
+    },
+    {
+      "id": 28,
+      "questionIndex": 27,
+      "content": "Which of the following statement is about research are valid?",
+      "explanation": "Mục tiêu lớn nhất của nghiên cứu là tạo ra tri thức mới, từ đó có thể tạo ra đổi mới và đóng góp cho xã hội.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Research is only inspired by practical problems observed in the physical world.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Research has to be purely speculative, disconnected from practical concerns that would only be distractions.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Research may generate new knowledge. New knowledge may generate innovations that may favor progress of society.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Research does not require other investments than salaries for researchers.",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Research is only a hobby of talented individuals, who can afford investing their time and effort in it.",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 29,
+      "questionIndex": 28,
+      "content": "This question is about originality. When can a research result be defined as original?",
+      "explanation": "Originality nghĩa là kết quả nghiên cứu chưa từng được biết đến hoặc công bố trước đó.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The research result was unexpected.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The research result was very hard to achieve.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "The process through which the research led to the result is novel.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The research result was not known before.",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "The research result can lead to a useful product.",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    },
+    {
+      "id": 30,
+      "questionIndex": 29,
+      "content": "You are asked to review a theoretical research paper. In which of the following quality dimensions you expect the paper to be particularly strong?",
+      "explanation": "Bài nghiên cứu lý thuyết thường được đánh giá cao nhất ở tính mới (originality), tức là khả năng đưa ra ý tưởng, mô hình hoặc lý thuyết mới.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Originality",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Rigor",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Significance",
+          "isCorrect": false
+        }
+      ],
+      "questionType": "Single Choice"
+    }
+  ]
+}

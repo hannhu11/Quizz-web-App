@@ -1,7 +1,4 @@
-// Quiz Data Manifest & Instant Pre-Parsed Memory Cache (0-Latency)
-
-// Dynamically eager-import all quiz JSON files at module load
-const quizFiles = import.meta.glob('../../../quiz-app-main/quizzes/current/*.json', { eager: true });
+// Quiz Data Manifest & Pure On-Demand Fast RAM Cache
 
 export const QUIZ_MANIFEST = [
   { id: 'vnr202-fe', filename: 'VNR202 - FE - QuizApp.json', title: 'VNR202 - Lịch Sử Đảng Cộng Sản Việt Nam (420 Câu)', subject: 'Lịch Sử Đảng', category: 'VNR202', color: 'from-rose-100 to-red-100', icon: 'BookOpen' },
@@ -65,42 +62,8 @@ export const QUIZ_MANIFEST = [
   { id: 'AET102c_211', filename: 'AET102c_211.json', title: 'AET102c - Art & Aesthetics (211 Câu)', subject: 'Nghệ Thuật & Mỹ Học', category: 'AET102c', color: 'from-fuchsia-100 to-pink-100', icon: 'Sparkles' },
 ];
 
-// PRE-COMPUTE AND MEMOIZE ALL QUIZZES ON INITIAL LOAD
+// In-Memory RAM Cache for Loaded Quizzes
 const normalizedQuizCache = new Map();
-
-QUIZ_MANIFEST.forEach(manifestItem => {
-  let rawData = null;
-  for (const path in quizFiles) {
-    if (path.includes(manifestItem.filename)) {
-      rawData = quizFiles[path].default || quizFiles[path];
-      break;
-    }
-  }
-
-  if (rawData) {
-    const rawQuestions = rawData.questionsList || rawData.questions || [];
-    const normalized = {
-      ...manifestItem,
-      rawId: rawData.id,
-      originalName: rawData.name,
-      questions: rawQuestions.map((q, idx) => {
-        const rawAnswers = q.answersList || q.answers || [];
-        return {
-          id: q.id || idx + 1,
-          questionIndex: idx,
-          content: q.content || 'Câu hỏi không có nội dung',
-          explanation: q.explanation || '',
-          answers: rawAnswers.map((a, aIdx) => ({
-            id: a.id || aIdx + 1,
-            content: a.content || '',
-            isCorrect: a.isCorrect !== undefined ? Boolean(a.isCorrect) : Boolean(a.is_correct),
-          }))
-        };
-      })
-    };
-    normalizedQuizCache.set(manifestItem.id, normalized);
-  }
-});
 
 // LocalStorage Persistence Keys
 const STORAGE_KEY_CUSTOM_QUIZZES = 'quizzlet_custom_quizzes_v1';
@@ -124,17 +87,56 @@ export function getDeletedQuizIds() {
   }
 }
 
-// Initialize custom quizzes into memory cache
-const initialCustomSets = getCustomQuizSets();
-initialCustomSets.forEach(cSet => {
-  normalizedQuizCache.set(cSet.id, cSet);
-});
+// Helper to fetch single quiz content from backend on-demand
+export async function loadQuizContentAsync(quizId) {
+  if (!quizId) return null;
+  const targetId = String(quizId).trim().toLowerCase();
 
-// Purge any deleted quizzes from RAM Cache on startup
-const initialDeletedIds = getDeletedQuizIds();
-initialDeletedIds.forEach(delId => {
-  normalizedQuizCache.delete(delId);
-});
+  // 1. Return from RAM cache if already loaded
+  for (let [key, val] of normalizedQuizCache.entries()) {
+    if (String(key).trim().toLowerCase() === targetId && val.questions && val.questions.length > 0) {
+      return val;
+    }
+  }
+
+  // 2. Check custom user-created / community quiz sets from localStorage
+  const customSets = getCustomQuizSets();
+  const customItem = customSets.find(q => String(q.id).trim().toLowerCase() === targetId);
+  if (customItem && customItem.questions && customItem.questions.length > 0) {
+    normalizedQuizCache.set(customItem.id, customItem);
+    return customItem;
+  }
+
+  // 3. Fetch from Backend On-Demand API
+  const manifestItem = QUIZ_MANIFEST.find(q => String(q.id).trim().toLowerCase() === targetId);
+  const lookupKey = manifestItem?.filename?.replace('.json', '') || quizId;
+  const API_BASE = typeof window !== 'undefined' && window.location.hostname !== 'localhost'
+    ? `${window.location.origin}/api`
+    : 'http://localhost:8701/api';
+
+  try {
+    const res = await fetch(`${API_BASE}/quizzes/content/${encodeURIComponent(lookupKey)}`);
+    if (res.ok) {
+      const data = await res.json();
+      if (data.success && data.quiz) {
+        const fullQuiz = {
+          ...(manifestItem || {}),
+          ...data.quiz,
+          id: manifestItem?.id || data.quiz.id
+        };
+        normalizedQuizCache.set(fullQuiz.id, fullQuiz);
+        normalizedQuizCache.set(targetId, fullQuiz);
+        window.dispatchEvent(new CustomEvent('quizzlet_quiz_loaded', { detail: fullQuiz }));
+        return fullQuiz;
+      }
+    }
+  } catch (err) {
+    console.error('Error fetching quiz content from API:', err);
+  }
+
+  // 4. Safe fallback
+  return manifestItem ? { ...manifestItem, questions: [] } : { id: quizId, title: 'Bộ Đề Học Tập', questions: [] };
+}
 
 // SRS Card State Tracking (Synchronized Knowt Learning Engine)
 export function getQuizCardStates(quizId) {

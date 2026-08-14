@@ -64,6 +64,84 @@ app.use('/api/comments', commentRoutes);
 app.use('/api/saved-questions', savedRoutes);
 app.use('/api/admin', adminRoutes);
 
+// ----------------------------------------------------
+// 1.5. On-Demand Secure Quiz Content API (Pure RAM Cache)
+// ----------------------------------------------------
+const QUIZZES_DIR = path.join(__dirname, 'quizzes', 'current');
+const quizCache = new Map();
+
+function initQuizCache() {
+  try {
+    if (!fs.existsSync(QUIZZES_DIR)) {
+      console.warn('Quizzes directory not found at:', QUIZZES_DIR);
+      return;
+    }
+    const files = fs.readdirSync(QUIZZES_DIR);
+    for (const file of files) {
+      if (file.endsWith('.json')) {
+        try {
+          const filePath = path.join(QUIZZES_DIR, file);
+          const raw = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+          const rawQuestions = raw.questionsList || raw.questions || [];
+          const normalized = {
+            id: file.replace('.json', ''),
+            rawId: raw.id,
+            title: raw.name || file.replace('.json', ''),
+            originalName: raw.name,
+            questions: rawQuestions.map((q, idx) => {
+              const rawAnswers = q.answersList || q.answers || [];
+              return {
+                id: q.id || idx + 1,
+                questionIndex: idx,
+                content: q.content || 'Câu hỏi không có nội dung',
+                explanation: q.explanation || '',
+                answers: rawAnswers.map((a, aIdx) => ({
+                  id: a.id || aIdx + 1,
+                  content: a.content || '',
+                  isCorrect: a.isCorrect !== undefined ? Boolean(a.isCorrect) : Boolean(a.is_correct),
+                }))
+              };
+            })
+          };
+          const baseName = file.replace('.json', '').toLowerCase();
+          quizCache.set(baseName, normalized);
+          quizCache.set(file.toLowerCase(), normalized);
+          if (raw.id) quizCache.set(String(raw.id).toLowerCase(), normalized);
+        } catch (e) {
+          console.error(`Error loading quiz file ${file}:`, e);
+        }
+      }
+    }
+    console.log(`[QuizEngine] Pre-loaded ${quizCache.size} quiz mappings into RAM cache.`);
+  } catch (err) {
+    console.error('Error initializing quiz cache:', err);
+  }
+}
+
+initQuizCache();
+
+app.get('/api/quizzes/content/:quizId', (req, res) => {
+  const quizId = String(req.params.quizId || '').trim().toLowerCase();
+  
+  if (quizCache.has(quizId)) {
+    return res.json({ success: true, quiz: quizCache.get(quizId) });
+  }
+
+  const customQuizzes = readCustomQuizzes();
+  const custom = customQuizzes.find(q => String(q.id).toLowerCase() === quizId);
+  if (custom) {
+    return res.json({ success: true, quiz: custom });
+  }
+
+  for (const [key, val] of quizCache.entries()) {
+    if (key.includes(quizId) || quizId.includes(key)) {
+      return res.json({ success: true, quiz: val });
+    }
+  }
+
+  return res.status(404).json({ success: false, message: 'Quiz not found' });
+});
+
 // Health Check Endpoint
 app.get('/api/health', (req, res) => {
   res.json({

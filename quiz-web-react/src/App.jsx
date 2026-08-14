@@ -13,7 +13,7 @@ import AuthModal from './components/auth/AuthModal';
 import ProfileModal from './components/auth/ProfileModal';
 import ResetPasswordModal from './components/auth/ResetPasswordModal';
 import AdminView from './components/admin/AdminView';
-import { QUIZ_MANIFEST, fetchQuizById, getUserProgress, getStarredQuestions, toggleStarQuestion, unstarQuizSet, clearAllStarredQuestions, getCustomQuizSets, getDeletedQuizIds, syncCommunityQuizzes } from './data/quizDataLoader';
+import { QUIZ_MANIFEST, fetchQuizById, loadQuizContentAsync, getUserProgress, getStarredQuestions, toggleStarQuestion, unstarQuizSet, clearAllStarredQuestions, getCustomQuizSets, getDeletedQuizIds, syncCommunityQuizzes } from './data/quizDataLoader';
 import { Sparkles, BookOpen, Layers, Star, Trash2, ArrowRight, BookMarked, Plus } from 'lucide-react';
 
 import { useAuth } from './context/AuthContext';
@@ -132,10 +132,17 @@ export default function App() {
         setEditingQuizData(null);
       } else if (quizId) {
         try {
-          const quizData = fetchQuizById(quizId);
           setActiveQuizId(quizId);
-          setLoadedQuiz(quizData);
           setStudyMode(mode || 'DETAIL');
+          const syncQuiz = fetchQuizById(quizId);
+          if (syncQuiz && syncQuiz.questions && syncQuiz.questions.length > 0) {
+            setLoadedQuiz(syncQuiz);
+          } else {
+            setLoadedQuiz(syncQuiz);
+            loadQuizContentAsync(quizId).then(qData => {
+              if (qData) setLoadedQuiz(qData);
+            });
+          }
         } catch (e) {
           console.error('Failed to load quiz from URL hash', e);
           setStudyMode(null);
@@ -153,10 +160,17 @@ export default function App() {
     const initialRoute = parseHashState();
     if (initialRoute.quizId) {
       try {
-        const quizData = fetchQuizById(initialRoute.quizId);
         setActiveQuizId(initialRoute.quizId);
-        setLoadedQuiz(quizData);
         setStudyMode(initialRoute.mode || 'DETAIL');
+        const syncQuiz = fetchQuizById(initialRoute.quizId);
+        if (syncQuiz && syncQuiz.questions && syncQuiz.questions.length > 0) {
+          setLoadedQuiz(syncQuiz);
+        } else {
+          setLoadedQuiz(syncQuiz);
+          loadQuizContentAsync(initialRoute.quizId).then(qData => {
+            if (qData) setLoadedQuiz(qData);
+          });
+        }
       } catch (e) {
         console.error('Error loading initial hash route', e);
       }
@@ -166,8 +180,18 @@ export default function App() {
       setStudyMode('CREATE_SET');
     }
 
+    const handleQuizDataLoaded = (e) => {
+      if (e.detail && e.detail.id === activeQuizId) {
+        setLoadedQuiz(e.detail);
+      }
+    };
+
     window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    window.addEventListener('quizzlet_quiz_loaded', handleQuizDataLoaded);
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener('quizzlet_quiz_loaded', handleQuizDataLoaded);
+    };
   }, [studyMode, activeQuizId, parseHashState, setHashState]);
 
   // Synchronize progress, community custom quizzes, deleted quiz IDs, and starred questions
@@ -177,10 +201,6 @@ export default function App() {
       setStarredQuestions(getStarredQuestions());
       setCustomQuizList(getCustomQuizSets());
       setDeletedQuizIds(getDeletedQuizIds());
-      syncCommunityQuizzes().then(sets => {
-        setCustomQuizList(sets);
-        setDeletedQuizIds(getDeletedQuizIds());
-      });
     };
 
     refreshData();
@@ -248,12 +268,20 @@ export default function App() {
 
   // Instant zero-latency navigation handlers (RAM Cached < 0.1ms)
   const handleOpenQuizDetail = useCallback((quizId) => {
-    const quizData = fetchQuizById(quizId);
     setActiveQuizId(quizId);
-    setLoadedQuiz(quizData);
     setInitialQuestionIndex(0);
     setStudyMode('DETAIL');
     setHashState('DETAIL', quizId);
+
+    const syncQuiz = fetchQuizById(quizId);
+    if (syncQuiz && syncQuiz.questions && syncQuiz.questions.length > 0) {
+      setLoadedQuiz(syncQuiz);
+    } else {
+      setLoadedQuiz(syncQuiz);
+      loadQuizContentAsync(quizId).then(qData => {
+        if (qData) setLoadedQuiz(qData);
+      });
+    }
   }, [setHashState]);
 
   const handleSelectModeDirect = useCallback((quizId, mode) => {
@@ -264,10 +292,18 @@ export default function App() {
       return;
     }
 
-    const quizData = fetchQuizById(quizId);
     setActiveQuizId(quizId);
-    setLoadedQuiz(quizData);
     setInitialQuestionIndex(0);
+
+    const syncQuiz = fetchQuizById(quizId);
+    if (syncQuiz && syncQuiz.questions && syncQuiz.questions.length > 0) {
+      setLoadedQuiz(syncQuiz);
+    } else {
+      setLoadedQuiz(syncQuiz);
+      loadQuizContentAsync(quizId).then(qData => {
+        if (qData) setLoadedQuiz(qData);
+      });
+    }
 
     if (mode === 'EXAM') {
       setIsTestSetupOpen(true);

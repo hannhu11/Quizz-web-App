@@ -26,9 +26,6 @@ export default defineConfig({
             }
             return 'vendor-libs';
           }
-          if (id.includes('quiz-app-main/quizzes/current') || id.includes('quiz-app-main\\quizzes\\current')) {
-            return 'quiz-data-vault';
-          }
         }
       }
     }
