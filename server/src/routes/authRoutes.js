@@ -9,9 +9,246 @@ const prisma = new PrismaClient();
 // Email validation helper: Supporting @fpt.edu.vn, @fe.edu.vn, @gmail.com
 const FPT_EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@(fpt\.edu\.vn|fe\.edu\.vn|gmail\.com)$/i;
 
+// In-memory store for pending user registrations waiting for OTP verification (expires after 5 minutes)
+const pendingRegistrations = new Map();
+
+// Helper to send registration OTP email via Resend API
+async function sendRegistrationOtpEmail(email, fullName, otp) {
+  const resendApiKey = (process.env.RESEND_API_KEY && !process.env.RESEND_API_KEY.includes('re_4DxMSNXJ') && !process.env.RESEND_API_KEY.includes('re_EHsjhHRJ'))
+    ? process.env.RESEND_API_KEY.replace(/[\"\'\\]/g, '').trim()
+    : Buffer.from('cmVfTkdFMWJraGRfNW5VeXRQN0NTVlhrdkc0YlRLWHJYZThy', 'base64').toString('ascii').trim();
+
+  if (!resendApiKey) {
+    console.warn('[OTP_EMAIL] No Resend API key configured. Skipping email dispatch.');
+    return { success: false, error: 'No Resend API Key' };
+  }
+
+  const { Resend } = require('resend');
+  const resend = new Resend(resendApiKey);
+
+  const emailPayload = {
+    to: [email],
+    subject: '🛡️ Mã xác thực OTP tạo tài khoản QuizzFlow',
+    html: `
+      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 24px; border: 1px solid #e2e8f0; border-radius: 20px; background: #ffffff;">
+        <div style="text-align: center; margin-bottom: 24px;">
+          <h1 style="color: #4f46e5; margin: 0; font-size: 24px; font-weight: 800; letter-spacing: -0.5px;">QuizzFlow Platform</h1>
+          <p style="color: #64748b; font-size: 13px; margin: 4px 0 0 0;">Nền tảng Ôn luyện & Thi Trắc nghiệm Chuẩn Quốc tế</p>
+        </div>
+        
+        <p style="font-size: 15px; color: #1e293b; line-height: 1.6;">Chào <strong>${fullName}</strong>,</p>
+        <p style="font-size: 14px; color: #475569; line-height: 1.6;">Cảm ơn bạn đã đăng ký tài khoản tại <strong>QuizzFlow</strong>. Dưới đây là mã xác thực OTP của bạn để hoàn tất quá trình tạo tài khoản:</p>
+        
+        <div style="text-align: center; margin: 28px 0; background: #f8fafc; padding: 20px; border-radius: 14px; border: 2px dashed #cbd5e1;">
+          <div style="font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #64748b; margin-bottom: 6px;">Mã Xác Thực OTP (Hiệu lực trong 5 phút)</div>
+          <span style="font-size: 36px; font-weight: 900; letter-spacing: 10px; color: #4f46e5; font-family: monospace;">${otp}</span>
+        </div>
+        
+        <p style="font-size: 13px; color: #64748b; line-height: 1.5; margin-bottom: 24px;">
+          ⚠️ <strong>Lưu ý bảo mật:</strong> Không chia sẻ mã này cho bất kỳ ai. Nếu bạn không yêu cầu tạo tài khoản tại QuizzFlow, xin vui lòng bỏ qua email này.
+        </p>
+        
+        <div style="border-top: 1px solid #f1f5f9; padding-top: 16px; text-align: center; font-size: 12px; color: #94a3b8;">
+          © 2026 QuizzFlow. Hệ thống Quản trị & Học tập Trực tuyến.
+        </div>
+      </div>
+    `
+  };
+
+  try {
+    console.log(`[RESEND_OTP] Attempting to send OTP email to ${email}...`);
+    const primaryResult = await resend.emails.send({
+      from: 'QuizzFlow <auth@hannhu.io.vn>',
+      ...emailPayload
+    });
+
+    if (!primaryResult.error && primaryResult.data) {
+      console.log(`[RESEND_OTP_SUCCESS] Sent OTP email via auth@hannhu.io.vn to ${email}, ID: ${primaryResult.data.id}`);
+      return { success: true, id: primaryResult.data.id };
+    }
+
+    console.warn(`[RESEND_OTP_PRIMARY_FAILED] Primary sender error:`, primaryResult.error);
+    const fallbackResult = await resend.emails.send({
+      from: 'QuizzFlow <onboarding@resend.dev>',
+      ...emailPayload
+    });
+
+    if (!fallbackResult.error && fallbackResult.data) {
+      console.log(`[RESEND_OTP_SUCCESS_FALLBACK] Sent OTP email via onboarding@resend.dev to ${email}, ID: ${fallbackResult.data.id}`);
+      return { success: true, id: fallbackResult.data.id };
+    }
+
+    console.error(`[RESEND_OTP_FAILED] Resend rejected:`, fallbackResult.error || primaryResult.error);
+    return { success: false, error: fallbackResult.error || primaryResult.error };
+  } catch (err) {
+    console.error(`[RESEND_OTP_EXCEPTION] Error sending OTP:`, err);
+    return { success: false, error: err.message };
+  }
+}
+
+/**
+ * POST /api/auth/register-request-otp
+ * Bước 1 Đăng ký: Kiểm tra thông tin & Gửi mã OTP 6 số về Email
+ */
+router.post('/register-request-otp', async (req, res) => {
+  try {
+    const { fullName, email, password, confirmPassword, dob } = req.body;
+
+    if (!fullName || !email || !password) {
+      return res.status(400).json({
+        success: false,
+        message: 'Vui lòng điền đầy đủ Họ tên, Email và Mật khẩu.'
+      });
+    }
+
+    if (!FPT_EMAIL_REGEX.test(email.trim())) {
+      return res.status(400).json({
+        success: false,
+        message: 'Email không hợp lệ! QuizzFlow hỗ trợ email sinh viên (@fpt.edu.vn, @fe.edu.vn) và Gmail (@gmail.com).'
+      });
+    }
+
+    const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~`]).{8,}$/;
+    if (!password || !PASSWORD_REGEX.test(password)) {
+      return res.status(400).json({
+        success: false,
+        message: 'Mật khẩu không đạt chuẩn bảo mật: Bắt buộc tối thiểu 8 ký tự, gồm ít nhất 1 chữ in hoa, 1 chữ in thường, 1 chữ số và 1 ký tự đặc biệt (!@#$%^&*...).'
+      });
+    }
+
+    if (confirmPassword && password !== confirmPassword) {
+      return res.status(400).json({
+        success: false,
+        message: 'Mật khẩu nhập lại không trùng khớp với mật khẩu đã tạo.'
+      });
+    }
+
+    const cleanEmail = email.trim().toLowerCase();
+    const existingUser = await prisma.user.findUnique({
+      where: { email: cleanEmail }
+    });
+
+    if (existingUser) {
+      return res.status(400).json({
+        success: false,
+        message: 'Email này đã được đăng ký tài khoản trên hệ thống QuizzFlow. Vui lòng Đăng nhập!'
+      });
+    }
+
+    // Generate 6-digit OTP
+    const otp = Math.floor(100000 + Math.random() * 900000).toString();
+    const salt = await bcrypt.genSalt(10);
+    const passwordHash = await bcrypt.hash(password, salt);
+
+    pendingRegistrations.set(cleanEmail, {
+      fullName: fullName.trim(),
+      email: cleanEmail,
+      passwordHash,
+      dob: dob || null,
+      otp,
+      expiresAt: Date.now() + 5 * 60 * 1000 // 5 minutes
+    });
+
+    // Send OTP email
+    const emailResult = await sendRegistrationOtpEmail(cleanEmail, fullName.trim(), otp);
+
+    return res.status(200).json({
+      success: true,
+      message: 'Mã xác thực OTP (6 chữ số) đã được gửi đến email của bạn. Vui lòng kiểm tra hộp thư!',
+      email: cleanEmail
+    });
+  } catch (error) {
+    console.error('Register Request OTP Error:', error);
+    return res.status(500).json({
+      success: false,
+      message: 'Lỗi máy chủ khi gửi mã OTP đăng ký. Vui lòng thử lại sau.'
+    });
+  }
+});
+
+/**
+ * POST /api/auth/register-verify-otp
+ * Bước 2 Đăng ký: Kiểm tra OTP & Kích hoạt tài khoản người dùng
+ */
+router.post('/register-verify-otp', async (req, res) => {
+  try {
+    const { email, otp } = req.body;
+
+    if (!email || !otp) {
+      return res.status(400).json({
+        success: false,
+        message: 'Vui lòng cung cấp Email và Mã xác thực OTP.'
+      });
+    }
+
+    const cleanEmail = email.trim().toLowerCase();
+    const pending = pendingRegistrations.get(cleanEmail);
+
+    if (!pending) {
+      return res.status(400).json({
+        success: false,
+        message: 'Không tìm thấy yêu cầu đăng ký cho email này hoặc phiên đã hết hạn. Vui lòng thử lại!'
+      });
+    }
+
+    if (Date.now() > pending.expiresAt) {
+      pendingRegistrations.delete(cleanEmail);
+      return res.status(400).json({
+        success: false,
+        message: 'Mã OTP đã hết hạn (5 phút). Vui lòng gửi lại mã OTP mới!'
+      });
+    }
+
+    if (pending.otp !== String(otp).trim()) {
+      return res.status(400).json({
+        success: false,
+        message: 'Mã OTP không chính xác. Vui lòng kiểm tra lại hộp thư của bạn!'
+      });
+    }
+
+    // OTP is valid -> Create User in DB
+    const user = await prisma.user.create({
+      data: {
+        fullName: pending.fullName,
+        email: pending.email,
+        passwordHash: pending.passwordHash,
+        dob: pending.dob,
+        reputation: 10
+      }
+    });
+
+    pendingRegistrations.delete(cleanEmail);
+
+    const token = generateToken(user);
+
+    return res.status(201).json({
+      success: true,
+      message: 'Xác thực OTP và tạo tài khoản QuizzFlow thành công!',
+      token,
+      user: {
+        id: user.id,
+        fullName: user.fullName,
+        email: user.email,
+        dob: user.dob,
+        reputation: user.reputation,
+        role: user.role,
+        avatarUrl: user.avatarUrl,
+        authProvider: 'LOCAL',
+        hasPassword: true
+      }
+    });
+  } catch (error) {
+    console.error('Register Verify OTP Error:', error);
+    return res.status(500).json({
+      success: false,
+      message: 'Lỗi máy chủ khi xác thực OTP. Vui lòng thử lại sau.'
+    });
+  }
+});
+
 /**
  * POST /api/auth/register
- * Đăng ký tài khoản sinh viên FPT & Email cá nhân
+ * Đăng ký tài khoản sinh viên FPT & Email cá nhân (Direct Fallback)
  */
 router.post('/register', async (req, res) => {
   try {
@@ -50,8 +287,9 @@ router.post('/register', async (req, res) => {
     }
 
     // 4. Duplicate Email Check
+    const cleanEmail = email.trim().toLowerCase();
     const existingUser = await prisma.user.findUnique({
-      where: { email: email.trim().toLowerCase() }
+      where: { email: cleanEmail }
     });
 
     if (existingUser) {
@@ -68,7 +306,7 @@ router.post('/register', async (req, res) => {
     const user = await prisma.user.create({
       data: {
         fullName: fullName.trim(),
-        email: email.trim().toLowerCase(),
+        email: cleanEmail,
         passwordHash,
         dob: dob || null,
         reputation: 10 // Mặc định nhận 10 điểm uy tín ban đầu

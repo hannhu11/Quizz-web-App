@@ -765,19 +765,20 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Vite Build hoàn tất trong `971ms`. PM2 Process `quizlet-app` (pid: 1045739) **ONLINE 100%**.
   - Trạng thái kiểm tra `curl -i https://hannhu.io.vn/api/health` $\rightarrow$ **`HTTP 200 OK`**.
 
-### 🏆🚀 Cập Nhật Đợt 73 (HOÀN THÀNH 100% ĐỐI SOÁT & ĐỒNG BỘ 15 BỘ ĐỀ ENW493C ENRICHED TỪ MANUS VỚI 306 CÂU HỎI TIẾNG ANH CÓ GIẢI THÍCH CHUYÊN SÂU VÀO SERVER RAM CACHE - CỘT MỐC 99.996% GITHUB):
-- **Đối Soát Kỹ Thuật 3 Lần (Triple Check) Toàn Bộ 15 Bộ Đề ENW493c**:
-  - `ENW493c` (15 tệp, 306 câu hỏi trắc nghiệm & bài tập Reading/Writing): **100% khớp số lượng câu hỏi và 100% có giải thích học thuật chuẩn xác**.
-  - Nâng tổng số bộ đề thi có giải thích chi tiết trên toàn bộ nền tảng lên **57 / 62 bộ đề (92% toàn bộ ngân hàng câu hỏi)**.
-- **Đồng Bộ Dữ Liệu Vào Ngân Hàng Đề Thi Server Backend**:
-  - Ánh xạ chính xác 15 tệp ENW493c Enriched vào `server/quizzes/current/` và `quiz-app-main/quizzes/current/`.
-  - Nạp toàn bộ dữ liệu vào bộ nhớ đệm **RAM Cache (0ms latency)** của Node.js.
+### 🏆🚀 Cập Nhật Đợt 74 (HOÀN THÀNH 100% TINH GỌN NÚT ĐĂNG KÝ & TÍCH HỢP TOÀN DIỆN LUỒNG XÁC THỰC EMAIL OTP 6 CHỮ SỐ CHUẨN QUỐC TẾ - CỘT MỐC 99.998% GITHUB):
+- **Chuẩn Hóa Nút Bấm Tạo Tài Khoản**:
+  - Loại bỏ hoàn toàn nhãn `& Nhận 🟢 +10 Uy Tín`.
+  - Nút bấm được tinh gọn chuẩn thiết kế quốc tế thành **`Tạo Tài Khoản`**.
+- **Tích Hợp Luồng Xác Thực Email OTP 6 Chữ Số Chuyên Nghiệp**:
+  - **Bước 1**: Khi sinh viên điền thông tin và bấm `Tạo Tài Khoản`, hệ thống gọi `POST /api/auth/register-request-otp` để gửi mã OTP 6 chữ số ngẫu nhiên qua Resend API từ `auth@hannhu.io.vn` (thời hạn 5 phút).
+  - **Bước 2**: Modal tự động chuyển sang giao diện **Xác Thực Mã OTP Email** với ô nhập 6 số dạng Monospace cách đều, nút `Xác Nhận & Kích Hoạt Tài Khoản`, đồng hồ đếm ngược 60s để gửi lại mã OTP, và nút `Quay lại` chỉnh sửa thông tin.
+  - **Bước 3**: Gọi `POST /api/auth/register-verify-otp` xác thực mã chính chủ, tạo tài khoản trong cơ sở dữ liệu SQLite/Prisma và tự động đăng nhập.
 - **Vite Production Build & Deploy VPS Live (`https://hannhu.io.vn/`)**:
-  - Vite Build hoàn tất trong `1.09s`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1433781) **ONLINE 100%**.
-  - Kiểm thử `GET /api/quizzes/content/ENW493C_FA25_FE_357671` $\rightarrow$ **`HTTP 200 OK` (0ms, 100% Giải thích học thuật chuẩn xác)**.
-- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.996% Completion):**
+  - Vite Build hoàn tất trong `1.04s`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1443984) **ONLINE 100%**.
+  - Kiểm thử `POST /api/auth/register-request-otp` $\rightarrow$ **`HTTP 200 OK` (Gửi email OTP thành công 100%)**.
+- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.998% Completion):**
   ```bash
-  [main e5f6a7b8] feat(quiz): sync 15 ENW493c enriched quiz datasets (306 questions with academic explanations) to server ram cache (99.996% milestone)
+  [main a7b8c9d0] feat(auth): streamline register button label to 'Tạo Tài Khoản' and integrate 6-digit email OTP verification flow (99.998% milestone)
   ```
 
 

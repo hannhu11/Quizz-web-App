@@ -135,7 +135,48 @@ export function AuthProvider({ children }) {
     }
   };
 
-  // Register handler
+  // Request Registration OTP Handler
+  const requestRegisterOtp = async (fullName, email, password, confirmPassword, dob) => {
+    try {
+      const res = await fetch(`${API_BASE_URL}/auth/register-request-otp`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fullName, email, password, confirmPassword, dob })
+      });
+      const data = await res.json();
+      return {
+        success: data.success || res.ok,
+        message: data.message || (res.ok ? 'Đã gửi mã OTP về email của bạn.' : 'Không thể gửi mã OTP.')
+      };
+    } catch (err) {
+      console.error('Request Register OTP Error:', err);
+      return { success: false, message: 'Không thể kết nối đến máy chủ. Vui lòng thử lại!' };
+    }
+  };
+
+  // Verify Registration OTP Handler
+  const verifyRegisterOtp = async (email, otp) => {
+    try {
+      const res = await fetch(`${API_BASE_URL}/auth/register-verify-otp`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, otp })
+      });
+      const data = await res.json();
+
+      if (data.success && data.token) {
+        saveSession(data.token, data.user);
+        return { success: true, message: data.message };
+      } else {
+        return { success: false, message: data.message || 'Xác thực OTP thất bại.' };
+      }
+    } catch (err) {
+      console.error('Verify Register OTP Error:', err);
+      return { success: false, message: 'Lỗi xác thực OTP. Vui lòng thử lại sau!' };
+    }
+  };
+
+  // Register handler (Direct Fallback)
   const register = async (fullName, email, password, confirmPassword, dob) => {
     try {
       const res = await fetch(`${API_BASE_URL}/auth/register`, {
@@ -209,6 +250,8 @@ export function AuthProvider({ children }) {
         isLoading,
         login,
         register,
+        requestRegisterOtp,
+        verifyRegisterOtp,
         googleAuth,
         logout,
         setUser,
