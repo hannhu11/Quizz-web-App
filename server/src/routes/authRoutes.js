@@ -33,11 +33,12 @@ router.post('/register', async (req, res) => {
       });
     }
 
-    // 3. Password Length & Match Validation
-    if (password.length < 8) {
+    // 3. Strict Password Policy Validation (Min 8 chars, Uppercase, Lowercase, Number, Special Char)
+    const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~`]).{8,}$/;
+    if (!password || !PASSWORD_REGEX.test(password)) {
       return res.status(400).json({
         success: false,
-        message: 'Mật khẩu phải có độ dài tối thiểu 8 ký tự.'
+        message: 'Mật khẩu không đạt chuẩn bảo mật: Bắt buộc tối thiểu 8 ký tự, gồm ít nhất 1 chữ in hoa, 1 chữ in thường, 1 chữ số và 1 ký tự đặc biệt (!@#$%^&*...).'
       });
     }
 
@@ -376,10 +377,11 @@ router.post('/reset-password', async (req, res) => {
       });
     }
 
-    if (!newPassword || newPassword.length < 8) {
+    const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~`]).{8,}$/;
+    if (!newPassword || !PASSWORD_REGEX.test(newPassword)) {
       return res.status(400).json({
         success: false,
-        message: 'Mật khẩu mới phải có độ dài tối thiểu 8 ký tự.'
+        message: 'Mật khẩu mới không đạt chuẩn bảo mật: Bắt buộc tối thiểu 8 ký tự, gồm ít nhất 1 chữ in hoa, 1 chữ in thường, 1 chữ số và 1 ký tự đặc biệt (!@#$%^&*...).'
       });
     }
 
@@ -419,6 +421,79 @@ router.post('/reset-password', async (req, res) => {
     return res.status(500).json({
       success: false,
       message: 'Lỗi máy chủ khi đặt lại mật khẩu.'
+    });
+  }
+});
+
+/**
+ * POST /api/auth/me/password
+ * Đổi mật khẩu cá nhân cho người dùng đang đăng nhập
+ */
+router.post('/me/password', authenticateToken, async (req, res) => {
+  try {
+    const { currentPassword, newPassword } = req.body;
+    const userId = req.user.id;
+
+    if (!newPassword) {
+      return res.status(400).json({
+        success: false,
+        message: 'Vui lòng cung cấp mật khẩu mới.'
+      });
+    }
+
+    const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~`]).{8,}$/;
+    if (!PASSWORD_REGEX.test(newPassword)) {
+      return res.status(400).json({
+        success: false,
+        message: 'Mật khẩu mới không đạt chuẩn bảo mật: Bắt buộc tối thiểu 8 ký tự, gồm ít nhất 1 chữ in hoa, 1 chữ in thường, 1 chữ số và 1 ký tự đặc biệt (!@#$%^&*...).'
+      });
+    }
+
+    const user = await prisma.user.findUnique({
+      where: { id: userId }
+    });
+
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: 'Không tìm thấy thông tin tài khoản người dùng.'
+      });
+    }
+
+    // Nếu tài khoản đã có mật khẩu trước đó, phải xác thực đúng mật khẩu hiện tại
+    if (user.passwordHash) {
+      if (!currentPassword) {
+        return res.status(400).json({
+          success: false,
+          message: 'Vui lòng nhập mật khẩu hiện tại để xác nhận.'
+        });
+      }
+      const isCurrentMatch = await bcrypt.compare(currentPassword, user.passwordHash);
+      if (!isCurrentMatch) {
+        return res.status(400).json({
+          success: false,
+          message: 'Mật khẩu hiện tại không chính xác.'
+        });
+      }
+    }
+
+    const salt = await bcrypt.genSalt(10);
+    const passwordHash = await bcrypt.hash(newPassword, salt);
+
+    await prisma.user.update({
+      where: { id: userId },
+      data: { passwordHash }
+    });
+
+    return res.json({
+      success: true,
+      message: 'Đổi mật khẩu tài khoản thành công!'
+    });
+  } catch (error) {
+    console.error('Change Password Error:', error);
+    return res.status(500).json({
+      success: false,
+      message: 'Lỗi máy chủ khi thay đổi mật khẩu tài khoản.'
     });
   }
 });

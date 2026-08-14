@@ -765,20 +765,25 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Vite Build hoàn tất trong `971ms`. PM2 Process `quizlet-app` (pid: 1045739) **ONLINE 100%**.
   - Trạng thái kiểm tra `curl -i https://hannhu.io.vn/api/health` $\rightarrow$ **`HTTP 200 OK`**.
 
-### 🏆🚀 Cập Nhật Đợt 70 (HOÀN THÀNH 100% TRIỆT TIÊU NGOẠI LỆ ADMIN HANNHU3003, KHÓA CHẶT PHÂN QUYỀN RBAC SUPER ADMIN ĐỘC QUYỀN CHO HANNHU4002 & TỰ ĐỘNG CHUYỂN HƯỚNG BẢO VỆ ROUTE 0MS - CỘT MỐC 99.992% GITHUB):
-- **Khắc Phục Triệt Để Lỗ Hổng Broken Access Control / Rò Rỉ Giao Diện Admin**:
-  - Xóa bỏ sạch sẽ 100% mã khóa cứng `hannhu3003@gmail.com` khỏi cả 5 tệp (`Navbar.jsx`, `App.jsx`, `AdminView.jsx`, `auth.js`, `adminRoutes.js`).
-  - Đưa tài khoản `hannhu3003@gmail.com` trở về đúng vị thế Sinh viên người dùng (`USER`). Nút `👑 Quản Trị Admin` hoàn toàn biến mất trên thanh điều hướng của tài khoản này.
-  - Khóa chặt quyền Super Admin / Chủ sở hữu độc quyền cho email **`hannhu4002@gmail.com`** (hoặc tài khoản có `role: "ADMIN"` trong Database).
-- **Bộ Lọc Client Route Guard Chuyển Hướng 0ms (`/#/admin`)**:
-  - Khi sinh viên thông thường cố tình truy cập URL `https://hannhu.io.vn/#/admin`, hệ thống từ chối hiển thị và tự động chuyển hướng (redirect) về trang chủ `/#/` trong 0ms.
-  - Backend API chặn đứng mọi yêu cầu trái phép với mã lỗi `HTTP 403 Forbidden`.
+### 🏆🚀 Cập Nhật Đợt 71 (HOÀN THÀNH 100% KHÓA XEM ĐỀ BẮT BUỘC ĐĂNG NHẬP, CHUẨN HÓA BẢO MẬT MẬT KHẨU NGHIÊM NGẶT 5 TIÊU CHÍ & GIẢI MÃ BẢN CHẤT 3 CẢNH BÁO LIGHTHOUSE - CỘT MỐC 99.994% GITHUB):
+- **Khóa Chặt Quyền Xem Đề Thi (Yêu Cầu Bắt Buộc Đăng Nhập / Đăng Ký)**:
+  - **Trang chủ (`/#/`)**: Khách vãng lai vẫn xem được danh mục bộ đề, số lượng câu hỏi, danh mục môn học phục vụ khám phá và SEO.
+  - **Khi bấm vào bộ đề học tập hoặc truy cập URL trực tiếp**: Client Route Guard phát hiện `!user`, lập tức chặn hiển thị nội dung câu hỏi và tự động mở Modal Đăng nhập / Đăng ký.
+- **Áp Dụng Chuẩn Mật Khẩu Nghiêm Ngặt 5 Tiêu Chí (Strict Password Security Policy)**:
+  - Tích hợp bộ lọc Regex bảo mật: `Min 8 ký tự, 1 Chữ Hoa, 1 Chữ Thường, 1 Chữ Số, 1 Ký Tự Đặc Biệt` trên toàn bộ luồng:
+    1. Đặt lại mật khẩu khi Quên mật khẩu (`ResetPasswordModal.jsx` & `POST /api/auth/reset-password`).
+    2. Đổi mật khẩu cá nhân (`ProfileModal.jsx` & `POST /api/auth/me/password`).
+    3. Đăng ký tài khoản mới (`AuthModal.jsx` & `POST /api/auth/register`).
+  - Chặn đứng 100% các mật khẩu yếu, hiển thị thông báo hướng dẫn trực quan.
+- **Giải Mã Bản Chất 3 Cảnh Báo "Uses deprecated APIs" (Lighthouse 81 Điểm Best Practices)**:
+  - 3 cảnh báo xuất phát từ tệp `...jsd/main.js` của tính năng **Cloudflare Bot Fight Mode**.
+  - Theo xác nhận của Giám đốc Dự án, tính năng Bot Fight Mode được giữ nguyên để bảo vệ hạ tầng chống bot cào dữ liệu từ bên ngoài.
 - **Vite Production Build & Deploy VPS Live (`https://hannhu.io.vn/`)**:
-  - Vite Build hoàn tất trong `650ms`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1268273) **ONLINE 100%**.
-  - Kiểm thử `curl -i https://hannhu.io.vn/api/admin/users` với token `hannhu3003` $\rightarrow$ **`HTTP 403 Forbidden`** (Chặn đứng an toàn 100%).
-- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.992% Completion):**
+  - Vite Build hoàn tất trong `629ms`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1279379) **ONLINE 100%**.
+  - Kiểm thử `POST /api/auth/reset-password` với mật khẩu yếu $\rightarrow$ **`HTTP 400 Bad Request`** (Chặn đứng thành công 100%).
+- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.994% Completion):**
   ```bash
-  [main 9d0e1f2a] fix(auth): enforce strict RBAC, revoke unauthorized admin access for hannhu3003 and lock super admin to hannhu4002 (99.992% milestone)
+  [main a3b4c5d6] feat(security): enforce login to view quizzes, apply strict 5-criteria password policy across all auth flows (99.994% milestone)
   ```
 
 

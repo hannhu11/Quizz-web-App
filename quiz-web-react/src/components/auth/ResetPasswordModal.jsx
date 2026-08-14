@@ -60,8 +60,8 @@ export default function ResetPasswordModal({ isOpen, onClose, resetToken }) {
     setErrorMsg('');
     setSuccessMsg('');
 
-    if (newPassword.length < 8) {
-      setErrorMsg('Mật khẩu mới phải có ít nhất 8 ký tự.');
+    if (!hasMinLength || !hasLower || !hasUpper || !hasNumber || !hasSpecial) {
+      setErrorMsg('Mật khẩu bắt buộc phải có ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt (!@#$%^&*...).');
       return;
     }
 

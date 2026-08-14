@@ -127,9 +127,27 @@ export default function App() {
           setHashState(null, null, true);
         }
       } else if (mode === 'CREATE_SET') {
+        if (!user) {
+          setStudyMode(null);
+          setActiveQuizId(null);
+          setLoadedQuiz(null);
+          setHashState(null, null, true);
+          setAuthModalMode('LOGIN');
+          setIsAuthModalOpen(true);
+          return;
+        }
         setStudyMode('CREATE_SET');
         setEditingQuizData(null);
       } else if (quizId) {
+        if (!user) {
+          setStudyMode(null);
+          setActiveQuizId(null);
+          setLoadedQuiz(null);
+          setHashState(null, null, true);
+          setAuthModalMode('LOGIN');
+          setIsAuthModalOpen(true);
+          return;
+        }
         try {
           setActiveQuizId(quizId);
           setStudyMode(mode || 'DETAIL');
@@ -158,20 +176,29 @@ export default function App() {
     // Initial load from hash
     const initialRoute = parseHashState();
     if (initialRoute.quizId) {
-      try {
-        setActiveQuizId(initialRoute.quizId);
-        setStudyMode(initialRoute.mode || 'DETAIL');
-        const syncQuiz = fetchQuizById(initialRoute.quizId);
-        if (syncQuiz && syncQuiz.questions && syncQuiz.questions.length > 0) {
-          setLoadedQuiz(syncQuiz);
-        } else {
-          setLoadedQuiz(syncQuiz);
-          loadQuizContentAsync(initialRoute.quizId).then(qData => {
-            if (qData) setLoadedQuiz(qData);
-          });
+      if (!user) {
+        setStudyMode(null);
+        setActiveQuizId(null);
+        setLoadedQuiz(null);
+        setHashState(null, null, true);
+        setAuthModalMode('LOGIN');
+        setIsAuthModalOpen(true);
+      } else {
+        try {
+          setActiveQuizId(initialRoute.quizId);
+          setStudyMode(initialRoute.mode || 'DETAIL');
+          const syncQuiz = fetchQuizById(initialRoute.quizId);
+          if (syncQuiz && syncQuiz.questions && syncQuiz.questions.length > 0) {
+            setLoadedQuiz(syncQuiz);
+          } else {
+            setLoadedQuiz(syncQuiz);
+            loadQuizContentAsync(initialRoute.quizId).then(qData => {
+              if (qData) setLoadedQuiz(qData);
+            });
+          }
+        } catch (e) {
+          console.error('Error loading initial hash route', e);
         }
-      } catch (e) {
-        console.error('Error loading initial hash route', e);
       }
     } else if (initialRoute.mode === 'ADMIN') {
       setStudyMode('ADMIN');
@@ -191,7 +218,7 @@ export default function App() {
       window.removeEventListener('hashchange', handleHashChange);
       window.removeEventListener('quizzlet_quiz_loaded', handleQuizDataLoaded);
     };
-  }, [studyMode, activeQuizId, parseHashState, setHashState]);
+  }, [user, studyMode, activeQuizId, parseHashState, setHashState]);
 
   // Synchronize progress, community custom quizzes, deleted quiz IDs, and starred questions
   useEffect(() => {
@@ -267,6 +294,13 @@ export default function App() {
 
   // Instant zero-latency navigation handlers (RAM Cached < 0.1ms)
   const handleOpenQuizDetail = useCallback((quizId) => {
+    // Auth Guard Enforcement: User MUST be logged in to view quiz details
+    if (!user) {
+      setAuthModalMode('LOGIN');
+      setIsAuthModalOpen(true);
+      return;
+    }
+
     setActiveQuizId(quizId);
     setInitialQuestionIndex(0);
     setStudyMode('DETAIL');
@@ -281,7 +315,7 @@ export default function App() {
         if (qData) setLoadedQuiz(qData);
       });
     }
-  }, [setHashState]);
+  }, [user, setHashState]);
 
   const handleSelectModeDirect = useCallback((quizId, mode) => {
     // Auth Guard Enforcement: Must be logged in to access learning modes

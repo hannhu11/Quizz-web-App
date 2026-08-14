@@ -22,8 +22,14 @@ export default function ProfileModal({ isOpen, onClose }) {
     e.preventDefault();
     setMsg({ type: '', text: '' });
 
-    if (newPassword.length < 8) {
-      setMsg({ type: 'error', text: 'Mật khẩu mới phải có độ dài tối thiểu 8 ký tự.' });
+    const hasMinLength = newPassword.length >= 8;
+    const hasLower = /[a-z]/.test(newPassword);
+    const hasUpper = /[A-Z]/.test(newPassword);
+    const hasNumber = /[0-9]/.test(newPassword);
+    const hasSpecial = /[^A-Za-z0-9]/.test(newPassword);
+
+    if (!hasMinLength || !hasLower || !hasUpper || !hasNumber || !hasSpecial) {
+      setMsg({ type: 'error', text: 'Mật khẩu mới phải có ít nhất 8 ký tự gồm chữ hoa, chữ thường, chữ số và ký tự đặc biệt (!@#$%...).' });
       return;
     }
 

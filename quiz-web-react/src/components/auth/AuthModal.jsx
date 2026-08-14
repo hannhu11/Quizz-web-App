@@ -84,8 +84,14 @@ export default function AuthModal({ isOpen, onClose, initialMode = 'LOGIN' }) {
         return;
       }
 
-      if (password.length < 8) {
-        setErrorMsg('Mật khẩu phải chứa ít nhất 8 ký tự.');
+      const hasMinLength = password.length >= 8;
+      const hasLower = /[a-z]/.test(password);
+      const hasUpper = /[A-Z]/.test(password);
+      const hasNumber = /[0-9]/.test(password);
+      const hasSpecial = /[^A-Za-z0-9]/.test(password);
+
+      if (!hasMinLength || !hasLower || !hasUpper || !hasNumber || !hasSpecial) {
+        setErrorMsg('Mật khẩu phải chứa ít nhất 8 ký tự gồm chữ hoa, chữ thường, chữ số và ký tự đặc biệt (!@#$%...).');
         setIsSubmitting(false);
         return;
       }
