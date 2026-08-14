@@ -11,13 +11,13 @@ const authRoutes = require('./src/routes/authRoutes');
 const commentRoutes = require('./src/routes/commentRoutes');
 const savedRoutes = require('./src/routes/savedRoutes');
 const adminRoutes = require('./src/routes/adminRoutes');
+const { authenticateToken, requireAdmin } = require('./src/middleware/auth');
 
 const app = express();
 app.set('trust proxy', 1);
 const PORT = process.env.PORT || 8701;
 const CUSTOM_QUIZZES_PATH = path.join(__dirname, 'custom_quizzes.json');
 const DELETED_QUIZZES_PATH = path.join(__dirname, 'deleted_quiz_ids.json');
-const ADMIN_MASTER_KEY = 'nhu';
 
 // Enable Gzip/Brotli HTTP compression
 app.use(compression());
@@ -31,6 +31,7 @@ app.use((req, res, next) => {
   res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
   res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
   res.setHeader('Cross-Origin-Opener-Policy', 'same-origin');
+  res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin');
   res.setHeader('Content-Security-Policy', "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';");
   next();
 });
@@ -120,7 +121,7 @@ function initQuizCache() {
 
 initQuizCache();
 
-app.get('/api/quizzes/content/:quizId', (req, res) => {
+app.get('/api/quizzes/content/:quizId', authenticateToken, (req, res) => {
   const quizId = String(req.params.quizId || '').trim().toLowerCase();
   
   if (quizCache.has(quizId)) {
@@ -243,11 +244,12 @@ app.post('/api/quizzes/create', (req, res) => {
   res.json({ success: true, quiz: newQuiz });
 });
 
-app.post('/api/quizzes/verify-password', (req, res) => {
+app.post('/api/quizzes/verify-password', authenticateToken, (req, res) => {
   const { quizId, password } = req.body;
   const inputPassword = String(password || '').trim();
 
-  if (inputPassword === ADMIN_MASTER_KEY) {
+  const isSuperAdmin = req.user?.role === 'ADMIN' || req.user?.email === 'hannhu4002@gmail.com';
+  if (isSuperAdmin) {
     return res.json({ valid: true });
   }
 
@@ -259,7 +261,7 @@ app.post('/api/quizzes/verify-password', (req, res) => {
   res.json({ valid: isValid });
 });
 
-app.post('/api/quizzes/update', (req, res) => {
+app.post('/api/quizzes/update', authenticateToken, (req, res) => {
   const { quizId, password, updatedSet } = req.body;
   const inputPassword = String(password || '').trim();
 
@@ -267,10 +269,10 @@ app.post('/api/quizzes/update', (req, res) => {
   const target = quizzes.find(q => q.id === quizId);
   const quizPassword = String(target?.password || '').trim();
 
-  const isAuthorized = inputPassword === ADMIN_MASTER_KEY || (quizPassword !== '' && inputPassword === quizPassword);
+  const isAuthorized = (req.user?.role === 'ADMIN' || req.user?.email === 'hannhu4002@gmail.com') || (quizPassword !== '' && inputPassword === quizPassword);
 
   if (!isAuthorized) {
-    return res.status(403).json({ error: 'Mật khẩu không chính xác' });
+    return res.status(403).json({ error: 'Không có quyền chỉnh sửa bộ đề này.' });
   }
 
   const idx = quizzes.findIndex(q => q.id === quizId);
@@ -282,7 +284,7 @@ app.post('/api/quizzes/update', (req, res) => {
   res.json({ success: true });
 });
 
-app.post('/api/quizzes/delete', (req, res) => {
+app.post('/api/quizzes/delete', authenticateToken, (req, res) => {
   const { quizId, password } = req.body;
   const inputPassword = String(password || '').trim();
 
@@ -290,10 +292,10 @@ app.post('/api/quizzes/delete', (req, res) => {
   const target = quizzes.find(q => q.id === quizId);
   const quizPassword = String(target?.password || '').trim();
 
-  const isAuthorized = inputPassword === ADMIN_MASTER_KEY || (quizPassword !== '' && inputPassword === quizPassword);
+  const isAuthorized = (req.user?.role === 'ADMIN' || req.user?.email === 'hannhu4002@gmail.com') || (quizPassword !== '' && inputPassword === quizPassword);
 
   if (!isAuthorized) {
-    return res.status(403).json({ error: 'Mật khẩu không chính xác' });
+    return res.status(403).json({ error: 'Không có quyền xóa bộ đề này.' });
   }
 
   let deletedIds = readDeletedQuizIds();

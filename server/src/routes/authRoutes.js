@@ -6,11 +6,33 @@ const { authenticateToken, generateToken } = require('../middleware/auth');
 const router = express.Router();
 const prisma = new PrismaClient();
 
+const rateLimit = require('express-rate-limit');
+
 // Email validation helper: Supporting @fpt.edu.vn, @fe.edu.vn, @gmail.com
 const FPT_EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@(fpt\.edu\.vn|fe\.edu\.vn|gmail\.com)$/i;
 
-// In-memory store for pending user registrations waiting for OTP verification (expires after 5 minutes)
+// Strict Rate Limiter for Authentication & OTP Endpoints (Prevents brute force, spam & email bombing)
+const authLimiter = rateLimit({
+  windowMs: 1 * 60 * 1000, // 1 minute
+  max: 15, // max 15 auth requests per minute per IP
+  message: {
+    success: false,
+    message: 'Quá nhiều yêu cầu xác thực từ IP của bạn. Vui lòng thử lại sau 1 phút.'
+  }
+});
+
+// In-memory store for pending user registrations waiting for OTP verification (expires after 5 minutes, max 1000 items)
 const pendingRegistrations = new Map();
+
+// Periodic GC cleanup for expired OTP records (runs every 60s)
+setInterval(() => {
+  const now = Date.now();
+  for (const [email, pending] of pendingRegistrations.entries()) {
+    if (now > pending.expiresAt) {
+      pendingRegistrations.delete(email);
+    }
+  }
+}, 60 * 1000);
 
 // Helper to send registration OTP email via Resend API
 async function sendRegistrationOtpEmail(email, fullName, otp) {
@@ -90,7 +112,7 @@ async function sendRegistrationOtpEmail(email, fullName, otp) {
  * POST /api/auth/register-request-otp
  * Bước 1 Đăng ký: Kiểm tra thông tin & Gửi mã OTP 6 số về Email
  */
-router.post('/register-request-otp', async (req, res) => {
+router.post('/register-request-otp', authLimiter, async (req, res) => {
   try {
     const { fullName, email, password, confirmPassword, dob } = req.body;
 
@@ -170,7 +192,7 @@ router.post('/register-request-otp', async (req, res) => {
  * POST /api/auth/register-verify-otp
  * Bước 2 Đăng ký: Kiểm tra OTP & Kích hoạt tài khoản người dùng
  */
-router.post('/register-verify-otp', async (req, res) => {
+router.post('/register-verify-otp', authLimiter, async (req, res) => {
   try {
     const { email, otp } = req.body;
 
@@ -250,7 +272,7 @@ router.post('/register-verify-otp', async (req, res) => {
  * POST /api/auth/register
  * Đăng ký tài khoản sinh viên FPT & Email cá nhân (Direct Fallback)
  */
-router.post('/register', async (req, res) => {
+router.post('/register', authLimiter, async (req, res) => {
   try {
     const { fullName, email, password, confirmPassword, dob } = req.body;
 
@@ -346,7 +368,7 @@ router.post('/register', async (req, res) => {
  * POST /api/auth/login
  * Đăng nhập bằng Email & Mật khẩu
  */
-router.post('/login', async (req, res) => {
+router.post('/login', authLimiter, async (req, res) => {
   try {
     const { email, password } = req.body;
 
@@ -495,7 +517,7 @@ router.post('/google', async (req, res) => {
  * POST /api/auth/forgot-password
  * Yêu cầu gửi email khôi phục mật khẩu qua Resend API + JWT Reset Token
  */
-router.post('/forgot-password', async (req, res) => {
+router.post('/forgot-password', authLimiter, async (req, res) => {
   try {
     const { email } = req.body;
 

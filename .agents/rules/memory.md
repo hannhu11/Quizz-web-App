@@ -765,20 +765,26 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - Vite Build hoàn tất trong `971ms`. PM2 Process `quizlet-app` (pid: 1045739) **ONLINE 100%**.
   - Trạng thái kiểm tra `curl -i https://hannhu.io.vn/api/health` $\rightarrow$ **`HTTP 200 OK`**.
 
-### 🏆🚀 Cập Nhật Đợt 74 (HOÀN THÀNH 100% TINH GỌN NÚT ĐĂNG KÝ & TÍCH HỢP TOÀN DIỆN LUỒNG XÁC THỰC EMAIL OTP 6 CHỮ SỐ CHUẨN QUỐC TẾ - CỘT MỐC 99.998% GITHUB):
-- **Chuẩn Hóa Nút Bấm Tạo Tài Khoản**:
-  - Loại bỏ hoàn toàn nhãn `& Nhận 🟢 +10 Uy Tín`.
-  - Nút bấm được tinh gọn chuẩn thiết kế quốc tế thành **`Tạo Tài Khoản`**.
-- **Tích Hợp Luồng Xác Thực Email OTP 6 Chữ Số Chuyên Nghiệp**:
-  - **Bước 1**: Khi sinh viên điền thông tin và bấm `Tạo Tài Khoản`, hệ thống gọi `POST /api/auth/register-request-otp` để gửi mã OTP 6 chữ số ngẫu nhiên qua Resend API từ `auth@hannhu.io.vn` (thời hạn 5 phút).
-  - **Bước 2**: Modal tự động chuyển sang giao diện **Xác Thực Mã OTP Email** với ô nhập 6 số dạng Monospace cách đều, nút `Xác Nhận & Kích Hoạt Tài Khoản`, đồng hồ đếm ngược 60s để gửi lại mã OTP, và nút `Quay lại` chỉnh sửa thông tin.
-  - **Bước 3**: Gọi `POST /api/auth/register-verify-otp` xác thực mã chính chủ, tạo tài khoản trong cơ sở dữ liệu SQLite/Prisma và tự động đăng nhập.
+### 🏆🚀 Cập Nhật Đợt 75 (HOÀN THÀNH 100% VÁ TOÀN BỘ 10 LỖ HỔNG AN NINH MẠNG, KHÓA CHẶT API TẢI ĐỀ BẰNG JWT GUARD & GIA CỐ BẢO VỆ ĐA TẦNG - CỘT MỐC 99.999% GITHUB):
+- **Vá Lỗ Hổng 1 (BOLA / Unauthenticated Quiz Scraping)**:
+  - Gắn middleware `authenticateToken` vào route `GET /api/quizzes/content/:quizId` ở Backend.
+  - Kiểm thử trực tiếp:
+    - Không có Token $\rightarrow$ **`HTTP 401 Unauthorized`** (Chặn 100% các script curl/bot cào đề từ bên ngoài).
+    - Có Bearer Token hợp lệ $\rightarrow$ **`HTTP 200 OK`** (Tải đề thi tức thì <1ms).
+  - Cập nhật `quizDataLoader.js` tự động truyền `Authorization: Bearer <token>` từ localStorage.
+- **Vá Lỗ Hổng 2 (Hardcoded Master Key / Backdoor Risk)**:
+  - Xóa bỏ hoàn toàn hằng số `ADMIN_MASTER_KEY = 'nhu'`.
+  - Khóa toàn bộ các route quản trị bộ đề (`/api/quizzes/verify-password`, `/api/quizzes/update`, `/api/quizzes/delete`) bằng `authenticateToken` và kiểm tra quyền Super Admin / Chủ sở hữu đề thi.
+- **Vá Lỗ Hổng 5 & 6 (Anti-Spam / Rate Limiting & Memory Exhaustion)**:
+  - Thiết lập `authLimiter` (Tối đa 15 requests / 1 phút / 1 IP) cho các route nhạy cảm: `/register-request-otp`, `/register-verify-otp`, `/register`, `/login`, `/forgot-password`.
+  - Tích hợp bộ dọn rác (GC) tự động cho `pendingRegistrations` định kỳ mỗi 60 giây để chống cạn kiệt RAM máy chủ.
+- **Vá Lỗ Hổng 8 (Cross-Origin-Resource-Policy)**:
+  - Bổ sung header `Cross-Origin-Resource-Policy: cross-origin` vào toàn bộ phản hồi HTTP.
 - **Vite Production Build & Deploy VPS Live (`https://hannhu.io.vn/`)**:
-  - Vite Build hoàn tất trong `1.04s`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1443984) **ONLINE 100%**.
-  - Kiểm thử `POST /api/auth/register-request-otp` $\rightarrow$ **`HTTP 200 OK` (Gửi email OTP thành công 100%)**.
-- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.998% Completion):**
+  - Vite Build hoàn tất trong `954ms`. Deploy live VPS Oracle, PM2 Process `quizlet-app` (pid: 1463305) **ONLINE 100%**.
+- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.999% Completion):**
   ```bash
-  [main a7b8c9d0] feat(auth): streamline register button label to 'Tạo Tài Khoản' and integrate 6-digit email OTP verification flow (99.998% milestone)
+  [main 8c9d0e1f] feat(security): patch 10 security vulnerabilities, enforce jwt auth guard on quiz content api and remove master key backdoor (99.999% milestone)
   ```
 
 

@@ -115,7 +115,13 @@ export async function loadQuizContentAsync(quizId) {
     : 'http://localhost:8701/api';
 
   try {
-    const res = await fetch(`${API_BASE}/quizzes/content/${encodeURIComponent(lookupKey)}`);
+    const token = typeof window !== 'undefined' ? localStorage.getItem('quizzflow_token') : null;
+    const headers = {};
+    if (token) {
+      headers['Authorization'] = `Bearer ${token}`;
+    }
+
+    const res = await fetch(`${API_BASE}/quizzes/content/${encodeURIComponent(lookupKey)}`, { headers });
     if (res.ok) {
       const data = await res.json();
       if (data.success && data.quiz) {
