@@ -6,6 +6,10 @@ import PasswordModal from './PasswordModal';
 import DiscussionDrawer from './discussion/DiscussionDrawer';
 import { useAuth } from '../context/AuthContext';
 
+// Global cache and in-flight deduplication map for comment counts (0 duplicate network requests)
+const globalCommentCountsCache = new Map();
+const inFlightCommentCounts = new Map();
+
 function removeAccents(str) {
   if (!str) return '';
   return str
@@ -28,27 +32,54 @@ export default function QuizDetailView({ quiz, onBack, onStartMode, onOpenTestSe
   });
 
   const [srsStats, setSrsStats] = useState(() => calculateQuizProgressStats(quiz));
-  const [commentCountsMap, setCommentCountsMap] = useState({});
+  const [commentCountsMap, setCommentCountsMap] = useState(() => {
+    return globalCommentCountsCache.get(quiz?.id) || {};
+  });
 
   const menuRef = useRef(null);
   const questions = quiz.questions || [];
 
-  // 1-Request Bulk Fetch for all question comment counts in this quiz set (0ms Latency, 1 HTTP Request)
+  // 1-Request Bulk Fetch with Deduplication & In-Memory Cache (0 duplicate requests)
   useEffect(() => {
-    if (!quiz?.id) return;
+    const quizId = quiz?.id;
+    if (!quizId) return;
+
+    if (globalCommentCountsCache.has(quizId)) {
+      setCommentCountsMap(globalCommentCountsCache.get(quizId));
+      return;
+    }
+
+    if (inFlightCommentCounts.has(quizId)) {
+      inFlightCommentCounts.get(quizId).then(counts => {
+        if (counts) setCommentCountsMap(counts);
+      });
+      return;
+    }
+
     const API_BASE_URL = typeof window !== 'undefined' && window.location.hostname !== 'localhost'
       ? `${window.location.origin}/api`
       : 'http://localhost:8701/api';
 
-    fetch(`${API_BASE_URL}/comments/counts/${quiz.id}`)
+    const reqPromise = fetch(`${API_BASE_URL}/comments/counts/${encodeURIComponent(quizId)}`)
       .then(res => res.json())
       .then(data => {
         if (data.success && data.counts) {
+          globalCommentCountsCache.set(quizId, data.counts);
           setCommentCountsMap(data.counts);
+          return data.counts;
         }
+        return {};
       })
-      .catch(err => console.warn('Bulk comment counts fetch warning:', err));
-  }, [quiz]);
+      .catch(err => {
+        console.warn('Bulk comment counts fetch warning:', err);
+        return {};
+      })
+      .finally(() => {
+        inFlightCommentCounts.delete(quizId);
+      });
+
+    inFlightCommentCounts.set(quizId, reqPromise);
+  }, [quiz?.id]);
 
   // Listen to SRS progress update event & star update event
   useEffect(() => {

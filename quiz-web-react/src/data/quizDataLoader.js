@@ -87,6 +87,9 @@ export function getDeletedQuizIds() {
   }
 }
 
+// In-flight request deduplication map to prevent redundant concurrent fetches
+const inFlightQuizRequests = new Map();
+
 // Helper to fetch single quiz content from backend on-demand
 export async function loadQuizContentAsync(quizId) {
   if (!quizId) return null;
@@ -107,41 +110,53 @@ export async function loadQuizContentAsync(quizId) {
     return customItem;
   }
 
-  // 3. Fetch from Backend On-Demand API
+  // 3. Return existing in-flight request promise if already fetching
+  if (inFlightQuizRequests.has(targetId)) {
+    return inFlightQuizRequests.get(targetId);
+  }
+
+  // 4. Fetch from Backend On-Demand API
   const manifestItem = QUIZ_MANIFEST.find(q => String(q.id).trim().toLowerCase() === targetId);
   const lookupKey = manifestItem?.filename?.replace('.json', '') || quizId;
   const API_BASE = typeof window !== 'undefined' && window.location.hostname !== 'localhost'
     ? `${window.location.origin}/api`
     : 'http://localhost:8701/api';
 
-  try {
-    const token = typeof window !== 'undefined' ? localStorage.getItem('quizzflow_token') : null;
-    const headers = {};
-    if (token) {
-      headers['Authorization'] = `Bearer ${token}`;
-    }
-
-    const res = await fetch(`${API_BASE}/quizzes/content/${encodeURIComponent(lookupKey)}`, { headers });
-    if (res.ok) {
-      const data = await res.json();
-      if (data.success && data.quiz) {
-        const fullQuiz = {
-          ...(manifestItem || {}),
-          ...data.quiz,
-          id: manifestItem?.id || data.quiz.id
-        };
-        normalizedQuizCache.set(fullQuiz.id, fullQuiz);
-        normalizedQuizCache.set(targetId, fullQuiz);
-        window.dispatchEvent(new CustomEvent('quizzlet_quiz_loaded', { detail: fullQuiz }));
-        return fullQuiz;
+  const requestPromise = (async () => {
+    try {
+      const token = typeof window !== 'undefined' ? localStorage.getItem('quizzflow_token') : null;
+      if (!token) {
+        // Unauthenticated: do not spam backend, return safe manifest shell
+        return manifestItem ? { ...manifestItem, questions: [] } : { id: quizId, title: 'Bộ Đề Học Tập', questions: [] };
       }
-    }
-  } catch (err) {
-    console.error('Error fetching quiz content from API:', err);
-  }
 
-  // 4. Safe fallback
-  return manifestItem ? { ...manifestItem, questions: [] } : { id: quizId, title: 'Bộ Đề Học Tập', questions: [] };
+      const headers = { 'Authorization': `Bearer ${token}` };
+      const res = await fetch(`${API_BASE}/quizzes/content/${encodeURIComponent(lookupKey)}`, { headers });
+      if (res.ok) {
+        const data = await res.json();
+        if (data.success && data.quiz) {
+          const fullQuiz = {
+            ...(manifestItem || {}),
+            ...data.quiz,
+            id: manifestItem?.id || data.quiz.id
+          };
+          normalizedQuizCache.set(fullQuiz.id, fullQuiz);
+          normalizedQuizCache.set(targetId, fullQuiz);
+          window.dispatchEvent(new CustomEvent('quizzlet_quiz_loaded', { detail: fullQuiz }));
+          return fullQuiz;
+        }
+      }
+    } catch (err) {
+      console.warn('Error fetching quiz content from API:', err);
+    } finally {
+      inFlightQuizRequests.delete(targetId);
+    }
+
+    return manifestItem ? { ...manifestItem, questions: [] } : { id: quizId, title: 'Bộ Đề Học Tập', questions: [] };
+  })();
+
+  inFlightQuizRequests.set(targetId, requestPromise);
+  return requestPromise;
 }
 
 // SRS Card State Tracking (Synchronized Knowt Learning Engine)
