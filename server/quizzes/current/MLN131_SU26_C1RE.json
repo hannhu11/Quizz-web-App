@@ -8,1741 +8,4021 @@
       "id": 1,
       "questionIndex": 0,
       "content": "Trong thời đại ngày nay ở Việt Nam, đội ngũ công nhân trong thành phần kinh tế nào là tiêu biểu, đóng vai trò nòng cốt và chủ đạo?",
-      "explanation": "Công nhân làm việc trong thành phần kinh tế nhà nước đại diện cho phương thức sản xuất tiên tiến, nắm giữ các ngành kinh tế then chốt nên đóng vai trò nòng cốt, chủ đạo.",
+      "explanation": "Trong điều kiện hiện nay, đội ngũ công nhân thuộc kinh tế nhà nước giữ vai trò tiêu biểu, nòng cốt vì khu vực này nắm các lĩnh vực then chốt và định hướng phát triển nền kinh tế. Công nhân trong tư nhân, tập thể hay vốn đầu tư nước ngoài cũng quan trọng, nhưng không giữ vị trí chủ đạo theo cơ cấu kinh tế xã hội chủ nghĩa.",
       "answers": [
         {
           "id": 1,
           "content": "Thành phần kinh tế tư nhân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 1
         },
         {
           "id": 2,
           "content": "Thành phần kinh tế tập thể",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 1
         },
         {
           "id": 3,
           "content": "Thành phần kinh tế nhà nước",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 1
         },
         {
           "id": 4,
           "content": "Thành phần kinh tế có vốn đầu tư nước ngoài",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 1
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Thành phần kinh tế tư nhân",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 1
+        },
+        {
+          "id": 2,
+          "content": "Thành phần kinh tế tập thể",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 1
+        },
+        {
+          "id": 3,
+          "content": "Thành phần kinh tế nhà nước",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 1
+        },
+        {
+          "id": 4,
+          "content": "Thành phần kinh tế có vốn đầu tư nước ngoài",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 1
+        }
+      ]
     },
     {
       "id": 2,
       "questionIndex": 1,
       "content": "Tổ chức quyền lực của Nhà nước pháp quyền xã hội chủ nghĩa ở Việt Nam đảm bảo quyền lực nhà nước như thế nào?",
-      "explanation": "Quyền lực nhà nước ở Việt Nam là thống nhất, thuộc về nhân dân, có sự phân công, phối hợp và kiểm soát giữa các cơ quan trong việc thực hiện quyền lập pháp, hành pháp, tư pháp.",
+      "explanation": "Nhà nước pháp quyền xã hội chủ nghĩa tổ chức quyền lực nhà nước thống nhất, đồng thời có phân công, phối hợp và kiểm soát giữa các cơ quan thực hiện lập pháp, hành pháp, tư pháp. Cơ chế này vừa bảo đảm quyền lực không bị chia cắt, vừa ngăn lạm quyền và nâng cao trách nhiệm, không chỉ dừng ở phối hợp đơn thuần.",
       "answers": [
         {
           "id": 1,
           "content": "Đồng nhất, có sự phân công và phối hợp giữa các cơ quan nhà nước",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 2
         },
         {
           "id": 2,
           "content": "Cùng nhau, có sự phân công và phối hợp giữa các cơ quan nhà nước",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 2
         },
         {
           "id": 3,
           "content": "Thống nhất, có sự phân công, phối hợp và kiểm soát giữa các cơ quan nhà nước",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 2
         },
         {
           "id": 4,
           "content": "Chia đều, có sự phân công và phối hợp giữa các cơ quan nhà nước",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 2
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đồng nhất, có sự phân công và phối hợp giữa các cơ quan nhà nước",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 2
+        },
+        {
+          "id": 2,
+          "content": "Cùng nhau, có sự phân công và phối hợp giữa các cơ quan nhà nước",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 2
+        },
+        {
+          "id": 3,
+          "content": "Thống nhất, có sự phân công, phối hợp và kiểm soát giữa các cơ quan nhà nước",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 2
+        },
+        {
+          "id": 4,
+          "content": "Chia đều, có sự phân công và phối hợp giữa các cơ quan nhà nước",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 2
+        }
+      ]
     },
     {
       "id": 3,
       "questionIndex": 2,
       "content": "Chọn đáp án chính xác nhất điền vào chỗ trống trong câu sau: Chủ nghĩa Duy vật lịch sử ra đời dựa trên cơ sở kế thừa \"....\" của phép biện chứng và phê phán quan điểm duy tâm, thần bí của Hêghen.",
-      "explanation": "C. Mác và Ph. Ăngghen đã lọc bỏ vỏ thần bí duy tâm để kế thừa \"cái hạt nhân hợp lý\" (phép biện chứng) trong triết học của Hêghen.",
+      "explanation": "Chủ nghĩa duy vật lịch sử kế thừa “hạt nhân hợp lý” của phép biện chứng Hêghen, tức tư tưởng về vận động, phát triển và mâu thuẫn. Mác và Ăngghen đặt hạt nhân đó trên lập trường duy vật, phê phán tính duy tâm, thần bí; vì vậy không kế thừa toàn bộ hệ thống triết học Hêghen hoặc chỉ một khái niệm khái quát.",
       "answers": [
         {
           "id": 1,
           "content": "Cái tổng thể và khái quát",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 3
         },
         {
           "id": 2,
           "content": "Cái hạt nhân hợp lý",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 3
         },
         {
           "id": 3,
           "content": "Thực tiễn khách quan",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 3
         },
         {
           "id": 4,
           "content": "Chủ nghĩa duy vật biện chứng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 3
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Cái tổng thể và khái quát",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 3
+        },
+        {
+          "id": 2,
+          "content": "Cái hạt nhân hợp lý",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 3
+        },
+        {
+          "id": 3,
+          "content": "Thực tiễn khách quan",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 3
+        },
+        {
+          "id": 4,
+          "content": "Chủ nghĩa duy vật biện chứng",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 3
+        }
+      ]
     },
     {
       "id": 4,
       "questionIndex": 3,
       "content": "Trong cơ cấu xã hội - giai cấp ở Việt Nam hiện nay, giai cấp, tầng lớp nào đang đóng góp tích cực vào việc thực hiện chiến lược phát triển kinh tế - xã hội, tạo việc làm cho người lao động?",
-      "explanation": "Tầng lớp doanh nhân phát triển mạnh mẽ trong nền kinh tế thị trường, đóng vai trò trực tiếp huy động vốn, tổ chức sản xuất kinh doanh và giải quyết việc làm cho người lao động.",
+      "explanation": "Đội ngũ doanh nhân đóng góp tích cực vào phát triển kinh tế - xã hội và tạo việc làm thông qua tổ chức sản xuất, kinh doanh, huy động vốn và mở rộng thị trường. Công nhân, nông dân, trí thức có các vai trò xã hội quan trọng khác, nhưng chức năng trực tiếp tạo việc làm gắn nổi bật với hoạt động của doanh nhân.",
       "answers": [
         {
           "id": 1,
           "content": "Giai cấp công nhân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 4
         },
         {
           "id": 2,
           "content": "Giai cấp nông dân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 4
         },
         {
           "id": 3,
           "content": "Tầng lớp trí thức",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 4
         },
         {
           "id": 4,
           "content": "Tầng lớp doanh nhân",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 4
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Giai cấp công nhân",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 4
+        },
+        {
+          "id": 2,
+          "content": "Giai cấp nông dân",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 4
+        },
+        {
+          "id": 3,
+          "content": "Tầng lớp trí thức",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 4
+        },
+        {
+          "id": 4,
+          "content": "Tầng lớp doanh nhân",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 4
+        }
+      ]
     },
     {
       "id": 5,
       "questionIndex": 4,
       "content": "Đâu không phải là một trong những chính sách đối với giai cấp nông dân để đảm bảo sự biến đổi tích cực của giai cấp này trong cơ cấu xã hội - giai cấp ở Việt Nam hiện nay?",
-      "explanation": "Việc quy hoạch và chuyển đổi mục đích sử dụng đất nông nghiệp sang công nghiệp/dịch vụ một cách hợp lý là tất yếu của quá trình công nghiệp hóa. Việc \"ngăn chặn tuyệt đối\" việc chuyển đổi đất là không chính xác với chủ trương phát triển.",
+      "explanation": "Ngăn chặn toàn bộ việc chuyển mục đích sử dụng đất nông nghiệp không phải chính sách phù hợp để thúc đẩy biến đổi tích cực của nông dân. Phát triển bền vững cần quy hoạch, đào tạo nghề, ứng dụng khoa học và tạo cơ hội chuyển dịch lao động; cấm tuyệt đối chuyển đổi đất sẽ hạn chế công nghiệp hóa, đô thị hóa và sinh kế đa dạng.",
       "answers": [
         {
           "id": 1,
           "content": "Hỗ trợ, khuyến khích nông dân học nghề, chuyển dịch cơ cấu lao động",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 5
         },
         {
           "id": 2,
           "content": "Tạo điều kiện thuận lợi để tiếp nhận và ứng dụng khoa học - công nghệ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 5
         },
         {
           "id": 3,
           "content": "Tạo điều kiện thuận lợi để nông dân chuyển sang làm công nghiệp và dịch vụ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 5
         },
         {
           "id": 4,
           "content": "Ngăn chặn tình trạng chuyển đổi mục đích sử dụng đất nông nghiệp thành các mục đích khác để đảm bảo sinh kế của người nông dân",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 5
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Hỗ trợ, khuyến khích nông dân học nghề, chuyển dịch cơ cấu lao động",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 5
+        },
+        {
+          "id": 2,
+          "content": "Tạo điều kiện thuận lợi để tiếp nhận và ứng dụng khoa học - công nghệ",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 5
+        },
+        {
+          "id": 3,
+          "content": "Tạo điều kiện thuận lợi để nông dân chuyển sang làm công nghiệp và dịch vụ",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 5
+        },
+        {
+          "id": 4,
+          "content": "Ngăn chặn tình trạng chuyển đổi mục đích sử dụng đất nông nghiệp thành các mục đích khác để đảm bảo sinh kế của người nông dân",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 5
+        }
+      ]
     },
     {
       "id": 6,
       "questionIndex": 5,
       "content": "Trong giai đoạn hiện nay, lực lượng nào đi đầu trong sự nghiệp đẩy mạnh công nghiệp hóa, hiện đại hóa, gắn với phát triển kinh tế tri thức, bảo vệ tài nguyên và môi trường?",
-      "explanation": "Giai cấp công nhân là lực lượng sản xuất tiên tiến nhất, là lực lượng đi đầu trong công cuộc công nghiệp hóa, hiện đại hóa đất nước.",
+      "explanation": "Giai cấp công nhân là lực lượng đi đầu trong công nghiệp hóa, hiện đại hóa gắn với kinh tế tri thức vì trực tiếp vận hành công nghệ, tham gia sản xuất hiện đại và nâng năng suất lao động. Nông dân, trí thức, tiểu tư sản đều có đóng góp, nhưng không giữ vị trí chủ thể sản xuất công nghiệp tiên phong như công nhân.",
       "answers": [
         {
           "id": 1,
           "content": "Giai cấp nông dân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 6
         },
         {
           "id": 2,
           "content": "Giai cấp công nhân",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 6
         },
         {
           "id": 3,
           "content": "Tầng lớp trí thức",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 6
         },
         {
           "id": 4,
           "content": "Tiểu tư sản",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 6
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Giai cấp nông dân",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 6
+        },
+        {
+          "id": 2,
+          "content": "Giai cấp công nhân",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 6
+        },
+        {
+          "id": 3,
+          "content": "Tầng lớp trí thức",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 6
+        },
+        {
+          "id": 4,
+          "content": "Tiểu tư sản",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 6
+        }
+      ]
     },
     {
       "id": 7,
       "questionIndex": 6,
       "content": "Vấn đề nổi bật nhất đối với việc thực hiện sứ mệnh lịch sử của giai cấp công nhân Việt Nam hiện nay là gì?",
-      "explanation": "Hiện nay, trọng tâm sứ mệnh lịch sử của công nhân Việt Nam là phải phát huy đầy đủ cả vai trò (vị trí tiên phong) lẫn trách nhiệm (nghĩa vụ) trong sự nghiệp công nghiệp hóa, hiện đại hóa đất nước.",
+      "explanation": "Vấn đề nổi bật của sứ mệnh công nhân Việt Nam là phát huy đồng thời vai trò và trách nhiệm của lực lượng đi đầu trong công nghiệp hóa, hiện đại hóa. Vai trò xác định vị trí khách quan trong phát triển đất nước, còn trách nhiệm nhấn mạnh yêu cầu chủ động thực hiện nhiệm vụ; chỉ nêu một vế sẽ không phản ánh đầy đủ yêu cầu.",
       "answers": [
         {
           "id": 1,
           "content": "Phát huy vai trò và trách nhiệm của lực lượng đi đầu trong sự nghiệp đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 7
         },
         {
           "id": 2,
           "content": "Phát huy vai trò của lực lượng đi đầu trong sự nghiệp đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 7
         },
         {
           "id": 3,
           "content": "Phát huy trách nhiệm của lực lượng đi đầu trong sự nghiệp đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 7
         },
         {
           "id": 4,
           "content": "Phát huy sức chiến đấu của bản thân trong sự nghiệp đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 7
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Phát huy vai trò và trách nhiệm của lực lượng đi đầu trong sự nghiệp đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 7
+        },
+        {
+          "id": 2,
+          "content": "Phát huy vai trò của lực lượng đi đầu trong sự nghiệp đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 7
+        },
+        {
+          "id": 3,
+          "content": "Phát huy trách nhiệm của lực lượng đi đầu trong sự nghiệp đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 7
+        },
+        {
+          "id": 4,
+          "content": "Phát huy sức chiến đấu của bản thân trong sự nghiệp đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 7
+        }
+      ]
     },
     {
       "id": 8,
       "questionIndex": 7,
       "content": "Đâu không phải là các nguồn gốc ra đời của tôn giáo?",
-      "explanation": "Theo lý luận Mác - Lênin, tôn giáo ra đời từ 3 nguồn gốc chính: Tự nhiên, kinh tế - xã hội; Nhận thức; và Tâm lý. \"Nguồn gốc tâm linh\" không được coi là nguồn gốc khoa học trong lý luận Mác - Lênin.",
+      "explanation": "Tôn giáo được giải thích từ nguồn gốc tự nhiên, kinh tế - xã hội, nhận thức và tâm lý. “Nguồn gốc tâm linh” thuộc nội dung của niềm tin tôn giáo, không phải cách tiếp cận duy vật lịch sử để cắt nghĩa điều kiện khách quan và chủ quan làm nảy sinh, duy trì tôn giáo trong đời sống xã hội.",
       "answers": [
         {
           "id": 1,
           "content": "Nguồn gốc tự nhiên, kinh tế - xã hội",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 8
         },
         {
           "id": 2,
           "content": "Nguồn gốc nhận thức",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 8
         },
         {
           "id": 3,
           "content": "Nguồn gốc tâm lý",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 8
         },
         {
           "id": 4,
           "content": "Nguồn gốc tâm linh",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 8
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Nguồn gốc tự nhiên, kinh tế - xã hội",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 8
+        },
+        {
+          "id": 2,
+          "content": "Nguồn gốc nhận thức",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 8
+        },
+        {
+          "id": 3,
+          "content": "Nguồn gốc tâm lý",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 8
+        },
+        {
+          "id": 4,
+          "content": "Nguồn gốc tâm linh",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 8
+        }
+      ]
     },
     {
       "id": 9,
       "questionIndex": 8,
       "content": "Nhiệm vụ cấp bách, lâu dài của quá trình xây dựng Nhà nước pháp quyền xã hội chủ nghĩa ở nước ta là gì?",
-      "explanation": "Cán bộ là gốc của mọi công việc, do đó việc xây dựng, nâng cao chất lượng đội ngũ cán bộ, công chức đủ phẩm chất và năng lực là nhiệm vụ vừa cấp bách vừa lâu dài.",
+      "explanation": "Nâng cao chất lượng đội ngũ cán bộ, công chức là nhiệm vụ cấp bách, lâu dài của xây dựng Nhà nước pháp quyền vì họ trực tiếp thực thi quyền lực công và phục vụ nhân dân. Phòng chống tham nhũng, miễn nhiệm người yếu kém, đãi ngộ đều cần thiết, nhưng phát triển toàn diện đội ngũ là điều kiện nền tảng để các giải pháp khác hiệu quả.",
       "answers": [
         {
           "id": 1,
           "content": "Phòng chống tham nhũng, lãng phí và thực hành tiết kiệm",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 9
         },
         {
           "id": 2,
           "content": "Miễn nhiệm những người không hoàn thành nhiệm vụ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 9
         },
         {
           "id": 3,
           "content": "Nâng cao chất lượng đội ngũ cán bộ, công chức",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 9
         },
         {
           "id": 4,
           "content": "Có chính sách đãi ngộ, động viên, khuyến khích cán bộ, công chức",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 9
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Phòng chống tham nhũng, lãng phí và thực hành tiết kiệm",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 9
+        },
+        {
+          "id": 2,
+          "content": "Miễn nhiệm những người không hoàn thành nhiệm vụ",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 9
+        },
+        {
+          "id": 3,
+          "content": "Nâng cao chất lượng đội ngũ cán bộ, công chức",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 9
+        },
+        {
+          "id": 4,
+          "content": "Có chính sách đãi ngộ, động viên, khuyến khích cán bộ, công chức",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 9
+        }
+      ]
     },
     {
       "id": 10,
       "questionIndex": 9,
       "content": "Theo quan điểm của Đảng Cộng sản Việt Nam, quá độ lên chủ nghĩa xã hội bỏ qua chế độ tư bản chủ nghĩa đòi hỏi phải như thế nào?",
-      "explanation": "Bỏ qua chế độ TBCN là bỏ qua việc xác lập vị trí thống trị của quan hệ sản xuất và kiến trúc thượng tầng TBCN, nhưng phải tiếp thu, kế thừa các thành tựu khoa học, kỹ thuật, lực lượng sản xuất mà nhân loại đạt được dưới CNTB.",
+      "explanation": "Bỏ qua chế độ tư bản không có nghĩa phủ nhận mọi thành tựu do nhân loại đạt được dưới chủ nghĩa tư bản. Việt Nam cần tiếp thu có chọn lọc khoa học, công nghệ, tổ chức quản lý và giá trị văn minh để phát triển lực lượng sản xuất, đồng thời không xác lập vị trí thống trị của quan hệ sản xuất tư bản chủ nghĩa.",
       "answers": [
         {
           "id": 1,
           "content": "Tiếp thu, kế thừa những thành tựu mà nhân loại đã đạt được dưới chủ nghĩa tư bản",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10
         },
         {
           "id": 2,
           "content": "Tiếp thu, kế thừa những thành tựu mà chế độ phong kiến đã đạt được",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 10
         },
         {
           "id": 3,
           "content": "Bỏ qua những thành tựu mà nhân loại đã đạt được trong chủ nghĩa tư bản",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 10
         },
         {
           "id": 4,
           "content": "Loại bỏ tất cả những gì có liên quan đến chủ nghĩa tư bản",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 10
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Tiếp thu, kế thừa những thành tựu mà nhân loại đã đạt được dưới chủ nghĩa tư bản",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 10
+        },
+        {
+          "id": 2,
+          "content": "Tiếp thu, kế thừa những thành tựu mà chế độ phong kiến đã đạt được",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 10
+        },
+        {
+          "id": 3,
+          "content": "Bỏ qua những thành tựu mà nhân loại đã đạt được trong chủ nghĩa tư bản",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 10
+        },
+        {
+          "id": 4,
+          "content": "Loại bỏ tất cả những gì có liên quan đến chủ nghĩa tư bản",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 10
+        }
+      ]
     },
     {
       "id": 11,
       "questionIndex": 10,
       "content": "Từ sau khi V. I. Lênin mất đến năm 1953, ai là người có ảnh hưởng trực tiếp trong việc vận dụng và phát triển chủ nghĩa xã hội khoa học?",
-      "explanation": "J. Xtalin là người kế tục V. I. Lênin lãnh đạo Đảng Cộng sản Liên Xô và phong trào cộng sản quốc tế vận dụng, phát triển CNXH khoa học từ năm 1924 đến 1953.",
+      "explanation": "Sau khi Lênin qua đời đến năm 1953, J. Xtalin có ảnh hưởng trực tiếp đáng kể trong việc vận dụng, phát triển chủ nghĩa xã hội khoa học tại Liên Xô. Các nhân vật khác thuộc giai đoạn hoặc trào lưu khác; Phuriê, Ximông là các nhà xã hội chủ nghĩa không tưởng trước khi chủ nghĩa xã hội khoa học ra đời.",
       "answers": [
         {
           "id": 1,
           "content": "J. Xtalin",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 11
         },
         {
           "id": 2,
           "content": "G. Đimitrốp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 11
         },
         {
           "id": 3,
           "content": "S. Phuriê",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 11
         },
         {
           "id": 4,
           "content": "S. Ximông",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 11
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "J. Xtalin",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 11
+        },
+        {
+          "id": 2,
+          "content": "G. Đimitrốp",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 11
+        },
+        {
+          "id": 3,
+          "content": "S. Phuriê",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 11
+        },
+        {
+          "id": 4,
+          "content": "S. Ximông",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 11
+        }
+      ]
     },
     {
       "id": 12,
       "questionIndex": 11,
       "content": "Bản chất dân chủ xã hội chủ nghĩa ở Việt Nam được thực hiện thông qua hình thức nào?",
-      "explanation": "Dân chủ XHCN ở Việt Nam được thực hiện kết hợp qua cả hai hình thức: dân chủ trực tiếp (dân biết, dân bàn, dân làm, dân kiểm tra) và dân chủ gián tiếp (đại diện thông qua Quốc hội, HĐND...).",
+      "explanation": "Dân chủ xã hội chủ nghĩa được thực hiện qua hai hình thức dân chủ trực tiếp và gián tiếp. Nhân dân có thể trực tiếp tham gia, quyết định những công việc nhất định, đồng thời thực hiện quyền lực qua đại biểu được bầu; dân chủ công khai chỉ là yêu cầu về minh bạch, không phải một hình thức dân chủ cơ bản.",
       "answers": [
         {
           "id": 1,
           "content": "Hình thức dân chủ trực tiếp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 12
         },
         {
           "id": 2,
           "content": "Hình thức dân chủ gián tiếp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 12
         },
         {
           "id": 3,
           "content": "Hình thức dân chủ trực tiếp và dân chủ gián tiếp",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 12
         },
         {
           "id": 4,
           "content": "Hình thức dân chủ công khai",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 12
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Hình thức dân chủ trực tiếp",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 12
+        },
+        {
+          "id": 2,
+          "content": "Hình thức dân chủ gián tiếp",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 12
+        },
+        {
+          "id": 3,
+          "content": "Hình thức dân chủ trực tiếp và dân chủ gián tiếp",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 12
+        },
+        {
+          "id": 4,
+          "content": "Hình thức dân chủ công khai",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 12
+        }
+      ]
     },
     {
       "id": 13,
       "questionIndex": 12,
       "content": "Tại sao nói dân chủ trong xã hội chiếm hữu nô lệ là dân chủ thiểu số?",
-      "explanation": "Trong xã hội chiếm hữu nô lệ, nô lệ (chiếm đa số tuyệt đối trong dân số) không được coi là \"dân\" mà chỉ là \"công cụ lao động biết nói\". Dân chủ chỉ dành cho giai cấp chủ nô và công dân tự do (thiểu số).",
+      "explanation": "Dân chủ trong xã hội chiếm hữu nô lệ là dân chủ thiểu số vì khái niệm “dân” chỉ bao gồm chủ nô và một bộ phận nhỏ công dân tự do. Nô lệ chiếm số đông lại bị coi là tài sản, không có quyền chính trị, nên chế độ này không thể đại diện cho toàn thể cư dân chỉ vì số dân hay quy mô lãnh thổ.",
       "answers": [
         {
           "id": 1,
           "content": "Vì số lượng con người thời đó rất ít",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 13
         },
         {
           "id": 2,
           "content": "Vì nội hàm của khái niệm “dân” chỉ bao gồm giai cấp chủ nô và một bộ phận nhỏ công dân tự do",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 13
         },
         {
           "id": 3,
           "content": "Vì sức tập trung lãnh thổ của các lãnh chúa nhỏ bé",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 13
         },
         {
           "id": 4,
           "content": "Vì quyền lực thực sự thuộc vào tay một lãnh chúa lớn nhất",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 13
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Vì số lượng con người thời đó rất ít",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 13
+        },
+        {
+          "id": 2,
+          "content": "Vì nội hàm của khái niệm “dân” chỉ bao gồm giai cấp chủ nô và một bộ phận nhỏ công dân tự do",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 13
+        },
+        {
+          "id": 3,
+          "content": "Vì sức tập trung lãnh thổ của các lãnh chúa nhỏ bé",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 13
+        },
+        {
+          "id": 4,
+          "content": "Vì quyền lực thực sự thuộc vào tay một lãnh chúa lớn nhất",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 13
+        }
+      ]
     },
     {
       "id": 14,
       "questionIndex": 13,
       "content": "Căn cứ vào phạm vi tác động của quyền lực nhà nước, chức năng của nhà nước xã hội chủ nghĩa được chia thành những chức năng nào?",
-      "explanation": "Căn cứ vào phạm vi tác động của quyền lực nhà nước, các chức năng của nhà nước được chia thành chức năng đối nội (nội bộ đất nước) và chức năng đối ngoại (với bên ngoài).",
+      "explanation": "Theo phạm vi tác động, chức năng nhà nước xã hội chủ nghĩa được chia thành đối nội và đối ngoại. Đối nội tổ chức, quản lý đời sống trong nước; đối ngoại bảo vệ chủ quyền, hợp tác và xử lý quan hệ quốc tế. Trấn áp, tổ chức hoặc kinh tế, chính trị là cách phân loại theo tiêu chí khác, không phải phạm vi tác động.",
       "answers": [
         {
           "id": 1,
           "content": "Chức năng kinh tế và chức năng chính trị",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 14
         },
         {
           "id": 2,
           "content": "Chức năng văn hóa và chức năng xã hội",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 14
         },
         {
           "id": 3,
           "content": "Chức năng trấn áp và chức năng tổ chức",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 14
         },
         {
           "id": 4,
           "content": "Chức năng đối nội và chức năng đối ngoại",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 14
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Chức năng kinh tế và chức năng chính trị",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 14
+        },
+        {
+          "id": 2,
+          "content": "Chức năng văn hóa và chức năng xã hội",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 14
+        },
+        {
+          "id": 3,
+          "content": "Chức năng trấn áp và chức năng tổ chức",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 14
+        },
+        {
+          "id": 4,
+          "content": "Chức năng đối nội và chức năng đối ngoại",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 14
+        }
+      ]
     },
     {
       "id": 15,
       "questionIndex": 14,
       "content": "Đáp án nào không phải là một phương pháp nghiên cứu của chủ nghĩa xã hội khoa học?",
-      "explanation": "Phương pháp trừu tượng hóa khoa học là phương pháp đặc thù của môn Kinh tế chính trị Mác - Lênin.",
+      "explanation": "Phương pháp trừu tượng hóa khoa học là phương pháp đặc thù của kinh tế chính trị Mác - Lênin, không phải phương pháp nghiên cứu chủ yếu được liệt kê cho chủ nghĩa xã hội khoa học. Ngành này sử dụng kết hợp lịch sử với logic, khảo sát chính trị - xã hội và so sánh để nhận diện quy luật, đặc điểm xã hội.",
       "answers": [
         {
           "id": 1,
           "content": "Phương pháp trừu tượng hóa khoa học",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 15
         },
         {
           "id": 2,
           "content": "Phương pháp kết hợp lịch sử và logic",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 15
         },
         {
           "id": 3,
           "content": "Phương pháp khảo sát và phân tích về mặt chính trị xã hội",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 15
         },
         {
           "id": 4,
           "content": "Phương pháp so sánh",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 15
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Phương pháp trừu tượng hóa khoa học",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 15
+        },
+        {
+          "id": 2,
+          "content": "Phương pháp kết hợp lịch sử và logic",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 15
+        },
+        {
+          "id": 3,
+          "content": "Phương pháp khảo sát và phân tích về mặt chính trị xã hội",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 15
+        },
+        {
+          "id": 4,
+          "content": "Phương pháp so sánh",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 15
+        }
+      ]
     },
     {
       "id": 16,
       "questionIndex": 15,
       "content": "Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội (Bổ sung và phát triển năm 2011) xác định phương hướng đầu tiên, phản ánh con đường đi lên chủ nghĩa xã hội ở nước ta là gì?",
-      "explanation": "Phương hướng đầu tiên trong 8 phương hướng của Cương lĩnh 2011 là: \"Đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước gắn với phát triển kinh tế tri thức, bảo vệ tài nguyên, môi trường\".",
+      "explanation": "Cương lĩnh 2011 xác định phương hướng đầu tiên là đẩy mạnh công nghiệp hóa, hiện đại hóa gắn với kinh tế tri thức, bảo vệ tài nguyên và môi trường. Phương hướng này tạo cơ sở vật chất - kỹ thuật cho con đường xã hội chủ nghĩa; kinh tế thị trường, văn hóa, quốc phòng cũng quan trọng nhưng được nêu ở các phương hướng khác.",
       "answers": [
         {
           "id": 1,
           "content": "Đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước gắn với phát triển kinh tế tri thức, bảo vệ tài nguyên, môi trường",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 16
         },
         {
           "id": 2,
           "content": "Phát triển nền kinh tế thị trường định hướng xã hội chủ nghĩa",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 16
         },
         {
           "id": 3,
           "content": "Xây dựng nền văn hóa tiên tiến, đậm đà bản sắc dân tộc",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 16
         },
         {
           "id": 4,
           "content": "Bảo đảm vững chắc quốc phòng và an ninh quốc gia",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 16
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước gắn với phát triển kinh tế tri thức, bảo vệ tài nguyên, môi trường",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 16
+        },
+        {
+          "id": 2,
+          "content": "Phát triển nền kinh tế thị trường định hướng xã hội chủ nghĩa",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 16
+        },
+        {
+          "id": 3,
+          "content": "Xây dựng nền văn hóa tiên tiến, đậm đà bản sắc dân tộc",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 16
+        },
+        {
+          "id": 4,
+          "content": "Bảo đảm vững chắc quốc phòng và an ninh quốc gia",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 16
+        }
+      ]
     },
     {
       "id": 17,
       "questionIndex": 16,
       "content": "Quan hệ nào là quan hệ tự nhiên, là yếu tố mạnh mẽ nhất gắn kết các thành viên trong gia đình với nhau?",
-      "explanation": "Quan hệ huyết thống sinh ra từ liên kết sinh học tự nhiên giữa cha mẹ và con cái, là sợi dây tình cảm gắn kết sâu sắc nhất trong gia đình.",
+      "explanation": "Quan hệ huyết thống là quan hệ tự nhiên, gắn kết mạnh mẽ các thành viên gia đình qua nguồn gốc sinh học và sự tiếp nối thế hệ. Hôn nhân, nuôi dưỡng, kinh tế có vai trò cấu thành đời sống gia đình, nhưng không thể thay thế tính tự nhiên và độ bền vững của liên hệ huyết thống giữa cha mẹ, con cái, họ hàng.",
       "answers": [
         {
           "id": 1,
           "content": "Quan hệ hôn nhân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 17
         },
         {
           "id": 2,
           "content": "Quan hệ huyết thống",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 17
         },
         {
           "id": 3,
           "content": "Quan hệ nuôi dưỡng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 17
         },
         {
           "id": 4,
           "content": "Quan hệ kinh tế",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 17
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Quan hệ hôn nhân",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 17
+        },
+        {
+          "id": 2,
+          "content": "Quan hệ huyết thống",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 17
+        },
+        {
+          "id": 3,
+          "content": "Quan hệ nuôi dưỡng",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 17
+        },
+        {
+          "id": 4,
+          "content": "Quan hệ kinh tế",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 17
+        }
+      ]
     },
     {
       "id": 18,
       "questionIndex": 17,
       "content": "Sự kiện gì được xem là cuộc cách mạng vô sản đầu tiên trên thế giới xóa bỏ được giai cấp tư sản và thiết lập chính quyền của giai cấp vô sản?",
-      "explanation": "Cách mạng tháng Mười Nga (1917) là cuộc cách mạng vô sản đầu tiên giành thắng lợi trọn vẹn, đánh đổ giai cấp tư sản và thiết lập Nhà nước chuyên chính vô sản đầu tiên trên thế giới.",
+      "explanation": "Cách mạng Tháng Mười Nga là cuộc cách mạng vô sản đầu tiên xóa bỏ chính quyền tư sản và thiết lập nhà nước của giai cấp vô sản. Công xã Pari là cuộc thử nghiệm lịch sử nhưng tồn tại ngắn, còn Hiến chương Anh và Quốc tế I là phong trào, tổ chức của công nhân chứ không phải cuộc cách mạng lập chính quyền vô sản.",
       "answers": [
         {
           "id": 1,
           "content": "Công xã Pari",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 18
         },
         {
           "id": 2,
           "content": "Phong trào Hiến chương Anh",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 18
         },
         {
           "id": 3,
           "content": "Cách mạng tháng Mười Nga",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 18
         },
         {
           "id": 4,
           "content": "Sự ra đời của Quốc tế I",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 18
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Công xã Pari",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 18
+        },
+        {
+          "id": 2,
+          "content": "Phong trào Hiến chương Anh",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 18
+        },
+        {
+          "id": 3,
+          "content": "Cách mạng tháng Mười Nga",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 18
+        },
+        {
+          "id": 4,
+          "content": "Sự ra đời của Quốc tế I",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 18
+        }
+      ]
     },
     {
       "id": 19,
       "questionIndex": 18,
       "content": "Điền cụm từ thích hợp vào chỗ trống (...): “Các dân tộc hoàn toàn ... , các dân tộc được quyền tự quyết, liên hiệp ... tất cả các dân tộc lại”",
-      "explanation": "Cương lĩnh dân tộc của V. I. Lênin bao gồm 3 nội dung: \"Các dân tộc hoàn toàn bình đẳng, các dân tộc được quyền tự quyết, liên hiệp công nhân tất cả các dân tộc lại\".",
+      "explanation": "Cương lĩnh dân tộc của Mác - Lênin nêu các dân tộc hoàn toàn bình đẳng, được quyền tự quyết và liên hiệp công nhân tất cả các dân tộc lại. Bình đẳng tạo cơ sở pháp lý, chính trị cho tự quyết; liên hiệp công nhân thể hiện đoàn kết quốc tế, không thể thay bằng hòa bình hoặc liên hiệp nông dân trong mệnh đề chuẩn.",
       "answers": [
         {
           "id": 1,
           "content": "Bình đẳng / công nhân",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 19
         },
         {
           "id": 2,
           "content": "Hòa bình / công nhân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 19
         },
         {
           "id": 3,
           "content": "Công nhân / nông dân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 19
         },
         {
           "id": 4,
           "content": "Hòa bình / bình đẳng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 19
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Bình đẳng / công nhân",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 19
+        },
+        {
+          "id": 2,
+          "content": "Hòa bình / công nhân",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 19
+        },
+        {
+          "id": 3,
+          "content": "Công nhân / nông dân",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 19
+        },
+        {
+          "id": 4,
+          "content": "Hòa bình / bình đẳng",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 19
+        }
+      ]
     },
     {
       "id": 20,
       "questionIndex": 19,
       "content": "Xây dựng gia đình mới ở Việt Nam hiện nay cần phải kế thừa, phát huy truyền thống nào của gia đình truyền thống?",
-      "explanation": "Tình cảm thủy chung, sự yêu thương, đùm bọc và củng cố sự gắn kết chặt chẽ giữa các thành viên là truyền thống tốt đẹp cần giữ gìn và phát huy.",
+      "explanation": "Xây dựng gia đình mới cần kế thừa sự gắn kết chặt chẽ giữa các thành viên, vì đây là truyền thống nuôi dưỡng trách nhiệm, tình cảm và hỗ trợ lẫn nhau. Gia đình hiện đại không nên duy trì gia trưởng, đông con hoặc phong tục cưới hỏi lạc hậu, mà phát huy liên kết trên cơ sở bình đẳng, tiến bộ và tôn trọng cá nhân.",
       "answers": [
         {
           "id": 1,
           "content": "Sự gắn kết chặt chẽ giữa các thành viên",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 20
         },
         {
           "id": 2,
           "content": "Phong tục cưới hỏi",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 20
         },
         {
           "id": 3,
           "content": "Gia đình đông con",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 20
         },
         {
           "id": 4,
           "content": "Uy quyền tuyệt đối của người chồng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 20
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Sự gắn kết chặt chẽ giữa các thành viên",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 20
+        },
+        {
+          "id": 2,
+          "content": "Phong tục cưới hỏi",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 20
+        },
+        {
+          "id": 3,
+          "content": "Gia đình đông con",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 20
+        },
+        {
+          "id": 4,
+          "content": "Uy quyền tuyệt đối của người chồng",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 20
+        }
+      ]
     },
     {
       "id": 21,
       "questionIndex": 20,
       "content": "Nhân tố nào sau đây có vai trò quyết định đến sự tồn tại và phát triển của xã hội?",
-      "explanation": "Con người vừa là chủ thể sáng tạo ra văn hóa, vật chất, vừa là mục tiêu và nhân tố quyết định nhất đến sự tồn tại và phát triển của xã hội loài người.",
+      "explanation": "Con người có vai trò quyết định sự tồn tại và phát triển xã hội vì vừa là chủ thể lao động tạo ra của cải, vừa sáng tạo, cải biến các quan hệ xã hội. Gia đình, tư duy, khoa học kỹ thuật đều quan trọng nhưng do con người tạo lập, sử dụng và phát triển, nên không thể tách khỏi vai trò chủ thể của con người.",
       "answers": [
         {
           "id": 1,
           "content": "Con người",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 21
         },
         {
           "id": 2,
           "content": "Gia đình",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 21
         },
         {
           "id": 3,
           "content": "Tư duy",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 21
         },
         {
           "id": 4,
           "content": "Khoa học kỹ thuật",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 21
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Con người",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 21
+        },
+        {
+          "id": 2,
+          "content": "Gia đình",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 21
+        },
+        {
+          "id": 3,
+          "content": "Tư duy",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 21
+        },
+        {
+          "id": 4,
+          "content": "Khoa học kỹ thuật",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 21
+        }
+      ]
     },
     {
       "id": 22,
       "questionIndex": 21,
       "content": "Làm sao để xóa bỏ triệt để, ngay lập tức các giai cấp, tầng lớp của cơ cấu xã hội - giai cấp trong thời kỳ quá độ lên chủ nghĩa xã hội?",
-      "explanation": "Do nền kinh tế còn tồn tại nhiều thành phần nên sự tồn tại của các giai cấp là mang tính quy luật khách quan, chỉ có thể cải tạo dần dần cùng với sự phát triển của lực lượng sản xuất.",
+      "explanation": "Sự tồn tại các giai cấp, tầng lớp trong thời kỳ quá độ là vấn đề có tính quy luật do xã hội cũ và mới còn đan xen về sở hữu, kinh tế, lợi ích. Vì vậy chỉ có thể cải tạo dần trong quá trình phát triển, không thể xóa bỏ ngay bằng quốc hữu hóa toàn bộ hay mệnh lệnh chính trị của một giai cấp.",
       "answers": [
         {
           "id": 1,
           "content": "Giai cấp công nhân thực thi xóa bỏ ngay lập tức giai cấp tư sản",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 22
         },
         {
           "id": 2,
           "content": "Các giai cấp, tầng lớp chủ động đứng vào hàng ngũ của Đảng Cộng sản",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 22
         },
         {
           "id": 3,
           "content": "Sự tồn tại các giai cấp, tầng lớp trong thời kỳ quá độ lên chủ nghĩa xã hội là vấn đề mang tính quy luật, chỉ có thể cải tạo dần chứ chưa thể xóa bỏ triệt để, ngay lập tức được",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 22
         },
         {
           "id": 4,
           "content": "Quốc hữu hóa tất cả tài sản của giai cấp tư sản",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 22
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Giai cấp công nhân thực thi xóa bỏ ngay lập tức giai cấp tư sản",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 22
+        },
+        {
+          "id": 2,
+          "content": "Các giai cấp, tầng lớp chủ động đứng vào hàng ngũ của Đảng Cộng sản",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 22
+        },
+        {
+          "id": 3,
+          "content": "Sự tồn tại các giai cấp, tầng lớp trong thời kỳ quá độ lên chủ nghĩa xã hội là vấn đề mang tính quy luật, chỉ có thể cải tạo dần chứ chưa thể xóa bỏ triệt để, ngay lập tức được",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 22
+        },
+        {
+          "id": 4,
+          "content": "Quốc hữu hóa tất cả tài sản của giai cấp tư sản",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 22
+        }
+      ]
     },
     {
       "id": 23,
       "questionIndex": 22,
       "content": "Quá độ từ chủ nghĩa tư bản phát triển lên chủ nghĩa xã hội là hình thức quá độ nào?",
-      "explanation": "Quá độ trực tiếp là hình thức quá độ đi lên CNXH từ các nước tư bản chủ nghĩa phát triển cao.",
+      "explanation": "Quá độ từ chủ nghĩa tư bản phát triển lên chủ nghĩa xã hội là quá độ trực tiếp vì quốc gia đã có nền đại công nghiệp, lực lượng sản xuất và tiền đề vật chất tương đối cao. Quá độ gián tiếp áp dụng cho các nước xuất phát từ quan hệ tiền tư bản, cần trải qua nhiều hình thức, bước trung gian để xây dựng cơ sở xã hội chủ nghĩa.",
       "answers": [
         {
           "id": 1,
           "content": "Quá độ gián tiếp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 23
         },
         {
           "id": 2,
           "content": "Quá độ trực tiếp",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 23
         },
         {
           "id": 3,
           "content": "Quá độ bộ phận",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 23
         },
         {
           "id": 4,
           "content": "Quá độ toàn diện",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 23
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Quá độ gián tiếp",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 23
+        },
+        {
+          "id": 2,
+          "content": "Quá độ trực tiếp",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 23
+        },
+        {
+          "id": 3,
+          "content": "Quá độ bộ phận",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 23
+        },
+        {
+          "id": 4,
+          "content": "Quá độ toàn diện",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 23
+        }
+      ]
     },
     {
       "id": 24,
       "questionIndex": 23,
       "content": "Khi nghiên cứu thực tiễn phong trào đấu tranh của giai cấp công nhân châu Âu từ giữa thế kỷ XIX, C. Mác và Ph. Ăngghen cho rằng giai cấp công nhân thất bại là do đã không liên minh được với “người bạn đồng hành tự nhiên” của mình. Người bạn đó là giai cấp nào?",
-      "explanation": "C. Mác và Ph. Ăngghen khẳng định giai cấp nông dân là \"người bạn đồng hành tự nhiên\" của giai cấp công nhân. Thiếu khối liên minh công - nông là nguyên nhân dẫn đến thất bại của các phong trào công nhân ở châu Âu giai đoạn này.",
+      "explanation": "Mác và Ăngghen xem nông dân là “người bạn đồng hành tự nhiên” của công nhân trong đấu tranh chống tư sản. Liên minh công - nông giúp công nhân thoát khỏi cô lập, tập hợp lực lượng đông đảo; tư sản, địa chủ và doanh nhân không có lợi ích cơ bản thống nhất với mục tiêu giải phóng của giai cấp công nhân.",
       "answers": [
         {
           "id": 1,
           "content": "Giai cấp tư sản",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 24
         },
         {
           "id": 2,
           "content": "Giai cấp nông dân",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 24
         },
         {
           "id": 3,
           "content": "Giai cấp địa chủ phong kiến",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 24
         },
         {
           "id": 4,
           "content": "Tầng lớp doanh nhân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 24
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Giai cấp tư sản",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 24
+        },
+        {
+          "id": 2,
+          "content": "Giai cấp nông dân",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 24
+        },
+        {
+          "id": 3,
+          "content": "Giai cấp địa chủ phong kiến",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 24
+        },
+        {
+          "id": 4,
+          "content": "Tầng lớp doanh nhân",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 24
+        }
+      ]
     },
     {
       "id": 25,
       "questionIndex": 24,
       "content": "Theo chủ nghĩa Mác - Lênin, tính chất chính trị của tôn giáo xuất hiện từ khi nào?",
-      "explanation": "Tôn giáo chỉ mang tính chất chính trị khi xã hội phân chia giai cấp và có sự đối kháng giai cấp, lúc này giai cấp bóc lột lợi dụng tôn giáo để phục vụ cho lợi ích của mình.",
+      "explanation": "Tính chất chính trị của tôn giáo xuất hiện khi xã hội có phân chia giai cấp và đối kháng giai cấp, bởi từ đó tôn giáo có thể bị các lực lượng xã hội sử dụng phục vụ lợi ích chính trị. Khi chưa có giai cấp, tín ngưỡng chủ yếu mang tính tự phát; không phải đến trung cổ hoặc khi Mác - Lênin ra đời mới có chiều kích chính trị.",
       "answers": [
         {
           "id": 1,
           "content": "Khi xã hội đã có phân chia giai cấp và đối kháng giai cấp",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 25
         },
         {
           "id": 2,
           "content": "Khi xã hội đã thủ tiêu được giai cấp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 25
         },
         {
           "id": 3,
           "content": "Khi loài người bước vào đêm trường trung cổ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 25
         },
         {
           "id": 4,
           "content": "Khi chủ nghĩa Mác - Lênin ra đời",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 25
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Khi xã hội đã có phân chia giai cấp và đối kháng giai cấp",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 25
+        },
+        {
+          "id": 2,
+          "content": "Khi xã hội đã thủ tiêu được giai cấp",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 25
+        },
+        {
+          "id": 3,
+          "content": "Khi loài người bước vào đêm trường trung cổ",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 25
+        },
+        {
+          "id": 4,
+          "content": "Khi chủ nghĩa Mác - Lênin ra đời",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 25
+        }
+      ]
     },
     {
       "id": 26,
       "questionIndex": 25,
       "content": "Trong thời kỳ quá độ lên chủ nghĩa xã hội ở Việt Nam hiện nay, hình thức phân phối nào giữ vai trò chủ đạo?",
-      "explanation": "Phân phối theo lao động (làm nhiều hưởng nhiều, làm ít hưởng ít) là hình thức phân phối thực hiện bản chất XHCN và giữ vai trò chủ đạo trong thời kỳ quá độ.",
+      "explanation": "Trong thời kỳ quá độ ở Việt Nam, phân phối theo lao động giữ vai trò chủ đạo vì gắn quyền hưởng thụ với số lượng, chất lượng và hiệu quả lao động đóng góp. Phúc lợi xã hội vẫn cần để bảo đảm an sinh, nhưng hưởng theo nhu cầu chỉ thuộc xã hội cộng sản phát triển cao, còn bao cấp không phải nguyên tắc phân phối chủ đạo.",
       "answers": [
         {
           "id": 1,
           "content": "Phân phối theo lao động",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 26
         },
         {
           "id": 2,
           "content": "Phân phối quỹ phúc lợi xã hội",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 26
         },
         {
           "id": 3,
           "content": "Phân phối theo nhu cầu",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 26
         },
         {
           "id": 4,
           "content": "Phân phối theo bao cấp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 26
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Phân phối theo lao động",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 26
+        },
+        {
+          "id": 2,
+          "content": "Phân phối quỹ phúc lợi xã hội",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 26
+        },
+        {
+          "id": 3,
+          "content": "Phân phối theo nhu cầu",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 26
+        },
+        {
+          "id": 4,
+          "content": "Phân phối theo bao cấp",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 26
+        }
+      ]
     },
     {
       "id": 27,
       "questionIndex": 26,
       "content": "Thời kỳ quá độ lên chủ nghĩa xã hội ở Việt Nam hiện nay đang tồn tại hình thức phân phối nào?",
-      "explanation": "Trong nền kinh tế thị trường định hướng XHCN ở Việt Nam, thực hiện nhiều hình thức phân phối, trong đó phân phối theo lao động là chủ đạo, kết hợp phân phối theo mức độ đóng góp vốn/nguồn lực và phân phối thông qua quỹ phúc lợi xã hội.",
+      "explanation": "Thời kỳ quá độ tồn tại nhiều hình thức phân phối: theo lao động, theo mức đóng góp các nguồn lực và qua quỹ phúc lợi xã hội. Sự đa dạng này phản ánh nền kinh tế nhiều thành phần và các quan hệ xã hội đang chuyển đổi, không quy giản thành tiền lương, bao cấp hoặc hưởng theo nhu cầu như trong giai đoạn cộng sản phát triển cao.",
       "answers": [
         {
           "id": 1,
           "content": "Phân phối theo tiền lương",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 27
         },
         {
           "id": 2,
           "content": "Phân phối theo lao động, theo mức độ đóng góp và quỹ phúc lợi xã hội",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 27
         },
         {
           "id": 3,
           "content": "Phân phối theo tiền lương và phân phối theo nhu cầu",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 27
         },
         {
           "id": 4,
           "content": "Phân phối theo bao cấp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 27
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Phân phối theo tiền lương",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 27
+        },
+        {
+          "id": 2,
+          "content": "Phân phối theo lao động, theo mức độ đóng góp và quỹ phúc lợi xã hội",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 27
+        },
+        {
+          "id": 3,
+          "content": "Phân phối theo tiền lương và phân phối theo nhu cầu",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 27
+        },
+        {
+          "id": 4,
+          "content": "Phân phối theo bao cấp",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 27
+        }
+      ]
     },
     {
       "id": 28,
       "questionIndex": 27,
       "content": "Dân chủ với tư cách là một giá trị xã hội, thì nó là một phạm trù như thế nào?",
-      "explanation": "Với tư cách là một giá trị phản ánh quyền làm chủ của con người, dân chủ là một phạm trù vĩnh viễn.",
+      "explanation": "Dân chủ xét như giá trị xã hội là phạm trù vĩnh viễn, tồn tại và phát triển cùng con người vì gắn với nhu cầu làm chủ, tự do, bình đẳng. Hình thức nhà nước dân chủ có tính lịch sử và có thể tiêu vong cùng nhà nước, nhưng giá trị dân chủ không mất khi xã hội chuyển sang chủ nghĩa xã hội hay vượt qua quân chủ.",
       "answers": [
         {
           "id": 1,
           "content": "Phạm trù vĩnh viễn, tồn tại và phát triển cùng với sự tồn tại và phát triển của con người",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 28
         },
         {
           "id": 2,
           "content": "Phạm trù lịch sử, mất đi khi nhà nước tiêu vong",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 28
         },
         {
           "id": 3,
           "content": "Phạm trù lịch sử, mất đi khi tiến lên chủ nghĩa xã hội",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 28
         },
         {
           "id": 4,
           "content": "Phạm trù lịch sử, tồn tại ngoài chế độ quân chủ phong kiến",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 28
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Phạm trù vĩnh viễn, tồn tại và phát triển cùng với sự tồn tại và phát triển của con người",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 28
+        },
+        {
+          "id": 2,
+          "content": "Phạm trù lịch sử, mất đi khi nhà nước tiêu vong",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 28
+        },
+        {
+          "id": 3,
+          "content": "Phạm trù lịch sử, mất đi khi tiến lên chủ nghĩa xã hội",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 28
+        },
+        {
+          "id": 4,
+          "content": "Phạm trù lịch sử, tồn tại ngoài chế độ quân chủ phong kiến",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 28
+        }
+      ]
     },
     {
       "id": 29,
       "questionIndex": 28,
       "content": "Đánh giá sau được trích trong tác phẩm nào: “tác phẩm chủ yếu và cơ bản ấy trình bày chủ nghĩa xã hội khoa học... những yếu tố từ đó nảy sinh ra chế độ tương lai”?",
-      "explanation": "Đây là nhận định của V. I. Lênin đánh giá về tác phẩm \"Tư bản\" của C. Mác trong việc phân tích quy luật vận động kinh tế của CNTB và luận chứng cho sự ra đời của CNXH.",
+      "explanation": "Nhận định về tác phẩm chủ yếu, cơ bản trình bày chủ nghĩa xã hội khoa học và những yếu tố của chế độ tương lai nói về bộ “Tư bản” của Mác. Tác phẩm phân tích quy luật vận động tư bản chủ nghĩa, làm rõ cơ sở kinh tế dẫn tới xã hội mới, khác với “Tuyên ngôn” hay “Chống Đuyrinh” có vai trò quan trọng khác.",
       "answers": [
         {
           "id": 1,
           "content": "Chống Đuyrinh",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 29
         },
         {
           "id": 2,
           "content": "Đường Kách mệnh",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 29
         },
         {
           "id": 3,
           "content": "Tuyên ngôn của Đảng Cộng sản",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 29
         },
         {
           "id": 4,
           "content": "Tư bản",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 29
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Chống Đuyrinh",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 29
+        },
+        {
+          "id": 2,
+          "content": "Đường Kách mệnh",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 29
+        },
+        {
+          "id": 3,
+          "content": "Tuyên ngôn của Đảng Cộng sản",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 29
+        },
+        {
+          "id": 4,
+          "content": "Tư bản",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 29
+        }
+      ]
     },
     {
       "id": 30,
       "questionIndex": 29,
       "content": "Cùng với sự phát triển mạnh mẽ của nền đại công nghiệp cơ khí là sự trưởng thành vượt bậc cả về số lượng và chất lượng của giai cấp nào?",
-      "explanation": "Nền đại công nghiệp cơ khí là tiền đề vật chất trực tiếp tạo ra và thúc đẩy sự lớn mạnh của giai cấp công nhân.",
+      "explanation": "Nền đại công nghiệp cơ khí phát triển kéo theo sự trưởng thành cả số lượng, chất lượng của giai cấp công nhân. Công nghiệp tập trung lao động, rèn kỹ năng, kỷ luật và ý thức tổ chức, tạo cơ sở khách quan cho vai trò lịch sử công nhân; nông dân, tư sản hoặc chủ đất không phải sản phẩm trực tiếp của quá trình này.",
       "answers": [
         {
           "id": 1,
           "content": "Công nhân",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 30
         },
         {
           "id": 2,
           "content": "Nông dân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 30
         },
         {
           "id": 3,
           "content": "Tư sản",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 30
         },
         {
           "id": 4,
           "content": "Chủ đất",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 30
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Công nhân",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 30
+        },
+        {
+          "id": 2,
+          "content": "Nông dân",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 30
+        },
+        {
+          "id": 3,
+          "content": "Tư sản",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 30
+        },
+        {
+          "id": 4,
+          "content": "Chủ đất",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 30
+        }
+      ]
     },
     {
       "id": 31,
       "questionIndex": 30,
       "content": "Với tư cách là một hình thái nhà nước, nền dân chủ nào là nền dân chủ của tất cả mọi người?",
-      "explanation": "Xét trên phương diện chế độ chính trị/hình thái nhà nước, dân chủ bao giờ cũng mang tính giai cấp. Do đó không tồn tại nền dân chủ \"phi giai cấp\" hay \"của tất cả mọi người\".",
+      "explanation": "Không có hình thái nhà nước dân chủ nào là dân chủ của tất cả mọi người, vì mọi nhà nước trong xã hội có giai cấp đều mang bản chất giai cấp nhất định. Dân chủ chủ nô, tư sản và xã hội chủ nghĩa khác về phạm vi, nền tảng kinh tế, nhưng đều tồn tại trong bối cảnh lợi ích giai cấp và thiết chế quyền lực cụ thể.",
       "answers": [
         {
           "id": 1,
           "content": "Dân chủ chủ nô",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 31
         },
         {
           "id": 2,
           "content": "Dân chủ tư sản",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 31
         },
         {
           "id": 3,
           "content": "Dân chủ xã hội chủ nghĩa",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 31
         },
         {
           "id": 4,
           "content": "Không có bất cứ nền dân chủ nào là của tất cả mọi người",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 31
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Dân chủ chủ nô",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 31
+        },
+        {
+          "id": 2,
+          "content": "Dân chủ tư sản",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 31
+        },
+        {
+          "id": 3,
+          "content": "Dân chủ xã hội chủ nghĩa",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 31
+        },
+        {
+          "id": 4,
+          "content": "Không có bất cứ nền dân chủ nào là của tất cả mọi người",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 31
+        }
+      ]
     },
     {
       "id": 32,
       "questionIndex": 31,
       "content": "Nền dân chủ xã hội chủ nghĩa đầu tiên chính thức được xác lập khi nào?",
-      "explanation": "Thắng lợi của Cách mạng Tháng Mười Nga (1917) lập nên Nhà nước Xô viết, đánh dấu nền dân chủ XHCN lần đầu tiên được xác lập trong lịch sử.",
+      "explanation": "Nền dân chủ xã hội chủ nghĩa đầu tiên được xác lập sau Cách mạng Tháng Mười Nga thành công, khi nhà nước xã hội chủ nghĩa đầu tiên ra đời. Các mốc 1776, 1789 và 1945 có ý nghĩa lớn với lịch sử quyền con người, dân tộc, nhưng không đánh dấu sự xác lập dân chủ xã hội chủ nghĩa trên thế giới.",
       "answers": [
         {
           "id": 1,
           "content": "Cách mạng tháng 8 năm 1945 thành công",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 32
         },
         {
           "id": 2,
           "content": "Bản tuyên ngôn nhân quyền và dân quyền của Pháp (1789)",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 32
         },
         {
           "id": 3,
           "content": "Tuyên ngôn độc lập của Mỹ (1776)",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 32
         },
         {
           "id": 4,
           "content": "Cách mạng Tháng Mười Nga thành công với sự ra đời của nhà nước xã hội chủ nghĩa đầu tiên trên thế giới",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 32
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Cách mạng tháng 8 năm 1945 thành công",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 32
+        },
+        {
+          "id": 2,
+          "content": "Bản tuyên ngôn nhân quyền và dân quyền của Pháp (1789)",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 32
+        },
+        {
+          "id": 3,
+          "content": "Tuyên ngôn độc lập của Mỹ (1776)",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 32
+        },
+        {
+          "id": 4,
+          "content": "Cách mạng Tháng Mười Nga thành công với sự ra đời của nhà nước xã hội chủ nghĩa đầu tiên trên thế giới",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 32
+        }
+      ]
     },
     {
       "id": 33,
       "questionIndex": 32,
       "content": "Quyền nào là cơ sở để thực hiện quyền dân tộc tự quyết và xây dựng mối quan hệ hữu nghị, hợp tác giữa các dân tộc?",
-      "explanation": "Quyền bình đẳng giữa các dân tộc là cơ sở tối cao để đảm bảo sự tôn trọng lẫn nhau, từ đó thực hiện quyền tự quyết và đoàn kết hợp tác giữa các dân tộc.",
+      "explanation": "Quyền bình đẳng giữa các dân tộc là cơ sở để thực hiện quyền tự quyết và xây dựng quan hệ hữu nghị, hợp tác. Không có bình đẳng thực chất thì tự quyết dễ bị hình thức, còn hợp tác dễ biến thành áp đặt; tự do ngôn luận hoặc quyền lập pháp không thể thay thế nguyên tắc bình đẳng dân tộc.",
       "answers": [
         {
           "id": 1,
           "content": "Quyền tự quyết của các dân tộc",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 33
         },
         {
           "id": 2,
           "content": "Quyền tự do ngôn luận",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 33
         },
         {
           "id": 3,
           "content": "Quyền bình đẳng giữa các dân tộc",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 33
         },
         {
           "id": 4,
           "content": "Quyền lập pháp của các dân tộc",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 33
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Quyền tự quyết của các dân tộc",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 33
+        },
+        {
+          "id": 2,
+          "content": "Quyền tự do ngôn luận",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 33
+        },
+        {
+          "id": 3,
+          "content": "Quyền bình đẳng giữa các dân tộc",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 33
+        },
+        {
+          "id": 4,
+          "content": "Quyền lập pháp của các dân tộc",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 33
+        }
+      ]
     },
     {
       "id": 34,
       "questionIndex": 33,
       "content": "Ở Việt Nam, từ những năm 70 và 80 của thế kỷ XX, Nhà nước đã tuyên truyền, phổ biến và vận động, khuyến khích mỗi cặp vợ chồng có bao nhiêu con?",
-      "explanation": "Chủ trương chính sách dân số giai đoạn này là khuyến khích các gia đình chỉ nên dừng lại ở từ 1 đến 2 con.",
+      "explanation": "Từ thập niên 1970–1980, chính sách dân số ở Việt Nam tuyên truyền, vận động mỗi cặp vợ chồng chỉ nên có từ một đến hai con. Định hướng này nhằm thực hiện kế hoạch hóa gia đình, giảm sức ép dân số lên nguồn lực và nâng chất lượng cuộc sống, không khuyến khích sinh ba, bốn con hoặc càng đông càng tốt.",
       "answers": [
         {
           "id": 1,
           "content": "Chỉ nên có từ 1 đến 2 con",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 34
         },
         {
           "id": 2,
           "content": "Có từ 4 con trở lên",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 34
         },
         {
           "id": 3,
           "content": "Có đủ 3 con",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 34
         },
         {
           "id": 4,
           "content": "Càng đông con càng tốt",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 34
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Chỉ nên có từ 1 đến 2 con",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 34
+        },
+        {
+          "id": 2,
+          "content": "Có từ 4 con trở lên",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 34
+        },
+        {
+          "id": 3,
+          "content": "Có đủ 3 con",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 34
+        },
+        {
+          "id": 4,
+          "content": "Càng đông con càng tốt",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 34
+        }
+      ]
     },
     {
       "id": 35,
       "questionIndex": 34,
       "content": "Trong thời kỳ đổi mới, giai cấp công nhân nước ta có sứ mệnh lịch sử to lớn là gì?",
-      "explanation": "Giai cấp công nhân Việt Nam giữ vị trí là giai cấp lãnh đạo cách mạng thông qua đội tiên phong là Đảng Cộng sản Việt Nam.",
+      "explanation": "Trong thời kỳ đổi mới, giai cấp công nhân có sứ mệnh lãnh đạo cách mạng thông qua đội tiên phong là Đảng Cộng sản Việt Nam. Cách diễn đạt này xác định vai trò chính trị - xã hội của công nhân và cơ chế tổ chức lãnh đạo, không thể thay bằng những từ “tiêu biểu”, “đại diện” hoặc “nòng cốt” làm thay đổi nội hàm lý luận.",
       "answers": [
         {
           "id": 1,
           "content": "Giai cấp lãnh đạo cách mạng thông qua đội tiên phong là Đảng Cộng sản Việt Nam",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 35
         },
         {
           "id": 2,
           "content": "Giai cấp tiêu biểu cách mạng thông qua đội tiên phong là Đảng Cộng sản Việt Nam",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 35
         },
         {
           "id": 3,
           "content": "Giai cấp đại diện thông qua đội tiên phong là Đảng Cộng sản Việt Nam",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 35
         },
         {
           "id": 4,
           "content": "Giai cấp nòng cốt thông qua đội tiên phong là Đảng Cộng sản Việt Nam",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 35
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Giai cấp lãnh đạo cách mạng thông qua đội tiên phong là Đảng Cộng sản Việt Nam",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 35
+        },
+        {
+          "id": 2,
+          "content": "Giai cấp tiêu biểu cách mạng thông qua đội tiên phong là Đảng Cộng sản Việt Nam",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 35
+        },
+        {
+          "id": 3,
+          "content": "Giai cấp đại diện thông qua đội tiên phong là Đảng Cộng sản Việt Nam",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 35
+        },
+        {
+          "id": 4,
+          "content": "Giai cấp nòng cốt thông qua đội tiên phong là Đảng Cộng sản Việt Nam",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 35
+        }
+      ]
     },
     {
       "id": 36,
       "questionIndex": 35,
       "content": "Trong gia đình, quan hệ thứ ba tham gia ngay từ đầu vào quá trình phát triển lịch sử, đó là quan hệ nào?",
-      "explanation": "Trong tác phẩm \"Hệ tư tưởng Đức\", C. Mác và Ph. Ăngghen chỉ ra ba quan hệ xã hội đầu tiên của lịch sử, trong đó \"quan hệ thứ ba\" chính là quan hệ gia đình, bao gồm quan hệ hôn nhân (chồng - vợ) và quan hệ huyết thống (cha mẹ - con cái).",
+      "explanation": "Quan hệ thứ ba tham gia ngay từ đầu vào phát triển lịch sử gia đình là quan hệ giữa vợ chồng và giữa cha mẹ với con cái. Quan hệ này thể hiện việc tái sản xuất con người và tổ chức đời sống gia đình, khác các liên hệ giữa tổ tiên, ông bà hoặc con cái vốn không nêu đúng cấu trúc quan hệ cơ bản được đề cập.",
       "answers": [
         {
           "id": 1,
           "content": "Quan hệ giữa chồng và vợ, quan hệ giữa cha mẹ và con cái",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 36
         },
         {
           "id": 2,
           "content": "Quan hệ giữa ông bà với con cái, quan hệ giữa vợ và chồng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 36
         },
         {
           "id": 3,
           "content": "Quan hệ giữa tổ tiên và ông bà, cha mẹ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 36
         },
         {
           "id": 4,
           "content": "Quan hệ giữa con cái và cha mẹ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 36
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Quan hệ giữa chồng và vợ, quan hệ giữa cha mẹ và con cái",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 36
+        },
+        {
+          "id": 2,
+          "content": "Quan hệ giữa ông bà với con cái, quan hệ giữa vợ và chồng",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 36
+        },
+        {
+          "id": 3,
+          "content": "Quan hệ giữa tổ tiên và ông bà, cha mẹ",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 36
+        },
+        {
+          "id": 4,
+          "content": "Quan hệ giữa con cái và cha mẹ",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 36
+        }
+      ]
     },
     {
       "id": 37,
       "questionIndex": 36,
       "content": "“Kiện toàn tổ chức, đổi mới phương thức và nâng cao hiệu quả hoạt động của Quốc hội để đảm bảo đây là ...”. Cụm từ nào còn thiếu trong câu trên?",
-      "explanation": "Văn kiện của Đảng định hướng xây dựng Quốc hội trở thành cơ quan đại biểu cao nhất của nhân dân, cơ quan quyền lực nhà nước cao nhất của nước Cộng hòa xã hội chủ nghĩa Việt Nam.",
+      "explanation": "Quốc hội cần được kiện toàn để xứng đáng là cơ quan đại biểu cao nhất của nhân dân và cơ quan quyền lực nhà nước cao nhất. Hai vế khẳng định cả tính đại diện lẫn vị trí pháp lý của Quốc hội trong bộ máy nhà nước, không chỉ nói chung chung về quyền lực nhân dân hoặc quyền lực của giai cấp.",
       "answers": [
         {
           "id": 1,
           "content": "Quyền lực của nhân dân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 37
         },
         {
           "id": 2,
           "content": "Quyền lực cao nhất của nhà nước",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 37
         },
         {
           "id": 3,
           "content": "Cơ quan đại biểu cao nhất của nhân dân, cơ quan quyền lực nhà nước cao nhất",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 37
         },
         {
           "id": 4,
           "content": "Quyền lực cao nhất của giai cấp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 37
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Quyền lực của nhân dân",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 37
+        },
+        {
+          "id": 2,
+          "content": "Quyền lực cao nhất của nhà nước",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 37
+        },
+        {
+          "id": 3,
+          "content": "Cơ quan đại biểu cao nhất của nhân dân, cơ quan quyền lực nhà nước cao nhất",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 37
+        },
+        {
+          "id": 4,
+          "content": "Quyền lực cao nhất của giai cấp",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 37
+        }
+      ]
     },
     {
       "id": 38,
       "questionIndex": 37,
       "content": "Theo chủ nghĩa Mác - Lênin, quy luật chung, phổ biến cho sự ra đời của Đảng Cộng sản là gì?",
-      "explanation": "Quy luật chung cho sự ra đời của Đảng Cộng sản ở các nước là sự kết hợp giữa chủ nghĩa xã hội khoa học (chủ nghĩa Mác) với phong trào công nhân.",
+      "explanation": "Theo Mác - Lênin, Đảng Cộng sản ra đời từ sự kết hợp chủ nghĩa xã hội khoa học với phong trào công nhân. Lý luận khoa học cung cấp mục tiêu, đường lối, còn phong trào công nhân tạo cơ sở xã hội thực tiễn; sự kết hợp với phong trào nông dân hoặc yêu nước có thể là đặc điểm riêng ở một số nước, không phải quy luật chung phổ biến.",
       "answers": [
         {
           "id": 1,
           "content": "Là sự kết hợp giữa chủ nghĩa xã hội khoa học với phong trào công nhân",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 38
         },
         {
           "id": 2,
           "content": "Là sự kết hợp giữa phong trào công nhân với phong trào nông dân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 38
         },
         {
           "id": 3,
           "content": "Là sự kết hợp giữa phong trào công nhân và phong trào yêu nước",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 38
         },
         {
           "id": 4,
           "content": "Là sự kết hợp giữa chủ nghĩa xã hội khoa học và phong trào yêu nước",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 38
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Là sự kết hợp giữa chủ nghĩa xã hội khoa học với phong trào công nhân",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 38
+        },
+        {
+          "id": 2,
+          "content": "Là sự kết hợp giữa phong trào công nhân với phong trào nông dân",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 38
+        },
+        {
+          "id": 3,
+          "content": "Là sự kết hợp giữa phong trào công nhân và phong trào yêu nước",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 38
+        },
+        {
+          "id": 4,
+          "content": "Là sự kết hợp giữa chủ nghĩa xã hội khoa học và phong trào yêu nước",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 38
+        }
+      ]
     },
     {
       "id": 39,
       "questionIndex": 38,
       "content": "Trong thời đại hiện nay, sứ mệnh lịch sử của giai cấp công nhân trong lĩnh vực văn hóa, tư tưởng là gì?",
-      "explanation": "Trên lĩnh vực văn hóa, tư tưởng, giai cấp công nhân có sứ mệnh đấu tranh bảo vệ nền tảng tư tưởng Mác - Lênin của Đảng, củng cố niềm tin khoa học vào mục tiêu CNXH và xây dựng nền văn hóa mới.",
+      "explanation": "Trong lĩnh vực văn hóa, tư tưởng, sứ mệnh công nhân bao gồm bảo vệ nền tảng tư tưởng của Đảng, giáo dục nhận thức và củng cố niềm tin khoa học vào lý tưởng xã hội chủ nghĩa. Nội dung này kết hợp đấu tranh chống quan điểm sai trái với bồi dưỡng hệ giá trị, không phải dung hòa chủ nghĩa dân tộc với xã hội chủ nghĩa không tưởng.",
       "answers": [
         {
           "id": 1,
           "content": "Đấu tranh bảo vệ nền tảng tư tưởng của Đảng Cộng sản, giáo dục nhận thức và củng cố niềm tin khoa học đối với lý tưởng, mục tiêu của chủ nghĩa xã hội",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 39
         },
         {
           "id": 2,
           "content": "Tuyên truyền cho quần chúng lao động về hệ tư tưởng Mác - Lênin để tiến đến chủ nghĩa cộng sản",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 39
         },
         {
           "id": 3,
           "content": "Bổ sung chủ nghĩa Mác - Lênin với các trào lưu chủ nghĩa xã hội toàn thế giới",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 39
         },
         {
           "id": 4,
           "content": "Dung hòa chủ nghĩa dân tộc vào tư tưởng chủ nghĩa xã hội không tưởng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 39
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đấu tranh bảo vệ nền tảng tư tưởng của Đảng Cộng sản, giáo dục nhận thức và củng cố niềm tin khoa học đối với lý tưởng, mục tiêu của chủ nghĩa xã hội",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 39
+        },
+        {
+          "id": 2,
+          "content": "Tuyên truyền cho quần chúng lao động về hệ tư tưởng Mác - Lênin để tiến đến chủ nghĩa cộng sản",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 39
+        },
+        {
+          "id": 3,
+          "content": "Bổ sung chủ nghĩa Mác - Lênin với các trào lưu chủ nghĩa xã hội toàn thế giới",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 39
+        },
+        {
+          "id": 4,
+          "content": "Dung hòa chủ nghĩa dân tộc vào tư tưởng chủ nghĩa xã hội không tưởng",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 39
+        }
+      ]
     },
     {
       "id": 40,
       "questionIndex": 39,
       "content": "Theo quan điểm của chủ nghĩa Mác - Lênin, từ chủ nghĩa tư bản lên chủ nghĩa xã hội tất yếu phải trải qua thời kỳ gì?",
-      "explanation": "C. Mác và V. I. Lênin khẳng định giữa CNTB và CNXH là một thời kỳ cải biến cách mạng lâu dài, tức thời kỳ quá độ chính trị với công cụ là nhà nước chuyên chính vô sản.",
+      "explanation": "Từ chủ nghĩa tư bản lên chủ nghĩa xã hội tất yếu phải trải qua thời kỳ quá độ chính trị, trong đó nhà nước và xã hội được cải tạo theo hướng mới. Thời kỳ này xử lý sự đan xen quan hệ cũ, mới và xây dựng cơ sở vật chất, thiết chế phù hợp; không thể giản lược thành chỉ phát triển lực lượng sản xuất hoặc thay đổi phương thức sản xuất.",
       "answers": [
         {
           "id": 1,
           "content": "Phát triển của loài người",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 40
         },
         {
           "id": 2,
           "content": "Phát triển lực lượng sản xuất và quan hệ sản xuất",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 40
         },
         {
           "id": 3,
           "content": "Quá độ chính trị",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 40
         },
         {
           "id": 4,
           "content": "Thay đổi phương thức sản xuất",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 40
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Phát triển của loài người",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 40
+        },
+        {
+          "id": 2,
+          "content": "Phát triển lực lượng sản xuất và quan hệ sản xuất",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 40
+        },
+        {
+          "id": 3,
+          "content": "Quá độ chính trị",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 40
+        },
+        {
+          "id": 4,
+          "content": "Thay đổi phương thức sản xuất",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 40
+        }
+      ]
     },
     {
       "id": 41,
       "questionIndex": 40,
       "content": "Câu nói sau do ai khẳng định: “Nếu không giải phóng phụ nữ là xây dựng chủ nghĩa xã hội chỉ một nửa”?",
-      "explanation": "Đây là khẳng định của Chủ tịch Hồ Chí Minh nhấn mạnh vai trò chiến lược của sự nghiệp giải phóng phụ nữ đối với thành công của chủ nghĩa xã hội. ---",
+      "explanation": "Hồ Chí Minh khẳng định không giải phóng phụ nữ thì xây dựng chủ nghĩa xã hội chỉ một nửa, bởi phụ nữ là một nửa dân số và lực lượng quan trọng trong lao động, gia đình, xã hội. Giải phóng phụ nữ không chỉ là yêu cầu bình đẳng giới mà còn là điều kiện huy động đầy đủ nguồn lực cho mục tiêu xã hội chủ nghĩa.",
       "answers": [
         {
           "id": 1,
           "content": "V. I. Lênin",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 41
         },
         {
           "id": 2,
           "content": "C. Mác",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 41
         },
         {
           "id": 3,
           "content": "Chủ tịch Hồ Chí Minh",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 41
         },
         {
           "id": 4,
           "content": "Ph. Ăngghen",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 41
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "V. I. Lênin",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 41
+        },
+        {
+          "id": 2,
+          "content": "C. Mác",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 41
+        },
+        {
+          "id": 3,
+          "content": "Chủ tịch Hồ Chí Minh",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 41
+        },
+        {
+          "id": 4,
+          "content": "Ph. Ăngghen",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 41
+        }
+      ]
     },
     {
       "id": 42,
       "questionIndex": 41,
       "content": "“Do lực lượng sản xuất chưa phát triển, con người cảm thấy yếu đuối, bất lực, không giải thích được, nên con người đã gán cho tự nhiên một sức mạnh, quyền lực thần bí”, vấn đề này nói lên nguồn gốc nào của tôn giáo?",
-      "explanation": "Sự bất lực của con người trước các lực lượng tự nhiên và lực lượng xã hội do lực lượng sản xuất chưa phát triển chính là nguồn gốc tự nhiên, kinh tế - xã hội dẫn đến sự ra đời của tôn giáo.",
+      "explanation": "Khi lực lượng sản xuất chưa phát triển, con người bất lực trước tự nhiên và gán cho tự nhiên sức mạnh thần bí, đó là nguồn gốc tự nhiên, kinh tế - xã hội của tôn giáo. Hoàn cảnh vật chất khách quan tạo cảm giác phụ thuộc, khác với nguồn gốc nhận thức, tâm lý hoặc ý chí theo cách phân loại riêng.",
       "answers": [
         {
           "id": 1,
           "content": "Nguồn gốc tâm lý",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 42
         },
         {
           "id": 2,
           "content": "Nguồn gốc nhận thức",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 42
         },
         {
           "id": 3,
           "content": "Nguồn gốc tự nhiên, kinh tế - xã hội",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 42
         },
         {
           "id": 4,
           "content": "Nguồn gốc ý chí",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 42
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Nguồn gốc tâm lý",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 42
+        },
+        {
+          "id": 2,
+          "content": "Nguồn gốc nhận thức",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 42
+        },
+        {
+          "id": 3,
+          "content": "Nguồn gốc tự nhiên, kinh tế - xã hội",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 42
+        },
+        {
+          "id": 4,
+          "content": "Nguồn gốc ý chí",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 42
+        }
+      ]
     },
     {
       "id": 43,
       "questionIndex": 42,
       "content": "Đâu không phải là một cơ sở xây dựng gia đình trong thời kỳ quá độ lên chủ nghĩa xã hội?",
-      "explanation": "Ba cơ sở chính để xây dựng gia đình trong thời kỳ quá độ lên CNXH bao gồm: Cơ sở kinh tế - xã hội, Cơ sở chính trị - xã hội và Cơ sở văn hóa (không xếp \"Cơ sở lao động, sản xuất\" thành một nhóm cơ sở riêng).",
+      "explanation": "Cơ sở xây dựng gia đình thời kỳ quá độ gồm cơ sở kinh tế - xã hội, chính trị - xã hội và văn hóa. “Cơ sở lao động, sản xuất” không được xác định là một cơ sở độc lập trong hệ thống lý luận này, dù lao động, sản xuất có ý nghĩa quan trọng đối với đời sống gia đình thông qua nền tảng kinh tế - xã hội.",
       "answers": [
         {
           "id": 1,
           "content": "Cơ sở kinh tế - xã hội",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 43
         },
         {
           "id": 2,
           "content": "Cơ sở chính trị - xã hội",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 43
         },
         {
           "id": 3,
           "content": "Cơ sở văn hóa",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 43
         },
         {
           "id": 4,
           "content": "Cơ sở lao động, sản xuất",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 43
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Cơ sở kinh tế - xã hội",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 43
+        },
+        {
+          "id": 2,
+          "content": "Cơ sở chính trị - xã hội",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 43
+        },
+        {
+          "id": 3,
+          "content": "Cơ sở văn hóa",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 43
+        },
+        {
+          "id": 4,
+          "content": "Cơ sở lao động, sản xuất",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 43
+        }
+      ]
     },
     {
       "id": 44,
       "questionIndex": 43,
       "content": "Phần lớn các tín đồ tôn giáo ở nước ta có đặc điểm chung là gì?",
-      "explanation": "Đại đa số tín đồ các tôn giáo ở Việt Nam đều là nhân dân lao động, gắn bó với dân tộc, có tinh thần yêu nước và đóng góp vào sự nghiệp xây dựng, bảo vệ Tổ quốc.",
+      "explanation": "Phần lớn tín đồ tôn giáo tại Việt Nam là nhân dân lao động, có lòng yêu nước và tinh thần dân tộc. Nhận thức đúng đặc điểm này giúp thực hiện chính sách đoàn kết, tôn trọng tự do tín ngưỡng và phát huy đóng góp xã hội của đồng bào có đạo, thay vì quy họ thành lực lượng chống đối hoặc mê tín cần loại trừ.",
       "answers": [
         {
           "id": 1,
           "content": "Là nhân dân lao động, có lòng yêu nước, tinh thần dân tộc",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 44
         },
         {
           "id": 2,
           "content": "Là giai cấp yếu thế, có cuộc sống cơ cực, tin vào tôn giáo như một yếu tố giải thoát",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 44
         },
         {
           "id": 3,
           "content": "Có ý thức chống lại chủ nghĩa duy vật biện chứng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 44
         },
         {
           "id": 4,
           "content": "Tham gia vào các phong trào đấu tranh chống chính quyền",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 44
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Là nhân dân lao động, có lòng yêu nước, tinh thần dân tộc",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 44
+        },
+        {
+          "id": 2,
+          "content": "Là giai cấp yếu thế, có cuộc sống cơ cực, tin vào tôn giáo như một yếu tố giải thoát",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 44
+        },
+        {
+          "id": 3,
+          "content": "Có ý thức chống lại chủ nghĩa duy vật biện chứng",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 44
+        },
+        {
+          "id": 4,
+          "content": "Tham gia vào các phong trào đấu tranh chống chính quyền",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 44
+        }
+      ]
     },
     {
       "id": 45,
       "questionIndex": 44,
       "content": "Điền cụm từ thích hợp vào chỗ trống (...): “Giai cấp ..., trong quá trình thống trị giai cấp chưa đầy một thế kỷ, đã tạo ra những ... nhiều hơn và đồ sộ hơn lực lượng sản xuất của tất cả các thế hệ trước kia gộp lại”",
-      "explanation": "Trích văn kiện tác phẩm \"Tuyên ngôn của Đảng Cộng sản\": \"Giai cấp tư sản, trong quá trình thống trị giai cấp chưa đầy một thế kỷ, đã tạo ra những lực lượng sản xuất nhiều hơn và đồ sộ hơn...\".",
+      "explanation": "Mác và Ăngghen khẳng định giai cấp tư sản trong chưa đầy một thế kỷ thống trị đã tạo ra lực lượng sản xuất nhiều hơn, đồ sộ hơn các thế hệ trước gộp lại. Câu nói nhấn mạnh vai trò cách mạng của tư sản trong phát triển công nghiệp, không nói công nhân hay quan hệ sản xuất là chủ thể trực tiếp tạo ra thành tựu ấy.",
       "answers": [
         {
           "id": 1,
           "content": "Tư sản / Lực lượng sản xuất",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 45
         },
         {
           "id": 2,
           "content": "Tư sản / Quan hệ sản xuất",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 45
         },
         {
           "id": 3,
           "content": "Vô sản / Tư sản",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 45
         },
         {
           "id": 4,
           "content": "Vô sản / Giai cấp nông dân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 45
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Tư sản / Lực lượng sản xuất",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 45
+        },
+        {
+          "id": 2,
+          "content": "Tư sản / Quan hệ sản xuất",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 45
+        },
+        {
+          "id": 3,
+          "content": "Vô sản / Tư sản",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 45
+        },
+        {
+          "id": 4,
+          "content": "Vô sản / Giai cấp nông dân",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 45
+        }
+      ]
     },
     {
       "id": 46,
       "questionIndex": 45,
       "content": "Đâu không phải là một trong những loại của cơ cấu xã hội?",
-      "explanation": "Không tồn tại khái niệm \"Cơ cấu xã hội - hạ tầng\" trong các phân loại cơ cấu xã hội.",
+      "explanation": "Các loại cơ cấu xã hội thường gồm cơ cấu giai cấp, nghề nghiệp, dân cư, dân tộc, tôn giáo và nhiều dạng nhóm xã hội khác. “Cơ cấu xã hội - hạ tầng” không phải một loại cơ cấu xã hội theo cách phân loại chuẩn; hạ tầng là khái niệm thuộc phân tích kinh tế - kỹ thuật hoặc cơ sở vật chất.",
       "answers": [
         {
           "id": 1,
           "content": "Cơ cấu xã hội - giai cấp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 46
         },
         {
           "id": 2,
           "content": "Cơ cấu xã hội - nghề nghiệp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 46
         },
         {
           "id": 3,
           "content": "Cơ cấu xã hội - hạ tầng",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 46
         },
         {
           "id": 4,
           "content": "Cơ cấu xã hội - tôn giáo",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 46
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Cơ cấu xã hội - giai cấp",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 46
+        },
+        {
+          "id": 2,
+          "content": "Cơ cấu xã hội - nghề nghiệp",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 46
+        },
+        {
+          "id": 3,
+          "content": "Cơ cấu xã hội - hạ tầng",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 46
+        },
+        {
+          "id": 4,
+          "content": "Cơ cấu xã hội - tôn giáo",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 46
+        }
+      ]
     },
     {
       "id": 47,
       "questionIndex": 46,
       "content": "“Quyền lực nhà nước là thống nhất, có sự phân công, phối hợp, kiểm soát giữa các cơ quan nhà nước trong việc thực hiện các quyền lập pháp, hành pháp, tư pháp” được đề cập tại Đại hội lần thứ bao nhiêu của Đảng?",
-      "explanation": "Quan điểm đầy đủ bao gồm cụm từ \"kiểm soát\" giữa các cơ quan nhà nước trong thực hiện 3 quyền (lập pháp, hành pháp, tư pháp) được nêu rõ và hoàn thiện tại Văn kiện Đại hội XII của Đảng.",
+      "explanation": "Nguyên tắc quyền lực nhà nước thống nhất, có phân công, phối hợp và kiểm soát giữa lập pháp, hành pháp, tư pháp được Đại hội XII của Đảng nhấn mạnh. Nội dung này hoàn thiện nhận thức về tổ chức quyền lực pháp quyền, bổ sung rõ yêu cầu kiểm soát quyền lực so với cách diễn đạt chỉ nhấn mạnh phân công, phối hợp trước đó.",
       "answers": [
         {
           "id": 1,
           "content": "X",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 47
         },
         {
           "id": 2,
           "content": "XI",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 47
         },
         {
           "id": 3,
           "content": "XII",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 47
         },
         {
           "id": 4,
           "content": "IX",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 47
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "X",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 47
+        },
+        {
+          "id": 2,
+          "content": "XI",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 47
+        },
+        {
+          "id": 3,
+          "content": "XII",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 47
+        },
+        {
+          "id": 4,
+          "content": "IX",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 47
+        }
+      ]
     },
     {
       "id": 48,
       "questionIndex": 47,
       "content": "Trong các nội dung của liên minh giai cấp, tầng lớp trong thời kỳ quá độ lên chủ nghĩa xã hội ở Việt Nam, nội dung nào là cơ bản quyết định nhất?",
-      "explanation": "Liên minh về kinh tế tạo nền tảng vật chất và giải quyết lợi ích thiết thân của các bên, do đó là nội dung cơ bản quyết định nhất.",
+      "explanation": "Trong liên minh giai cấp, tầng lớp thời kỳ quá độ, nội dung kinh tế là cơ bản, quyết định nhất vì lợi ích vật chất là nền tảng bền vững của hợp tác. Phát triển sản xuất và phân phối lợi ích hài hòa tạo điều kiện củng cố chính trị, tư tưởng, văn hóa - xã hội; các lĩnh vực còn lại không thể tách rời nền tảng kinh tế.",
       "answers": [
         {
           "id": 1,
           "content": "Chính trị",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 48
         },
         {
           "id": 2,
           "content": "Kinh tế",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 48
         },
         {
           "id": 3,
           "content": "Tư tưởng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 48
         },
         {
           "id": 4,
           "content": "Văn hóa - xã hội",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 48
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Chính trị",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 48
+        },
+        {
+          "id": 2,
+          "content": "Kinh tế",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 48
+        },
+        {
+          "id": 3,
+          "content": "Tư tưởng",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 48
+        },
+        {
+          "id": 4,
+          "content": "Văn hóa - xã hội",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 48
+        }
+      ]
     },
     {
       "id": 49,
       "questionIndex": 48,
       "content": "Trên lĩnh vực kinh tế, trong thời kỳ quá độ lên chủ nghĩa xã hội tất yếu tồn tại nền kinh tế như thế nào?",
-      "explanation": "Thời kỳ quá độ là thời kỳ đan xen giữa cái cũ và cái mới, do đó về kinh tế tất yếu tồn tại nền kinh tế nhiều thành phần, bao gồm cả các thành phần kinh tế tư nhân, tư bản (đối lập với kinh tế XHCN).",
+      "explanation": "Thời kỳ quá độ tất yếu tồn tại kinh tế nhiều thành phần, trong đó có cả thành phần đối lập về lợi ích với định hướng xã hội chủ nghĩa. Sự tồn tại này phản ánh tính đan xen của quan hệ cũ, mới và trình độ phát triển lực lượng sản xuất, không đồng nhất với kế hoạch hóa tập trung tuyệt đối, thị trường tự do hoặc kinh tế hàng hóa giản đơn.",
       "answers": [
         {
           "id": 1,
           "content": "Kinh tế nhiều thành phần, trong đó có thành phần đối lập",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 49
         },
         {
           "id": 2,
           "content": "Kinh tế kế hoạch hóa tập trung cao độ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 49
         },
         {
           "id": 3,
           "content": "Kinh tế thị trường tự do",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 49
         },
         {
           "id": 4,
           "content": "Kinh tế hàng hóa giản đơn",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 49
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Kinh tế nhiều thành phần, trong đó có thành phần đối lập",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 49
+        },
+        {
+          "id": 2,
+          "content": "Kinh tế kế hoạch hóa tập trung cao độ",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 49
+        },
+        {
+          "id": 3,
+          "content": "Kinh tế thị trường tự do",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 49
+        },
+        {
+          "id": 4,
+          "content": "Kinh tế hàng hóa giản đơn",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 49
+        }
+      ]
     },
     {
       "id": 50,
       "questionIndex": 49,
       "content": "Đâu là truyền thống quý báu của các dân tộc ở Việt Nam góp phần quyết định mọi thắng lợi của dân tộc trong các giai đoạn lịch sử?",
-      "explanation": "Đoàn kết dân tộc là truyền thống cực kỳ quý báu, tạo nên sức mạnh tổng hợp quyết định mọi thắng lợi trong lịch sử dựng nước và giữ nước của dân tộc Việt Nam.",
+      "explanation": "Đoàn kết dân tộc là truyền thống quý báu góp phần quyết định các thắng lợi lịch sử của dân tộc Việt Nam, từ dựng nước đến giữ nước và phát triển. Truyền thống này tập hợp sức mạnh các giai cấp, dân tộc, tôn giáo, vùng miền vì mục tiêu chung, rộng hơn các phẩm chất riêng như hiếu thảo hay tinh thần học tập.",
       "answers": [
         {
           "id": 1,
           "content": "Chống giặc ngoại xâm",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 50
         },
         {
           "id": 2,
           "content": "Đoàn kết dân tộc",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 50
         },
         {
           "id": 3,
           "content": "Tinh thần học tập không ngừng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 50
         },
         {
           "id": 4,
           "content": "Hiếu thảo với ông bà cha mẹ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 50
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Chống giặc ngoại xâm",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 50
+        },
+        {
+          "id": 2,
+          "content": "Đoàn kết dân tộc",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 50
+        },
+        {
+          "id": 3,
+          "content": "Tinh thần học tập không ngừng",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 50
+        },
+        {
+          "id": 4,
+          "content": "Hiếu thảo với ông bà cha mẹ",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 50
+        }
+      ]
     },
     {
       "id": 51,
       "questionIndex": 50,
       "content": "Quá độ lên chủ nghĩa xã hội bỏ qua chế độ tư bản chủ nghĩa là tạo ra sự biến đổi như thế nào của xã hội trên tất cả các lĩnh vực?",
-      "explanation": "Việc bỏ qua hình thái kinh tế - xã hội TBCN để tiến thẳng lên CNXH đòi hỏi một sự biến đổi căn bản về chất trên mọi lĩnh vực từ kinh tế, chính trị đến tư tưởng, văn hóa.",
+      "explanation": "Bỏ qua chế độ tư bản chủ nghĩa đòi hỏi biến đổi về chất trên mọi lĩnh vực xã hội, từ kinh tế, chính trị đến văn hóa và quan hệ con người. Sự chuyển đổi này không chỉ là tăng giảm về lượng hay một bước nhảy đơn lẻ, mà là quá trình xây dựng nền tảng của xã hội mới với bản chất xã hội chủ nghĩa.",
       "answers": [
         {
           "id": 1,
           "content": "Biến đổi về lượng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 51
         },
         {
           "id": 2,
           "content": "Biến đổi về chất",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 51
         },
         {
           "id": 3,
           "content": "Khuynh hướng phát triển",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 51
         },
         {
           "id": 4,
           "content": "Thực hiện bước nhảy",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 51
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Biến đổi về lượng",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 51
+        },
+        {
+          "id": 2,
+          "content": "Biến đổi về chất",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 51
+        },
+        {
+          "id": 3,
+          "content": "Khuynh hướng phát triển",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 51
+        },
+        {
+          "id": 4,
+          "content": "Thực hiện bước nhảy",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 51
+        }
+      ]
     },
     {
       "id": 52,
       "questionIndex": 51,
       "content": "Tại sao trong gia đình Việt Nam truyền thống trước kia lại quan niệm có càng đông con càng tốt và nhất thiết phải có con trai nối dõi?",
-      "explanation": "Nền sản xuất nông nghiệp lúa nước thủ công đòi hỏi lượng lớn sức lao động kết hợp với tư tưởng Nho giáo gia trưởng đã tạo nên quan niệm đông con và tư tưởng trọng nam khinh nữ.",
+      "explanation": "Gia đình truyền thống thường đề cao đông con và con trai nối dõi do ảnh hưởng phong tục, tập quán phụ quyền và nhu cầu sản xuất nông nghiệp cần nhiều lao động. Quan niệm này không xuất phát chỉ từ họ cha hay thiếu biện pháp kế hoạch hóa gia đình, mà gắn với điều kiện kinh tế - xã hội nông nghiệp và văn hóa dòng họ.",
       "answers": [
         {
           "id": 1,
           "content": "Do dân số ít và nam giới quá hiếm",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 52
         },
         {
           "id": 2,
           "content": "Do không có các biện pháp kế hoạch hóa gia đình",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 52
         },
         {
           "id": 3,
           "content": "Do con cái mang họ cha",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 52
         },
         {
           "id": 4,
           "content": "Do ảnh hưởng phong tục, tập quán và nhu cầu sản xuất nông nghiệp",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 52
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Do dân số ít và nam giới quá hiếm",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 52
+        },
+        {
+          "id": 2,
+          "content": "Do không có các biện pháp kế hoạch hóa gia đình",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 52
+        },
+        {
+          "id": 3,
+          "content": "Do con cái mang họ cha",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 52
+        },
+        {
+          "id": 4,
+          "content": "Do ảnh hưởng phong tục, tập quán và nhu cầu sản xuất nông nghiệp",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 52
+        }
+      ]
     },
     {
       "id": 53,
       "questionIndex": 52,
       "content": "Lợi ích cơ bản của giai cấp công nhân có quan hệ như thế nào với lợi ích cơ bản của các giai cấp khác trong xã hội? (Chọn hai đáp án đúng)",
-      "explanation": "B. Đối lập trực tiếp với lợi ích cơ bản của giai cấp tư sản | D. Thống nhất với lợi ích cơ bản của đa số nhân dân lao động. Lợi ích của giai cấp công nhân đối lập trực tiếp với giai cấp tư sản (bị bóc lột vs bóc lột), nhưng thống nhất về cơ bản với lợi ích của nhân dân lao động (cùng muốn thoát khỏi áp bức, bóc lột).",
+      "explanation": "Lợi ích cơ bản của công nhân đối lập trực tiếp với lợi ích tư sản vì tư sản chiếm hữu tư liệu sản xuất và giá trị thặng dư do công nhân tạo ra. Đồng thời, lợi ích công nhân thống nhất với đa số nhân dân lao động trong mục tiêu xóa áp bức, phát triển xã hội công bằng; không đối lập với nông dân hoặc thống nhất với tư sản.",
       "answers": [
         {
           "id": 1,
           "content": "Đối lập trực tiếp với lợi ích cơ bản của giai cấp nông dân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 53
         },
         {
           "id": 2,
           "content": "Đối lập trực tiếp với lợi ích cơ bản của giai cấp tư sản",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 53
         },
         {
           "id": 3,
           "content": "Thống nhất với lợi ích cơ bản của giai cấp tư sản",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 53
         },
         {
           "id": 4,
           "content": "Thống nhất với lợi ích cơ bản của đa số nhân dân lao động",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 53
         }
       ],
-      "questionType": "Multiple Choice"
+      "questionType": "Multiple Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đối lập trực tiếp với lợi ích cơ bản của giai cấp nông dân",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 53
+        },
+        {
+          "id": 2,
+          "content": "Đối lập trực tiếp với lợi ích cơ bản của giai cấp tư sản",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 53
+        },
+        {
+          "id": 3,
+          "content": "Thống nhất với lợi ích cơ bản của giai cấp tư sản",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 53
+        },
+        {
+          "id": 4,
+          "content": "Thống nhất với lợi ích cơ bản của đa số nhân dân lao động",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 53
+        }
+      ]
     },
     {
       "id": 54,
       "questionIndex": 53,
       "content": "Nguyên nguyên nhân nào làm xuất hiện các tầng lớp xã hội mới?",
-      "explanation": "Sự biến đổi phức tạp, đa dạng của cơ cấu kinh tế nhiều thành phần trong thời kỳ quá độ dẫn đến sự biến đổi phức tạp, đa dạng của cơ cấu xã hội - giai cấp, làm xuất hiện nhiều tầng lớp xã hội mới (như doanh nhân, gia đình làm kinh tế trang trại...).",
+      "explanation": "Các tầng lớp xã hội mới xuất hiện do cơ cấu xã hội - giai cấp biến đổi phức tạp, đa dạng trong quá trình phát triển kinh tế, đổi mới và phân công lao động. Cách giải thích này bao quát sự thay đổi vị trí, nghề nghiệp, lợi ích của các nhóm xã hội, không chỉ quy về cơ cấu giai cấp riêng lẻ hoặc tình trạng thiếu đồng bộ.",
       "answers": [
         {
           "id": 1,
           "content": "Cơ cấu xã hội biến đổi phức tạp, đa dạng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 54
         },
         {
           "id": 2,
           "content": "Cơ cấu giai cấp biến đổi phức tạp, đa dạng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 54
         },
         {
           "id": 3,
           "content": "Cơ cấu xã hội - giai cấp thiếu tính đồng bộ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 54
         },
         {
           "id": 4,
           "content": "Cơ cấu xã hội - giai cấp biến đổi phức tạp, đa dạng",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 54
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Cơ cấu xã hội biến đổi phức tạp, đa dạng",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 54
+        },
+        {
+          "id": 2,
+          "content": "Cơ cấu giai cấp biến đổi phức tạp, đa dạng",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 54
+        },
+        {
+          "id": 3,
+          "content": "Cơ cấu xã hội - giai cấp thiếu tính đồng bộ",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 54
+        },
+        {
+          "id": 4,
+          "content": "Cơ cấu xã hội - giai cấp biến đổi phức tạp, đa dạng",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 54
+        }
+      ]
     },
     {
       "id": 55,
       "questionIndex": 54,
       "content": "Vấn đề chiến lược, cơ bản, lâu dài và cấp bách trong việc giải quyết mối quan hệ dân tộc và tôn giáo ở Việt Nam hiện nay là gì?",
-      "explanation": "Mục tiêu xuyên suốt mang tính chiến lược lâu dài và cấp bách là củng cố khối đại đoàn kết toàn dân tộc và đoàn kết tôn giáo để phát triển đất nước.",
+      "explanation": "Vấn đề chiến lược, cơ bản, lâu dài và cấp bách là củng cố quan hệ tốt đẹp giữa dân tộc với tôn giáo, tăng cường đại đoàn kết toàn dân tộc và đoàn kết tôn giáo. Mục tiêu này tạo nền tảng ổn định, đồng thuận cho phát triển, rộng hơn biện pháp đơn lẻ về lãnh đạo, lợi ích kinh tế hoặc yêu cầu chuyển biến của từng cộng đồng.",
       "answers": [
         {
           "id": 1,
           "content": "Đảm bảo sự lãnh đạo của Đảng Cộng sản Việt Nam, tuân thủ nguyên tắc, lập trường chính trị của giai cấp công nhân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 55
         },
         {
           "id": 2,
           "content": "Đảm bảo các tôn giáo, dân tộc chuyển biến tích cực",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 55
         },
         {
           "id": 3,
           "content": "Đảm bảo hài hòa lợi ích, giảm thiểu tới mức tối đa mâu thuẫn lợi ích, nhất là mâu thuẫn lợi ích kinh tế",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 55
         },
         {
           "id": 4,
           "content": "Củng cố mối quan hệ tốt đẹp giữa dân tộc và tôn giáo, củng cố khối đại đoàn kết toàn dân tộc và đoàn kết tôn giáo",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 55
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đảm bảo sự lãnh đạo của Đảng Cộng sản Việt Nam, tuân thủ nguyên tắc, lập trường chính trị của giai cấp công nhân",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 55
+        },
+        {
+          "id": 2,
+          "content": "Đảm bảo các tôn giáo, dân tộc chuyển biến tích cực",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 55
+        },
+        {
+          "id": 3,
+          "content": "Đảm bảo hài hòa lợi ích, giảm thiểu tới mức tối đa mâu thuẫn lợi ích, nhất là mâu thuẫn lợi ích kinh tế",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 55
+        },
+        {
+          "id": 4,
+          "content": "Củng cố mối quan hệ tốt đẹp giữa dân tộc và tôn giáo, củng cố khối đại đoàn kết toàn dân tộc và đoàn kết tôn giáo",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 55
+        }
+      ]
     },
     {
       "id": 56,
       "questionIndex": 55,
       "content": "Tác phẩm nào được xem là tác phẩm kinh điển chủ yếu, đánh dấu sự ra đời của chủ nghĩa xã hội khoa học?",
-      "explanation": "Tác phẩm \"Tuyên ngôn của Đảng Cộng sản\" (1848) là văn kiện nền tảng đánh dấu sự ra đời của chủ nghĩa xã hội khoa học.",
+      "explanation": "“Tuyên ngôn của Đảng Cộng sản” là tác phẩm kinh điển chủ yếu đánh dấu sự ra đời của chủ nghĩa xã hội khoa học vì lần đầu trình bày có hệ thống sứ mệnh công nhân, đấu tranh giai cấp và con đường giải phóng xã hội. Các tác phẩm còn lại có giá trị triết học, kinh tế hoặc khảo sát xã hội, nhưng không giữ vị trí mốc này.",
       "answers": [
         {
           "id": 1,
           "content": "Tuyên ngôn của Đảng Cộng sản",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 56
         },
         {
           "id": 2,
           "content": "Tình cảnh nước Anh",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 56
         },
         {
           "id": 3,
           "content": "Lược khảo khoa Kinh tế - Chính trị",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 56
         },
         {
           "id": 4,
           "content": "Góp phần phê phán triết học Pháp Quyền của Hêghen - Lời nói đầu (1844)",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 56
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Tuyên ngôn của Đảng Cộng sản",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 56
+        },
+        {
+          "id": 2,
+          "content": "Tình cảnh nước Anh",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 56
+        },
+        {
+          "id": 3,
+          "content": "Lược khảo khoa Kinh tế - Chính trị",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 56
+        },
+        {
+          "id": 4,
+          "content": "Góp phần phê phán triết học Pháp Quyền của Hêghen - Lời nói đầu (1844)",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 56
+        }
+      ]
     },
     {
       "id": 57,
       "questionIndex": 56,
       "content": "Những nhược điểm, hạn chế vốn có do hoàn cảnh lịch sử và nguồn gốc xã hội sinh ra của giai cấp công nhân Việt Nam là gì?",
-      "explanation": "Giai cấp công nhân Việt Nam xuất thân chủ yếu từ nông dân, do đó mang những hạn chế lịch sử như tâm lý tiểu nông, thói quen sản xuất nhỏ, thiếu tác phong công nghiệp hiện đại.",
+      "explanation": "Hạn chế do hoàn cảnh lịch sử của công nhân Việt Nam gồm tâm lý tiểu nông, thói quen, tập quán lạc hậu từ xã hội nông nghiệp cổ truyền. Nhược điểm này ảnh hưởng tác phong công nghiệp, ý thức tổ chức và cần được khắc phục qua giáo dục, rèn luyện; không đồng nhất với bản chất cách mạng hay là tất yếu không thể thay đổi của công nhân.",
       "answers": [
         {
           "id": 1,
           "content": "Tâm lý tiểu nông, thói quen, tập quán lạc hậu từ truyền thống xã hội nông nghiệp cổ truyền",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 57
         },
         {
           "id": 2,
           "content": "Tư tưởng dễ thỏa hiệp, không kiên quyết đấu tranh đến cùng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 57
         },
         {
           "id": 3,
           "content": "Sự tự phát, lẻ tẻ trong phong trào công nhân, không được giác ngộ tư tưởng chính trị",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 57
         },
         {
           "id": 4,
           "content": "Tâm lý chịu đựng, mê tín dị đoan",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 57
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Tâm lý tiểu nông, thói quen, tập quán lạc hậu từ truyền thống xã hội nông nghiệp cổ truyền",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 57
+        },
+        {
+          "id": 2,
+          "content": "Tư tưởng dễ thỏa hiệp, không kiên quyết đấu tranh đến cùng",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 57
+        },
+        {
+          "id": 3,
+          "content": "Sự tự phát, lẻ tẻ trong phong trào công nhân, không được giác ngộ tư tưởng chính trị",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 57
+        },
+        {
+          "id": 4,
+          "content": "Tâm lý chịu đựng, mê tín dị đoan",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 57
+        }
+      ]
     },
     {
       "id": 58,
       "questionIndex": 57,
       "content": "Dựa trên phương diện kinh tế - xã hội, giai cấp công nhân được hiểu như thế nào?",
-      "explanation": "Về mặt kinh tế - xã hội, giai cấp công nhân vừa là sản phẩm trực tiếp của nền đại công nghiệp, vừa là chủ thể trực tiếp vận hành nền sản xuất đó.",
+      "explanation": "Xét kinh tế - xã hội, công nhân vừa là sản phẩm vừa là chủ thể của nền đại công nghiệp. Công nghiệp tạo ra giai cấp công nhân với phương thức lao động mới, còn công nhân trực tiếp vận hành, phát triển nền sản xuất ấy; họ không phải người mua sức lao động hay chủ thể bóc lột giá trị thặng dư như giai cấp tư sản.",
       "answers": [
         {
           "id": 1,
           "content": "Sản phẩm của nền sản xuất đại công nghiệp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 58
         },
         {
           "id": 2,
           "content": "Chủ thể của nền sản xuất đại công nghiệp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 58
         },
         {
           "id": 3,
           "content": "Là người mua sức lao động và đi bóc lột giá trị thặng dư",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 58
         },
         {
           "id": 4,
           "content": "Chủ thể và sản phẩm của nền sản xuất đại công nghiệp",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 58
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Sản phẩm của nền sản xuất đại công nghiệp",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 58
+        },
+        {
+          "id": 2,
+          "content": "Chủ thể của nền sản xuất đại công nghiệp",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 58
+        },
+        {
+          "id": 3,
+          "content": "Là người mua sức lao động và đi bóc lột giá trị thặng dư",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 58
+        },
+        {
+          "id": 4,
+          "content": "Chủ thể và sản phẩm của nền sản xuất đại công nghiệp",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 58
+        }
+      ]
     },
     {
       "id": 59,
       "questionIndex": 58,
       "content": "Trong hệ thống chính sách xã hội, các chính sách liên quan đến vấn đề gì được đặt lên vị trí hàng đầu?",
-      "explanation": "Các chính sách liên quan đến cơ cấu xã hội - giai cấp được đặt ở vị trí hàng đầu vì nó tác động trực tiếp đến động lực và lợi ích của các giai tầng xã hội.",
+      "explanation": "Trong hệ thống chính sách xã hội, chính sách liên quan cơ cấu xã hội - giai cấp được đặt vị trí hàng đầu vì gắn với quan hệ sở hữu, lao động, lợi ích và nền tảng ổn định xã hội. Chính sách giáo dục, y tế, tôn giáo đều quan trọng, nhưng cần được triển khai trong sự phối hợp với định hướng xử lý các quan hệ giai cấp, tầng lớp.",
       "answers": [
         {
           "id": 1,
           "content": "Tôn giáo, y tế",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 59
         },
         {
           "id": 2,
           "content": "Giáo dục, y tế",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 59
         },
         {
           "id": 3,
           "content": "Cơ cấu xã hội - giai cấp",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 59
         },
         {
           "id": 4,
           "content": "Cơ cấu giai cấp, giáo dục",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 59
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Tôn giáo, y tế",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 59
+        },
+        {
+          "id": 2,
+          "content": "Giáo dục, y tế",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 59
+        },
+        {
+          "id": 3,
+          "content": "Cơ cấu xã hội - giai cấp",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 59
+        },
+        {
+          "id": 4,
+          "content": "Cơ cấu giai cấp, giáo dục",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 59
+        }
+      ]
     },
     {
       "id": 60,
       "questionIndex": 59,
       "content": "Để các nước đang trong thời kỳ quá độ lên chủ nghĩa xã hội xây dựng được cơ sở kinh tế vững mạnh, chế độ chính trị xã hội ngày càng được củng cố vững chắc thì cần phải có sự liên minh của những lực lượng nào?",
-      "explanation": "Khối liên minh giữa giai cấp công nhân với giai cấp nông dân và các tầng lớp nhân dân lao động khác (như trí thức) là nền tảng chính trị - xã hội vững chắc của thời kỳ quá độ.",
+      "explanation": "Liên minh công nhân, nông dân và các tầng lớp nhân dân lao động khác là điều kiện để các nước quá độ xây dựng cơ sở kinh tế vững mạnh, củng cố chế độ chính trị - xã hội. Liên minh tập hợp lực lượng sản xuất chủ yếu, tạo đồng thuận xã hội rộng rãi; phương án gồm tư sản, chính quyền hoặc chỉ trí thức, doanh nhân không nêu đúng nền tảng liên minh.",
       "answers": [
         {
           "id": 1,
           "content": "Giai cấp công nhân, giai cấp nông dân, tầng lớp nhân dân lao động khác",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 60
         },
         {
           "id": 2,
           "content": "Giai cấp nông dân, giai cấp tư sản, chính quyền",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 60
         },
         {
           "id": 3,
           "content": "Giai cấp nông dân, đội ngũ trí thức, đội ngũ doanh nghiệp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 60
         },
         {
           "id": 4,
           "content": "Giai cấp công nhân, đội ngũ trí thức, đội ngũ doanh nghiệp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 60
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Giai cấp công nhân, giai cấp nông dân, tầng lớp nhân dân lao động khác",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 60
+        },
+        {
+          "id": 2,
+          "content": "Giai cấp nông dân, giai cấp tư sản, chính quyền",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 60
+        },
+        {
+          "id": 3,
+          "content": "Giai cấp nông dân, đội ngũ trí thức, đội ngũ doanh nghiệp",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 60
+        },
+        {
+          "id": 4,
+          "content": "Giai cấp công nhân, đội ngũ trí thức, đội ngũ doanh nghiệp",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 60
+        }
+      ]
     }
   ]
 }

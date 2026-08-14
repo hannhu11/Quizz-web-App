@@ -8,1741 +8,4021 @@
       "id": 1,
       "questionIndex": 0,
       "content": "Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội được Đại hội Đảng lần thứ VII (1991) thông qua xác định xã hội xã hội chủ nghĩa mà nhân dân ta xây dựng có mấy đặc trưng cơ bản?",
-      "explanation": "Cương lĩnh 1991 xác định mô hình CNXH ở Việt Nam có 6 đặc trưng cơ bản. (Đến Cương lĩnh bổ sung năm 2011, Đảng ta mới phát triển lên thành 8 đặc trưng).",
+      "explanation": "Cương lĩnh năm 1991 nêu sáu đặc trưng của xã hội xã hội chủ nghĩa mà nhân dân Việt Nam xây dựng, như nhân dân lao động làm chủ, kinh tế phát triển cao và văn hóa tiên tiến đậm đà bản sắc dân tộc. Sáu đặc trưng này tạo khung nhận thức ban đầu về mô hình xã hội chủ nghĩa trong thời kỳ quá độ, trước khi Cương lĩnh 2011 bổ sung, phát triển thêm nội dung.",
       "answers": [
         {
           "id": 1,
           "content": "4",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 1
         },
         {
           "id": 2,
           "content": "5",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 1
         },
         {
           "id": 3,
           "content": "6",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 1
         },
         {
           "id": 4,
           "content": "7",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 1
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "4",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 1
+        },
+        {
+          "id": 2,
+          "content": "5",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 1
+        },
+        {
+          "id": 3,
+          "content": "6",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 1
+        },
+        {
+          "id": 4,
+          "content": "7",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 1
+        }
+      ]
     },
     {
       "id": 2,
       "questionIndex": 1,
       "content": "Mặt trận dân tộc thống nhất phản đế Đông Dương được thành lập vào thời gian nào?",
-      "explanation": "Tại Hội nghị Ban Chấp hành Trung ương lần thứ 6 (tháng 11/1939), Đảng chủ trương chuyển hướng chỉ đạo chiến lược, thành lập Mặt trận dân tộc thống nhất phản đế Đông Dương nhằm tập hợp rộng rãi lực lượng chống đế quốc.",
+      "explanation": "Hội nghị Trung ương tháng 11/1939 chủ trương chuyển hướng chiến lược, đặt giải phóng dân tộc lên hàng đầu khi Chiến tranh thế giới thứ hai bùng nổ. Trong bối cảnh đó, Mặt trận dân tộc thống nhất phản đế Đông Dương được thành lập nhằm tập hợp các lực lượng yêu nước chống đế quốc, thay cho hình thức mặt trận dân chủ của giai đoạn trước.",
       "answers": [
         {
           "id": 1,
           "content": "10-1930",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 2
         },
         {
           "id": 2,
           "content": "5-1935",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 2
         },
         {
           "id": 3,
           "content": "11-1939",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 2
         },
         {
           "id": 4,
           "content": "5-1941",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 2
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "10-1930",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 2
+        },
+        {
+          "id": 2,
+          "content": "5-1935",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 2
+        },
+        {
+          "id": 3,
+          "content": "11-1939",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 2
+        },
+        {
+          "id": 4,
+          "content": "5-1941",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 2
+        }
+      ]
     },
     {
       "id": 3,
       "questionIndex": 2,
       "content": "Cách mạng tháng Tám năm 1945 là cuộc cách mạng gì?",
-      "explanation": "Tính chất điển hình và nổi bật nhất của Cách mạng tháng Tám 1945 là một cuộc cách mạng giải phóng dân tộc (đánh đuổi phát xít Nhật, lật đổ phong kiến, giành độc lập).",
+      "explanation": "Cách mạng tháng Tám năm 1945 lật đổ ách thống trị của phát xít Nhật, thực dân Pháp và chế độ phong kiến, lập nên Nhà nước Việt Nam Dân chủ Cộng hòa. Nhiệm vụ trung tâm mà cuộc cách mạng giải quyết là giành độc lập cho dân tộc, nên bản chất nổi bật là cuộc cách mạng giải phóng dân tộc.",
       "answers": [
         {
           "id": 1,
           "content": "Tư sản",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 3
         },
         {
           "id": 2,
           "content": "Xã hội chủ nghĩa",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 3
         },
         {
           "id": 3,
           "content": "Giải phóng dân tộc",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 3
         },
         {
           "id": 4,
           "content": "Ruộng đất",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 3
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Tư sản",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 3
+        },
+        {
+          "id": 2,
+          "content": "Xã hội chủ nghĩa",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 3
+        },
+        {
+          "id": 3,
+          "content": "Giải phóng dân tộc",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 3
+        },
+        {
+          "id": 4,
+          "content": "Ruộng đất",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 3
+        }
+      ]
     },
     {
       "id": 4,
       "questionIndex": 3,
       "content": "Hồ Chí Minh đọc bản Sơ thảo lần thứ nhất những luận cương về vấn đề dân tộc và vấn đề thuộc địa của Lênin trên báo nào?",
-      "explanation": "Giữa tháng 7/1920, Nguyễn Ái Quốc đã đọc bản Sơ thảo luận cương của Lênin đăng trên báo L'Humanité (Nhân đạo) - cơ quan ngôn luận của Đảng Xã hội Pháp.",
+      "explanation": "Nguyễn Ái Quốc đọc “Sơ thảo lần thứ nhất những luận cương về vấn đề dân tộc và vấn đề thuộc địa” của Lênin trên báo Nhân đạo (L’Humanité) vào năm 1920. Luận cương giúp Người tìm thấy con đường giải phóng cho các dân tộc thuộc địa, từ đó lựa chọn chủ nghĩa Mác–Lênin và con đường cách mạng vô sản.",
       "answers": [
         {
           "id": 1,
           "content": "Thọ thuyền",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 4
         },
         {
           "id": 2,
           "content": "Tình cảnh công nhân Anh",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 4
         },
         {
           "id": 3,
           "content": "Nhân đạo",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 4
         },
         {
           "id": 4,
           "content": "Người cùng khổ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 4
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Thọ thuyền",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 4
+        },
+        {
+          "id": 2,
+          "content": "Tình cảnh công nhân Anh",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 4
+        },
+        {
+          "id": 3,
+          "content": "Nhân đạo",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 4
+        },
+        {
+          "id": 4,
+          "content": "Người cùng khổ",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 4
+        }
+      ]
     },
     {
       "id": 5,
       "questionIndex": 4,
       "content": "Chủ đề của Đại hội Đảng lần thứ X từ ngày 18 - 25/4/2006 tại Hà Nội là:",
-      "explanation": "Chủ đề Đại hội X nhấn mạnh khát vọng và mục tiêu cấp bách của Việt Nam lúc bấy giờ là \"sớm đưa nước ta ra khỏi tình trạng kém phát triển\" (mục tiêu này đã cơ bản đạt được vào năm 2010 khi VN trở thành nước thu nhập trung bình).",
+      "explanation": "Đại hội X năm 2006 đặt chủ đề toàn diện: nâng cao năng lực lãnh đạo và sức chiến đấu của Đảng, phát huy sức mạnh toàn dân tộc, đẩy mạnh đổi mới để sớm đưa đất nước ra khỏi tình trạng kém phát triển. Chủ đề liên kết yêu cầu xây dựng Đảng với mục tiêu phát triển quốc gia, không chỉ giới hạn ở công nghiệp hóa hoặc hội nhập riêng lẻ.",
       "answers": [
         {
           "id": 1,
           "content": "Nâng cao năng lực lãnh đạo và sức chiến đấu của Đảng, phát huy sức mạnh toàn dân tộc",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 5
         },
         {
           "id": 2,
           "content": "Nâng cao năng lực lãnh đạo, phát triển công nghiệp hóa - hiện đại hóa đất nước",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 5
         },
         {
           "id": 3,
           "content": "Phát triển và hội nhập quốc tế",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 5
         },
         {
           "id": 4,
           "content": "Nâng cao năng lực lãnh đạo và sức chiến đấu của Đảng, phát huy sức mạnh toàn dân tộc, đẩy mạnh toàn diện công cuộc đổi mới sớm đưa nước ta ra khỏi tình trạng kém phát triển",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 5
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Nâng cao năng lực lãnh đạo và sức chiến đấu của Đảng, phát huy sức mạnh toàn dân tộc",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 5
+        },
+        {
+          "id": 2,
+          "content": "Nâng cao năng lực lãnh đạo, phát triển công nghiệp hóa - hiện đại hóa đất nước",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 5
+        },
+        {
+          "id": 3,
+          "content": "Phát triển và hội nhập quốc tế",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 5
+        },
+        {
+          "id": 4,
+          "content": "Nâng cao năng lực lãnh đạo và sức chiến đấu của Đảng, phát huy sức mạnh toàn dân tộc, đẩy mạnh toàn diện công cuộc đổi mới sớm đưa nước ta ra khỏi tình trạng kém phát triển",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 5
+        }
+      ]
     },
     {
       "id": 6,
       "questionIndex": 5,
       "content": "Chiến thắng Điện Biên Phủ năm 1954 của quân dân Việt Nam đã:",
-      "explanation": "Kế hoạch Nava là nỗ lực quân sự cao nhất của Pháp - Mỹ. Việc ta đập tan tập đoàn cứ điểm Điện Biên Phủ đã làm phá sản hoàn toàn kế hoạch này, từ đó dẫn đến việc ký kết Hiệp định Giơ-ne-vơ. (Hệ thống ghi nhận B là đáp án trọng tâm).",
+      "explanation": "Chiến thắng Điện Biên Phủ năm 1954 đánh bại tập đoàn cứ điểm mạnh nhất của Pháp và làm phá sản hoàn toàn Kế hoạch Nava, kế hoạch quân sự lớn cuối cùng của đối phương. Thắng lợi quyết định này làm thay đổi tương quan chiến lược, tạo điều kiện trực tiếp để Hội nghị Giơnevơ kết thúc chiến tranh ở Đông Dương.",
       "answers": [
         {
           "id": 1,
           "content": "Đánh dấu mốc thắng lợi của cuộc kháng chiến chống Pháp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 6
         },
         {
           "id": 2,
           "content": "Làm phá sản hoàn toàn kế hoạch Nava của thực dân Pháp",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 6
         },
         {
           "id": 3,
           "content": "Buộc Pháp phải ngồi vào đàm phán tại Giơ-ne-vơ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 6
         },
         {
           "id": 4,
           "content": "Bước đầu làm phá sản kế hoạch Nava của thực dân Pháp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 6
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đánh dấu mốc thắng lợi của cuộc kháng chiến chống Pháp",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 6
+        },
+        {
+          "id": 2,
+          "content": "Làm phá sản hoàn toàn kế hoạch Nava của thực dân Pháp",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 6
+        },
+        {
+          "id": 3,
+          "content": "Buộc Pháp phải ngồi vào đàm phán tại Giơ-ne-vơ",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 6
+        },
+        {
+          "id": 4,
+          "content": "Bước đầu làm phá sản kế hoạch Nava của thực dân Pháp",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 6
+        }
+      ]
     },
     {
       "id": 7,
       "questionIndex": 6,
       "content": "Nhiệm vụ chống giặc dốt sau Cách mạng tháng Tám (1945) thể hiện qua phong trào nào sau đây?",
-      "explanation": "Để giải quyết nạn dốt (hơn 90% dân số mù chữ), Chủ tịch Hồ Chí Minh đã ký sắc lệnh thành lập Nha Bình dân học vụ vào ngày 8/9/1945, phát động phong trào diệt giặc dốt trên toàn quốc.",
+      "explanation": "Phong trào Bình dân học vụ được phát động ngay sau Cách mạng tháng Tám nhằm xóa nạn mù chữ rất nghiêm trọng do chế độ cũ để lại. Hoạt động tổ chức lớp học rộng khắp cho người dân thể hiện rõ nhiệm vụ “chống giặc dốt”, đồng thời xây dựng nền tảng dân trí cho chính quyền cách mạng non trẻ.",
       "answers": [
         {
           "id": 1,
           "content": "Toàn dân đưa trẻ đến trường",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 7
         },
         {
           "id": 2,
           "content": "Toàn dân tham gia xóa nạn mù chữ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 7
         },
         {
           "id": 3,
           "content": "Bình dân học vụ",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 7
         },
         {
           "id": 4,
           "content": "Truyền bá quốc ngữ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 7
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Toàn dân đưa trẻ đến trường",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 7
+        },
+        {
+          "id": 2,
+          "content": "Toàn dân tham gia xóa nạn mù chữ",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 7
+        },
+        {
+          "id": 3,
+          "content": "Bình dân học vụ",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 7
+        },
+        {
+          "id": 4,
+          "content": "Truyền bá quốc ngữ",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 7
+        }
+      ]
     },
     {
       "id": 8,
       "questionIndex": 7,
       "content": "Đâu là một trong những nội dung của Đại hội lần thứ IV của Đảng (12/1976)?",
-      "explanation": "Đại hội IV (1976) đã vạch ra đường lối chung xây dựng CNXH và thông qua phương hướng, nhiệm vụ của Kế hoạch kinh tế - xã hội 5 năm lần thứ hai (1976 - 1980) cho cả nước.",
+      "explanation": "Đại hội IV năm 1976 đề ra Kế hoạch Nhà nước năm năm 1976–1980 trong bối cảnh đất nước vừa thống nhất và bắt đầu xây dựng chủ nghĩa xã hội trên phạm vi cả nước. Kế hoạch đặt mục tiêu khôi phục kinh tế, cải thiện đời sống và xây dựng cơ sở vật chất – kỹ thuật, còn đường lối Đổi mới chỉ xuất hiện tại Đại hội VI.",
       "answers": [
         {
           "id": 1,
           "content": "Kế hoạch nhà nước 5 năm 1976 - 1980",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 8
         },
         {
           "id": 2,
           "content": "Phương hướng đổi mới đất nước",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 8
         },
         {
           "id": 3,
           "content": "Tổng kết 10 năm đổi mới đất nước",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 8
         },
         {
           "id": 4,
           "content": "Hàn gắn vết thương chiến tranh",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 8
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Kế hoạch nhà nước 5 năm 1976 - 1980",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 8
+        },
+        {
+          "id": 2,
+          "content": "Phương hướng đổi mới đất nước",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 8
+        },
+        {
+          "id": 3,
+          "content": "Tổng kết 10 năm đổi mới đất nước",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 8
+        },
+        {
+          "id": 4,
+          "content": "Hàn gắn vết thương chiến tranh",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 8
+        }
+      ]
     },
     {
       "id": 9,
       "questionIndex": 8,
       "content": "Nhận xét nào sau đây là phù hợp về Hội Việt Nam Cách mạng Thanh niên (1925-1929)?",
-      "explanation": "Hội VNCM Thanh niên do Nguyễn Ái Quốc sáng lập là bước quá độ, là tổ chức tiền thân trang bị lý luận Mác - Lênin để tiến tới thành lập Đảng Cộng sản Việt Nam.",
+      "explanation": "Hội Việt Nam Cách mạng Thanh niên do Nguyễn Ái Quốc tổ chức năm 1925 không phải là đảng cộng sản, nhưng đã truyền bá chủ nghĩa Mác–Lênin và đào tạo nhiều cán bộ cách mạng. Từ cơ sở đó, các tổ chức cộng sản ra đời năm 1929 và dẫn tới việc thành lập Đảng năm 1930, nên tổ chức này giữ vai trò tiền thân.",
       "answers": [
         {
           "id": 1,
           "content": "Một trong những tổ chức cộng sản đầu tiên ở Việt Nam",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 9
         },
         {
           "id": 2,
           "content": "Là đội tiên phong của giai cấp công nhân Việt Nam",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 9
         },
         {
           "id": 3,
           "content": "Là tổ chức tiền thân của Đảng Cộng sản Việt Nam",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 9
         },
         {
           "id": 4,
           "content": "Đại diện tiêu biểu của giai cấp tiểu tư sản Việt Nam",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 9
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Một trong những tổ chức cộng sản đầu tiên ở Việt Nam",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 9
+        },
+        {
+          "id": 2,
+          "content": "Là đội tiên phong của giai cấp công nhân Việt Nam",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 9
+        },
+        {
+          "id": 3,
+          "content": "Là tổ chức tiền thân của Đảng Cộng sản Việt Nam",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 9
+        },
+        {
+          "id": 4,
+          "content": "Đại diện tiêu biểu của giai cấp tiểu tư sản Việt Nam",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 9
+        }
+      ]
     },
     {
       "id": 10,
       "questionIndex": 9,
       "content": "Đâu không phải là điều kiện tạo nên thời cơ cách mạng chín muồi của Tổng khởi nghĩa tháng Tám năm 1945 ở Việt Nam?",
-      "explanation": "Sự kiện \"Nhật đảo chính Pháp\" (9/3/1945) là điều kiện tạo ra tiền đề, còn Nhật đầu hàng Đồng minh (8/1945), Đảng và quần chúng sẵn sàng mới là thời cơ chín muồi. Việc lực lượng trung gian ngả hẳn về phía cách mạng là hệ quả của quá trình vận động chứ không phải điều kiện tiên quyết tạo nên thời cơ khách quan. (Dựa theo key hệ thống chọn C).",
+      "explanation": "Thời cơ Tổng khởi nghĩa chín muồi khi Nhật đầu hàng Đồng minh, bộ máy cai trị khủng hoảng và lực lượng cách mạng đã chuẩn bị, sẵn sàng hành động. “Lực lượng trung gian ngả hẳn về phía cách mạng” không phải điều kiện quyết định được xác định trong đánh giá thời cơ, bởi thực tế còn có những lực lượng dao động hoặc chờ đợi.",
       "answers": [
         {
           "id": 1,
           "content": "Phát xít Nhật đảo chính lật đổ Pháp ở Đông Dương",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10
         },
         {
           "id": 2,
           "content": "Đảng và quần群众 nhân dân đã sẵn sàng hành động",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 10
         },
         {
           "id": 3,
           "content": "Lực lượng trung gian đã ngả hẳn về phía cách mạng",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 10
         },
         {
           "id": 4,
           "content": "Phát xít Nhật đầu hàng quân Đồng minh không điều kiện",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 10
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Phát xít Nhật đảo chính lật đổ Pháp ở Đông Dương",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10
+        },
+        {
+          "id": 2,
+          "content": "Đảng và quần群众 nhân dân đã sẵn sàng hành động",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 10
+        },
+        {
+          "id": 3,
+          "content": "Lực lượng trung gian đã ngả hẳn về phía cách mạng",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 10
+        },
+        {
+          "id": 4,
+          "content": "Phát xít Nhật đầu hàng quân Đồng minh không điều kiện",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 10
+        }
+      ]
     },
     {
       "id": 11,
       "questionIndex": 10,
       "content": "Sau đại thắng mùa xuân 1975, đất nước độc lập thống nhất, Chủ tịch nước là:",
-      "explanation": "Bác Tôn Đức Thắng được Quốc hội khóa VI (tháng 7/1976) bầu làm Chủ tịch nước Cộng hòa Xã hội Chủ nghĩa Việt Nam đầu tiên sau khi đất nước thống nhất.",
+      "explanation": "Sau Đại thắng mùa Xuân 1975, Tôn Đức Thắng giữ cương vị Chủ tịch nước, lãnh đạo Nhà nước trong giai đoạn hoàn thành thống nhất về mặt nhà nước. Ông là lãnh tụ có uy tín lớn của cách mạng, đảm nhiệm chức vụ này từ năm 1969 đến năm 1980, nên không thể nhầm với các lãnh đạo Chính phủ hoặc quân sự.",
       "answers": [
         {
           "id": 1,
           "content": "Phạm Hùng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 11
         },
         {
           "id": 2,
           "content": "Tôn Đức Thắng",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 11
         },
         {
           "id": 3,
           "content": "Phạm Văn Đồng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 11
         },
         {
           "id": 4,
           "content": "Nguyễn Văn Linh",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 11
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Phạm Hùng",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 11
+        },
+        {
+          "id": 2,
+          "content": "Tôn Đức Thắng",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 11
+        },
+        {
+          "id": 3,
+          "content": "Phạm Văn Đồng",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 11
+        },
+        {
+          "id": 4,
+          "content": "Nguyễn Văn Linh",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 11
+        }
+      ]
     },
     {
       "id": 12,
       "questionIndex": 11,
       "content": "Tổ chức tổng tuyển cử trên toàn lãnh thổ Việt Nam bầu ra Quốc hội chung cho cả nước vào đầu năm 1976 theo nguyên tắc nào?",
-      "explanation": "Cuộc bầu cử Quốc hội khóa VI (25/4/1976) trên toàn quốc được thực hiện theo đúng các nguyên tắc bầu cử dân chủ cốt lõi: phổ thông, bình đẳng, trực tiếp và bỏ phiếu kín.",
+      "explanation": "Tổng tuyển cử bầu Quốc hội khóa VI đầu năm 1976 được tiến hành theo nguyên tắc dân chủ, phổ thông, bình đẳng, trực tiếp và bỏ phiếu kín. Những nguyên tắc này bảo đảm quyền bầu cử của công dân cả hai miền sau thống nhất, tạo tính chính danh cho cơ quan quyền lực nhà nước chung của cả nước.",
       "answers": [
         {
           "id": 1,
           "content": "Dân chủ, phổ thông, bình đẳng, trực tiếp và bỏ phiếu kín",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 12
         },
         {
           "id": 2,
           "content": "Hoàn thiện thể chế về chính trị và ổn định về kinh tế",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 12
         },
         {
           "id": 3,
           "content": "Hoàn thiện thể chế đảm bảo đồng bộ các yếu tố thị trường...",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 12
         },
         {
           "id": 4,
           "content": "Hoàn thiện thể chế gắn tăng trưởng kinh tế với tiến bộ...",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 12
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Dân chủ, phổ thông, bình đẳng, trực tiếp và bỏ phiếu kín",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 12
+        },
+        {
+          "id": 2,
+          "content": "Hoàn thiện thể chế về chính trị và ổn định về kinh tế",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 12
+        },
+        {
+          "id": 3,
+          "content": "Hoàn thiện thể chế đảm bảo đồng bộ các yếu tố thị trường...",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 12
+        },
+        {
+          "id": 4,
+          "content": "Hoàn thiện thể chế gắn tăng trưởng kinh tế với tiến bộ...",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 12
+        }
+      ]
     },
     {
       "id": 13,
       "questionIndex": 12,
       "content": "Vì sao trong thời kì đổi mới đất nước nhưng vẫn phải tiếp tục xây dựng giai cấp công nhân Việt Nam?",
-      "explanation": "Câu D nêu đầy đủ nhất bản chất chính trị (lãnh đạo thông qua Đảng) và vai trò kinh tế (đại diện phương thức sản xuất tiên tiến, đi đầu CNH-HĐH) của giai cấp công nhân trong bối cảnh Đổi mới.",
+      "explanation": "Giai cấp công nhân vẫn cần được xây dựng trong thời kỳ Đổi mới vì là giai cấp lãnh đạo cách mạng thông qua đội tiên phong là Đảng Cộng sản Việt Nam. Đồng thời, công nhân đại diện cho phương thức sản xuất tiên tiến và phải đi đầu trong công nghiệp hóa, hiện đại hóa, nên vai trò của họ không chỉ là đóng góp lao động mà còn mang ý nghĩa chính trị–xã hội.",
       "answers": [
         {
           "id": 1,
           "content": "Giai cấp công nhân là động lực phát triển kinh tế",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 13
         },
         {
           "id": 2,
           "content": "Giai cấp công nhân đại diện cho phương thức sản xuất hiện đại",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 13
         },
         {
           "id": 3,
           "content": "Giai cấp lãnh đạo cách mạng thông qua đội tiền phong là Đảng Cộng sản Việt Nam...",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 13
         },
         {
           "id": 4,
           "content": "Giai cấp công nhân là giai cấp lãnh đạo cách mạng thông qua đội tiền phong là Đảng Cộng sản Việt Nam, là giai cấp đại diện cho phương thức sản xuất tiên tiến, tiên phong đi đầu trong sự nghiệp công nghiệp hóa - hiện đại hóa đất nước",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 13
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Giai cấp công nhân là động lực phát triển kinh tế",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 13
+        },
+        {
+          "id": 2,
+          "content": "Giai cấp công nhân đại diện cho phương thức sản xuất hiện đại",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 13
+        },
+        {
+          "id": 3,
+          "content": "Giai cấp lãnh đạo cách mạng thông qua đội tiền phong là Đảng Cộng sản Việt Nam...",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 13
+        },
+        {
+          "id": 4,
+          "content": "Giai cấp công nhân là giai cấp lãnh đạo cách mạng thông qua đội tiền phong là Đảng Cộng sản Việt Nam, là giai cấp đại diện cho phương thức sản xuất tiên tiến, tiên phong đi đầu trong sự nghiệp công nghiệp hóa - hiện đại hóa đất nước",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 13
+        }
+      ]
     },
     {
       "id": 14,
       "questionIndex": 13,
       "content": "Đâu là nhiệm vụ của cách mạng miền Bắc ngay sau khi Hiệp định Giơ-ne-vơ năm 1954 về Đông Dương được ký kết?",
-      "explanation": "Bước ra khỏi 9 năm kháng chiến chống Pháp, nền kinh tế miền Bắc bị tàn phá nặng nề. Do đó, nhiệm vụ cấp bách đầu tiên ngay sau 1954 là hàn gắn vết thương chiến tranh và khôi phục kinh tế trước khi tiến lên CNXH.",
+      "explanation": "Ngay sau Hiệp định Giơnevơ năm 1954, miền Bắc phải khắc phục hậu quả chiến tranh, ổn định đời sống và phục hồi sản xuất sau nhiều năm kháng chiến. Hàn gắn vết thương chiến tranh và khôi phục kinh tế là nhiệm vụ trước mắt, tạo tiền đề để miền Bắc từng bước cải tạo xã hội chủ nghĩa và xây dựng cơ sở vật chất về sau.",
       "answers": [
         {
           "id": 1,
           "content": "Đấu tranh chống đế quốc Mỹ và chính quyền Ngô Đình Diệm",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 14
         },
         {
           "id": 2,
           "content": "Xây dựng cơ sở vật chất kỹ thuật cho chủ nghĩa xã hội",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 14
         },
         {
           "id": 3,
           "content": "Hoàn thành cuộc cách mạng dân tộc dân chủ nhân dân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 14
         },
         {
           "id": 4,
           "content": "Hàn gắn vết thương chiến tranh, khôi phục kinh tế",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 14
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đấu tranh chống đế quốc Mỹ và chính quyền Ngô Đình Diệm",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 14
+        },
+        {
+          "id": 2,
+          "content": "Xây dựng cơ sở vật chất kỹ thuật cho chủ nghĩa xã hội",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 14
+        },
+        {
+          "id": 3,
+          "content": "Hoàn thành cuộc cách mạng dân tộc dân chủ nhân dân",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 14
+        },
+        {
+          "id": 4,
+          "content": "Hàn gắn vết thương chiến tranh, khôi phục kinh tế",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 14
+        }
+      ]
     },
     {
       "id": 15,
       "questionIndex": 14,
       "content": "Ta đã nhân nhượng với quân Trung Hoa Dân quốc như thế nào?",
-      "explanation": "Để tránh đối đầu quân sự, chính quyền ta đã mềm dẻo nhân nhượng kinh tế: cho lưu hành tiền Quan kim, Quốc tệ (tiền mất giá của Tưởng) và cung cấp một phần lương thực cho 20 vạn quân Tưởng. Ta kiên quyết không nhân nhượng các vấn đề vi phạm chủ quyền cốt lõi.",
+      "explanation": "Trong tình thế quân Trung Hoa Dân quốc, thường gọi là quân Tưởng, vào miền Bắc sau năm 1945, Chính phủ Việt Nam chủ trương nhân nhượng có nguyên tắc để tránh xung đột bất lợi. Việc chấp nhận lưu hành tiền Trung Quốc và cung cấp một phần lương thực, thực phẩm là sách lược tạm thời nhằm bảo vệ chính quyền cách mạng và tập trung xử lý nguy cơ lớn hơn.",
       "answers": [
         {
           "id": 1,
           "content": "Chấp nhận mọi yêu cầu cải tổ Chính phủ...",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 15
         },
         {
           "id": 2,
           "content": "Chấp nhận tiêu tiền Trung Quốc, cung cấp một phần lương thực, thực phẩm cho quân Tưởng",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 15
         },
         {
           "id": 3,
           "content": "Chấp nhận tất cả mọi yêu cầu đảm bảo trật tự trị an...",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 15
         },
         {
           "id": 4,
           "content": "Chấp nhận cung cấp toàn bộ lương thực thực phẩm cho quân Tưởng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 15
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Chấp nhận mọi yêu cầu cải tổ Chính phủ...",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 15
+        },
+        {
+          "id": 2,
+          "content": "Chấp nhận tiêu tiền Trung Quốc, cung cấp một phần lương thực, thực phẩm cho quân Tưởng",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 15
+        },
+        {
+          "id": 3,
+          "content": "Chấp nhận tất cả mọi yêu cầu đảm bảo trật tự trị an...",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 15
+        },
+        {
+          "id": 4,
+          "content": "Chấp nhận cung cấp toàn bộ lương thực thực phẩm cho quân Tưởng",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 15
+        }
+      ]
     },
     {
       "id": 16,
       "questionIndex": 15,
       "content": "Tác phẩm \"Kháng chiến nhất định thắng lợi\" là của ai?",
-      "explanation": "Xuất bản tháng 8/1947, tác phẩm \"Kháng chiến nhất định thắng lợi\" của đồng chí Tổng Bí thư Trường Chinh là văn kiện quan trọng giải thích rõ đường lối kháng chiến toàn dân, toàn diện, trường kỳ và tự lực cánh sinh của Đảng.",
+      "explanation": "“Kháng chiến nhất định thắng lợi” do Trường Chinh viết năm 1947, giải thích cơ sở chính nghĩa và triển vọng của cuộc kháng chiến chống Pháp. Tác phẩm hệ thống hóa phương châm toàn dân, toàn diện, trường kỳ, tự lực cánh sinh, nên có giá trị định hướng tư tưởng trong giai đoạn đầu toàn quốc kháng chiến.",
       "answers": [
         {
           "id": 1,
           "content": "Trường Chinh",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 16
         },
         {
           "id": 2,
           "content": "Võ Nguyên Giáp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 16
         },
         {
           "id": 3,
           "content": "Hồ Chí Minh",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 16
         },
         {
           "id": 4,
           "content": "Trần Phú",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 16
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Trường Chinh",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 16
+        },
+        {
+          "id": 2,
+          "content": "Võ Nguyên Giáp",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 16
+        },
+        {
+          "id": 3,
+          "content": "Hồ Chí Minh",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 16
+        },
+        {
+          "id": 4,
+          "content": "Trần Phú",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 16
+        }
+      ]
     },
     {
       "id": 17,
       "questionIndex": 16,
       "content": "Trong đường lối Chiến lược phát triển kinh tế - xã hội 2011-2020 Đảng ta chú trọng phát triển vấn đề nào sau đây?",
-      "explanation": "Trong Chiến lược 2011-2020, Đảng xác định 3 khâu đột phá chiến lược, trong đó \"phát triển nhanh nguồn nhân lực, nhất là nguồn nhân lực chất lượng cao\" (gắn với phát triển khoa học công nghệ) là một khâu then chốt.",
+      "explanation": "Chiến lược phát triển kinh tế – xã hội 2011–2020 coi phát triển nhanh nguồn nhân lực, đặc biệt nguồn nhân lực chất lượng cao, là một đột phá chiến lược. Nhân lực có trình độ quyết định khả năng tiếp thu công nghệ, đổi mới sáng tạo và nâng năng suất, vì vậy không thể chỉ chú trọng mở rộng quy mô đầu tư hay phát triển một ngành riêng lẻ.",
       "answers": [
         {
           "id": 1,
           "content": "Phát triển công nghiệp hóa xã hội chủ nghĩa...",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 17
         },
         {
           "id": 2,
           "content": "Phát triển công nghiệp hóa hiện đại hóa nông nghiệp nông thôn",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 17
         },
         {
           "id": 3,
           "content": "Đẩy mạnh công nghiệp hóa xã hội chủ nghĩa...",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 17
         },
         {
           "id": 4,
           "content": "Phát triển nhanh nguồn nhân lực, nhất là nguồn nhân lực chất lượng cao",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 17
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Phát triển công nghiệp hóa xã hội chủ nghĩa...",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 17
+        },
+        {
+          "id": 2,
+          "content": "Phát triển công nghiệp hóa hiện đại hóa nông nghiệp nông thôn",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 17
+        },
+        {
+          "id": 3,
+          "content": "Đẩy mạnh công nghiệp hóa xã hội chủ nghĩa...",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 17
+        },
+        {
+          "id": 4,
+          "content": "Phát triển nhanh nguồn nhân lực, nhất là nguồn nhân lực chất lượng cao",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 17
+        }
+      ]
     },
     {
       "id": 18,
       "questionIndex": 17,
       "content": "Công nghiệp hóa - hiện đại hóa đất nước là sự nghiệp của:",
-      "explanation": "Quan điểm nhất quán của Đảng ta là CNH-HĐH là sự nghiệp của toàn dân, của mọi thành phần kinh tế, trong đó lực lượng nòng cốt là giai cấp công nhân.",
+      "explanation": "Công nghiệp hóa, hiện đại hóa cần sự tham gia của mọi chủ thể xã hội: Nhà nước kiến tạo chính sách, doanh nghiệp đầu tư sản xuất, người lao động nâng kỹ năng và nhân dân giám sát, hưởng thành quả. Vì là quá trình chuyển đổi toàn diện cơ cấu kinh tế – xã hội, đây được xác định là sự nghiệp của toàn dân chứ không phải nhiệm vụ riêng của một cơ quan.",
       "answers": [
         {
           "id": 1,
           "content": "Toàn dân",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 18
         },
         {
           "id": 2,
           "content": "Đảng Cộng sản Việt Nam",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 18
         },
         {
           "id": 3,
           "content": "Cơ quan quản lý nhà nước về văn hóa",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 18
         },
         {
           "id": 4,
           "content": "Nhà nước Việt Nam",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 18
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Toàn dân",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 18
+        },
+        {
+          "id": 2,
+          "content": "Đảng Cộng sản Việt Nam",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 18
+        },
+        {
+          "id": 3,
+          "content": "Cơ quan quản lý nhà nước về văn hóa",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 18
+        },
+        {
+          "id": 4,
+          "content": "Nhà nước Việt Nam",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 18
+        }
+      ]
     },
     {
       "id": 19,
       "questionIndex": 18,
       "content": "Hội nghị Trung ương VI khóa VI (tháng 3 năm 1989) lần đầu tiên đưa ra thuật ngữ gì?",
-      "explanation": "Tại Hội nghị này, Đảng ta chính thức sử dụng thuật ngữ \"Hệ thống chính trị\" để thay thế cho khái niệm \"Hệ thống chuyên chính vô sản\" trước đây, thể hiện bước tiến về tư duy dân chủ.",
+      "explanation": "Hội nghị Trung ương VI khóa VI tháng 3/1989 lần đầu sử dụng thuật ngữ “hệ thống chính trị” để thay cho cách gọi hệ thống chuyên chính vô sản. Sự thay đổi phản ánh tư duy đổi mới về quan hệ giữa Đảng, Nhà nước, Mặt trận và các đoàn thể, phù hợp yêu cầu mở rộng dân chủ và đổi mới tổ chức trong thời kỳ Đổi mới.",
       "answers": [
         {
           "id": 1,
           "content": "Kinh tế thị trường định hướng xã hội chủ nghĩa",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 19
         },
         {
           "id": 2,
           "content": "Hệ thống chính trị",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 19
         },
         {
           "id": 3,
           "content": "Nhà nước pháp quyền xã hội chủ nghĩa",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 19
         },
         {
           "id": 4,
           "content": "Đảng lãnh đạo, nhà nước quản lý, nhân dân làm chủ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 19
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Kinh tế thị trường định hướng xã hội chủ nghĩa",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 19
+        },
+        {
+          "id": 2,
+          "content": "Hệ thống chính trị",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 19
+        },
+        {
+          "id": 3,
+          "content": "Nhà nước pháp quyền xã hội chủ nghĩa",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 19
+        },
+        {
+          "id": 4,
+          "content": "Đảng lãnh đạo, nhà nước quản lý, nhân dân làm chủ",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 19
+        }
+      ]
     },
     {
       "id": 20,
       "questionIndex": 19,
       "content": "Cách mạng tháng Mười Nga thành công (1917) và Quốc tế Cộng sản ra đời (1919) có ý nghĩa:",
-      "explanation": "Sự thành công của Cách mạng tháng Mười Nga và sự ra đời của Quốc tế Cộng sản đã mở ra một thời đại mới, soi đường và cổ vũ mạnh mẽ cho phong trào đấu tranh giải phóng dân tộc tại các nước thuộc địa, trong đó có Việt Nam.",
+      "explanation": "Cách mạng Tháng Mười Nga và sự ra đời của Quốc tế Cộng sản mở ra thời đại mới, cổ vũ mạnh mẽ các dân tộc bị áp bức tự quyết vận mệnh. Đối với thuộc địa, những sự kiện này chỉ ra khả năng gắn cuộc đấu tranh độc lập với phong trào cách mạng thế giới, thúc đẩy phong trào giải phóng dân tộc phát triển rộng khắp.",
       "answers": [
         {
           "id": 1,
           "content": "Đánh dấu sự thành công của cách mạng vô sản trên thế giới",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 20
         },
         {
           "id": 2,
           "content": "Thúc đẩy phong trào đấu tranh của giai cấp công nhân ở các nước đế quốc",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 20
         },
         {
           "id": 3,
           "content": "Thúc đẩy cuộc đấu tranh giai cấp ở các nước thuộc địa, phụ thuộc",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 20
         },
         {
           "id": 4,
           "content": "Thúc đẩy phong trào đấu tranh giải phóng dân tộc ở các nước thuộc địa, phụ thuộc",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 20
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đánh dấu sự thành công của cách mạng vô sản trên thế giới",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 20
+        },
+        {
+          "id": 2,
+          "content": "Thúc đẩy phong trào đấu tranh của giai cấp công nhân ở các nước đế quốc",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 20
+        },
+        {
+          "id": 3,
+          "content": "Thúc đẩy cuộc đấu tranh giai cấp ở các nước thuộc địa, phụ thuộc",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 20
+        },
+        {
+          "id": 4,
+          "content": "Thúc đẩy phong trào đấu tranh giải phóng dân tộc ở các nước thuộc địa, phụ thuộc",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 20
+        }
+      ]
     },
     {
       "id": 21,
       "questionIndex": 20,
       "content": "Âm mưu của Mỹ trong chiến lược chiến tranh đặc biệt là:",
-      "explanation": "\"Chiến tranh đặc biệt\" (1961-1965) được thực hiện bằng quân đội Sài Gòn (người Việt) dưới sự chỉ huy của cố vấn Mỹ, trang bị vũ khí Mỹ, nhằm mục đích thâm độc là \"Dùng người Việt đánh người Việt\".",
+      "explanation": "Trong chiến lược chiến tranh đặc biệt, Mỹ sử dụng quân đội Sài Gòn làm lực lượng tác chiến chủ yếu, còn cố vấn và viện trợ Mỹ giữ vai trò chỉ huy, trang bị. Cách tiến hành này được khái quát là “dùng người Việt đánh người Việt”, nhằm giảm tổn thất trực tiếp của quân Mỹ nhưng vẫn duy trì sự chi phối của Mỹ ở miền Nam.",
       "answers": [
         {
           "id": 1,
           "content": "Dùng người Việt đánh người Việt",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 21
         },
         {
           "id": 2,
           "content": "Dùng người Mỹ đánh người Việt",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 21
         },
         {
           "id": 3,
           "content": "Dùng người Đông Dương đánh người Đông Dương",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 21
         },
         {
           "id": 4,
           "content": "Dùng người Việt đánh người Việt và dùng người Đông Dương đánh người",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 21
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Dùng người Việt đánh người Việt",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 21
+        },
+        {
+          "id": 2,
+          "content": "Dùng người Mỹ đánh người Việt",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 21
+        },
+        {
+          "id": 3,
+          "content": "Dùng người Đông Dương đánh người Đông Dương",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 21
+        },
+        {
+          "id": 4,
+          "content": "Dùng người Việt đánh người Việt và dùng người Đông Dương đánh người",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 21
+        }
+      ]
     },
     {
       "id": 22,
       "questionIndex": 21,
       "content": "Điểm khác nhau giữa Luận cương chính trị tháng 10/1930 với Cương lĩnh chính trị đầu tiên (2/1930) của Đảng là:",
-      "explanation": "Cương lĩnh 2/1930 chủ trương tập hợp rộng rãi cả tiểu tư sản, trí thức, tư sản dân tộc và trung, tiểu địa chủ. Trong khi đó, Luận cương 10/1930 bị hạn chế khi chỉ đánh giá cao công nhân và nông dân, gạt bỏ các giai tầng khác ra khỏi động lực cách mạng.",
+      "explanation": "Cương lĩnh đầu năm 1930 có sách lược tập hợp lực lượng linh hoạt, chủ trương liên lạc với tiểu tư sản, trí thức, trung nông và lợi dụng hoặc trung lập hóa những lực lượng còn có thể tranh thủ. Luận cương tháng 10/1930 nhấn mạnh công–nông, đánh giá hẹp hơn các lực lượng khác, nên khác biệt cơ bản nằm ở đường lối tập hợp lực lượng trong nước.",
       "answers": [
         {
           "id": 1,
           "content": "Đường lối quốc tế của cách mạng giải phóng dân tộc",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 22
         },
         {
           "id": 2,
           "content": "Đường lối tập hợp lực lượng bên trong của cách mạng",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 22
         },
         {
           "id": 3,
           "content": "Phương pháp tiến hành cách mạng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 22
         },
         {
           "id": 4,
           "content": "Không có điểm khác nhau giữa 2 văn kiện",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 22
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đường lối quốc tế của cách mạng giải phóng dân tộc",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 22
+        },
+        {
+          "id": 2,
+          "content": "Đường lối tập hợp lực lượng bên trong của cách mạng",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 22
+        },
+        {
+          "id": 3,
+          "content": "Phương pháp tiến hành cách mạng",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 22
+        },
+        {
+          "id": 4,
+          "content": "Không có điểm khác nhau giữa 2 văn kiện",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 22
+        }
+      ]
     },
     {
       "id": 23,
       "questionIndex": 22,
       "content": "Chiến tranh thế giới thứ II nổ ra vào thời gian nào?",
-      "explanation": "Chiến tranh thế giới thứ hai chính thức bùng nổ vào ngày 1/9/1939 khi Đức tấn công Ba Lan.",
+      "explanation": "Chiến tranh thế giới thứ hai bắt đầu tháng 9/1939 khi phát xít Đức tiến công Ba Lan, kéo theo Anh và Pháp tuyên chiến. Cuộc chiến làm tình hình quốc tế thay đổi sâu sắc, tác động trực tiếp đến Đông Dương và là tiền đề để Đảng chuyển hướng chiến lược, đặt nhiệm vụ giải phóng dân tộc lên hàng đầu.",
       "answers": [
         {
           "id": 1,
           "content": "1937",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 23
         },
         {
           "id": 2,
           "content": "1938",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 23
         },
         {
           "id": 3,
           "content": "1939",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 23
         },
         {
           "id": 4,
           "content": "1940",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 23
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "1937",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 23
+        },
+        {
+          "id": 2,
+          "content": "1938",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 23
+        },
+        {
+          "id": 3,
+          "content": "1939",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 23
+        },
+        {
+          "id": 4,
+          "content": "1940",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 23
+        }
+      ]
     },
     {
       "id": 24,
       "questionIndex": 23,
       "content": "Đại hội Đảng lần thứ VIII họp tại Hà Nội từ ngày 28/6 - 1/7/1996 diễn ra trong bối cảnh nào?",
-      "explanation": "Những năm 1990 chứng kiến sự sụp đổ của Liên Xô và Đông Âu (CNXH lâm vào thoái trào), đồng thời là giai đoạn cuộc cách mạng khoa học công nghệ thế giới bứt phá. Đây là bối cảnh quốc tế nổi bật của Đại hội VIII.",
+      "explanation": "Đại hội VIII năm 1996 diễn ra khi cách mạng khoa học và công nghệ phát triển nhanh, kéo theo xu thế toàn cầu hóa và cạnh tranh kinh tế gay gắt. Đồng thời, chủ nghĩa xã hội hiện thực lâm vào thoái trào sau biến động ở Liên Xô và Đông Âu, đòi hỏi Việt Nam tiếp tục Đổi mới với tư duy thận trọng, độc lập.",
       "answers": [
         {
           "id": 1,
           "content": "Cách mạng khoa học và công nghệ phát triển với trình độ cao, chủ nghĩa xã hội hiện thực lâm vào thoái trào",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 24
         },
         {
           "id": 2,
           "content": "Thời kỳ quá độ lên chủ nghĩa xã hội đạt nhiều thành tựu to lớn",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 24
         },
         {
           "id": 3,
           "content": "Cách mạng khoa học và công nghệ phát triển với trình độ cao",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 24
         },
         {
           "id": 4,
           "content": "Phong trào giải phóng dân tộc phát triển mạnh",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 24
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Cách mạng khoa học và công nghệ phát triển với trình độ cao, chủ nghĩa xã hội hiện thực lâm vào thoái trào",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 24
+        },
+        {
+          "id": 2,
+          "content": "Thời kỳ quá độ lên chủ nghĩa xã hội đạt nhiều thành tựu to lớn",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 24
+        },
+        {
+          "id": 3,
+          "content": "Cách mạng khoa học và công nghệ phát triển với trình độ cao",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 24
+        },
+        {
+          "id": 4,
+          "content": "Phong trào giải phóng dân tộc phát triển mạnh",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 24
+        }
+      ]
     },
     {
       "id": 25,
       "questionIndex": 24,
       "content": "Từ tháng 9-1945 đến trước tháng 3-1946 ta chủ trương:",
-      "explanation": "Giai đoạn này ta chủ trương \"Hòa Tưởng đánh Pháp\": nhân nhượng có nguyên tắc với 20 vạn quân Tưởng ở miền Bắc để tập trung lực lượng đánh Pháp đang xâm lược ở miền Nam.",
+      "explanation": "Từ tháng 9/1945 đến trước tháng 3/1946, Chính phủ Việt Nam thực hiện sách lược hòa với quân Tưởng để tránh tình thế phải đối đầu cùng lúc nhiều lực lượng. Nhân nhượng có nguyên tắc giúp bảo vệ chính quyền non trẻ, tranh thủ thời gian tổ chức lực lượng trước khi chuyển sang hòa hoãn với Pháp sau Hiệp định Hoa–Pháp.",
       "answers": [
         {
           "id": 1,
           "content": "Hòa với Tưởng",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 25
         },
         {
           "id": 2,
           "content": "Hòa với Pháp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 25
         },
         {
           "id": 3,
           "content": "Đánh Tưởng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 25
         },
         {
           "id": 4,
           "content": "Đánh Pháp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 25
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Hòa với Tưởng",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 25
+        },
+        {
+          "id": 2,
+          "content": "Hòa với Pháp",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 25
+        },
+        {
+          "id": 3,
+          "content": "Đánh Tưởng",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 25
+        },
+        {
+          "id": 4,
+          "content": "Đánh Pháp",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 25
+        }
+      ]
     },
     {
       "id": 26,
       "questionIndex": 25,
       "content": "Hội nghị Trung ương VIII khóa IX tháng 7/2003 đã ban hành:",
-      "explanation": "Đây là Nghị quyết cực kỳ quan trọng về an ninh quốc phòng, đánh giá đúng tình hình quốc tế để ban hành \"Chiến lược bảo vệ Tổ quốc trong tình hình mới\".",
+      "explanation": "Hội nghị Trung ương VIII khóa IX tháng 7/2003 ban hành Nghị quyết về Chiến lược bảo vệ Tổ quốc trong tình hình mới. Văn kiện đặt bảo vệ độc lập, chủ quyền, thống nhất và toàn vẹn lãnh thổ trong mối liên hệ với quốc phòng, an ninh, đối ngoại và phát triển, nên không phải chiến lược đơn ngành về xuất khẩu hay y tế.",
       "answers": [
         {
           "id": 1,
           "content": "Chiến lược bảo vệ Tổ quốc trong tình hình mới",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 26
         },
         {
           "id": 2,
           "content": "Chiến lược phát triển giáo dục, y tế",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 26
         },
         {
           "id": 3,
           "content": "Chiến lược mở rộng xuất khẩu",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 26
         },
         {
           "id": 4,
           "content": "Chiến lược thu hút nguồn vốn",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 26
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Chiến lược bảo vệ Tổ quốc trong tình hình mới",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 26
+        },
+        {
+          "id": 2,
+          "content": "Chiến lược phát triển giáo dục, y tế",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 26
+        },
+        {
+          "id": 3,
+          "content": "Chiến lược mở rộng xuất khẩu",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 26
+        },
+        {
+          "id": 4,
+          "content": "Chiến lược thu hút nguồn vốn",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 26
+        }
+      ]
     },
     {
       "id": 27,
       "questionIndex": 26,
       "content": "Sau năm 1975, Việt Nam bước vào thời kỳ nào?",
-      "explanation": "Sự kiện 1975 kết thúc cách mạng dân tộc dân chủ nhân dân trên cả nước, mở ra kỷ nguyên mới: Đất nước độc lập, thống nhất và cả nước cùng bước vào thời kỳ quá độ lên chủ nghĩa xã hội.",
+      "explanation": "Sau năm 1975, Việt Nam hoàn toàn hòa bình, độc lập và thống nhất, từ đó cả nước cùng bước vào thời kỳ quá độ lên chủ nghĩa xã hội. Đây là bước chuyển căn bản về phạm vi và nhiệm vụ cách mạng: không còn chia cắt hai miền mà phải tổ chức xây dựng, bảo vệ đất nước trong một thể chế và chiến lược chung.",
       "answers": [
         {
           "id": 1,
           "content": "Kinh tế thị trường xã hội chủ nghĩa",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 27
         },
         {
           "id": 2,
           "content": "Đất nước ta đã hòa bình, độc lập thống nhất, cả nước quá độ lên chủ nghĩa xã hội",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 27
         },
         {
           "id": 3,
           "content": "Xây dựng xã hội chủ nghĩa",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 27
         },
         {
           "id": 4,
           "content": "Công nghiệp hóa, hiện đại hóa",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 27
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Kinh tế thị trường xã hội chủ nghĩa",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 27
+        },
+        {
+          "id": 2,
+          "content": "Đất nước ta đã hòa bình, độc lập thống nhất, cả nước quá độ lên chủ nghĩa xã hội",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 27
+        },
+        {
+          "id": 3,
+          "content": "Xây dựng xã hội chủ nghĩa",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 27
+        },
+        {
+          "id": 4,
+          "content": "Công nghiệp hóa, hiện đại hóa",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 27
+        }
+      ]
     },
     {
       "id": 28,
       "questionIndex": 27,
       "content": "Hội nghị Trung ương VIII tháng 5/1941 đề ra chủ trương gì?",
-      "explanation": "Hội nghị Trung ương 8 (5/1941) chủ trương sau khi đánh đuổi Pháp - Nhật sẽ thành lập một chính phủ nhân dân của nước Việt Nam Dân chủ Cộng hòa.",
+      "explanation": "Hội nghị Trung ương VIII tháng 5/1941 chủ trương sau khi giành được độc lập sẽ thành lập nước Việt Nam Dân chủ Cộng hòa. Quyết định thể hiện sự điều chỉnh sáng tạo về hình thức chính quyền phù hợp nhiệm vụ dân tộc, nhằm quy tụ lực lượng toàn dân trong mặt trận cứu nước thay vì đặt mô hình giai cấp hẹp làm mục tiêu trước mắt.",
       "answers": [
         {
           "id": 1,
           "content": "Thành lập nước Cộng hòa xã hội chủ nghĩa Việt Nam",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 28
         },
         {
           "id": 2,
           "content": "Thành lập nước Việt Nam cộng hòa dân chủ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 28
         },
         {
           "id": 3,
           "content": "Thành lập nước dân chủ cộng hòa Việt Nam",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 28
         },
         {
           "id": 4,
           "content": "Thành lập Nước Việt Nam Dân chủ Cộng hòa",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 28
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Thành lập nước Cộng hòa xã hội chủ nghĩa Việt Nam",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 28
+        },
+        {
+          "id": 2,
+          "content": "Thành lập nước Việt Nam cộng hòa dân chủ",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 28
+        },
+        {
+          "id": 3,
+          "content": "Thành lập nước dân chủ cộng hòa Việt Nam",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 28
+        },
+        {
+          "id": 4,
+          "content": "Thành lập Nước Việt Nam Dân chủ Cộng hòa",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 28
+        }
+      ]
     },
     {
       "id": 29,
       "questionIndex": 28,
       "content": "Đại hội nào sau đây được đánh dấu là \"Đại hội kháng chiến thắng lợi\"?",
-      "explanation": "Đại hội Đảng lần thứ II (2/1951) diễn ra giữa lúc cuộc kháng chiến chống Pháp đang ở giai đoạn quyết liệt. Đại hội đã đề ra đường lối đúng đắn để đưa cuộc kháng chiến đến thắng lợi hoàn toàn, nên được gọi là \"Đại hội kháng chiến thắng lợi\".",
+      "explanation": "Đại hội II năm 1951 diễn ra trong kháng chiến chống Pháp và đánh giá đúng xu thế phát triển của cuộc chiến, nên thường được gọi là Đại hội kháng chiến thắng lợi. Đại hội củng cố tổ chức lãnh đạo, thông qua Chính cương của Đảng Lao động Việt Nam và đề ra đường lối đưa kháng chiến đến thắng lợi hoàn toàn.",
       "answers": [
         {
           "id": 1,
           "content": "Hội nghị thành lập Đảng 1930",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 29
         },
         {
           "id": 2,
           "content": "Đại hội Quốc dân ở Tân Trào 1945",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 29
         },
         {
           "id": 3,
           "content": "Đại hội lần thứ II của Đảng 1951",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 29
         },
         {
           "id": 4,
           "content": "Đại hội Đại biểu lần thứ III của Đảng 1960",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 29
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Hội nghị thành lập Đảng 1930",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 29
+        },
+        {
+          "id": 2,
+          "content": "Đại hội Quốc dân ở Tân Trào 1945",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 29
+        },
+        {
+          "id": 3,
+          "content": "Đại hội lần thứ II của Đảng 1951",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 29
+        },
+        {
+          "id": 4,
+          "content": "Đại hội Đại biểu lần thứ III của Đảng 1960",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 29
+        }
+      ]
     },
     {
       "id": 30,
       "questionIndex": 29,
       "content": "Cương lĩnh đầu tiên của Đảng đã xác định mục tiêu chiến lược của cách mạng Việt Nam là gì?",
-      "explanation": "Theo đáp án được hệ thống công nhận, mục tiêu chiến lược được làm rõ là tiến hành cách mạng tư sản dân quyền, lập chính quyền công nông (Xô viết) làm tiền đề tiến lên Chủ nghĩa xã hội. (Lưu ý: Nguyên văn Cương lĩnh 2/1930 là đáp án C, nhưng hệ thống test chọn D là sự diễn giải mục tiêu chiến lược giai đoạn 1930).",
+      "explanation": "Chánh cương vắn tắt năm 1930 xác định phương hướng chiến lược là làm tư sản dân quyền cách mạng và thổ địa cách mạng để đi tới xã hội cộng sản. Nội dung về lập chính quyền công–nông theo hình thức Xô viết thuộc cách diễn đạt của Luận cương tháng 10/1930; vì vậy mục tiêu trong Cương lĩnh đầu tiên phải được nhận diện theo công thức gắn dân quyền, thổ địa và xã hội cộng sản.",
       "answers": [
         {
           "id": 1,
           "content": "Xây dựng một nước Việt Nam dân giàu, nước mạnh, dân chủ, công bằng, văn minh",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 30
         },
         {
           "id": 2,
           "content": "Xây dựng một nước Việt Nam dân giàu mạnh",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 30
         },
         {
           "id": 3,
           "content": "Làm tư sản dân quyền cách mạng và thổ địa cách mạng để đi tới xã hội cộng sản",
-          "isCorrect": false
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 30
         },
         {
           "id": 4,
           "content": "Cách mạng tư sản dân quyền, lập chính quyền của công nông bằng hình thức Xô viết, để dự bị điều kiện đi tới cách mạng xã hội chủ nghĩa",
-          "isCorrect": true
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 30
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Xây dựng một nước Việt Nam dân giàu, nước mạnh, dân chủ, công bằng, văn minh",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 30
+        },
+        {
+          "id": 2,
+          "content": "Xây dựng một nước Việt Nam dân giàu mạnh",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 30
+        },
+        {
+          "id": 3,
+          "content": "Làm tư sản dân quyền cách mạng và thổ địa cách mạng để đi tới xã hội cộng sản",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 30
+        },
+        {
+          "id": 4,
+          "content": "Cách mạng tư sản dân quyền, lập chính quyền của công nông bằng hình thức Xô viết, để dự bị điều kiện đi tới cách mạng xã hội chủ nghĩa",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 30
+        }
+      ]
     },
     {
       "id": 31,
       "questionIndex": 30,
       "content": "Kế hoạch quân sự được xem là lớn nhất trong quá trình xâm lược Việt Nam của Pháp từ 1945-1954?",
-      "explanation": "Ra đời năm 1953 với sự viện trợ khổng lồ của Mỹ, Kế hoạch Nava là nỗ lực quân sự toàn diện và có quy mô lớn nhất của thực dân Pháp nhằm xoay chuyển cục diện chiến tranh trong vòng 18 tháng, nhưng cuối cùng bị đập tan tại Điện Biên Phủ.",
+      "explanation": "Kế hoạch Nava được Pháp và Mỹ xây dựng năm 1953 như nỗ lực quân sự quy mô lớn cuối cùng nhằm “kết thúc chiến tranh trong danh dự” ở Đông Dương. Kế hoạch tập trung lực lượng cơ động và lập các tập đoàn cứ điểm, nhưng bị quân dân Việt Nam làm phá sản bằng các chiến dịch Đông–Xuân và Điện Biên Phủ.",
       "answers": [
         {
           "id": 1,
           "content": "Kế hoạch Rơve",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 31
         },
         {
           "id": 2,
           "content": "Kế hoạch Nava",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 31
         },
         {
           "id": 3,
           "content": "Kế hoạch \"đánh nhanh thắng nhanh\"",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 31
         },
         {
           "id": 4,
           "content": "Kế hoạch Đờ Lát đờ Tátxinhi",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 31
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Kế hoạch Rơve",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 31
+        },
+        {
+          "id": 2,
+          "content": "Kế hoạch Nava",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 31
+        },
+        {
+          "id": 3,
+          "content": "Kế hoạch \"đánh nhanh thắng nhanh\"",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 31
+        },
+        {
+          "id": 4,
+          "content": "Kế hoạch Đờ Lát đờ Tátxinhi",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 31
+        }
+      ]
     },
     {
       "id": 32,
       "questionIndex": 31,
       "content": "Tác hại nào do cơ chế quản lý kinh tế tập trung, quan liêu, bao cấp để lại vẫn còn tồn tại đến ngày nay và rất khó xóa bỏ?",
-      "explanation": "Cơ chế bao cấp sinh ra tâm lý ỷ lại, cửa quyền, xin - cho và nhiều thói quen quan liêu, tham nhũng vặt. Những \"hiện tượng tiêu cực\" về mặt tư tưởng và lề lối làm việc này ăn sâu vào xã hội và rất khó xóa bỏ triệt để ngay lập tức.",
+      "explanation": "Cơ chế tập trung quan liêu, bao cấp không chỉ làm giảm động lực, năng suất và hiệu quả sản xuất mà còn sản sinh những biểu hiện tiêu cực như cửa quyền, tham ô, xin–cho và ỷ lại. Những thói quen, cơ chế hành vi này có thể kéo dài trong đời sống xã hội ngay cả khi đã Đổi mới, nên là hậu quả khó xóa bỏ hơn các chỉ tiêu kinh tế thuần túy.",
       "answers": [
         {
           "id": 1,
           "content": "Không tạo được động lực phát triển",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 32
         },
         {
           "id": 2,
           "content": "Không thúc đẩy sản xuất phát triển",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 32
         },
         {
           "id": 3,
           "content": "Làm giảm năng suất, chất lượng, hiệu quả",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 32
         },
         {
           "id": 4,
           "content": "Nhiều hiện tượng tiêu cực trong xã hội",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 32
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Không tạo được động lực phát triển",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 32
+        },
+        {
+          "id": 2,
+          "content": "Không thúc đẩy sản xuất phát triển",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 32
+        },
+        {
+          "id": 3,
+          "content": "Làm giảm năng suất, chất lượng, hiệu quả",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 32
+        },
+        {
+          "id": 4,
+          "content": "Nhiều hiện tượng tiêu cực trong xã hội",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 32
+        }
+      ]
     },
     {
       "id": 33,
       "questionIndex": 32,
       "content": "Việt Nam hoàn thành nhiệm vụ thống nhất đất nước về mặt nhà nước khi nào?",
-      "explanation": "Tại kỳ họp thứ nhất Quốc hội khóa VI (diễn ra từ 24/6 đến 3/7/1976), Quốc hội đã thông qua các quyết định quan trọng đổi tên nước, quốc kỳ, quốc ca..., chính thức hoàn thành thống nhất đất nước về mặt nhà nước.",
+      "explanation": "Việt Nam hoàn thành thống nhất đất nước về mặt Nhà nước tại kỳ họp thứ nhất Quốc hội khóa VI vào tháng 7/1976. Quốc hội quyết định quốc hiệu, quốc kỳ, quốc huy, thủ đô và tổ chức bộ máy nhà nước chung, hoàn tất thống nhất Nhà nước và chuyển thắng lợi quân sự năm 1975 thành sự thống nhất đầy đủ về thiết chế chính trị–pháp lý.",
       "answers": [
         {
           "id": 1,
           "content": "Tháng 5/1975",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 33
         },
         {
           "id": 2,
           "content": "Tháng 9/1975",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 33
         },
         {
           "id": 3,
           "content": "Tháng 7/1976",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 33
         },
         {
           "id": 4,
           "content": "Tháng 12/1976",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 33
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Tháng 5/1975",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 33
+        },
+        {
+          "id": 2,
+          "content": "Tháng 9/1975",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 33
+        },
+        {
+          "id": 3,
+          "content": "Tháng 7/1976",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 33
+        },
+        {
+          "id": 4,
+          "content": "Tháng 12/1976",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 33
+        }
+      ]
     },
     {
       "id": 34,
       "questionIndex": 33,
       "content": "Đại hội III (9-1960) của Đảng đã thông qua đường lối nào?",
-      "explanation": "Đại hội III có ý nghĩa lịch sử to lớn khi xác định đồng thời hai nhiệm vụ chiến lược: Xây dựng CNXH ở miền Bắc và tiến hành cách mạng dân tộc dân chủ nhân dân ở miền Nam, hai nhiệm vụ này có mối quan hệ mật thiết.",
+      "explanation": "Đại hội III năm 1960 thông qua đường lối tiến hành đồng thời cách mạng xã hội chủ nghĩa ở miền Bắc và cách mạng dân tộc dân chủ nhân dân ở miền Nam. Sự phân công này phù hợp tình trạng đất nước tạm thời chia cắt, kết hợp vai trò hậu phương của miền Bắc với nhiệm vụ trực tiếp giải phóng miền Nam.",
       "answers": [
         {
           "id": 1,
           "content": "Đánh đuổi thực dân Pháp và can thiệp Mỹ xâm lược...",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 34
         },
         {
           "id": 2,
           "content": "Cả nước quá độ đi lên chủ nghĩa xã hội",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 34
         },
         {
           "id": 3,
           "content": "Phát triển chế độ dân chủ nhân dân, gây cơ sở cho chủ nghĩa xã hội",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 34
         },
         {
           "id": 4,
           "content": "Đường lối cách mạng xã hội chủ nghĩa ở miền Bắc và cách mạng dân tộc dân chủ nhân dân ở miền Nam",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 34
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đánh đuổi thực dân Pháp và can thiệp Mỹ xâm lược...",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 34
+        },
+        {
+          "id": 2,
+          "content": "Cả nước quá độ đi lên chủ nghĩa xã hội",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 34
+        },
+        {
+          "id": 3,
+          "content": "Phát triển chế độ dân chủ nhân dân, gây cơ sở cho chủ nghĩa xã hội",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 34
+        },
+        {
+          "id": 4,
+          "content": "Đường lối cách mạng xã hội chủ nghĩa ở miền Bắc và cách mạng dân tộc dân chủ nhân dân ở miền Nam",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 34
+        }
+      ]
     },
     {
       "id": 35,
       "questionIndex": 34,
       "content": "Bản chỉ thị \"Kháng chiến, kiến quốc\" ngày 25/11/1945 của Trung ương Đảng đã xác định ai là kẻ thù chính của cách mạng Việt Nam lúc này?",
-      "explanation": "Chỉ thị xác định kẻ thù chính, nguy hiểm nhất cần phải tập trung mũi nhọn đấu tranh là thực dân Pháp xâm lược (lúc này đã nổ súng đánh chiếm Nam Bộ từ 23/9/1945).",
+      "explanation": "Chỉ thị Kháng chiến, kiến quốc tháng 11/1945 xác định thực dân Pháp là kẻ thù chính vì chúng đang trở lại xâm lược Nam Bộ và đe dọa nền độc lập mới giành được. Nhận diện đúng đối tượng nguy hiểm nhất giúp Đảng đề ra sách lược mềm dẻo với quân Tưởng nhưng kiên quyết chuẩn bị kháng chiến chống Pháp.",
       "answers": [
         {
           "id": 1,
           "content": "Thực dân Pháp",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 35
         },
         {
           "id": 2,
           "content": "Đế quốc Anh",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 35
         },
         {
           "id": 3,
           "content": "Bọn quân phiệt Quốc dân đảng Trung Hoa",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 35
         },
         {
           "id": 4,
           "content": "Phát xít Nhật",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 35
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Thực dân Pháp",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 35
+        },
+        {
+          "id": 2,
+          "content": "Đế quốc Anh",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 35
+        },
+        {
+          "id": 3,
+          "content": "Bọn quân phiệt Quốc dân đảng Trung Hoa",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 35
+        },
+        {
+          "id": 4,
+          "content": "Phát xít Nhật",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 35
+        }
+      ]
     },
     {
       "id": 36,
       "questionIndex": 35,
       "content": "Lực lượng chủ yếu tham gia phong trào cách mạng 1930-1931 ở Việt Nam là lực lượng nào?",
-      "explanation": "Phong trào 1930-1931 (đỉnh cao là Xô Viết Nghệ Tĩnh) đã minh chứng cho sức mạnh to lớn của khối liên minh công nhân - nông dân, đây là hai lực lượng tham gia đông đảo và chủ yếu nhất.",
+      "explanation": "Phong trào 1930–1931 lấy công nhân và nông dân làm lực lượng chủ yếu vì đây là hai giai cấp bị áp bức, bóc lột trực tiếp và có lợi ích căn bản gắn với mục tiêu đánh đổ đế quốc, phong kiến. Liên minh công–nông tạo nền tảng xã hội rộng lớn cho phong trào, thể hiện rõ nhất qua các cuộc đấu tranh ở Nghệ–Tĩnh.",
       "answers": [
         {
           "id": 1,
           "content": "Tiểu tư sản, công nhân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 36
         },
         {
           "id": 2,
           "content": "Nông dân, tiểu tư sản",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 36
         },
         {
           "id": 3,
           "content": "Công nhân và nông dân",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 36
         },
         {
           "id": 4,
           "content": "Nông dân, tư sản dân tộc",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 36
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Tiểu tư sản, công nhân",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 36
+        },
+        {
+          "id": 2,
+          "content": "Nông dân, tiểu tư sản",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 36
+        },
+        {
+          "id": 3,
+          "content": "Công nhân và nông dân",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 36
+        },
+        {
+          "id": 4,
+          "content": "Nông dân, tư sản dân tộc",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 36
+        }
+      ]
     },
     {
       "id": 37,
       "questionIndex": 36,
       "content": "Đoàn đại biểu miền Nam do ai dẫn đầu để hiệp thương thống nhất với miền Bắc sau năm 1975?",
-      "explanation": "Tại Hội nghị Hiệp thương chính trị thống nhất Tổ quốc (11/1975) tại Sài Gòn, đoàn đại biểu miền Nam do đồng chí Phạm Hùng (Bí thư Trung ương Cục miền Nam) làm Trưởng đoàn (Đoàn miền Bắc do đồng chí Trường Chinh làm Trưởng đoàn).",
+      "explanation": "Trong Hội nghị hiệp thương chính trị sau năm 1975, đoàn đại biểu miền Nam do Phạm Hùng dẫn đầu để bàn việc thống nhất với miền Bắc. Ông là nhà lãnh đạo có vai trò quan trọng của cách mạng miền Nam, cùng đoàn đại biểu tham gia quyết định chủ trương tổng tuyển cử chung và hoàn thành thống nhất Nhà nước.",
       "answers": [
         {
           "id": 1,
           "content": "Phạm Hùng",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 37
         },
         {
           "id": 2,
           "content": "Châu Văn Liêm",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 37
         },
         {
           "id": 3,
           "content": "Trường Chinh",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 37
         },
         {
           "id": 4,
           "content": "Phạm Hữu Thọ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 37
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Phạm Hùng",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 37
+        },
+        {
+          "id": 2,
+          "content": "Châu Văn Liêm",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 37
+        },
+        {
+          "id": 3,
+          "content": "Trường Chinh",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 37
+        },
+        {
+          "id": 4,
+          "content": "Phạm Hữu Thọ",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 37
+        }
+      ]
     },
     {
       "id": 38,
       "questionIndex": 37,
       "content": "Đảng ta đã lựa chọn giải pháp gì trong mối quan hệ với thực dân Pháp sau ngày Pháp và Tưởng ký hiệp ước Trùng Khánh (28-2-1946)?",
-      "explanation": "Khi Tưởng và Pháp bắt tay nhau (Hiệp ước Hoa - Pháp), ta không thể đánh cả hai cùng lúc. Đảng ta và Chủ tịch Hồ Chí Minh đã chủ trương \"Hòa để tiến\": Ký Hiệp định Sơ bộ (6/3/1946) hòa hoãn với Pháp để đuổi 20 vạn quân Tưởng về nước, tranh thủ thời gian chuẩn bị lực lượng.",
+      "explanation": "Sau Hiệp ước Hoa–Pháp ngày 28/2/1946, nguy cơ quân Tưởng ở miền Bắc được thay bằng sự trở lại của quân Pháp. Đảng lựa chọn thương lượng và hòa hoãn với Pháp qua Hiệp định Sơ bộ để đẩy quân Tưởng về nước, tránh đối đầu hai phía và có thời gian củng cố lực lượng cho kháng chiến lâu dài.",
       "answers": [
         {
           "id": 1,
           "content": "Kháng chiến chống thực dân Pháp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 38
         },
         {
           "id": 2,
           "content": "Chống cả quân đội Tưởng và Pháp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 38
         },
         {
           "id": 3,
           "content": "Nhân nhượng với quân đội Tưởng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 38
         },
         {
           "id": 4,
           "content": "Thương lượng và hòa hoãn với Pháp",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 38
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Kháng chiến chống thực dân Pháp",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 38
+        },
+        {
+          "id": 2,
+          "content": "Chống cả quân đội Tưởng và Pháp",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 38
+        },
+        {
+          "id": 3,
+          "content": "Nhân nhượng với quân đội Tưởng",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 38
+        },
+        {
+          "id": 4,
+          "content": "Thương lượng và hòa hoãn với Pháp",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 38
+        }
+      ]
     },
     {
       "id": 39,
       "questionIndex": 38,
       "content": "Mặt trận Dân tộc giải phóng miền Nam Việt Nam được thành lập ở đâu?",
-      "explanation": "Ngày 20/12/1960, Mặt trận Dân tộc giải phóng miền Nam Việt Nam được thành lập tại xã Tân Lập, huyện Châu Thành, tỉnh Tây Ninh.",
+      "explanation": "Mặt trận Dân tộc giải phóng miền Nam Việt Nam thành lập tại Tây Ninh ngày 20/12/1960, một địa bàn căn cứ cách mạng quan trọng. Việc ra đời Mặt trận đáp ứng yêu cầu thống nhất các lực lượng yêu nước chống Mỹ và chính quyền Sài Gòn, tạo hình thức tổ chức chính trị rộng rãi cho phong trào cách mạng miền Nam.",
       "answers": [
         {
           "id": 1,
           "content": "Bến Tre",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 39
         },
         {
           "id": 2,
           "content": "Tây Ninh",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 39
         },
         {
           "id": 3,
           "content": "Bình Định",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 39
         },
         {
           "id": 4,
           "content": "Tây Nguyên",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 39
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Bến Tre",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 39
+        },
+        {
+          "id": 2,
+          "content": "Tây Ninh",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 39
+        },
+        {
+          "id": 3,
+          "content": "Bình Định",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 39
+        },
+        {
+          "id": 4,
+          "content": "Tây Nguyên",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 39
+        }
+      ]
     },
     {
       "id": 40,
       "questionIndex": 39,
       "content": "Đại hội nào được đánh giá là Đại hội đổi mới đất nước?",
-      "explanation": "Đại hội Đảng lần thứ VI (12/1986) mang ý nghĩa lịch sử trọng đại, đã khởi xướng công cuộc Đổi mới toàn diện đất nước, đưa Việt Nam thoát khỏi khủng hoảng kinh tế - xã hội.",
+      "explanation": "Đại hội VI năm 1986 được đánh giá là Đại hội Đổi mới vì đề ra đường lối đổi mới toàn diện, trước hết đổi mới tư duy kinh tế và cơ chế quản lý. Đại hội nhìn thẳng vào khủng hoảng của mô hình cũ, từng bước xóa bỏ bao cấp, phát huy sản xuất hàng hóa và mở ra giai đoạn phát triển mới cho đất nước.",
       "answers": [
         {
           "id": 1,
           "content": "Đại hội IV 1976",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 40
         },
         {
           "id": 2,
           "content": "Đại hội V 1982",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 40
         },
         {
           "id": 3,
           "content": "Đại hội VI 1986",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 40
         },
         {
           "id": 4,
           "content": "Đại hội VII 1991",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 40
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đại hội IV 1976",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 40
+        },
+        {
+          "id": 2,
+          "content": "Đại hội V 1982",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 40
+        },
+        {
+          "id": 3,
+          "content": "Đại hội VI 1986",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 40
+        },
+        {
+          "id": 4,
+          "content": "Đại hội VII 1991",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 40
+        }
+      ]
     },
     {
       "id": 41,
       "questionIndex": 40,
       "content": "Cơ chế thị trường trong nền kinh tế Việt Nam từ 1986 - 1991 được xem là:",
-      "explanation": "Trong những năm đầu Đổi mới (1986 - 1991), chúng ta mới bước đầu chuyển đổi từ nền kinh tế kế hoạch hóa tập trung sang thị trường, tư duy chưa dứt khoát, hệ thống pháp luật chưa hoàn thiện nên cơ chế thị trường lúc này được đánh giá là \"chưa đầy đủ\".",
+      "explanation": "Giai đoạn 1986–1991 mới là thời kỳ đầu chuyển đổi từ cơ chế kế hoạch hóa tập trung sang cơ chế thị trường, nên các yếu tố thị trường còn manh nha và chưa đồng bộ. Nhà nước từng bước điều chỉnh giá, tiền tệ, lưu thông hàng hóa và thừa nhận nhiều thành phần kinh tế, vì vậy không thể coi cơ chế thị trường lúc này đã đầy đủ hay hoàn thiện.",
       "answers": [
         {
           "id": 1,
           "content": "Chưa đầy đủ",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 41
         },
         {
           "id": 2,
           "content": "Đầy đủ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 41
         },
         {
           "id": 3,
           "content": "Hoàn hảo",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 41
         },
         {
           "id": 4,
           "content": "Hoàn thiện",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 41
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Chưa đầy đủ",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 41
+        },
+        {
+          "id": 2,
+          "content": "Đầy đủ",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 41
+        },
+        {
+          "id": 3,
+          "content": "Hoàn hảo",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 41
+        },
+        {
+          "id": 4,
+          "content": "Hoàn thiện",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 41
+        }
+      ]
     },
     {
       "id": 42,
       "questionIndex": 41,
       "content": "Tình hình nước ta được ví như \"ngàn cân treo sợi tóc\" vào thời gian nào?",
-      "explanation": "Ngay sau Cách mạng tháng Tám, chính quyền non trẻ phải đối mặt với thù trong giặc ngoài (Tưởng, Pháp, Anh), cộng thêm nạn đói, nạn dốt và tài chính kiệt quệ, tạo nên tình thế \"ngàn cân treo sợi tóc\".",
+      "explanation": "Ngay sau Cách mạng tháng Tám năm 1945, nước Việt Nam Dân chủ Cộng hòa phải đối mặt với nạn đói, nạn dốt, tài chính kiệt quệ, thù trong và giặc ngoài. Chủ tịch Hồ Chí Minh dùng hình ảnh “ngàn cân treo sợi tóc” để khái quát mức độ hiểm nghèo của tình thế khi nền độc lập vừa được thiết lập.",
       "answers": [
         {
           "id": 1,
           "content": "Ngay sau cách mạng Tháng Tám 1945 thành công",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 42
         },
         {
           "id": 2,
           "content": "Trước cách mạng Tháng Tám",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 42
         },
         {
           "id": 3,
           "content": "Ngay sau cuộc kháng chiến chống Mỹ thắng lợi 1975",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 42
         },
         {
           "id": 4,
           "content": "Ngay sau khi Hiệp định Paris được ký kết 1973",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 42
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Ngay sau cách mạng Tháng Tám 1945 thành công",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 42
+        },
+        {
+          "id": 2,
+          "content": "Trước cách mạng Tháng Tám",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 42
+        },
+        {
+          "id": 3,
+          "content": "Ngay sau cuộc kháng chiến chống Mỹ thắng lợi 1975",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 42
+        },
+        {
+          "id": 4,
+          "content": "Ngay sau khi Hiệp định Paris được ký kết 1973",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 42
+        }
+      ]
     },
     {
       "id": 43,
       "questionIndex": 42,
       "content": "Thắng lợi nào của quân và dân ta trong cuộc kháng chiến chống Pháp đã làm phá sản hoàn toàn kế hoạch Nava?",
-      "explanation": "Tương tự câu 19, Chiến dịch Điện Biên Phủ (1954) là đòn quyết định đập tan nỗ lực cuối cùng của Pháp (Kế hoạch Nava).",
+      "explanation": "Chiến thắng Điện Biên Phủ tháng 5/1954 tiêu diệt tập đoàn cứ điểm mạnh nhất, làm tan vỡ hoàn toàn Kế hoạch Nava của Pháp. Các chiến dịch Biên giới, Tây Bắc và Thượng Lào chỉ góp phần phân tán, tiêu hao lực lượng đối phương; Điện Biên Phủ mới là đòn quyết định buộc Pháp phải chấp nhận giải pháp tại Giơnevơ.",
       "answers": [
         {
           "id": 1,
           "content": "Chiến thắng Biên giới Thu - Đông 1950",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 43
         },
         {
           "id": 2,
           "content": "Chiến thắng Tây Bắc 1953",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 43
         },
         {
           "id": 3,
           "content": "Chiến thắng Điện Biên Phủ 1954",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 43
         },
         {
           "id": 4,
           "content": "Chiến thắng Thượng Lào 1954",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 43
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Chiến thắng Biên giới Thu - Đông 1950",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 43
+        },
+        {
+          "id": 2,
+          "content": "Chiến thắng Tây Bắc 1953",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 43
+        },
+        {
+          "id": 3,
+          "content": "Chiến thắng Điện Biên Phủ 1954",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 43
+        },
+        {
+          "id": 4,
+          "content": "Chiến thắng Thượng Lào 1954",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 43
+        }
+      ]
     },
     {
       "id": 44,
       "questionIndex": 43,
       "content": "Sau khi Mỹ thực hiện chiến lược \"Chiến tranh cục bộ\", Đảng nhận định tình hình:",
-      "explanation": "Dù Mỹ đưa quân viễn chinh trực tiếp tham chiến, Đảng ta vẫn nhận định bản chất đây là \"chiến tranh xâm lược thực dân mới\", nhưng Mỹ phải thực hiện trong thế bị động, thất bại từ chiến lược \"Chiến tranh đặc biệt\" trước đó.",
+      "explanation": "Đảng nhận định chiến tranh cục bộ là hình thức xâm lược thực dân mới mà Mỹ buộc phải tiến hành trong thế bị động, nên chứa đựng những mâu thuẫn chiến lược không thể khắc phục. Nhận định này xuất phát từ thất bại của chiến tranh đặc biệt và mâu thuẫn giữa mục tiêu áp đặt của Mỹ với sức kháng cự ngày càng mạnh của nhân dân Việt Nam.",
       "answers": [
         {
           "id": 1,
           "content": "Đây là cuộc chiến tranh xâm lược thực dân mới, buộc phải thực thi trong thế thua, thế thất bại và bị động cho nên nó chứa đựng đầy mâu thuẫn chiến lược",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 44
         },
         {
           "id": 2,
           "content": "Đây là cuộc chiến tranh xâm lược thực dân cũ...",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 44
         },
         {
           "id": 3,
           "content": "Đây là cuộc chiến tranh xâm lược thực dân hiện đại...",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 44
         },
         {
           "id": 4,
           "content": "Đây là cuộc chiến tranh xâm lược của chủ nghĩa thực dân phương Tây...",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 44
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đây là cuộc chiến tranh xâm lược thực dân mới, buộc phải thực thi trong thế thua, thế thất bại và bị động cho nên nó chứa đựng đầy mâu thuẫn chiến lược",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 44
+        },
+        {
+          "id": 2,
+          "content": "Đây là cuộc chiến tranh xâm lược thực dân cũ...",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 44
+        },
+        {
+          "id": 3,
+          "content": "Đây là cuộc chiến tranh xâm lược thực dân hiện đại...",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 44
+        },
+        {
+          "id": 4,
+          "content": "Đây là cuộc chiến tranh xâm lược của chủ nghĩa thực dân phương Tây...",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 44
+        }
+      ]
     },
     {
       "id": 45,
       "questionIndex": 44,
       "content": "Đâu là hạn chế của Đảng trong quá trình lãnh đạo, chỉ đạo các hoạt động quân sự năm 1968?",
-      "explanation": "Trong cuộc Tổng tiến công và nổi dậy Mậu Thân 1968, Đảng ta đã có phần chủ quan khi đánh giá thấp khả năng phản kích của địch và đề ra yêu cầu giải phóng hoàn toàn miền Nam ngay lúc đó là chưa sát với tương quan lực lượng thực tế.",
+      "explanation": "Trong chỉ đạo hoạt động quân sự năm 1968, hạn chế chủ yếu là biểu hiện chủ quan khi đánh giá tương quan lực lượng và đặt yêu cầu có lúc chưa sát thực tế chiến trường. Nhận thức đúng hạn chế này giúp phân biệt với các kết quả chiến lược quan trọng của cuộc Tổng tiến công, như làm Mỹ xuống thang và chấp nhận đàm phán.",
       "answers": [
         {
           "id": 1,
           "content": "Thiếu tính sáng tạo, bất ngờ, táo bạo",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 45
         },
         {
           "id": 2,
           "content": "Có biểu hiện chủ quan trong việc đánh giá tình hình, đề ra yêu cầu không sát với thực tế",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 45
         },
         {
           "id": 3,
           "content": "Các trận đánh không có ý nghĩa chiến lược",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 45
         },
         {
           "id": 4,
           "content": "Không buộc địch phải xuống thang chiến tranh",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 45
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Thiếu tính sáng tạo, bất ngờ, táo bạo",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 45
+        },
+        {
+          "id": 2,
+          "content": "Có biểu hiện chủ quan trong việc đánh giá tình hình, đề ra yêu cầu không sát với thực tế",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 45
+        },
+        {
+          "id": 3,
+          "content": "Các trận đánh không có ý nghĩa chiến lược",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 45
+        },
+        {
+          "id": 4,
+          "content": "Không buộc địch phải xuống thang chiến tranh",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 45
+        }
+      ]
     },
     {
       "id": 46,
       "questionIndex": 45,
       "content": "Điền thêm từ còn thiếu trong câu trích từ Nghị quyết Hội nghị Ban Chấp hành Trung ương Đảng lần 24 (1975): \"... đất nước vừa là nguyện vọng tha thiết của nhân dân cả nước, vừa là quy luật khách quan của sự phát triển cách mạng Việt Nam, của lịch sử dân tộc Việt Nam\"",
-      "explanation": "Khát vọng \"Thống nhất\" non sông là quy luật khách quan và nguyện vọng tột bậc của cả dân tộc sau hàng chục năm bị chia cắt.",
+      "explanation": "Nghị quyết Hội nghị Trung ương 24 năm 1975 khẳng định thống nhất đất nước vừa là nguyện vọng tha thiết của nhân dân, vừa là quy luật khách quan của cách mạng Việt Nam. Sau thắng lợi năm 1975, nội dung này định hướng quá trình hiệp thương, tổng tuyển cử và xây dựng bộ máy nhà nước chung, không chỉ dừng ở khái niệm độc lập hay giải phóng.",
       "answers": [
         {
           "id": 1,
           "content": "Độc lập",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 46
         },
         {
           "id": 2,
           "content": "Thống nhất",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 46
         },
         {
           "id": 3,
           "content": "Giải phóng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 46
         },
         {
           "id": 4,
           "content": "Độc lập và Thống nhất",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 46
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Độc lập",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 46
+        },
+        {
+          "id": 2,
+          "content": "Thống nhất",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 46
+        },
+        {
+          "id": 3,
+          "content": "Giải phóng",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 46
+        },
+        {
+          "id": 4,
+          "content": "Độc lập và Thống nhất",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 46
+        }
+      ]
     },
     {
       "id": 47,
       "questionIndex": 46,
       "content": "\"Cuộc cách mạng Đông Dương hiện tại không phải là cuộc cách mạng tư sản dân quyền, cuộc cách mạng phải giải quyết hai vấn đề phản đế và điền địa nữa, mà là cuộc cách mạng chỉ phải giải quyết một vấn đề cần kíp \"dân tộc giải phóng\"\". Chủ trương trên của Đảng được khẳng định tại Hội nghị nào?",
-      "explanation": "Đây là tinh thần cốt lõi của Hội nghị Trung ương 8 (tháng 5/1941) do Nguyễn Ái Quốc chủ trì. Hội nghị đã đặt nhiệm vụ giải phóng dân tộc lên hàng đầu, cao hơn bao giờ hết, tạm gác khẩu hiệu cách mạng ruộng đất.",
+      "explanation": "Hội nghị Trung ương tháng 5/1941 khẳng định cuộc cách mạng trước mắt chỉ cần giải quyết vấn đề cấp bách là giải phóng dân tộc. Hội nghị hoàn chỉnh sự chuyển hướng từ cuối năm 1939, đặt lợi ích dân tộc lên trên hết và thành lập Mặt trận Việt Minh để tập hợp lực lượng chống Pháp–Nhật trong thời kỳ chiến tranh thế giới.",
       "answers": [
         {
           "id": 1,
           "content": "Hội nghị Ban Chấp hành Trung ương tháng 11/1939",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 47
         },
         {
           "id": 2,
           "content": "Hội nghị Cán bộ Trung ương tháng 11/1940",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 47
         },
         {
           "id": 3,
           "content": "Hội nghị Ban Chấp hành Trung ương tháng 5/1941",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 47
         },
         {
           "id": 4,
           "content": "Hội nghị Ban Thường vụ Trung ương tháng 3/1945",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 47
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Hội nghị Ban Chấp hành Trung ương tháng 11/1939",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 47
+        },
+        {
+          "id": 2,
+          "content": "Hội nghị Cán bộ Trung ương tháng 11/1940",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 47
+        },
+        {
+          "id": 3,
+          "content": "Hội nghị Ban Chấp hành Trung ương tháng 5/1941",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 47
+        },
+        {
+          "id": 4,
+          "content": "Hội nghị Ban Thường vụ Trung ương tháng 3/1945",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 47
+        }
+      ]
     },
     {
       "id": 48,
       "questionIndex": 47,
       "content": "Tổng bí thư đầu tiên của Đảng ta là:",
-      "explanation": "Tại Hội nghị Ban Chấp hành Trung ương lâm thời (tháng 10/1930), đồng chí Trần Phú đã được bầu làm Tổng Bí thư đầu tiên của Đảng ta.",
+      "explanation": "Trần Phú là Tổng Bí thư đầu tiên của Đảng, được bầu tại Hội nghị Trung ương tháng 10/1930. Ông cũng là tác giả Luận cương chính trị tháng 10/1930, nên giai đoạn hoạt động ngắn nhưng có ý nghĩa quan trọng trong việc xây dựng hệ thống lãnh đạo và định hướng lý luận của Đảng sau khi thành lập.",
       "answers": [
         {
           "id": 1,
           "content": "Trần Phú",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 48
         },
         {
           "id": 2,
           "content": "Nguyễn Văn Cừ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 48
         },
         {
           "id": 3,
           "content": "Trường Chinh",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 48
         },
         {
           "id": 4,
           "content": "Lê Hồng Phong",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 48
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Trần Phú",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 48
+        },
+        {
+          "id": 2,
+          "content": "Nguyễn Văn Cừ",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 48
+        },
+        {
+          "id": 3,
+          "content": "Trường Chinh",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 48
+        },
+        {
+          "id": 4,
+          "content": "Lê Hồng Phong",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 48
+        }
+      ]
     },
     {
       "id": 49,
       "questionIndex": 48,
       "content": "Nội dung nào không phản ánh thành tựu của kế hoạch Nhà nước 5 năm (1961 - 1965)?",
-      "explanation": "Giai đoạn này miền Bắc đang thực hiện cải tạo XHCN, xây dựng kinh tế quốc doanh và tập thể. Tư nhân không được ưu tiên phát triển, do đó nội dung D là sai thực tế lịch sử.",
+      "explanation": "Kế hoạch Nhà nước năm năm 1961–1965 ở miền Bắc có các thành tựu về công nghiệp nặng, công nghiệp quốc doanh và cung ứng hàng tiêu dùng. Trái lại, thương nghiệp tư nhân không được Nhà nước ưu tiên phát triển để chiếm lĩnh thị trường, bởi định hướng khi đó là mở rộng khu vực quốc doanh và hợp tác xã trong cải tạo xã hội chủ nghĩa.",
       "answers": [
         {
           "id": 1,
           "content": "Giá trị sản lượng công nghiệp nặng năm 1965 tăng 3 lần so với năm 1960",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 49
         },
         {
           "id": 2,
           "content": "Công nghiệp quốc doanh chiếm tỉ trọng 93%...",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 49
         },
         {
           "id": 3,
           "content": "Công nghiệp nhẹ, tiểu thủ công nghiệp đã giải quyết được 80% hàng tiêu dùng...",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 49
         },
         {
           "id": 4,
           "content": "Thương nghiệp tư nhân được Nhà nước ưu tiên phát triển nên đã chiếm lĩnh được thị trường",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 49
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Giá trị sản lượng công nghiệp nặng năm 1965 tăng 3 lần so với năm 1960",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 49
+        },
+        {
+          "id": 2,
+          "content": "Công nghiệp quốc doanh chiếm tỉ trọng 93%...",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 49
+        },
+        {
+          "id": 3,
+          "content": "Công nghiệp nhẹ, tiểu thủ công nghiệp đã giải quyết được 80% hàng tiêu dùng...",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 49
+        },
+        {
+          "id": 4,
+          "content": "Thương nghiệp tư nhân được Nhà nước ưu tiên phát triển nên đã chiếm lĩnh được thị trường",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 49
+        }
+      ]
     },
     {
       "id": 50,
       "questionIndex": 49,
       "content": "Lực lượng chính của cách mạng được xác định trong Luận cương chính trị (10-1930) là:",
-      "explanation": "Luận cương chính trị tháng 10/1930 do Trần Phú soạn thảo xác định động lực chính của cách mạng (giai cấp lãnh đạo và nền tảng) là giai cấp công nhân và nông dân. Điểm này hẹp hơn so với Cương lĩnh đầu tiên (tháng 2/1930).",
+      "explanation": "Luận cương chính trị tháng 10/1930 xác định công nhân và nông dân là lực lượng chính của cách mạng, xuất phát từ vị trí bị áp bức và khả năng đấu tranh mạnh mẽ của hai giai cấp này. Quan điểm nhấn mạnh liên minh công–nông nhưng cũng bộc lộ hạn chế khi chưa đánh giá đầy đủ khả năng tập hợp các lực lượng yêu nước khác.",
       "answers": [
         {
           "id": 1,
           "content": "Công nhân và nông dân",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 50
         },
         {
           "id": 2,
           "content": "Toàn thể nhân dân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 50
         },
         {
           "id": 3,
           "content": "Nông dân và tiểu tư sản",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 50
         },
         {
           "id": 4,
           "content": "Nông dân và tư sản dân tộc",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 50
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Công nhân và nông dân",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 50
+        },
+        {
+          "id": 2,
+          "content": "Toàn thể nhân dân",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 50
+        },
+        {
+          "id": 3,
+          "content": "Nông dân và tiểu tư sản",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 50
+        },
+        {
+          "id": 4,
+          "content": "Nông dân và tư sản dân tộc",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 50
+        }
+      ]
     },
     {
       "id": 51,
       "questionIndex": 50,
       "content": "Đâu là lực lượng tạo nên động lực cho cách mạng Việt Nam được nêu ra trong Chính cương của Đảng Lao động Việt Nam?",
-      "explanation": "Tại Đại hội II (1951), Chính cương của Đảng Lao động Việt Nam xác định động lực của cách mạng gồm 4 giai cấp: công nhân, nông dân, tiểu tư sản và tư sản dân tộc. Trong đó nền tảng là khối liên minh công nhân, nông dân và lao động trí thức. (Theo tùy chọn của câu hỏi, cụm \"Công nhân, nông dân, lao động trí thức\" là đáp án chính xác).",
+      "explanation": "Chính cương của Đảng Lao động Việt Nam xác định động lực của cách mạng gồm công nhân, nông dân và lao động trí thức. Cách xác định thể hiện sự mở rộng lực lượng nòng cốt trong kháng chiến và kiến quốc, đồng thời phân biệt với cách liệt kê các giai cấp, tầng lớp rộng hơn trong Cương lĩnh đầu năm 1930.",
       "answers": [
         {
           "id": 1,
           "content": "Công nhân, nông dân, trí thức",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 51
         },
         {
           "id": 2,
           "content": "Công nhân, nông dân, lao động trí thức",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 51
         },
         {
           "id": 3,
           "content": "Công nhân, trí thức, tư sản dân tộc",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 51
         },
         {
           "id": 4,
           "content": "Công nhân, nông dân, tiểu tư sản, tư sản dân tộc, đại địa chủ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 51
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Công nhân, nông dân, trí thức",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 51
+        },
+        {
+          "id": 2,
+          "content": "Công nhân, nông dân, lao động trí thức",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 51
+        },
+        {
+          "id": 3,
+          "content": "Công nhân, trí thức, tư sản dân tộc",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 51
+        },
+        {
+          "id": 4,
+          "content": "Công nhân, nông dân, tiểu tư sản, tư sản dân tộc, đại địa chủ",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 51
+        }
+      ]
     },
     {
       "id": 52,
       "questionIndex": 51,
       "content": "Tại hội nghị nào, Ban Chấp hành Trung ương Đảng quyết định để nhân dân miền Nam sử dụng bạo lực cách mạng đánh đổ chính quyền Mỹ - Diệm?",
-      "explanation": "Nghị quyết 15 (1/1959) là một bước ngoặt lịch sử, cho phép miền Nam chuyển từ đấu tranh chính trị đơn thuần sang kết hợp đấu tranh chính trị với đấu tranh vũ trang (bạo lực cách mạng) để tự vệ và lật đổ chính quyền Mỹ - Diệm.",
+      "explanation": "Hội nghị Trung ương 15 tháng 1/1959 quyết định cho nhân dân miền Nam sử dụng bạo lực cách mạng chống chính quyền Mỹ–Diệm trong điều kiện khủng bố ngày càng gay gắt. Chủ trương kết hợp đấu tranh chính trị với vũ trang tháo gỡ thế bị động, mở đường cho phong trào Đồng khởi và bước phát triển mới của cách mạng miền Nam.",
       "answers": [
         {
           "id": 1,
           "content": "Hội nghị Trung ương lần thứ 15 (1/1959)",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 52
         },
         {
           "id": 2,
           "content": "Hội nghị Trung ương lần thứ 11 (3/1965)",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 52
         },
         {
           "id": 3,
           "content": "Hội nghị Trung ương lần thứ 12 (12/1965)",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 52
         },
         {
           "id": 4,
           "content": "Hội nghị Trung ương lần thứ 21 (7/1973)",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 52
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Hội nghị Trung ương lần thứ 15 (1/1959)",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 52
+        },
+        {
+          "id": 2,
+          "content": "Hội nghị Trung ương lần thứ 11 (3/1965)",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 52
+        },
+        {
+          "id": 3,
+          "content": "Hội nghị Trung ương lần thứ 12 (12/1965)",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 52
+        },
+        {
+          "id": 4,
+          "content": "Hội nghị Trung ương lần thứ 21 (7/1973)",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 52
+        }
+      ]
     },
     {
       "id": 53,
       "questionIndex": 52,
       "content": "Hội nghị lần thứ năm Ban Chấp hành Trung ương Đảng (khóa X) tháng 7/2007 ban hành Nghị quyết số 14-NQ/TW về nội dung gì?",
-      "explanation": "Nghị quyết 14-NQ/TW của Hội nghị TW 5 (khóa 10) tập trung vào việc nâng cao sức chiến đấu của Đảng thông qua việc \"Tăng cường công tác kiểm tra, giám sát của Đảng\".",
+      "explanation": "Nghị quyết 14-NQ/TW của Hội nghị Trung ương 5 khóa X tháng 7/2007 tập trung tăng cường công tác kiểm tra, giám sát của Đảng. Nội dung này nhằm bảo đảm tổ chức đảng và đảng viên chấp hành đường lối, kỷ luật, kịp thời phòng ngừa vi phạm, nên không phải nghị quyết thay đổi toàn bộ hệ thống chính trị hay hoạt động của đoàn thể.",
       "answers": [
         {
           "id": 1,
           "content": "Tăng cường công tác kiểm tra, giám sát của Đảng",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 53
         },
         {
           "id": 2,
           "content": "Tăng cường công tác kiểm tra, giám sát của đoàn thể",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 53
         },
         {
           "id": 3,
           "content": "Cương lĩnh xây dựng đất nước",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 53
         },
         {
           "id": 4,
           "content": "Thay đổi hệ thống chính trị",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 53
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Tăng cường công tác kiểm tra, giám sát của Đảng",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 53
+        },
+        {
+          "id": 2,
+          "content": "Tăng cường công tác kiểm tra, giám sát của đoàn thể",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 53
+        },
+        {
+          "id": 3,
+          "content": "Cương lĩnh xây dựng đất nước",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 53
+        },
+        {
+          "id": 4,
+          "content": "Thay đổi hệ thống chính trị",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 53
+        }
+      ]
     },
     {
       "id": 54,
       "questionIndex": 53,
       "content": "Đâu là luận điểm sáng tạo của Hồ Chí Minh khi vận dụng chủ nghĩa Mác - Lênin về việc ra đời của Đảng Cộng sản Việt Nam?",
-      "explanation": "Theo quy luật chung của Lênin, Đảng Cộng sản = Chủ nghĩa Mác + Phong trào công nhân. Tuy nhiên, Hồ Chí Minh đã sáng tạo thêm yếu tố thứ 3 là \"Phong trào yêu nước\" vì ở một nước thuộc địa như Việt Nam, phong trào yêu nước có vai trò cực kỳ to lớn và gắn liền với phong trào công nhân.",
+      "explanation": "Luận điểm sáng tạo của Hồ Chí Minh là sự ra đời của Đảng Cộng sản Việt Nam là kết quả kết hợp chủ nghĩa Mác–Lênin với phong trào công nhân và phong trào yêu nước Việt Nam. Việc bổ sung yếu tố phong trào yêu nước phản ánh đặc điểm dân tộc thuộc địa, nơi yêu nước là dòng chảy xã hội rộng lớn và gắn chặt với khát vọng giải phóng.",
       "answers": [
         {
           "id": 1,
           "content": "Đảng Cộng sản Việt Nam ra đời là tất yếu lịch sử, nó là sản phẩm kết hợp giữa chủ nghĩa Mác với phong trào công nhân Việt Nam",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 54
         },
         {
           "id": 2,
           "content": "Đảng Cộng sản Việt Nam ra đời là tất yếu lịch sử, nó là sản phẩm kết hợp giữa chủ nghĩa Mác với phong trào yêu nước Việt Nam",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 54
         },
         {
           "id": 3,
           "content": "Đảng Cộng sản Việt Nam là sản phẩm của sự kết hợp chủ nghĩa Mác - Lênin với phong trào công nhân và phong trào yêu nước của nhân dân Việt Nam",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 54
         },
         {
           "id": 4,
           "content": "Đảng Cộng sản Việt Nam là sản phẩm của sự kết hợp phong trào công nhân và phong trào yêu nước Việt Nam",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 54
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đảng Cộng sản Việt Nam ra đời là tất yếu lịch sử, nó là sản phẩm kết hợp giữa chủ nghĩa Mác với phong trào công nhân Việt Nam",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 54
+        },
+        {
+          "id": 2,
+          "content": "Đảng Cộng sản Việt Nam ra đời là tất yếu lịch sử, nó là sản phẩm kết hợp giữa chủ nghĩa Mác với phong trào yêu nước Việt Nam",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 54
+        },
+        {
+          "id": 3,
+          "content": "Đảng Cộng sản Việt Nam là sản phẩm của sự kết hợp chủ nghĩa Mác - Lênin với phong trào công nhân và phong trào yêu nước của nhân dân Việt Nam",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 54
+        },
+        {
+          "id": 4,
+          "content": "Đảng Cộng sản Việt Nam là sản phẩm của sự kết hợp phong trào công nhân và phong trào yêu nước Việt Nam",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 54
+        }
+      ]
     },
     {
       "id": 55,
       "questionIndex": 54,
       "content": "Sau thất bại của Chiến tranh đặc biệt, Mỹ chuyển sang loại hình chiến lược chiến tranh nào?",
-      "explanation": "Từ giữa năm 1965, khi quân đội Sài Gòn có nguy cơ sụp đổ, Mỹ ồ ạt đưa quân viễn chinh Mỹ và chư hầu vào miền Nam, đánh dấu sự chuyển hướng sang chiến lược \"Chiến tranh cục bộ\".",
+      "explanation": "Sau khi chiến lược chiến tranh đặc biệt thất bại, Mỹ chuyển sang chiến tranh cục bộ từ năm 1965 và trực tiếp đưa quân viễn chinh vào miền Nam. Sự thay đổi cho thấy Mỹ phải leo thang vì không thể dùng riêng quân đội Sài Gòn để tiêu diệt lực lượng cách mạng, nhưng chiến lược mới cũng nhanh chóng bộc lộ hạn chế.",
       "answers": [
         {
           "id": 1,
           "content": "Chiến tranh đơn phương",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 55
         },
         {
           "id": 2,
           "content": "Chiến tranh cục bộ",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 55
         },
         {
           "id": 3,
           "content": "Việt Nam hóa chiến tranh",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 55
         },
         {
           "id": 4,
           "content": "Đông Dương hóa chiến tranh",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 55
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Chiến tranh đơn phương",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 55
+        },
+        {
+          "id": 2,
+          "content": "Chiến tranh cục bộ",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 55
+        },
+        {
+          "id": 3,
+          "content": "Việt Nam hóa chiến tranh",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 55
+        },
+        {
+          "id": 4,
+          "content": "Đông Dương hóa chiến tranh",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 55
+        }
+      ]
     },
     {
       "id": 56,
       "questionIndex": 55,
       "content": "Tại Đại hội đại biểu toàn quốc lần thứ IV (1976), chủ trương, nhận định nào của Đảng ta được đánh giá là chủ quan, nóng vội?",
-      "explanation": "Việc đặt mục tiêu hoàn thành cơ bản công nghiệp hóa, đưa sản xuất nhỏ lên sản xuất lớn XHCN chỉ trong 20 năm (sau một cuộc chiến tranh tàn khốc) thể hiện sự nôn nóng, đốt cháy giai đoạn, vi phạm quy luật khách quan.",
+      "explanation": "Đại hội IV đặt mục tiêu hoàn thành cơ bản việc đưa nền kinh tế từ sản xuất nhỏ lên sản xuất lớn xã hội chủ nghĩa trong khoảng 20 năm. Đánh giá sau này cho thấy mục tiêu đó chủ quan, nóng vội vì chưa tính đúng xuất phát điểm thấp, hậu quả chiến tranh, nguồn lực hạn chế và tính chất lâu dài, phức tạp của thời kỳ quá độ.",
       "answers": [
         {
           "id": 1,
           "content": "Hoàn thành về cơ bản quá trình đưa nền kinh tế nước ta từ sản xuất nhỏ lên sản xuất lớn xã hội chủ nghĩa trong khoảng 20 năm",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 56
         },
         {
           "id": 2,
           "content": "Quá độ lên chủ nghĩa xã hội ở nước ta là thời kỳ khó khăn, phức tạp, lâu dài, phải trải qua nhiều chặng đường",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 56
         },
         {
           "id": 3,
           "content": "Nước ta đã thống nhất, cả nước tiến lên chủ nghĩa xã hội",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 56
         },
         {
           "id": 4,
           "content": "Nước ta đang ở trong quá trình từ một xã hội có nền kinh tế sản xuất nhỏ tiến thẳng lên chủ nghĩa xã hội",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 56
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Hoàn thành về cơ bản quá trình đưa nền kinh tế nước ta từ sản xuất nhỏ lên sản xuất lớn xã hội chủ nghĩa trong khoảng 20 năm",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 56
+        },
+        {
+          "id": 2,
+          "content": "Quá độ lên chủ nghĩa xã hội ở nước ta là thời kỳ khó khăn, phức tạp, lâu dài, phải trải qua nhiều chặng đường",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 56
+        },
+        {
+          "id": 3,
+          "content": "Nước ta đã thống nhất, cả nước tiến lên chủ nghĩa xã hội",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 56
+        },
+        {
+          "id": 4,
+          "content": "Nước ta đang ở trong quá trình từ một xã hội có nền kinh tế sản xuất nhỏ tiến thẳng lên chủ nghĩa xã hội",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 56
+        }
+      ]
     },
     {
       "id": 57,
       "questionIndex": 56,
       "content": "\"Đại diện cho quyền và lợi ích hợp pháp của nhân dân\" là vai trò của tổ chức nào?",
-      "explanation": "Mặt trận Tổ quốc và các tổ chức chính trị - xã hội (Công đoàn, Hội Phụ nữ, Hội Nông dân...) là cơ sở chính trị của chính quyền nhân dân, có vai trò tập hợp và bảo vệ quyền, lợi ích hợp pháp của các tầng lớp nhân dân.",
+      "explanation": "Mặt trận Tổ quốc Việt Nam và các tổ chức chính trị – xã hội có chức năng tập hợp, phản ánh và bảo vệ quyền, lợi ích hợp pháp, chính đáng của nhân dân. Thông qua vận động quần chúng, giám sát và phản biện xã hội, các tổ chức này làm cầu nối giữa nhân dân với Đảng, Nhà nước và hệ thống chính trị.",
       "answers": [
         {
           "id": 1,
           "content": "Đảng Cộng sản Việt Nam",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 57
         },
         {
           "id": 2,
           "content": "Đoàn Thanh niên Cộng sản Hồ Chí Minh",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 57
         },
         {
           "id": 3,
           "content": "Nhà nước Việt Nam",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 57
         },
         {
           "id": 4,
           "content": "Mặt trận Tổ quốc Việt Nam và các tổ chức chính trị - xã hội",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 57
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đảng Cộng sản Việt Nam",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 57
+        },
+        {
+          "id": 2,
+          "content": "Đoàn Thanh niên Cộng sản Hồ Chí Minh",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 57
+        },
+        {
+          "id": 3,
+          "content": "Nhà nước Việt Nam",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 57
+        },
+        {
+          "id": 4,
+          "content": "Mặt trận Tổ quốc Việt Nam và các tổ chức chính trị - xã hội",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 57
+        }
+      ]
     },
     {
       "id": 58,
       "questionIndex": 57,
       "content": "Lãnh tụ Nguyễn Ái Quốc thành lập Hội Việt Nam Cách mạng Thanh niên (1925) là sự chuẩn bị cho sự ra đời của Đảng Cộng sản Việt Nam về mặt nào?",
-      "explanation": "Việc thành lập Hội Việt Nam Cách mạng Thanh niên (cùng với việc mở các lớp huấn luyện cán bộ) chính là bước chuẩn bị trực tiếp về mặt tổ chức, làm tiền đề tiến tới thành lập Đảng Cộng sản Việt Nam.",
+      "explanation": "Việc thành lập Hội Việt Nam Cách mạng Thanh niên năm 1925 tạo ra một tổ chức có nhiệm vụ đào tạo cán bộ, xây dựng cơ sở và liên kết những người hoạt động cách mạng. Vì vậy, đóng góp trực tiếp nổi bật là chuẩn bị về tổ chức cho sự ra đời của Đảng, dù hoạt động của Hội cũng bao hàm truyền bá tư tưởng và giáo dục chính trị.",
       "answers": [
         {
           "id": 1,
           "content": "Tổ chức",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 58
         },
         {
           "id": 2,
           "content": "Tư tưởng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 58
         },
         {
           "id": 3,
           "content": "Chính trị",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 58
         },
         {
           "id": 4,
           "content": "Đường lối chính sách",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 58
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Tổ chức",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 58
+        },
+        {
+          "id": 2,
+          "content": "Tư tưởng",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 58
+        },
+        {
+          "id": 3,
+          "content": "Chính trị",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 58
+        },
+        {
+          "id": 4,
+          "content": "Đường lối chính sách",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 58
+        }
+      ]
     },
     {
       "id": 59,
       "questionIndex": 58,
       "content": "Hội nghị Trung ương III, khóa VIII tháng 12/1996 đã chủ trương:",
-      "explanation": "Hội nghị TW 3 khóa VIII đã ban hành Nghị quyết chuyên đề rất quan trọng về \"Chiến lược cán bộ thời kỳ đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước\".",
+      "explanation": "Hội nghị Trung ương III khóa VIII tháng 12/1996 chủ trương xây dựng đội ngũ cán bộ các cấp có phẩm chất, năng lực và bản lĩnh chính trị vững vàng, đủ số lượng, đồng bộ cơ cấu. Đây là yêu cầu then chốt khi đẩy mạnh công nghiệp hóa, hiện đại hóa, bởi chất lượng đội ngũ cán bộ quyết định năng lực tổ chức thực hiện đường lối và quản lý đất nước.",
       "answers": [
         {
           "id": 1,
           "content": "Xây dựng đội ngũ cán bộ các cấp có phẩm chất và năng lực, có bản lĩnh chính trị vững vàng, đủ về số lượng, đồng bộ về cơ cấu",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 59
         },
         {
           "id": 2,
           "content": "Phát triển khoa học và công nghệ trong giai đoạn hiện nay",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 59
         },
         {
           "id": 3,
           "content": "Phát triển giáo dục và đào tạo trong giai đoạn hiện nay",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 59
         },
         {
           "id": 4,
           "content": "Xây dựng kinh tế trong giai đoạn hiện nay",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 59
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Xây dựng đội ngũ cán bộ các cấp có phẩm chất và năng lực, có bản lĩnh chính trị vững vàng, đủ về số lượng, đồng bộ về cơ cấu",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 59
+        },
+        {
+          "id": 2,
+          "content": "Phát triển khoa học và công nghệ trong giai đoạn hiện nay",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 59
+        },
+        {
+          "id": 3,
+          "content": "Phát triển giáo dục và đào tạo trong giai đoạn hiện nay",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 59
+        },
+        {
+          "id": 4,
+          "content": "Xây dựng kinh tế trong giai đoạn hiện nay",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 59
+        }
+      ]
     },
     {
       "id": 60,
       "questionIndex": 59,
       "content": "Chủ đề của Đại hội đại biểu toàn quốc lần thứ XIII của Đảng Cộng sản Việt Nam là? (Lựa chọn phương án đúng nhất).",
-      "explanation": "Tùy chọn B trích dẫn nguyên văn và đầy đủ nhất Chủ đề của Đại hội XIII (2021), phản ánh khát vọng phát triển đất nước đến năm 2045 (kỷ niệm 100 năm thành lập nước).",
+      "explanation": "Chủ đề Đại hội XIII bao quát đồng thời xây dựng, chỉnh đốn Đảng và hệ thống chính trị; khơi dậy ý chí phát triển; phát huy đại đoàn kết; đẩy mạnh Đổi mới; bảo vệ Tổ quốc và giữ vững môi trường hòa bình. Đích đến đến giữa thế kỷ XXI là nước phát triển theo định hướng xã hội chủ nghĩa, nên lựa chọn đầy đủ phải thể hiện được toàn bộ các vế gắn kết này.",
       "answers": [
         {
           "id": 1,
           "content": "Tăng cường chỉnh đốn Đảng và hệ thống chính trị...",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 60
         },
         {
           "id": 2,
           "content": "Tăng cường xây dựng, chỉnh đốn Đảng và hệ thống chính trị trong sạch, vững mạnh; khơi dậy ý chí và quyết tâm phát triển đất nước, phát huy sức mạnh đại đoàn kết toàn dân tộc kết hợp với sức mạnh thời đại; tiếp tục đẩy mạnh toàn diện, đồng bộ công cuộc đổi mới; xây dựng và bảo vệ vững chắc Tổ quốc, giữ vững môi trường hòa bình, ổn định; phấn đấu để đến giữa thế kỷ 21, nước ta trở thành một nước phát triển, theo định hướng xã hội chủ nghĩa.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 60
         },
         {
           "id": 3,
           "content": "Tiếp tục đẩy mạnh toàn diện...",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 60
         },
         {
           "id": 4,
           "content": "Tăng cường xây dựng Đảng trong sạch vững mạnh...",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 60
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Tăng cường chỉnh đốn Đảng và hệ thống chính trị...",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 60
+        },
+        {
+          "id": 2,
+          "content": "Tăng cường xây dựng, chỉnh đốn Đảng và hệ thống chính trị trong sạch, vững mạnh; khơi dậy ý chí và quyết tâm phát triển đất nước, phát huy sức mạnh đại đoàn kết toàn dân tộc kết hợp với sức mạnh thời đại; tiếp tục đẩy mạnh toàn diện, đồng bộ công cuộc đổi mới; xây dựng và bảo vệ vững chắc Tổ quốc, giữ vững môi trường hòa bình, ổn định; phấn đấu để đến giữa thế kỷ 21, nước ta trở thành một nước phát triển, theo định hướng xã hội chủ nghĩa.",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 60
+        },
+        {
+          "id": 3,
+          "content": "Tiếp tục đẩy mạnh toàn diện...",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 60
+        },
+        {
+          "id": 4,
+          "content": "Tăng cường xây dựng Đảng trong sạch vững mạnh...",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 60
+        }
+      ]
     }
   ]
 }

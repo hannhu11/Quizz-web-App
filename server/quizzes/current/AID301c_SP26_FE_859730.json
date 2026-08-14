@@ -8,1426 +8,3421 @@
       "id": 1,
       "questionIndex": 0,
       "content": "What is a poisoning attack?",
-      "explanation": "Đáp án chính xác là B (B: An attack that injects malicious data into the training set).",
+      "explanation": "Poisoning attack làm ô nhiễm training data bằng cách chèn mẫu độc hại, sửa feature hoặc gán nhãn sai trước khi mô hình học. Vì model coi những mẫu đó là dữ liệu hợp lệ, hành vi dự báo sau này có thể lệch có chủ đích hoặc xuất hiện backdoor. Đây khác với tấn công lúc deployment hay test, vốn không thay đổi trực tiếp tập huấn luyện.",
       "answers": [
         {
           "id": 1,
           "content": "An attack that occurs during model deployment",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 1
         },
         {
           "id": 2,
           "content": "An attack that injects malicious data into the training set",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 1
         },
         {
           "id": 3,
           "content": "An attack that modifies the model's architecture",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 1
         },
         {
           "id": 4,
           "content": "An attack that occurs only at test time",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 1
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "An attack that occurs during model deployment",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 1
+        },
+        {
+          "id": 2,
+          "content": "An attack that injects malicious data into the training set",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 1
+        },
+        {
+          "id": 3,
+          "content": "An attack that modifies the model's architecture",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 1
+        },
+        {
+          "id": 4,
+          "content": "An attack that occurs only at test time",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 1
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 2,
       "questionIndex": 1,
       "content": "Which command-line tool is used to interact with the Kubernetes API?",
-      "explanation": "Đáp án chính xác là B (B: Kube CTL).",
+      "explanation": "kubectl là công cụ dòng lệnh gửi yêu cầu đến Kubernetes API để làm việc với control plane của cluster. Người dùng có thể dùng nó để xem, tạo, cập nhật và gỡ các resource như pod, service hoặc deployment. Kubelet thực thi nhiệm vụ trên node, Docker chạy container, còn Helm quản lý chart nên không thay thế vai trò CLI của kubectl.",
       "answers": [
         {
           "id": 1,
           "content": "Kubelet",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 2
         },
         {
           "id": 2,
-          "content": "Kube CTL",
-          "isCorrect": true
+          "content": "kubectl",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 2
         },
         {
           "id": 3,
           "content": "Docker",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 2
         },
         {
           "id": 4,
           "content": "Helm",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 2
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Kubelet",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 2
+        },
+        {
+          "id": 2,
+          "content": "kubectl",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 2
+        },
+        {
+          "id": 3,
+          "content": "Docker",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 2
+        },
+        {
+          "id": 4,
+          "content": "Helm",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 2
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 3,
       "questionIndex": 2,
       "content": "What does the term \"trunk\" refer to in the context of Continuous Integration?",
-      "explanation": "Đáp án chính xác là B (B: The main branch of code where all changes are merged).",
+      "explanation": "Trong Continuous Integration, trunk là nhánh chính nơi nhóm tích hợp thay đổi thường xuyên sau khi build và test. Cách làm này hạn chế divergence kéo dài giữa các nhánh và làm xung đột xuất hiện sớm, dễ xử lý hơn. Trunk không phải tên bug, framework kiểm thử hay một chiến lược triển khai độc lập.",
       "answers": [
         {
           "id": 1,
           "content": "A type of software bug",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 3
         },
         {
           "id": 2,
           "content": "The main branch of code where all changes are merged",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 3
         },
         {
           "id": 3,
           "content": "A deployment strategy",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 3
         },
         {
           "id": 4,
           "content": "A testing framework",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 3
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "A type of software bug",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 3
+        },
+        {
+          "id": 2,
+          "content": "The main branch of code where all changes are merged",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 3
+        },
+        {
+          "id": 3,
+          "content": "A deployment strategy",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 3
+        },
+        {
+          "id": 4,
+          "content": "A testing framework",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 3
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 4,
       "questionIndex": 3,
       "content": "The decision tree base models in random forests individually have high bias and low variance.",
-      "explanation": "Đáp án chính xác là B (B: False).",
+      "explanation": "Cây quyết định đơn lẻ thường có low bias vì có thể khớp các ranh giới phức tạp trong dữ liệu, nhưng high variance do thay đổi mẫu huấn luyện có thể tạo cây khác đáng kể. Random forest lấy trung bình nhiều cây để giảm variance này. Vì vậy phát biểu gán high bias và low variance cho base tree đã đảo ngược đặc tính thông thường.",
       "answers": [
         {
           "id": 1,
           "content": "True",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 4
         },
         {
           "id": 2,
           "content": "False",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 4
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 4
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 4
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 5,
       "questionIndex": 4,
       "content": "Which Python package can be used to estimate test coverage?",
-      "explanation": "Đáp án chính xác là B (B: coverage).",
+      "explanation": "coverage theo dõi phần mã nguồn thực sự được chạy khi test suite thực thi, như số dòng hoặc nhánh đã được chạm tới. Báo cáo coverage giúp phát hiện code path chưa có test để bổ sung kiểm thử đúng trọng tâm. unittest và pytest chủ yếu tổ chức, chạy test; Flask là web framework, không thực hiện phép đo test coverage chuyên biệt này.",
       "answers": [
         {
           "id": 1,
           "content": "unittest",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 5
         },
         {
           "id": 2,
           "content": "coverage",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 5
         },
         {
           "id": 3,
           "content": "pytest",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 5
         },
         {
           "id": 4,
           "content": "flask",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 5
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "unittest",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 5
+        },
+        {
+          "id": 2,
+          "content": "coverage",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 5
+        },
+        {
+          "id": 3,
+          "content": "pytest",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 5
+        },
+        {
+          "id": 4,
+          "content": "flask",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 5
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 6,
       "questionIndex": 5,
       "content": "In the context of the AI workflow presented in these materials which of the following is not an example of a valid feedback loop?",
-      "explanation": "Đáp án chính xác là B (B: Returning to the data collection stage from transformations to reduce the number of transforms).",
+      "explanation": "Feedback loop có giá trị khi đầu ra của một pha tạo thông tin để cải thiện dữ liệu, giả thuyết, mô hình hoặc mục tiêu nghiệp vụ ở pha trước. Quay về data collection chỉ nhằm giảm số phép transformation không nêu một cơ chế học hỏi hợp lý, vì thêm dữ liệu không tự quyết định transform nào cần loại bỏ. Các vòng lặp khác có thể tạo insight thực tế sau modeling hoặc deployment.",
       "answers": [
         {
           "id": 1,
           "content": "Trying different data transformations on a given model",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 6
         },
         {
           "id": 2,
           "content": "Returning to the data collection stage from transformations to reduce the number of transforms",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 6
         },
         {
           "id": 3,
           "content": "Performing EDA on the data after a model has been deployed and data have been logged",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 6
         },
         {
           "id": 4,
           "content": "Moving from the business opportunity and data collection to model iteration",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 6
         },
         {
           "id": 5,
           "content": "Returning to discuss the business opportunity after a model has been deployed",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 6
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Trying different data transformations on a given model",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 6
+        },
+        {
+          "id": 2,
+          "content": "Returning to the data collection stage from transformations to reduce the number of transforms",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 6
+        },
+        {
+          "id": 3,
+          "content": "Performing EDA on the data after a model has been deployed and data have been logged",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 6
+        },
+        {
+          "id": 4,
+          "content": "Moving from the business opportunity and data collection to model iteration",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 6
+        },
+        {
+          "id": 5,
+          "content": "Returning to discuss the business opportunity after a model has been deployed",
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 6
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 7,
       "questionIndex": 6,
       "content": "When you compiled the JSON files into a single DataFrame or NumPy array, about how many days did the entire range of dates span?",
-      "explanation": "Đáp án chính xác là C (C: 500).",
+      "explanation": "Sau khi gộp các JSON thành một DataFrame hoặc NumPy array, cần so sánh ngày nhỏ nhất và lớn nhất để xác định toàn bộ time range. Kết quả bài thực hành cho thấy khoảng này vào khoảng 500 ngày. Giá trị đó nói về độ phủ thời gian của dữ liệu, không phải số hàng vì một ngày có thể chứa nhiều record.",
       "answers": [
         {
           "id": 1,
           "content": "400",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 7
         },
         {
           "id": 2,
           "content": "450",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 7
         },
         {
           "id": 3,
           "content": "500",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 7
         },
         {
           "id": 4,
           "content": "600",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 7
         },
         {
           "id": 5,
           "content": "650",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 7
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "400",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 7
+        },
+        {
+          "id": 2,
+          "content": "450",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 7
+        },
+        {
+          "id": 3,
+          "content": "500",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 7
+        },
+        {
+          "id": 4,
+          "content": "600",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 7
+        },
+        {
+          "id": 5,
+          "content": "650",
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 7
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 8,
       "questionIndex": 7,
       "content": "What is the purpose of kubectl in kubernetes?",
-      "explanation": "Đáp án chính xác là D (D: The CLI for communicating with the kubernetes cluster).",
+      "explanation": "kubectl tạo giao diện thống nhất giữa người vận hành và Kubernetes cluster từ terminal. Các lệnh của nó được gửi qua Kubernetes API tới control plane để truy vấn trạng thái hoặc thay đổi resource. Nó không phải node agent, công cụ dựng cụm local hay hệ thống log request-response; các chức năng đó thuộc những thành phần khác trong hệ sinh thái.",
       "answers": [
         {
           "id": 1,
           "content": "Automatic logging of requests and responses",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 8
         },
         {
           "id": 2,
           "content": "A tool that makes it easy to run a single-node cluster locally",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 8
         },
         {
           "id": 3,
           "content": "The primary node agent on each node, responsible for the processes running on that machine",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 8
         },
         {
           "id": 4,
           "content": "The CLI for communicating with the kubernetes cluster",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 8
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Automatic logging of requests and responses",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 8
+        },
+        {
+          "id": 2,
+          "content": "A tool that makes it easy to run a single-node cluster locally",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 8
+        },
+        {
+          "id": 3,
+          "content": "The primary node agent on each node, responsible for the processes running on that machine",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 8
+        },
+        {
+          "id": 4,
+          "content": "The CLI for communicating with the kubernetes cluster",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 8
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 9,
       "questionIndex": 8,
       "content": "A Kubernetes pod can contain multiple kubernetes deployments",
-      "explanation": "Đáp án chính xác là B (B: False).",
+      "explanation": "Pod là đơn vị triển khai bao quanh một hoặc nhiều container cần chia sẻ network và storage context. Deployment nằm ở tầng controller, có nhiệm vụ duy trì số pod replica mong muốn và quản lý cập nhật phiên bản. Vì quan hệ đúng là Deployment quản lý pod, một pod không thể chứa multiple deployments như phát biểu đưa ra.",
       "answers": [
         {
           "id": 1,
           "content": "True",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 9
         },
         {
           "id": 2,
           "content": "False",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 9
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 9
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 9
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 10,
       "questionIndex": 9,
       "content": "Which country had the most total revenue when you summed across all purchases?",
-      "explanation": "Đáp án chính xác là B (B: United Kingdom).",
+      "explanation": "Cách xác định quốc gia có doanh thu cao nhất là group các purchase theo country rồi tính tổng monetary value của từng nhóm. Trong kết quả bán hàng của bài tập, United Kingdom có tổng revenue lớn nhất giữa các phương án nêu ra. Kết luận này dựa trên phép aggregate doanh thu, không suy ra từ số lượng khách hàng hoặc cảm nhận về quy mô thị trường.",
       "answers": [
         {
           "id": 1,
           "content": "Singapore",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10
         },
         {
           "id": 2,
           "content": "United Kingdom",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 10
         },
         {
           "id": 3,
           "content": "USA",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 10
         },
         {
           "id": 4,
           "content": "EIRE",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 10
         },
         {
           "id": 5,
           "content": "Germany",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 10
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Singapore",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10
+        },
+        {
+          "id": 2,
+          "content": "United Kingdom",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 10
+        },
+        {
+          "id": 3,
+          "content": "USA",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 10
+        },
+        {
+          "id": 4,
+          "content": "EIRE",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 10
+        },
+        {
+          "id": 5,
+          "content": "Germany",
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 10
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 11,
       "questionIndex": 10,
       "content": "Which of the following is a key aspect of applying data transformations?",
-      "explanation": "Đáp án chính xác là B (B: Iteration).",
+      "explanation": "Data transformation cần iteration vì mỗi phép scaling, encoding hay biến đổi phân phối phải được đánh giá lại qua chất lượng dữ liệu và tác động đến model. Một lựa chọn hữu ích cho thuật toán này có thể làm thuật toán khác hoạt động kém hơn. Lặp và điều chỉnh giúp pipeline cải thiện dần thay vì coi preprocessing là thao tác cố định chỉ thực hiện một lần.",
       "answers": [
         {
           "id": 1,
           "content": "Data collection",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 11
         },
         {
           "id": 2,
           "content": "Iteration",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 11
         },
         {
           "id": 3,
           "content": "Data visualization",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 11
         },
         {
           "id": 4,
           "content": "Data storage",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 11
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Data collection",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 11
+        },
+        {
+          "id": 2,
+          "content": "Iteration",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 11
+        },
+        {
+          "id": 3,
+          "content": "Data visualization",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 11
+        },
+        {
+          "id": 4,
+          "content": "Data storage",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 11
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 12,
       "questionIndex": 11,
       "content": "What is the primary purpose of dimensionality reduction in data science?",
-      "explanation": "Đáp án chính xác là B (B: To simplify models and reduce computation time).",
+      "explanation": "Dimensionality reduction biểu diễn dữ liệu trong số chiều thấp hơn, giữ lại thông tin quan trọng nhưng loại bớt feature dư thừa hoặc nhiễu. Nhờ ít biến hơn, model có thể train nhanh, dễ trực quan hóa và giảm nguy cơ overfitting trong nhiều tình huống. Mục đích không phải tăng độ phức tạp hay xóa toàn bộ observation, mà là đơn giản hóa có kiểm soát.",
       "answers": [
         {
           "id": 1,
           "content": "To increase the number of features",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 12
         },
         {
           "id": 2,
           "content": "To simplify models and reduce computation time",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 12
         },
         {
           "id": 3,
           "content": "To eliminate all data points",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 12
         },
         {
           "id": 4,
           "content": "To create more complex models",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 12
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "To increase the number of features",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 12
+        },
+        {
+          "id": 2,
+          "content": "To simplify models and reduce computation time",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 12
+        },
+        {
+          "id": 3,
+          "content": "To eliminate all data points",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 12
+        },
+        {
+          "id": 4,
+          "content": "To create more complex models",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 12
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 13,
       "questionIndex": 12,
       "content": "What is a common issue with using accuracy as a metric for imbalanced classes?",
-      "explanation": "Đáp án chính xác là B (B: It can be misleading.).",
+      "explanation": "Accuracy là tỷ lệ dự báo đúng chung nên dễ bị lớp đa số chi phối trong imbalanced dataset. Một model chỉ chọn nhãn phổ biến vẫn có thể đạt accuracy cao, dù không nhận diện được lớp hiếm có ý nghĩa nghiệp vụ. Vì vậy accuracy có thể misleading và cần được đọc cùng precision, recall, F1-score hoặc đường cong phù hợp.",
       "answers": [
         {
           "id": 1,
           "content": "It is always accurate.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 13
         },
         {
           "id": 2,
           "content": "It can be misleading.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 13
         },
         {
           "id": 3,
           "content": "It is the only metric available.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 13
         },
         {
           "id": 4,
           "content": "It does not consider false positives.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 13
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "It is always accurate.",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 13
+        },
+        {
+          "id": 2,
+          "content": "It can be misleading.",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 13
+        },
+        {
+          "id": 3,
+          "content": "It is the only metric available.",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 13
+        },
+        {
+          "id": 4,
+          "content": "It does not consider false positives.",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 13
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 14,
       "questionIndex": 13,
       "content": "What type of data structures are used as standardized input to the interfaces in scikit-learn?",
-      "explanation": "Đáp án chính xác là C (C: NumPy arrays and SciPy sparse matrices).",
+      "explanation": "Nhiều estimator trong scikit-learn nhận NumPy arrays hoặc SciPy sparse matrices như định dạng đầu vào chuẩn cho feature matrix. Hai cấu trúc này biểu diễn hiệu quả dữ liệu dense lẫn dữ liệu có nhiều giá trị bằng không, đồng thời giúp các bước pipeline tương thích nhau. List, dictionary, string và tuple không cung cấp quy ước ma trận đặc trưng thống nhất như vậy.",
       "answers": [
         {
           "id": 1,
           "content": "Lists and dictionaries",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 14
         },
         {
           "id": 2,
           "content": "DataFrames and Series",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 14
         },
         {
           "id": 3,
           "content": "NumPy arrays and SciPy sparse matrices",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 14
         },
         {
           "id": 4,
           "content": "Strings and tuples",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 14
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Lists and dictionaries",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 14
+        },
+        {
+          "id": 2,
+          "content": "DataFrames and Series",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 14
+        },
+        {
+          "id": 3,
+          "content": "NumPy arrays and SciPy sparse matrices",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 14
+        },
+        {
+          "id": 4,
+          "content": "Strings and tuples",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 14
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 15,
       "questionIndex": 14,
       "content": "The .fit_transform method corresponds to which scikit-learn interface(s)?",
-      "explanation": "Đáp án chính xác là D (D: Transformer).",
+      "explanation": "Transformer học cách biến đổi dữ liệu và cung cấp fit_transform để kết hợp việc fit tham số với transform dữ liệu trong một thao tác. Chẳng hạn StandardScaler ước lượng statistic cần thiết rồi chuẩn hóa feature. Predictor phải có predict để tạo dự báo, còn Estimator chung không bắt buộc có transform, nên fit_transform chỉ đặc trưng cho interface Transformer.",
       "answers": [
         {
           "id": 1,
           "content": "Transformer, Estimator, Predictor",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 15
         },
         {
           "id": 2,
           "content": "Transformer, Estimator",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 15
         },
         {
           "id": 3,
           "content": "Estimator, Predictor",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 15
         },
         {
           "id": 4,
           "content": "Transformer",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 15
         },
         {
           "id": 5,
           "content": "Transformer, Predictor",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 15
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Transformer, Estimator, Predictor",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 15
+        },
+        {
+          "id": 2,
+          "content": "Transformer, Estimator",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 15
+        },
+        {
+          "id": 3,
+          "content": "Estimator, Predictor",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 15
+        },
+        {
+          "id": 4,
+          "content": "Transformer",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 15
+        },
+        {
+          "id": 5,
+          "content": "Transformer, Predictor",
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 15
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 16,
       "questionIndex": 15,
       "content": "Which process model is known for its open standard and has been around since 1996?",
-      "explanation": "Đáp án chính xác là B (B: CRISP-DM).",
+      "explanation": "CRISP-DM là framework chuẩn mở cho data mining, xuất hiện từ năm 1996 và mô tả chu trình từ business understanding đến deployment. Các pha của nó liên kết mục tiêu nghiệp vụ với hiểu dữ liệu, chuẩn bị dữ liệu, modeling và evaluation theo cách có thể quay lại cải tiến. OSEMN, Agile và Design Thinking có công dụng riêng nhưng không khớp nguồn gốc chuẩn mở này.",
       "answers": [
         {
           "id": 1,
           "content": "OSEMN",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 16
         },
         {
           "id": 2,
           "content": "CRISP-DM",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 16
         },
         {
           "id": 3,
           "content": "Design Thinking",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 16
         },
         {
           "id": 4,
           "content": "Agile",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 16
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "OSEMN",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 16
+        },
+        {
+          "id": 2,
+          "content": "CRISP-DM",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 16
+        },
+        {
+          "id": 3,
+          "content": "Design Thinking",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 16
+        },
+        {
+          "id": 4,
+          "content": "Agile",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 16
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 17,
       "questionIndex": 16,
       "content": "Which library in Python is commonly used for reading and writing CSV files?",
-      "explanation": "Đáp án chính xác là C (C: Pandas).",
+      "explanation": "Pandas là thư viện được dùng phổ biến để đọc và ghi CSV nhờ read_csv, to_csv và DataFrame có nhãn cột rõ ràng. Nó hỗ trợ xử lý missing value, kiểu dữ liệu hỗn hợp, lọc và tổng hợp theo bảng trong cùng workflow. NumPy, Matplotlib và SciPy phục vụ số học, trực quan hóa hoặc khoa học tính toán nhưng không chuyên về thao tác CSV dạng bảng.",
       "answers": [
         {
           "id": 1,
           "content": "NumPy",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 17
         },
         {
           "id": 2,
           "content": "Matplotlib",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 17
         },
         {
           "id": 3,
           "content": "Pandas",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 17
         },
         {
           "id": 4,
           "content": "SciPy",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 17
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "NumPy",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 17
+        },
+        {
+          "id": 2,
+          "content": "Matplotlib",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 17
+        },
+        {
+          "id": 3,
+          "content": "Pandas",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 17
+        },
+        {
+          "id": 4,
+          "content": "SciPy",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 17
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 18,
       "questionIndex": 17,
       "content": "When embarking on a data science project, why do you ultimately want to format your data so that it can be housed in something like a Pandas DataFrame or NumPy Array?",
-      "explanation": "Đáp án chính xác là C (C: Nearly all modeling algorithms take input data in a tabular format analogous to format of DataFrame/Arrays.).",
+      "explanation": "Thuật toán modeling thường cần input dạng tabular, trong đó mỗi row là một observation và mỗi column là một feature. Pandas DataFrame cùng NumPy Array tổ chức dữ liệu đúng cấu trúc này, giúp tách biến đầu vào, nhãn và đưa dữ liệu qua transformer dễ dàng. Chúng không phải những cấu trúc duy nhất chứa dữ liệu, nhưng phù hợp nhất với interface của đa số model.",
       "answers": [
         {
           "id": 1,
           "content": "DataFrames/Arrays most closely resemble tables in relational databases.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 18
         },
         {
           "id": 2,
           "content": "DataFrames/Arrays are the only structures in Python capable of holding significant amounts of data.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 18
         },
         {
           "id": 3,
           "content": "Nearly all modeling algorithms take input data in a tabular format analogous to format of DataFrame/Arrays.",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 18
         },
         {
           "id": 4,
           "content": "All of the answers.",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 18
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "DataFrames/Arrays most closely resemble tables in relational databases.",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 18
+        },
+        {
+          "id": 2,
+          "content": "DataFrames/Arrays are the only structures in Python capable of holding significant amounts of data.",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 18
+        },
+        {
+          "id": 3,
+          "content": "Nearly all modeling algorithms take input data in a tabular format analogous to format of DataFrame/Arrays.",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 18
+        },
+        {
+          "id": 4,
+          "content": "All of the answers.",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 18
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 19,
       "questionIndex": 18,
       "content": "What is the primary purpose of documenting your data before starting a project?",
-      "explanation": "Đáp án chính xác là B (B: To streamline the modeling process and ensure data quality).",
+      "explanation": "Documenting data ghi lại nguồn gốc, schema, nghĩa của field, quy tắc làm sạch và các cảnh báo về data quality trước modeling. Nhờ hiểu đúng dữ liệu, nhóm chọn preprocessing thích hợp, giảm lỗi diễn giải và tái lập pipeline khi cần audit. Đây là cách streamline modeling process và bảo đảm chất lượng, không nhằm gây ấn tượng hay tránh dùng Python.",
       "answers": [
         {
           "id": 1,
           "content": "To impress stakeholders",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 19
         },
         {
           "id": 2,
           "content": "To streamline the modeling process and ensure data quality",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 19
         },
         {
           "id": 3,
           "content": "To increase project costs",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 19
         },
         {
           "id": 4,
           "content": "To avoid using Python",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 19
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "To impress stakeholders",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 19
+        },
+        {
+          "id": 2,
+          "content": "To streamline the modeling process and ensure data quality",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 19
+        },
+        {
+          "id": 3,
+          "content": "To increase project costs",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 19
+        },
+        {
+          "id": 4,
+          "content": "To avoid using Python",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 19
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 20,
       "questionIndex": 19,
       "content": "For given input lists: a,b,c and 1,2,3 Create a dictionary from two input lists",
-      "explanation": "Đáp án chính xác là A (A: def make_dict(lst1,lst2): res = {} for key,value in zip(lst1,lst2): res[key] = value return res).",
+      "explanation": "Dictionary đúng cần ghép từng phần tử của hai list theo cùng chỉ số bằng zip, rồi lưu cặp key-value vào một mapping rỗng. Khi đó a, b, c lần lượt liên kết với 1, 2, 3 và hàm return lại dictionary hoàn chỉnh. Lỗi xuống dòng trong nguồn đã làm block code mất cấu trúc, vì vậy cần phục hồi cú pháp Python đa dòng để lựa chọn có thể thực thi và được học đúng.",
       "answers": [
         {
           "id": 1,
-          "content": "def make_dict(lst1,lst2): res = {} for key,value in zip(lst1,lst2): res[key] = value return res",
-          "isCorrect": true
+          "content": "def make_dict(lst1, lst2):\n    res = {}\n    for key, value in zip(lst1, lst2):\n        res[key] = value\n    return res",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 20
         },
         {
           "id": 2,
-          "content": "def make_dict(lst1,lst2): res = {} res[lst1] = lst2 return res",
-          "isCorrect": false
+          "content": "def make_dict(lst1, lst2):\n    res = {}\n    res[lst1] = lst2\n    return res",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 20
         },
         {
           "id": 3,
-          "content": "def make_dict(lst1,lst2): res = [] for key,value in (lst1,lst2): res[key] = value return res",
-          "isCorrect": false
+          "content": "def make_dict(lst1, lst2):\n    res = []\n    for key, value in (lst1, lst2):\n        res[key] = value\n    return res",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 20
         },
         {
           "id": 4,
-          "content": "def make_dict(lst1,lst2): res = [] for key,value in zip(lst1,lst2): res[key] = value return res",
-          "isCorrect": false
+          "content": "def make_dict(lst1, lst2):\n    res = []\n    for key, value in zip(lst1, lst2):\n        res[key] = value\n    return res",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 20
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "def make_dict(lst1, lst2):\n    res = {}\n    for key, value in zip(lst1, lst2):\n        res[key] = value\n    return res",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 20
+        },
+        {
+          "id": 2,
+          "content": "def make_dict(lst1, lst2):\n    res = {}\n    res[lst1] = lst2\n    return res",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 20
+        },
+        {
+          "id": 3,
+          "content": "def make_dict(lst1, lst2):\n    res = []\n    for key, value in (lst1, lst2):\n        res[key] = value\n    return res",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 20
+        },
+        {
+          "id": 4,
+          "content": "def make_dict(lst1, lst2):\n    res = []\n    for key, value in zip(lst1, lst2):\n        res[key] = value\n    return res",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 20
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 21,
       "questionIndex": 20,
       "content": "Which of the following is NOT a factor that affects the time spent on data cleaning?",
-      "explanation": "Đáp án chính xác là D (D: Company size).",
+      "explanation": "Thời gian data cleaning thay đổi theo team experience, data quality và project requirements vì chúng quyết định số lỗi, mức độ chuẩn hóa và số quy tắc cần áp dụng. Company size không tự nói lên dataset bẩn đến đâu hoặc bao nhiêu phép biến đổi cần làm. Vì thế quy mô công ty không phải nhân tố kỹ thuật trực tiếp chi phối thời lượng làm sạch.",
       "answers": [
         {
           "id": 1,
           "content": "Team experience",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 21
         },
         {
           "id": 2,
           "content": "Data quality",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 21
         },
         {
           "id": 3,
           "content": "Project requirements",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 21
         },
         {
           "id": 4,
           "content": "Company size",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 21
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Team experience",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 21
+        },
+        {
+          "id": 2,
+          "content": "Data quality",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 21
+        },
+        {
+          "id": 3,
+          "content": "Project requirements",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 21
+        },
+        {
+          "id": 4,
+          "content": "Company size",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 21
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 22,
       "questionIndex": 21,
       "content": "What is the first stage of the design thinking process?",
-      "explanation": "Đáp án chính xác là B (B: Empathize).",
+      "explanation": "Empathize là điểm khởi đầu của design thinking vì nhóm cần hiểu trải nghiệm, động cơ và pain point thực tế của người dùng. Insight thu được ở đây giúp định nghĩa đúng vấn đề trước khi bước sang ideate, prototype và test. Nếu không có đồng cảm, giải pháp có thể hợp lý về kỹ thuật nhưng giải sai nhu cầu cần giải quyết.",
       "answers": [
         {
           "id": 1,
           "content": "Ideate",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 22
         },
         {
           "id": 2,
           "content": "Empathize",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 22
         },
         {
           "id": 3,
           "content": "Prototype",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 22
         },
         {
           "id": 4,
           "content": "Test",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 22
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Ideate",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 22
+        },
+        {
+          "id": 2,
+          "content": "Empathize",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 22
+        },
+        {
+          "id": 3,
+          "content": "Prototype",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 22
+        },
+        {
+          "id": 4,
+          "content": "Test",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 22
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 23,
       "questionIndex": 22,
       "content": "Thinking with the lens of the scientific process, what would your next steps be if you wanted to decide where to open the next store for your sled business?",
-      "explanation": "Gather more data and repeat the snowfall experiment | C: Gather different data say snowfall by county and repeat the experiment | D: Start a business viability assessment for all three states).",
+      "explanation": "Ba bước được chọn đều mở rộng hoặc kiểm tra bằng chứng trước khi chốt vị trí cửa hàng sled: lặp snowfall experiment, thu thập dữ liệu theo county và đánh giá khả thi cho cả ba bang. Chúng giúp kiểm nghiệm giả thuyết ở độ chi tiết cao hơn và kết nối điều kiện thời tiết với quyết định kinh doanh. Chỉ kéo dữ liệu để đánh giá riêng Vermont sẽ thu hẹp phạm vi quá sớm so với mục tiêu so sánh các lựa chọn.",
       "answers": [
         {
           "id": 1,
           "content": "Start pulling sales and other data to create a business viability assessment for Vermont",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 23
         },
         {
           "id": 2,
           "content": "Gather more data and repeat the snowfall experiment",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 23
         },
         {
           "id": 3,
           "content": "Gather different data say snowfall by county and repeat the experiment",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 23
         },
         {
           "id": 4,
           "content": "Start a business viability assessment for all three states",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 23
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Start pulling sales and other data to create a business viability assessment for Vermont",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 23
+        },
+        {
+          "id": 2,
+          "content": "Gather more data and repeat the snowfall experiment",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 23
+        },
+        {
+          "id": 3,
+          "content": "Gather different data say snowfall by county and repeat the experiment",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 23
+        },
+        {
+          "id": 4,
+          "content": "Start a business viability assessment for all three states",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 23
+        }
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 24,
       "questionIndex": 23,
       "content": "Sparse matrices can be useful as a target destination for ETL, but what are the main caveats (choose one or more)?",
-      "explanation": "Đáp án chính xác là B, E (B: NumPy linear algebra functions generally cannot be called directly | E: It is difficult to print to screen scipy.sparse matrices directly).",
+      "explanation": "scipy.sparse giúp tiết kiệm bộ nhớ khi dữ liệu có nhiều số không, nhưng không phải mọi hàm NumPy linear algebra đều hoạt động trực tiếp với sparse representation. Việc print một sparse matrix đầy đủ cũng khó trực quan vì cấu trúc ưu tiên lưu vị trí phần tử khác không. Hai caveat này liên quan đến khả năng tương thích phép toán và hiển thị, chứ không cấm lưu hay chia dữ liệu.",
       "answers": [
         {
           "id": 1,
           "content": "You cannot convert directly from a numpy.array to any of the scipy.sparse matrices",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 24
         },
         {
           "id": 2,
           "content": "NumPy linear algebra functions generally cannot be called directly",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 24
         },
         {
           "id": 3,
           "content": "Saving to disk is not possible directly from a scipy.sparse format",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 24
         },
         {
           "id": 4,
           "content": "The train test splits need to be performed by hand with scipy.sparse matrices",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 24
         },
         {
           "id": 5,
           "content": "It is difficult to print to screen scipy.sparse matrices directly",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 4,
+          "question_target_id": 24
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "You cannot convert directly from a numpy.array to any of the scipy.sparse matrices",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 24
+        },
+        {
+          "id": 2,
+          "content": "NumPy linear algebra functions generally cannot be called directly",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 24
+        },
+        {
+          "id": 3,
+          "content": "Saving to disk is not possible directly from a scipy.sparse format",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 24
+        },
+        {
+          "id": 4,
+          "content": "The train test splits need to be performed by hand with scipy.sparse matrices",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 24
+        },
+        {
+          "id": 5,
+          "content": "It is difficult to print to screen scipy.sparse matrices directly",
+          "is_correct": true,
+          "index_order": 4,
+          "question_target_id": 24
+        }
+      ],
+      "questionType": "Multiple Choice"
     },
     {
       "id": 25,
       "questionIndex": 24,
       "content": "Why is granular data preferred over summary level data?",
-      "explanation": "Đáp án chính xác là B (B: It allows for more detailed analysis).",
+      "explanation": "Granular data giữ thông tin ở cấp chi tiết, cho phép analyst tự tổng hợp theo thời gian, khách hàng hoặc khu vực tùy câu hỏi mới. Summary level data đã gộp sẵn nên có thể che mất ngoại lệ và làm không thể quay lại phân tích nguyên nhân ở nhóm nhỏ. Vì vậy dữ liệu granular hỗ trợ detailed analysis linh hoạt hơn, không chỉ làm dữ liệu dễ thu thập hoặc đẹp hơn.",
       "answers": [
         {
           "id": 1,
           "content": "It is easier to collect",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 25
         },
         {
           "id": 2,
           "content": "It allows for more detailed analysis",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 25
         },
         {
           "id": 3,
           "content": "It takes less time to process",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 25
         },
         {
           "id": 4,
           "content": "It is more visually appealing",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 25
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "It is easier to collect",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 25
+        },
+        {
+          "id": 2,
+          "content": "It allows for more detailed analysis",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 25
+        },
+        {
+          "id": 3,
+          "content": "It takes less time to process",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 25
+        },
+        {
+          "id": 4,
+          "content": "It is more visually appealing",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 25
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 26,
       "questionIndex": 25,
       "content": "A decision tree classifier is useful as a model for the AAVAIl subscriber churn data.",
-      "explanation": "Đáp án chính xác là A (A: True).",
+      "explanation": "Decision tree classifier phù hợp với subscriber churn vì nó tạo các quy tắc phân chia dễ hiểu từ feature như usage, hợp đồng hoặc hành vi thanh toán. Mỗi nhánh cho thấy tổ hợp điều kiện có thể đẩy xác suất rời bỏ lên cao, hữu ích cho hành động giữ chân khách hàng. Với AAVAIl data, đây là một model classification có giá trị dù vẫn nên so sánh với lựa chọn khác.",
       "answers": [
         {
           "id": 1,
           "content": "True",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 26
         },
         {
           "id": 2,
           "content": "False",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 26
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 26
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 26
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 27,
       "questionIndex": 26,
       "content": "When you use Watson Services like Watson Natural Language Understanding via the Python SDK, what are the three items that need to be saved? These items are generally saved on a local machine and included in scripts and notebooks as imported variables.",
-      "explanation": "Đáp án chính xác là C (C: service API key, service version, service URL).",
+      "explanation": "Watson Natural Language Understanding qua Python SDK cần service API key để xác thực, service version để xác định phiên bản hành vi API và service URL để gọi đúng endpoint. Lưu các giá trị này bên ngoài script giúp cấu hình rõ ràng và tránh ghi credential trực tiếp trong mã nguồn. IAMAuthenticator được tạo từ API key, không thay thế một trong ba thông tin cốt lõi.",
       "answers": [
         {
           "id": 1,
           "content": "service version, service API key, service JSON map",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 27
         },
         {
           "id": 2,
           "content": "service URL, service JSON map, service API key",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 27
         },
         {
           "id": 3,
           "content": "service API key, service version, service URL",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 27
         },
         {
           "id": 4,
           "content": "service version, service IAMAuthenticator, service URL",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 27
         },
         {
           "id": 5,
           "content": "service API key, service URL, service IAMAuthenticator",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 27
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "service version, service API key, service JSON map",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 27
+        },
+        {
+          "id": 2,
+          "content": "service URL, service JSON map, service API key",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 27
+        },
+        {
+          "id": 3,
+          "content": "service API key, service version, service URL",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 27
+        },
+        {
+          "id": 4,
+          "content": "service version, service IAMAuthenticator, service URL",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 27
+        },
+        {
+          "id": 5,
+          "content": "service API key, service URL, service IAMAuthenticator",
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 27
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 28,
       "questionIndex": 27,
       "content": "Which of the following neural network architectures are most-commonly used for time-series analysis?",
-      "explanation": "Đáp án chính xác là B (B: Recurrent neural networks).",
+      "explanation": "Recurrent neural networks xử lý time-series bằng cách mang hidden state từ timestep trước sang timestep sau. Cơ chế này cho phép prediction hiện tại sử dụng lịch sử chuỗi, phù hợp với doanh số, tín hiệu cảm biến hoặc dữ liệu tuần tự khác. Multi-layer perceptron không duy trì trạng thái theo thời gian; transfer learning là chiến lược, còn autoencoder chủ yếu học representation.",
       "answers": [
         {
           "id": 1,
           "content": "Multi-layer perceptron",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 28
         },
         {
           "id": 2,
           "content": "Recurrent neural networks",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 28
         },
         {
           "id": 3,
           "content": "Transfer learning",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 28
         },
         {
           "id": 4,
           "content": "Convolutional neural network",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 28
         },
         {
           "id": 5,
           "content": "Autoencoders",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 28
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Multi-layer perceptron",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 28
+        },
+        {
+          "id": 2,
+          "content": "Recurrent neural networks",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 28
+        },
+        {
+          "id": 3,
+          "content": "Transfer learning",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 28
+        },
+        {
+          "id": 4,
+          "content": "Convolutional neural network",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 28
+        },
+        {
+          "id": 5,
+          "content": "Autoencoders",
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 28
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 29,
       "questionIndex": 28,
       "content": "In the context of NLP, what does sentiment analysis refer to?",
-      "explanation": "Đáp án chính xác là B (B: Determining the emotional tone behind a series of words).",
+      "explanation": "Sentiment analysis xác định emotional tone hay thái độ trong một series of words, ví dụ positive, negative hoặc neutral. Nhiệm vụ này cần suy ra quan điểm của người viết từ từ vựng và context, không chỉ phân tích syntax. Translation, document summarization và sentence structure analysis đều là tác vụ NLP khác với mục tiêu nhận diện cảm xúc.",
       "answers": [
         {
           "id": 1,
           "content": "Analyzing the structure of sentences",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 29
         },
         {
           "id": 2,
           "content": "Determining the emotional tone behind a series of words",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 29
         },
         {
           "id": 3,
           "content": "Translating text from one language to another",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 29
         },
         {
           "id": 4,
           "content": "Summarizing large documents",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 29
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Analyzing the structure of sentences",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 29
+        },
+        {
+          "id": 2,
+          "content": "Determining the emotional tone behind a series of words",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 29
+        },
+        {
+          "id": 3,
+          "content": "Translating text from one language to another",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 29
+        },
+        {
+          "id": 4,
+          "content": "Summarizing large documents",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 29
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 30,
       "questionIndex": 29,
       "content": "What is the purpose of the classification_report in sklearn?",
-      "explanation": "Đáp án chính xác là B (B: To summarize model performance).",
+      "explanation": "classification_report trong sklearn tóm tắt model performance theo từng class bằng precision, recall, F1-score và support. Nhờ báo cáo này, người dùng thấy rõ model xử lý từng nhãn ra sao thay vì chỉ nhìn một chỉ số tổng quát. Nó được dùng sau prediction để đánh giá, không phải công cụ visualize, preprocess hoặc train mô hình.",
       "answers": [
         {
           "id": 1,
           "content": "To visualize data",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 30
         },
         {
           "id": 2,
           "content": "To summarize model performance",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 30
         },
         {
           "id": 3,
           "content": "To preprocess data",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 30
         },
         {
           "id": 4,
           "content": "To train a model",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 30
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "To visualize data",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 30
+        },
+        {
+          "id": 2,
+          "content": "To summarize model performance",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 30
+        },
+        {
+          "id": 3,
+          "content": "To preprocess data",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 30
+        },
+        {
+          "id": 4,
+          "content": "To train a model",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 30
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 31,
       "questionIndex": 30,
       "content": "If you have data with a large number of features and you are sure that it will take some time to train and tune the model, which approach is LEAST likely to result in a speed improvement during grid-searching?",
-      "explanation": "Đáp án chính xác là B (B: Use the Shuffle and split form of cross-validation).",
+      "explanation": "Grid-search tốn thời gian vì cần fit nhiều tổ hợp parameter trên nhiều validation split. PCA, variance thresholding, randomized search và random subsetting đều có thể giảm kích thước bài toán hoặc số lần fit. ShuffleSplit chủ yếu thay cách sinh split; nếu số lần chia không giảm, nó không tự làm ít training hơn nên là lựa chọn ít có khả năng tăng tốc nhất.",
       "answers": [
         {
           "id": 1,
           "content": "In your pipeline use variance thresholding to limit the number of features",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 31
         },
         {
           "id": 2,
           "content": "Use the Shuffle and split form of cross-validation",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 31
         },
         {
           "id": 3,
           "content": "Use a randomized grid search form of cross validation",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 31
         },
         {
           "id": 4,
           "content": "Randomly subset the data",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 31
         },
         {
           "id": 5,
           "content": "Use PCA to reduce the dimensionality of the data before training",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 31
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "In your pipeline use variance thresholding to limit the number of features",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 31
+        },
+        {
+          "id": 2,
+          "content": "Use the Shuffle and split form of cross-validation",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 31
+        },
+        {
+          "id": 3,
+          "content": "Use a randomized grid search form of cross validation",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 31
+        },
+        {
+          "id": 4,
+          "content": "Randomly subset the data",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 31
+        },
+        {
+          "id": 5,
+          "content": "Use PCA to reduce the dimensionality of the data before training",
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 31
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 32,
       "questionIndex": 31,
       "content": "What is a key reason for using existing NLP APIs instead of building models from scratch?",
-      "explanation": "Đáp án chính xác là B (B: They require less time and resources).",
+      "explanation": "Existing NLP APIs giảm thời gian và resources vì nhà cung cấp đã chuẩn bị mô hình, endpoint, authentication, scaling và vận hành nền tảng. Nhóm có thể tích hợp chức năng NLP mà không phải xây toàn bộ corpus, pipeline train và deployment từ đầu. Điều này không bảo đảm API luôn chính xác hoặc làm mất nhu cầu kiểm soát dữ liệu đầu vào.",
       "answers": [
         {
           "id": 1,
           "content": "They are always more accurate",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 32
         },
         {
           "id": 2,
           "content": "They require less time and resources",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 32
         },
         {
           "id": 3,
           "content": "They are easier to understand",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 32
         },
         {
           "id": 4,
           "content": "They eliminate the need for data",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 32
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "They are always more accurate",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 32
+        },
+        {
+          "id": 2,
+          "content": "They require less time and resources",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 32
+        },
+        {
+          "id": 3,
+          "content": "They are easier to understand",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 32
+        },
+        {
+          "id": 4,
+          "content": "They eliminate the need for data",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 32
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 33,
       "questionIndex": 32,
       "content": "Which of the following is NOT a component of the confusion matrix?",
-      "explanation": "Đáp án chính xác là D (D: Average Score (AS)).",
+      "explanation": "Confusion matrix bao gồm bốn số đếm cơ bản là true positive, true negative, false positive và false negative. Các số đếm ấy mô tả quan hệ giữa prediction và nhãn thực, sau đó mới dùng để tính accuracy, recall hoặc precision. Average Score là metric tổng hợp bên ngoài ma trận, không phải một component nguyên gốc của confusion matrix.",
       "answers": [
         {
           "id": 1,
           "content": "True Negatives (TN)",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 33
         },
         {
           "id": 2,
           "content": "False Positives (FP)",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 33
         },
         {
           "id": 3,
           "content": "True Positives (TP)",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 33
         },
         {
           "id": 4,
           "content": "Average Score (AS)",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 33
         },
         {
           "id": 5,
           "content": "False Negatives (FN)",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 33
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "True Negatives (TN)",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 33
+        },
+        {
+          "id": 2,
+          "content": "False Positives (FP)",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 33
+        },
+        {
+          "id": 3,
+          "content": "True Positives (TP)",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 33
+        },
+        {
+          "id": 4,
+          "content": "Average Score (AS)",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 33
+        },
+        {
+          "id": 5,
+          "content": "False Negatives (FN)",
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 33
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 34,
       "questionIndex": 33,
       "content": "Which of the following classifiers is inherently designed for multiclass classification?",
-      "explanation": "Đáp án chính xác là B (B: Naïve Bayes).",
+      "explanation": "Naïve Bayes tính posterior probability cho mọi class, sau đó chọn class có xác suất lớn nhất dựa trên prior và likelihood của feature. Cơ chế này mở rộng trực tiếp cho multiclass classification mà không cần huấn luyện riêng từng cặp nhãn bắt buộc. Linear Regression dự báo số liên tục, K-Means không giám sát, còn decision tree binary mode chỉ có hai outcome.",
       "answers": [
         {
           "id": 1,
           "content": "Linear Regression",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 34
         },
         {
           "id": 2,
           "content": "Naïve Bayes",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 34
         },
         {
           "id": 3,
           "content": "K-Means Clustering",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 34
         },
         {
           "id": 4,
           "content": "Decision Trees (in binary mode)",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 34
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Linear Regression",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 34
+        },
+        {
+          "id": 2,
+          "content": "Naïve Bayes",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 34
+        },
+        {
+          "id": 3,
+          "content": "K-Means Clustering",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 34
+        },
+        {
+          "id": 4,
+          "content": "Decision Trees (in binary mode)",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 34
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 35,
       "questionIndex": 34,
       "content": "Processing the corpus with the provided lemmatize_document reduces the total number of tokens to what percentage of the original?",
-      "explanation": "Đáp án chính xác là D (D: 70-75%).",
+      "explanation": "Lemmatization giảm số token bằng cách quy những dạng chia thì, số nhiều và dẫn xuất về lemma đại diện. Trong corpus của bài tập, phép chuẩn hóa này còn giữ lại khoảng 70–75% token ban đầu, cho thấy nội dung không bị loại bỏ quá mạnh. Kết quả đó hợp lý vì nhiều từ được gộp dạng chứ không bị xóa hoàn toàn khỏi văn bản.",
       "answers": [
         {
           "id": 1,
           "content": "10-15%",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 35
         },
         {
           "id": 2,
           "content": "20-35%",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 35
         },
         {
           "id": 3,
           "content": "45-50%",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 35
         },
         {
           "id": 4,
           "content": "70-75%",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 35
         },
         {
           "id": 5,
           "content": "85-95%",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 35
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "10-15%",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 35
+        },
+        {
+          "id": 2,
+          "content": "20-35%",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 35
+        },
+        {
+          "id": 3,
+          "content": "45-50%",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 35
+        },
+        {
+          "id": 4,
+          "content": "70-75%",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 35
+        },
+        {
+          "id": 5,
+          "content": "85-95%",
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 35
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 36,
       "questionIndex": 35,
       "content": "Which of the following is the least valid statement when it comes to dashboards?",
-      "explanation": "Đáp án chính xác là D (D: Dashboards are quick way to create portable simple plots).",
+      "explanation": "Dashboards hữu ích khi kết hợp summary, interactive control và narrative để người xem khám phá kết quả phân tích theo ngữ cảnh. Chúng không chỉ là cách nhanh tạo portable simple plots, vì một dashboard tốt cần chọn KPI, thiết kế layout và bảo đảm dữ liệu tin cậy. Các phát biểu còn lại phản ánh đúng hơn vai trò của dashboards sau nhiều vòng lặp AI workflow.",
       "answers": [
         {
           "id": 1,
           "content": "Dashboards are an easy way to share summaries and findings",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 36
         },
         {
           "id": 2,
           "content": "Dashboards have interactive functionality that helps create a rich experience for the user",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 36
         },
         {
           "id": 3,
           "content": "Dashboards are generally used after serveral iterations of the AI workflow",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 36
         },
         {
           "id": 4,
           "content": "Dashboards are quick way to create portable simple plots",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 36
         },
         {
           "id": 5,
           "content": "Dashboards can be used to tell the story of investigative visualizations",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 36
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Dashboards are an easy way to share summaries and findings",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 36
+        },
+        {
+          "id": 2,
+          "content": "Dashboards have interactive functionality that helps create a rich experience for the user",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 36
+        },
+        {
+          "id": 3,
+          "content": "Dashboards are generally used after serveral iterations of the AI workflow",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 36
+        },
+        {
+          "id": 4,
+          "content": "Dashboards are quick way to create portable simple plots",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 36
+        },
+        {
+          "id": 5,
+          "content": "Dashboards can be used to tell the story of investigative visualizations",
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 36
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 37,
       "questionIndex": 36,
       "content": "What will the management team want to know after the sales data is released?",
-      "explanation": "Đáp án chính xác là B (B: If the teams are well-optimized based on historical sales data).",
+      "explanation": "Sau khi sales data được phát hành, management team cần biết cách tổ chức team có được tối ưu theo historical sales data hay chưa. Thông tin này hỗ trợ phân bổ nguồn lực và điều chỉnh vận hành dựa trên bằng chứng thay vì trực giác. Product count, marketing budget hay customer demographics có thể hữu ích, nhưng không trả lời trực tiếp hiệu quả tối ưu của đội ngũ.",
       "answers": [
         {
           "id": 1,
           "content": "The number of products sold",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 37
         },
         {
           "id": 2,
           "content": "If the teams are well-optimized based on historical sales data",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 37
         },
         {
           "id": 3,
           "content": "The marketing budget for each team",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 37
         },
         {
           "id": 4,
           "content": "The demographics of the customers",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 37
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "The number of products sold",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 37
+        },
+        {
+          "id": 2,
+          "content": "If the teams are well-optimized based on historical sales data",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 37
+        },
+        {
+          "id": 3,
+          "content": "The marketing budget for each team",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 37
+        },
+        {
+          "id": 4,
+          "content": "The demographics of the customers",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 37
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 38,
       "questionIndex": 37,
       "content": "There are many ways to carry out statistical inference. Which one method of the following is NOT used to compute estimates in the context of statistical inference.",
-      "explanation": "Đáp án chính xác là A (A: Null Hypothesis Significance Testing (NHST)).",
+      "explanation": "NHST đánh giá giả thuyết không bằng thống kê kiểm định và p-value; nó không trực tiếp tạo estimate tham số như những kỹ thuật inference khác. MLE, MCMC và EM đều xây dựng hoặc xấp xỉ giá trị ước lượng từ dữ liệu, còn permutation simulation có thể đánh giá phân phối ước lượng. Vì vậy NHST là phương pháp không dùng để compute estimates theo cách phân loại của câu hỏi.",
       "answers": [
         {
           "id": 1,
           "content": "Null Hypothesis Significance Testing (NHST)",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 38
         },
         {
           "id": 2,
           "content": "Maximum Likelihood Estimation (MLE)",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 38
         },
         {
           "id": 3,
           "content": "Markov Chain Monte Carlo (MCMC)",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 38
         },
         {
           "id": 4,
           "content": "Expectation Maximization (EM)",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 38
         },
         {
           "id": 5,
           "content": "Simulation via Permutations",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 38
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Null Hypothesis Significance Testing (NHST)",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 38
+        },
+        {
+          "id": 2,
+          "content": "Maximum Likelihood Estimation (MLE)",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 38
+        },
+        {
+          "id": 3,
+          "content": "Markov Chain Monte Carlo (MCMC)",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 38
+        },
+        {
+          "id": 4,
+          "content": "Expectation Maximization (EM)",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 38
+        },
+        {
+          "id": 5,
+          "content": "Simulation via Permutations",
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 38
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 39,
       "questionIndex": 38,
       "content": "What is a key principle of design thinking mentioned in the course?",
-      "explanation": "Đáp án chính xác là C (C: Rapid prototyping).",
+      "explanation": "Rapid prototyping cho phép đội thiết kế tạo thử một phiên bản nhỏ để kiểm chứng ý tưởng với người dùng ngay khi chưa đầu tư nhiều chi phí. Những phản hồi sớm giúp sửa sai về nhu cầu, interaction hoặc chức năng trước khi solution được xây hoàn chỉnh. Đây là key principle của design thinking vì quá trình học tập diễn ra qua thử nghiệm nhanh và lặp.",
       "answers": [
         {
           "id": 1,
           "content": "Data collection",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 39
         },
         {
           "id": 2,
           "content": "Observation and Reflection",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 39
         },
         {
           "id": 3,
           "content": "Rapid prototyping",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 39
         },
         {
           "id": 4,
           "content": "User testing",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 39
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Data collection",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 39
+        },
+        {
+          "id": 2,
+          "content": "Observation and Reflection",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 39
+        },
+        {
+          "id": 3,
+          "content": "Rapid prototyping",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 39
+        },
+        {
+          "id": 4,
+          "content": "User testing",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 39
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 40,
       "questionIndex": 39,
       "content": "Which method is recommended for handling missing values in numerical data?",
-      "explanation": "Đáp án chính xác là B (B: Use imputation techniques).",
+      "explanation": "Imputation xử lý numerical missing values bằng ước lượng có cơ sở như mean, median hoặc dự báo từ các biến khác, giúp dữ liệu vẫn dùng được cho model. Cách này thường bảo toàn nhiều thông tin hơn xóa toàn bộ dữ liệu hay thay giá trị bằng số ngẫu nhiên. Missing flag có thể bổ sung tín hiệu, nhưng không thay thế việc xử lý giá trị số bị khuyết.",
       "answers": [
         {
           "id": 1,
           "content": "Convert missing values to a flag",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 40
         },
         {
           "id": 2,
           "content": "Use imputation techniques",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 40
         },
         {
           "id": 3,
           "content": "Delete the entire dataset",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 40
         },
         {
           "id": 4,
           "content": "Replace with a random value",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 40
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Convert missing values to a flag",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 40
+        },
+        {
+          "id": 2,
+          "content": "Use imputation techniques",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 40
+        },
+        {
+          "id": 3,
+          "content": "Delete the entire dataset",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 40
+        },
+        {
+          "id": 4,
+          "content": "Replace with a random value",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 40
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 41,
       "questionIndex": 40,
       "content": "In the script example-spark-submit.sh, what does the #!/bin/bash line indicate?",
-      "explanation": "Đáp án chính xác là C (C: It tells the system to use the Bash shell to execute the script).",
+      "explanation": "Shebang #!/bin/bash đặt ở đầu example-spark-submit.sh để hệ điều hành gọi Bash khi thực thi script. Điều này bảo đảm syntax shell, biến môi trường và lệnh trong file được hiểu theo interpreter phù hợp. Dòng này không chỉ định tên script, không xác định ngôn ngữ Python và không phải comment không có hiệu lực.",
       "answers": [
         {
           "id": 1,
           "content": "It specifies the script's name",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 41
         },
         {
           "id": 2,
           "content": "It indicates the script is written in Python",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 41
         },
         {
           "id": 3,
           "content": "It tells the system to use the Bash shell to execute the script",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 41
         },
         {
           "id": 4,
           "content": "It is a comment and has no effect",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 41
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "It specifies the script's name",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 41
+        },
+        {
+          "id": 2,
+          "content": "It indicates the script is written in Python",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 41
+        },
+        {
+          "id": 3,
+          "content": "It tells the system to use the Bash shell to execute the script",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 41
+        },
+        {
+          "id": 4,
+          "content": "It is a comment and has no effect",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 41
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 42,
       "questionIndex": 41,
       "content": "Which Python package supports spawning processes for code optimization?",
-      "explanation": "Đáp án chính xác là C (C: multiprocessing).",
+      "explanation": "multiprocessing cung cấp process và pool để chia computation sang nhiều lõi CPU, đặc biệt thích hợp cho code optimization của tác vụ CPU-bound. Các process có interpreter riêng nên tránh hạn chế của Global Interpreter Lock với Python bytecode. threading thường hợp I/O-bound hơn, subprocess điều khiển chương trình bên ngoài, còn NumPy không cung cấp cơ chế spawn process tổng quát.",
       "answers": [
         {
           "id": 1,
           "content": "threading",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 42
         },
         {
           "id": 2,
           "content": "subprocess",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 42
         },
         {
           "id": 3,
           "content": "multiprocessing",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 42
         },
         {
           "id": 4,
           "content": "numpy",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 42
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "threading",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 42
+        },
+        {
+          "id": 2,
+          "content": "subprocess",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 42
+        },
+        {
+          "id": 3,
+          "content": "multiprocessing",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 42
+        },
+        {
+          "id": 4,
+          "content": "numpy",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 42
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 43,
       "questionIndex": 42,
       "content": "What is the first step in setting up the Watson Developer Cloud Python SDK?",
-      "explanation": "Đáp án chính xác là B (B: Create an IBM Cloud account).",
+      "explanation": "IBM Cloud account là bước đầu để tạo và quản lý instance Watson, nhận credential và cấp quyền gọi dịch vụ từ SDK. Sau khi có tài khoản, người dùng mới có thể tạo resource Natural Language Understanding rồi cấu hình API key và URL. Install package hoặc download tutorial có thể thực hiện sớm, nhưng không thay thế nền tảng tài khoản cloud cần thiết.",
       "answers": [
         {
           "id": 1,
           "content": "Install the SDK",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 43
         },
         {
           "id": 2,
           "content": "Create an IBM Cloud account",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 43
         },
         {
           "id": 3,
           "content": "Create a resource for Natural Language Understanding",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 43
         },
         {
           "id": 4,
           "content": "Download the tutorial files",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 43
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Install the SDK",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 43
+        },
+        {
+          "id": 2,
+          "content": "Create an IBM Cloud account",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 43
+        },
+        {
+          "id": 3,
+          "content": "Create a resource for Natural Language Understanding",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 43
+        },
+        {
+          "id": 4,
+          "content": "Download the tutorial files",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 43
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 44,
       "questionIndex": 43,
       "content": "Which command is used to install the Watson Developer Cloud Python SDK?",
-      "explanation": "Đáp án chính xác là A (A: pip install ibm-watson).",
+      "explanation": "pip install ibm-watson là câu lệnh dùng pip để cài Watson SDK vào Python environment. Khi package đã có, script mới import được client và các lớp service để khởi tạo kết nối. Tùy chọn --upgrade chỉ phù hợp với nâng cấp version, còn các lệnh thiếu từ pip không chỉ rõ package manager nên không phải cú pháp cài chuẩn.",
       "answers": [
         {
           "id": 1,
           "content": "pip install ibm-watson",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 44
         },
         {
           "id": 2,
           "content": "pip install --upgrade ibm-watson",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 44
         },
         {
           "id": 3,
           "content": "install ibm-watson",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 44
         },
         {
           "id": 4,
           "content": "upgrade ibm-watson",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 44
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "pip install ibm-watson",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 44
+        },
+        {
+          "id": 2,
+          "content": "pip install --upgrade ibm-watson",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 44
+        },
+        {
+          "id": 3,
+          "content": "install ibm-watson",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 44
+        },
+        {
+          "id": 4,
+          "content": "upgrade ibm-watson",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 44
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 45,
       "questionIndex": 44,
       "content": "Which of the following is a common challenge when optimizing code for machine learning models?",
-      "explanation": "Đáp án chính xác là B (B: Difficulty in improving training time for large models).",
+      "explanation": "Tối ưu training time cho large model là thách thức thường gặp vì mỗi epoch có thể bao gồm lượng lớn phép tính, memory access và truyền dữ liệu. Các biện pháp như profiling, batching, GPU hoặc parallel processing đều đòi hỏi đánh đổi kỹ thuật phù hợp. Những hạn chế về programming language hay sự thiếu data không trực tiếp mô tả vấn đề runtime nổi bật này.",
       "answers": [
         {
           "id": 1,
           "content": "Lack of available data",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 45
         },
         {
           "id": 2,
           "content": "Difficulty in improving training time for large models",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 45
         },
         {
           "id": 3,
           "content": "Inability to use multiple GPUs",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 45
         },
         {
           "id": 4,
           "content": "Limited programming languages available",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 45
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Lack of available data",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 45
+        },
+        {
+          "id": 2,
+          "content": "Difficulty in improving training time for large models",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 45
+        },
+        {
+          "id": 3,
+          "content": "Inability to use multiple GPUs",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 45
+        },
+        {
+          "id": 4,
+          "content": "Limited programming languages available",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 45
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 46,
       "questionIndex": 45,
       "content": "What is the purpose of profiling in code optimization?",
-      "explanation": "Đáp án chính xác là B (B: To identify which parts of the code are bottlenecks).",
+      "explanation": "Profiling cung cấp bằng chứng về nơi code đang tiêu tốn thời gian hoặc tài nguyên, chẳng hạn function gọi nhiều lần hay vòng lặp chậm. Nhờ đó, kỹ sư nhận diện bottleneck trước khi chọn vectorization, caching, parallelism hoặc thuật toán thay thế. Nó không tự tăng processor core và cũng không yêu cầu viết lại toàn bộ code từ đầu.",
       "answers": [
         {
           "id": 1,
           "content": "To write new algorithms from scratch",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 46
         },
         {
           "id": 2,
           "content": "To identify which parts of the code are bottlenecks",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 46
         },
         {
           "id": 3,
           "content": "To increase the number of processor cores",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 46
         },
         {
           "id": 4,
           "content": "To reduce the amount of data used",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 46
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "To write new algorithms from scratch",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 46
+        },
+        {
+          "id": 2,
+          "content": "To identify which parts of the code are bottlenecks",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 46
+        },
+        {
+          "id": 3,
+          "content": "To increase the number of processor cores",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 46
+        },
+        {
+          "id": 4,
+          "content": "To reduce the amount of data used",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 46
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 47,
       "questionIndex": 46,
       "content": "Docker containers run a private file system that is isolated from the host and other containers. What is the suggested way to access notebooks and scripts from within the container?",
-      "explanation": "Đáp án chính xác là C (C: bind mounts).",
+      "explanation": "Bind mounts đưa đường dẫn của host vào Docker container, nhờ vậy notebook và script có thể được truy cập, sửa đổi trong workflow phát triển mà không cần rebuild image. Cơ chế này tạo liên kết trực tiếp giữa filesystem host và container tại mount point. Named pipe và tmpfs có mục đích khác, GitHub là dịch vụ mã nguồn, còn volume không nhất thiết trỏ tới thư mục host cụ thể.",
       "answers": [
         {
           "id": 1,
           "content": "tmpfs mount",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 47
         },
         {
           "id": 2,
           "content": "use a named pipe",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 47
         },
         {
           "id": 3,
           "content": "bind mounts",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 47
         },
         {
           "id": 4,
           "content": "GitHub",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 47
         },
         {
           "id": 5,
           "content": "volumes",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 47
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "tmpfs mount",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 47
+        },
+        {
+          "id": 2,
+          "content": "use a named pipe",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 47
+        },
+        {
+          "id": 3,
+          "content": "bind mounts",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 47
+        },
+        {
+          "id": 4,
+          "content": "GitHub",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 47
+        },
+        {
+          "id": 5,
+          "content": "volumes",
+          "is_correct": false,
+          "index_order": 4,
+          "question_target_id": 47
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 48,
       "questionIndex": 47,
       "content": "When you worked on model deployment case study, which modification to the ALS algorithm had the largest effect on model performance?",
-      "explanation": "Đáp án chính xác là A (A: The explicit training vs implicit training comparison).",
+      "explanation": "Explicit và implicit training làm ALS học từ hai loại tín hiệu khác nhau: rating được thể hiện rõ hoặc hành vi ngầm như xem, click, mua. Chuyển chế độ này thay đổi confidence, objective và cách đánh giá recommendation, nên ảnh hưởng sâu tới model performance. Lambda hay epsilon chỉ điều chỉnh một phần cơ chế, còn I1/I2 không phải thay đổi bản chất dữ liệu học.",
       "answers": [
         {
           "id": 1,
           "content": "The explicit training vs implicit training comparison",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 48
         },
         {
           "id": 2,
           "content": "The lambda or regularization parameter",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 48
         },
         {
           "id": 3,
           "content": "The epsilon or scale parameter",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 48
         },
         {
           "id": 4,
           "content": "The I1 vs I2 comparison",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 48
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "The explicit training vs implicit training comparison",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 48
+        },
+        {
+          "id": 2,
+          "content": "The lambda or regularization parameter",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 48
+        },
+        {
+          "id": 3,
+          "content": "The epsilon or scale parameter",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 48
+        },
+        {
+          "id": 4,
+          "content": "The I1 vs I2 comparison",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 48
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 49,
       "questionIndex": 48,
       "content": "Docker images are the basis of containers. It is possible to pull an image from the registry and ask the Docker client to run a container based on that image. Some images are official while many others are user defined.",
-      "explanation": "Đáp án chính xác là A (A: True).",
+      "explanation": "Docker image là artifact chứa layer filesystem, dependency và configuration, dùng làm nền để Docker client tạo container đang chạy. Image có thể được pull từ registry và phát hành bởi Docker hoặc user community, sau đó tạo nhiều container instance nếu cần. Mô tả này phản ánh đúng mối quan hệ image là mẫu và container là thực thể thực thi từ mẫu đó.",
       "answers": [
         {
           "id": 1,
           "content": "True",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 49
         },
         {
           "id": 2,
           "content": "False",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 49
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 49
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 49
+        }
+      ],
+      "questionType": "Single Choice"
     },
     {
       "id": 50,
       "questionIndex": 49,
       "content": "What is the community package of the Docker Engine called?",
-      "explanation": "Đáp án chính xác là B (B: docker-ce).",
+      "explanation": "docker-ce là viết tắt của Docker Community Edition, tên community package của Docker Engine. Nó khác docker-compose, công cụ điều phối ứng dụng nhiều container, và docker-toolbox, bộ tiện ích cho môi trường cụ thể. docker-io có thể là tên package của một repository hệ điều hành, nhưng không phải tên Docker Community Edition được hỏi.",
       "answers": [
         {
           "id": 1,
           "content": "docker-io",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 50
         },
         {
           "id": 2,
           "content": "docker-ce",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 50
         },
         {
           "id": 3,
           "content": "docker-compose",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 50
         },
         {
           "id": 4,
           "content": "docker-toolbox",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 50
         }
-      ]
+      ],
+      "answersList": [
+        {
+          "id": 1,
+          "content": "docker-io",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 50
+        },
+        {
+          "id": 2,
+          "content": "docker-ce",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 50
+        },
+        {
+          "id": 3,
+          "content": "docker-compose",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 50
+        },
+        {
+          "id": 4,
+          "content": "docker-toolbox",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 50
+        }
+      ],
+      "questionType": "Single Choice"
     }
   ]
 }

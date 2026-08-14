@@ -8,1741 +8,4021 @@
       "id": 1,
       "questionIndex": 0,
       "content": "Theo Hồ Chí Minh, vi trùng rất độc này đẻ ra không dám đổi mới sáng tạo. Người đang đề cập đến vấn đề gì?",
-      "explanation": "Chủ nghĩa cá nhân được Hồ Chí Minh coi là thứ \"vi trùng độc hại\" làm thui chột ý chí chiến đấu, ngăn cản tinh thần đổi mới sáng tạo và sự phát triển của con người.",
+      "explanation": "Hồ Chí Minh gọi chủ nghĩa cá nhân là thứ “vi trùng rất độc” vì thói ích kỷ làm con người chỉ lo lợi riêng, từ đó nảy sinh bảo thủ, sợ trách nhiệm và không dám đổi mới sáng tạo. Nó không chỉ là khuyết điểm đạo đức cá nhân mà còn làm suy yếu tinh thần tập thể, kỷ luật và năng lực phát triển của tổ chức.",
       "answers": [
         {
           "id": 1,
           "content": "Chủ nghĩa cá nhân",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 1
         },
         {
           "id": 2,
           "content": "Đế quốc",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 1
         },
         {
           "id": 3,
           "content": "Chủ nghĩa tư bản",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 1
         },
         {
           "id": 4,
           "content": "Giặc đói",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 1
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Chủ nghĩa cá nhân",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 1
+        },
+        {
+          "id": 2,
+          "content": "Đế quốc",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 1
+        },
+        {
+          "id": 3,
+          "content": "Chủ nghĩa tư bản",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 1
+        },
+        {
+          "id": 4,
+          "content": "Giặc đói",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 1
+        }
+      ]
     },
     {
       "id": 2,
       "questionIndex": 1,
       "content": "Theo Hồ Chí Minh, tính khoa học của nền văn hóa mới thể hiện ở tính hiện đại, tiến tiến, thuận với điều gì?",
-      "explanation": "Tính khoa học của văn hóa mới đòi hỏi phải chống lại sự mê tín dị đoan, đề cao khoa học và gắn liền với trào lưu tiến hóa chung của thời đại.",
+      "explanation": "Tính khoa học của nền văn hóa mới phải phù hợp trào lưu tiến hóa của thời đại, nghĩa là tiếp thu tri thức, kỹ thuật và các giá trị tiến bộ của nhân loại. Tiêu chí này chống sự trì trệ, mê tín, lạc hậu, nhưng không đồng nghĩa với sao chép bên ngoài; sự tiếp thu vẫn phải gắn với nhu cầu và bản sắc của dân tộc.",
       "answers": [
         {
           "id": 1,
           "content": "Trào lưu tiến hoá của dân tộc",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 2
         },
         {
           "id": 2,
           "content": "Trào lưu tiến hoá của thời đại",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 2
         },
         {
           "id": 3,
           "content": "Trào lưu tiến hoá của khoa học kỹ thuật",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 2
         },
         {
           "id": 4,
           "content": "Trào lưu tiến hoá của văn học nghệ thuật",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 2
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Trào lưu tiến hoá của dân tộc",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 2
+        },
+        {
+          "id": 2,
+          "content": "Trào lưu tiến hoá của thời đại",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 2
+        },
+        {
+          "id": 3,
+          "content": "Trào lưu tiến hoá của khoa học kỹ thuật",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 2
+        },
+        {
+          "id": 4,
+          "content": "Trào lưu tiến hoá của văn học nghệ thuật",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 2
+        }
+      ]
     },
     {
       "id": 3,
       "questionIndex": 2,
       "content": "Hồ Chí Minh là người đấu tranh đòi quyền độc lập cho đối tượng nào?",
-      "explanation": "Tấm lòng và sự nghiệp của Hồ Chí Minh vươn tầm quốc tế, là người đấu tranh không mệt mỏi cho độc lập của dân tộc Việt Nam cũng như mọi dân tộc bị áp bức trên toàn thế giới.",
+      "explanation": "Hồ Chí Minh đấu tranh cho độc lập của Việt Nam đồng thời đứng về phía mọi dân tộc bị áp bức, bởi quyền tự quyết không phải đặc quyền của riêng một quốc gia. Lập trường ấy kết hợp chủ nghĩa yêu nước với chủ nghĩa quốc tế trong sáng, phản đối cả ách thuộc địa ở Việt Nam lẫn mọi hình thức áp bức dân tộc trên thế giới.",
       "answers": [
         {
           "id": 1,
           "content": "Dân tộc Việt Nam",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 3
         },
         {
           "id": 2,
           "content": "Các dân tộc thuộc địa ở phương Đông",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 3
         },
         {
           "id": 3,
           "content": "Dân tộc Việt Nam và tất cả các dân tộc bị áp bức trên thế giới",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 3
         },
         {
           "id": 4,
           "content": "Dân tộc thuộc địa ở Đông Dương",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 3
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Dân tộc Việt Nam",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 3
+        },
+        {
+          "id": 2,
+          "content": "Các dân tộc thuộc địa ở phương Đông",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 3
+        },
+        {
+          "id": 3,
+          "content": "Dân tộc Việt Nam và tất cả các dân tộc bị áp bức trên thế giới",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 3
+        },
+        {
+          "id": 4,
+          "content": "Dân tộc thuộc địa ở Đông Dương",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 3
+        }
+      ]
     },
     {
       "id": 4,
       "questionIndex": 3,
       "content": "Theo Hồ Chí Minh, \"dân là chủ\" để đề cập đến điều gì?",
-      "explanation": "Khái niệm \"dân là chủ\" khẳng định vị trí cao nhất, quyền lực tối cao của nhân dân đối với đất nước và chế độ xã hội.",
+      "explanation": "Cụm “dân là chủ” xác định vị trí chính trị–pháp lý của nhân dân: dân là chủ thể tối cao của quyền lực nhà nước và đời sống xã hội. Điều này khác với việc chỉ nhấn mạnh trách nhiệm hay năng lực, bởi mọi cơ quan công quyền phải do dân lập nên, phục vụ dân và chịu sự giám sát của dân.",
       "answers": [
         {
           "id": 1,
           "content": "Đề cập tới vị trí của dân",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 4
         },
         {
           "id": 2,
           "content": "Đề cập tới vị thế của dân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 4
         },
         {
           "id": 3,
           "content": "Đề cập tới trách nhiệm của dân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 4
         },
         {
           "id": 4,
           "content": "Đề cập tới năng lực của dân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 4
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đề cập tới vị trí của dân",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 4
+        },
+        {
+          "id": 2,
+          "content": "Đề cập tới vị thế của dân",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 4
+        },
+        {
+          "id": 3,
+          "content": "Đề cập tới trách nhiệm của dân",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 4
+        },
+        {
+          "id": 4,
+          "content": "Đề cập tới năng lực của dân",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 4
+        }
+      ]
     },
     {
       "id": 5,
       "questionIndex": 4,
       "content": "Đâu là lưu ý trong tư tưởng Hồ Chí Minh?",
-      "explanation": "Bản chất cầm quyền của Đảng ta theo Hồ Chí Minh là Đảng lãnh đạo xã hội để đảm bảo quyền làm chủ tối cao thuộc về nhân dân.",
+      "explanation": "Đảng cầm quyền phải lãnh đạo để nhân dân làm chủ, vì quyền lãnh đạo chỉ có ý nghĩa khi tạo điều kiện cho dân tham gia, kiểm tra và thụ hưởng thành quả của đất nước. Lưu ý này bác bỏ quan niệm Đảng đứng trên dân; Đảng phải dựa vào dân, phục vụ dân và chịu trách nhiệm trước dân.",
       "answers": [
         {
           "id": 1,
           "content": "Đảng cầm quyền, Đảng lãnh đạo để cho dân làm chủ",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 5
         },
         {
           "id": 2,
           "content": "Đảng cầm quyền, Đảng lãnh đạo để cho dân quản lý",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 5
         },
         {
           "id": 3,
           "content": "Đảng cầm quyền, Đảng lãnh đạo để cho dân giám sát",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 5
         },
         {
           "id": 4,
           "content": "Đảng cầm quyền, Đảng lãnh đạo không cho dân làm chủ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 5
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đảng cầm quyền, Đảng lãnh đạo để cho dân làm chủ",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 5
+        },
+        {
+          "id": 2,
+          "content": "Đảng cầm quyền, Đảng lãnh đạo để cho dân quản lý",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 5
+        },
+        {
+          "id": 3,
+          "content": "Đảng cầm quyền, Đảng lãnh đạo để cho dân giám sát",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 5
+        },
+        {
+          "id": 4,
+          "content": "Đảng cầm quyền, Đảng lãnh đạo không cho dân làm chủ",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 5
+        }
+      ]
     },
     {
       "id": 6,
       "questionIndex": 5,
       "content": "Đâu là câu trả lời chính xác và đầy đủ nhất theo tư tưởng Hồ Chí Minh?",
-      "explanation": "Hồ Chí Minh khẳng định Đảng vừa là lực lượng lãnh đạo tối cao của Mặt trận, đồng thời cũng là một thành viên gắn bó mật thiết trong khối đại đoàn kết đó.",
+      "explanation": "Đảng Cộng sản Việt Nam vừa là thành viên, vừa là lực lượng lãnh đạo Mặt trận vì Đảng phải cùng hiệp thương, tôn trọng các tổ chức khác, đồng thời bảo đảm Mặt trận có đường hướng chung. Hai vai trò thống nhất giúp tránh áp đặt một chiều nhưng cũng ngăn Mặt trận trở nên phân tán, thiếu định hướng chiến lược.",
       "answers": [
         {
           "id": 1,
           "content": "Đảng Cộng sản Việt Nam là một thành viên của Mặt trận dân tộc thống nhất",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 6
         },
         {
           "id": 2,
           "content": "Đảng Cộng sản Việt Nam là lực lượng lãnh đạo Mặt trận",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 6
         },
         {
           "id": 3,
           "content": "Đảng Cộng sản Việt Nam vừa là thành viên, vừa là lực lượng lãnh đạo Mặt trận",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 6
         },
         {
           "id": 4,
           "content": "Đảng Cộng sản Việt Nam không là thành viên của Mặt trận dân tộc thống nhất",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 6
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đảng Cộng sản Việt Nam là một thành viên của Mặt trận dân tộc thống nhất",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 6
+        },
+        {
+          "id": 2,
+          "content": "Đảng Cộng sản Việt Nam là lực lượng lãnh đạo Mặt trận",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 6
+        },
+        {
+          "id": 3,
+          "content": "Đảng Cộng sản Việt Nam vừa là thành viên, vừa là lực lượng lãnh đạo Mặt trận",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 6
+        },
+        {
+          "id": 4,
+          "content": "Đảng Cộng sản Việt Nam không là thành viên của Mặt trận dân tộc thống nhất",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 6
+        }
+      ]
     },
     {
       "id": 7,
       "questionIndex": 6,
       "content": "Theo văn kiện Đại hội XI của Đảng Cộng sản Việt Nam (2011), Tư tưởng Hồ Chí Minh là tư tưởng về những vấn đề gì?",
-      "explanation": "Theo văn kiện Đại hội XI, Tư tưởng Hồ Chí Minh là hệ thống quan điểm toàn diện và sâu sắc về những vấn đề cơ bản của cách mạng Việt Nam.",
+      "explanation": "Văn kiện Đại hội XI xác định tư tưởng Hồ Chí Minh là hệ thống quan điểm về những vấn đề cơ bản của cách mạng Việt Nam, gắn với con đường giải phóng và phát triển đất nước. Phạm vi này bao quát dân tộc, Đảng, Nhà nước, đại đoàn kết, văn hóa, đạo đức và con người, không chỉ giới hạn ở một vấn đề riêng lẻ.",
       "answers": [
         {
           "id": 1,
           "content": "Những vấn đề cơ bản của cách mạng Việt Nam",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 7
         },
         {
           "id": 2,
           "content": "Những vấn đề cơ bản của cách mạng thế giới",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 7
         },
         {
           "id": 3,
           "content": "Những vấn đề cơ bản của dân tộc",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 7
         },
         {
           "id": 4,
           "content": "Những vấn đề cơ bản của nhân loại",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 7
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Những vấn đề cơ bản của cách mạng Việt Nam",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 7
+        },
+        {
+          "id": 2,
+          "content": "Những vấn đề cơ bản của cách mạng thế giới",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 7
+        },
+        {
+          "id": 3,
+          "content": "Những vấn đề cơ bản của dân tộc",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 7
+        },
+        {
+          "id": 4,
+          "content": "Những vấn đề cơ bản của nhân loại",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 7
+        }
+      ]
     },
     {
       "id": 8,
       "questionIndex": 7,
       "content": "Theo Hồ Chí Minh, nhân dân lao động làm chủ Nhà nước thì dẫn đến một hệ quả là nhân dân có quyền gì?",
-      "explanation": "Khi nhân dân là chủ và làm chủ Nhà nước, nhân dân có quyền tham gia quản lý, điều hành và kiểm soát toàn bộ hoạt động của bộ máy nhà nước.",
+      "explanation": "Khi nhân dân lao động là chủ Nhà nước, họ có quyền kiểm soát hoạt động của Nhà nước để bảo đảm quyền lực không tách khỏi lợi ích chung. Quyền kiểm soát được thực hiện qua bầu cử, phản ánh ý kiến, phê bình và giám sát cán bộ; nhờ đó hạn chế quan liêu, lạm quyền và củng cố bản chất Nhà nước của dân.",
       "answers": [
         {
           "id": 1,
           "content": "Được biết tất cả công việc của nhà nước",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 8
         },
         {
           "id": 2,
           "content": "Kiểm soát Nhà nước",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 8
         },
         {
           "id": 3,
           "content": "Được tham vấn những sự kiện quan trọng trong đất nước",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 8
         },
         {
           "id": 4,
           "content": "Được bãi miễn chính phủ trong nước",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 8
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Được biết tất cả công việc của nhà nước",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 8
+        },
+        {
+          "id": 2,
+          "content": "Kiểm soát Nhà nước",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 8
+        },
+        {
+          "id": 3,
+          "content": "Được tham vấn những sự kiện quan trọng trong đất nước",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 8
+        },
+        {
+          "id": 4,
+          "content": "Được bãi miễn chính phủ trong nước",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 8
+        }
+      ]
     },
     {
       "id": 9,
       "questionIndex": 8,
       "content": "Trong tác phẩm \"Nâng cao đạo đức cách mạng, quét sạch chủ nghĩa cá nhân\" viết trên báo Nhân dân, năm 1969, Hồ Chí Minh ví chủ nghĩa cá nhân như thế nào?",
-      "explanation": "Hồ Chí Minh ví chủ nghĩa cá nhân như một thứ \"giặc nội xâm\", một kẻ thù nguy hiểm nằm ẩn nấp trong mỗi con người để phá hoại cách mạng.",
+      "explanation": "Hồ Chí Minh ví chủ nghĩa cá nhân là “giặc nội xâm”, tức kẻ địch ẩn bên trong mỗi con người và tổ chức. Nó sinh ra tham ô, lãng phí, quan liêu, kiêu ngạo và làm giảm sức chiến đấu; vì vậy phải chống nó bằng tu dưỡng đạo đức, tự phê bình, phê bình và đặt lợi ích chung lên trên tư lợi.",
       "answers": [
         {
           "id": 1,
           "content": "Bệnh mẹ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 9
         },
         {
           "id": 2,
           "content": "Bệnh nguy hiểm",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 9
         },
         {
           "id": 3,
-          "content": "Giặc ngoại xâm",
-          "isCorrect": true
+          "content": "Giặc nội xâm",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 9
         },
         {
           "id": 4,
           "content": "Bệnh cần loại bỏ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 9
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Bệnh mẹ",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 9
+        },
+        {
+          "id": 2,
+          "content": "Bệnh nguy hiểm",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 9
+        },
+        {
+          "id": 3,
+          "content": "Giặc nội xâm",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 9
+        },
+        {
+          "id": 4,
+          "content": "Bệnh cần loại bỏ",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 9
+        }
+      ]
     },
     {
       "id": 10,
       "questionIndex": 9,
       "content": "Cụ Hoàng Thị Loan đã có đức tính gì ảnh hưởng tới Hồ Chí Minh?",
-      "explanation": "Thân mẫu của Chủ tịch Hồ Chí Minh - cụ Hoàng Thị Loan là tấm gương sáng về đức tính tần tảo, đảm đang, chịu thương chịu khó.",
+      "explanation": "Đức tính tần tảo, đảm đang của bà Hoàng Thị Loan được nhắc đến như ảnh hưởng quan trọng từ gia đình đối với Hồ Chí Minh. Những phẩm chất ấy thể hiện sự chịu khó, quán xuyến và tinh thần trách nhiệm trong hoàn cảnh khó khăn, góp phần nuôi dưỡng ở Người thái độ trân trọng lao động và ý chí vượt khó.",
       "answers": [
         {
           "id": 1,
           "content": "Lòng nhân hậu và mẫn cảm",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10
         },
         {
           "id": 2,
           "content": "Sự yêu thương và vị tha",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 10
         },
         {
           "id": 3,
           "content": "Tần tảo và đảm đang",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 10
         },
         {
           "id": 4,
           "content": "Từ bi và vị tha",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 10
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Lòng nhân hậu và mẫn cảm",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 10
+        },
+        {
+          "id": 2,
+          "content": "Sự yêu thương và vị tha",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 10
+        },
+        {
+          "id": 3,
+          "content": "Tần tảo và đảm đang",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 10
+        },
+        {
+          "id": 4,
+          "content": "Từ bi và vị tha",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 10
+        }
+      ]
     },
     {
       "id": 11,
       "questionIndex": 10,
       "content": "Để đảm bảo thực hiện thắng lợi chủ nghĩa xã hội ở Việt Nam trong thời kỳ quá độ, theo Hồ Chí Minh phải làm gì?",
-      "explanation": "Để xây dựng thắng lợi chủ nghĩa xã hội, nhân tố quyết định hàng đầu là giữ vững, tăng cường sự lãnh đạo của Đảng và nâng cao hiệu quả quản lý của Nhà nước.",
+      "explanation": "Thắng lợi của xây dựng chủ nghĩa xã hội trong thời kỳ quá độ đòi hỏi giữ vững, tăng cường sự lãnh đạo của Đảng và nâng cao quản lý của Nhà nước. Đảng xác định đường lối, tập hợp lực lượng; Nhà nước tổ chức thực hiện bằng pháp luật, kế hoạch, chính sách, giúp quá trình chuyển biến trên nhiều lĩnh vực diễn ra có kỷ cương.",
       "answers": [
         {
           "id": 1,
           "content": "Giữ vững và tăng cường vai trò lãnh đạo của Đảng, nâng cao vai trò quản lý của nhà nước",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 11
         },
         {
           "id": 2,
           "content": "Phát huy tính tích cực, chủ động của đội ngũ cán bộ, quản lý, kể cả các cá nhân đang định cư ở nước ngoài",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 11
         },
         {
           "id": 3,
           "content": "Giữ vững tăng cường vai trò quản lý của Nhà nước; xây dựng đội ngũ cán bộ đủ đức và tài",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 11
         },
         {
           "id": 4,
           "content": "Phát huy vai trò làm chủ của Đảng, nâng cao vai trò quản lý của nhà nước",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 11
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Giữ vững và tăng cường vai trò lãnh đạo của Đảng, nâng cao vai trò quản lý của nhà nước",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 11
+        },
+        {
+          "id": 2,
+          "content": "Phát huy tính tích cực, chủ động của đội ngũ cán bộ, quản lý, kể cả các cá nhân đang định cư ở nước ngoài",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 11
+        },
+        {
+          "id": 3,
+          "content": "Giữ vững tăng cường vai trò quản lý của Nhà nước; xây dựng đội ngũ cán bộ đủ đức và tài",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 11
+        },
+        {
+          "id": 4,
+          "content": "Phát huy vai trò làm chủ của Đảng, nâng cao vai trò quản lý của nhà nước",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 11
+        }
+      ]
     },
     {
       "id": 12,
       "questionIndex": 11,
       "content": "Trong các luận điểm sau, luận điểm nào là của Hồ Chí Minh?",
-      "explanation": "Hồ Chí Minh đã phát triển khẩu hiệu kinh điển của Các Mác thành \"Vô sản toàn thế giới và các dân tộc bị áp bức, đoàn kết lại!\" nhằm gắn kết phong trào công nhân quốc tế với phong trào giải phóng thuộc địa.",
+      "explanation": "Lời kêu gọi liên hiệp vô sản các nước với các dân tộc bị áp bức thể hiện sự phát triển sáng tạo của Hồ Chí Minh về đoàn kết quốc tế. Người đặt phong trào giải phóng thuộc địa trong quan hệ với phong trào công nhân thế giới, qua đó khẳng định các lực lượng cùng chống áp bức cần liên kết để tạo sức mạnh chung.",
       "answers": [
         {
           "id": 1,
           "content": "Vô sản tất cả các nước, đoàn kết lại!",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 12
         },
         {
           "id": 2,
           "content": "Vô sản tất cả các nước và các dân tộc bị áp bức đoàn kết lại!",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 12
         },
         {
           "id": 3,
           "content": "Vô sản tất cả các nước liên hiệp lại!",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 12
         },
         {
           "id": 4,
           "content": "Lao động tất cả các nước, đoàn kết lại!",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 12
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Vô sản tất cả các nước, đoàn kết lại!",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 12
+        },
+        {
+          "id": 2,
+          "content": "Vô sản tất cả các nước và các dân tộc bị áp bức đoàn kết lại!",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 12
+        },
+        {
+          "id": 3,
+          "content": "Vô sản tất cả các nước liên hiệp lại!",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 12
+        },
+        {
+          "id": 4,
+          "content": "Lao động tất cả các nước, đoàn kết lại!",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 12
+        }
+      ]
     },
     {
       "id": 13,
       "questionIndex": 12,
       "content": "Chủ nghĩa nào sau đây ảnh hưởng đến sự hình thành tư tưởng Hồ Chí Minh?",
-      "explanation": "Trong quá trình hoạt động, Hồ Chí Minh đã tiếp thu và vận dụng những yếu tố tích cực, phù hợp trong chủ nghĩa Tam dân của Tôn Trung Sơn vào điều kiện Việt Nam.",
+      "explanation": "Chủ nghĩa Tam dân của Tôn Trung Sơn ảnh hưởng đến sự hình thành tư tưởng Hồ Chí Minh vì nêu những yêu cầu tiến bộ về dân tộc, dân quyền và dân sinh. Hồ Chí Minh tiếp thu có chọn lọc các yếu tố phù hợp với khát vọng độc lập, song phát triển chúng theo lập trường cách mạng vô sản chứ không sao chép nguyên vẹn.",
       "answers": [
         {
           "id": 1,
           "content": "Chủ nghĩa dân tộc của Grady",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 13
         },
         {
           "id": 2,
           "content": "Chủ nghĩa dân chủ của Kenedy",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 13
         },
         {
           "id": 3,
           "content": "Chủ nghĩa tam dân của Tôn Trung Sơn",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 13
         },
         {
           "id": 4,
           "content": "Chủ nghĩa dân tộc hẹp hòi",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 13
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Chủ nghĩa dân tộc của Grady",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 13
+        },
+        {
+          "id": 2,
+          "content": "Chủ nghĩa dân chủ của Kenedy",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 13
+        },
+        {
+          "id": 3,
+          "content": "Chủ nghĩa tam dân của Tôn Trung Sơn",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 13
+        },
+        {
+          "id": 4,
+          "content": "Chủ nghĩa dân tộc hẹp hòi",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 13
+        }
+      ]
     },
     {
       "id": 14,
       "questionIndex": 13,
       "content": "Theo quan điểm của Đảng Cộng sản Việt Nam tại Đại hội đại biểu toàn quốc lần thứ VII, Tư tưởng Hồ Chí Minh là gì?",
-      "explanation": "Đại hội VII (1991) của Đảng chính thức khẳng định: Đảng lấy chủ nghĩa Mác - Lênin và tư tưởng Hồ Chí Minh làm nền tảng tư tưởng, kim chỉ nam cho hành động, coi đó là tài sản tinh thần vô cùng to lớn và quý giá của Đảng và dân tộc.",
+      "explanation": "Đại hội VII đánh giá tư tưởng Hồ Chí Minh là tài sản tinh thần vô cùng to lớn và quý giá của Đảng và dân tộc ta. Khẳng định này cho thấy giá trị tư tưởng của Người không chỉ thuộc về quá khứ mà còn là nguồn định hướng lý luận, phương pháp hành động cho sự nghiệp cách mạng và công cuộc đổi mới đất nước.",
       "answers": [
         {
           "id": 1,
           "content": "Tài sản tinh thần quý báu của Đảng và của cả dân tộc",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 14
         },
         {
           "id": 2,
           "content": "Tài sản tinh thần to lớn của Đảng và dân tộc ta",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 14
         },
         {
           "id": 3,
           "content": "Tài sản tinh thần vô cùng to lớn và quý giá của Đảng và dân tộc ta",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 14
         },
         {
           "id": 4,
           "content": "Tài sản tinh thần không gì có thể sánh được của cả dân tộc ta",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 14
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Tài sản tinh thần quý báu của Đảng và của cả dân tộc",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 14
+        },
+        {
+          "id": 2,
+          "content": "Tài sản tinh thần to lớn của Đảng và dân tộc ta",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 14
+        },
+        {
+          "id": 3,
+          "content": "Tài sản tinh thần vô cùng to lớn và quý giá của Đảng và dân tộc ta",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 14
+        },
+        {
+          "id": 4,
+          "content": "Tài sản tinh thần không gì có thể sánh được của cả dân tộc ta",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 14
+        }
+      ]
     },
     {
       "id": 15,
       "questionIndex": 14,
       "content": "Theo Hồ Chí Minh, ưu điểm lớn nhất của chủ nghĩa Mác là gì?",
-      "explanation": "Hồ Chí Minh đánh giá rất cao phương pháp biện chứng duy vật của chủ nghĩa Mác, coi đó là phương pháp làm việc khoa học, sắc bén nhất để giải quyết các vấn đề thực tiễn.",
+      "explanation": "Hồ Chí Minh đánh giá cao phương pháp làm việc biện chứng của chủ nghĩa Mác vì nó giúp nhìn nhận sự vật trong mối liên hệ, vận động và điều kiện cụ thể. Nhờ phương pháp ấy, người cách mạng tránh giáo điều, biết xuất phát từ thực tiễn Việt Nam và tìm giải pháp phù hợp thay vì áp dụng máy móc kinh nghiệm có sẵn.",
       "answers": [
         {
           "id": 1,
           "content": "Bản chất cách mạng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 15
         },
         {
           "id": 2,
           "content": "Chủ nghĩa nhân đạo triệt để",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 15
         },
         {
           "id": 3,
           "content": "Phương pháp làm việc biện chứng",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 15
         },
         {
           "id": 4,
           "content": "Bản chất khoa học",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 15
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Bản chất cách mạng",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 15
+        },
+        {
+          "id": 2,
+          "content": "Chủ nghĩa nhân đạo triệt để",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 15
+        },
+        {
+          "id": 3,
+          "content": "Phương pháp làm việc biện chứng",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 15
+        },
+        {
+          "id": 4,
+          "content": "Bản chất khoa học",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 15
+        }
+      ]
     },
     {
       "id": 16,
       "questionIndex": 15,
       "content": "Đâu là nguyên tắc đoàn kết quốc tế trong tư tưởng Hồ Chí Minh?",
-      "explanation": "Nguyên tắc hàng đầu trong đoàn kết quốc tế của Hồ Chí Minh là phải dựa trên cơ sở độc lập, tự chủ, tự lực tự cường (\"đem sức ta mà giải phóng cho ta\").",
+      "explanation": "Đoàn kết quốc tế chỉ bền vững khi đặt trên cơ sở độc lập, tự chủ, tự lực, tự cường, bởi mỗi dân tộc phải tự quyết định đường lối và dựa vào sức mình là chính. Tinh thần này không phủ nhận sự giúp đỡ bên ngoài, mà bảo đảm việc hợp tác quốc tế không dẫn đến lệ thuộc hoặc làm suy giảm lợi ích chính đáng của dân tộc.",
       "answers": [
         {
           "id": 1,
           "content": "Đoàn kết trên cơ sở độc lập, tự chủ, tự lực, tự cường",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 16
         },
         {
           "id": 2,
           "content": "Đoàn kết trên cơ sở dựa vào sức mình là chính, nhận sự giúp đỡ quốc tế",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 16
         },
         {
           "id": 3,
           "content": "Đoàn kết trên cơ sở nhận sự giúp đỡ quốc tế và có nghĩa vụ quốc tế",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 16
         },
         {
           "id": 4,
           "content": "Đoàn kết trên cơ sở kêu gọi sự giúp đỡ của các lực lượng tiến bộ trên thế giới",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 16
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đoàn kết trên cơ sở độc lập, tự chủ, tự lực, tự cường",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 16
+        },
+        {
+          "id": 2,
+          "content": "Đoàn kết trên cơ sở dựa vào sức mình là chính, nhận sự giúp đỡ quốc tế",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 16
+        },
+        {
+          "id": 3,
+          "content": "Đoàn kết trên cơ sở nhận sự giúp đỡ quốc tế và có nghĩa vụ quốc tế",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 16
+        },
+        {
+          "id": 4,
+          "content": "Đoàn kết trên cơ sở kêu gọi sự giúp đỡ của các lực lượng tiến bộ trên thế giới",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 16
+        }
+      ]
     },
     {
       "id": 17,
       "questionIndex": 16,
       "content": "Hãy điền từ còn thiếu trong câu dưới đây? Theo Hồ Chí Minh, “Muốn xây dựng chủ nghĩa xã hội, trước hết cần có...”",
-      "explanation": "Câu nói nổi tiếng khẳng định vai trò quyết định của con người trong công cuộc xây dựng chế độ mới của Hồ Chí Minh là: \"Muốn xây dựng chủ nghĩa xã hội, trước hết cần có những con người xã hội chủ nghĩa\".",
+      "explanation": "Câu nói “Muốn xây dựng chủ nghĩa xã hội, trước hết cần có con người xã hội chủ nghĩa” khẳng định con người là chủ thể quyết định của công cuộc xây dựng xã hội mới. Cơ sở vật chất và kỹ thuật chỉ phát huy khi có những người có lý tưởng, đạo đức, tri thức, năng lực lao động và tinh thần làm chủ.",
       "answers": [
         {
           "id": 1,
           "content": "con người xã hội chủ nghĩa",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 17
         },
         {
           "id": 2,
           "content": "khoa học kỹ thuật tiên tiến",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 17
         },
         {
           "id": 3,
           "content": "công, nông nghiệp hiện đại",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 17
         },
         {
           "id": 4,
           "content": "nền kinh tế phát triển",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 17
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "con người xã hội chủ nghĩa",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 17
+        },
+        {
+          "id": 2,
+          "content": "khoa học kỹ thuật tiên tiến",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 17
+        },
+        {
+          "id": 3,
+          "content": "công, nông nghiệp hiện đại",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 17
+        },
+        {
+          "id": 4,
+          "content": "nền kinh tế phát triển",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 17
+        }
+      ]
     },
     {
       "id": 18,
       "questionIndex": 17,
       "content": "Theo Hồ Chí Minh, người cách mạng phải có đạo đức, không có đạo đức thì sẽ như thế nào?",
-      "explanation": "Hồ Chí Minh quan niệm \"Cũng như sông thì có nguồn mới có nước, không có nguồn thì sông cạn. Cây phải có gốc, không có gốc thì cây héo. Người cách mạng phải có đạo đức, không có đạo đức thì dù tài giỏi mấy cũng không lãnh đạo được nhân dân\" (hay tài giỏi mấy cũng bỏ đi).",
+      "explanation": "Người cách mạng nếu thiếu đạo đức thì dù tài giỏi cũng không lãnh đạo được nhân dân, vì lãnh đạo đòi hỏi uy tín, lòng tin và sự tận tụy với lợi ích chung. Tài năng không thể thay thế phẩm chất đạo đức; khi người cán bộ vụ lợi hoặc xa dân, năng lực của họ không thể biến thành sức thuyết phục và hành động tập thể.",
       "answers": [
         {
           "id": 1,
           "content": "Dù tài giỏi mấy cũng bỏ đi",
-          "isCorrect": true
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 18
         },
         {
           "id": 2,
           "content": "Dù tài giỏi mấy cũng không đáng dùng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 18
         },
         {
           "id": 3,
           "content": "Dù tài giỏi mấy cũng không lãnh đạo được nhân dân",
-          "isCorrect": false
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 18
         },
         {
           "id": 4,
           "content": "Dù tài giỏi mấy cũng không xứng đáng là người cách mạng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 18
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Dù tài giỏi mấy cũng bỏ đi",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 18
+        },
+        {
+          "id": 2,
+          "content": "Dù tài giỏi mấy cũng không đáng dùng",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 18
+        },
+        {
+          "id": 3,
+          "content": "Dù tài giỏi mấy cũng không lãnh đạo được nhân dân",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 18
+        },
+        {
+          "id": 4,
+          "content": "Dù tài giỏi mấy cũng không xứng đáng là người cách mạng",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 18
+        }
+      ]
     },
     {
       "id": 19,
       "questionIndex": 18,
       "content": "“Đến ngày thắng lợi, nhân dân ta sẽ xây dựng lại đất nước ta đàng hoàng hơn, to đẹp hơn!”. Điều khẳng định trên được Hồ Chí Minh nêu ra tại văn kiện nào sau đây?",
-      "explanation": "Câu nói nổi tiếng này được Chủ tịch Hồ Chí Minh khẳng định ngay phần cuối của bản Di chúc lịch sử.",
+      "explanation": "Lời căn dặn xây dựng đất nước “đàng hoàng hơn, to đẹp hơn” được nêu trong Di chúc, thể hiện tầm nhìn về thời kỳ sau chiến tranh. Người hướng tới việc hàn gắn vết thương, phát triển kinh tế, văn hóa, giáo dục và cải thiện đời sống nhân dân, chứ không xem thắng lợi quân sự là điểm kết thúc của trách nhiệm cách mạng.",
       "answers": [
         {
           "id": 1,
           "content": "Lời kêu gọi toàn quốc kháng chiến",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 19
         },
         {
           "id": 2,
           "content": "Bài phát biểu tại lễ kỷ niệm 30 năm thành lập Đảng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 19
         },
         {
           "id": 3,
           "content": "Lời kêu gọi đồng bào và chiến sĩ cả nước",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 19
         },
         {
           "id": 4,
           "content": "Di chúc",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 19
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Lời kêu gọi toàn quốc kháng chiến",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 19
+        },
+        {
+          "id": 2,
+          "content": "Bài phát biểu tại lễ kỷ niệm 30 năm thành lập Đảng",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 19
+        },
+        {
+          "id": 3,
+          "content": "Lời kêu gọi đồng bào và chiến sĩ cả nước",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 19
+        },
+        {
+          "id": 4,
+          "content": "Di chúc",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 19
+        }
+      ]
     },
     {
       "id": 20,
       "questionIndex": 19,
       "content": "Theo Hồ Chí Minh, cách mạng xã hội chủ nghĩa phải tiến hành do ai lãnh đạo?",
-      "explanation": "Theo chủ nghĩa Mác - Lênin và tư tưởng Hồ Chí Minh, cách mạng xã hội chủ nghĩa phải do giai cấp công nhân mà đội tiên phong là Đảng Cộng sản lãnh đạo.",
+      "explanation": "Cách mạng xã hội chủ nghĩa cần giai cấp công nhân lãnh đạo vì đây là giai cấp có lợi ích gắn với việc xóa bỏ áp bức, có tổ chức và được trang bị lý luận tiên tiến. Vai trò lãnh đạo không tách rời liên minh với nông dân, trí thức và các tầng lớp khác, nhưng giai cấp công nhân giữ định hướng chính trị của quá trình xây dựng xã hội mới.",
       "answers": [
         {
           "id": 1,
           "content": "Giai cấp nông dân và công nhân lãnh đạo",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 20
         },
         {
           "id": 2,
           "content": "Giai cấp công nhân lãnh đạo",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 20
         },
         {
           "id": 3,
           "content": "Tầng lớp trí thức lãnh đạo",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 20
         },
         {
           "id": 4,
           "content": "Giai cấp nông dân lãnh đạo",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 20
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Giai cấp nông dân và công nhân lãnh đạo",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 20
+        },
+        {
+          "id": 2,
+          "content": "Giai cấp công nhân lãnh đạo",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 20
+        },
+        {
+          "id": 3,
+          "content": "Tầng lớp trí thức lãnh đạo",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 20
+        },
+        {
+          "id": 4,
+          "content": "Giai cấp nông dân lãnh đạo",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 20
+        }
+      ]
     },
     {
       "id": 21,
       "questionIndex": 20,
       "content": "Đâu là luận điểm sáng tạo của Hồ Chí Minh về vấn đề lãnh đạo của Đảng?",
-      "explanation": "Luận điểm về Đảng Cộng sản cầm quyền vừa lãnh đạo nhà nước vừa chịu trách nhiệm trước nhân dân là một trong những đóng góp sáng tạo lớn của Hồ Chí Minh.",
+      "explanation": "Lý luận về Đảng Cộng sản cầm quyền là điểm sáng tạo vì nó giải quyết vấn đề mới nảy sinh khi Đảng đã lãnh đạo giành được chính quyền. Hồ Chí Minh không chỉ nói về vai trò lãnh đạo mà còn yêu cầu Đảng tự chỉnh đốn, chống đặc quyền, dựa vào dân và chịu sự kiểm tra của dân trong điều kiện cầm quyền.",
       "answers": [
         {
           "id": 1,
           "content": "Lý luận về Đảng Cộng sản cầm quyền",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 21
         },
         {
           "id": 2,
           "content": "Tư duy của Đảng Cộng sản",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 21
         },
         {
           "id": 3,
           "content": "Đường lối của Đảng Cộng sản",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 21
         },
         {
           "id": 4,
           "content": "Đội ngũ lãnh đạo của Đảng Cộng sản",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 21
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Lý luận về Đảng Cộng sản cầm quyền",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 21
+        },
+        {
+          "id": 2,
+          "content": "Tư duy của Đảng Cộng sản",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 21
+        },
+        {
+          "id": 3,
+          "content": "Đường lối của Đảng Cộng sản",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 21
+        },
+        {
+          "id": 4,
+          "content": "Đội ngũ lãnh đạo của Đảng Cộng sản",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 21
+        }
+      ]
     },
     {
       "id": 22,
       "questionIndex": 21,
       "content": "Luận điểm: “Bồi dưỡng thế hệ cách mạng cho đời sau là một việc rất quan trọng và rất cần thiết” được trích từ bài viết/bài nói nào của Hồ Chí Minh?",
-      "explanation": "Câu nói này được Chủ tịch Hồ Chí Minh viết rất trang trọng trong phần mở đầu đoạn nói về đoàn viên và thanh niên trong bản Di chúc.",
+      "explanation": "Lời căn dặn bồi dưỡng thế hệ cách mạng cho đời sau nằm trong Di chúc, thể hiện tầm nhìn chiến lược về sự nghiệp lâu dài của đất nước. Người coi việc chăm lo thanh niên là trách nhiệm của Đảng và xã hội, bởi thế hệ kế tục cần được rèn lý tưởng, đạo đức, tri thức để tiếp nối công cuộc xây dựng và bảo vệ Tổ quốc.",
       "answers": [
         {
           "id": 1,
           "content": "Đường Kách mệnh",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 22
         },
         {
           "id": 2,
           "content": "Cần kiệm liêm chính",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 22
         },
         {
           "id": 3,
           "content": "Bài nói chuyện tại Lớp bồi dưỡng cán bộ về công tác mặt trận",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 22
         },
         {
           "id": 4,
           "content": "Di chúc",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 22
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đường Kách mệnh",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 22
+        },
+        {
+          "id": 2,
+          "content": "Cần kiệm liêm chính",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 22
+        },
+        {
+          "id": 3,
+          "content": "Bài nói chuyện tại Lớp bồi dưỡng cán bộ về công tác mặt trận",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 22
+        },
+        {
+          "id": 4,
+          "content": "Di chúc",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 22
+        }
+      ]
     },
     {
       "id": 23,
       "questionIndex": 22,
       "content": "Hồ Chí Minh xác định hiệu kỳ hoặc huy hiệu của thanh niên là gì?",
-      "explanation": "Trong thơ ca và lời dặn thanh niên, hình ảnh thanh niên luôn được Người biểu tượng với khí thế tay cầm cờ đỏ sao vàng tiến lên.",
+      "explanation": "Hình ảnh tay cầm cờ đỏ sao vàng tiến lên biểu tượng cho thanh niên mang lý tưởng dân tộc, chủ động dấn thân về phía trước. Lá cờ gợi độc lập và thống nhất; động tác tiến lên nhấn mạnh tinh thần xung kích trong học tập, lao động, sáng tạo, không coi thanh niên chỉ là lớp người thụ hưởng thành quả của xã hội.",
       "answers": [
         {
           "id": 1,
           "content": "Tay cầm cờ đỏ sao vàng tiến lên",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 23
         },
         {
           "id": 2,
           "content": "Tay cầm súng tiến lên",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 23
         },
         {
           "id": 3,
           "content": "Tay cầm khẩu hiệu tiến lên",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 23
         },
         {
           "id": 4,
           "content": "Tay cầm búa và lưỡi liềm tiến lên",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 23
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Tay cầm cờ đỏ sao vàng tiến lên",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 23
+        },
+        {
+          "id": 2,
+          "content": "Tay cầm súng tiến lên",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 23
+        },
+        {
+          "id": 3,
+          "content": "Tay cầm khẩu hiệu tiến lên",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 23
+        },
+        {
+          "id": 4,
+          "content": "Tay cầm búa và lưỡi liềm tiến lên",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 23
+        }
+      ]
     },
     {
       "id": 24,
       "questionIndex": 23,
       "content": "Luận điểm: “Cách mệnh trước hết phải có cái gì? Trước hết phải có đảng cách mệnh, để trong thì vận động và tổ chức dân chúng, ngoài thì liên lạc với dân tộc bị áp bức và vô sản giai cấp ở mọi nơi. Đảng có vững thì cách mạng mới thành công, cũng như người cầm lái có vững thuyền mới chạy” được trích từ tác phẩm nào của Hồ Chí Minh?",
-      "explanation": "Đoạn trích nổi bật này mở đầu tác phẩm \"Đường Kách mệnh\" (1927) của Nguyễn Ái Quốc - Hồ Chí Minh.",
+      "explanation": "Đoạn văn được trích từ Đường kách mệnh, tác phẩm tập hợp các bài giảng của Nguyễn Ái Quốc về con đường, lực lượng và tổ chức cách mạng. Hình ảnh người cầm lái làm rõ vai trò của Đảng: phải vững vàng để tổ chức dân chúng trong nước và liên hệ với phong trào cách mạng quốc tế.",
       "answers": [
         {
           "id": 1,
           "content": "Bản án chế độ thực dân Pháp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 24
         },
         {
           "id": 2,
           "content": "Đường kách mệnh",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 24
         },
         {
           "id": 3,
           "content": "Con rồng tre",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 24
         },
         {
           "id": 4,
           "content": "Thường thức chính trị",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 24
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Bản án chế độ thực dân Pháp",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 24
+        },
+        {
+          "id": 2,
+          "content": "Đường kách mệnh",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 24
+        },
+        {
+          "id": 3,
+          "content": "Con rồng tre",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 24
+        },
+        {
+          "id": 4,
+          "content": "Thường thức chính trị",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 24
+        }
+      ]
     },
     {
       "id": 25,
       "questionIndex": 24,
       "content": "Tư tưởng Hồ Chí Minh về cách mạng Việt Nam được hình thành về cơ bản trong thời kỳ nào?",
-      "explanation": "Giai đoạn 1920 - 1930 là thời kỳ hình thành cơ bản tư tưởng Hồ Chí Minh về con đường cách mạng Việt Nam sau khi Người tìm thấy chủ nghĩa Mác - Lênin.",
+      "explanation": "Giai đoạn 1920–1930 là thời kỳ tư tưởng Hồ Chí Minh được hình thành cơ bản, bắt đầu từ việc Người tiếp cận Luận cương Lênin và lựa chọn con đường cách mạng vô sản. Trong thập niên này, các quan điểm về giải phóng dân tộc, Đảng Cộng sản, lực lượng quần chúng và phương hướng cách mạng Việt Nam dần được xác lập.",
       "answers": [
         {
           "id": 1,
           "content": "Từ 1911 đến 1920",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 25
         },
         {
           "id": 2,
           "content": "Từ 1920 đến 1930",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 25
         },
         {
           "id": 3,
           "content": "Từ 1930 đến 1941",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 25
         },
         {
           "id": 4,
           "content": "Từ 1930 đến 1945",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 25
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Từ 1911 đến 1920",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 25
+        },
+        {
+          "id": 2,
+          "content": "Từ 1920 đến 1930",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 25
+        },
+        {
+          "id": 3,
+          "content": "Từ 1930 đến 1941",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 25
+        },
+        {
+          "id": 4,
+          "content": "Từ 1930 đến 1945",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 25
+        }
+      ]
     },
     {
       "id": 26,
       "questionIndex": 25,
       "content": "Phương thức tiếp cận về chủ nghĩa xã hội của Hồ Chí Minh thiên về hướng nào dưới đây?",
-      "explanation": "Hồ Chí Minh tiếp cận chủ nghĩa xã hội từ nhiều góc độ phong phú khác nhau (văn hóa, đạo đức, truyền thống, kinh tế, chính trị) nhưng cốt lõi là từ thực tiễn đấu tranh giải phóng dân tộc.",
+      "explanation": "Hồ Chí Minh tiếp cận chủ nghĩa xã hội từ nhiều góc độ vì Người quan tâm đồng thời đến chính trị, kinh tế, văn hóa, đạo đức và sự phát triển con người. Cách nhìn đa chiều làm rõ xã hội mới không chỉ là thay đổi chế độ sở hữu, mà phải tạo điều kiện cho dân làm chủ, sống ấm no, tự do, hạnh phúc và có văn hóa.",
       "answers": [
         {
           "id": 1,
           "content": "Hồ Chí Minh tiếp cận chủ nghĩa xã hội từ phương diện kinh tế là chủ yếu",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 26
         },
         {
           "id": 2,
           "content": "Hồ Chí Minh tiếp cận chủ nghĩa xã hội từ phương diện văn hóa là chủ yếu",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 26
         },
         {
           "id": 3,
           "content": "Hồ Chí Minh tiếp cận chủ nghĩa xã hội từ nhiều góc độ khác nhau",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 26
         },
         {
           "id": 4,
           "content": "Hồ Chí Minh tiếp cận chủ nghĩa xã hội từ phương diện chính trị là chủ yếu",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 26
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Hồ Chí Minh tiếp cận chủ nghĩa xã hội từ phương diện kinh tế là chủ yếu",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 26
+        },
+        {
+          "id": 2,
+          "content": "Hồ Chí Minh tiếp cận chủ nghĩa xã hội từ phương diện văn hóa là chủ yếu",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 26
+        },
+        {
+          "id": 3,
+          "content": "Hồ Chí Minh tiếp cận chủ nghĩa xã hội từ nhiều góc độ khác nhau",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 26
+        },
+        {
+          "id": 4,
+          "content": "Hồ Chí Minh tiếp cận chủ nghĩa xã hội từ phương diện chính trị là chủ yếu",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 26
+        }
+      ]
     },
     {
       "id": 27,
       "questionIndex": 26,
       "content": "Hồ Chí Minh cho rằng giải phóng dân tộc có vai trò như thế nào?",
-      "explanation": "Trong các thuộc địa, mâu thuẫn dân tộc gay gắt hơn mâu thuẫn giai cấp, vì vậy giải phóng dân tộc phải được đặt lên hàng đầu và tạo tiền đề quyết định để giải phóng giai cấp.",
+      "explanation": "Giải phóng dân tộc tạo tiền đề cho giải phóng giai cấp vì dưới chế độ thuộc địa, cả dân tộc đều mất quyền tự quyết và nhân dân lao động chịu áp bức nặng nề. Khi ách thực dân bị xóa bỏ, đất nước mới có điều kiện tổ chức xã hội, phát triển lực lượng sản xuất và tiếp tục giải quyết những vấn đề giai cấp theo con đường đã lựa chọn.",
       "answers": [
         {
           "id": 1,
           "content": "Giải phóng dân tộc tạo tiền đề để giải phóng giai cấp",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 27
         },
         {
           "id": 2,
           "content": "Giải phóng dân tộc tạo tiền đề để giải phóng nhân loại",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 27
         },
         {
           "id": 3,
           "content": "Giải phóng dân tộc tạo tiền đề để giải phóng người lao động",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 27
         },
         {
           "id": 4,
           "content": "Giải phóng dân tộc tạo tiền đề giải phóng xã hội",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 27
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Giải phóng dân tộc tạo tiền đề để giải phóng giai cấp",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 27
+        },
+        {
+          "id": 2,
+          "content": "Giải phóng dân tộc tạo tiền đề để giải phóng nhân loại",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 27
+        },
+        {
+          "id": 3,
+          "content": "Giải phóng dân tộc tạo tiền đề để giải phóng người lao động",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 27
+        },
+        {
+          "id": 4,
+          "content": "Giải phóng dân tộc tạo tiền đề giải phóng xã hội",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 27
+        }
+      ]
     },
     {
       "id": 28,
       "questionIndex": 27,
       "content": "Hồ Chí Minh đã lưu ý điều gì trong công tác xây dựng mặt trận?",
-      "explanation": "Theo tư tưởng Hồ Chí Minh, khối đoàn kết trong Mặt trận dân tộc thống nhất phải luôn xuất phát từ mục tiêu chung là độc lập dân tộc, thống nhất Tổ quốc và tự do, hạnh phúc của nhân dân.",
+      "explanation": "Khối đoàn kết trong Mặt trận phải xuất phát từ mục tiêu chung để các lực lượng khác biệt về thành phần, tôn giáo hoặc quá khứ có cơ sở hợp tác. Mục tiêu độc lập, thống nhất và lợi ích dân tộc tạo điểm gặp gỡ lớn hơn lợi ích cục bộ, giúp giải quyết bất đồng bằng hiệp thương thay vì làm suy yếu liên minh.",
       "answers": [
         {
           "id": 1,
           "content": "Khối đoàn kết trong Mặt trận phải xuất phát từ mục tiêu chung",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 28
         },
         {
           "id": 2,
           "content": "Khối đoàn kết trong Mặt trận phải xuất phát từ mục tiêu cụ thể",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 28
         },
         {
           "id": 3,
           "content": "Khối đoàn kết trong Mặt trận phải xuất phát từ mục tiêu cơ bản",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 28
         },
         {
           "id": 4,
           "content": "Khối đoàn kết trong Mặt trận phải xuất phát từ mục tiêu của giai cấp cầm quyền",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 28
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Khối đoàn kết trong Mặt trận phải xuất phát từ mục tiêu chung",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 28
+        },
+        {
+          "id": 2,
+          "content": "Khối đoàn kết trong Mặt trận phải xuất phát từ mục tiêu cụ thể",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 28
+        },
+        {
+          "id": 3,
+          "content": "Khối đoàn kết trong Mặt trận phải xuất phát từ mục tiêu cơ bản",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 28
+        },
+        {
+          "id": 4,
+          "content": "Khối đoàn kết trong Mặt trận phải xuất phát từ mục tiêu của giai cấp cầm quyền",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 28
+        }
+      ]
     },
     {
       "id": 29,
       "questionIndex": 28,
       "content": "Trong tư tưởng Hồ Chí Minh, lực lượng nào là chủ thể của khối đại đoàn kết dân tộc?",
-      "explanation": "Chủ thể của khối đại đoàn kết toàn dân tộc theo Hồ Chí Minh chính là toàn thể nhân dân, tất cả những người có lòng yêu nước và tinh thần dân tộc.",
+      "explanation": "Chủ thể của đại đoàn kết dân tộc là toàn thể nhân dân, gồm mọi người Việt Nam yêu nước không phân biệt giai cấp, dân tộc, tôn giáo hay quá khứ. Cách xác định rộng rãi này thể hiện niềm tin vào sức dân, đồng thời đòi hỏi tôn trọng quyền làm chủ và tạo điều kiện để mọi tầng lớp góp phần vào sự nghiệp chung.",
       "answers": [
         {
           "id": 1,
           "content": "Công nhân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 29
         },
         {
           "id": 2,
           "content": "Toàn thể nhân dân",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 29
         },
         {
           "id": 3,
           "content": "Nông dân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 29
         },
         {
           "id": 4,
           "content": "Không xác định lực lượng chủ thể",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 29
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Công nhân",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 29
+        },
+        {
+          "id": 2,
+          "content": "Toàn thể nhân dân",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 29
+        },
+        {
+          "id": 3,
+          "content": "Nông dân",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 29
+        },
+        {
+          "id": 4,
+          "content": "Không xác định lực lượng chủ thể",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 29
+        }
+      ]
     },
     {
       "id": 30,
       "questionIndex": 29,
       "content": "Theo Hồ Chí Minh, ưu điểm lớn nhất của chủ nghĩa Tam dân của Tôn Trung Sơn là gì?",
-      "explanation": "Hồ Chí Minh đánh giá cao chủ nghĩa Tam dân vì tư tưởng của Tôn Trung Sơn phù hợp với điều kiện thực tế nước ta trong việc đấu tranh chống đế quốc, phong kiến và mưu cầu hạnh phúc cho nhân dân.",
+      "explanation": "Hồ Chí Minh đánh giá ưu điểm lớn của chủ nghĩa Tam dân là phù hợp với điều kiện thực tế nước ta, nhất là khát vọng độc lập dân tộc, dân quyền và dân sinh. Nhận xét này thể hiện thái độ tiếp thu có chọn lọc: ghi nhận yếu tố tiến bộ của Tôn Trung Sơn nhưng không coi đó là con đường thay thế cách mạng vô sản.",
       "answers": [
         {
           "id": 1,
           "content": "Phù hợp với điều kiện thực tế nước ta",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 30
         },
         {
           "id": 2,
           "content": "Chống phong kiến",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 30
         },
         {
           "id": 3,
           "content": "Chống đế quốc",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 30
         },
         {
           "id": 4,
           "content": "Tư tưởng yêu chuộng hoà bình",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 30
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Phù hợp với điều kiện thực tế nước ta",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 30
+        },
+        {
+          "id": 2,
+          "content": "Chống phong kiến",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 30
+        },
+        {
+          "id": 3,
+          "content": "Chống đế quốc",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 30
+        },
+        {
+          "id": 4,
+          "content": "Tư tưởng yêu chuộng hoà bình",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 30
+        }
+      ]
     },
     {
       "id": 31,
       "questionIndex": 30,
       "content": "Trong các luận điểm sau đây về văn hóa, luận điểm nào Hồ Chí Minh nói về tính chất của nền văn hóa?",
-      "explanation": "Ba tính chất cơ bản của nền văn hóa mới theo tư tưởng Hồ Chí Minh là tính dân tộc, tính khoa học và tính đại chúng.",
+      "explanation": "Nền văn hóa mới phải mang tính dân tộc, khoa học và đại chúng. Tính dân tộc giữ bản sắc và lòng yêu nước; tính khoa học chống mê tín, lạc hậu; tính đại chúng hướng văn hóa về nhân dân và do nhân dân sáng tạo. Ba tính chất liên kết giúp văn hóa vừa hiện đại, vừa gắn với đời sống thực tiễn Việt Nam.",
       "answers": [
         {
           "id": 1,
           "content": "Phải nâng cao trình độ văn hóa của nhân dân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 31
         },
         {
           "id": 2,
           "content": "Phải xây dựng một nền văn hóa dân tộc, khoa học và đại chúng",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 31
         },
         {
           "id": 3,
           "content": "Văn hóa cũng là một mặt trận",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 31
         },
         {
           "id": 4,
           "content": "Xây dựng chính trị dân quyền",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 31
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Phải nâng cao trình độ văn hóa của nhân dân",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 31
+        },
+        {
+          "id": 2,
+          "content": "Phải xây dựng một nền văn hóa dân tộc, khoa học và đại chúng",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 31
+        },
+        {
+          "id": 3,
+          "content": "Văn hóa cũng là một mặt trận",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 31
+        },
+        {
+          "id": 4,
+          "content": "Xây dựng chính trị dân quyền",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 31
+        }
+      ]
     },
     {
       "id": 32,
       "questionIndex": 31,
       "content": "Nội dung quá độ lên chủ nghĩa xã hội theo Hồ Chí Minh phải tiến hành như thế nào?",
-      "explanation": "Thời kỳ quá độ lên chủ nghĩa xã hội là một quá trình biến đổi sâu sắc toàn diện, đòi hỏi phải tiến hành trên tất cả mọi mặt của đời sống xã hội.",
+      "explanation": "Quá độ lên chủ nghĩa xã hội phải được tiến hành trên mọi mặt của xã hội, bởi đây là quá trình biến đổi đồng thời về kinh tế, chính trị, văn hóa, xã hội và con người. Nếu chỉ tập trung một lĩnh vực, các điều kiện xây dựng xã hội mới không đồng bộ; vì vậy cần phối hợp nhiều nhiệm vụ theo bước đi phù hợp với thực tiễn đất nước.",
       "answers": [
         {
           "id": 1,
           "content": "Chủ yếu là lĩnh vực kinh tế",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 32
         },
         {
           "id": 2,
           "content": "Chủ yếu là lĩnh vực văn hóa",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 32
         },
         {
           "id": 3,
           "content": "Trên mọi mặt của xã hội",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 32
         },
         {
           "id": 4,
           "content": "Chủ yếu là lĩnh vực chính trị",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 32
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Chủ yếu là lĩnh vực kinh tế",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 32
+        },
+        {
+          "id": 2,
+          "content": "Chủ yếu là lĩnh vực văn hóa",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 32
+        },
+        {
+          "id": 3,
+          "content": "Trên mọi mặt của xã hội",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 32
+        },
+        {
+          "id": 4,
+          "content": "Chủ yếu là lĩnh vực chính trị",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 32
+        }
+      ]
     },
     {
       "id": 33,
       "questionIndex": 32,
       "content": "Hồ Chí Minh vạch ra nhiệm vụ hàng đầu của cách mạng dân tộc thuộc địa là gì?",
-      "explanation": "Hồ Chí Minh khẳng định vấn đề giải phóng dân tộc là nhiệm vụ bức thiết và hàng đầu, là tiền đề để tiến tới giải phóng giai cấp và giải phóng xã hội ở các nước thuộc địa.",
+      "explanation": "Nhiệm vụ hàng đầu của cách mạng dân tộc thuộc địa là giải phóng dân tộc vì mâu thuẫn gay gắt nhất nằm giữa toàn thể dân tộc bị áp bức với chủ nghĩa thực dân. Hoàn thành nhiệm vụ này giành lại quyền tự quyết, tạo điều kiện để nhân dân làm chủ đất nước và tiếp tục giải quyết các vấn đề dân chủ, giai cấp trong giai đoạn sau.",
       "answers": [
         {
           "id": 1,
           "content": "Giải phóng dân tộc",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 33
         },
         {
           "id": 2,
           "content": "Giải phóng giai cấp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 33
         },
         {
           "id": 3,
           "content": "Giải phóng nhân loại",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 33
         },
         {
           "id": 4,
           "content": "Giải phóng xã hội",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 33
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Giải phóng dân tộc",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 33
+        },
+        {
+          "id": 2,
+          "content": "Giải phóng giai cấp",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 33
+        },
+        {
+          "id": 3,
+          "content": "Giải phóng nhân loại",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 33
+        },
+        {
+          "id": 4,
+          "content": "Giải phóng xã hội",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 33
+        }
+      ]
     },
     {
       "id": 34,
       "questionIndex": 33,
       "content": "Theo Hồ Chí Minh, để kiểm soát quyền lực nhà nước trước tiên cần phải làm gì?",
-      "explanation": "Để kiểm soát quyền lực nhà nước, theo Hồ Chí Minh, trước tiên và quan trọng nhất là phải dựa vào nhân dân, phát huy quyền giám sát của dân chúng.",
+      "explanation": "Kiểm soát quyền lực nhà nước trước hết phải phát huy vai trò giám sát của dân chúng, vì nhân dân là chủ thể trao quyền và chịu tác động trực tiếp từ hoạt động công quyền. Giám sát của dân giúp phát hiện quan liêu, tham ô, lãng phí, buộc cán bộ gần dân, lắng nghe phê bình và sử dụng quyền lực đúng lợi ích chung.",
       "answers": [
         {
           "id": 1,
           "content": "Phát huy vai trò giám sát của dân chúng",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 34
         },
         {
           "id": 2,
           "content": "Phát huy vai trò, trách nhiệm của Đảng Cộng sản",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 34
         },
         {
           "id": 3,
           "content": "Tăng cường vai trò giám sát của hội đồng nhân dân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 34
         },
         {
           "id": 4,
           "content": "Tăng cường trách nhiệm của mặt trận tổ quốc",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 34
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Phát huy vai trò giám sát của dân chúng",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 34
+        },
+        {
+          "id": 2,
+          "content": "Phát huy vai trò, trách nhiệm của Đảng Cộng sản",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 34
+        },
+        {
+          "id": 3,
+          "content": "Tăng cường vai trò giám sát của hội đồng nhân dân",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 34
+        },
+        {
+          "id": 4,
+          "content": "Tăng cường trách nhiệm của mặt trận tổ quốc",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 34
+        }
+      ]
     },
     {
       "id": 35,
       "questionIndex": 34,
       "content": "Nguyên tắc chung của Mặt trận dân tộc thống nhất được Hồ Chí Minh xác định cụ thể phù hợp là gì?",
-      "explanation": "Mặt trận dân tộc thống nhất phải được xây dựng dựa trên nguyên tắc đoàn kết chặt chẽ, lâu dài, thực sự, chân thành, vừa đoàn kết vừa đấu tranh.",
+      "explanation": "Mặt trận chỉ phát huy sức mạnh khi đoàn kết chặt chẽ, lâu dài, thật sự và chân thành; nếu thiếu các điều kiện này, liên minh dễ trở thành hình thức hoặc thỏa hiệp ngắn hạn. Bốn yêu cầu tạo nền tảng tin cậy để các thành viên tôn trọng khác biệt, giải quyết bất đồng bằng hiệp thương và cùng hướng tới mục tiêu dân tộc.",
       "answers": [
         {
           "id": 1,
           "content": "Đoàn kết chặt chẽ, lâu dài, thật sự, chân thành",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 35
         },
         {
           "id": 2,
           "content": "Chống chiến tranh xâm lược",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 35
         },
         {
           "id": 3,
           "content": "Độc lập, tự do",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 35
         },
         {
           "id": 4,
           "content": "Độc lập, bình đẳng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 35
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đoàn kết chặt chẽ, lâu dài, thật sự, chân thành",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 35
+        },
+        {
+          "id": 2,
+          "content": "Chống chiến tranh xâm lược",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 35
+        },
+        {
+          "id": 3,
+          "content": "Độc lập, tự do",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 35
+        },
+        {
+          "id": 4,
+          "content": "Độc lập, bình đẳng",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 35
+        }
+      ]
     },
     {
       "id": 36,
       "questionIndex": 35,
       "content": "Đâu là câu trả lời chính xác nhất trong tác phẩm Di Chúc của Chủ tịch Hồ Chí Minh?",
-      "explanation": "Trong Di chúc, khi dặn dò về công việc sau chiến thắng, Bác căn dặn Đảng phải có kế hoạch thật tốt để phát triển kinh tế và xã hội, nhằm không ngừng nâng cao đời sống của nhân dân.",
+      "explanation": "Trong Di chúc, Hồ Chí Minh yêu cầu Đảng có kế hoạch tốt để phát triển kinh tế, xã hội nhằm không ngừng nâng cao đời sống nhân dân sau chiến tranh. Lời căn dặn cho thấy kiến thiết đất nước phải được chuẩn bị khoa học, không chỉ khôi phục vật chất mà còn giải quyết các nhu cầu xã hội và tạo điều kiện phát triển lâu dài.",
       "answers": [
         {
           "id": 1,
           "content": "Đảng phải có kế hoạch tốt để phát triển kinh tế, văn hóa",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 36
         },
         {
           "id": 2,
           "content": "Đảng phải có kế hoạch tốt để phát triển kinh tế, chính trị",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 36
         },
         {
           "id": 3,
           "content": "Đảng phải có kế hoạch tốt để phát triển kinh tế, xã hội",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 36
         },
         {
           "id": 4,
           "content": "Đảng phải có lộ trình để phát triển các vấn đề xã hội cần thiết",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 36
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đảng phải có kế hoạch tốt để phát triển kinh tế, văn hóa",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 36
+        },
+        {
+          "id": 2,
+          "content": "Đảng phải có kế hoạch tốt để phát triển kinh tế, chính trị",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 36
+        },
+        {
+          "id": 3,
+          "content": "Đảng phải có kế hoạch tốt để phát triển kinh tế, xã hội",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 36
+        },
+        {
+          "id": 4,
+          "content": "Đảng phải có lộ trình để phát triển các vấn đề xã hội cần thiết",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 36
+        }
+      ]
     },
     {
       "id": 37,
       "questionIndex": 36,
       "content": "Hồ Chí Minh cho rằng xây dựng văn hóa mới trước hết cần phải làm gì?",
-      "explanation": "Trong công cuộc xây dựng nền văn hóa mới, Hồ Chí Minh nhấn mạnh điểm khởi đầu mang tính quyết định là \"Tư tưởng phải được tự do\" (thoát khỏi mọi sự ràng buộc của hệ tư tưởng thực dân, phong kiến).",
+      "explanation": "Xây dựng văn hóa mới trước hết đòi hỏi tư tưởng được tự do, bởi sáng tạo văn hóa cần giải phóng trí tuệ khỏi sự áp đặt, nô dịch và định kiến cũ. Tự do tư tưởng ở đây gắn với quyền làm chủ của nhân dân và định hướng tiến bộ, không phải sự buông lỏng vô nguyên tắc hay tiếp nhận không chọn lọc mọi ảnh hưởng bên ngoài.",
       "answers": [
         {
           "id": 1,
           "content": "Tư tưởng phải được tự do",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 37
         },
         {
           "id": 2,
           "content": "Tư tưởng phải được nuôi dưỡng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 37
         },
         {
           "id": 3,
           "content": "Phải xây dựng xã hội dân chủ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 37
         },
         {
           "id": 4,
           "content": "Tiếp thu tất cả các văn hóa du nhập",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 37
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Tư tưởng phải được tự do",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 37
+        },
+        {
+          "id": 2,
+          "content": "Tư tưởng phải được nuôi dưỡng",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 37
+        },
+        {
+          "id": 3,
+          "content": "Phải xây dựng xã hội dân chủ",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 37
+        },
+        {
+          "id": 4,
+          "content": "Tiếp thu tất cả các văn hóa du nhập",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 37
+        }
+      ]
     },
     {
       "id": 38,
       "questionIndex": 37,
       "content": "Hồ Chí Minh lưu ý xây dựng nhà nước có hiệu lực pháp lý mạnh mẽ phải xây dựng điều gì?",
-      "explanation": "Để nhà nước hoạt động hiệu lực, hiệu quả, Hồ Chí Minh đặc biệt chú trọng việc xây dựng đội ngũ cán bộ, công chức vừa hồng vừa chuyên, có đủ cả đức và tài.",
+      "explanation": "Nhà nước có hiệu lực pháp lý mạnh mẽ cần đội ngũ cán bộ, công chức đủ đức và tài, vì pháp luật chỉ được thực hiện đúng qua những người tổ chức và áp dụng nó. Đức giúp cán bộ công tâm, không lạm dụng quyền lực; tài giúp họ hiểu pháp luật, giải quyết việc dân hiệu quả và tránh biến quản lý thành quan liêu.",
       "answers": [
         {
           "id": 1,
           "content": "Xây dựng đội ngũ cán bộ, công chức đủ đức, tài",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 38
         },
         {
           "id": 2,
           "content": "Xây dựng đội ngũ cán bộ, công chức đủ phẩm chất",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 38
         },
         {
           "id": 3,
           "content": "Xây dựng đội ngũ cán bộ, công chức đủ giỏi",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 38
         },
         {
           "id": 4,
           "content": "Xây dựng đội ngũ cán bộ, công chức đủ tôi",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 38
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Xây dựng đội ngũ cán bộ, công chức đủ đức, tài",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 38
+        },
+        {
+          "id": 2,
+          "content": "Xây dựng đội ngũ cán bộ, công chức đủ phẩm chất",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 38
+        },
+        {
+          "id": 3,
+          "content": "Xây dựng đội ngũ cán bộ, công chức đủ giỏi",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 38
+        },
+        {
+          "id": 4,
+          "content": "Xây dựng đội ngũ cán bộ, công chức đủ tôi",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 38
+        }
+      ]
     },
     {
       "id": 39,
       "questionIndex": 38,
       "content": "Lực lượng đoàn kết quốc tế theo Hồ Chí Minh cần phải đoàn kết với đối tượng nào?",
-      "explanation": "Ba lực lượng to lớn trong khối đoàn kết quốc tế của Hồ Chí Minh bao gồm: phong trào cộng sản và công nhân quốc tế (gắn với phe XHCN), phong trào đấu tranh giải phóng dân tộc, và phong trào hòa bình, tiến bộ toàn cầu.",
+      "explanation": "Đoàn kết quốc tế cần liên hệ với giai cấp công nhân, lực lượng xã hội chủ nghĩa, phong trào cộng sản và công nhân quốc tế, các dân tộc thuộc địa bị áp bức cùng lực lượng tiến bộ. Phạm vi này phản ánh yêu cầu tập hợp những lực lượng có chung mục tiêu chống áp bức, kết hợp sức mạnh dân tộc với sức mạnh của thời đại trên cơ sở bình đẳng.",
       "answers": [
         {
           "id": 1,
           "content": "Giai cấp công nhân, lực lượng xã hội chủ nghĩa, phong trào cộng sản và công nhân quốc tế với các dân tộc thuộc địa bị áp bức và các lực lượng tiến bộ trên thế giới",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 39
         },
         {
           "id": 2,
           "content": "Giai cấp nông dân, lực lượng xã hội chủ nghĩa, phong trào cộng sản và công nhân quốc tế với các dân tộc thuộc địa bị áp bức và các lực lượng tiến bộ trên thế giới",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 39
         },
         {
           "id": 3,
           "content": "Giai cấp lao động, lực lượng xã hội chủ nghĩa, phong trào cộng sản và công nhân quốc tế, với các dân tộc thuộc địa bị áp bức và các lực lượng tiến bộ trên thế giới",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 39
         },
         {
           "id": 4,
           "content": "Tầng lớp trí thức, lực lượng xã hội chủ nghĩa, phong trào cộng sản và công nhân quốc tế, với các dân tộc thuộc địa bị áp bức và các lực lượng tiến bộ trên thế giới",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 39
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Giai cấp công nhân, lực lượng xã hội chủ nghĩa, phong trào cộng sản và công nhân quốc tế với các dân tộc thuộc địa bị áp bức và các lực lượng tiến bộ trên thế giới",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 39
+        },
+        {
+          "id": 2,
+          "content": "Giai cấp nông dân, lực lượng xã hội chủ nghĩa, phong trào cộng sản và công nhân quốc tế với các dân tộc thuộc địa bị áp bức và các lực lượng tiến bộ trên thế giới",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 39
+        },
+        {
+          "id": 3,
+          "content": "Giai cấp lao động, lực lượng xã hội chủ nghĩa, phong trào cộng sản và công nhân quốc tế, với các dân tộc thuộc địa bị áp bức và các lực lượng tiến bộ trên thế giới",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 39
+        },
+        {
+          "id": 4,
+          "content": "Tầng lớp trí thức, lực lượng xã hội chủ nghĩa, phong trào cộng sản và công nhân quốc tế, với các dân tộc thuộc địa bị áp bức và các lực lượng tiến bộ trên thế giới",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 39
+        }
+      ]
     },
     {
       "id": 40,
       "questionIndex": 39,
       "content": "Theo Hồ Chí Minh, đoàn kết là điểm nào sau đây?",
-      "explanation": "Hồ Chí Minh có câu kết luận nổi tiếng về sức mạnh của sự đoàn kết: \"Đoàn kết, đoàn kết, đại đoàn kết / Thành công, thành công, đại thành công\", trong đó đoàn kết chính là \"điểm mẹ\".",
+      "explanation": "Hồ Chí Minh gọi đoàn kết là “điểm mẹ” vì từ đó nảy sinh sức mạnh để hoàn thành nhiều nhiệm vụ khác của cách mạng. Cách ví von nhấn mạnh đoàn kết không chỉ là khẩu hiệu đạo đức, mà là nguồn lực tổ chức thực tế: khi nhân dân đồng lòng, đường lối đúng mới có thể biến thành hành động và thắng lợi bền vững.",
       "answers": [
         {
           "id": 1,
           "content": "Điểm mẹ",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 40
         },
         {
           "id": 2,
           "content": "Điểm quyết định",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 40
         },
         {
           "id": 3,
           "content": "Điểm thắng lợi",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 40
         },
         {
           "id": 4,
           "content": "Điểm tiên quyết",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 40
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Điểm mẹ",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 40
+        },
+        {
+          "id": 2,
+          "content": "Điểm quyết định",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 40
+        },
+        {
+          "id": 3,
+          "content": "Điểm thắng lợi",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 40
+        },
+        {
+          "id": 4,
+          "content": "Điểm tiên quyết",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 40
+        }
+      ]
     },
     {
       "id": 41,
       "questionIndex": 40,
       "content": "Đâu là chuẩn mực đạo đức cách mạng trong tư tưởng Hồ Chí Minh?",
-      "explanation": "Các chuẩn mực đạo đức cơ bản của người cách mạng theo Hồ Chí Minh gồm: Cần, kiệm, liêm, chính và chí công vô tư.",
+      "explanation": "Cần, kiệm, liêm, chính, chí công vô tư là hệ chuẩn mực đạo đức cách mạng vì kết hợp thái độ lao động, tiết kiệm, trong sạch, ngay thẳng và đặt lợi ích chung lên trên lợi ích riêng. Các phẩm chất này giúp người cán bộ phòng chống tham ô, lãng phí, chủ nghĩa cá nhân, từ đó giữ được uy tín và niềm tin của nhân dân.",
       "answers": [
         {
           "id": 1,
           "content": "Cần, kiệm, liêm, chính, chí công vô tư",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 41
         },
         {
           "id": 2,
           "content": "Cần, kiệm, liêm, chính, sáng suốt",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 41
         },
         {
           "id": 3,
           "content": "Cần, kiệm, liêm, chính, tự do",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 41
         },
         {
           "id": 4,
           "content": "Cần, kiệm, liêm, chính, trung thành",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 41
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Cần, kiệm, liêm, chính, chí công vô tư",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 41
+        },
+        {
+          "id": 2,
+          "content": "Cần, kiệm, liêm, chính, sáng suốt",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 41
+        },
+        {
+          "id": 3,
+          "content": "Cần, kiệm, liêm, chính, tự do",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 41
+        },
+        {
+          "id": 4,
+          "content": "Cần, kiệm, liêm, chính, trung thành",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 41
+        }
+      ]
     },
     {
       "id": 42,
       "questionIndex": 41,
       "content": "Nguyễn Tất Thành ở Anh vào thời gian nào?",
-      "explanation": "Sau thời gian ở châu Mỹ và Pháp, Nguyễn Tất Thành đã có khoảng thời gian sinh sống, lao động và hoạt động tại Anh từ khoảng năm 1913 đến năm 1917.",
+      "explanation": "Nguyễn Tất Thành ở Anh chủ yếu trong khoảng 1913–1917, làm việc và quan sát đời sống tại một trung tâm tư bản lớn. Trải nghiệm này giúp Người hiểu thêm hoàn cảnh công nhân, sự chênh lệch xã hội và mở rộng tầm nhìn quốc tế trước khi trở lại Pháp hoạt động chính trị, tìm kiếm con đường giải phóng dân tộc.",
       "answers": [
         {
           "id": 1,
           "content": "1911-1912",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 42
         },
         {
           "id": 2,
           "content": "1912-1913",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 42
         },
         {
           "id": 3,
           "content": "1913-1917",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 42
         },
         {
           "id": 4,
           "content": "1911-1915",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 42
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "1911-1912",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 42
+        },
+        {
+          "id": 2,
+          "content": "1912-1913",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 42
+        },
+        {
+          "id": 3,
+          "content": "1913-1917",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 42
+        },
+        {
+          "id": 4,
+          "content": "1911-1915",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 42
+        }
+      ]
     },
     {
       "id": 43,
       "questionIndex": 42,
       "content": "Nguyễn Tất Thành ở Mỹ vào khoảng thời gian nào?",
-      "explanation": "Trong quá trình bôn ba hải ngoại, Nguyễn Tất Thành đã có khoảng thời gian sinh sống và làm việc tại Mỹ (khoảng năm 1912 - 1913).",
+      "explanation": "Khoảng 1912–1913, Nguyễn Tất Thành ở Mỹ trong hành trình tìm đường cứu nước. Việc lao động và quan sát một xã hội tư bản công nghiệp giúp Người tiếp cận thực tế đời sống công nhân, sự phân hóa giàu nghèo và vấn đề chủng tộc, từ đó tích lũy vốn sống quốc tế thay vì chỉ tiếp nhận thông tin qua sách báo.",
       "answers": [
         {
           "id": 1,
           "content": "1911-1912",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 43
         },
         {
           "id": 2,
           "content": "1912-1913",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 43
         },
         {
           "id": 3,
           "content": "1914-1917",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 43
         },
         {
           "id": 4,
           "content": "1911-1915",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 43
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "1911-1912",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 43
+        },
+        {
+          "id": 2,
+          "content": "1912-1913",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 43
+        },
+        {
+          "id": 3,
+          "content": "1914-1917",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 43
+        },
+        {
+          "id": 4,
+          "content": "1911-1915",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 43
+        }
+      ]
     },
     {
       "id": 44,
       "questionIndex": 43,
       "content": "Theo Hồ Chí Minh, để đánh bại các thế lực đế quốc thực dân chỉ có tình thần yêu nước là chưa đủ, cách mạng muốn đến nơi cần phải tập hợp được tất cả mọi lực lượng có thể tập hợp đồng thời xây dựng được nội dung nào trong các nội dung sau đây?",
-      "explanation": "Bên cạnh lòng yêu nước, cách mạng muốn thắng lợi triệt để phải quy tụ thành khối đại đoàn kết dân tộc bền vững, có tổ chức vững chắc dưới sự lãnh đạo của Đảng.",
+      "explanation": "Tình thần yêu nước chỉ trở thành sức mạnh chiến thắng khi được tổ chức thành khối đại đoàn kết dân tộc bền vững. Khối đoàn kết tập hợp các giai cấp, dân tộc, tôn giáo và tầng lớp yêu nước quanh mục tiêu chung, biến tình cảm tự phát thành hành động có tổ chức, đủ sức chống lại thực dân, đế quốc và bảo vệ lợi ích dân tộc.",
       "answers": [
         {
           "id": 1,
           "content": "Khối đại đoàn kết dân tộc bền vững",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 44
         },
         {
           "id": 2,
           "content": "Chương trình tập hợp lực lượng đoàn kết rộng rãi",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 44
         },
         {
           "id": 3,
           "content": "Chính sách dân tộc phù hợp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 44
         },
         {
           "id": 4,
           "content": "Đoàn kết quốc tế",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 44
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Khối đại đoàn kết dân tộc bền vững",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 44
+        },
+        {
+          "id": 2,
+          "content": "Chương trình tập hợp lực lượng đoàn kết rộng rãi",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 44
+        },
+        {
+          "id": 3,
+          "content": "Chính sách dân tộc phù hợp",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 44
+        },
+        {
+          "id": 4,
+          "content": "Đoàn kết quốc tế",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 44
+        }
+      ]
     },
     {
       "id": 45,
       "questionIndex": 44,
       "content": "Khi nói về Hồ Chí Minh, báo Uruguay viết:",
-      "explanation": "Báo chí thế giới, đặc biệt là báo chí Uruguay, từng ca ngợi Chủ tịch Hồ Chí Minh bằng câu nói cảm động: \"Ông có một trái tim bao la như vũ trụ và tình yêu trẻ thơ vô bờ bến\".",
+      "explanation": "Nhận xét của báo Uruguay về trái tim bao la như vũ trụ và tình yêu trẻ thơ vô bờ bến làm nổi bật chiều sâu nhân văn trong nhân cách Hồ Chí Minh. Hình ảnh ấy không chỉ là lời ca ngợi tình cảm cá nhân, mà phản ánh sự quan tâm bền bỉ của Người đến phẩm giá, hạnh phúc con người và tương lai của thế hệ trẻ.",
       "answers": [
         {
           "id": 1,
           "content": "Ông có một trái tim bao la như vũ trụ và tình yêu trẻ thơ vô bờ bến",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 45
         },
         {
           "id": 2,
           "content": "Ông người có tình cảm bao la như vũ trụ và tình yêu trẻ thơ vô bờ bến",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 45
         },
         {
           "id": 3,
           "content": "Ông có một trái tim như vũ trụ và tình yêu trẻ thơ vô bờ bến",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 45
         },
         {
           "id": 4,
           "content": "Ông là người có tình cảm bao la và trái tim yêu thương trẻ thơ vô bờ bến",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 45
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Ông có một trái tim bao la như vũ trụ và tình yêu trẻ thơ vô bờ bến",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 45
+        },
+        {
+          "id": 2,
+          "content": "Ông người có tình cảm bao la như vũ trụ và tình yêu trẻ thơ vô bờ bến",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 45
+        },
+        {
+          "id": 3,
+          "content": "Ông có một trái tim như vũ trụ và tình yêu trẻ thơ vô bờ bến",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 45
+        },
+        {
+          "id": 4,
+          "content": "Ông là người có tình cảm bao la và trái tim yêu thương trẻ thơ vô bờ bến",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 45
+        }
+      ]
     },
     {
       "id": 46,
       "questionIndex": 45,
       "content": "Cách diễn đạt nào dưới đây là của Hồ Chí Minh?",
-      "explanation": "Hồ Chí Minh thường xuyên nhắc nhở phương châm \"thực hành sinh hoạt\", và Người nêu rõ: \"Lý luận mà không liên hệ với thực tiễn là lý luận suông\".",
+      "explanation": "Hồ Chí Minh dùng cụm “lý luận suông” để phê phán việc học lý thuyết mà không liên hệ với thực tiễn. Lý luận phải hướng dẫn hành động và được thực tiễn kiểm nghiệm, bổ sung; nếu tách rời đời sống, nó chỉ còn là kiến thức trừu tượng, không giúp giải quyết những vấn đề cụ thể mà cách mạng và nhân dân đang đặt ra.",
       "answers": [
         {
           "id": 1,
           "content": "Lý luận mà không liên hệ với thực tiễn là lý luận mù quáng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 46
         },
         {
           "id": 2,
           "content": "Lý luận mà không liên hệ với thực tiễn là lý luận suông",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 46
         },
         {
           "id": 3,
           "content": "Lý luận mà không liên hệ với thực tiễn là lý luận giáo điều",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 46
         },
         {
           "id": 4,
           "content": "Lý luận mà không liên hệ với thực tiễn là lý luận trống rỗng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 46
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Lý luận mà không liên hệ với thực tiễn là lý luận mù quáng",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 46
+        },
+        {
+          "id": 2,
+          "content": "Lý luận mà không liên hệ với thực tiễn là lý luận suông",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 46
+        },
+        {
+          "id": 3,
+          "content": "Lý luận mà không liên hệ với thực tiễn là lý luận giáo điều",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 46
+        },
+        {
+          "id": 4,
+          "content": "Lý luận mà không liên hệ với thực tiễn là lý luận trống rỗng",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 46
+        }
+      ]
     },
     {
       "id": 47,
       "questionIndex": 46,
       "content": "Theo quan điểm Hồ Chí Minh, khái quát dân chủ có ý nghĩa là gì?",
-      "explanation": "Tư tưởng dân chủ của Hồ Chí Minh bao hàm hai mặt thống nhất hữu cơ: \"Dân là chủ\" (xác định địa vị quyền lực) và \"Dân làm chủ\" (xác định năng lực, trách nhiệm thi hành quyền lực).",
+      "explanation": "Dân chủ được khái quát bằng hai vế “dân là chủ” và “dân làm chủ”. Vế thứ nhất xác nhận nhân dân có địa vị chủ thể của quyền lực; vế thứ hai yêu cầu có cơ chế để dân thực hiện quyền qua bầu cử, quản lý, giám sát. Hai nội dung gắn nhau, tránh hiểu dân chủ chỉ là danh nghĩa hoặc hoạt động hình thức.",
       "answers": [
         {
           "id": 1,
           "content": "Dân là chủ và dân làm chủ",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 47
         },
         {
           "id": 2,
           "content": "Dân là người chủ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 47
         },
         {
           "id": 3,
           "content": "Dân làm quản lý",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 47
         },
         {
           "id": 4,
           "content": "Dân làm người chủ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 47
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Dân là chủ và dân làm chủ",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 47
+        },
+        {
+          "id": 2,
+          "content": "Dân là người chủ",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 47
+        },
+        {
+          "id": 3,
+          "content": "Dân làm quản lý",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 47
+        },
+        {
+          "id": 4,
+          "content": "Dân làm người chủ",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 47
+        }
+      ]
     },
     {
       "id": 48,
       "questionIndex": 47,
       "content": "Nguyên tắc cơ bản nào sau đây cần phải quán triệt trong nghiên cứu tư tưởng Hồ Chí Minh?",
-      "explanation": "Khi nghiên cứu tư tưởng Hồ Chí Minh, một trong những nguyên tắc phương pháp luận bắt buộc là phải quán triệt quan điểm toàn diện và phát triển, lịch sử - cụ thể và thực tiễn.",
+      "explanation": "Quan điểm toàn diện và phát triển yêu cầu nghiên cứu tư tưởng Hồ Chí Minh trong các mối liên hệ và sự vận động theo bối cảnh lịch sử. Cách tiếp cận này ngăn việc cắt rời một câu nói khỏi hệ thống tư tưởng, hoặc biến một kết luận có điều kiện thành công thức bất biến, từ đó bảo đảm sự vận dụng đúng tinh thần sáng tạo của Người.",
       "answers": [
         {
           "id": 1,
           "content": "Quan điểm kế thừa và phát triển",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 48
         },
         {
           "id": 2,
           "content": "Quan điểm kế thừa và toàn diện",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 48
         },
         {
           "id": 3,
           "content": "Quan điểm cách mạng và cụ thể",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 48
         },
         {
           "id": 4,
           "content": "Quan điểm toàn diện và phát triển",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 48
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Quan điểm kế thừa và phát triển",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 48
+        },
+        {
+          "id": 2,
+          "content": "Quan điểm kế thừa và toàn diện",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 48
+        },
+        {
+          "id": 3,
+          "content": "Quan điểm cách mạng và cụ thể",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 48
+        },
+        {
+          "id": 4,
+          "content": "Quan điểm toàn diện và phát triển",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 48
+        }
+      ]
     },
     {
       "id": 49,
       "questionIndex": 48,
       "content": "Theo Hồ Chí Minh, nội dung cốt lõi của vấn đề dân tộc thuộc địa là gì?",
-      "explanation": "\"Độc lập, tự do\" chính là tư tưởng cốt lõi, là mục tiêu cao nhất và xuyên suốt trong toàn bộ tư tưởng và sự nghiệp cách mạng của Hồ Chí Minh.",
+      "explanation": "Nội dung cốt lõi của vấn đề dân tộc thuộc địa là độc lập, tự do vì thực dân tước bỏ quyền tự quyết của cả cộng đồng dân tộc. Độc lập chấm dứt sự lệ thuộc về chính trị, còn tự do bảo đảm nhân dân thoát khỏi áp bức trong đời sống; do đó hai giá trị không thể tách rời trong mục tiêu giải phóng dân tộc.",
       "answers": [
         {
           "id": 1,
           "content": "Tự do, dân chủ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 49
         },
         {
           "id": 2,
           "content": "Độc lập, tự do",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 49
         },
         {
           "id": 3,
           "content": "Người cày có ruộng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 49
         },
         {
           "id": 4,
           "content": "Quyền con người",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 49
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Tự do, dân chủ",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 49
+        },
+        {
+          "id": 2,
+          "content": "Độc lập, tự do",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 49
+        },
+        {
+          "id": 3,
+          "content": "Người cày có ruộng",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 49
+        },
+        {
+          "id": 4,
+          "content": "Quyền con người",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 49
+        }
+      ]
     },
     {
       "id": 50,
       "questionIndex": 49,
       "content": "Quan điểm: “Đảng Cộng sản Việt Nam lấy chủ nghĩa Mác - Lênin và tư tưởng Hồ Chí Minh làm nền tảng tư tưởng, kim chỉ nam cho hành động” được nêu lần đầu tiên trong văn kiện của Đại hội đại biểu toàn quốc lần thứ mấy của Đảng?",
-      "explanation": "Khẳng định chính thức và rõ ràng nhất về việc lấy chủ nghĩa Mác - Lênin và tư tưởng Hồ Chí Minh làm kim chỉ nam xuất hiện lần đầu tiên tại Đại hội VII (1991).",
+      "explanation": "Đại hội VII là lần đầu tiên Đảng khẳng định chủ nghĩa Mác–Lênin và tư tưởng Hồ Chí Minh là nền tảng tư tưởng, kim chỉ nam cho hành động. Sự kiện này có ý nghĩa hệ thống hóa nhận thức lý luận của Đảng, đồng thời yêu cầu vận dụng sáng tạo nền tảng đó để giải quyết các nhiệm vụ đổi mới và phát triển đất nước.",
       "answers": [
         {
           "id": 1,
           "content": "Đại hội đại biểu toàn quốc lần thứ VI",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 50
         },
         {
           "id": 2,
           "content": "Đại hội đại biểu toàn quốc lần thứ VII",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 50
         },
         {
           "id": 3,
           "content": "Đại hội đại biểu toàn quốc lần thứ IX",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 50
         },
         {
           "id": 4,
           "content": "Đại hội đại biểu toàn quốc lần thứ XI",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 50
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đại hội đại biểu toàn quốc lần thứ VI",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 50
+        },
+        {
+          "id": 2,
+          "content": "Đại hội đại biểu toàn quốc lần thứ VII",
+          "is_correct": true,
+          "index_order": 1,
+          "question_target_id": 50
+        },
+        {
+          "id": 3,
+          "content": "Đại hội đại biểu toàn quốc lần thứ IX",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 50
+        },
+        {
+          "id": 4,
+          "content": "Đại hội đại biểu toàn quốc lần thứ XI",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 50
+        }
+      ]
     },
     {
       "id": 51,
       "questionIndex": 50,
       "content": "Theo quan điểm của Hồ Chí Minh, đặc điểm của thời kỳ quá độ ở Việt Nam là gì?",
-      "explanation": "Đặc điểm lớn nhất của nước ta khi bước vào thời kỳ quá độ là bỏ qua chế độ tư bản chủ nghĩa, đi thẳng lên chủ nghĩa xã hội từ một nền kinh tế nông nghiệp lạc hậu.",
+      "explanation": "Đặc điểm lớn của thời kỳ quá độ ở Việt Nam là từ một nước nông nghiệp lạc hậu tiến thẳng lên chủ nghĩa xã hội, không qua giai đoạn phát triển tư bản chủ nghĩa. Xuất phát điểm ấy tạo ra nhiều khó khăn về kinh tế, kỹ thuật, quản lý và văn hóa, nên quá trình xây dựng xã hội mới phải lâu dài, có bước đi và biện pháp phù hợp.",
       "answers": [
         {
           "id": 1,
           "content": "Từ một nước nông nghiệp lạc hậu tiến thẳng lên chủ nghĩa xã hội, không qua giai đoạn phát triển tư bản chủ nghĩa",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 51
         },
         {
           "id": 2,
           "content": "Từ một nước nông nghiệp lạc hậu tiến thẳng lên chủ nghĩa xã hội, không qua giai đoạn phát triển xã hội dân chủ",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 51
         },
         {
           "id": 3,
           "content": "Từ một nước nông nghiệp lạc hậu tiến thẳng lên chủ nghĩa xã hội, không qua giai đoạn phát triển xã hội phong kiến",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 51
         },
         {
           "id": 4,
           "content": "Từ một nước nông nghiệp lạc hậu tiến thẳng lên chủ nghĩa xã hội, thông qua giai đoạn phát triển tư bản chủ nghĩa",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 51
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Từ một nước nông nghiệp lạc hậu tiến thẳng lên chủ nghĩa xã hội, không qua giai đoạn phát triển tư bản chủ nghĩa",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 51
+        },
+        {
+          "id": 2,
+          "content": "Từ một nước nông nghiệp lạc hậu tiến thẳng lên chủ nghĩa xã hội, không qua giai đoạn phát triển xã hội dân chủ",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 51
+        },
+        {
+          "id": 3,
+          "content": "Từ một nước nông nghiệp lạc hậu tiến thẳng lên chủ nghĩa xã hội, không qua giai đoạn phát triển xã hội phong kiến",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 51
+        },
+        {
+          "id": 4,
+          "content": "Từ một nước nông nghiệp lạc hậu tiến thẳng lên chủ nghĩa xã hội, thông qua giai đoạn phát triển tư bản chủ nghĩa",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 51
+        }
+      ]
     },
     {
       "id": 52,
       "questionIndex": 51,
       "content": "Theo quan điểm của Hồ Chí Minh đối với một quốc gia, cần, kiệm, liêm, chính là thước đo sự giàu có về vật chất, vững mạnh về tinh thần. Quan điểm đó thể hiện điều gì?",
-      "explanation": "Hồ Chí Minh xem cần, kiệm, liêm, chính là phẩm chất gốc của người cách mạng và là thước đo sự văn minh, tiến bộ của một quốc gia, dân tộc.",
+      "explanation": "Cần, kiệm, liêm, chính được xem là thước đo sự giàu có vật chất và vững mạnh tinh thần của quốc gia, vì chúng định hướng cách sử dụng lao động, của cải và quyền lực theo lợi ích chung. Một đất nước thực hành các chuẩn mực ấy hạn chế được lãng phí, tham nhũng, nâng cao trách nhiệm công dân, qua đó biểu hiện sự văn minh, tiến bộ thực chất.",
       "answers": [
         {
           "id": 1,
           "content": "Sự văn minh tiến bộ",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 52
         },
         {
           "id": 2,
           "content": "Văn hóa cao",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 52
         },
         {
           "id": 3,
           "content": "Truyền thống tốt đẹp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 52
         },
         {
           "id": 4,
           "content": "Văn hiến lâu đời",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 52
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Sự văn minh tiến bộ",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 52
+        },
+        {
+          "id": 2,
+          "content": "Văn hóa cao",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 52
+        },
+        {
+          "id": 3,
+          "content": "Truyền thống tốt đẹp",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 52
+        },
+        {
+          "id": 4,
+          "content": "Văn hiến lâu đời",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 52
+        }
+      ]
     },
     {
       "id": 53,
       "questionIndex": 52,
       "content": "Mặt trận dân tộc thống nhất trong tư tưởng Hồ Chí Minh được xây dựng như thế nào?",
-      "explanation": "Bản chất tổ chức của Mặt trận dân tộc thống nhất là khối đại đoàn kết chặt chẽ trên nền tảng liên minh công nhân - nông dân - trí thức do Đảng Cộng sản lãnh đạo.",
+      "explanation": "Mặt trận dân tộc thống nhất là khối đại đoàn kết có tổ chức, đặt trên nền tảng liên minh công–nông–trí thức và dưới sự lãnh đạo của Đảng Cộng sản. Cấu trúc này vừa tạo cơ sở xã hội vững chắc, vừa mở rộng việc tập hợp mọi lực lượng yêu nước; vì thế Mặt trận không phải sự tụ họp ngẫu nhiên hay chỉ giới hạn ở một bộ phận dân cư.",
       "answers": [
         {
           "id": 1,
           "content": "Là nơi tập hợp mọi người dân ở trong nước Việt Nam",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 53
         },
         {
           "id": 2,
           "content": "Là tổ chức tập hợp ngẫu nhiên quần chúng nhân dân",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 53
         },
         {
           "id": 3,
           "content": "Là khối đại đoàn kết chặt chẽ có tổ chức trên nền tảng khối liên minh công - nông - trí thức do Đảng Cộng sản lãnh đạo",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 53
         },
         {
           "id": 4,
           "content": "Là nơi quy tụ mọi người Việt Nam định cư ở nước ngoài, dù ở bất cứ phương trời nào",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 53
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Là nơi tập hợp mọi người dân ở trong nước Việt Nam",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 53
+        },
+        {
+          "id": 2,
+          "content": "Là tổ chức tập hợp ngẫu nhiên quần chúng nhân dân",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 53
+        },
+        {
+          "id": 3,
+          "content": "Là khối đại đoàn kết chặt chẽ có tổ chức trên nền tảng khối liên minh công - nông - trí thức do Đảng Cộng sản lãnh đạo",
+          "is_correct": true,
+          "index_order": 2,
+          "question_target_id": 53
+        },
+        {
+          "id": 4,
+          "content": "Là nơi quy tụ mọi người Việt Nam định cư ở nước ngoài, dù ở bất cứ phương trời nào",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 53
+        }
+      ]
     },
     {
       "id": 54,
       "questionIndex": 53,
       "content": "Đâu là nguyên tắc xây dựng đạo đức mới trong tư tưởng Hồ Chí Minh?",
-      "explanation": "Một trong những nguyên tắc xây dựng đạo đức cách mạng quan trọng được Người nhấn mạnh là \"phải tu dưỡng đạo đức suốt đời\", vì đạo đức cách mạng không phải tự trên trời rơi xuống mà do rèn luyện bền bỉ mà thành.",
+      "explanation": "Tu dưỡng đạo đức suốt đời là nguyên tắc vì đạo đức cách mạng không tự nhiên có sẵn và luôn bị thử thách bởi lợi ích, quyền lực, hoàn cảnh. Việc rèn luyện cần diễn ra bền bỉ trong công tác, sinh hoạt, tự phê bình và tiếp thu phê bình để phẩm chất tốt được củng cố, còn chủ nghĩa cá nhân và các thói xấu dần bị loại bỏ.",
       "answers": [
         {
           "id": 1,
           "content": "Phải tu dưỡng đạo đức suốt đời",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 54
         },
         {
           "id": 2,
           "content": "Phải tu dưỡng đạo đức thường xuyên",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 54
         },
         {
           "id": 3,
           "content": "Phải tu dưỡng đạo đức hàng ngày",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 54
         },
         {
           "id": 4,
           "content": "Phải tu dưỡng đạo đức liên tục",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 54
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Phải tu dưỡng đạo đức suốt đời",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 54
+        },
+        {
+          "id": 2,
+          "content": "Phải tu dưỡng đạo đức thường xuyên",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 54
+        },
+        {
+          "id": 3,
+          "content": "Phải tu dưỡng đạo đức hàng ngày",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 54
+        },
+        {
+          "id": 4,
+          "content": "Phải tu dưỡng đạo đức liên tục",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 54
+        }
+      ]
     },
     {
       "id": 55,
       "questionIndex": 54,
       "content": "Các bài giảng của Nguyễn Ái Quốc tại các lớp huấn luyện cán bộ được Bộ tuyên truyền của Hội liên hiệp các dân tộc bị áp bức tập hợp lại và xuất bản thành tác phẩm gì?",
-      "explanation": "Các bài giảng của Người tại Quảng Châu (Trung Quốc) cho các lớp huấn luyện cán bộ Hội Việt Nam Cách mạng Thanh niên đã được tập hợp và xuất bản thành cuốn \"Đường Kách mệnh\" năm 1927.",
+      "explanation": "Đường Kách Mệnh là tác phẩm tập hợp các bài giảng của Nguyễn Ái Quốc tại các lớp huấn luyện cán bộ, do Bộ Tuyên truyền của Hội Liên hiệp các dân tộc bị áp bức xuất bản. Tác phẩm truyền bá những vấn đề cơ bản về đường lối, tổ chức, đạo đức và lực lượng cách mạng, góp phần chuẩn bị tư tưởng, chính trị cho sự ra đời của Đảng Cộng sản Việt Nam.",
       "answers": [
         {
           "id": 1,
           "content": "Bản án chế độ thực dân Pháp",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 55
         },
         {
           "id": 2,
           "content": "Lênin và Phương Đông",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 55
         },
         {
           "id": 3,
           "content": "Con Rồng tre",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 55
         },
         {
           "id": 4,
           "content": "Đường Kách Mệnh",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 55
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Bản án chế độ thực dân Pháp",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 55
+        },
+        {
+          "id": 2,
+          "content": "Lênin và Phương Đông",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 55
+        },
+        {
+          "id": 3,
+          "content": "Con Rồng tre",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 55
+        },
+        {
+          "id": 4,
+          "content": "Đường Kách Mệnh",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 55
+        }
+      ]
     },
     {
       "id": 56,
       "questionIndex": 55,
       "content": "Khi nói về điều kiện hình thành tư tưởng Hồ Chí Minh, điều kiện nào bị viết sai?",
-      "explanation": "Nhận thức về đặc điểm thời đại được Hồ Chí Minh đúc rút qua thực tiễn bôn ba khắp thế giới, tham gia phong trào cộng sản quốc tế chứ không phải nhận thức đầy đủ ngay từ khi còn ngồi trên ghế nhà trường nhỏ tuổi.",
+      "explanation": "Nhận định rằng ngay khi còn nhỏ trong trường Hồ Chí Minh đã nhận thức được đặc điểm thời đại là nội dung bị viết sai, vì nhận thức về thời đại được hình thành dần qua quá trình học tập, lao động và hoạt động ở nhiều nước. Các điều kiện còn lại đều phản ánh đúng cơ sở khách quan, quê hương và gia đình đã nuôi dưỡng động cơ, ý chí cứu nước của Người.",
       "answers": [
         {
           "id": 1,
           "content": "Nhu cầu khách quan và bức thiết do cách mạng Việt Nam đặt ra là muốn cứu nước, phải tìm một con đường cứu nước mới",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 56
         },
         {
           "id": 2,
           "content": "Quê hương Hồ Chí Minh là mảnh đất giàu truyền thống yêu nước, chống giặc ngoại xâm",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 56
         },
         {
           "id": 3,
           "content": "Hồ Chí Minh sinh ra trong một gia đình nhà Nho yêu nước, gần gũi nhân dân, cụ thân sinh có tư tưởng thương dân, chủ trương lấy dân làm hậu thuẫn cho mọi cải cách chính trị",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 56
         },
         {
           "id": 4,
           "content": "Ngay từ khi còn nhỏ ở trong trường, Hồ Chí Minh đã nhận thức được đặc điểm thời đại",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 56
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Nhu cầu khách quan và bức thiết do cách mạng Việt Nam đặt ra là muốn cứu nước, phải tìm một con đường cứu nước mới",
+          "is_correct": false,
+          "index_order": 0,
+          "question_target_id": 56
+        },
+        {
+          "id": 2,
+          "content": "Quê hương Hồ Chí Minh là mảnh đất giàu truyền thống yêu nước, chống giặc ngoại xâm",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 56
+        },
+        {
+          "id": 3,
+          "content": "Hồ Chí Minh sinh ra trong một gia đình nhà Nho yêu nước, gần gũi nhân dân, cụ thân sinh có tư tưởng thương dân, chủ trương lấy dân làm hậu thuẫn cho mọi cải cách chính trị",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 56
+        },
+        {
+          "id": 4,
+          "content": "Ngay từ khi còn nhỏ ở trong trường, Hồ Chí Minh đã nhận thức được đặc điểm thời đại",
+          "is_correct": true,
+          "index_order": 3,
+          "question_target_id": 56
+        }
+      ]
     },
     {
       "id": 57,
       "questionIndex": 56,
       "content": "Một trong những nội dung cơ bản của bản Yêu sách gồm tám điểm của Nguyễn Ái Quốc gửi đến Hội nghị Vecxay (Pháp) là gì?",
-      "explanation": "Bản Yêu sách của nhân dân An Nam gửi Hội nghị Vecxay (1919) chủ yếu đòi các quyền tự do, dân chủ tối thiểu, quyền bình đẳng pháp lý cho nhân dân thuộc địa.",
+      "explanation": "Bản Yêu sách tám điểm gửi Hội nghị Vécxây đòi những quyền tự do, dân chủ tối thiểu cho nhân dân Việt Nam như bình đẳng trước pháp luật, tự do báo chí, tự do hội họp. Dù chưa trực tiếp đòi độc lập hoàn toàn, văn kiện đã đưa vấn đề Việt Nam ra công luận quốc tế và vạch rõ sự mâu thuẫn của chế độ thực dân với các khẩu hiệu tự do.",
       "answers": [
         {
           "id": 1,
           "content": "Đòi quyền tự do, dân chủ tối thiểu cho nhân dân",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 57
         },
         {
           "id": 2,
           "content": "Đòi quyền tự trị của dân tộc",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 57
         },
         {
           "id": 3,
           "content": "Đòi quyền độc lập dân tộc",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 57
         },
         {
           "id": 4,
           "content": "Đòi quyền bình đẳng",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 57
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Đòi quyền tự do, dân chủ tối thiểu cho nhân dân",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 57
+        },
+        {
+          "id": 2,
+          "content": "Đòi quyền tự trị của dân tộc",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 57
+        },
+        {
+          "id": 3,
+          "content": "Đòi quyền độc lập dân tộc",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 57
+        },
+        {
+          "id": 4,
+          "content": "Đòi quyền bình đẳng",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 57
+        }
+      ]
     },
     {
       "id": 58,
       "questionIndex": 57,
       "content": "Đoàn kết quốc tế theo tư tưởng Hồ Chí Minh được xác định có vai trò như thế nào?",
-      "explanation": "Đoàn kết quốc tế là một nhân tố thường xuyên và hết sức quan trọng, kết hợp sức mạnh dân tộc với sức mạnh thời đại để đưa cách mạng Việt Nam đến thắng lợi hoàn toàn.",
+      "explanation": "Đoàn kết quốc tế là nhân tố thường xuyên và hết sức quan trọng vì cách mạng Việt Nam là bộ phận của phong trào chống áp bức trên thế giới. Sự ủng hộ bên ngoài tạo thêm nguồn lực chính trị, tinh thần và điều kiện quốc tế thuận lợi, nhưng chỉ phát huy trọn vẹn khi kết hợp với tự lực, tự cường và sức mạnh nội tại của dân tộc.",
       "answers": [
         {
           "id": 1,
           "content": "Một nhân tố thường xuyên và hết sức quan trọng giúp cho cách mạng Việt Nam đi đến thắng lợi hoàn toàn",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 58
         },
         {
           "id": 2,
           "content": "Có ý nghĩa sống còn đối với cách mạng Việt Nam",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 58
         },
         {
           "id": 3,
           "content": "Vấn đề cơ bản của cách mạng Việt Nam",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 58
         },
         {
           "id": 4,
           "content": "Sức mạnh giúp cho dân tộc ta vượt qua mọi thử thách, khó khăn trong dựng nước và giữ nước",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 58
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Một nhân tố thường xuyên và hết sức quan trọng giúp cho cách mạng Việt Nam đi đến thắng lợi hoàn toàn",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 58
+        },
+        {
+          "id": 2,
+          "content": "Có ý nghĩa sống còn đối với cách mạng Việt Nam",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 58
+        },
+        {
+          "id": 3,
+          "content": "Vấn đề cơ bản của cách mạng Việt Nam",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 58
+        },
+        {
+          "id": 4,
+          "content": "Sức mạnh giúp cho dân tộc ta vượt qua mọi thử thách, khó khăn trong dựng nước và giữ nước",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 58
+        }
+      ]
     },
     {
       "id": 59,
       "questionIndex": 58,
       "content": "Mục đích chính để Hồ Chí Minh muốn ra nước ngoài là gì?",
-      "explanation": "Khi trò chuyện với người bạn Lê Văn Hân trước lúc ra đi tìm đường cứu nước, anh thanh niên Nguyễn Tất Thành đã nói rõ mục đích muốn sang phương Tây để xem họ làm như thế nào rồi về giúp đồng bào.",
+      "explanation": "Mục đích ra nước ngoài của Nguyễn Tất Thành là quan sát nước Pháp và các nước khác tổ chức, phát triển như thế nào để trở về giúp đồng bào. Động cơ ấy cho thấy tinh thần học hỏi thực tiễn và ý chí cứu nước; Người không ra đi vì tìm kiếm lợi ích cá nhân mà để khảo nghiệm con đường phù hợp cho dân tộc Việt Nam.",
       "answers": [
         {
           "id": 1,
           "content": "Xem nước Pháp và các nước khác làm như thế nào, tôi sẽ trở về giúp đồng bào chúng ta",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 59
         },
         {
           "id": 2,
           "content": "Xem nước Pháp và các nước khác dân chủ như thế nào, tôi sẽ trở về giúp đồng bào chúng ta",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 59
         },
         {
           "id": 3,
           "content": "Xem nước Pháp và các nước khác văn minh như thế nào, tôi sẽ trở về giúp đồng bào chúng ta",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 59
         },
         {
           "id": 4,
           "content": "Xem nước Pháp và các nước khác tiến bộ như thế nào, tôi sẽ trở về giúp đồng bào chúng ta",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 59
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Xem nước Pháp và các nước khác làm như thế nào, tôi sẽ trở về giúp đồng bào chúng ta",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 59
+        },
+        {
+          "id": 2,
+          "content": "Xem nước Pháp và các nước khác dân chủ như thế nào, tôi sẽ trở về giúp đồng bào chúng ta",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 59
+        },
+        {
+          "id": 3,
+          "content": "Xem nước Pháp và các nước khác văn minh như thế nào, tôi sẽ trở về giúp đồng bào chúng ta",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 59
+        },
+        {
+          "id": 4,
+          "content": "Xem nước Pháp và các nước khác tiến bộ như thế nào, tôi sẽ trở về giúp đồng bào chúng ta",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 59
+        }
+      ]
     },
     {
       "id": 60,
       "questionIndex": 59,
       "content": "Hồ Chí Minh nhấn mạnh xây dựng nhà nước trong sạch vững mạnh cần phải làm gì?",
-      "explanation": "Điểm đặc sắc trong nhà nước pháp quyền của Hồ Chí Minh là luôn kết hợp chặt chẽ giữa quản lý bằng pháp luật với giáo dục đạo đức, hướng tới một nền pháp quyền nhân nghĩa.",
+      "explanation": "Xây dựng Nhà nước trong sạch, vững mạnh cần kết hợp giáo dục pháp luật với giáo dục đạo đức để hình thành pháp quyền nhân nghĩa. Pháp luật tạo khuôn khổ bắt buộc, xử lý hành vi vi phạm; đạo đức nuôi dưỡng tự giác, trách nhiệm phục vụ dân. Sự kết hợp này giúp kiểm soát quyền lực và ngăn cán bộ sa vào quan liêu, tham nhũng.",
       "answers": [
         {
           "id": 1,
           "content": "Kết hợp giáo dục pháp luật và đạo đức, hình thành pháp quyền nhân nghĩa",
-          "isCorrect": true
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 60
         },
         {
           "id": 2,
           "content": "Kết hợp giáo dục pháp luật và nhân cách, hình thành pháp quyền nhân nghĩa",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 60
         },
         {
           "id": 3,
           "content": "Kết hợp giáo dục pháp luật và nghề nghiệp, hình thành pháp quyền nhân nghĩa",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 60
         },
         {
           "id": 4,
           "content": "Kết hợp giáo dục pháp luật và văn hóa; hình thành pháp quyền nhân nghĩa",
-          "isCorrect": false
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 60
         }
       ],
-      "questionType": "Single Choice"
+      "questionType": "Single Choice",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Kết hợp giáo dục pháp luật và đạo đức, hình thành pháp quyền nhân nghĩa",
+          "is_correct": true,
+          "index_order": 0,
+          "question_target_id": 60
+        },
+        {
+          "id": 2,
+          "content": "Kết hợp giáo dục pháp luật và nhân cách, hình thành pháp quyền nhân nghĩa",
+          "is_correct": false,
+          "index_order": 1,
+          "question_target_id": 60
+        },
+        {
+          "id": 3,
+          "content": "Kết hợp giáo dục pháp luật và nghề nghiệp, hình thành pháp quyền nhân nghĩa",
+          "is_correct": false,
+          "index_order": 2,
+          "question_target_id": 60
+        },
+        {
+          "id": 4,
+          "content": "Kết hợp giáo dục pháp luật và văn hóa; hình thành pháp quyền nhân nghĩa",
+          "is_correct": false,
+          "index_order": 3,
+          "question_target_id": 60
+        }
+      ]
     }
   ]
 }
