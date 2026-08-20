@@ -35,12 +35,15 @@ export default function DiscussionDrawer({ quizId, questionId, initialCount = 0,
   const [reportSuccessMsg, setReportSuccessMsg] = useState('');
   const [isReporting, setIsReporting] = useState(false);
 
-  // Lazy Fetch comments ONLY when drawer is opened and user is logged in
-  const fetchComments = async () => {
+  // Lazy Fetch comments ONLY when drawer is opened and user is logged in (Silent background update to prevent jitter)
+  const fetchComments = async (isInitial = false) => {
     if (!isOpen || !user) return;
+    if (isInitial && comments.length === 0) {
+      setIsLoading(true);
+    }
     try {
       const authToken = token || localStorage.getItem('quizzflow_token');
-      const res = await fetch(`${API_BASE_URL}/comments/${quizId}/${questionId}`, {
+      const res = await fetch(`${API_BASE_URL}/comments/${encodeURIComponent(quizId)}/${encodeURIComponent(questionId)}`, {
         headers: authToken ? { Authorization: `Bearer ${authToken}` } : {}
       });
       if (!res.ok) return;
@@ -50,14 +53,15 @@ export default function DiscussionDrawer({ quizId, questionId, initialCount = 0,
       }
     } catch (err) {
       console.warn('Backend server offline during comments fetch:', err);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   useEffect(() => {
-    if (!isOpen || !user) return;
-    setIsLoading(true);
-    fetchComments().finally(() => setIsLoading(false));
-  }, [isOpen, user, quizId, questionId]);
+    if (!isOpen || !user?.id) return;
+    fetchComments(true);
+  }, [isOpen, user?.id, quizId, questionId]);
 
   // Handle Post Comment
   const handlePostComment = async (e) => {
