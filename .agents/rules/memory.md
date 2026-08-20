@@ -893,7 +893,19 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - SCP lên Oracle VPS (`140.245.119.189`), giải nén vào `/home/ubuntu/quizlet-app/web_dist/` và PM2 restart `quizlet-app` (pid: 1449888) **ONLINE 100%**.
 - **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.994% Completion):**
   ```bash
-  [main 088a2ef0] feat(branding): update fanpage profile URL in GlobalNoticeModal and preserve personal profile on logo (99.994% milestone)
+  [main 3124d93e] feat(branding): update fanpage profile URL in GlobalNoticeModal and preserve personal profile on logo (99.994% milestone)
+  ```
+
+### 🚫✨ Cập Nhật Đợt 83: Loại Bỏ Hoàn Toàn Icon Ngôi Sao Lấp Lánh AI Khỏi Bảng Thông Báo (Cột Mốc 99.994% Hoàn Hảo):
+- **Loại Bỏ Icon Sparkles (`GlobalNoticeModal.jsx`):**
+  - Xóa bỏ icon và khung ngôi sao lấp lánh (tránh việc người học liên tưởng đến biểu tượng AI tạo sinh).
+  - Tinh chỉnh tiêu đề học thuật tối giản, thanh lịch chuẩn giao diện công nghệ giáo dục hiện đại.
+- **Vite Build & Live Deploy VPS (`https://hannhu.io.vn/`)**:
+  - Vite v8.2.1 build thành công trong `568ms` (`index-DvuFp7s3.js`, `index-Cw01pDdt.css`).
+  - SCP lên Oracle VPS (`140.245.119.189`), giải nén vào `/home/ubuntu/quizlet-app/web_dist/` và PM2 restart `quizlet-app` (pid: 1451239) **ONLINE 100%**.
+- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.994% Completion):**
+  ```bash
+  [main a7d995c0] feat(ui): remove sparkles icon from GlobalNoticeModal for clean academic look (99.994% milestone)
   ```
 
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink, Sparkles } from 'lucide-react';
+import { X, ExternalLink } from 'lucide-react';
 
 const STORAGE_KEY = 'quizzflow_hide_notice_v1';
 
@@ -71,19 +71,14 @@ export default function GlobalNoticeModal() {
             <X className="w-4 h-4 stroke-[2]" />
           </button>
 
-          {/* Header Icon + Title */}
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-100 dark:border-indigo-800/80 flex items-center justify-center flex-shrink-0 shadow-2xs">
-              <Sparkles className="w-5 h-5 text-indigo-600 dark:text-indigo-400 stroke-[1.75]" />
+          {/* Header Title */}
+          <div>
+            <div className="text-[11px] font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+              Thông Báo Học Thuật
             </div>
-            <div>
-              <div className="text-[11px] font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
-                Thông Báo Học Thuật
-              </div>
-              <h3 className="text-base sm:text-lg font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">
-                Chào Mừng Bạn Đến QuizzFlow
-              </h3>
-            </div>
+            <h3 className="text-base sm:text-lg font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">
+              Chào Mừng Bạn Đến QuizzFlow
+            </h3>
           </div>
 
           {/* Notice Body */}
