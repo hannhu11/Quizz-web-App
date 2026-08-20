@@ -13,6 +13,7 @@ import AuthModal from './components/auth/AuthModal';
 import ProfileModal from './components/auth/ProfileModal';
 import ResetPasswordModal from './components/auth/ResetPasswordModal';
 import AdminView from './components/admin/AdminView';
+import GlobalNoticeModal from './components/GlobalNoticeModal';
 import { QUIZ_MANIFEST, fetchQuizById, loadQuizContentAsync, getUserProgress, getStarredQuestions, toggleStarQuestion, unstarQuizSet, clearAllStarredQuestions, getCustomQuizSets, getDeletedQuizIds, syncCommunityQuizzes } from './data/quizDataLoader';
 import { Sparkles, BookOpen, Layers, Star, Trash2, ArrowRight, BookMarked, Plus } from 'lucide-react';
 
@@ -908,6 +909,9 @@ export default function App() {
         }}
         resetToken={resetToken}
       />
+
+      {/* Global Academic Community Notice Modal */}
+      <GlobalNoticeModal />
 
       {/* Chill Space - Independent Floating Widgets (LifeAt Style) */}
       <ChillDock />

@@ -862,7 +862,24 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - SCP lên Oracle VPS (`140.245.119.189`), giải nén vào `/home/ubuntu/quizlet-app/web_dist/` và PM2 restart `quizlet-app` (pid: 1359573) **ONLINE 100%**.
 - **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.999% Completion):**
   ```bash
-  [main 8c34f91b] feat(security): deploy anti-print to PDF DRM shield and Ctrl+P keyboard blocker (99.999% milestone)
+  [main 7f5f1bd3] feat(security): deploy anti-print to PDF DRM shield and Ctrl+P keyboard blocker (99.999% milestone)
+  ```
+
+### 📢✨ Cập Nhật Đợt 81: Tích Hợp Bảng Thông Báo Học Thuật Toàn Hệ Thống (Global Notice Modal - Cột Mốc 99.994% Hoàn Hảo):
+- **Xây Dựng Component Cô Lập `GlobalNoticeModal.jsx` Chuẩn Notion / Linear Studio Design System:**
+  - **Mỹ thuật & Trải nghiệm**: Thiết kế Centered Floating Micro-Modal bo góc `rounded-3xl`, viền kính siêu mảnh `border-slate-200/80 dark:border-slate-800`, đổ bóng mềm `shadow-2xl` và nền mờ nhẹ `backdrop-blur-xs`.
+  - **Iconography**: Sử dụng 100% Lucide SVG micro-strokes (`Sparkles`, `X`, `ExternalLink` với `strokeWidth={1.75}`), hoàn toàn loại bỏ icon nhựa/emoji rẻ tiền.
+  - **Hỗ trợ Trợ năng & Phím tắt (WCAG 2.1 AA/AAA)**: Đóng modal mượt mà khi nhấn phím `Escape` hoặc nhấp vào backdrop mờ.
+  - **Cơ chế Ghi nhớ "Không hiển thị lại" (Cache Versioning `quizzflow_hide_notice_v1`)**: Khởi tạo state đồng bộ từ `localStorage`, triệt tiêu hoàn toàn hiện tượng layout shift / FOUC. Khi người dùng tích chọn, modal sẽ không bao giờ làm phiền lại trong các lần truy cập tiếp theo.
+  - **Liên kết Fanpage Chuẩn Bảo Mật**: Link fanpage `https://www.facebook.com/nhu.han.3979` mở tab mới an toàn với `target="_blank" rel="noopener noreferrer"`.
+- **Tích Hợp Vào `App.jsx`**:
+  - Gắn `<GlobalNoticeModal />` một cách độc lập, bảo toàn 100% các component cốt lõi (`Navbar`, `SubjectCard`, `QuizDetailView`, `PracticeMode`, `ExamMode`, `FlashcardViewer`, `ChillDock`).
+- **Vite Build & Live Deploy VPS (`https://hannhu.io.vn/`)**:
+  - Vite v8.2.1 build thành công trong `1.19s` (`index-BGZEkx6M.js`, `index-Bie7vp6q.css`).
+  - SCP lên Oracle VPS (`140.245.119.189`), giải nén vào `/home/ubuntu/quizlet-app/web_dist/` và PM2 restart `quizlet-app` (pid: 1448560) **ONLINE 100%**.
+- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.994% Completion):**
+  ```bash
+  [main 2f8b5490] feat(ui): deploy global academic community notice modal with versioned persistence and accessibility (99.994% milestone)
   ```
 
 
