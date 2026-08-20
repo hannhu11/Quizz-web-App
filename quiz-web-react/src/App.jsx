@@ -92,11 +92,25 @@ export default function App() {
         e.stopPropagation();
         return false;
       }
+
+      // 6. Ctrl + P / Cmd + P (Print to PDF DRM Shield)
+      if (ctrlOrMeta && (key === 'P' || code === 'KeyP')) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+    };
+
+    // BeforePrint event: show alert or guard if user opens print from browser menu
+    const handleBeforePrint = (e) => {
+      console.warn('Print event intercepted by QuizzFlow DRM Shield.');
     };
 
     window.addEventListener('keydown', handleSecurityKeydown, { capture: true });
+    window.addEventListener('beforeprint', handleBeforePrint);
     return () => {
       window.removeEventListener('keydown', handleSecurityKeydown, { capture: true });
+      window.removeEventListener('beforeprint', handleBeforePrint);
     };
   }, []);
 

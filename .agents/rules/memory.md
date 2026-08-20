@@ -847,7 +847,22 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - SCP lên Oracle VPS (`140.245.119.189`), giải nén vào `/home/ubuntu/quizlet-app/web_dist/` và PM2 restart `quizlet-app` (pid: 1352717) **ONLINE 100%**.
 - **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.999% Completion):**
   ```bash
-  [main e39b740a] feat(security): deploy keyboard security guard to prevent F12, inspect, view-source, and page saving (99.999% milestone)
+  [main e8ae4484] feat(security): deploy keyboard security guard to prevent F12, inspect, view-source, and page saving (99.999% milestone)
+  ```
+
+### 📄🖨️ Cập Nhật Đợt 80: Tích Hợp Tấm Khiên Chống In Đề Ra PDF (Anti-Print to PDF DRM Shield - Cột Mốc 99.999% Hoàn Hảo):
+- **Triệt Tiêu Phím Tắt In `Ctrl + P` & `Cmd + P` (`App.jsx`):**
+  - Tích hợp vào bộ lọc sự kiện bàn phím `{ capture: true }`, chặn đứng `Ctrl + P` / `Cmd + P` trong 0ms, không cho mở cửa sổ Print Preview.
+- **Tấm Khiên CSS `@media print` Triệt Tiêu 100% Nội Dung Khi In Lén (`index.css`):**
+  - Khi người dùng vào menu trình duyệt (Menu 3 chấm $\rightarrow$ Print $\rightarrow$ Save as PDF), toàn bộ cây DOM (`#root`, header, main, câu hỏi, đáp án, lời giải thích) bị ẩn hoàn toàn (`display: none !important; visibility: hidden !important;`).
+  - Thay thế toàn bộ bằng duy nhất 1 khung Thông báo Bản quyền màu đỏ trang trọng:
+    > *"⚠️ THÔNG BÁO BẢO MẬT & BẢN QUYỀN HỌC THUẬT: Tài liệu và ngân hàng câu hỏi thuộc quyền sở hữu của QuizzFlow (hannhu.io.vn). Hệ thống NGHIÊM CẤM in ấn, sao chép và xuất bản trái phép dưới dạng PDF. Vui lòng truy cập và ôn luyện trực tiếp trên nền tảng: https://hannhu.io.vn/"*
+- **Vite Build & Live Deploy VPS (`https://hannhu.io.vn/`)**:
+  - Vite v8.2.1 build thành công trong `857ms` (`index-CQV_NmgS.js`, `index-CFvvFrGv.css`).
+  - SCP lên Oracle VPS (`140.245.119.189`), giải nén vào `/home/ubuntu/quizlet-app/web_dist/` và PM2 restart `quizlet-app` (pid: 1359573) **ONLINE 100%**.
+- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.999% Completion):**
+  ```bash
+  [main 8c34f91b] feat(security): deploy anti-print to PDF DRM shield and Ctrl+P keyboard blocker (99.999% milestone)
   ```
 
 

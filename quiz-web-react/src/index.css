@@ -116,3 +116,51 @@ html.dark body {
   }
 }
 
+/* ========================================================================= */
+/* 🛡️ ANTI-PRINT TO PDF SHIELD (DRM CONTENT PROTECTION)                      */
+/* ========================================================================= */
+@media print {
+  html, body {
+    height: 100% !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  /* Hide entire React App and all DOM elements */
+  #root,
+  header,
+  main,
+  footer,
+  div,
+  section,
+  article,
+  aside,
+  nav {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Display a clean, prominent, and legal copyright security banner */
+  body::before {
+    content: "⚠️ THÔNG BÁO BẢO MẬT & BẢN QUYỀN HỌC THUẬT\A\A Tài liệu và ngân hàng câu hỏi thuộc quyền sở hữu của QuizzFlow (hannhu.io.vn).\A Hệ thống NGHIÊM CẤM in ấn, sao chép và xuất bản trái phép dưới dạng PDF.\A\A Vui lòng truy cập và ôn luyện trực tiếp trên nền tảng: https://hannhu.io.vn/";
+    white-space: pre-wrap;
+    display: block !important;
+    visibility: visible !important;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    right: 5%;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16pt;
+    font-weight: 800;
+    color: #e11d48;
+    padding: 30pt 20pt;
+    border: 2pt solid #f43f5e;
+    border-radius: 12pt;
+    background-color: #fff1f2;
+    line-height: 1.8;
+  }
+}
+
