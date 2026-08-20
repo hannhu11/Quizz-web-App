@@ -36,9 +36,9 @@ export default function Navbar({
           >
             <div className="w-10 h-10 rounded-full p-0.5 bg-gradient-to-tr from-amber-300 via-rose-300 to-indigo-400 shadow-soft group-hover:scale-105 transition-transform duration-300 overflow-hidden">
               <picture>
-                <source srcSet="/capybara_avatar.webp?v=3" type="image/webp" />
+                <source srcSet="/capybara_avatar.webp?v=4" type="image/webp" />
                 <img
-                  src="/capybara_avatar.png?v=3"
+                  src="/capybara_avatar.png?v=4"
                   alt="QuizzFlow Capybara Mascot"
                   width="40"
                   height="40"
