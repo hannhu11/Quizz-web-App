@@ -879,7 +879,21 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - SCP lên Oracle VPS (`140.245.119.189`), giải nén vào `/home/ubuntu/quizlet-app/web_dist/` và PM2 restart `quizlet-app` (pid: 1448560) **ONLINE 100%**.
 - **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.994% Completion):**
   ```bash
-  [main 2f8b5490] feat(ui): deploy global academic community notice modal with versioned persistence and accessibility (99.994% milestone)
+  [main 18ee7a81] feat(ui): deploy global academic community notice modal with versioned persistence and accessibility (99.994% milestone)
+  ```
+
+### 🔗✨ Cập Nhật Đợt 82: Chuẩn Hóa Đường Dẫn Fanpage & Bảo Toàn Logo Cá Nhân (Cột Mốc 99.994% Hoàn Hảo):
+- **Cập Nhật Đường Dẫn Fanpage Trong Bảng Thông Báo (`GlobalNoticeModal.jsx`):**
+  - Đổi đường dẫn fanpage sang: `https://www.facebook.com/profile.php?id=61593647903572#`.
+  - Mở tab mới với đầy đủ thuộc tính bảo mật `target="_blank" rel="noopener noreferrer"`.
+- **Bảo Toàn Tuyệt Đối Đường Dẫn Logo Cá Nhân (`Navbar.jsx`):**
+  - Giữ nguyên 100% đường dẫn Facebook cá nhân của Admin: `https://www.facebook.com/nhu.han.3979`.
+- **Vite Build & Live Deploy VPS (`https://hannhu.io.vn/`)**:
+  - Vite v8.2.1 build thành công trong `785ms` (`index-A61mqm3Z.js`, `index-Bie7vp6q.css`).
+  - SCP lên Oracle VPS (`140.245.119.189`), giải nén vào `/home/ubuntu/quizlet-app/web_dist/` và PM2 restart `quizlet-app` (pid: 1449888) **ONLINE 100%**.
+- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.994% Completion):**
+  ```bash
+  [main 088a2ef0] feat(branding): update fanpage profile URL in GlobalNoticeModal and preserve personal profile on logo (99.994% milestone)
   ```
 
 

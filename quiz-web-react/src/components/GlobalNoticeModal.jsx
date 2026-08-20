@@ -94,7 +94,7 @@ export default function GlobalNoticeModal() {
             <p>
               Nếu bạn phát hiện nội dung cần bổ sung hoặc có mong muốn đóng góp thêm đề mới lên web, vui lòng inbox trực tiếp qua fanpage:{' '}
               <a
-                href="https://www.facebook.com/nhu.han.3979"
+                href="https://www.facebook.com/profile.php?id=61593647903572#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-bold text-indigo-600 dark:text-indigo-400 hover:underline inline-flex items-center gap-0.5"
