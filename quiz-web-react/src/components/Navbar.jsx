@@ -141,29 +141,29 @@ export default function Navbar({
             <div className="flex items-center gap-1.5 sm:gap-2 pl-1 border-l border-slate-200 dark:border-slate-800">
               <div
                 onClick={() => onOpenProfile && onOpenProfile()}
-                className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-bold cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 transition-all"
+                className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-xs font-bold cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 transition-all"
                 title="Bấm để xem Hồ Sơ Sinh Viên"
               >
-                <span className="text-slate-800 dark:text-slate-200 font-extrabold whitespace-nowrap max-w-[80px] sm:max-w-none truncate">
+                <span className="text-slate-900 dark:text-slate-100 font-extrabold whitespace-nowrap max-w-[80px] sm:max-w-none truncate">
                   {user?.fullName || user?.email?.split('@')[0]}
                 </span>
-                {/* Reputation Badge */}
+                {/* Reputation Badge with WCAG AAA Contrast */}
                 <span
-                  className={`px-1.5 sm:px-2 py-0.5 rounded-full text-[10px] font-bold tracking-tight inline-flex items-center gap-1 ${
+                  className={`px-1.5 sm:px-2 py-0.5 rounded-full text-[10px] font-extrabold tracking-tight inline-flex items-center gap-1 ${
                     (user?.reputation ?? 10) >= 10
-                      ? 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30'
+                      ? 'bg-emerald-100 text-emerald-950 dark:bg-emerald-950 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-700'
                       : (user?.reputation ?? 10) >= 0
-                      ? 'bg-slate-500/15 text-slate-700 dark:text-slate-300 border border-slate-500/30'
-                      : 'bg-rose-500/15 text-rose-700 dark:text-rose-300 border border-rose-500/30'
+                      ? 'bg-slate-200 text-slate-900 dark:bg-slate-800 dark:text-slate-100 border border-slate-300 dark:border-slate-600'
+                      : 'bg-rose-100 text-rose-950 dark:bg-rose-950 dark:text-rose-200 border border-rose-300 dark:border-rose-700'
                   }`}
                   title="Điểm Uy Tín Tài Khoản QuizzFlow"
                 >
-                  {(user?.reputation ?? 10) >= 10 ? '🟢' : (user?.reputation ?? 10) >= 0 ? '⚪' : '🔴'} {(user?.reputation ?? 10) >= 0 ? `+${user?.reputation ?? 10}` : user?.reputation} <span className="hidden sm:inline">Uy tín</span>
+                  {(user?.reputation ?? 10) >= 0 ? `+${user?.reputation ?? 10}` : user?.reputation} <span className="hidden sm:inline">Uy tín</span>
                 </span>
               </div>
               <button
                 onClick={logout}
-                className="px-2 sm:px-2.5 py-1 rounded-full bg-rose-50 dark:bg-rose-950/60 hover:bg-rose-100 dark:hover:bg-rose-900/60 text-rose-700 dark:text-rose-300 text-xs font-bold transition-all cursor-pointer"
+                className="px-2.5 sm:px-3 py-1 rounded-full bg-rose-100 hover:bg-rose-200 dark:bg-rose-950/80 dark:hover:bg-rose-900/80 text-rose-900 dark:text-rose-100 border border-rose-200 dark:border-rose-800 text-xs font-extrabold transition-all cursor-pointer"
                 title="Đăng xuất tài khoản"
               >
                 <span className="hidden xs:inline">Đăng xuất</span>
