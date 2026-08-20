@@ -332,9 +332,13 @@ export async function createCustomQuizSet({ title, description, password, questi
 // Verify Quiz Password securely via Server API
 export async function verifyQuizPassword(quizId, password) {
   try {
+    const token = typeof window !== 'undefined' ? (localStorage.getItem('quizzflow_token') || localStorage.getItem('quizzlet_auth_token')) : null;
+    const headers = { 'Content-Type': 'application/json' };
+    if (token) headers['Authorization'] = `Bearer ${token}`;
+
     const res = await fetch('/api/quizzes/verify-password', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers,
       body: JSON.stringify({ quizId, password })
     });
     if (res.ok) {
@@ -387,12 +391,16 @@ export async function updateCustomQuizSet(quizId, password, { title, description
   normalizedQuizCache.set(quizId, updatedSet);
 
   try {
+    const token = typeof window !== 'undefined' ? (localStorage.getItem('quizzflow_token') || localStorage.getItem('quizzlet_auth_token')) : null;
+    const headers = { 'Content-Type': 'application/json' };
+    if (token) headers['Authorization'] = `Bearer ${token}`;
+
     await fetch('/api/quizzes/update', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers,
       body: JSON.stringify({ quizId, password, updatedSet })
     });
-    await syncCommunityQuizzes();
+    await syncCommunityQuizzes(true);
   } catch (e) {
     console.warn('Update API offline');
   }
@@ -411,10 +419,15 @@ export async function deleteCustomQuizSet(quizId, password) {
     return false;
   }
 
-  // Delete from RAM cache immediately
+  // 1. Delete from RAM cache immediately
   normalizedQuizCache.delete(quizId);
 
-  // Track deleted ID locally
+  // 2. Delete from local custom storage
+  const currentCustoms = getCustomQuizSets();
+  const updatedCustoms = currentCustoms.filter(c => c.id !== quizId);
+  localStorage.setItem(STORAGE_KEY_CUSTOM_QUIZZES, JSON.stringify(updatedCustoms));
+
+  // 3. Track deleted ID locally
   const currentDeleted = getDeletedQuizIds();
   if (!currentDeleted.includes(quizId)) {
     const updatedDeleted = [...currentDeleted, quizId];
@@ -422,14 +435,18 @@ export async function deleteCustomQuizSet(quizId, password) {
   }
 
   try {
+    const token = typeof window !== 'undefined' ? (localStorage.getItem('quizzflow_token') || localStorage.getItem('quizzlet_auth_token')) : null;
+    const headers = { 'Content-Type': 'application/json' };
+    if (token) headers['Authorization'] = `Bearer ${token}`;
+
     const res = await fetch('/api/quizzes/delete', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers,
       body: JSON.stringify({ quizId, password })
     });
 
     if (res.ok) {
-      await syncCommunityQuizzes();
+      await syncCommunityQuizzes(true);
     }
   } catch (e) {
     console.warn('Delete API offline');

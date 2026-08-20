@@ -30,6 +30,28 @@ function authenticateToken(req, res, next) {
 }
 
 /**
+ * Middleware xác thực JWT Token tùy chọn (Nếu có token thì giải mã vào req.user, không có thì bỏ qua)
+ */
+function optionalAuthenticateToken(req, res, next) {
+  const authHeader = req.headers['authorization'];
+  const token = authHeader && authHeader.split(' ')[1];
+
+  if (!token) {
+    req.user = null;
+    return next();
+  }
+
+  jwt.verify(token, JWT_SECRET, (err, decodedUser) => {
+    if (err) {
+      req.user = null;
+    } else {
+      req.user = decodedUser;
+    }
+    next();
+  });
+}
+
+/**
  * Middleware phân quyền Admin (Dành cho quản trị viên)
  */
 function requireAdmin(req, res, next) {
@@ -66,6 +88,7 @@ function generateToken(user) {
 
 module.exports = {
   authenticateToken,
+  optionalAuthenticateToken,
   requireAdmin,
   generateToken,
   JWT_SECRET

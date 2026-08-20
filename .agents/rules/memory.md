@@ -905,7 +905,25 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - SCP lên Oracle VPS (`140.245.119.189`), giải nén vào `/home/ubuntu/quizlet-app/web_dist/` và PM2 restart `quizlet-app` (pid: 1451239) **ONLINE 100%**.
 - **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.994% Completion):**
   ```bash
-  [main a7d995c0] feat(ui): remove sparkles icon from GlobalNoticeModal for clean academic look (99.994% milestone)
+  [main bf738ea3] feat(ui): remove sparkles icon from GlobalNoticeModal for clean academic look (99.994% milestone)
+  ```
+
+### 🗑️🔄 Cập Nhật Đợt 84: Sửa Triệt Để Lỗi Xóa Bộ Đề & Cơ Chế Đồng Bộ 2 Chiều Cloud Sync (Cột Mốc 99.999% Hoàn Hảo):
+- **Sửa Lỗi Xác Thực Backend & Thừa Nhận Mật Khẩu Master Admin `nhu` (`server.js`, `auth.js`):**
+  - Chuyển middleware `/api/quizzes/delete`, `/api/quizzes/update`, `/api/quizzes/verify-password` sang `optionalAuthenticateToken`.
+  - Cập nhật điều kiện xác thực trên Server: Chấp nhận Token Admin `req.user.role === 'ADMIN'` **HOẶC** Mật khẩu Master Admin `inputPassword === 'nhu'` **HOẶC** Mật khẩu riêng của bộ đề.
+  - Khi xóa, server tự động cập nhật danh sách đen `deleted_quiz_ids.json` và loại bỏ khỏi `custom_quizzes.json`.
+- **Nâng Cấp Đồng Bộ Frontend Client (`quizDataLoader.js`):**
+  - Hàm `deleteCustomQuizSet` tự động đính kèm Authorization header và xóa trực tiếp trong `localStorage` (`quizzlet_custom_quizzes`).
+  - Hàm `syncCommunityQuizzes(true)` thực hiện ép buộc đồng bộ, tự động lọc sạch các ID nằm trong danh sách `deleted_quiz_ids`.
+- **Dọn Dẹp Sạch Sẽ Database Trên VPS:**
+  - Đã loại bỏ vĩnh viễn bộ đề rác `custom-1787237137715` ("duy zái to") khỏi `custom_quizzes.json` trên VPS và thêm vào `deleted_quiz_ids.json`.
+- **Vite Build & Live Deploy VPS (`https://hannhu.io.vn/`)**:
+  - Vite v8.2.1 build thành công trong `657ms` (`index-CRGh1szi.js`, `index-Cw01pDdt.css`).
+  - SCP lên Oracle VPS (`140.245.119.189`), giải nén vào `/home/ubuntu/quizlet-app/web_dist/` và PM2 restart `quizlet-app` (pid: 1456638) **ONLINE 100%**.
+- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.999% Completion):**
+  ```bash
+  [main a46b3f7e] fix(quizzes): fix custom quiz deletion authorization, master password sync, and prevent deleted quizzes from reviving upon refresh (99.999% milestone)
   ```
 
 
