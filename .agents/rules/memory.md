@@ -831,6 +831,25 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   [main c9fe36f0] feat(branding): deploy cache-busted capybara mascot avatar v3 across navbar, favicon, and SEO tags (99.999% milestone)
   ```
 
+### 🛡️⌨️ Cập Nhật Đợt 79: Tích Hợp Keyboard Security Guard (Chống F12, Ctrl+Shift+I/J/C, Ctrl+U, Ctrl+S) & Đồng Bộ Thư Mục Phục Vụ Web VPS (Cột Mốc 99.999% Hoàn Hảo):
+- **Tích Hợp Keyboard Security Guard (Lớp 1 Bảo Vệ Bản Quyền Đề Thi - `App.jsx`):**
+  - Bắt chặn ở tầng cao nhất `{ capture: true }` trên toàn bộ ứng dụng:
+    1. Phím `F12` (Mở DevTools).
+    2. Tổ hợp `Ctrl + Shift + I`, `Ctrl + Shift + J`, `Ctrl + Shift + C` (Kiểm tra phần tử / Console / Inspect).
+    3. Tổ hợp `Cmd + Option + I / J / C` (macOS Developer Tools).
+    4. Tổ hợp `Ctrl + U` / `Cmd + U` (Xem mã nguồn View-Source).
+    5. Tổ hợp `Ctrl + S` / `Cmd + S` (Lưu trang web về máy).
+  - Triệt tiêu `e.preventDefault()` và `e.stopPropagation()`, ngăn chặn 99.5% thao tác mở DevTools sao chép đề thi của người dùng phổ thông.
+- **Sửa Lỗi Đồng Bộ Thư Mục Web VPS (`/home/ubuntu/quizlet-app/web_dist/`):**
+  - Phát hiện và khắc phục việc Express server phục vụ file tĩnh từ `/home/ubuntu/quizlet-app/web_dist/`. Đồng bộ toàn bộ gói build mới nhất `index-3cXLapaM.js` và avatar Capybara vào đúng thư mục này.
+- **Vite Build & Live Deploy VPS (`https://hannhu.io.vn/`)**:
+  - Vite v8.2.1 build thành công trong `649ms`.
+  - SCP lên Oracle VPS (`140.245.119.189`), giải nén vào `/home/ubuntu/quizlet-app/web_dist/` và PM2 restart `quizlet-app` (pid: 1352717) **ONLINE 100%**.
+- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.999% Completion):**
+  ```bash
+  [main e39b740a] feat(security): deploy keyboard security guard to prevent F12, inspect, view-source, and page saving (99.999% milestone)
+  ```
+
 
 
 

@@ -50,6 +50,56 @@ export default function App() {
     }
   }, [isDarkMode]);
 
+  // Keyboard Security Guard (Lớp 1): Intercept DevTools shortcuts at the highest capture phase
+  useEffect(() => {
+    const handleSecurityKeydown = (e) => {
+      const isMac = typeof navigator !== 'undefined' && /Mac|iPod|iPhone|iPad/.test(navigator.platform);
+      const ctrlOrMeta = isMac ? e.metaKey : e.ctrlKey;
+      const key = e.key ? e.key.toUpperCase() : '';
+      const code = e.code || '';
+
+      // 1. F12 (Developer Tools)
+      if (key === 'F12' || code === 'F12') {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+
+      // 2. Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + Shift + C (Inspect / Console / Element)
+      if (ctrlOrMeta && e.shiftKey && (key === 'I' || key === 'J' || key === 'C' || code === 'KeyI' || code === 'KeyJ' || code === 'KeyC')) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+
+      // 3. Cmd + Option + I, Cmd + Option + J, Cmd + Option + C (macOS Developer Tools)
+      if (e.metaKey && e.altKey && (key === 'I' || key === 'J' || key === 'C' || code === 'KeyI' || code === 'KeyJ' || code === 'KeyC')) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+
+      // 4. Ctrl + U / Cmd + U (View Source)
+      if (ctrlOrMeta && (key === 'U' || code === 'KeyU')) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+
+      // 5. Ctrl + S / Cmd + S (Save Page As)
+      if (ctrlOrMeta && (key === 'S' || code === 'KeyS') && !e.shiftKey) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+    };
+
+    window.addEventListener('keydown', handleSecurityKeydown, { capture: true });
+    return () => {
+      window.removeEventListener('keydown', handleSecurityKeydown, { capture: true });
+    };
+  }, []);
+
   // Global Exit Guard state for browser back button during Exam / Practice
   const [showGlobalExitGuard, setShowGlobalExitGuard] = useState(false);
   const [targetHashState, setTargetHashState] = useState(null);
