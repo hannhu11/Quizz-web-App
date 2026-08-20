@@ -36,14 +36,14 @@ export default function Navbar({
           >
             <div className="w-10 h-10 rounded-full p-0.5 bg-gradient-to-tr from-amber-300 via-rose-300 to-indigo-400 shadow-soft group-hover:scale-105 transition-transform duration-300 overflow-hidden">
               <picture>
-                <source srcSet="/user-avatar.webp" type="image/webp" />
+                <source srcSet="/capybara_avatar.webp?v=3" type="image/webp" />
                 <img
-                  src="/user-avatar.png"
-                  alt="Hàn Như Avatar"
+                  src="/capybara_avatar.png?v=3"
+                  alt="QuizzFlow Capybara Mascot"
                   width="40"
                   height="40"
-                  className="w-full h-full object-cover rounded-full"
-                  onError={(e) => { e.target.src = '/vite.svg'; }}
+                  className="w-full h-full object-cover rounded-full bg-white dark:bg-slate-800"
+                  onError={(e) => { e.target.src = '/capybara_mascot_v10.webp'; }}
                 />
               </picture>
             </div>
