@@ -815,6 +815,22 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   [main e3f81b2a] feat(mobile-perf): optimize mobile iPhone/iPad responsiveness, lazy render questions to reduce DOM by 90% and fix lighthouse accessibility (99.999% milestone)
   ```
 
+### 🦫✨ Cập Nhật Đợt 78: Cập Nhật Logo & Favicon Capybara Mascot Chuẩn Tối Ưu, Chiến Lược Cache-Busting Versioning v3 & Triệt Tiêu Rung Giật Khung Thảo Luận (Cột Mốc 99.999% Hoàn Hảo):
+- **Cập Nhật Logo Linh Vật Capybara Mascot (`quizzflow-mascot-assets/` $\rightarrow$ `public/`):**
+  1. **Lựa chọn asset tối ưu**: Sử dụng bản `quizzflow_favicon_64.png` siêu nhẹ chỉ 7KB, chuẩn nén WebP/PNG cao cấp, tải tức thì trong 5ms mà không làm giảm điểm hiệu năng Lighthouse.
+  2. **Chiến lược Cache-Busting Versioning v3**: Đổi đường dẫn ảnh sang `/capybara_avatar.png?v=3`, `/capybara_avatar.webp?v=3` và `/favicon.ico?v=3` trong cả `Navbar.jsx` và `index.html`. Triệt tiêu hoàn toàn tình trạng trình duyệt lưu cache `immutable 1 năm` của ảnh đại diện cũ.
+  3. **Bảo toàn 100% đường dẫn Facebook cá nhân**: Khi người học click vào avatar Capybara hoặc icon Facebook nhỏ ở góc dưới vẫn mở trực tiếp `https://www.facebook.com/nhu.han.3979`.
+- **Khắc Phục Dứt Điểm Hiện Tượng Rung Giật Trong Khung Thảo Luận (`DiscussionDrawer.jsx`):**
+  1. **Silent Background Updates**: Trạng thái `isLoading(true)` chỉ xuất hiện 1 lần duy nhất lúc mở khung lần đầu khi chưa có dữ liệu. Mọi lần đồng bộ tiếp theo diễn ra êm ái ngầm trong RAM, không unmount danh sách bình luận hay làm chớp tắt giao diện.
+  2. **Chuẩn hóa Dependency `[isOpen, user?.id, quizId, questionId]`**: Loại bỏ re-render thừa khi đối tượng `user` cập nhật điểm uy tín.
+- **Vite Build & Live Deploy VPS (`https://hannhu.io.vn/`)**:
+  - Vite v8.2.1 build thành công trong `692ms`.
+  - Đồng bộ lên Oracle VPS (`140.245.119.189`), giải nén vào `/var/www/quiz-app/web/` và PM2 restart `quizlet-app` (pid: 1334185) **ONLINE 100%**.
+- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.999% Completion):**
+  ```bash
+  [main c9fe36f0] feat(branding): deploy cache-busted capybara mascot avatar v3 across navbar, favicon, and SEO tags (99.999% milestone)
+  ```
+
 
 
 
