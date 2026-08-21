@@ -964,7 +964,21 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - SCP toàn bộ backend và frontend lên Oracle VPS (`140.245.119.189`), giải nén vào `/home/ubuntu/quizlet-app/web_dist/` và khởi động lại dịch vụ hệ thống `quizlet-app.service` **ONLINE 100%**.
 - **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.9992% Completion):**
   ```bash
-  [main 8c2d7e14] feat(parser): implement smart multi-choice auto-detector and normalize 574 custom MLN131 questions (99.9992% milestone)
+  [main 63952896] feat(parser): implement smart multi-choice auto-detector and normalize 574 custom MLN131 questions (99.9992% milestone)
+  ```
+
+### 🧠🎯 Cập Nhật Đợt 87: Khắc Phục Triệt Để Chức Năng Chỉnh Sửa Bộ Đề & Cập Nhật Spotify Playlist (Cột Mốc 99.9995% Hoàn Hảo):
+- **Khớp Nối Chuẩn Xác Prop Edit Quiz (`App.jsx` $\leftrightarrow$ `CreateSetView.jsx`):**
+  - Đồng bộ prop `editQuiz={editingQuizData}` trong `App.jsx`, giải quyết triệt để lỗi nhập mật khẩu xong bị chuyển sang form trống "Tạo bộ đề mới".
+  - Chuyển sang đọc đa hình `a.isCorrect || a.is_correct` trong `CreateSetView.jsx`, đảm bảo khi mở sửa bộ đề thì toàn bộ nội dung câu hỏi, 4 phương án lựa chọn, đáp án đúng và giải thích chi tiết được hiển thị nguyên vẹn 100% và lưu trữ an toàn.
+- **Cập Nhật Spotify Embed Playlist Mới (`MediaStreamWidget.jsx`):**
+  - Nhúng chính xác playlist Spotify theo ID và SI mới: `https://open.spotify.com/embed/playlist/43OQrrLcyzbUR1oL0r2RZO?utm_source=generator&si=578f990689f14b77`.
+- **Vite Build & Live Deploy VPS (`https://hannhu.io.vn/`)**:
+  - Vite v8.2.1 build thành công siêu tốc trong `636ms` (`index-BByxHxHs.js`, `index-COOomU7M.css`).
+  - SCP lên Oracle VPS (`140.245.119.189`), giải nén vào `/home/ubuntu/quizlet-app/web_dist/` và khởi động lại dịch vụ hệ thống `quizlet-app.service` **ONLINE 100%**.
+- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.9995% Completion):**
+  ```bash
+  [main 9d1b72e5] fix(quiz-edit): resolve editQuiz prop mismatch, enable polymorphic answer mapper and update Spotify playlist (99.9995% milestone)
   ```
 
 

@@ -11,47 +11,62 @@ export default function CreateSetView({ onBack, onSetCreated, editQuiz = null })
   const [password, setPassword] = useState(editQuiz?.password || '');
   const [isImportOpen, setIsImportOpen] = useState(false);
 
-  // Parse card fields for full editor (including options A, B, C, D)
-  const [cards, setCards] = useState(() => {
-    if (editQuiz && Array.isArray(editQuiz.questions) && editQuiz.questions.length > 0) {
-      return editQuiz.questions.map((q, idx) => {
-        const answersList = q.answers || [];
-        const correctAns = answersList.find(a => a.isCorrect);
-
-        // Format TERM: Question + Full Options list A, B, C, D if options exist
-        let termText = q.content || '';
-        if (answersList.length > 1 && !termText.includes('A.')) {
-          const optionsFormatted = answersList
-            .map((a, aIdx) => `${String.fromCharCode(65 + aIdx)}. ${a.content}`)
-            .join('\n');
-          termText = `${termText}\n\n${optionsFormatted}`;
-        }
-
-        // Format DEFINITION: Correct Answer with Letter Prefix (e.g. "A. Option content")
-        let defText = '';
-        if (correctAns) {
-          const correctIdx = answersList.findIndex(a => a.isCorrect);
-          if (correctIdx >= 0 && answersList.length > 1) {
-            defText = `${String.fromCharCode(65 + correctIdx)}. ${correctAns.content}`;
-          } else {
-            defText = correctAns.content;
-          }
-        }
-
-        return {
-          id: q.id || idx + 1,
-          term: termText,
-          definition: defText,
-          explanation: q.explanation || ''
-        };
-      });
+  // Helper to map questions to card state
+  const mapQuestionsToCards = (questionsList) => {
+    if (!Array.isArray(questionsList) || questionsList.length === 0) {
+      return [
+        { id: 1, term: '', definition: '', explanation: '' },
+        { id: 2, term: '', definition: '', explanation: '' },
+        { id: 3, term: '', definition: '', explanation: '' }
+      ];
     }
-    return [
-      { id: 1, term: '', definition: '', explanation: '' },
-      { id: 2, term: '', definition: '', explanation: '' },
-      { id: 3, term: '', definition: '', explanation: '' }
-    ];
-  });
+
+    return questionsList.map((q, idx) => {
+      const answersList = q.answers || q.answersList || [];
+      const correctAns = answersList.find(a => Boolean(a.isCorrect || a.is_correct));
+
+      // Format TERM: Question + Full Options list A, B, C, D if options exist
+      let termText = q.content || '';
+      if (answersList.length > 1 && !termText.includes('A.')) {
+        const optionsFormatted = answersList
+          .map((a, aIdx) => `${String.fromCharCode(65 + aIdx)}. ${a.content}`)
+          .join('\n');
+        termText = `${termText}\n\n${optionsFormatted}`;
+      }
+
+      // Format DEFINITION: Correct Answer with Letter Prefix (e.g. "A. Option content")
+      let defText = '';
+      if (correctAns) {
+        const correctIdx = answersList.findIndex(a => Boolean(a.isCorrect || a.is_correct));
+        if (correctIdx >= 0 && answersList.length > 1) {
+          defText = `${String.fromCharCode(65 + correctIdx)}. ${correctAns.content}`;
+        } else {
+          defText = correctAns.content;
+        }
+      }
+
+      return {
+        id: q.id || idx + 1,
+        term: termText,
+        definition: defText,
+        explanation: q.explanation || ''
+      };
+    });
+  };
+
+  const [cards, setCards] = useState(() => mapQuestionsToCards(editQuiz?.questions));
+
+  // Sync state whenever editQuiz prop updates
+  useEffect(() => {
+    if (editQuiz) {
+      setTitle(editQuiz.title || '');
+      setDescription(editQuiz.subject || '');
+      setPassword(editQuiz.password || '');
+      if (Array.isArray(editQuiz.questions) && editQuiz.questions.length > 0) {
+        setCards(mapQuestionsToCards(editQuiz.questions));
+      }
+    }
+  }, [editQuiz]);
 
   const handleCardChange = (id, field, value) => {
     setCards(prev => prev.map(card => {

@@ -23,7 +23,7 @@ function extractSpotifyEmbedUrl(input) {
 }
 
 const SPOTIFY_PRESETS = [
-  { name: 'Myy Happyyy', uri: 'https://open.spotify.com/embed/playlist/43OQrrLcyzbUR1oL0r2RZO?utm_source=generator&si=e3b55d26ee2f49f3' },
+  { name: 'Myy Happyyy', uri: 'https://open.spotify.com/embed/playlist/43OQrrLcyzbUR1oL0r2RZO?utm_source=generator&si=578f990689f14b77' },
   { name: 'Chill Lofi Mix', uri: 'https://open.spotify.com/embed/playlist/2cIuTzSPlELxZ07giRKmP3?utm_source=generator&si=6477324161bd49d1' },
   { name: 'Study Beats', uri: 'https://open.spotify.com/embed/playlist/5SB9FzK07VsvJv0J46FlqP?utm_source=generator&si=c7495dcb810c4d77' },
 ];

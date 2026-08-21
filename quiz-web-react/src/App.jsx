@@ -597,7 +597,7 @@ export default function App() {
               setHashState(null, null);
             }}
             onSetCreated={handleSetCreated}
-            initialData={editingQuizData}
+            editQuiz={editingQuizData}
           />
         )}
 
