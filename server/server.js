@@ -11,6 +11,7 @@ const authRoutes = require('./src/routes/authRoutes');
 const commentRoutes = require('./src/routes/commentRoutes');
 const savedRoutes = require('./src/routes/savedRoutes');
 const adminRoutes = require('./src/routes/adminRoutes');
+const presenceRoutes = require('./src/routes/presenceRoutes');
 const { authenticateToken, optionalAuthenticateToken, requireAdmin } = require('./src/middleware/auth');
 
 const app = express();
@@ -64,6 +65,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/comments', commentRoutes);
 app.use('/api/saved-questions', savedRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/presence', presenceRoutes);
 
 // ----------------------------------------------------
 // 1.5. On-Demand Secure Quiz Content API (Pure RAM Cache)

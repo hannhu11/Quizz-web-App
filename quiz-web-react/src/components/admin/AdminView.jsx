@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Users, Shield, MessageSquare, AlertTriangle, ArrowLeft, Search, Plus, Minus, Trash2, Eye, EyeOff, CheckCircle2, Lock, Crown } from 'lucide-react';
+import { Users, Shield, MessageSquare, AlertTriangle, ArrowLeft, Search, Plus, Minus, Trash2, Eye, EyeOff, CheckCircle2, Lock, Crown, Activity, Globe } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 
 const API_BASE_URL = typeof window !== 'undefined' && window.location.hostname !== 'localhost'
@@ -22,40 +22,64 @@ export default function AdminView({ onBack }) {
   const [activeTab, setActiveTab] = useState('USERS'); // 'USERS' | 'COMMENTS'
   const [users, setUsers] = useState([]);
   const [comments, setComments] = useState([]);
+  const [presence, setPresence] = useState({
+    onlineUsersCount: 0,
+    onlineGuestsCount: 0,
+    totalOnline: 0,
+    onlineUsers: []
+  });
   const [searchTerm, setSearchTerm] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [msg, setMsg] = useState('');
 
-  // Fetch Users & Comments for Admin
+  // Fetch Users, Comments & Real-Time Presence for Admin
   const fetchAdminData = async () => {
-    setIsLoading(true);
     try {
       const authToken = token || localStorage.getItem('quizzflow_token');
       const headers = { Authorization: `Bearer ${authToken}` };
       
-      const usersRes = await fetch(`${API_BASE_URL}/admin/users`, { headers });
-      const usersData = await usersRes.json();
-      if (usersData.success) {
-        setUsers(usersData.users || []);
-      } else {
-        setMsg(usersData.message || 'Bạn không có quyền xem danh sách người dùng.');
+      const [usersRes, commentsRes, presenceRes] = await Promise.all([
+        fetch(`${API_BASE_URL}/admin/users`, { headers }),
+        fetch(`${API_BASE_URL}/admin/comments`, { headers }),
+        fetch(`${API_BASE_URL}/admin/active-presence`, { headers })
+      ]);
+
+      if (usersRes.ok) {
+        const usersData = await usersRes.json();
+        if (usersData.success) {
+          setUsers(usersData.users || []);
+        } else {
+          setMsg(usersData.message || 'Bạn không có quyền xem danh sách người dùng.');
+        }
       }
 
-      const commentsRes = await fetch(`${API_BASE_URL}/admin/comments`, { headers });
-      const commentsData = await commentsRes.json();
-      if (commentsData.success) {
-        setComments(commentsData.comments || []);
+      if (commentsRes.ok) {
+        const commentsData = await commentsRes.json();
+        if (commentsData.success) {
+          setComments(commentsData.comments || []);
+        }
+      }
+
+      if (presenceRes.ok) {
+        const presenceData = await presenceRes.json();
+        if (presenceData.success) {
+          setPresence(presenceData);
+        }
       }
     } catch (err) {
       console.error('Fetch Admin Data Error:', err);
       setMsg('Lỗi kết nối máy chủ quản trị.');
+    } finally {
+      setIsLoading(false);
     }
-    setIsLoading(false);
   };
 
   useEffect(() => {
     if (isAuthorizedAdmin) {
       fetchAdminData();
+      // Auto-poll real-time presence every 10 seconds
+      const interval = setInterval(fetchAdminData, 10000);
+      return () => clearInterval(interval);
     }
   }, [token, isAuthorizedAdmin]);
 
@@ -210,36 +234,65 @@ export default function AdminView({ onBack }) {
       </div>
 
       {/* Metrics Row */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {/* Card 1: Total Students */}
         <div className="p-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-soft flex items-center justify-between">
           <div>
             <span className="text-xs font-bold text-slate-500 dark:text-slate-400">Tổng Sinh Viên</span>
             <h4 className="text-2xl font-extrabold text-slate-900 dark:text-slate-100 mt-1">{users.length}</h4>
+            <p className="text-[11px] text-slate-400 mt-0.5">Tài khoản đăng ký</p>
           </div>
           <div className="p-3 rounded-2xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400">
             <Users className="w-6 h-6" />
           </div>
         </div>
 
-        <div className="p-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-soft flex items-center justify-between">
+        {/* Card 2: Live Online Students (Radar Pulse) */}
+        <div className="p-5 rounded-3xl bg-white dark:bg-slate-900 border border-emerald-500/30 dark:border-emerald-500/20 shadow-soft flex items-center justify-between relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-full blur-2xl pointer-events-none"></div>
           <div>
-            <span className="text-xs font-bold text-slate-500 dark:text-slate-400">Tổng Bình Luận Thảo Luận</span>
-            <h4 className="text-2xl font-extrabold text-slate-900 dark:text-slate-100 mt-1">{comments.length}</h4>
+            <div className="flex items-center gap-1.5">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+              </span>
+              <span className="text-xs font-extrabold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Đang Online</span>
+            </div>
+            <h4 className="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400 mt-1">
+              {presence.onlineUsersCount} <span className="text-xs font-semibold text-slate-400">sinh viên</span>
+            </h4>
+            <p className="text-[11px] text-slate-400 mt-0.5">Trực tuyến thực tế</p>
           </div>
-          <div className="p-3 rounded-2xl bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400">
-            <MessageSquare className="w-6 h-6" />
+          <div className="p-3 rounded-2xl bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/50 shadow-2xs">
+            <Activity className="w-6 h-6 animate-pulse" />
           </div>
         </div>
 
+        {/* Card 3: Live Active Guests */}
         <div className="p-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-soft flex items-center justify-between">
           <div>
-            <span className="text-xs font-bold text-slate-500 dark:text-slate-400">Báo Cáo Vi Phạm</span>
-            <h4 className="text-2xl font-extrabold text-slate-900 dark:text-slate-100 mt-1">
-              {comments.filter(c => c.reportCount > 0).length}
+            <span className="text-xs font-bold text-slate-500 dark:text-slate-400">Khách Vãng Lai</span>
+            <h4 className="text-2xl font-extrabold text-sky-600 dark:text-sky-400 mt-1">
+              {presence.onlineGuestsCount} <span className="text-xs font-semibold text-slate-400">khách</span>
             </h4>
+            <p className="text-[11px] text-slate-400 mt-0.5">Đang học ẩn danh</p>
           </div>
-          <div className="p-3 rounded-2xl bg-rose-50 dark:bg-rose-950 text-rose-600 dark:text-rose-400">
-            <AlertTriangle className="w-6 h-6" />
+          <div className="p-3 rounded-2xl bg-sky-50 dark:bg-sky-950 text-sky-600 dark:text-sky-400">
+            <Globe className="w-6 h-6" />
+          </div>
+        </div>
+
+        {/* Card 4: Comments Moderation */}
+        <div className="p-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-soft flex items-center justify-between">
+          <div>
+            <span className="text-xs font-bold text-slate-500 dark:text-slate-400">Thảo Luận Hệ Thống</span>
+            <h4 className="text-2xl font-extrabold text-slate-900 dark:text-slate-100 mt-1">{comments.length}</h4>
+            <p className="text-[11px] text-amber-600 dark:text-amber-400 font-semibold mt-0.5">
+              {comments.filter(c => c.reportCount > 0).length} báo cáo vi phạm
+            </p>
+          </div>
+          <div className="p-3 rounded-2xl bg-amber-50 dark:bg-amber-950 text-amber-600 dark:text-amber-400">
+            <MessageSquare className="w-6 h-6" />
           </div>
         </div>
       </div>
@@ -290,6 +343,7 @@ export default function AdminView({ onBack }) {
               <thead className="bg-slate-50 dark:bg-slate-850 text-slate-500 dark:text-slate-400 uppercase font-bold border-b border-slate-200/80 dark:border-slate-800">
                 <tr>
                   <th className="px-6 py-4">Sinh Viên</th>
+                  <th className="px-6 py-4">Trạng Thái</th>
                   <th className="px-6 py-4">Email</th>
                   <th className="px-6 py-4">Điểm Uy Tín</th>
                   <th className="px-6 py-4">Vai Trò</th>
@@ -299,12 +353,31 @@ export default function AdminView({ onBack }) {
               <tbody className="divide-y divide-slate-100 dark:divide-slate-800 font-semibold text-slate-800 dark:text-slate-200">
                 {filteredUsers.map((u) => {
                   const isUserSuperAdmin = u.email === SUPER_ADMIN_EMAIL;
+                  const isOnline = presence.onlineUsers?.some(
+                    ou => ou.id === u.id || (ou.email && u.email && ou.email.toLowerCase() === u.email.toLowerCase())
+                  );
 
                   return (
                     <tr key={u.id} className="hover:bg-slate-50/50 dark:hover:bg-slate-850/50 transition-colors">
                       <td className="px-6 py-4 font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
                         {isUserSuperAdmin && <Crown className="w-3.5 h-3.5 text-amber-500" />}
                         {u.fullName}
+                      </td>
+                      <td className="px-6 py-4">
+                        {isOnline ? (
+                          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-extrabold bg-emerald-100 text-emerald-950 dark:bg-emerald-950/80 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-700 shadow-2xs">
+                            <span className="relative flex h-2 w-2">
+                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                            </span>
+                            Đang Online
+                          </span>
+                        ) : (
+                          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-medium bg-slate-100 text-slate-500 dark:bg-slate-800 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
+                            <span className="h-1.5 w-1.5 rounded-full bg-slate-300 dark:bg-slate-600"></span>
+                            Offline
+                          </span>
+                        )}
                       </td>
                       <td className="px-6 py-4 text-slate-500 dark:text-slate-400">{u.email}</td>
                       <td className="px-6 py-4">

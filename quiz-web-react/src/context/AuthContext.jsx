@@ -87,6 +87,63 @@ export function AuthProvider({ children }) {
     };
   }, []);
 
+  // ----------------------------------------------------
+  // Real-Time Heartbeat & Presence Tracker (Zero Disk I/O)
+  // ----------------------------------------------------
+  useEffect(() => {
+    let guestSessionId = null;
+    try {
+      guestSessionId = sessionStorage.getItem('quizzflow_guest_id');
+      if (!guestSessionId) {
+        guestSessionId = `guest_${Math.random().toString(36).substring(2, 9)}_${Date.now()}`;
+        sessionStorage.setItem('quizzflow_guest_id', guestSessionId);
+      }
+    } catch (e) {
+      guestSessionId = `guest_fallback_${Date.now()}`;
+    }
+
+    const sendHeartbeat = async () => {
+      try {
+        const savedToken = localStorage.getItem('quizzflow_token') || token;
+        const headers = { 'Content-Type': 'application/json' };
+        if (savedToken) headers['Authorization'] = `Bearer ${savedToken}`;
+
+        await fetch(`${API_BASE_URL}/presence/heartbeat`, {
+          method: 'POST',
+          headers,
+          body: JSON.stringify({ guestId: !user ? guestSessionId : undefined })
+        });
+      } catch (err) {
+        // Silent fail for heartbeat to prevent console clutter
+      }
+    };
+
+    // Send initial heartbeat immediately on mount or user change
+    sendHeartbeat();
+
+    // Ping every 25 seconds
+    const interval = setInterval(sendHeartbeat, 25000);
+
+    // SendBeacon upon tab close / reload
+    const handleBeforeUnload = () => {
+      try {
+        const payload = JSON.stringify({
+          userId: user?.id,
+          guestId: !user ? guestSessionId : undefined
+        });
+        const blob = new Blob([payload], { type: 'application/json' });
+        navigator.sendBeacon(`${API_BASE_URL}/presence/offline`, blob);
+      } catch (e) {}
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, [user?.id, token]);
+
   // Save session helper
   const saveSession = (newToken, newUser) => {
     setToken(newToken);

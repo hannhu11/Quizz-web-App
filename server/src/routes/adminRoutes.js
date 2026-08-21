@@ -1,6 +1,7 @@
 const express = require('express');
 const { PrismaClient } = require('@prisma/client');
 const { authenticateToken } = require('../middleware/auth');
+const { getActivePresence } = require('../services/presenceService');
 
 const router = express.Router();
 const prisma = new PrismaClient();
@@ -20,6 +21,20 @@ const requireAdmin = (req, res, next) => {
   }
   next();
 };
+
+/**
+ * GET /api/admin/active-presence
+ * Lấy thống kê số sinh viên & khách đang trực tuyến thời gian thực
+ */
+router.get('/active-presence', authenticateToken, requireAdmin, (req, res) => {
+  try {
+    const presence = getActivePresence();
+    return res.json(presence);
+  } catch (error) {
+    console.error('Admin Get Presence Error:', error);
+    return res.status(500).json({ success: false, message: 'Lỗi server khi lấy trạng thái trực tuyến.' });
+  }
+});
 
 /**
  * GET /api/admin/users

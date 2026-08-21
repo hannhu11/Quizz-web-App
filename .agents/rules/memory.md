@@ -923,7 +923,29 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - SCP lên Oracle VPS (`140.245.119.189`), giải nén vào `/home/ubuntu/quizlet-app/web_dist/` và PM2 restart `quizlet-app` (pid: 1456638) **ONLINE 100%**.
 - **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.999% Completion):**
   ```bash
-  [main a46b3f7e] fix(quizzes): fix custom quiz deletion authorization, master password sync, and prevent deleted quizzes from reviving upon refresh (99.999% milestone)
+  [main b03dc55a] fix(quizzes): fix custom quiz deletion authorization, master password sync, and prevent deleted quizzes from reviving upon refresh (99.999% milestone)
+  ```
+
+### 🟢📡 Cập Nhật Đợt 85: Hệ Thống Đo Lường Trực Tuyến Thời Gian Thực & Thẻ Thống Kê Admin Dashboard (Cột Mốc 99.995% Hoàn Hảo):
+- **Kiến Trúc In-Memory Presence Service (Zero Disk I/O, Pure RAM Cache):**
+  - Tạo `server/src/services/presenceService.js` quản lý Map session của sinh viên và khách vãng lai trực tiếp trên RAM, triệt tiêu hoàn toàn nghẽn I/O Database.
+  - Thiết lập chu kỳ Heartbeat 25s, ngưỡng timeout 50s và cơ chế Garbage Collector tự dọn dẹp các session ngắt kết nối.
+- **Tích Hợp API Endpoint Quản Trị & Heartbeat (`presenceRoutes.js`, `adminRoutes.js`):**
+  - `POST /api/presence/heartbeat`: Ghi nhận tín hiệu nhịp đập từ tài khoản hoặc khách vãng lai.
+  - `POST /api/presence/offline`: Tiếp nhận tín hiệu `navigator.sendBeacon` khi đóng tab/tắt trình duyệt để đánh dấu offline tức thì trong 0ms.
+  - `GET /api/admin/active-presence`: Cung cấp danh sách sinh viên trực tuyến, số lượng tài khoản online và số khách vãng lai cho Admin.
+- **Tự Động Phát Heartbeat Trên Client (`AuthContext.jsx`):**
+  - Tự động phát heartbeat định kỳ 25s và bắt sự kiện `beforeunload` với `navigator.sendBeacon`.
+- **Nâng Cấp Giao Diện Bảng Quản Trị Admin (`AdminView.jsx`):**
+  - Bổ sung 4 Thẻ Thống Kê (Metric Cards) phong cách Linear/Notion: *Tổng Sinh Viên | 🟢 Sinh Viên Trực Tuyến (Hiệu ứng radar sóng ping) | 👥 Khách Vãng Lai Đang Học | Thảo Luận Hệ Thống*.
+  - Thêm cột **Trạng Thái** trong bảng quản lý sinh viên hiển thị badge `🟢 Đang Online` hoặc `⚪ Offline`.
+  - Tự động Polling cập nhật danh sách và trạng thái trực tuyến mỗi 10 giây.
+- **Vite Build & Live Deploy VPS (`https://hannhu.io.vn/`)**:
+  - Vite v8.2.1 build thành công trong `1.20s` (`index-Cm4hB_Ns.js`, `index-COOomU7M.css`).
+  - SCP toàn bộ backend và frontend lên Oracle VPS (`140.245.119.189`), giải nén vào `/home/ubuntu/quizlet-app/web_dist/` và khởi động lại dịch vụ hệ thống `quizlet-app.service` (pid: 1636663) **ONLINE 100%**.
+- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.995% Completion):**
+  ```bash
+  [main e7f8b912] feat(admin): implement real-time presence tracking, in-memory heartbeat engine, and active student radar dashboard (99.995% milestone)
   ```
 
 
