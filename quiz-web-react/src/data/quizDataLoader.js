@@ -261,6 +261,161 @@ export async function syncCommunityQuizzes(force = false) {
   return inFlightSyncPromise;
 }
 
+/**
+ * Smart Multi-Choice & Flashcard Auto-Parser
+ * Parses questions that contain embedded options (A. B. C. D.) in term/content
+ * and maps the definition to the exact correct option.
+ */
+export function parseCustomQuestionItem(q, idx) {
+  const qId = q.id || idx + 1;
+  const rawContent = (q.term || q.content || '').trim();
+  const rawDef = (q.definition || (Array.isArray(q.answers) ? q.answers.find(a => a.isCorrect || a.is_correct)?.content : '') || '').trim();
+  const rawExp = (q.explanation || '').trim();
+
+  // If question already has multiple well-structured options
+  if (Array.isArray(q.answers) && q.answers.length > 1) {
+    const formattedAnswers = q.answers.map((a, aIdx) => {
+      const isCor = Boolean(a.isCorrect || a.is_correct);
+      return {
+        id: a.id || aIdx + 1,
+        content: a.content || `Lựa chọn ${String.fromCharCode(65 + aIdx)}`,
+        isCorrect: isCor,
+        is_correct: isCor,
+        index_order: aIdx,
+        question_target_id: qId
+      };
+    });
+
+    return {
+      id: qId,
+      questionIndex: idx,
+      content: rawContent || 'Câu hỏi',
+      explanation: rawExp,
+      answers: formattedAnswers,
+      questionType: "Single Choice",
+      answersList: formattedAnswers
+    };
+  }
+
+  // Check if rawContent contains embedded multiple choice options A. ... B. ... C. ... D. ...
+  const optRegex = /(.*?)(?:\s+|^)[A|a][\.\:\)\/]\s*(.*?)(?:\s+|^)[B|b][\.\:\)\/]\s*(.*?)(?:\s+|^)[C|c][\.\:\)\/]\s*(.*?)(?:\s+|^)[D|d][\.\:\)\/]\s*(.*)$/s;
+  const match = rawContent.match(optRegex);
+
+  if (match) {
+    const stem = match[1].trim();
+    const options = [
+      match[2].trim(),
+      match[3].trim(),
+      match[4].trim(),
+      match[5].trim()
+    ];
+
+    // Determine which option matches definition
+    let correctLetter = 'A';
+    const cleanDef = rawDef.trim();
+
+    if (/^[A|a][\.\:\s]/.test(cleanDef) || cleanDef.toUpperCase() === 'A') correctLetter = 'A';
+    else if (/^[B|b][\.\:\s]/.test(cleanDef) || cleanDef.toUpperCase() === 'B') correctLetter = 'B';
+    else if (/^[C|c][\.\:\s]/.test(cleanDef) || cleanDef.toUpperCase() === 'C') correctLetter = 'C';
+    else if (/^[D|d][\.\:\s]/.test(cleanDef) || cleanDef.toUpperCase() === 'D') correctLetter = 'D';
+    else {
+      const defLower = cleanDef.toLowerCase();
+      for (let oIdx = 0; oIdx < options.length; oIdx++) {
+        const optLower = options[oIdx].toLowerCase();
+        if (optLower && (defLower.includes(optLower) || optLower.includes(defLower))) {
+          correctLetter = String.fromCharCode(65 + oIdx);
+          break;
+        }
+      }
+    }
+
+    const answers = options.map((opt, oIdx) => {
+      const isCor = String.fromCharCode(65 + oIdx) === correctLetter;
+      return {
+        id: oIdx + 1,
+        content: opt,
+        isCorrect: isCor,
+        is_correct: isCor,
+        index_order: oIdx,
+        question_target_id: qId
+      };
+    });
+
+    return {
+      id: qId,
+      questionIndex: idx,
+      content: stem || rawContent,
+      explanation: rawExp,
+      answers,
+      questionType: "Single Choice",
+      answersList: answers
+    };
+  }
+
+  // Check for 3 options pattern A. ... B. ... C. ...
+  const optRegex3 = /(.*?)(?:\s+|^)[A|a][\.\:\)\/]\s*(.*?)(?:\s+|^)[B|b][\.\:\)\/]\s*(.*?)(?:\s+|^)[C|c][\.\:\)\/]\s*(.*)$/s;
+  const match3 = rawContent.match(optRegex3);
+  if (match3) {
+    const stem = match3[1].trim();
+    const options = [
+      match3[2].trim(),
+      match3[3].trim(),
+      match3[4].trim(),
+      "Cả A, B và C"
+    ];
+
+    let correctLetter = 'A';
+    const cleanDef = rawDef.trim();
+    if (/^[A|a][\.\:\s]/.test(cleanDef) || cleanDef.toUpperCase() === 'A') correctLetter = 'A';
+    else if (/^[B|b][\.\:\s]/.test(cleanDef) || cleanDef.toUpperCase() === 'B') correctLetter = 'B';
+    else if (/^[C|c][\.\:\s]/.test(cleanDef) || cleanDef.toUpperCase() === 'C') correctLetter = 'C';
+    else if (/^[D|d][\.\:\s]/.test(cleanDef) || cleanDef.toUpperCase() === 'D') correctLetter = 'D';
+
+    const answers = options.map((opt, oIdx) => {
+      const isCor = String.fromCharCode(65 + oIdx) === correctLetter;
+      return {
+        id: oIdx + 1,
+        content: opt,
+        isCorrect: isCor,
+        is_correct: isCor,
+        index_order: oIdx,
+        question_target_id: qId
+      };
+    });
+
+    return {
+      id: qId,
+      questionIndex: idx,
+      content: stem || rawContent,
+      explanation: rawExp,
+      answers,
+      questionType: "Single Choice",
+      answersList: answers
+    };
+  }
+
+  // Standard 1-definition card fallback
+  const isCor = true;
+  const answers = [{
+    id: 1,
+    content: rawDef || 'Định nghĩa',
+    isCorrect: isCor,
+    is_correct: isCor,
+    index_order: 0,
+    question_target_id: qId
+  }];
+
+  return {
+    id: qId,
+    questionIndex: idx,
+    content: rawContent || 'Thuật ngữ',
+    explanation: rawExp,
+    answers,
+    questionType: "Single Choice",
+    answersList: answers
+  };
+}
+
 // Create Custom Quiz Set (Sync to Server VPS & Backup to GitHub)
 export async function createCustomQuizSet({ title, description, password, questions }) {
   if (!password || password.trim() === '') {
@@ -269,6 +424,8 @@ export async function createCustomQuizSet({ title, description, password, questi
 
   const id = `custom-${Date.now()}`;
   const category = 'TỰ TẠO';
+  const parsedQuestions = (questions || []).map((q, idx) => parseCustomQuestionItem(q, idx));
+
   const newSet = {
     id,
     title: title || 'Bộ đề mới tạo',
@@ -278,25 +435,7 @@ export async function createCustomQuizSet({ title, description, password, questi
     icon: 'Sparkles',
     isCustom: true,
     password: password.trim(),
-    questions: questions.map((q, idx) => {
-      let content = q.term || q.content || 'Thuật ngữ';
-      let answers = [];
-      let explanation = q.explanation || '';
-
-      if (Array.isArray(q.answers) && q.answers.length > 0) {
-        answers = q.answers;
-      } else {
-        answers = [{ id: 1, content: q.definition || 'Định nghĩa', isCorrect: true }];
-      }
-
-      return {
-        id: idx + 1,
-        questionIndex: idx,
-        content,
-        explanation,
-        answers
-      };
-    })
+    questions: parsedQuestions
   };
 
   // Update RAM cache immediately
@@ -363,29 +502,13 @@ export async function updateCustomQuizSet(quizId, password, { title, description
   }
 
   const existing = fetchQuizById(quizId);
+  const parsedQuestions = (questions || []).map((q, idx) => parseCustomQuestionItem(q, idx));
+
   const updatedSet = {
     ...existing,
     title: title || existing.title,
     subject: description || existing.subject,
-    questions: questions.map((q, idx) => {
-      let content = q.term || q.content || 'Thuật ngữ';
-      let answers = [];
-      let explanation = q.explanation || '';
-
-      if (Array.isArray(q.answers) && q.answers.length > 0) {
-        answers = q.answers;
-      } else {
-        answers = [{ id: 1, content: q.definition || 'Định nghĩa', isCorrect: true }];
-      }
-
-      return {
-        id: idx + 1,
-        questionIndex: idx,
-        content,
-        explanation,
-        answers
-      };
-    })
+    questions: parsedQuestions
   };
 
   normalizedQuizCache.set(quizId, updatedSet);

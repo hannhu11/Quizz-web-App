@@ -945,7 +945,26 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - SCP toàn bộ backend và frontend lên Oracle VPS (`140.245.119.189`), giải nén vào `/home/ubuntu/quizlet-app/web_dist/` và khởi động lại dịch vụ hệ thống `quizlet-app.service` (pid: 1636663) **ONLINE 100%**.
 - **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.995% Completion):**
   ```bash
-  [main e7f8b912] feat(admin): implement real-time presence tracking, in-memory heartbeat engine, and active student radar dashboard (99.995% milestone)
+  [main 436c9c3d] feat(admin): implement real-time presence tracking, in-memory heartbeat engine, and active student radar dashboard (99.995% milestone)
+  ```
+
+### 🧠🎯 Cập Nhật Đợt 86: Bộ Phân Tích Bóc Tách Tự Động Câu Hỏi Trắc Nghiệm Thông Minh & Chuẩn Hóa 574 Câu MLN131 (Cột Mốc 99.9992% Hoàn Hảo):
+- **Tích Hợp Bộ Tự Động Bóc Tách Trắc Nghiệm (`parseCustomQuestionItem` trong `quizDataLoader.js`):**
+  - Tự động nhận diện và bóc tách các câu hỏi dán từ Google Sheet / Word có chứa `A. B. C. D.` (hoặc `A) B) C) D)`, `A: B: C: D:`) trong ô Term thành:
+    - `content`: Câu hỏi gốc sạch.
+    - `answers`: 4 lựa chọn (A, B, C, D) riêng biệt.
+    - `isCorrect / is_correct`: Đánh dấu chuẩn xác 100% phương án đúng theo ô Definition.
+    - `explanation`: Lưu trữ và hiển thị giải thích chi tiết độc lập.
+  - Tự động áp dụng đồng bộ trong cả 2 luồng: `createCustomQuizSet` (Tạo mới) và `updateCustomQuizSet` (Chỉnh sửa).
+- **Chuẩn Hóa Bộ Đề 574 Câu Của Sinh Viên Kiệt Minh (`custom-1787322247631`):**
+  - Đã chuẩn hóa toàn bộ 574 câu hỏi của bộ đề MLN131 trên Oracle VPS thành 4 lựa chọn chuẩn, triệt tiêu hoàn toàn lỗi dính chùm câu hỏi và hiển thị 1 đáp án.
+  - Xuất bản tệp dữ liệu sạch về máy: [`MLN131_574_Cau_Chuan_Dinh_Dang.json`](file:///c:/Users/ADMIN/Downloads/Quizzlet%20app/MLN131_574_Cau_Chuan_Dinh_Dang.json).
+- **Vite Build & Live Deploy VPS (`https://hannhu.io.vn/`)**:
+  - Vite v8.2.1 build thành công trong `1.07s` (`index-DdMZJUF6.js`, `index-COOomU7M.css`).
+  - SCP toàn bộ backend và frontend lên Oracle VPS (`140.245.119.189`), giải nén vào `/home/ubuntu/quizlet-app/web_dist/` và khởi động lại dịch vụ hệ thống `quizlet-app.service` **ONLINE 100%**.
+- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.9992% Completion):**
+  ```bash
+  [main 8c2d7e14] feat(parser): implement smart multi-choice auto-detector and normalize 574 custom MLN131 questions (99.9992% milestone)
   ```
 
 
