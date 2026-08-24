@@ -1,6 +1,7 @@
 // Quiz Data Manifest & Pure On-Demand Fast RAM Cache
 
 export const QUIZ_MANIFEST = [
+  { id: 'vnr202-de-cuong-thay', filename: 'VNR202_De_Cuong_Thay.json', title: 'VNR202 - Đề Cương Ôn Thi Tổng Hợp Final (539 Câu Chuẩn Của Thầy)', subject: 'Lịch Sử Đảng', category: 'VNR202', color: 'from-rose-100 to-red-100', icon: 'BookOpen' },
   { id: 'vnr202-full', filename: 'VNR202_Full.json', title: 'VNR202 Full - Lịch Sử Đảng Cộng Sản Việt Nam (428 Câu Chuẩn)', subject: 'Lịch Sử Đảng', category: 'VNR202', color: 'from-rose-100 to-red-100', icon: 'BookOpen' },
   { id: 'vnr202-fe', filename: 'VNR202 - FE - QuizApp.json', title: 'VNR202 - Lịch Sử Đảng Cộng Sản Việt Nam (420 Câu)', subject: 'Lịch Sử Đảng', category: 'VNR202', color: 'from-rose-100 to-red-100', icon: 'BookOpen' },
   { id: 'hcm202-flashcard', filename: 'HCM202 - Flashcard - QuizApp.json', title: 'HCM202 - Tư Tưởng Hồ Chí Minh (300 Câu)', subject: 'Tư Tưởng Hồ Chí Minh', category: 'HCM202', color: 'from-rose-100 to-orange-100', icon: 'Award' },
