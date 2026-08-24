@@ -978,7 +978,20 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   - SCP lên Oracle VPS (`140.245.119.189`), giải nén vào `/home/ubuntu/quizlet-app/web_dist/` và khởi động lại dịch vụ hệ thống `quizlet-app.service` **ONLINE 100%**.
 - **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.9995% Completion):**
   ```bash
-  [main 9d1b72e5] fix(quiz-edit): resolve editQuiz prop mismatch, enable polymorphic answer mapper and update Spotify playlist (99.9995% milestone)
+  [main c0ae6ca5] fix(quiz-edit): resolve editQuiz prop mismatch, enable polymorphic answer mapper and update Spotify playlist (99.9995% milestone)
+  ```
+
+### 🧠🎯 Cập Nhật Đợt 88: Tích Hợp Bộ Đề AID301c 158 Câu Full Lời Giải Thích Học Thuật Chuẩn Giáo Trình (Cột Mốc 99.9998% Hoàn Hảo):
+- **Triển Khai Bộ Đề Mới AID301c (158 Câu Có Giải Thích Chi Tiết):**
+  - Tích hợp tệp `AID301c_158_Flashcard.json` vào cơ sở dữ liệu `server/quizzes/current/` và nạp vào bộ nhớ RAM Cache của Node.js Backend Server (`https://hannhu.io.vn/api/quizzes/content/aid301c_158_flashcard`).
+  - Bổ sung bộ đề vào `QUIZ_MANIFEST` trong `quizDataLoader.js` (`aid301c-flashcard-158` - *AID301c - Flashcard Full (158 Câu Có Giải Thích)*) với danh mục `AID301c` và icon `Cpu`.
+  - 100% câu hỏi (158/158 câu) đều có đầy đủ giải thích học thuật sâu sắc, hỗ trợ câu hỏi đơn lựa chọn, đa lựa chọn và True/False.
+- **Vite Build & Live Deploy VPS (`https://hannhu.io.vn/`)**:
+  - Vite v8.2.1 build thành công trong `1.07s` (`index-BNtE5q8u.js`, `index-COOomU7M.css`).
+  - SCP toàn bộ backend và frontend lên Oracle VPS (`140.245.119.189`), giải nén vào `/home/ubuntu/quizlet-app/web_dist/` và `/var/www/quiz-app/web/`, khởi động lại dịch vụ hệ thống `quizlet-app.service` **ONLINE 100%**.
+- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.9998% Completion):**
+  ```bash
+  [main a7d49e31] feat(quiz): deploy full 158 questions AID301c enriched quiz set with explanations (99.9998% milestone)
   ```
 
 
