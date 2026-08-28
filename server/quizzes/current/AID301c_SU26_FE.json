@@ -1,0 +1,5663 @@
+{
+  "id": "AID301c_SU26_FE",
+  "title": "AID301c_SU26_FE - (50 câu chuẩn thi lần 1 có đáp án)",
+  "subject": "Trí Tuệ Nhân Tạo",
+  "category": "AID301c",
+  "total_questions": 50,
+  "questions": [
+    {
+      "id": 1,
+      "content": "Product 2 and then compiled their ages:\np1_ages = [25., 32., 20., 18., 28., 32., 31., 19., 34., 34., 23., 29., 17., 23., 25., 31., 32., 29., 29., 24., 22., 28., 26., 24., 23.]\np2_ages = [20., 25., 27., 19., 22., 26., 24., 27., 24., 20., 25., 28., 18., 19., 23., 28., 19., 19., 19., 25., 29., 26., 23., 23., 22.]\nOf the hypothesis test discussed in these contents what one is the most appropriate for testing the following hypothesis?\nThere is no age difference, on average, between the users of product 1 and the users of product 2",
+      "answers": [
+        {
+          "id": 1,
+          "content": "A 1-sample t-test",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "A 2-sample t-test assuming equal variance",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Z-Test with continuity correction",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "A 2-sample unequal variances t-test",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "Binomial Test",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "To compare the means of two independent sample groups (Product 1 vs Product 2) without assuming equal population variances, Welch's 2-sample unequal variances t-test is the most appropriate statistical hypothesis test.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "A 1-sample t-test",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "A 2-sample t-test assuming equal variance",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Z-Test with continuity correction",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "A 2-sample unequal variances t-test",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "Binomial Test",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "content": "Which component is responsible for ensuring that applications are healthy and running in worker nodes?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Kubernetes Master",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Kubelet",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "API Server",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Deployment",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Kubelet is the primary node agent that runs on each worker node in a Kubernetes cluster, responsible for ensuring that the containers described in PodSpecs are running and healthy.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Kubernetes Master",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Kubelet",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "API Server",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Deployment",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "content": "Which of the following best describes multiclass classification?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Each sample can have multiple labels.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Each sample is assigned to only one label.",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "It is limited to two classes only.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "It does not require any evaluation metrics.",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In multiclass classification, classification tasks have more than two classes, but each input instance is assigned to exactly one mutually exclusive class/label.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Each sample can have multiple labels.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Each sample is assigned to only one label.",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "It is limited to two classes only.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "It does not require any evaluation metrics.",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "content": "Where should you store your API key and sensitive information?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "In a publicly accessible file",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "On a machine you trust in a secure file",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "In a shared document",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "In the cloud without encryption",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "API keys and sensitive credentials should always be stored securely on trusted machines in protected environment variables or secure configuration files, never in public repositories or unencrypted cloud storage.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "In a publicly accessible file",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "On a machine you trust in a secure file",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "In a shared document",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "In the cloud without encryption",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "content": "A typical convolutional neural network is constructed using a combination of convolutional, pooling and dense layers.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Standard CNN architectures feature convolutional layers for feature extraction, pooling layers for spatial downsampling, and dense (fully connected) layers for final classification.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "content": "Which of the following is not an example of a variant/application of gradient descent that we have covered?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "batch gradient descent",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "mini-batch gradient descent",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "regularized gradient descent",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "stochastic gradient descent",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "gradient descent applied to regression",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The standard variants of gradient descent algorithms are Batch Gradient Descent, Stochastic Gradient Descent (SGD), and Mini-batch Gradient Descent. 'Regularized gradient descent' refers to regularization applied to loss functions rather than a distinct optimization variant.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "batch gradient descent",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "mini-batch gradient descent",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "regularized gradient descent",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "stochastic gradient descent",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "gradient descent applied to regression",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "content": "What is the purpose of Exploratory Data Analysis (EDA)?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To clean the data",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To create summaries and visualizations of the data",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To build predictive models",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To gather raw data",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "EDA is primarily used to understand data distributions, detect anomalies, discover patterns, and summarize main characteristics through statistical summaries and visual graphs.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "To clean the data",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To create summaries and visualizations of the data",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To build predictive models",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To gather raw data",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "content": "Which of the following was not discussed as a tunable parameter of a neural network?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Hardware availability",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Activation functions: sigmoid, tanh, softmax, ReLU, leakyReLU",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Regularization techniques: weight decay, early stopping, dropout",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Training method: Loss function, learning rate, batch size, number of epochs",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Structure: the number of hidden layers, the number of nodes in each layer",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Hardware availability is an infrastructure/system resource constraint, not an architectural or training hyperparameter of neural networks.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Hardware availability",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Activation functions: sigmoid, tanh, softmax, ReLU, leakyReLU",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Regularization techniques: weight decay, early stopping, dropout",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Training method: Loss function, learning rate, batch size, number of epochs",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Structure: the number of hidden layers, the number of nodes in each layer",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "content": "Which of the following best describes the focus of this course?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Strict adherence to a specific process model",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Incorporating best practices into the workflow",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Learning only from data science literature",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Avoiding any structured approach",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The IBM AI Enterprise Workflow course focuses on incorporating industry best practices, design thinking, and modular workflows into production data science.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Strict adherence to a specific process model",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Incorporating best practices into the workflow",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Learning only from data science literature",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Avoiding any structured approach",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "content": "What is a common approach used by classifiers that default to a one-vs-all strategy?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "A single classifier is trained for all classes.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "A different classifier is trained for each label.",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "All classes are treated as one single class.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "It is not applicable to multiclass classification.",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In a One-vs-All (One-vs-Rest) strategy, N separate binary classifiers are trained, each distinguishing one specific class against all other remaining classes.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "A single classifier is trained for all classes.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "A different classifier is trained for each label.",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "All classes are treated as one single class.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "It is not applicable to multiclass classification.",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "content": "Which of the following best describes Continuous Deployment?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Manual deployments of software",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Automated deployments of software",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Merging changes infrequently",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Extensive testing before deployment",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Continuous Deployment is a software release process where any code commit that passes the automated testing pipeline is automatically deployed to production without manual intervention.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Manual deployments of software",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Automated deployments of software",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Merging changes infrequently",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Extensive testing before deployment",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "content": "Which of the following techniques is commonly used to address class imbalance?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Over-sampling",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Under-sampling",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Both A and B",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "None of the above",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Both over-sampling (e.g., SMOTE) and under-sampling (e.g., RandomUnderSampler) are standard resampling methods used to handle imbalanced datasets.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Over-sampling",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Under-sampling",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Both A and B",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "None of the above",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "content": "Which of the following can lead to sampling bias?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Using a larger dataset",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Under-representing certain subgroups in the data",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Increasing the number of features",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Using cross-validation",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Sampling bias occurs when the sample collected is not representative of the target population, such as systematically under-representing certain demographics or subgroups.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Using a larger dataset",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Under-representing certain subgroups in the data",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Increasing the number of features",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Using cross-validation",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "content": "What does the --executor-memory option specify in the spark-submit command?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The amount of memory allocated to the driver",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The amount of memory allocated to each executor",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "The total memory for the Spark application",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The memory required for the script",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In Apache Spark, `--executor-memory` specifies the amount of memory allocated to each executor process running worker tasks.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "The amount of memory allocated to the driver",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The amount of memory allocated to each executor",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "The total memory for the Spark application",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The memory required for the script",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "content": "If we continue to add GPUs or other computational resources, the time it takes to train a model will always continue to decrease.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ],
+      "explanation": "According to Amdahl's Law and distributed training communication bottlenecks (inter-GPU synchronization overhead), adding more GPUs eventually yields diminishing returns and will not continuously decrease training time indefinitely.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "content": "In the design thinking process, what phase are team members currently working on when seeking to deeply understand user perspectives and customer pain points?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Ideate",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Prototype",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Empathize",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Test",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The Empathize stage is the foundational first phase in Design Thinking focused on understanding the user, their needs, and the context of their problems.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Ideate",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Prototype",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Empathize",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Test",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "content": "What is emphasized as important when carrying out data visualization in an enterprise context?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Speed of execution",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Reproducibility and communication",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Complexity of models",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Use of advanced algorithms",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In enterprise data science, visualization is essential for clear communication to stakeholders and maintaining reproducible analytical workflows.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Speed of execution",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Reproducibility and communication",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Complexity of models",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Use of advanced algorithms",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "content": "What is the primary purpose of Natural Language Processing (NLP)?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To create visual content",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To analyze and understand human language",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To develop hardware components",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To manage databases",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "NLP is a subfield of artificial intelligence dedicated to enabling computers to understand, interpret, analyze, and generate natural human language.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "To create visual content",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To analyze and understand human language",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To develop hardware components",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To manage databases",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "content": "Cross-validation along with train-test splits are critical tools to help ensure our models are well calibrated for unseen data.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Train-test splitting and k-fold cross-validation evaluate model generalization and prevent overfitting to ensure robust performance on unseen real-world data.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "content": "Which method can be used to compare distributions of data?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Linear regression",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Kullback-Leibler divergence",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Decision trees",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Neural networks",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Kullback-Leibler (KL) divergence measures the statistical distance and relative entropy between two probability distributions.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Linear regression",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Kullback-Leibler divergence",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Decision trees",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Neural networks",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "content": "Which of the following is a common task during the 'Define' stage?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Data collection",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Data cleaning and preliminary exploratory data analysis",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Model training",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Business opportunity identification",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "During the Define phase in the AI Enterprise workflow, data scientists formulate data requirements, clean ingested datasets, and conduct preliminary exploratory analysis.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Data collection",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Data cleaning and preliminary exploratory data analysis",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Model training",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Business opportunity identification",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "content": "What does ETL stand for in data processing?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Extract, Transform, Load",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Evaluate, Test, Load",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Extract, Transfer, Load",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Evaluate, Transform, Load",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "ETL stands for Extract (gathering raw data), Transform (cleaning and transforming structure), and Load (storing into data warehouse/target system).",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Extract, Transform, Load",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Evaluate, Test, Load",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Extract, Transfer, Load",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Evaluate, Transform, Load",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "content": "What is the primary goal of the 'Empathize' stage in the data science process?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To gather data",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To understand business opportunities",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To clean the data",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To build a model",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The Empathize stage aims to understand stakeholder objectives, identify customer pain points, and clarify the core business opportunity.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "To gather data",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To understand business opportunities",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To clean the data",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To build a model",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "content": "Which of the following is a method used for topic modeling?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Principal Component Analysis (PCA)",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Latent Dirichlet Allocation (LDA)",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Support Vector Machines (SVM)",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "K-Means Clustering",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Latent Dirichlet Allocation (LDA) is a generative statistical model widely used for topic modeling across text corpora.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Principal Component Analysis (PCA)",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Latent Dirichlet Allocation (LDA)",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Support Vector Machines (SVM)",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "K-Means Clustering",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "content": "During which phase of the design thinking process does AAVAIL move to define challenges?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Empathize",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Define",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Ideate",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Prototype",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In Design Thinking, formulating problem statements, articulating hypotheses, and scoping core challenges occur in the 'Define' phase.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Empathize",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Define",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Ideate",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Prototype",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "content": "Which file format is commonly used for storing structured data in a tabular format?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "JSON",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "XML",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "CSV",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "TXT",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Comma-Separated Values (CSV) is the most standard, lightweight format for storing tabular structured data.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "JSON",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "XML",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "CSV",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "TXT",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "content": "Which tool is mentioned as an industry standard in the Python ecosystem for data science?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "RStudio",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Jupyter notebooks",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Spyder",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Tableau",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Jupyter Notebooks provide an interactive, reproducible environment that serves as an industry standard for data science exploration.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "RStudio",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Jupyter notebooks",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Spyder",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Tableau",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "content": "What is Port Forwarding in Docker?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The process of creating a data file on the local computer that persists after the container is closed",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Sending one container to multiple nodes on a multi-cloud environment",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Allowing data to be passed in and out of a docker container and controlling which applications can do this",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Building one Docker image using another docker image as a template",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Port forwarding (port mapping) in Docker binds a port on the host machine to a port inside the container, directing network traffic into containerized applications.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "The process of creating a data file on the local computer that persists after the container is closed",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Sending one container to multiple nodes on a multi-cloud environment",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Allowing data to be passed in and out of a docker container and controlling which applications can do this",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Building one Docker image using another docker image as a template",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "content": "What does a Docker container include?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Only the application code",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Code, runtime libraries, and a private filesystem",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Only the operating system",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Only the database",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A Docker container packages application code, runtime environment, system libraries, configuration, and an isolated filesystem layer.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Only the application code",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Code, runtime libraries, and a private filesystem",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Only the operating system",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Only the database",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "content": "Which of the following is a common use case for NLP in large enterprises?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Managing financial transactions",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Processing and analyzing customer feedback",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Designing physical products",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Conducting scientific experiments",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Enterprises heavily utilize NLP for sentiment analysis, customer review mining, survey processing, and automated ticket classification.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Managing financial transactions",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Processing and analyzing customer feedback",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Designing physical products",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Conducting scientific experiments",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "content": "You may only pass a pickle file to save your model in the Watson Machine Learning library.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Watson Machine Learning supports saving and deploying models in multiple formats including PMML, ONNX, joblib, TensorFlow SavedModel, tar.gz archives, and Scikit-learn pipelines.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "content": "What is the purpose of the spark-submit command?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To create a Spark cluster",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To submit applications to a Spark cluster",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To monitor Spark jobs",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To install Spark",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "`spark-submit` is the command-line utility used to launch and submit applications/scripts to an Apache Spark cluster.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "To create a Spark cluster",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To submit applications to a Spark cluster",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To monitor Spark jobs",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To install Spark",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "content": "Which tasks should be included in a data ingestion pipeline? (Choose one or more)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Account for missing data, faulty data, repeated observations and other data integrity issues",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Ensure that expected data is returned given a specific set of parameters",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Ensure that an expected format is returned",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Ensure that models produce expected results",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Data ingestion pipelines focus on data acquisition, schema validation, deduplication, and anomaly handling. Evaluating model output results belongs to model testing/evaluation.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Account for missing data, faulty data, repeated observations and other data integrity issues",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Ensure that expected data is returned given a specific set of parameters",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Ensure that an expected format is returned",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Ensure that models produce expected results",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "content": "Which of the following best describes the quality of data?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "It only refers to the data collection methods.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "It includes both the observations and the maturity of the data",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "It is irrelevant to project success.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "It is solely determined by the data storage system.",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Data quality encompasses observational accuracy, completeness, consistency, and data maturity across lifecycle management.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "It only refers to the data collection methods.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "It includes both the observations and the maturity of the data",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "It is irrelevant to project success.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "It is solely determined by the data storage system.",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "content": "Which list contains one or more elements that were presented as non-essential when creating a logging system to monitor the performance of a machine learning model that has been deployed.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "request_type, input data",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "model_version_number, timestamp",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "predictions/recommendations, timestamp",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "input_data_summary, runtime",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ],
+      "explanation": "In standard production model logging, essential fields are timestamp, unique request ID, model version, raw inputs, and predictions. Aggregated data summaries and exact runtime are optional/secondary.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "request_type, input data",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "model_version_number, timestamp",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "predictions/recommendations, timestamp",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "input_data_summary, runtime",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "content": "Which of the following lists contains one or more references to a technology that is not a specific python package used to speed up and improve the performance of python code?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "py-cuda, Cython",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "multiprocessing, mpi4py",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "subprocessing, symmetric-multiprocessing",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "threading, ipyparallel",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Symmetric Multiprocessing (SMP) is a computer hardware system architecture, not a specific Python software library.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "py-cuda, Cython",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "multiprocessing, mpi4py",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "subprocessing, symmetric-multiprocessing",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "threading, ipyparallel",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "content": "Let's imagine there is a start-up that has a speech-to-text service that incorporates gestures and body language into its output. They offer annotated meeting reports as a product and customers are generally very satisfied, but sales to new customers tend to be very slow to acquire. Which of the following business opportunities should be the highest priority?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Develop and delivery new products to existing customers",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Develop new products and target new customers",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Use customer segmentation and/or market analysis to help marketing with new customers",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Use customer segmentation and/or market analysis to move into a different market",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Because customer satisfaction with the existing product is already high, customer segmentation and market analysis should be prioritized to identify buyer profiles and accelerate acquisition of new customers.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Develop and delivery new products to existing customers",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Develop new products and target new customers",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Use customer segmentation and/or market analysis to help marketing with new customers",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Use customer segmentation and/or market analysis to move into a different market",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "content": "Which of the following is NOT normally a part of the EDA process?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Visual summaries of the data",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Connecting the data to the business opportunity",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Communication to stakeholders",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Predictive linear or logistic regression",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Fitting predictive models (linear/logistic regression) belongs to the Modeling/Ideation phase, not exploratory data analysis.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Visual summaries of the data",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Connecting the data to the business opportunity",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Communication to stakeholders",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Predictive linear or logistic regression",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "content": "Which of the following is NOT a recommended tool for optimizing code?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Cython",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "mpi4py",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "TensorBoard",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "ipyparallel",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "TensorBoard is a visualization dashboard for machine learning experimentation and metrics, not a code performance/acceleration compiler.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Cython",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "mpi4py",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "TensorBoard",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "ipyparallel",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "content": "In which situation would you most strongly consider MAE over RMSE as a regression metric?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "where we would like to interpret the error metric in terms of the original units",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "like predicting daily temperature where we expect a small range of values",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "like predicting time to failure for a machine where we expect a long tailed distribution of values",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "like predicting the category or topic associated with a document",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "where we would like to interpret the error metric as a squared version of the original units",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "MAE is much more robust to extreme outliers than RMSE (which squares errors). In heavy-tailed/long-tailed distributions like machine time-to-failure, MAE prevents rare outliers from dominating the error score.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "where we would like to interpret the error metric in terms of the original units",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "like predicting daily temperature where we expect a small range of values",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "like predicting time to failure for a machine where we expect a long tailed distribution of values",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "like predicting the category or topic associated with a document",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "where we would like to interpret the error metric as a squared version of the original units",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "content": "What is a potential consequence of software changes on model performance?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Improved accuracy",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Performance drift",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Increased training time",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "No impact at all",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Upstream software library updates, API changes, or system environment shifts can introduce silent data pipeline bugs or performance drift in deployed models.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Improved accuracy",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Performance drift",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Increased training time",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "No impact at all",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "content": "Which of the following statements does not describe a valid use case for dimensionality reduction?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Principal components analysis to process images used in classification.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Non-negative matrix factorization to resolve topics from a corpus of words.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "t-distributed stochastic neighbor embedding to visualize the results of a clustering algorithm.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Using an ANOVA to select a subset of features",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Down-sampling of the majority class",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Down-sampling reduces the number of samples (rows) to handle class imbalance; it does not reduce feature dimensionality (columns).",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Principal components analysis to process images used in classification.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Non-negative matrix factorization to resolve topics from a corpus of words.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "t-distributed stochastic neighbor embedding to visualize the results of a clustering algorithm.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Using an ANOVA to select a subset of features",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Down-sampling of the majority class",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "content": "In a confusion matrix, what does True Positive (TP) represent?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Correctly predicted negative cases",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Incorrectly predicted positive cases",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Correctly predicted positive cases",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Incorrectly predicted negative cases",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A True Positive (TP) occurs when the model correctly predicts the positive class for an instance that is actually positive.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Correctly predicted negative cases",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Incorrectly predicted positive cases",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Correctly predicted positive cases",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Incorrectly predicted negative cases",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "content": "A Spark cluster is generally managed using a Docker container and a YAML file.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In containerized environments, Spark master and worker clusters are typically managed and orchestrated via Docker containers using Docker Compose or Kubernetes YAML manifests.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "content": "Which statement best describes why visualization of topics can have an impact on the business opportunity?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Because sharing with domain experts might enable topic-specific feature engineering",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Because visual inspection can help choose the number of topics",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Because we are able to see the top words with each topic",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Because we are able to see the relative importance of each topic across the corpus",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Because domain experts can visually inspect the validity of the topics",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Visualizing topics allows domain experts to interpret discovered themes and construct custom, topic-specific feature engineering strategies that directly solve the business problem.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Because sharing with domain experts might enable topic-specific feature engineering",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Because visual inspection can help choose the number of topics",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Because we are able to see the top words with each topic",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Because we are able to see the relative importance of each topic across the corpus",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Because domain experts can visually inspect the validity of the topics",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "content": "When training a custom classifier in Watson Visual Recognition the negative images should be:",
+      "answers": [
+        {
+          "id": 1,
+          "content": "As visually similar as possible to the positive images",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Background images without the positive images",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "As random as possible to establish a background",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Randomly generated from the positive images",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Visually distinct from the positive images",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "According to IBM Watson Visual Recognition guidelines, negative training examples should be visually similar to positive classes (acting as hard negatives) to teach the model fine-grained discriminative boundaries.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "As visually similar as possible to the positive images",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Background images without the positive images",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "As random as possible to establish a background",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Randomly generated from the positive images",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Visually distinct from the positive images",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "content": "Why is it important to ensure that minimally required data is available?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To reduce the size of the dataset",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To monitor model performance and debug issues",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To make data collection easier",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To avoid using log files",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Maintaining minimally required telemetry and schema data ensures that engineers can accurately monitor model performance in production and rapidly debug operational issues.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "To reduce the size of the dataset",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To monitor model performance and debug issues",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To make data collection easier",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To avoid using log files",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "content": "What is the principal reason to create a virtual environment before creating your model locally?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Because all models should have their own virtual environment",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Because it will ensure that the most recent packages are used",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Because virtual environments can be containerized easily",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Because the Python client for Watson Machine Learning has specific dependencies",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Because it ensures that locally created/trained models are compatible with Watson Machine Learning",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Creating a dedicated virtual environment ensures strict package version compatibility between locally trained models and the runtime environments supported by cloud platforms like Watson Machine Learning.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Because all models should have their own virtual environment",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Because it will ensure that the most recent packages are used",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Because virtual environments can be containerized easily",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Because the Python client for Watson Machine Learning has specific dependencies",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Because it ensures that locally created/trained models are compatible with Watson Machine Learning",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "content": "What does a deployment in Kubernetes manage?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The API server",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The desired state of applications",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "The health of worker nodes",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The network configuration",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A Kubernetes Deployment provides declarative updates for Pods and ReplicaSets, continuously ensuring that the current state matches the specified desired state.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "The API server",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The desired state of applications",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "The health of worker nodes",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The network configuration",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "content": "Which types of programming tasks best describes what you are expected to already have some familiarity with before beginning this course?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "dashboarding, high performance computing, and code profiling",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "numeric computing, data munging, data visualization and data modeling",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "convex optimization, python programming, statistical programming",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "continuous integration, linear programming, and data exploration",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Prerequisites for the IBM AI Enterprise Workflow course assume familiarity with core data science programming tasks: numerical computing (NumPy), data munging (Pandas), data visualization (Matplotlib/Seaborn), and baseline modeling (Scikit-Learn).",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "dashboarding, high performance computing, and code profiling",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "numeric computing, data munging, data visualization and data modeling",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "convex optimization, python programming, statistical programming",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "continuous integration, linear programming, and data exploration",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    }
+  ],
+  "questionsList": [
+    {
+      "id": 1,
+      "content": "Product 2 and then compiled their ages:\np1_ages = [25., 32., 20., 18., 28., 32., 31., 19., 34., 34., 23., 29., 17., 23., 25., 31., 32., 29., 29., 24., 22., 28., 26., 24., 23.]\np2_ages = [20., 25., 27., 19., 22., 26., 24., 27., 24., 20., 25., 28., 18., 19., 23., 28., 19., 19., 19., 25., 29., 26., 23., 23., 22.]\nOf the hypothesis test discussed in these contents what one is the most appropriate for testing the following hypothesis?\nThere is no age difference, on average, between the users of product 1 and the users of product 2",
+      "answers": [
+        {
+          "id": 1,
+          "content": "A 1-sample t-test",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "A 2-sample t-test assuming equal variance",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Z-Test with continuity correction",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "A 2-sample unequal variances t-test",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "Binomial Test",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "To compare the means of two independent sample groups (Product 1 vs Product 2) without assuming equal population variances, Welch's 2-sample unequal variances t-test is the most appropriate statistical hypothesis test.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "A 1-sample t-test",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "A 2-sample t-test assuming equal variance",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Z-Test with continuity correction",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "A 2-sample unequal variances t-test",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "content": "Binomial Test",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "content": "Which component is responsible for ensuring that applications are healthy and running in worker nodes?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Kubernetes Master",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Kubelet",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "API Server",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Deployment",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Kubelet is the primary node agent that runs on each worker node in a Kubernetes cluster, responsible for ensuring that the containers described in PodSpecs are running and healthy.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Kubernetes Master",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Kubelet",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "API Server",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Deployment",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "content": "Which of the following best describes multiclass classification?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Each sample can have multiple labels.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Each sample is assigned to only one label.",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "It is limited to two classes only.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "It does not require any evaluation metrics.",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In multiclass classification, classification tasks have more than two classes, but each input instance is assigned to exactly one mutually exclusive class/label.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Each sample can have multiple labels.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Each sample is assigned to only one label.",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "It is limited to two classes only.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "It does not require any evaluation metrics.",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "content": "Where should you store your API key and sensitive information?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "In a publicly accessible file",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "On a machine you trust in a secure file",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "In a shared document",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "In the cloud without encryption",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "API keys and sensitive credentials should always be stored securely on trusted machines in protected environment variables or secure configuration files, never in public repositories or unencrypted cloud storage.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "In a publicly accessible file",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "On a machine you trust in a secure file",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "In a shared document",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "In the cloud without encryption",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "content": "A typical convolutional neural network is constructed using a combination of convolutional, pooling and dense layers.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Standard CNN architectures feature convolutional layers for feature extraction, pooling layers for spatial downsampling, and dense (fully connected) layers for final classification.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "content": "Which of the following is not an example of a variant/application of gradient descent that we have covered?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "batch gradient descent",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "mini-batch gradient descent",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "regularized gradient descent",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "stochastic gradient descent",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "gradient descent applied to regression",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The standard variants of gradient descent algorithms are Batch Gradient Descent, Stochastic Gradient Descent (SGD), and Mini-batch Gradient Descent. 'Regularized gradient descent' refers to regularization applied to loss functions rather than a distinct optimization variant.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "batch gradient descent",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "mini-batch gradient descent",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "regularized gradient descent",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "stochastic gradient descent",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "gradient descent applied to regression",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "content": "What is the purpose of Exploratory Data Analysis (EDA)?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To clean the data",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To create summaries and visualizations of the data",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To build predictive models",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To gather raw data",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "EDA is primarily used to understand data distributions, detect anomalies, discover patterns, and summarize main characteristics through statistical summaries and visual graphs.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "To clean the data",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To create summaries and visualizations of the data",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To build predictive models",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To gather raw data",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "content": "Which of the following was not discussed as a tunable parameter of a neural network?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Hardware availability",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Activation functions: sigmoid, tanh, softmax, ReLU, leakyReLU",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Regularization techniques: weight decay, early stopping, dropout",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Training method: Loss function, learning rate, batch size, number of epochs",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Structure: the number of hidden layers, the number of nodes in each layer",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Hardware availability is an infrastructure/system resource constraint, not an architectural or training hyperparameter of neural networks.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Hardware availability",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Activation functions: sigmoid, tanh, softmax, ReLU, leakyReLU",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Regularization techniques: weight decay, early stopping, dropout",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Training method: Loss function, learning rate, batch size, number of epochs",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Structure: the number of hidden layers, the number of nodes in each layer",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "content": "Which of the following best describes the focus of this course?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Strict adherence to a specific process model",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Incorporating best practices into the workflow",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Learning only from data science literature",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Avoiding any structured approach",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The IBM AI Enterprise Workflow course focuses on incorporating industry best practices, design thinking, and modular workflows into production data science.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Strict adherence to a specific process model",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Incorporating best practices into the workflow",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Learning only from data science literature",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Avoiding any structured approach",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "content": "What is a common approach used by classifiers that default to a one-vs-all strategy?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "A single classifier is trained for all classes.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "A different classifier is trained for each label.",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "All classes are treated as one single class.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "It is not applicable to multiclass classification.",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In a One-vs-All (One-vs-Rest) strategy, N separate binary classifiers are trained, each distinguishing one specific class against all other remaining classes.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "A single classifier is trained for all classes.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "A different classifier is trained for each label.",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "All classes are treated as one single class.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "It is not applicable to multiclass classification.",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "content": "Which of the following best describes Continuous Deployment?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Manual deployments of software",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Automated deployments of software",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Merging changes infrequently",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Extensive testing before deployment",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Continuous Deployment is a software release process where any code commit that passes the automated testing pipeline is automatically deployed to production without manual intervention.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Manual deployments of software",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Automated deployments of software",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Merging changes infrequently",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Extensive testing before deployment",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "content": "Which of the following techniques is commonly used to address class imbalance?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Over-sampling",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Under-sampling",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Both A and B",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "None of the above",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Both over-sampling (e.g., SMOTE) and under-sampling (e.g., RandomUnderSampler) are standard resampling methods used to handle imbalanced datasets.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Over-sampling",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Under-sampling",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Both A and B",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "None of the above",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "content": "Which of the following can lead to sampling bias?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Using a larger dataset",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Under-representing certain subgroups in the data",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Increasing the number of features",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Using cross-validation",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Sampling bias occurs when the sample collected is not representative of the target population, such as systematically under-representing certain demographics or subgroups.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Using a larger dataset",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Under-representing certain subgroups in the data",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Increasing the number of features",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Using cross-validation",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "content": "What does the --executor-memory option specify in the spark-submit command?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The amount of memory allocated to the driver",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The amount of memory allocated to each executor",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "The total memory for the Spark application",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The memory required for the script",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In Apache Spark, `--executor-memory` specifies the amount of memory allocated to each executor process running worker tasks.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "The amount of memory allocated to the driver",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The amount of memory allocated to each executor",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "The total memory for the Spark application",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The memory required for the script",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "content": "If we continue to add GPUs or other computational resources, the time it takes to train a model will always continue to decrease.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ],
+      "explanation": "According to Amdahl's Law and distributed training communication bottlenecks (inter-GPU synchronization overhead), adding more GPUs eventually yields diminishing returns and will not continuously decrease training time indefinitely.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "content": "In the design thinking process, what phase are team members currently working on when seeking to deeply understand user perspectives and customer pain points?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Ideate",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Prototype",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Empathize",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Test",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The Empathize stage is the foundational first phase in Design Thinking focused on understanding the user, their needs, and the context of their problems.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Ideate",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Prototype",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Empathize",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Test",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "content": "What is emphasized as important when carrying out data visualization in an enterprise context?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Speed of execution",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Reproducibility and communication",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Complexity of models",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Use of advanced algorithms",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In enterprise data science, visualization is essential for clear communication to stakeholders and maintaining reproducible analytical workflows.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Speed of execution",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Reproducibility and communication",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Complexity of models",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Use of advanced algorithms",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "content": "What is the primary purpose of Natural Language Processing (NLP)?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To create visual content",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To analyze and understand human language",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To develop hardware components",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To manage databases",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "NLP is a subfield of artificial intelligence dedicated to enabling computers to understand, interpret, analyze, and generate natural human language.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "To create visual content",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To analyze and understand human language",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To develop hardware components",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To manage databases",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "content": "Cross-validation along with train-test splits are critical tools to help ensure our models are well calibrated for unseen data.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Train-test splitting and k-fold cross-validation evaluate model generalization and prevent overfitting to ensure robust performance on unseen real-world data.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "content": "Which method can be used to compare distributions of data?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Linear regression",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Kullback-Leibler divergence",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Decision trees",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Neural networks",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Kullback-Leibler (KL) divergence measures the statistical distance and relative entropy between two probability distributions.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Linear regression",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Kullback-Leibler divergence",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Decision trees",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Neural networks",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "content": "Which of the following is a common task during the 'Define' stage?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Data collection",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Data cleaning and preliminary exploratory data analysis",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Model training",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Business opportunity identification",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "During the Define phase in the AI Enterprise workflow, data scientists formulate data requirements, clean ingested datasets, and conduct preliminary exploratory analysis.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Data collection",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Data cleaning and preliminary exploratory data analysis",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Model training",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Business opportunity identification",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "content": "What does ETL stand for in data processing?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Extract, Transform, Load",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Evaluate, Test, Load",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Extract, Transfer, Load",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Evaluate, Transform, Load",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "ETL stands for Extract (gathering raw data), Transform (cleaning and transforming structure), and Load (storing into data warehouse/target system).",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Extract, Transform, Load",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Evaluate, Test, Load",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Extract, Transfer, Load",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Evaluate, Transform, Load",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "content": "What is the primary goal of the 'Empathize' stage in the data science process?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To gather data",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To understand business opportunities",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To clean the data",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To build a model",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The Empathize stage aims to understand stakeholder objectives, identify customer pain points, and clarify the core business opportunity.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "To gather data",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To understand business opportunities",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To clean the data",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To build a model",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "content": "Which of the following is a method used for topic modeling?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Principal Component Analysis (PCA)",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Latent Dirichlet Allocation (LDA)",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Support Vector Machines (SVM)",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "K-Means Clustering",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Latent Dirichlet Allocation (LDA) is a generative statistical model widely used for topic modeling across text corpora.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Principal Component Analysis (PCA)",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Latent Dirichlet Allocation (LDA)",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Support Vector Machines (SVM)",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "K-Means Clustering",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "content": "During which phase of the design thinking process does AAVAIL move to define challenges?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Empathize",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Define",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Ideate",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Prototype",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In Design Thinking, formulating problem statements, articulating hypotheses, and scoping core challenges occur in the 'Define' phase.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Empathize",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Define",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Ideate",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Prototype",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "content": "Which file format is commonly used for storing structured data in a tabular format?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "JSON",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "XML",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "CSV",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "TXT",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Comma-Separated Values (CSV) is the most standard, lightweight format for storing tabular structured data.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "JSON",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "XML",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "CSV",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "TXT",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "content": "Which tool is mentioned as an industry standard in the Python ecosystem for data science?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "RStudio",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Jupyter notebooks",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Spyder",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Tableau",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Jupyter Notebooks provide an interactive, reproducible environment that serves as an industry standard for data science exploration.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "RStudio",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Jupyter notebooks",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Spyder",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Tableau",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "content": "What is Port Forwarding in Docker?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The process of creating a data file on the local computer that persists after the container is closed",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Sending one container to multiple nodes on a multi-cloud environment",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Allowing data to be passed in and out of a docker container and controlling which applications can do this",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Building one Docker image using another docker image as a template",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Port forwarding (port mapping) in Docker binds a port on the host machine to a port inside the container, directing network traffic into containerized applications.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "The process of creating a data file on the local computer that persists after the container is closed",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Sending one container to multiple nodes on a multi-cloud environment",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Allowing data to be passed in and out of a docker container and controlling which applications can do this",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Building one Docker image using another docker image as a template",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "content": "What does a Docker container include?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Only the application code",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Code, runtime libraries, and a private filesystem",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Only the operating system",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Only the database",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A Docker container packages application code, runtime environment, system libraries, configuration, and an isolated filesystem layer.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Only the application code",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Code, runtime libraries, and a private filesystem",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Only the operating system",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Only the database",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "content": "Which of the following is a common use case for NLP in large enterprises?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Managing financial transactions",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Processing and analyzing customer feedback",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Designing physical products",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Conducting scientific experiments",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Enterprises heavily utilize NLP for sentiment analysis, customer review mining, survey processing, and automated ticket classification.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Managing financial transactions",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Processing and analyzing customer feedback",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Designing physical products",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Conducting scientific experiments",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "content": "You may only pass a pickle file to save your model in the Watson Machine Learning library.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Watson Machine Learning supports saving and deploying models in multiple formats including PMML, ONNX, joblib, TensorFlow SavedModel, tar.gz archives, and Scikit-learn pipelines.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "content": "What is the purpose of the spark-submit command?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To create a Spark cluster",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To submit applications to a Spark cluster",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To monitor Spark jobs",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To install Spark",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "`spark-submit` is the command-line utility used to launch and submit applications/scripts to an Apache Spark cluster.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "To create a Spark cluster",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To submit applications to a Spark cluster",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To monitor Spark jobs",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To install Spark",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "content": "Which tasks should be included in a data ingestion pipeline? (Choose one or more)",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Account for missing data, faulty data, repeated observations and other data integrity issues",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Ensure that expected data is returned given a specific set of parameters",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Ensure that an expected format is returned",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Ensure that models produce expected results",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Data ingestion pipelines focus on data acquisition, schema validation, deduplication, and anomaly handling. Evaluating model output results belongs to model testing/evaluation.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Account for missing data, faulty data, repeated observations and other data integrity issues",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Ensure that expected data is returned given a specific set of parameters",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Ensure that an expected format is returned",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Ensure that models produce expected results",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "content": "Which of the following best describes the quality of data?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "It only refers to the data collection methods.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "It includes both the observations and the maturity of the data",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "It is irrelevant to project success.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "It is solely determined by the data storage system.",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Data quality encompasses observational accuracy, completeness, consistency, and data maturity across lifecycle management.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "It only refers to the data collection methods.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "It includes both the observations and the maturity of the data",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "It is irrelevant to project success.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "It is solely determined by the data storage system.",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "content": "Which list contains one or more elements that were presented as non-essential when creating a logging system to monitor the performance of a machine learning model that has been deployed.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "request_type, input data",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "model_version_number, timestamp",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "predictions/recommendations, timestamp",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "input_data_summary, runtime",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ],
+      "explanation": "In standard production model logging, essential fields are timestamp, unique request ID, model version, raw inputs, and predictions. Aggregated data summaries and exact runtime are optional/secondary.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "request_type, input data",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "model_version_number, timestamp",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "predictions/recommendations, timestamp",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "input_data_summary, runtime",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "content": "Which of the following lists contains one or more references to a technology that is not a specific python package used to speed up and improve the performance of python code?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "py-cuda, Cython",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "multiprocessing, mpi4py",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "subprocessing, symmetric-multiprocessing",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "threading, ipyparallel",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Symmetric Multiprocessing (SMP) is a computer hardware system architecture, not a specific Python software library.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "py-cuda, Cython",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "multiprocessing, mpi4py",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "subprocessing, symmetric-multiprocessing",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "threading, ipyparallel",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "content": "Let's imagine there is a start-up that has a speech-to-text service that incorporates gestures and body language into its output. They offer annotated meeting reports as a product and customers are generally very satisfied, but sales to new customers tend to be very slow to acquire. Which of the following business opportunities should be the highest priority?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Develop and delivery new products to existing customers",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Develop new products and target new customers",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Use customer segmentation and/or market analysis to help marketing with new customers",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Use customer segmentation and/or market analysis to move into a different market",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Because customer satisfaction with the existing product is already high, customer segmentation and market analysis should be prioritized to identify buyer profiles and accelerate acquisition of new customers.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Develop and delivery new products to existing customers",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Develop new products and target new customers",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Use customer segmentation and/or market analysis to help marketing with new customers",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Use customer segmentation and/or market analysis to move into a different market",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "content": "Which of the following is NOT normally a part of the EDA process?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Visual summaries of the data",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Connecting the data to the business opportunity",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Communication to stakeholders",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Predictive linear or logistic regression",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Fitting predictive models (linear/logistic regression) belongs to the Modeling/Ideation phase, not exploratory data analysis.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Visual summaries of the data",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Connecting the data to the business opportunity",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Communication to stakeholders",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Predictive linear or logistic regression",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "content": "Which of the following is NOT a recommended tool for optimizing code?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Cython",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "mpi4py",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "TensorBoard",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "ipyparallel",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "TensorBoard is a visualization dashboard for machine learning experimentation and metrics, not a code performance/acceleration compiler.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Cython",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "mpi4py",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "TensorBoard",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "ipyparallel",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "content": "In which situation would you most strongly consider MAE over RMSE as a regression metric?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "where we would like to interpret the error metric in terms of the original units",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "like predicting daily temperature where we expect a small range of values",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "like predicting time to failure for a machine where we expect a long tailed distribution of values",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "like predicting the category or topic associated with a document",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "where we would like to interpret the error metric as a squared version of the original units",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "MAE is much more robust to extreme outliers than RMSE (which squares errors). In heavy-tailed/long-tailed distributions like machine time-to-failure, MAE prevents rare outliers from dominating the error score.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "where we would like to interpret the error metric in terms of the original units",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "like predicting daily temperature where we expect a small range of values",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "like predicting time to failure for a machine where we expect a long tailed distribution of values",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "like predicting the category or topic associated with a document",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "where we would like to interpret the error metric as a squared version of the original units",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "content": "What is a potential consequence of software changes on model performance?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Improved accuracy",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Performance drift",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Increased training time",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "No impact at all",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Upstream software library updates, API changes, or system environment shifts can introduce silent data pipeline bugs or performance drift in deployed models.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Improved accuracy",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Performance drift",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "Increased training time",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "No impact at all",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "content": "Which of the following statements does not describe a valid use case for dimensionality reduction?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Principal components analysis to process images used in classification.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Non-negative matrix factorization to resolve topics from a corpus of words.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "t-distributed stochastic neighbor embedding to visualize the results of a clustering algorithm.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Using an ANOVA to select a subset of features",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Down-sampling of the majority class",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Down-sampling reduces the number of samples (rows) to handle class imbalance; it does not reduce feature dimensionality (columns).",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Principal components analysis to process images used in classification.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Non-negative matrix factorization to resolve topics from a corpus of words.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "t-distributed stochastic neighbor embedding to visualize the results of a clustering algorithm.",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Using an ANOVA to select a subset of features",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Down-sampling of the majority class",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "content": "In a confusion matrix, what does True Positive (TP) represent?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Correctly predicted negative cases",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Incorrectly predicted positive cases",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Correctly predicted positive cases",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Incorrectly predicted negative cases",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A True Positive (TP) occurs when the model correctly predicts the positive class for an instance that is actually positive.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Correctly predicted negative cases",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Incorrectly predicted positive cases",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Correctly predicted positive cases",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "content": "Incorrectly predicted negative cases",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "content": "A Spark cluster is generally managed using a Docker container and a YAML file.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In containerized environments, Spark master and worker clusters are typically managed and orchestrated via Docker containers using Docker Compose or Kubernetes YAML manifests.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "True",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "False",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "content": "Which statement best describes why visualization of topics can have an impact on the business opportunity?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Because sharing with domain experts might enable topic-specific feature engineering",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Because visual inspection can help choose the number of topics",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Because we are able to see the top words with each topic",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Because we are able to see the relative importance of each topic across the corpus",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Because domain experts can visually inspect the validity of the topics",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Visualizing topics allows domain experts to interpret discovered themes and construct custom, topic-specific feature engineering strategies that directly solve the business problem.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Because sharing with domain experts might enable topic-specific feature engineering",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Because visual inspection can help choose the number of topics",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Because we are able to see the top words with each topic",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Because we are able to see the relative importance of each topic across the corpus",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Because domain experts can visually inspect the validity of the topics",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "content": "When training a custom classifier in Watson Visual Recognition the negative images should be:",
+      "answers": [
+        {
+          "id": 1,
+          "content": "As visually similar as possible to the positive images",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Background images without the positive images",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "As random as possible to establish a background",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Randomly generated from the positive images",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Visually distinct from the positive images",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "According to IBM Watson Visual Recognition guidelines, negative training examples should be visually similar to positive classes (acting as hard negatives) to teach the model fine-grained discriminative boundaries.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "As visually similar as possible to the positive images",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "content": "Background images without the positive images",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "As random as possible to establish a background",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Randomly generated from the positive images",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Visually distinct from the positive images",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "content": "Why is it important to ensure that minimally required data is available?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "To reduce the size of the dataset",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To monitor model performance and debug issues",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To make data collection easier",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To avoid using log files",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Maintaining minimally required telemetry and schema data ensures that engineers can accurately monitor model performance in production and rapidly debug operational issues.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "To reduce the size of the dataset",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "To monitor model performance and debug issues",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "To make data collection easier",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "To avoid using log files",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "content": "What is the principal reason to create a virtual environment before creating your model locally?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Because all models should have their own virtual environment",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Because it will ensure that the most recent packages are used",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Because virtual environments can be containerized easily",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Because the Python client for Watson Machine Learning has specific dependencies",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Because it ensures that locally created/trained models are compatible with Watson Machine Learning",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Creating a dedicated virtual environment ensures strict package version compatibility between locally trained models and the runtime environments supported by cloud platforms like Watson Machine Learning.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "Because all models should have their own virtual environment",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "Because it will ensure that the most recent packages are used",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "content": "Because virtual environments can be containerized easily",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "Because the Python client for Watson Machine Learning has specific dependencies",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "content": "Because it ensures that locally created/trained models are compatible with Watson Machine Learning",
+          "is_correct": true,
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "content": "What does a deployment in Kubernetes manage?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "The API server",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The desired state of applications",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "The health of worker nodes",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The network configuration",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A Kubernetes Deployment provides declarative updates for Pods and ReplicaSets, continuously ensuring that the current state matches the specified desired state.",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "The API server",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "The desired state of applications",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "The health of worker nodes",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "The network configuration",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "content": "Which types of programming tasks best describes what you are expected to already have some familiarity with before beginning this course?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "dashboarding, high performance computing, and code profiling",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "numeric computing, data munging, data visualization and data modeling",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "convex optimization, python programming, statistical programming",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "continuous integration, linear programming, and data exploration",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Prerequisites for the IBM AI Enterprise Workflow course assume familiarity with core data science programming tasks: numerical computing (NumPy), data munging (Pandas), data visualization (Matplotlib/Seaborn), and baseline modeling (Scikit-Learn).",
+      "answersList": [
+        {
+          "id": 1,
+          "content": "dashboarding, high performance computing, and code profiling",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "content": "numeric computing, data munging, data visualization and data modeling",
+          "is_correct": true,
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "content": "convex optimization, python programming, statistical programming",
+          "is_correct": false,
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "content": "continuous integration, linear programming, and data exploration",
+          "is_correct": false,
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}
