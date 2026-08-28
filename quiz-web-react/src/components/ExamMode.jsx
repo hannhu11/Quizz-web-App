@@ -24,26 +24,22 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
   const [questions] = useState(() => {
     const rawList = [...initialQuestionsPool].sort(() => Math.random() - 0.5).slice(0, targetCount);
     
-    // Apply "Answer With" Mode (Term / Definition / Both)
-    return rawList.map((q, idx) => {
-      const mode = config.answerWith;
-      if (mode === 'Term') {
-        // Swap: Stem displays Definition/Correct Answer content, options display Question content
-        const correctAnswer = (q.answers || []).find(a => a.isCorrect) || (q.answers || [])[0];
+    // Normalize and preserve authentic question content and polymorphic answers
+    return rawList.map((q) => {
+      const normalizedAnswers = (q.answers || q.answersList || []).map(a => {
+        const isCor = Boolean(a.isCorrect || a.is_correct);
         return {
-          ...q,
-          content: correctAnswer ? `Khái niệm: ${correctAnswer.content}` : q.content,
-          originalContent: q.content,
+          ...a,
+          isCorrect: isCor,
+          is_correct: isCor
         };
-      } else if (mode === 'Both' && idx % 2 === 1) {
-        const correctAnswer = (q.answers || []).find(a => a.isCorrect) || (q.answers || [])[0];
-        return {
-          ...q,
-          content: correctAnswer ? `Khái niệm: ${correctAnswer.content}` : q.content,
-          originalContent: q.content,
-        };
-      }
-      return q;
+      });
+      return {
+        ...q,
+        answers: normalizedAnswers,
+        answersList: normalizedAnswers,
+        content: q.content || q.question || '',
+      };
     });
   });
 
@@ -141,7 +137,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
       // 5. Option Selection (1-5 or A-E)
       const currentQ = questions[currentIndex] || {};
       const options = currentQ.answers || [];
-      const isMultiSelect = (options.filter(a => a.isCorrect)).length > 1;
+      const isMultiSelect = (options.filter(a => Boolean(a.isCorrect || a.is_correct))).length > 1;
 
       let optionIdx = -1;
       if (['1', '2', '3', '4', '5'].includes(key)) {
@@ -235,7 +231,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
     questions.forEach((q, idx) => {
       const userSel = userAnswers[idx];
       const selectedArr = Array.isArray(userSel) ? userSel : (userSel ? [userSel] : []);
-      const correctArr = (q.answers || []).filter(a => a.isCorrect).map(a => a.id);
+      const correctArr = (q.answers || []).filter(a => Boolean(a.isCorrect || a.is_correct)).map(a => a.id);
 
       const isAllMatched = correctArr.length === selectedArr.length &&
         correctArr.every(id => selectedArr.includes(id));
@@ -278,7 +274,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
   if (isSubmitted) {
     questions.forEach((q, idx) => {
       const selectedId = userAnswers[idx];
-      const correctAns = q.answers?.find(a => a.isCorrect);
+      const correctAns = q.answers?.find(a => Boolean(a.isCorrect || a.is_correct));
       if (correctAns && selectedId === correctAns.id) {
         finalScore += 1;
       }
@@ -301,7 +297,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
       if (userSelectedArr.length === 0) {
         skippedQ += 1;
       } else {
-        const correctAnswersArr = (q.answers || []).filter(a => a.isCorrect);
+        const correctAnswersArr = (q.answers || []).filter(a => Boolean(a.isCorrect || a.is_correct));
         const correctIdsArr = correctAnswersArr.map(a => a.id);
         const isQuestion100PercentCorrect = correctIdsArr.length === userSelectedArr.length &&
           correctIdsArr.every(id => userSelectedArr.includes(id));
@@ -482,7 +478,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
           {questions.map((q, idx) => {
             const userSel = userAnswers[idx];
             const userSelectedArr = Array.isArray(userSel) ? userSel : (userSel !== undefined ? [userSel] : []);
-            const correctAnswersArr = (q.answers || []).filter(a => a.isCorrect);
+            const correctAnswersArr = (q.answers || []).filter(a => Boolean(a.isCorrect || a.is_correct));
             const correctIdsArr = correctAnswersArr.map(a => a.id);
 
             const isQuestion100PercentCorrect = correctIdsArr.length === userSelectedArr.length &&
@@ -540,7 +536,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
                 <div className="space-y-2.5">
                   {(q.answers || []).map((answer, aIdx) => {
                     const isUserChoice = userSelectedArr.includes(answer.id);
-                    const isRightAnswer = Boolean(answer.isCorrect);
+                    const isRightAnswer = Boolean(answer.isCorrect || answer.is_correct);
 
                     let optionStyle = "bg-gray-50/50 dark:bg-slate-800/40 border-gray-200 dark:border-slate-800 text-gray-400 dark:text-slate-500 opacity-60";
                     let optionBadge = null;
@@ -654,7 +650,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
               <span className="text-amber-950 dark:text-amber-100 bg-amber-100 dark:bg-amber-900/80 px-3 py-1 rounded-full border border-amber-300 dark:border-amber-700 font-extrabold">
                 Câu {currentIndex + 1} / {questions.length}
               </span>
-              {(currentQ.answers || []).filter(a => a.isCorrect).length > 1 && (
+              {(currentQ.answers || []).filter(a => Boolean(a.isCorrect || a.is_correct)).length > 1 && (
                 <span className="text-purple-950 dark:text-purple-100 bg-purple-100 dark:bg-purple-900/80 px-2.5 py-0.5 rounded-md border border-purple-300 dark:border-purple-700 font-extrabold">
                   Multiple Choice (Chọn tất cả đáp án đúng)
                 </span>
@@ -672,7 +668,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
           {/* Options List */}
           <div className="space-y-3 mb-8">
             {(currentQ.answers || []).map((answer, aIdx) => {
-              const isMultiSelect = (currentQ.answers || []).filter(a => a.isCorrect).length > 1;
+              const isMultiSelect = (currentQ.answers || []).filter(a => Boolean(a.isCorrect || a.is_correct)).length > 1;
               const userSel = userAnswers[currentIndex];
               const isSelected = isMultiSelect
                 ? (Array.isArray(userSel) && userSel.includes(answer.id))

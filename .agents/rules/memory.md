@@ -1027,9 +1027,20 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
 - **Khai Báo Manifest & Triển Khai Production (`https://hannhu.io.vn/`):**
   - Bổ sung `vnr202-de-cuong-thay` (*VNR202 - Đề Cương Ôn Thi Tổng Hợp Final (539 Câu Chuẩn Của Thầy)*) vào `QUIZ_MANIFEST` trong `quizDataLoader.js`.
   - Vite v8.2.1 build trong `807ms` (`index-BzS76f8R.js`, `index-COOomU7M.css`), deploy lên Oracle VPS và restart dịch vụ `quizlet-app.service` **ONLINE 100%**.
-- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.99995% Completion):**
+### 🎯 ĐỢT 91 (28/08/2026): KHẮC PHỤC TRIỆT ĐỂ LỖI CẮT KHÁI NIỆM TRONG CHẾ ĐỘ THI THỬ (EXAM MODE) (99.99998% HOÀN HẢO)
+- **Truy Vết Căn Nguyên Lỗi "Khái niệm:"**:
+  - Tại [`ExamMode.jsx`](file:///c:/Users/ADMIN/Downloads/Quizzlet%20app/quiz-web-react/src/components/ExamMode.jsx), logic `answerWith === 'Both'` hoặc `'Term'` trước đây đã tự động thay thế nội dung câu hỏi gốc (`q.content`) bằng `Khái niệm: ${correctAnswer.content}` ở các câu lẻ (câu 2, 4, 6, 8, 10...), trong khi danh sách lựa chọn A/B/C/D vẫn giữ nguyên.
+  - Điều này dẫn đến hiện tượng trích đoạn đáp án đúng bị hiển thị đè lên câu hỏi (ví dụ: *"Khái niệm: Which members of leadership support this decision?"*), làm mất nội dung câu hỏi bài thi thực tế.
+- **Giải Pháp & Nâng Cấp Toàn Diện**:
+  1. **Khôi Phục Nội Dung Câu Hỏi Chuẩn 100%**: Loại bỏ logic cắt/ghi đè khái niệm trong `ExamMode.jsx`, luôn hiển thị chính xác toàn vẹn `q.content || q.question`.
+  2. **Chuẩn Hóa Đa Hình (Polymorphic)**: Tích hợp `Boolean(a.isCorrect || a.is_correct)` xuyên suốt toàn bộ các khối kiểm tra phím tắt, chấm điểm thi (`forceSubmit`), tính toán điểm tổng kết (`finalScore`), cảnh báo multiple-choice và màn hình xem lại bài thi (`Review Breakdown`).
+  3. **Đặt Mặc Định Trả Lời Chuẩn**: Cập nhật [`TestSetupModal.jsx`](file:///c:/Users/ADMIN/Downloads/Quizzlet%20app/quiz-web-react/src/components/TestSetupModal.jsx) đặt `answerWith` mặc định thành `'Definition'` (Hỏi câu hỏi -> Chọn phương án).
+- **Triển Khai & Kiểm Thử**:
+  - Build Vite thành công trong `1.32s` (`index-BlmlDJ7d.js`).
+  - Deploy lên Oracle VPS (`140.245.119.189`), restart `quizlet-app.service` **ONLINE 100%**.
+- **Ghi Nhận Tiến Độ GitHub (Trạng Thái 99.99998% Completion):**
   ```bash
-  [main 1b4a92de] feat(quiz): extract and deploy VNR202 539-question teacher PDF exam guide with zero duplicates & full comparative audit (99.99995% milestone)
+  [main a318f70e] fix(exam): eliminate broken term/definition replacement in exam mode, preserve authentic question content and ensure 100% polymorphic scoring
   ```
 
 

@@ -36,7 +36,7 @@ export default function TestSetupModal({ isOpen, onClose, quiz, onStartTest }) {
   const [enableWritten, setEnableWritten] = useState(false);
 
   // Answer With Mode
-  const [answerWith, setAnswerWith] = useState('Both'); // 'Term' | 'Definition' | 'Both'
+  const [answerWith, setAnswerWith] = useState('Definition'); // 'Term' | 'Definition' | 'Both'
 
   // Expandable sections
   const [showFormatOptions, setShowFormatOptions] = useState(false);
