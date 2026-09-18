@@ -89,8 +89,8 @@ function initQuizCache() {
           const normalized = {
             id: file.replace('.json', ''),
             rawId: raw.id,
-            title: raw.name || file.replace('.json', ''),
-            originalName: raw.name,
+            title: raw.title || raw.name || file.replace('.json', ''),
+            originalName: raw.name || raw.title,
             questions: rawQuestions.map((q, idx) => {
               const rawAnswers = q.answersList || q.answers || [];
               return {
@@ -102,6 +102,7 @@ function initQuizCache() {
                   id: a.id || aIdx + 1,
                   content: a.content || '',
                   isCorrect: a.isCorrect !== undefined ? Boolean(a.isCorrect) : Boolean(a.is_correct),
+                  is_correct: a.is_correct !== undefined ? Boolean(a.is_correct) : Boolean(a.isCorrect),
                 }))
               };
             })
@@ -123,11 +124,51 @@ function initQuizCache() {
 
 initQuizCache();
 
-app.get('/api/quizzes/content/:quizId', authenticateToken, (req, res) => {
-  const quizId = String(req.params.quizId || '').trim().toLowerCase();
+app.get('/api/quizzes/content/:quizId', optionalAuthenticateToken, (req, res) => {
+  const rawParam = String(req.params.quizId || '').trim();
+  const quizId = rawParam.toLowerCase();
   
   if (quizCache.has(quizId)) {
     return res.json({ success: true, quiz: quizCache.get(quizId) });
+  }
+  if (quizCache.has(`${quizId}.json`)) {
+    return res.json({ success: true, quiz: quizCache.get(`${quizId}.json`) });
+  }
+
+  // Direct disk fallback
+  const directPath = path.join(QUIZZES_DIR, `${rawParam}.json`);
+  const directLowerPath = path.join(QUIZZES_DIR, `${rawParam}`);
+  const filePathToRead = fs.existsSync(directPath) ? directPath : (fs.existsSync(directLowerPath) ? directLowerPath : null);
+  
+  if (filePathToRead) {
+    try {
+      const raw = JSON.parse(fs.readFileSync(filePathToRead, 'utf8'));
+      const rawQuestions = raw.questionsList || raw.questions || [];
+      const normalized = {
+        id: path.basename(filePathToRead).replace('.json', ''),
+        rawId: raw.id,
+        title: raw.title || raw.name || path.basename(filePathToRead).replace('.json', ''),
+        questions: rawQuestions.map((q, idx) => {
+          const rawAnswers = q.answersList || q.answers || [];
+          return {
+            id: q.id || idx + 1,
+            questionIndex: idx,
+            content: q.content || 'Câu hỏi không có nội dung',
+            explanation: q.explanation || '',
+            answers: rawAnswers.map((a, aIdx) => ({
+              id: a.id || aIdx + 1,
+              content: a.content || '',
+              isCorrect: a.isCorrect !== undefined ? Boolean(a.isCorrect) : Boolean(a.is_correct),
+              is_correct: a.is_correct !== undefined ? Boolean(a.is_correct) : Boolean(a.isCorrect),
+            }))
+          };
+        })
+      };
+      quizCache.set(quizId, normalized);
+      return res.json({ success: true, quiz: normalized });
+    } catch (err) {
+      console.error('Error reading direct quiz file:', err);
+    }
   }
 
   const customQuizzes = readCustomQuizzes();
@@ -136,9 +177,12 @@ app.get('/api/quizzes/content/:quizId', authenticateToken, (req, res) => {
     return res.json({ success: true, quiz: custom });
   }
 
+  // Safe strict fuzzy matching (ONLY match if key length >= 6 and matches complete segment)
   for (const [key, val] of quizCache.entries()) {
-    if (key.includes(quizId) || quizId.includes(key)) {
-      return res.json({ success: true, quiz: val });
+    if (key.length >= 6 && quizId.length >= 6) {
+      if (key === quizId || key.replace('.json', '') === quizId.replace('.json', '')) {
+        return res.json({ success: true, quiz: val });
+      }
     }
   }
 

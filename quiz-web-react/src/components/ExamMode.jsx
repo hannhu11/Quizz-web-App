@@ -583,7 +583,7 @@ export default function ExamMode({ quiz, testConfig, onBack }) {
                 </div>
 
                 {/* Academic Insight Explanation Box */}
-                {q.explanation && (
+                {Boolean(q.explanation && q.explanation.trim()) && (
                   <div className="mt-3 overflow-hidden rounded-xl border border-slate-200/80 bg-slate-50/80 p-3.5 border-l-4 border-l-indigo-500 dark:border-slate-800 dark:bg-slate-900/50 dark:border-l-indigo-400 shadow-xs transition-all">
                     <div className="flex items-center gap-1.5 mb-1.5 text-indigo-700 dark:text-indigo-300">
                       <Sparkles className="w-3.5 h-3.5 stroke-[1.75]" />
