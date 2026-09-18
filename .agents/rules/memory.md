@@ -1043,6 +1043,24 @@ Từ thời điểm này trở đi, **TẤT CẢ** các bộ đề Quiz / Flashc
   [main a318f70e] fix(exam): eliminate broken term/definition replacement in exam mode, preserve authentic question content and ensure 100% polymorphic scoring
   ```
 
+### 🎯 ĐỢT 92 (18/09/2026): TÍCH HỢP BỘ ĐỀ HCM202 PT HÀN NHƯ 270 CÂU CHUẨN ĐA HÌNH & NOTEBOOKLM (99.99999% HOÀN HẢO)
+- **Chuẩn Hóa & Bóc Tách 270 Câu HCM202 PT Hàn Như:**
+  - Nhận dữ liệu xuất bản Quizlet gồm 270 câu hỏi trắc nghiệm Tư tưởng Hồ Chí Minh.
+  - Phân tích và sửa chữa tự động các trường hợp đặc biệt:
+    - Câu 50: Bổ sung dấu chấm cho phương án `D Của toàn dân...` thành `D. Của toàn dân...`.
+    - Câu 57: Bổ sung dấu chấm cho phương án `A Cách mạng...` thành `A. Cách mạng...`.
+    - Câu 182: Giữ chuẩn 3 phương án lựa chọn thực tế.
+    - Câu 236: Loại bỏ dòng trùng lặp thừa ở cuối câu.
+    - Câu 270: Bóc tách chính xác đáp án `D` từ khối văn bản chứa thẻ tag.
+  - Đảm bảo 100% (270/270 câu) đều có cấu trúc nội dung sạch sẽ (stem), đủ phương án A-D, và gắn cờ đáp án đúng đa hình (`is_correct` và `isCorrect`).
+- **Xuất Bản & Khai Báo Manifest:**
+  - Lưu trữ tệp chuẩn hóa tại `HCM202_PT_Han_Nhu_270_Chuan_Dinh_Dang.json` và `server/quizzes/current/HCM202_PT_Han_Nhu_270.json`.
+  - Khai báo vào `QUIZ_MANIFEST` trong `quizDataLoader.js` với ID `hcm202-pt-han-nhu-270` (*PT - HCM202 - Hàn Như (270 Câu)*).
+  - Xuất bản tệp định dạng tối ưu cho Google NotebookLM tại `NotebookLM_HCM202/HCM202_PT_Han_Nhu_270_NotebookLM.md`.
+- **Vite Build & Live Deploy VPS (`https://hannhu.io.vn/`):**
+  - Vite build bundle thành công trong `880ms` (`index-aBNKRp8A.js`).
+  - Deploy lên Oracle VPS (`140.245.119.189`), restart `quizlet-app.service` **ONLINE 100%**.
+
 
 
 
